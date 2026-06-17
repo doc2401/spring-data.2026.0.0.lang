@@ -1,0 +1,381 @@
+{
+  "created_at": "2026-06-17 11:58:25",
+  "updated_at": "2026-06-17 11:58:25",
+  "stats": {
+    "total_entries": 73,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 75,
+    "entries_with_hits": 73,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0273972602739727,
+    "usage_percentage": 0.0073
+  },
+  "items": [
+    {
+      "source": "You can also find a <code>profile</code> link in the collection of <code>_links</code> when you examine a collection resource, as the following example shows:",
+      "translation": "在检查集合资源时，您还可以在`_links`链接集合中找到一个`profile` 链接，如下例所示：",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>This HAL document respresents the <code>Person</code> collection.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>It has a <strong>profile</strong> link to the same URI for metadata.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>此 HAL 文档代表 <code>Person</code> 集合。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>它包含一个指向相同 URI 的<strong>profile</strong> 链接，用于元数据。</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date();document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "If you define any projections, they are also listed in the ALPS metadata. Assuming we also defined <code>inlineAddress</code> and <code>noAddresses</code>, they\nwould appear inside the relevant operations. (See “<a class=\"xref page\" href=\"projections-excerpts.html#projections-excerpts.projections\">Projections</a>” for the definitions and discussion of these two projections.) That is <strong>GET</strong> would appear in the operations for the whole collection, and <strong>GET</strong> would appear in the operations for a single resource. The following example shows\nthe alternate version of the <code>get-persons</code> subsection:",
+      "translation": "如果您定义了任何投影，它们也会列在 ALPS 元数据中。假设我们还定义了<code>inlineAddress</code>和<code>noAddresses</code>，它们将出现在相关操作中。（有关这两个投影的定义和讨论，请参阅“<a class=\"xref page\" href=\"projections-excerpts.html#projections-excerpts.projections\">投影</a>”。）也就是说，<strong>GET</strong>会出现在整个集合的操作中，而<strong>GET</strong>会出现在单个资源的操作中。以下示例展示了<code>get-persons</code>子部分的替代版本：",
+      "count": 1
+    },
+    {
+      "source": "Again, the <code>profile</code> link serves <a href=\"#metadata.alps\">ALPS</a> by default. If you supply it with an <a href=\"https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1\"><code>Accept</code> header</a> of <code>application/schema+json</code>, it renders the JSON Schema representation.",
+      "translation": "同样，`profile` 链接默认提供<a href=\"#metadata.alps\">ALPS</a>。如果您为其提供一个值为<code>application/schema+json</code>的<a href=\"https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1\"><code>Accept</code> 请求头</a>，它将渲染 JSON Schema 表示形式。",
+      "count": 1
+    },
+    {
+      "source": "Again, by default, the <code>profile</code> link serves up ALPS. However, if you use an <a href=\"https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1\"><code>Accept</code> header</a>, it can serve <code>application/alps+json</code>.",
+      "translation": "同样，默认情况下，`profile` 链接会提供 ALPS。但是，如果您使用 `<a href=\"https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1\"><code>Accept</code></a>` 请求头，它也可以提供 `application/alps+json` 格式的内容。",
+      "count": 1
+    },
+    {
+      "source": "In the representation section shown earlier, bits of data from the application are marked as being <code>SEMANTIC</code>. The <code>address</code> field\nis a link that involves a safe <code>GET</code> to retrieve. Consequently, it is marked as being <code>SAFE</code>. Hypermedia operations themselves map onto the types as\nshown in the preceding table.",
+      "translation": "在之前展示的表示部分中，来自应用程序的数据位被标记为<code>SEMANTIC</code>。<code>address</code>字段是一个链接，涉及安全的<code>GET</code>操作来获取，因此它被标记为<code>SAFE</code>。超媒体操作本身映射到如前表所示的类型。",
+      "count": 1
+    },
+    {
+      "source": "These <code>rest.description.*</code> properties define details to display for a <code>Person</code> resource. They alter the ALPS format of the <code>person-representation</code>, as follows:",
+      "translation": "这些 `<code>rest.description.*</code>` 属性定义了用于显示 `<code>Person</code>` 资源的详细信息。它们以如下方式改变了 `<code>person-representation</code>` 的 ALPS 格式：",
+      "count": 1
+    },
+    {
+      "source": "At the root of a Spring Data REST app is a profile link. Assuming you had an app with both <code>persons</code> and related <code>addresses</code>, the root\ndocument would be as follows:",
+      "translation": "Spring Data REST 应用的核心是一个资源链接。假设您的应用程序同时包含 <code>persons</code> 及其相关的 <code>addresses</code>，则根文档如下所示：",
+      "count": 1
+    },
+    {
+      "source": "A profile link, as defined in <a href=\"https://tools.ietf.org/html/rfc6906\">RFC 6906</a>, is a place to include application-level details. The\n<a href=\"https://tools.ietf.org/html/draft-amundsen-richardson-foster-alps-00\">ALPS draft spec</a> is meant to define a particular profile format,\nwhich we explore later in this section.",
+      "translation": "根据 <a href=\"https://tools.ietf.org/html/rfc6906\">RFC 6906</a> 定义的配置文件链接（profile link）是包含应用级详情的位置。<a href=\"https://tools.ietf.org/html/draft-amundsen-richardson-foster-alps-00\">ALPS 草案规范</a> 旨在定义一种特定的配置文件格式，我们将在本节稍后探讨该格式。",
+      "count": 1
+    },
+    {
+      "source": "If you navigate to <code>/profile/persons</code> and look at the profile data for a <code>Person</code> resource, you see content resembling the following example:",
+      "translation": "如果您导航到 <code>/profile/persons</code> 并查看 <code>Person</code> 资源的个人资料数据，您会看到类似于以下示例的内容：",
+      "count": 1
+    },
+    {
+      "source": "A state element (such as <code>HTML.SPAN</code>, <code>HTML.INPUT</code>, and others).",
+      "translation": "一个状态元素（例如 `<code>HTML.SPAN</code>`、`<code>HTML.INPUT</code>` 等）。",
+      "count": 1
+    },
+    {
+      "source": "A hypermedia control that triggers a safe, idempotent state transition (such as <code>GET</code> or <code>HEAD</code>).",
+      "translation": "一种超媒体控件，用于触发安全且幂等的状态转换（例如 `<code>GET</code>` 或 `<code>HEAD</code>`）。",
+      "count": 1
+    },
+    {
+      "source": "A hypermedia control that triggers an unsafe, idempotent state transition (such as <code>PUT</code> or <code>DELETE</code>).",
+      "translation": "一种超媒体控件，用于触发不安全且幂等的状态转换（例如 `<code>PUT</code>` 或 `<code>DELETE</code>`）。",
+      "count": 1
+    },
+    {
+      "source": "As shown in the <a href=\"#metadata.alps\">previous section</a>, you can reach this data by navigating from the root URI to the <code>profile</code> link.",
+      "translation": "如<a href=\"#metadata.alps\">上一节</a>所示，您可以通过从根 URI 导航到<code>profile</code>链接来访问此数据。",
+      "count": 1
+    },
+    {
+      "source": "These links are the same as shown earlier. To retrieve JSON Schema, you can invoke them with the following <code>Accept</code> header: <code>application/schema+json</code>.",
+      "translation": "这些链接与之前所示相同。要获取 JSON Schema，可以使用以下 `<code>Accept</code>` 头调用它们：<code>application/schema+json</code>。",
+      "count": 1
+    },
+    {
+      "source": "In this case, if you ran <code>curl -H 'Accept:application/schema+json' <a class=\"bare\" href=\"http://localhost:8080/profile/persons\">localhost:8080/profile/persons</a></code>, you would see output resembling the following:",
+      "translation": "在这种情况下，如果您运行<code>curl -H 'Accept:application/schema+json' <a class=\"bare\" href=\"http://localhost:8080/profile/persons\">localhost:8080/profile/persons</a></code>，您将看到类似于以下内容的输出：",
+      "count": 1
+    },
+    {
+      "source": "If you navigate into the profile link at <code>localhost:8080/profile</code>, you see content resembling the following:",
+      "translation": "如果您导航到 <code>localhost:8080/profile</code> 处的个人资料链接，您将看到类似以下内容：",
+      "count": 1
+    },
+    {
+      "source": "A hypermedia control that triggers an unsafe, non-idempotent state transition (such as <code>POST</code>).",
+      "translation": "一个会触发不安全且非幂等状态转换（例如 `<code>POST</code>`）的超媒体控件。",
+      "count": 1
+    },
+    {
+      "source": "You can create custom messages that appear in your ALPS metadata. To do so, create <code>rest-messages.properties</code>, as follows:",
+      "translation": "您可以在 ALPS 元数据中创建自定义消息。为此，请按照以下方式创建 `rest-messages.properties` 文件：",
+      "count": 1
+    },
+    {
+      "source": "Supplying these property settings causes each field to have an extra <code>doc</code> attribute.",
+      "translation": "设置这些属性会导致每个字段额外拥有一个 `<code>doc</code>` 属性。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://json-schema.org/\">JSON Schema</a> is another form of metadata supported by Spring Data REST. Per their website, JSON Schema has the following advantages:",
+      "translation": "<a href=\"https://json-schema.org/\">JSON Schema</a> 是 Spring Data REST 支持的另一种元数据形式。根据其网站介绍，JSON Schema 具有以下优势：",
+      "count": 1
+    },
+    {
+      "source": "This section details the various forms of metadata provided by a Spring Data REST-based application.",
+      "translation": "本节详细介绍了基于 Spring Data REST 的应用程序提供的各种元数据形式。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data REST provides an ALPS document for every exported repository. It contains information about both the RESTful transitions\nand the attributes of each repository.",
+      "translation": "Spring Data REST 为每个导出的仓库提供一份 ALPS 文档。该文档包含有关 RESTful 转换以及每个仓库属性的信息。",
+      "count": 1
+    },
+    {
+      "source": "ALPS displays types for each hypermedia control. They include:",
+      "translation": "ALPS 为每个超媒体控件显示类型。它们包括：",
+      "count": 1
+    },
+    {
+      "source": "With all this information, a client can deduce not only the available RESTful transitions but also, to some degree, the\ndata elements needed to interact with the back end.",
+      "translation": "凭借这些信息，客户不仅可以推断出可用的 RESTful 转换，而且能够在一定程度上了解与后端交互所需的数据元素。",
+      "count": 1
+    },
+    {
+      "source": "Describes your existing data format",
+      "translation": "描述您现有的数据格式。",
+      "count": 1
+    },
+    {
+      "source": "Clear, human- and machine-readable documentation",
+      "translation": "清晰、可供人类和机器阅读的文档",
+      "count": 1
+    },
+    {
+      "source": "Complete structural validation, useful for automated testing and validating client-submitted data",
+      "translation": "完整的结构验证，适用于自动化测试和验证客户端提交的数据。",
+      "count": 1
+    },
+    {
+      "source": "There are more details if your resources have links to other resources.",
+      "translation": "如果您的资源包含指向其他资源的链接，则会有更多详细信息。",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS\"和“Amazon Web Services”是 Amazon.com Inc. 公司及其关联公司的商标或注册商标。所有其他商标和版权均归其各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-rest/src/main/antora/modules/ROOT/pages/metadata.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-rest\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-rest/src/main/antora/modules/ROOT/pages/metadata.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-rest\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"index.html\">Spring Data REST</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"index.html\">\n                            5.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"index.html\">Spring Data REST</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"index.html\">\n                            5.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"index.html\">Spring Data REST</a></li>\n      <li><a href=\"metadata.html\">Metadata</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"index.html\">Spring Data REST</a></li>\n      <li><a href=\"metadata.html\">元数据</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"search.html\">在所有的 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"0\">\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"index.html\">Spring Data REST</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"intro.html\">Introduction</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/getting-started.html\">Getting started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/example-api-usage-with-curl.html\">Using cURL to talk to Spring Data REST</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/spring-data-rest-examples.html\">Spring Data REST example projects</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"repository-resources.html\">Repository resources</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"paging-and-sorting.html\">Paging and Sorting</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections-excerpts.html\">Projections and Excerpts</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"representations.html\">Representations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"etags-and-other-conditionals.html\">Conditional Operations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"validation.html\">Validation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"events.html\">Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"integration.html\">Integration</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"metadata.html\">Metadata</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"security.html\">Security</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"tools.html\">Tools</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"customizing-sdr.html\">Customizing Spring Data REST</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/configuring-the-rest-url-path.html\">Configuring the REST URL Path</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/adding-sdr-to-spring-mvc-app.html\">Adding Spring Data REST to an Existing Spring MVC Application</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/overriding-sdr-response-handlers.html\">Overriding Spring Data REST Response Handlers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/customizing-json-output.html\">Customizing the JSON Output</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/custom-jackson-deserialization.html\">Adding Custom Serializers and Deserializers to Jackson’s <code>ObjectMapper</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/configuring-cors.html\">Configuring CORS</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"0\">\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"index.html\">Spring Data REST</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"intro.html\">简介</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/getting-started.html\">快速入门</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/example-api-usage-with-curl.html\">使用 cURL 与 Spring Data REST 交互</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction/spring-data-rest-examples.html\">Spring Data REST 示例项目</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"repository-resources.html\">仓储资源</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"paging-and-sorting.html\">分页与排序</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections-excerpts.html\">投影与摘录</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"representations.html\">表示形式</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"etags-and-other-conditionals.html\">条件操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"validation.html\">验证</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"events.html\">事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"integration.html\">集成</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"metadata.html\">元数据</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"security.html\">安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"tools.html\">工具</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"customizing-sdr.html\">自定义 Spring Data REST</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/configuring-the-rest-url-path.html\">配置 REST URL 路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/adding-sdr-to-spring-mvc-app.html\">将 Spring Data REST 添加到现有的 Spring MVC 应用程序</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/overriding-sdr-response-handlers.html\">覆盖 Spring Data REST 响应处理器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/customizing-json-output.html\">自定义 JSON 输出</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/custom-jackson-deserialization.html\">向 Jackson 的 <code>ObjectMapper</code> 添加自定义序列化器和反序列化器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing/configuring-cors.html\">配置 CORS</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>A detailed listing of the attributes of a <code>Person</code> resource, identified as <code>#person-representation</code>, lists the names\nof the attributes.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The supported operations. This one indicates how to create a new <code>Person</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The <code>name</code> is <code>persons</code>, which indicates (because it is plural) that a POST should be applied to the whole collection, not a single <code>person</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>The <code>type</code> is <code>UNSAFE</code>, because this operation can alter the state of the system.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>The <code>rt</code> is <code>#person-representation</code>, which indicates that returned resource type will be <code>Person</code> resource.</td>\n</tr>\n</tbody>",
+      "translation": "<table><tr><td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td><td>一份详细列出了被标识为<code>#person-representation</code>的<code>Person</code>资源的属性的清单，其中列出了这些属性的名称。</td></tr><tr><td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td><td>支持的操作。此项指示如何创建一个新的<code>Person</code>。</td></tr><tr><td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td><td><code>name</code>为<code>persons</code>，由于它是复数形式，这表明 POST 操作应应用于整个集合，而不是单个<code>person</code>。</td></tr><tr><td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td><td><code>type</code>为<code>UNSAFE</code>，因为此操作可能会改变系统的状态。</td></tr><tr><td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td><td><code>rt</code>为<code>#person-representation</code>，这表明返回的资源类型将是<code>Person</code>资源。</td></tr></table>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The value of <code>rest.description.person</code> maps into the whole representation.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The value of <code>rest.description.person.firstName</code> maps to the <code>firstName</code> attribute.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The value of <code>rest.description.person.lastName</code> maps to the <code>lastName</code> attribute.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>The value of <code>rest.description.person.id</code> maps to the <code>id</code> attribute, a field not normally displayed.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>The value of <code>rest.description.person.address</code> maps to the <code>address</code> attribute.</td>\n</tr>\n</tbody>",
+      "translation": "<table>\n<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>rest.description.person</code> 的值映射到整个表示。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>rest.description.person.firstName</code> 的值映射到 <code>firstName</code> 属性。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>rest.description.person.lastName</code> 的值映射到 <code>lastName</code> 属性。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td><code>rest.description.person.id</code> 的值映射到 <code>id</code> 属性，这是一个通常不显示的字段。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td><code>rest.description.person.address</code> 的值映射到 <code>address</code> 属性。</td>\n</tr>\n</table>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>A new attribute, <code>descriptors</code>, appears, containing an array with one entry, <code>projection</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Inside the <code>projection.descriptors</code>, we can see <code>inLineAddress</code>. It render <code>address</code>, <code>firstName</code>, and <code>lastName</code>.\nRelationships rendered inside a projection result in including the data fields inline.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>noAddresses</code> serves up a subset that contains <code>firstName</code> and <code>lastName</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>出现了一个新属性<code>descriptors</code>，其中包含一个数组，该数组有一个条目<code>projection</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>在<code>projection.descriptors</code>内部，我们可以看到<code>inLineAddress</code>。它渲染了<code>address</code>、<code>firstName</code>和<code>lastName</code>。\n在投影中渲染的关系会导致数据字段以行内方式包含。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>noAddresses</code>提供了一个子集，其中包含<code>firstName</code>和<code>lastName</code>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The type that was exported</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>A listing of properties</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>已导出的类型</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>属性列表</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nAt the root level, <code>profile</code> is a single link and cannot serve up more than one application profile. That\nis why you must navigate to <code>/profile</code> to find a link for each resource’s metadata.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\n在根级别，<code>profile</code> 是一个单一链接，无法提供多个应用配置文件。因此，您必须导航到 <code>/profile</code> 才能找到每个资源元数据的链接。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThis JSON document has a media type of <code>application/alps+json</code>. This is different from the previous JSON document, which had\na media type of <code>application/hal+json</code>. These formats are different and governed by different specs.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n此 JSON 文档的媒体类型为 <code>application/alps+json</code>。这与之前的 JSON 文档不同，后者使用的媒体类型为 <code>application/hal+json</code>。这些格式各不相同，且由不同的规范进行管理。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nSpring MVC (which is the essence of a Spring Data REST application) supports locales, meaning you can bundle up multiple\nproperties files with different messages.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nSpring MVC（这是 Spring Data REST 应用的核心）支持区域设置，这意味着您可以打包多个包含不同消息的属性文件。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#metadata.alps\"></a>Application-Level Profile Semantics (ALPS)",
+      "translation": "<a class=\"anchor\" href=\"#metadata.alps\"></a>应用级配置文件语义（ALPS）",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"http://alps.io/\">ALPS</a> is a data format for defining simple descriptions of application-level semantics, similar in complexity to HTML microformats.  An ALPS document can be used as a profile to explain the application semantics of a document with an application-agnostic media type (such as HTML, HAL, Collection+JSON, Siren, etc.). This increases the reusability of profile documents across media types.",
+      "translation": "ALPS 是一种用于定义应用级语义简单描述的数据格式，其复杂度类似于 HTML 微格式。ALPS 文档可用作配置文件，以解释具有非特定于应用的媒体类型（如 HTML、HAL、Collection+JSON、Siren 等）的文档的应用语义。这提高了配置文件文档在不同媒体类型之间的可重用性。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#metadata.alps.control-types\"></a>Hypermedia Control Types",
+      "translation": "<a class=\"anchor\" href=\"#metadata.alps.control-types\"></a>超媒体控制类型",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#metadata.alps.projections\"></a>ALPS with Projections",
+      "translation": "<a class=\"anchor\" href=\"#metadata.alps.projections\"></a>带投影的 ALPS",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#metadata.alps.descriptions\"></a>Adding Custom Details to Your ALPS Descriptions",
+      "translation": "<a class=\"anchor\" href=\"#metadata.alps.descriptions\"></a>为您的 ALPS 描述添加自定义详细信息",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#metadata.json-schema\"></a>JSON Schema",
+      "translation": "<a class=\"anchor\" href=\"#metadata.json-schema\"></a>JSON 模式",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\nSpring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data REST",
+      "translation": "Spring Data REST",
+      "count": 1
+    },
+    {
+      "source": "Table 1. ALPS types",
+      "translation": "表 1。ALPS 类型",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

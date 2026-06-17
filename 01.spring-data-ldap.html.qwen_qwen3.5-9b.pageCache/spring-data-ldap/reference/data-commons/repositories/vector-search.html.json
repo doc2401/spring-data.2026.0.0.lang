@@ -1,0 +1,441 @@
+{
+  "created_at": "2026-06-17 09:25:49",
+  "updated_at": "2026-06-17 09:25:49",
+  "stats": {
+    "total_entries": 85,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 85,
+    "entries_with_hits": 85,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0085
+  },
+  "items": [
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "Derived search methods are typically easier to read and maintain, as they rely on the method name to express the query intent.\nHowever, a derived search method requires either to declare a <code>Score</code>, <code>Range&lt;Score&gt;</code> or <code>ScoreFunction</code> as second argument to the <code>Near</code>/<code>Within</code> keyword to limit search results by their score.",
+      "translation": "派生搜索方法通常更易读且易于维护，因为它们依赖方法名称来表达查询意图。  \n然而，派生搜索方法需要在 `<code>Near`/`<code>Within` 关键字的第二个参数中声明 `<code>Score</code>`、`<code>Range&lt;Score&gt;</code>` 或 `<code>ScoreFunction`，以根据分数限制搜索结果。",
+      "count": 1
+    },
+    {
+      "source": "Using <code>Vector</code> in your domain model removes the need to work with raw arrays or lists of numbers, providing a more type-safe and expressive way to handle vector data.\nThis abstraction also allows for easy integration with various vector databases and libraries.\nIt also allows for implementing vendor-specific optimizations such as binary or quantized vectors that do not map to a standard floating point (<code>float</code> and <code>double</code> as of <a href=\"https://en.wikipedia.org/wiki/IEEE_754\">IEEE 754</a>) representation.\nA domain object can have a vector property, which can be used for similarity searches.\nConsider the following example:",
+      "translation": "在领域模型中使用<code>Vector</code>可以省去对原始数字数组或列表的操作，从而以更类型安全且表达力强的方式处理向量数据。\n这种抽象还便于与各种向量数据库和库进行集成。\n此外，它支持实现特定于供应商的优化，例如二进制向量或量化向量，这些格式并不对应标准的浮点数（<code>float</code> 和 <code>double</code>，依据<a href=\"https://en.wikipedia.org/wiki/IEEE_754\">IEEE 754</a>标准）表示。\n领域对象可以拥有一个向量属性，该属性可用于相似性搜索。\n考虑以下示例：",
+      "count": 1
+    },
+    {
+      "source": "In this example, the <code>searchByCountryAndEmbeddingNear</code> method returns a <code>SearchResults&lt;Comment&gt;</code> object, which contains a list of <code>SearchResult&lt;Comment&gt;</code> instances.\nEach result includes the matched <code>Comment</code> entity and its relevance score.",
+      "translation": "在此示例中，<code>searchByCountryAndEmbeddingNear</code> 方法返回一个 <code>SearchResults&lt;Comment&gt;</code> 对象，其中包含 <code>SearchResult&lt;Comment&gt;</code> 实例的列表。  \n每个结果都包括匹配的 <code>Comment</code> 实体及其相关性得分。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#vector-search.model.scoring\"><code>Score</code>, <code>Similarity</code> and Scoring Functions</a>",
+      "translation": "<a href=\"#vector-search.model.scoring\"><code>Score</code>、<code>Similarity</code> 和评分函数</a>",
+      "count": 1
+    },
+    {
+      "source": "The <code>Score</code> type holds a numerical value indicating the relevance of a search result.\nIt can be used to rank results based on their similarity to the query vector.\nThe <code>Score</code> type is typically a floating-point number, and its interpretation (higher is better or lower is better) depends on the specific similarity function used.\nScores are a by-product of vector search and are not required for a successful search operation.\nScore values are not part of a domain model and therefore represented best as out-of-band data.",
+      "translation": "`Score` 类型表示一个数值，用于指示搜索结果的相关性。  \n它可用于根据结果与查询向量的相似度对结果进行排序。  \n`Score` 类型通常为浮点数，其具体含义（值越大越好还是越小越好）取决于所使用的特定相似度函数。  \n分数是向量搜索的副产品，并非成功执行搜索操作所必需。  \n分数值不属于领域模型的一部分，因此最好将其表示为带外数据。",
+      "count": 1
+    },
+    {
+      "source": "Vector search methods are defined in repositories using the same conventions as standard Spring Data query methods.\nThese methods return <code>SearchResults&lt;T&gt;</code> and require a <code>Vector</code> parameter to define the query vector.\nThe actual implementation depends on the actual internals of the underlying data store and its capabilities around vector search.",
+      "translation": "向量搜索方法在存储库中定义，遵循与标准 Spring Data 查询方法相同的约定。这些方法返回 <code>SearchResults&lt;T&gt;</code>，并需要一个 <code>Vector</code> 参数来定义查询向量。具体实现取决于底层数据存储的内部机制及其对向量搜索的支持能力。",
+      "count": 1
+    },
+    {
+      "source": "With more control over the actual query, Spring Data can make fewer assumptions about the query and its parameters.\nFor example, <code>Similarity</code> normalization uses the native score function within the query to normalize the given similarity into a score predicate value and vice versa.\nIf an annotated query does not define e.g. the score, then the score value in the returned <code>SearchResult&lt;T&gt;</code> will be zero.",
+      "translation": "Spring Data 对实际查询拥有更多控制权，因此可以减少对查询及其参数的假设。例如，<code>Similarity</code>归一化会在查询内部使用原生评分函数，将给定的相似度值转换为评分谓词值，反之亦然。如果注解的查询未定义评分（如 score），则返回的 <code>SearchResult&lt;T&gt;</code> 中的评分值将为零。",
+      "count": 1
+    },
+    {
+      "source": "The <code>Vector</code> type represents an n-dimensional numerical embedding, typically produced by embedding models.\nIn Spring Data, it is defined as a lightweight wrapper around an array of floating-point numbers, ensuring immutability and consistency.\nThis type can be used as an input for search queries or as a property on a domain entity to store the associated vector representation.",
+      "translation": "`Vector` 类型表示一个 n 维数值嵌入，通常由嵌入模型生成。  \n在 Spring Data 中，它被定义为浮点数数组的轻量级包装器，以确保不可变性和一致性。  \n该类型可作为搜索查询的输入，或作为领域实体上的属性来存储相关的向量表示。",
+      "count": 1
+    },
+    {
+      "source": "The <code>SearchResult&lt;T&gt;</code> type encapsulates the results of a vector similarity query.\nIt includes both the matched domain object and a relevance score that indicates how closely it matches the query vector.\nThis abstraction provides a structured way to handle result ranking and enables developers to easily work with both the data and its contextual relevance.",
+      "translation": "`SearchResult<T>` 类型封装了向量相似度查询的结果。它既包含匹配到的领域对象，也包含一个相关性分数，用于指示该对象与查询向量的匹配程度。这种抽象提供了一种结构化的方式来处理结果排序，使开发人员能够方便地同时操作数据及其上下文相关性。",
+      "count": 1
+    },
+    {
+      "source": "Generally, a Score is computed by a <code>ScoringFunction</code>.\nThe actual scoring function used to calculate this score can depend on the underlying database and can be obtained from a search index or input parameters.",
+      "translation": "通常，分数由 `<code>ScoringFunction</code>` 计算得出。实际用于计算该分数的评分函数可能取决于底层数据库，并可从搜索索引或输入参数中获取。",
+      "count": 1
+    },
+    {
+      "source": "Vector Search methods must declare a <code>Vector</code> parameter to define the query vector.",
+      "translation": "向量搜索方法必须声明一个 `<code>Vector</code>` 参数以定义查询向量。",
+      "count": 1
+    },
+    {
+      "source": "By default, search results are ordered according to their score.\nYou can override sorting by using the <code>Sort</code> parameter:",
+      "translation": "默认情况下，搜索结果按照其分数进行排序。  \n您可以通过使用 `<code>Sort</code>` 参数来覆盖排序方式：",
+      "count": 1
+    },
+    {
+      "source": "With the rise of Generative AI, Vector databases have gained strong traction in the world of databases.\nThese databases enable efficient storage and querying of high-dimensional vectors, making them well-suited for tasks such as semantic search, recommendation systems, and natural language understanding.",
+      "translation": "随着生成式人工智能的兴起，向量数据库在数据库领域获得了强劲的发展势头。这些数据库能够高效地存储和查询高维向量，使其非常适合语义搜索、推荐系统和自然语言理解等任务。",
+      "count": 1
+    },
+    {
+      "source": "Vector search is a technique that retrieves semantically similar data by comparing vector representations (also known as embeddings) rather than relying on traditional exact-match queries.\nThis approach enables intelligent, context-aware applications that go beyond keyword-based retrieval.",
+      "translation": "向量搜索是一种通过比较向量表示（也称为嵌入）来检索语义相似数据的技术，而非依赖传统的精确匹配查询。这种方法能够支持超越基于关键词检索的智能、上下文感知型应用。",
+      "count": 1
+    },
+    {
+      "source": "In the context of Spring Data, vector search opens new possibilities for building intelligent, context-aware applications, particularly in domains like natural language processing, recommendation systems, and generative AI.\nBy modelling vector-based querying using familiar repository abstractions, Spring Data allows developers to seamlessly integrate similarity-based vector-capable databases with the simplicity and consistency of the Spring Data programming model.",
+      "translation": "在 Spring Data 的语境下，向量搜索为构建智能且具备上下文感知能力的应用程序开辟了新的可能性，特别是在自然语言处理、推荐系统和生成式 AI 等领域。\n通过利用熟悉的仓库抽象来建模基于向量的查询，Spring Data 使开发人员能够无缝地将基于相似度的向量数据库与 Spring Data 编程模型的简洁性和一致性相结合。",
+      "count": 1
+    },
+    {
+      "source": "To support vector search in a type-safe and idiomatic way, Spring Data introduces the following core abstractions:",
+      "translation": "为了以类型安全且符合惯用方式的方式支持向量搜索，Spring Data 引入了以下核心抽象：",
+      "count": 1
+    },
+    {
+      "source": "Relevance score is a numerical value that indicates how closely the matched vector aligns with the query vector.\nDepending on whether a score represents distance or similarity a higher score can mean a closer match or a more distant one.",
+      "translation": "相关性分数是一个数值，表示匹配向量与查询向量的对齐程度。  \n根据分数是代表距离还是相似度，较高的分数可能意味着更近的匹配或更远的匹配。",
+      "count": 1
+    },
+    {
+      "source": "The scoring function used to calculate this score can vary based on the underlying database, index or input parameters.",
+      "translation": "用于计算该分数的评分函数可能因底层数据库、索引或输入参数的不同而有所变化。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data support declares constants for commonly used functions such as:",
+      "translation": "Spring Data 支持声明了常用函数的常量，例如：",
+      "count": 1
+    },
+    {
+      "source": "Calculates the straight-line distance in n-dimensional space involving the square root of the sum of squared differences.",
+      "translation": "计算 n 维空间中两点间的直线距离，即各维度差值平方和的平方根。",
+      "count": 1
+    },
+    {
+      "source": "Measures the angle between two vectors by calculating the Dot product first and then normalizing its result by dividing by the product of their lengths.",
+      "translation": "通过先计算点积，然后将其结果除以两向量长度的乘积进行归一化，从而测量两个向量之间的夹角。",
+      "count": 1
+    },
+    {
+      "source": "Computes the sum of element-wise multiplications.",
+      "translation": "计算元素乘积之和。",
+      "count": 1
+    },
+    {
+      "source": "The choice of similarity function can impact both the performance and semantics of the search and is often determined by the underlying database or index being used.\nSpring Data adapts to the database’s native scoring function capabilities and whether the score can be used to limit results.",
+      "translation": "相似函数的选择会影响搜索的性能和语义，通常由所使用的底层数据库或索引决定。Spring Data 会根据数据库原生评分函数的能力以及能否利用该评分来限制结果进行适配。",
+      "count": 1
+    },
+    {
+      "source": "Generally, you have the choice of declaring a search method using two approaches:",
+      "translation": "通常，您有两种方法可以选择来声明搜索方法：",
+      "count": 1
+    },
+    {
+      "source": "Query Derivation",
+      "translation": "查询推导",
+      "count": 1
+    },
+    {
+      "source": "Declaring a String-based Query",
+      "translation": "声明基于字符串的查询",
+      "count": 1
+    },
+    {
+      "source": "A derived search method uses the name of the method to derive the query.\nVector Search supports the following keywords to run a Vector search when declaring a search method:",
+      "translation": "派生搜索方法使用该方法名称来推导查询。\n向量搜索支持以下关键字，在声明搜索方法时运行向量搜索：",
+      "count": 1
+    },
+    {
+      "source": "Annotated methods provide full control over the query semantics and parameters.\nUnlike derived methods, they do not rely on method name conventions.",
+      "translation": "注释方法提供了对查询语义和参数的完全控制。与派生方法不同，它们不依赖于方法命名约定。",
+      "count": 1
+    },
+    {
+      "source": "Please note that custom sorting does not allow expressing the score as a sorting criteria.\nYou can only refer to domain properties.",
+      "translation": "请注意，自定义排序不允许将分数作为排序条件。您只能引用域属性。",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../../index.html\">Spring Data LDAP</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../../index.html\">Spring Data LDAP</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-commons/src/main/antora/modules/ROOT/pages/repositories/vector-search.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-commons\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-commons/src/main/antora/modules/ROOT/pages/repositories/vector-search.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-commons\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Commons</a></li>\n      <li><a href=\"../repositories.html\">Working with Spring Data Repositories</a></li>\n      <li><a href=\"vector-search.html\">Vector Search</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Commons</a></li>\n      <li><a href=\"../repositories.html\">使用 Spring Data 仓库</a></li>\n      <li><a href=\"vector-search.html\">向量搜索</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring 团队学院</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "Example 1. Using <code>Sort</code> in Repository Search Methods",
+      "translation": "示例 1：在仓储搜索方法中使用<code>Sort</code>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Working with Spring Data Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods.html\">Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scrolling.html\">Scrolling</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections.html\">Projections</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories.html\">使用 Spring Data 仓储</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods.html\">查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-extensions.html\">Spring Data 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scrolling.html\">滚动查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections.html\">投影</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">Object Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空值安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <span class=\"nav-text\">Appendices</span>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"namespace-reference.html\">Namespace reference</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"populator-namespace-reference.html\">Populators namespace reference</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<span class=\"nav-text\">附录</span>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"namespace-reference.html\">命名空间参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"populator-namespace-reference.html\">填充器命名空间参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nIf you are new to Spring Data repositories, make sure to familiarize yourself with the <a class=\"xref page\" href=\"core-concepts.html\">basics of repository definitions and query methods</a>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n如果您是 Spring Data 仓库的新手，请务必熟悉<a class=\"xref page\" href=\"core-concepts.html\">仓库定义和查询方法的基础知识</a>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nAssociating a vector with a domain object results in the vector being loaded and stored as part of the entity lifecycle, which may introduce additional overhead on retrieval and persistence operations.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n将向量关联到域对象会导致该向量作为实体生命周期的一部分被加载和存储，这可能会在检索和持久化操作上引入额外的开销。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">Logical keyword</th>\n<th class=\"tableblock halign-left valign-top\">Keyword expressions</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">逻辑关键字</th>\n<th class=\"tableblock halign-left valign-top\">关键字表达式</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../upgrade.html\">Upgrading Spring Data</a>",
+      "translation": "<a class=\"nav-link\" href=\"../upgrade.html\">升级 Spring Data</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../object-mapping.html\">Object Mapping Fundamentals</a>",
+      "translation": "<a class=\"nav-link\" href=\"../object-mapping.html\">对象映射基础</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../query-by-example.html\">Query by Example</a>",
+      "translation": "<a class=\"nav-link\" href=\"../query-by-example.html\">按示例查询</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../value-expressions.html\">Value Expressions Fundamentals</a>",
+      "translation": "<a class=\"nav-link\" href=\"../value-expressions.html\">值表达式基础</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../property-paths.html\">Property Paths</a>",
+      "translation": "<a class=\"nav-link\" href=\"../property-paths.html\">属性路径</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../custom-conversions.html\">Custom Conversions</a>",
+      "translation": "<a class=\"nav-link\" href=\"../custom-conversions.html\">自定义转化</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../entity-callbacks.html\">Entity Callbacks</a>",
+      "translation": "<a class=\"nav-link\" href=\"../entity-callbacks.html\">实体回调</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../is-new-state-detection.html\">Entity State Detection Strategies</a>",
+      "translation": "<a class=\"nav-link\" href=\"../is-new-state-detection.html\">实体状态检测策略</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../aot.html\">Ahead of Time Optimizations</a>",
+      "translation": "<a class=\"nav-link\" href=\"../aot.html\">提前优化</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#vector-search.model\"></a>Vector Model",
+      "translation": "<a class=\"anchor\" href=\"#vector-search.model\"></a>向量模型",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#vector-search.model.search-result\"></a>Search Results",
+      "translation": "<a class=\"anchor\" href=\"#vector-search.model.search-result\"></a>搜索结果",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#vector-search.model.scoring\"></a>Score, Similarity, and Scoring Functions",
+      "translation": "<a class=\"anchor\" href=\"#vector-search.model.scoring\"></a>分数、相似度与评分函数",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#vector-search.methods\"></a>Vector Search Methods",
+      "translation": "<a class=\"anchor\" href=\"#vector-search.methods\"></a>向量搜索方法",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#vector-search.method.derivation\"></a>Derived Search Methods",
+      "translation": "<a class=\"anchor\" href=\"#vector-search.method.derivation\"></a>派生搜索方法",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#vector-search.method.string\"></a>Annotated Search Methods",
+      "translation": "<a class=\"anchor\" href=\"#vector-search.method.string\"></a>标注搜索方法",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Commons",
+      "translation": "Spring Data 公共模块",
+      "count": 1
+    },
+    {
+      "source": "Vector Search",
+      "translation": "向量搜索",
+      "count": 1
+    },
+    {
+      "source": "Euclidean Distance",
+      "translation": "欧几里得距离",
+      "count": 1
+    },
+    {
+      "source": "Cosine Similarity",
+      "translation": "余弦相似度",
+      "count": 1
+    },
+    {
+      "source": "Dot Product",
+      "translation": "点积",
+      "count": 1
+    },
+    {
+      "source": "Table 1. Query predicate keywords",
+      "translation": "表 1。查询谓词关键字",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "created_at": "2026-06-16 09:42:18",
+  "updated_at": "2026-06-16 09:42:18",
+  "stats": {
+    "total_entries": 68,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 76,
+    "entries_with_hits": 68,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1176470588235294,
+    "usage_percentage": 0.0068
+  },
+  "items": [
+    {
+      "source": "Creates a new <a href=\"CustomConversions.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions</code></a> instance registering all given user defined converters and selecting\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>converters</code></a> from <a href=\"CustomConversions.StoreConversions.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions.StoreConversions</code></a> depending on\n<a href=\"#getSimpleTypeHolder()\"><code>store simple types</code></a> only considering those that either convert\nto/from a store supported type.",
+      "translation": "创建一个新实例 <a href=\"CustomConversions.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions</code></a>，注册所有给定的用户自定义转换器，并从 <a href=\"CustomConversions.StoreConversions.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions.StoreConversions</code></a> 中根据 <a href=\"#getSimpleTypeHolder()\"><code>store simple types</code></a> 选择 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>converters</code></a>，仅考虑那些转换到或来自存储支持类型的转换器。",
+      "count": 2
+    },
+    {
+      "source": "Gets a reference to the configured <a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a> if property value conversions are supported by\nthe underlying data store.",
+      "translation": "如果底层数据存储支持属性值转换，则获取配置的<a href=\"PropertyValueConversions.html\" title=\"org.springframework.data.convert 中的接口\"><code>PropertyValueConversions</code></a>的引用。",
+      "count": 2
+    },
+    {
+      "source": "Returns the underlying <a href=\"../mapping/model/SimpleTypeHolder.html\" title=\"class in org.springframework.data.mapping.model\"><code>SimpleTypeHolder</code></a>.",
+      "translation": "返回底层的<a href=\"../mapping/model/SimpleTypeHolder.html\" title=\"class in org.springframework.data.mapping.model\"><code>SimpleTypeHolder</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Populates the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/support/GenericConversionService.html\" title=\"class or interface in org.springframework.core.convert.support\"><code>GenericConversionService</code></a> with the converters registered.",
+      "translation": "将已注册的转换器填充到给定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/support/GenericConversionService.html\" title=\"class or interface in org.springframework.core.convert.support\"><code>GenericConversionService</code></a> 中。",
+      "count": 2
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 2
+    },
+    {
+      "source": "Returns the target type to convert to in case we have a custom conversion registered to convert the given source\ntype into a store native one.",
+      "translation": "在已注册将给定源类型转换为存储原生类型的自定义转换的情况下，返回要转换的目标类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether we have a custom conversion registered to read the given source into the given target type.",
+      "translation": "返回是否已注册自定义转换，用于将给定源读取为给定目标类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether we have a custom conversion registered to read an object of the given source type into an object of\nthe given native target type.",
+      "translation": "返回是否已注册自定义转换，用于将给定源类型的对象转换为给定原生目标类型的对象。",
+      "count": 2
+    },
+    {
+      "source": "This method protects against null when not <a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a> have been configured for the\nunderlying data store, and is a shortcut for: <code>\n    customConversions.getPropertyValueConversions().hasValueConverter(property);\n</code>",
+      "translation": "此方法在底层数据存储尚未配置<a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a>时，可防止出现空值问题，其功能等同于以下代码：<code>\n    customConversions.getPropertyValueConversions().hasValueConverter(property);\n</code>",
+      "count": 1
+    },
+    {
+      "source": "Prior to calling this method you should verify a converter is available using\n<a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>hasValueConverter(PersistentProperty)</code></a>.",
+      "translation": "在调用此方法之前，应使用 <a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>hasValueConverter(PersistentProperty)</code></a> 验证是否有可用的转换器。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Custom conversions supports the following converters:",
+      "translation": "自定义转换支持以下转换器：",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">从类 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"java.lang 中的类或接口\">Object</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"java.lang 中的类或接口\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"java.lang 中的类或接口\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"java.lang 中的类或接口\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"java.lang 中的类或接口\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"java.lang 中的类或接口\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"java.lang 中的类或接口\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"java.lang 中的类或接口\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"java.lang 中的类或接口\">wait</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"type-parameters\">&lt;DV, SV, P extends <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;P&gt;, VCC extends <a href=\"ValueConversionContext.html\" title=\"interface in org.springframework.data.convert\">ValueConversionContext</a>&lt;P&gt;&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\">PropertyValueConverter</a>&lt;DV,<wbr/>SV,<wbr/>VCC&gt;</span> <span class=\"element-name\">getRequiredValueConverter</span><wbr/><span class=\"parameters\">(P property)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"type-parameters\">&lt;DV, SV, P extends <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;P&gt;, VCC extends <a href=\"ValueConversionContext.html\" title=\"interface in org.springframework.data.convert\">ValueConversionContext</a>&lt;P&gt;&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\">PropertyValueConverter</a>&lt;DV,<wbr/>SV,<wbr/>VCC&gt;</span> <span class=\"element-name\">getRequiredValueConverter</span><wbr/><span class=\"parameters\">(P property)</span>",
+      "count": 1
+    },
+    {
+      "source": "Returns the required <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a> for the given <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> or throws\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> if no converter is available.",
+      "translation": "返回给定 <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a> 所需的转换器，或者如果不可用则抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">CustomConversions</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>",
+      "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">CustomConversions</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>",
+      "count": 1
+    },
+    {
+      "source": "Value object holding the actual <a href=\"CustomConversions.StoreConversions.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions.StoreConversions</code></a> and custom <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>converters</code></a> configured for\nregistration.",
+      "translation": "包含实际 <a href=\"CustomConversions.StoreConversions.html\" title=\"类在 org.springframework.data.convert\"><code>CustomConversions.StoreConversions</code></a> 以及为注册而配置的自定义 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"类或接口在 org.springframework.core.convert.converter\"><code>转换器</code></a> 的值对象。",
+      "count": 1
+    },
+    {
+      "source": "Value class tying together a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.ConverterRegistration.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions.ConverterRegistration</code></a> and its <a href=\"CustomConversions.ConverterRegistrationIntent.ConverterOrigin.html\" title=\"enum class in org.springframework.data.convert\"><code>origin</code></a> to allow\nfine-grained registration based on store supported types.",
+      "translation": "Value 类将 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.ConverterRegistration.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions.ConverterRegistration</code></a> 及其 <a href=\"CustomConversions.ConverterRegistrationIntent.ConverterOrigin.html\" title=\"enum class in org.springframework.data.convert\"><code>origin</code></a> 绑定在一起，以支持基于存储支持的类型进行细粒度的注册。",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
+      "count": 1
+    },
+    {
+      "source": "Value type to capture store-specific extensions to the <a href=\"CustomConversions.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions</code></a>.",
+      "translation": "用于捕获针对特定存储的<a href=\"CustomConversions.html\" title=\"org.springframework.data.convert 中的类\"><code>CustomConversions</code></a>扩展的值类型。",
+      "count": 1
+    },
+    {
+      "source": "Determines whether the given, required <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>property</code></a> has a value-specific converter\nregistered.",
+      "translation": "判断给定的必需<a href=\"../mapping/PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>property</code></a>是否已注册了基于值的转换器。",
+      "count": 1
+    },
+    {
+      "source": "Returns whether the given type is considered to be simple. That means it's either a general simple type or we have\na writing <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>Converter</code></a> registered for a particular type.",
+      "translation": "返回给定的类型是否被视为简单类型。这意味着它要么是一种通用简单类型，要么我们为特定类型注册了 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>Converter</code></a> 转换器。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Class CustomConversions\">Class CustomConversions</h1>",
+      "translation": "<h1 class=\"title\" title=\"类 CustomConversions\">类 CustomConversions</h1>",
+      "count": 1
+    },
+    {
+      "source": "<span>Nested Classes</span>",
+      "translation": "<span>嵌套类</span>",
+      "count": 1
+    },
+    {
+      "source": "Returns whether we have a custom conversion registered to read <code>sourceType</code> into a native type.",
+      "translation": "返回是否已注册自定义转换，用于将 `<code>sourceType</code>` 读取为原生类型。",
+      "count": 1
+    },
+    {
+      "source": "Returns the target type we can read an inject of the given source type to. The returned type might be a subclass of\nthe given expected type though. If <code>requestedTargetType</code> is null we will simply return the first\ntarget type matching or null if no conversion can be found.",
+      "translation": "返回我们可以将给定源类型注入并读取的目标类型。返回的类型可能是给定预期类型的子类。如果<code>requestedTargetType</code>为null，我们将简单地返回第一个匹配的目标类型；如果找不到任何转换，则返回null。",
+      "count": 1
+    },
+    {
+      "source": "Returns whether we have a custom conversion registered to read <code>sourceType</code> into a native type. The returned\ntype might be a subclass of the given expected type though.",
+      "translation": "返回是否已注册自定义转换，用于将 `<code>sourceType</code>` 转换为原生类型。返回的类型可能是给定预期类型的子类。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Core",
+      "translation": "Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Returns the target type we can read an inject of the given source type to.",
+      "translation": "返回我们可以将给定源类型注入并读取的目标类型。",
+      "count": 1
+    },
+    {
+      "source": "Returns whether the given type is considered to be simple.",
+      "translation": "返回给定的类型是否被视为简单类型。",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">Nested Class Summary</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">Constructor Summary</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">Constructor Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E(org.springframework.data.convert.CustomConversions.ConverterConfiguration)\" tabindex=\"0\">CustomConversions(CustomConversions.ConverterConfiguration)</a></li>\n<li><a href=\"#%3Cinit%3E(org.springframework.data.convert.CustomConversions.StoreConversions,java.util.Collection)\" tabindex=\"0\">CustomConversions(CustomConversions.StoreConversions, Collection)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getSimpleTypeHolder()\" tabindex=\"0\">getSimpleTypeHolder()</a></li>\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\" tabindex=\"0\">hasValueConverter(PersistentProperty)</a></li>\n<li><a href=\"#getRequiredValueConverter(P)\" tabindex=\"0\">getRequiredValueConverter(P)</a></li>\n<li><a href=\"#isSimpleType(java.lang.Class)\" tabindex=\"0\">isSimpleType(Class)</a></li>\n<li><a href=\"#registerConvertersIn(org.springframework.core.convert.converter.ConverterRegistry)\" tabindex=\"0\">registerConvertersIn(ConverterRegistry)</a></li>\n<li><a href=\"#getPropertyValueConversions()\" tabindex=\"0\">getPropertyValueConversions()</a></li>\n<li><a href=\"#getCustomWriteTarget(java.lang.Class)\" tabindex=\"0\">getCustomWriteTarget(Class)</a></li>\n<li><a href=\"#getCustomWriteTarget(java.lang.Class,java.lang.Class)\" tabindex=\"0\">getCustomWriteTarget(Class, Class)</a></li>\n<li><a href=\"#hasCustomWriteTarget(java.lang.Class)\" tabindex=\"0\">hasCustomWriteTarget(Class)</a></li>\n<li><a href=\"#hasCustomWriteTarget(java.lang.Class,java.lang.Class)\" tabindex=\"0\">hasCustomWriteTarget(Class, Class)</a></li>\n<li><a href=\"#hasCustomReadTarget(java.lang.Class,java.lang.Class)\" tabindex=\"0\">hasCustomReadTarget(Class, Class)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">嵌套类摘要</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">构造函数摘要</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">构造函数详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E(org.springframework.data.convert.CustomConversions.ConverterConfiguration)\" tabindex=\"0\">CustomConversions(CustomConversions.ConverterConfiguration)</a></li>\n<li><a href=\"#%3Cinit%3E(org.springframework.data.convert.CustomConversions.StoreConversions,java.util.Collection)\" tabindex=\"0\">CustomConversions(CustomConversions.StoreConversions, Collection)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getSimpleTypeHolder()\" tabindex=\"0\">getSimpleTypeHolder()</a></li>\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\" tabindex=\"0\">hasValueConverter(PersistentProperty)</a></li>\n<li><a href=\"#getRequiredValueConverter(P)\" tabindex=\"0\">getRequiredValueConverter(P)</a></li>\n<li><a href=\"#isSimpleType(java.lang.Class)\" tabindex=\"0\">isSimpleType(Class)</a></li>\n<li><a href=\"#registerConvertersIn(org.springframework.core.convert.converter.ConverterRegistry)\" tabindex=\"0\">registerConvertersIn(ConverterRegistry)</a></li>\n<li><a href=\"#getPropertyValueConversions()\" tabindex=\"0\">getPropertyValueConversions()</a></li>\n<li><a href=\"#getCustomWriteTarget(java.lang.Class)\" tabindex=\"0\">getCustomWriteTarget(Class)</a></li>\n<li><a href=\"#getCustomWriteTarget(java.lang.Class,java.lang.Class)\" tabindex=\"0\">getCustomWriteTarget(Class, Class)</a></li>\n<li><a href=\"#hasCustomWriteTarget(java.lang.Class)\" tabindex=\"0\">hasCustomWriteTarget(Class)</a></li>\n<li><a href=\"#hasCustomWriteTarget(java.lang.Class,java.lang.Class)\" tabindex=\"0\">hasCustomWriteTarget(Class, Class)</a></li>\n<li><a href=\"#hasCustomReadTarget(java.lang.Class,java.lang.Class)\" tabindex=\"0\">hasCustomReadTarget(Class, Class)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>property</code> - <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> to evaluate; must not be null.</dd>\n<dt>Returns:</dt>\n<dd>a boolean value indicating whether <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a> has been configured and registered for\n        the <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>property</code></a>.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"PropertyValueConversions.html#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>PropertyValueConversions.hasValueConverter(PersistentProperty)</code></a></li>\n<li><a href=\"#getPropertyValueConversions()\"><code>getPropertyValueConversions()</code></a></li>\n<li><a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>property</code> - 要评估的 <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>；不能为 null。</dd>\n<dt>返回：</dt>\n<dd>一个布尔值，指示是否已为 <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>property</code></a> 配置并注册了 <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a>。</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"PropertyValueConversions.html#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>PropertyValueConversions.hasValueConverter(PersistentProperty)</code></a></li>\n<li><a href=\"#getPropertyValueConversions()\"><code>getPropertyValueConversions()</code></a></li>\n<li><a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>property</code> - <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> to evaluate; must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the required <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a></dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no converter is available.</dd>\n<dt>Since:</dt>\n<dd>4.0</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>hasValueConverter(PersistentProperty)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>property</code> - 要评估的 <a href=\"../mapping/PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>；不能为 null。</dd>\n<dt>返回：</dt>\n<dd>所需的 <a href=\"PropertyValueConverter.html\" title=\"org.springframework.data.convert 中的接口\"><code>PropertyValueConverter</code></a></dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果不可用转换器。</dd>\n<dt>版本：</dt>\n<dd>4.0</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>hasValueConverter(PersistentProperty)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>type</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>Class</code></a> to evaluate as a simple type, such as a primitive type.</dd>\n<dt>Returns:</dt>\n<dd>a boolean value indicating whether the given, required <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> is simple.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"../mapping/model/SimpleTypeHolder.html#isSimpleType(java.lang.Class)\"><code>SimpleTypeHolder.isSimpleType(Class)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>type</code> - 要作为简单类型（例如基本类型）进行评估的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>Class</code></a></dd>\n<dt>返回：</dt>\n<dd>一个布尔值，指示给定的必需 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>type</code></a> 是否为简单类型。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"../mapping/model/SimpleTypeHolder.html#isSimpleType(java.lang.Class)\"><code>SimpleTypeHolder.isSimpleType(Class)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<li>Converters built by <a href=\"ConverterBuilder.html\" title=\"interface in org.springframework.data.convert\"><code>ConverterBuilder</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/GenericConverter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>GenericConverter</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/ConverterFactory.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>ConverterFactory</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>Converter</code></a></li>",
+      "translation": "<li><code>ConverterBuilder</code> 接口构建的转换器</li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/GenericConverter.html\" title=\"org.springframework.core.convert.converter 中的类或接口\"><code>GenericConverter</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/ConverterFactory.html\" title=\"org.springframework.core.convert.converter 中的类或接口\"><code>ConverterFactory</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"org.springframework.core.convert.converter 中的类或接口\"><code>Converter</code></a></li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>conversionService</code> - <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/ConverterRegistry.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>ConverterRegistry</code></a> to populate; must not be null.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/ConverterRegistry.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>ConverterRegistry</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>conversionService</code> - 要填充的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/ConverterRegistry.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>ConverterRegistry</code></a>；不能为 null。</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/ConverterRegistry.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>ConverterRegistry</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the underlying <a href=\"../mapping/model/SimpleTypeHolder.html\" title=\"class in org.springframework.data.mapping.model\"><code>SimpleTypeHolder</code></a>.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"../mapping/model/SimpleTypeHolder.html\" title=\"class in org.springframework.data.mapping.model\"><code>SimpleTypeHolder</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>底层的 <a href=\"../mapping/model/SimpleTypeHolder.html\" title=\"class in org.springframework.data.mapping.model\"><code>SimpleTypeHolder</code></a>。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"../mapping/model/SimpleTypeHolder.html\" title=\"class in org.springframework.data.mapping.model\"><code>SimpleTypeHolder</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>a reference to the configured <a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a>; may be null if the underlying\n        data store does not support property value conversions.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>已配置的 <a href=\"PropertyValueConversions.html\" title=\"org.springframework.data.convert 中的接口\"><code>PropertyValueConversions</code></a> 的引用；如果底层数据存储不支持属性值转换，则可能为 null。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"PropertyValueConversions.html\" title=\"org.springframework.data.convert 中的接口\"><code>PropertyValueConversions</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>converterConfiguration</code> - the <a href=\"CustomConversions.ConverterConfiguration.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions.ConverterConfiguration</code></a> to apply.</dd>\n<dt>Since:</dt>\n<dd>2.3</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>converterConfiguration</code> - 要应用的 <a href=\"CustomConversions.ConverterConfiguration.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions.ConverterConfiguration</code></a>。</dd>\n<dt>版本：</dt>\n<dd>2.3</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>sourceType</code> - must not be null</dd>\n<dd><code>requestedTargetType</code> - must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the target type we can read an inject of the given source type to.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>sourceType</code> - 不能为 null</dd>\n<dd><code>requestedTargetType</code> - 不能为 null。</dd>\n<dt>返回：</dt>\n<dd>可以读取并注入给定源类型的目标类型。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>sourceType</code> - must not be null.</dd>\n<dd><code>targetType</code> - must not be null.</dd>\n<dt>Returns:</dt>\n<dd>whether we have a custom conversion registered to read an object of the given source type into an object of\n        the given native target type.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>sourceType</code> - 不能为 null。</dd>\n<dd><code>targetType</code> - 不能为 null。</dd>\n<dt>返回：</dt>\n<dd>是否已注册自定义转换器，用于将给定源类型的对象转换为给定原生目标类型的对象。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>sourceType</code> - must not be null</dd>\n<dd><code>targetType</code> - must not be null</dd>\n<dt>Returns:</dt>\n<dd>whether we have a custom conversion registered to read the given source into the given target type.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>sourceType</code> - 不能为 null</dd>\n<dd><code>targetType</code> - 不能为 null</dd>\n<dt>返回：</dt>\n<dd>是否已注册自定义转换器，用于将给定的源类型转换为给定的目标类型。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>sourceType</code> - must not be null</dd>\n<dt>Returns:</dt>\n<dd>whether we have a custom conversion registered to read <code>sourceType</code> into a native type.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>sourceType</code> - 不能为 null</dd>\n<dt>返回：</dt>\n<dd>是否已注册自定义转换器，用于将 <code>sourceType</code> 转换为原生类型。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>storeConversions</code> - must not be null.</dd>\n<dd><code>converters</code> - must not be null.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>storeConversions</code> - 不能为 null。</dd>\n<dd><code>converters</code> - 不能为 null。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>sourceType</code> - must not be null</dd>\n<dt>Returns:</dt>\n<dd>the target type to convert to in case we have a custom conversion registered to convert the given source\n        type into a store native one.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>sourceType</code> - 不能为 null</dd>\n<dt>返回：</dt>\n<dd>如果已注册自定义转换器将给定的源类型转换为存储原生类型，则返回要转换的目标类型。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>2.0</dd>\n<dt>Author:</dt>\n<dd>Oliver Gierke, Thomas Darimont, Christoph Strobl, Mark Paluch, Xeno Amess, Johannes Englmeier</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>2.0</dd>\n<dt>作者：</dt>\n<dd>Oliver Gierke, Thomas Darimont, Christoph Strobl, Mark Paluch, Xeno Amess, Johannes Englmeier</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Constructor Summary",
+      "translation": "构造函数摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Constructor Details",
+      "translation": "构造器详情",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Value object to capture custom conversion. That is essentially a",
+      "translation": "用于捕获自定义转换的值对象。这本质上是一个",
+      "count": 1
+    },
+    {
+      "source": "of converters and some additional logic\naround them. The converters build up two sets of types which store-specific basic types can be converted into and\nfrom. These types will be considered simple ones (which means they neither need deeper inspection nor nested\nconversion. Thus, the",
+      "translation": "转换器的以及围绕它们的一些附加逻辑。转换器构建了两组类型，用于存储特定基本类型可以转换到和从的类型。这些类型将被视为简单类型（这意味着它们既不需要更深入的检查，也不需要嵌套转换。因此，",
+      "count": 1
+    },
+    {
+      "source": "also act as factory for",
+      "translation": "同时也作为...的工厂",
+      "count": 1
+    },
+    {
+      "source": "Note that CustomConversions does not support",
+      "translation": "请注意，CustomConversions 不支持",
+      "count": 1
+    },
+    {
+      "source": "as custom conversions maintains a registry of convertible type pairs; We cannot determine convertible types based on",
+      "translation": "由于自定义转换维护了可转换类型对的注册表；我们无法仅基于...来确定可转换类型。",
+      "count": 1
+    },
+    {
+      "source": ", instead, we require a converter to provide its convertible types either through\nthe class declaration or",
+      "translation": "，相反，我们需要转换器通过类声明或其他方式提供其可转换类型。",
+      "count": 1
+    },
+    {
+      "source": "Determines whether the given, required",
+      "translation": "确定给定的必需项",
+      "count": 1
+    },
+    {
+      "source": "has a value-specific converter\nregistered. Returns false if no",
+      "translation": "已注册具有特定值转换器的方法。如果未注册则返回 false。",
+      "count": 1
+    },
+    {
+      "source": "have been configured for the underlying\nstore.",
+      "translation": "已配置底层存储。",
+      "count": 1
+    },
+    {
+      "source": "Returns the required",
+      "translation": "返回所需内容",
+      "count": 1
+    },
+    {
+      "source": "for the given",
+      "translation": "对于给定的",
+      "count": 1
+    },
+    {
+      "source": "or throws",
+      "translation": "或抛出",
+      "count": 1
+    },
+    {
+      "source": "if no converter is available. This is a convenience method for",
+      "translation": "如果没有可用的转换器，这是一个便捷方法用于",
+      "count": 1
+    },
+    {
+      "source": "enforcing non-null constraints.",
+      "translation": "执行非空约束。",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,756 @@
+{
+  "created_at": "2026-06-17 09:49:26",
+  "updated_at": "2026-06-17 09:49:26",
+  "stats": {
+    "total_entries": 148,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 149,
+    "entries_with_hits": 148,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0067567567567568,
+    "usage_percentage": 0.014799999999999999
+  },
+  "items": [
+    {
+      "source": "<code>@Version</code> properties if not included in the <code>Update</code> will be automatically incremented.\nRead more in the <a href=\"#mongo-template.optimistic-locking\">Optimistic Locking</a> section.",
+      "translation": "如果未在 <code>Update</code> 中包含 <code>@Version</code> 属性，则该属性将自动递增。  \n有关更多信息，请参阅<a href=\"#mongo-template.optimistic-locking\">乐观锁</a>部分。",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "It is not possible to change the <code>_id</code> of existing documents with a replace operation.\nOn <code>upsert</code> MongoDB uses 2 ways of determining the new id for the entry:\n* The <code>_id</code> is used within the query as in <code>{\"_id\" : 1234 }</code>\n* The <code>_id</code> is present in the replacement document.\nIf no <code>_id</code> is provided in either way, MongoDB will create a new <code>ObjectId</code> for the document.\nThis may lead to mapping and data lookup malfunctions if the used domain types <code>id</code> property has a different type like e.g. <code>Long</code>.",
+      "translation": "无法通过替换操作更改现有文档的 `<code>_id</code>`。  \n在 `<code>upsert</code>` 操作中，MongoDB 采用以下两种方式来确定新条目的 ID：  \n* 在查询中使用 `<code>_id</code>`，例如 `<code>{\"_id\" : 1234 }</code>`；  \n* 替换文档中包含 `<code>_id</code>`。  \n\n如果以上两种方式均未提供 `<code>_id</code>`，MongoDB 将为该文档生成一个新的 `<code>ObjectId</code>`。  \n这可能导致映射和数据查找出现问题，特别是当使用的领域类型中 `<code>id</code>` 属性的类型不同（例如为 `<code>Long</code>`）时。",
+      "count": 1
+    },
+    {
+      "source": "<code>MongoTemplate</code> / <code>ReactiveMongoTemplate</code> let you save, update, and delete your domain objects and map those objects to documents stored in MongoDB.\nThe API signatures of the imperative and reactive API are mainly the same only differing in their return types.\nWhile the synchronous API uses <code>void</code>, single <code>Object</code> and <code>List</code> the reactive counterpart consists of <code>Mono&lt;Void&gt;</code>, <code>Mono&lt;Object&gt;</code> and <code>Flux</code>.",
+      "translation": "MongoTemplate 和 ReactiveMongoTemplate 允许您保存、更新和删除领域对象，并将这些对象映射到存储在 MongoDB 中的文档。命令式和响应式 API 的签名基本相同，仅在返回类型上有所区别。同步 API 使用 <code>void</code>、单个 <code>Object</code> 和 <code>List</code>，而对应的响应式版本则使用 <code>Mono&lt;Void&gt;</code>、<code>Mono&lt;Object&gt;</code> 和 <code>Flux</code>。",
+      "count": 1
+    },
+    {
+      "source": "Some environments require a customized approach to map <code>Id</code> values such as data stored in MongoDB that did not run through the Spring Data mapping layer.\nDocuments can contain <code>_id</code> values that can be represented either as <code>ObjectId</code> or as <code>String</code>.\nReading documents from the store back to the domain type works just fine.\nQuerying for documents via their <code>id</code> can be cumbersome due to the implicit <code>ObjectId</code> conversion.\nTherefore documents cannot be retrieved that way.\nFor those cases <code>@MongoId</code> provides more control over the actual id mapping attempts.",
+      "translation": "某些环境需要采用定制化的方法来映射 `<code>Id</code>` 值，例如存储在 MongoDB 中且未经过 Spring Data 映射层处理的数据。文档可能包含 `<code>_id</code>` 值，这些值可以表示为 `<code>ObjectId</code>` 或 `<code>String</code>`。从存储中读取文档并转换回领域类型的工作正常。然而，通过其 `<code>id</code>` 查询文档可能会很繁琐，因为存在隐式的 `<code>ObjectId</code>` 转换问题，因此无法以这种方式检索文档。对于这些情况，`<code>@MongoId</code>` 提供了对实际 id 映射尝试的更多控制。",
+      "count": 1
+    },
+    {
+      "source": "Any <code>@Version</code> property that has not been set prior to calling insert will be auto initialized with <code>1</code> (in case of a simple type like <code>int</code>) or <code>0</code> for wrapper types (eg. <code>Integer</code>).<br/>\nRead more in the <a href=\"#mongo-template.optimistic-locking\">Optimistic Locking</a> section.",
+      "translation": "任何在调用 insert 之前未设置的 <code>@Version</code> 属性，将自动初始化为 <code>1</code>（对于简单类型如 <code>int</code>）或 <code>0</code>（对于包装类型，例如 <code>Integer</code>）。<br/>\n有关更多信息，请参阅<a href=\"#mongo-template.optimistic-locking\">乐观锁</a>部分。",
+      "count": 1
+    },
+    {
+      "source": "The <code>findAndModify(…)</code> method on <code>MongoCollection</code> can update a document and return either the old or newly updated document in a single operation.\n<code>MongoTemplate</code> provides four <code>findAndModify</code> overloaded methods that take <code>Query</code> and <code>Update</code> classes and converts from <code>Document</code> to your POJOs:",
+      "translation": "MongoCollection 上的 findAndModify(…) 方法可以在单个操作中更新文档，并返回旧文档或新更新的文档。  \nMongoTemplate 提供了四个重载的 findAndModify 方法，它们接受 Query 和 Update 类，并将 Document 转换为您的 POJO：",
+      "count": 1
+    },
+    {
+      "source": "When inserting or saving, if the <code>Id</code> property is not set, the assumption is that its value will be auto-generated by the database.\nConsequently, for auto-generation of an <code>ObjectId</code> to succeed, the type of the <code>Id</code> property or field in your class must be a <code>String</code>, an <code>ObjectId</code>, or a <code>BigInteger</code>.",
+      "translation": "在插入或保存时，如果未设置 `<code>Id</code>` 属性，则假定其值将由数据库自动生成。因此，若要成功自动生成本类中的 `<code>Id</code>` 属性或字段的 `<code>ObjectId</code>`，该属性的类型必须是 `<code>String</code>`、`<code>ObjectId</code>` 或 `<code>BigInteger</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>currentTimestamp</strong> <code>(String key)</code> Update using the <code>$currentDate</code> update modifier with <code>$type</code> <code>timestamp</code>",
+      "translation": "<code>Update</code> <strong>currentTimestamp</strong> <code>(String key)</code> 使用 <code>$currentDate</code> 更新修饰符，并将 <code>$type</code> 设置为 <code>timestamp</code>。",
+      "count": 1
+    },
+    {
+      "source": "Update methods exposed by <code>MongoOperations</code> and <code>ReactiveMongoOperations</code> also accept an <a class=\"xref page\" href=\"aggregation-framework.html\">Aggregation Pipeline</a> via <code>AggregationUpdate</code>.\nUsing <code>AggregationUpdate</code> allows leveraging <a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.update/#update-with-aggregation-pipeline\">MongoDB 4.2 aggregations</a> in an update operation.\nUsing aggregations in an update allows updating one or more fields by expressing multiple stages and multiple conditions with a single operation.",
+      "translation": "`MongoOperations`和`ReactiveMongoOperations`暴露的更新方法也通过`AggregationUpdate`接受<a class=\"xref page\" href=\"aggregation-framework.html\">聚合管道</a>。使用`AggregationUpdate`可以在更新操作中利用<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.update/#update-with-aggregation-pipeline\">MongoDB 4.2 的聚合功能</a>。在更新操作中使用聚合允许通过单个操作表达多个阶段和多个条件，从而更新一个或多个字段。",
+      "count": 1
+    },
+    {
+      "source": "If possible, an <code>id</code> property or field declared as a <code>String</code> in the Java class is converted to and stored as an <code>ObjectId</code> by using a Spring <code>Converter&lt;String, ObjectId&gt;</code>.\nValid conversion rules are delegated to the MongoDB Java driver.\nIf it cannot be converted to an <code>ObjectId</code>, then the value is stored as a string in the database.",
+      "translation": "如果可能，Java 类中声明为 <code>String</code> 的 <code>id</code> 属性或字段会通过 Spring 的 <code>Converter&lt;String, ObjectId&gt;</code> 转换为 <code>ObjectId</code> 并存储。有效的转换规则由 MongoDB Java 驱动委托处理。如果无法转换为 <code>ObjectId</code>，则该值将以字符串形式存储在数据库中。",
+      "count": 1
+    },
+    {
+      "source": "For updates, you can update the first document found by using <code>MongoOperations.updateFirst</code> or you can update all documents that were found to match the query by using the <code>MongoOperations.updateMulti</code> method or <code>all</code> on the fluent API.\nThe following example shows an update of all <code>SAVINGS</code> accounts where we are adding a one-time $50.00 bonus to the balance by using the <code>$inc</code> operator:",
+      "translation": "若要更新数据，您可以使用 <code>MongoOperations.updateFirst</code> 方法更新找到的第一个文档，也可以使用 <code>MongoOperations.updateMulti</code> 方法或流式 API 中的 <code>all</code> 选项来更新所有匹配查询条件的文档。\n以下示例展示了如何使用 <code>$inc</code> 运算符向所有 <code>SAVINGS</code> 账户余额中添加一次性 50.00 美元奖金：",
+      "count": 1
+    },
+    {
+      "source": "<code>MongoConverter</code> caused implicit conversion between a <code>String</code> and an <code>ObjectId</code> stored in the database by recognizing (through convention) the <code>Id</code> property name.",
+      "translation": "MongoConverter 通过约定识别名为 <code>Id</code> 的属性，从而在数据库中存储的 <code>String</code> 和 <code>ObjectId</code> 之间触发了隐式转换。",
+      "count": 1
+    },
+    {
+      "source": "There are several convenient methods on <code>MongoTemplate</code> for saving and inserting your objects.\nTo have more fine-grained control over the conversion process, you can register Spring converters with the <code>MappingMongoConverter</code> — for example  <code>Converter&lt;Person, Document&gt;</code> and <code>Converter&lt;Document, Person&gt;</code>.",
+      "translation": "在 `MongoTemplate` 上存在几种便捷的方法来保存和插入对象。  \n若需对转换过程进行更精细的控制，您可以向 `MappingMongoConverter` 注册 Spring 转换器——例如 `Converter<Person, Document>` 和 `Converter<Document, Person>`。",
+      "count": 1
+    },
+    {
+      "source": "MongoDB requires that you have an <code>_id</code> field for all documents.\nIf you do not provide one, the driver assigns an <code>ObjectId</code> with a generated value without considering your domain model as the server isn’t aware of your identifier type.\nWhen you use the <code>MappingMongoConverter</code>, certain rules govern how properties from the Java class are mapped to this <code>_id</code> field:",
+      "translation": "MongoDB 要求所有文档都必须包含一个 `<code>_id</code>` 字段。  \n如果您未提供该字段，驱动程序会分配一个 `<code>ObjectId</code>` 并生成一个值，而不会考虑您的领域模型，因为服务器并不了解您的标识符类型。  \n当您使用 `<code>MappingMongoConverter</code>` 时，某些规则将决定如何从 Java 类属性映射到该 `<code>_id</code>` 字段：",
+      "count": 1
+    },
+    {
+      "source": "An <code>id</code> property or field declared as <code>BigInteger</code> in the Java class is converted to and stored as an <code>ObjectId</code> by using a Spring <code>Converter&lt;BigInteger, ObjectId&gt;</code>.",
+      "translation": "Java 类中声明为 <code>BigInteger</code> 的 <code>id</code> 属性或字段，将通过使用 Spring 的 <code>Converter&lt;BigInteger, ObjectId&gt;</code> 转换为 <code>ObjectId</code> 并存储。",
+      "count": 1
+    },
+    {
+      "source": "There are two ways to manage the collection name that is used for the documents.\nThe default collection name that is used is the class name changed to start with a lower-case letter.\nSo a <code>com.test.Person</code> class is stored in the <code>person</code> collection.\nYou can customize this by providing a different collection name with the <code>@Document</code> annotation.\nYou can also override the collection name by providing your own collection name as the last parameter for the selected <code>MongoTemplate</code> method calls.",
+      "translation": "管理文档所用集合名称有两种方式。默认情况下，使用的集合名称是将类名转换为以小写字母开头，因此<code>com.test.Person</code>类会被存储在<code>person</code>集合中。您可以通过使用<code>@Document</code>注解提供不同的集合名称来自定义此行为。此外，您还可以在选定的<code>MongoTemplate</code>方法调用中将自定义集合名称作为最后一个参数来覆盖集合名称。",
+      "count": 1
+    },
+    {
+      "source": "The MongoDB driver supports inserting a collection of documents in one operation.\nThe following methods in the <code>MongoOperations</code> interface support this functionality via <code>insert</code>, <code>bulkWrite</code> (requires MongoDB 8.0+) or a dedicated <code>BulkOperations</code> interface.",
+      "translation": "MongoDB 驱动程序支持在一次操作中插入一批文档。  \n`<code>MongoOperations</code>` 接口中的以下方法通过 `<code>insert</code>`、`<code>bulkWrite</code>`（需要 MongoDB 8.0+）或专用的 `<code>BulkOperations</code>` 接口来支持此功能。",
+      "count": 1
+    },
+    {
+      "source": "In addition to the <code>Query</code> discussed earlier, we provide the update definition by using an <code>Update</code> object.\nThe <code>Update</code> class has methods that match the update modifiers available for MongoDB.\nMost methods return the <code>Update</code> object to provide a fluent style for the API.",
+      "translation": "除了前面讨论的<code>Query</code>，我们还通过<code>Update</code>对象提供更新定义。  \n<code>Update</code>类提供了与 MongoDB 可用的更新修饰符相匹配的方法。  \n大多数方法返回<code>Update</code>对象，以支持 API 的链式调用风格。",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>addToSet</strong> <code>(String key, Object value)</code> Update using the <code>$addToSet</code> update modifier",
+      "translation": "<code>Update</code> <strong>addToSet</strong> <code>(String key, Object value)</code> 使用 <code>$addToSet</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>currentDate</strong> <code>(String key)</code> Update using the <code>$currentDate</code> update modifier",
+      "translation": "<code>Update</code> <strong>currentDate</strong> <code>(String key)</code> 使用 <code>$currentDate</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>inc</strong> <code>(String key, Number inc)</code> Update using the <code>$inc</code> update modifier",
+      "translation": "<code>Update</code> <strong>inc</strong> <code>(String key, Number inc)</code> 使用 <code>$inc</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>max</strong> <code>(String key, Object max)</code> Update using the <code>$max</code> update modifier",
+      "translation": "<code>Update</code> <strong>max</strong> <code>(String key, Object max)</code> 使用 <code>$max</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>min</strong> <code>(String key, Object min)</code> Update using the <code>$min</code> update modifier",
+      "translation": "<code>Update</code> <strong>min</strong> <code>(String key, Object min)</code> 使用 <code>$min</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>multiply</strong> <code>(String key, Number multiplier)</code> Update using the <code>$mul</code> update modifier",
+      "translation": "<code>Update</code> 使用 <code>$mul</code> 更新修饰符来<strong>相乘</strong> <code>(String key, Number multiplier)</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>pop</strong> <code>(String key, Update.Position pos)</code> Update using the <code>$pop</code> update modifier",
+      "translation": "<code>Update</code> <strong>pop</strong> <code>(String key, Update.Position pos)</code> 使用 <code>$pop</code> 更新修饰符进行更新。",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>pull</strong> <code>(String key, Object value)</code> Update using the <code>$pull</code> update modifier",
+      "translation": "<code>Update</code> <strong>pull</strong> <code>(String key, Object value)</code> 使用 <code>$pull</code> 更新修饰符进行更新。",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>pullAll</strong> <code>(String key, Object[] values)</code> Update using the <code>$pullAll</code> update modifier",
+      "translation": "<code>Update</code> <strong>pullAll</strong> <code>(String key, Object[] values)</code> 使用 <code>$pullAll</code> 更新修饰符进行更新。",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>push</strong> <code>(String key, Object value)</code> Update using the <code>$push</code> update modifier",
+      "translation": "<code>Update</code> <strong>push</strong> <code>(String key, Object value)</code> 使用 <code>$push</code> 更新修饰符进行更新。",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>pushAll</strong> <code>(String key, Object[] values)</code> Update using the <code>$pushAll</code> update modifier",
+      "translation": "<code>Update</code> <strong>pushAll</strong> <code>(String key, Object[] values)</code> 使用 <code>$pushAll</code> 更新修饰符进行更新。",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>rename</strong> <code>(String oldName, String newName)</code> Update using the <code>$rename</code> update modifier",
+      "translation": "<code>Update</code> <strong>重命名</strong> <code>(String oldName, String newName)</code> 使用 <code>$rename</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>set</strong> <code>(String key, Object value)</code> Update using the <code>$set</code> update modifier",
+      "translation": "<code>Update</code> <strong>set</strong> <code>(String key, Object value)</code> 使用 <code>$set</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>setOnInsert</strong> <code>(String key, Object value)</code> Update using the <code>$setOnInsert</code> update modifier",
+      "translation": "<code>Update</code> <strong>setOnInsert</strong> <code>(String key, Object value)</code> 使用 <code>$setOnInsert</code> 更新修饰符进行更新",
+      "count": 1
+    },
+    {
+      "source": "<code>Update</code> <strong>unset</strong> <code>(String key)</code> Update using the <code>$unset</code> update modifier",
+      "translation": "<code>Update</code> <strong>unset</strong> <code>(String key)</code> 使用 <code>$unset</code> 更新修饰符进行更新。",
+      "count": 1
+    },
+    {
+      "source": "The <code>FindAndModifyOptions</code> method lets you set the options of <code>returnNew</code>, <code>upsert</code>, and <code>remove</code>.\nAn example extending from the previous code snippet follows:",
+      "translation": "`FindAndModifyOptions` 方法允许您设置 `returnNew`、`upsert` 和 `remove` 的选项。\n以下是一个基于上一段代码片段的示例：",
+      "count": 1
+    },
+    {
+      "source": "The most straight forward method of replacing an entire <code>Document</code> is via its <code>id</code> using the <code>save</code> method.\nHowever this might not always be feasible.\n<code>findAndReplace</code> offers an alternative that allows to identify the document to replace via a simple query.",
+      "translation": "替换整个 `<code>Document</code>` 的最直接方法是通过其 `<code>id</code>` 使用 `<code>save</code>` 方法。  \n然而，这种方法并不总是可行的。  \n`<code>findAndReplace</code>` 提供了一种替代方案，允许通过简单的查询来识别要替换的文档。",
+      "count": 1
+    },
+    {
+      "source": "The preceding example is meant to show the use of save, update, and remove operations on <code>MongoTemplate</code> / <code>ReactiveMongoTemplate</code> and not to show complex mapping functionality.\nThe query syntax used in the preceding example is explained in more detail in the section “<a class=\"xref page\" href=\"template-query-operations.html\">Querying Documents</a>”.",
+      "translation": "前面的示例旨在展示对 `<code>MongoTemplate</code>` / `<code>ReactiveMongoTemplate` 的保存、更新和删除操作的使用，而非展示复杂的映射功能。  \n前面示例中使用的查询语法在“<a class=\"xref page\" href=\"template-query-operations.html\">查询文档</a>\"一节中有更详细的说明。",
+      "count": 1
+    },
+    {
+      "source": "<code>void</code> <strong>save</strong> <code>(Object objectToSave)</code>: Save the object to the default collection.",
+      "translation": "<code>void</code> <strong>save</strong> <code>(Object objectToSave)</code>：将对象保存到默认集合中。",
+      "count": 1
+    },
+    {
+      "source": "<code>void</code> <strong>save</strong> <code>(Object objectToSave, String collectionName)</code>: Save the object to the specified collection.",
+      "translation": "<code>void</code> <strong>save</strong> <code>(Object objectToSave, String collectionName)</code>：将对象保存到指定的集合中。",
+      "count": 1
+    },
+    {
+      "source": "<code>void</code> <strong>insert</strong> <code>(Object objectToSave)</code>: Insert the object to the default collection.",
+      "translation": "<code>void</code> <strong>insert</strong> <code>(Object objectToSave)</code>：将对象插入默认集合。",
+      "count": 1
+    },
+    {
+      "source": "<code>void</code> <strong>insert</strong> <code>(Object objectToSave, String collectionName)</code>: Insert the object to the specified collection.",
+      "translation": "<code>void</code> <strong>insert</strong> <code>(Object objectToSave, String collectionName)</code>：将对象插入到指定的集合中。",
+      "count": 1
+    },
+    {
+      "source": "A property or field annotated with <code>@Id</code> (<code>org.springframework.data.annotation.Id</code>) maps to the <code>_id</code> field.",
+      "translation": "使用 <code>@Id</code>（<code>org.springframework.data.annotation.Id</code>）注解的属性或字段将映射到 <code>_id</code> 字段。",
+      "count": 1
+    },
+    {
+      "source": "The following outlines what type conversion, if any, is done on the property mapped to the <code>_id</code> document field when using the <code>MappingMongoConverter</code> (the default for <code>MongoTemplate</code>).",
+      "translation": "以下概述了在使用 <code>MappingMongoConverter</code>（<code>MongoTemplate</code> 的默认转换器）时，映射到 <code>_id</code> 文档字段的属性是否进行类型转换。",
+      "count": 1
+    },
+    {
+      "source": "An <code>id</code> property or field declared as <code>Date</code> is converted to and stored as <code>ObjectId</code>.",
+      "translation": "声明为 <code>Date</code> 的 <code>id</code> 属性或字段会被转换为并存储为 <code>ObjectId</code>。",
+      "count": 1
+    },
+    {
+      "source": "Use <code>bulkWrite(Bulk, BulkWriteOptions)</code> when you need a single request with mixed insert, update, and delete operations, optionally across multiple collections (MongoDB 8.0+).\nIf your targeting a single collection you’ll still be able to leverage the new <code>bulkWrite</code> method with older MongoDB server version, or keep using the classic <code>bulkOps(BulkMode, Class)</code> API.",
+      "translation": "当您需要在一个请求中混合执行插入、更新和删除操作时（可选地在多个集合之间进行，适用于 MongoDB 8.0+），请使用 <code>bulkWrite(Bulk, BulkWriteOptions)</code>。  \n如果您的目标是单个集合，您仍然可以利用新的 <code>bulkWrite</code> 方法配合旧版 MongoDB 服务器版本，或者继续使用经典的 <code>bulkOps(BulkMode, Class)</code> API。",
+      "count": 1
+    },
+    {
+      "source": "You can use a little \"'syntax sugar'\" with the <code>Update</code> class, as its methods are meant to be chained together.\nAlso, you can kick-start the creation of a new <code>Update</code> instance by using <code>public static Update update(String key, Object value)</code> and using static imports.",
+      "translation": "您可以使用一些“语法糖”来配合 `<code>Update</code>` 类，因为其方法设计为可以链式调用。此外，您可以通过使用 `<code>public static Update update(String key, Object value)</code>` 方法和静态导入来快速启动新 `<code>Update</code>` 实例的创建。",
+      "count": 1
+    },
+    {
+      "source": "Related to performing an <code>updateFirst</code> operation, you can also perform an <code>upsert</code> operation, which will perform an insert if no document is found that matches the query.\nThe document that is inserted is a combination of the query document and the update document.\nThe following example shows how to use the <code>upsert</code> method:",
+      "translation": "与执行 `<code>updateFirst</code>` 操作相关，您还可以执行 `<code>upsert</code>` 操作，该操作在找不到匹配查询的文档时将执行插入。\n所插入的文档是查询文档和更新文档的组合。\n以下示例展示了如何使用 `<code>upsert</code>` 方法：",
+      "count": 1
+    },
+    {
+      "source": "<code>@Version</code> properties if not included in the <code>Update</code> will be automatically initialized.\nRead more in the <a href=\"#mongo-template.optimistic-locking\">Optimistic Locking</a> section.",
+      "translation": "如果未在 `Update` 中包含 `<code>@Version</code>` 属性，则该属性将自动初始化。有关更多信息，请参阅<a href=\"#mongo-template.optimistic-locking\">乐观锁</a>部分。",
+      "count": 1
+    },
+    {
+      "source": "The various <code>replace</code> methods available via <code>MongoTemplate</code> allow to override the first matching Document.\nIf no match is found a new one can be upserted (as outlined in the previous section) by providing <code>ReplaceOptions</code> with according configuration.",
+      "translation": "通过 `MongoTemplate` 提供的各种 `<code>replace</code>` 方法可以覆盖第一个匹配的文档。如果未找到匹配项，可以通过提供带有相应配置的 `<code>ReplaceOptions` 来执行更新操作（如上一节所述）。",
+      "count": 1
+    },
+    {
+      "source": "A property or field without an annotation but named <code>id</code> maps to the <code>_id</code> field.",
+      "translation": "未添加注解但命名为<code>id</code>的属性或字段将映射到<code>_id</code>字段。",
+      "count": 1
+    },
+    {
+      "source": "<strong>insert</strong>: Inserts an object.\nIf there is an existing document with the same <code>id</code>, an error is generated.",
+      "translation": "<strong>insert</strong>：插入对象。  \n如果已存在具有相同 <code>id</code> 的文档，将生成错误。",
+      "count": 1
+    },
+    {
+      "source": "<strong>insertAll</strong>: Takes a <code>Collection</code> of objects as the first parameter.\nThis method inspects each object and inserts it into the appropriate collection, based on the rules specified earlier.",
+      "translation": "<strong>insertAll</strong>：将对象集合作为第一个参数接收。  \n此方法会检查每个对象，并根据之前指定的规则将其插入到相应的集合中。",
+      "count": 1
+    },
+    {
+      "source": "<strong>save</strong>: Saves the object, overwriting any object that might have the same <code>id</code>.",
+      "translation": "<strong>save</strong>：保存对象，覆盖任何具有相同 <code>id</code> 的对象。",
+      "count": 1
+    },
+    {
+      "source": "Some update modifiers, such as <code>$push</code> and <code>$addToSet</code>, allow nesting of additional operators.",
+      "translation": "某些更新修饰符（如 <code>$push</code> 和 <code>$addToSet</code>）允许嵌套其他操作符。",
+      "count": 1
+    },
+    {
+      "source": "The following example inserts a few <code>Person</code> objects into the container and performs a <code>findAndUpdate</code> operation:",
+      "translation": "以下示例向容器中插入几个 `<code>Person</code>` 对象，并执行一个 `<code>findAndUpdate</code>` 操作：",
+      "count": 1
+    },
+    {
+      "source": "The <code>@Version</code> annotation provides syntax similar to that of JPA in the context of MongoDB and makes sure updates are only applied to documents with a matching version.\nTherefore, the actual value of the version property is added to the update query in such a way that the update does not have any effect if another operation altered the document in the meantime.\nIn that case, an <code>OptimisticLockingFailureException</code> is thrown.\nThe following example shows these features:",
+      "translation": "`@Version` 注解在 MongoDB 上下文中提供了与 JPA 相似的语法，并确保更新仅应用于具有匹配版本的文档。因此，版本属性的实际值会被添加到更新查询中，使得如果在期间有其他操作修改了该文档，则此更新将不会产生任何效果。在这种情况下，会抛出 `OptimisticLockingFailureException` 异常。以下示例展示了这些功能：",
+      "count": 1
+    },
+    {
+      "source": "Only certain CRUD operations on <code>MongoTemplate</code> do consider and alter version properties.\nPlease consult <code>MongoOperations</code> java doc for detailed information.",
+      "translation": "只有对 `<code>MongoTemplate`> 的某些 CRUD 操作才会考虑并修改版本属性。\n请查阅 `<code>MongoOperations`> 的 JavaDoc 以获取详细信息。",
+      "count": 1
+    },
+    {
+      "source": "Given the <code>Person</code> class in the preceding example, you can save, update and delete the object, as the following example shows:",
+      "translation": "在上面的示例中，给定`Person`类，您可以保存、更新和删除该对象，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "The preceding example would produce the following log output (including debug messages from <code>MongoTemplate</code>):",
+      "translation": "上述示例将产生以下日志输出（包括来自 `<code>MongoTemplate</code>` 的调试消息）：",
+      "count": 1
+    },
+    {
+      "source": "If no field or property specified in the previous sets of rules is present in the Java class, an implicit <code>_id</code> file is generated by the driver but not mapped to a property or field of the Java class.",
+      "translation": "如果前一组规则中未指定任何字段或属性，而 Java 类中也缺少相应的内容，驱动程序会生成一个隐式的 `<code>_id</code>` 文件，但该文件不会映射到 Java 类的任何属性或字段上。",
+      "count": 1
+    },
+    {
+      "source": "When querying and updating, <code>MongoTemplate</code> uses the converter that corresponds to the preceding rules for saving documents so that field names and types used in your queries can match what is in your domain classes.",
+      "translation": "在查询和更新时，<code>MongoTemplate</code> 会使用与前述保存文档规则相对应的转换器，以确保您在查询中使用的字段名称和类型能够与您的领域类中的内容相匹配。",
+      "count": 1
+    },
+    {
+      "source": "The MongoDB driver supports inserting a collection of documents in a single operation.\nThe following methods in the <code>MongoOperations</code> interface support this functionality:",
+      "translation": "MongoDB 驱动程序支持在一次操作中插入一批文档。\n以下 <code>MongoOperations</code> 接口中的方法支持此功能：",
+      "count": 1
+    },
+    {
+      "source": "MongoDB 8.0 introduced BulkWrite across multiple collections.<br/>",
+      "translation": "MongoDB 8.0 引入了跨集合的批量写入功能。",
+      "count": 1
+    },
+    {
+      "source": "Server performance for individual operations of batch and bulk is identical.\nBulk however uses less resources since it can operate upon a single request.\n<a class=\"xref page\" href=\"lifecycle-events.html\">Lifecycle events</a> publishing is limited for bulk operations.",
+      "translation": "批量和单个操作的服务器性能相同。  \n然而，批量操作由于可以针对单个请求进行操作，因此使用的资源更少。  \n批量操作的<a class=\"xref page\" href=\"lifecycle-events.html\">生命周期事件</a>发布受到限制。",
+      "count": 1
+    },
+    {
+      "source": "<strong>updateFirst</strong>: Updates the first document that matches the query document criteria with the updated document.",
+      "translation": "<strong>updateFirst</strong>：使用更新的文档更新与查询文档条件匹配的第一个文档。",
+      "count": 1
+    },
+    {
+      "source": "<strong>updateMulti</strong>: Updates all objects that match the query document criteria with the updated document.",
+      "translation": "<strong>updateMulti</strong>：使用更新后的文档更新所有匹配查询文档条件的对象。",
+      "count": 1
+    },
+    {
+      "source": "The <code>Update</code> class contains the following methods:",
+      "translation": "`Update` 类包含以下方法：",
+      "count": 1
+    },
+    {
+      "source": "Consider the following class:",
+      "translation": "考虑以下类：",
+      "count": 1
+    },
+    {
+      "source": "The simple case of using the save operation is to save a POJO.\nIn this case, the collection name is determined by name (not fully qualified) of the class.\nYou may also call the save operation with a specific collection name.\nYou can use mapping metadata to override the collection in which to store the object.",
+      "translation": "使用保存操作的简单情况是保存一个 POJO。  \n在这种情况下，集合名称由类的名称（非完全限定名）确定。  \n您也可以指定集合名称来调用保存操作。  \n您可以使用映射元数据覆盖存储对象的集合。",
+      "count": 1
+    },
+    {
+      "source": "The following example shows how to save a document and retrieving its contents:",
+      "translation": "以下示例展示了如何保存文档并检索其内容：",
+      "count": 1
+    },
+    {
+      "source": "The following insert and save operations are available:",
+      "translation": "可用的插入和保存操作如下：",
+      "count": 1
+    },
+    {
+      "source": "A similar set of insert operations is also available:",
+      "translation": "同样也提供一组类似的插入操作：",
+      "count": 1
+    },
+    {
+      "source": "BulkWrite allows you to perform insert, update, and delete operations using a single request.",
+      "translation": "BulkWrite 允许您通过单个请求执行插入、更新和删除操作。",
+      "count": 1
+    },
+    {
+      "source": "The update can consist of the following stages:",
+      "translation": "更新可包含以下阶段：",
+      "count": 1
+    },
+    {
+      "source": "You can use one of five overloaded methods to remove an object from the database:",
+      "translation": "您可以使用五种重载方法之一从数据库中删除对象：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS\"和“Amazon Web Services”是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归其各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../mongodb.html\">MongoDB Support</a></li>\n      <li><a href=\"template-api.html\">Template API</a></li>\n      <li><a href=\"template-crud-operations.html\">Saving, Updating, and Removing Documents</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../mongodb.html\">MongoDB 支持</a></li>\n      <li><a href=\"template-api.html\">模板 API</a></li>\n      <li><a href=\"template-crud-operations.html\">保存、更新和删除文档</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/template-crud-operations.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/template-crud-operations.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "Updating documents by using the <code>MongoTemplate</code> / <code>ReactiveMongoTemplate</code>",
+      "translation": "使用 <code>MongoTemplate</code> / <code>ReactiveMongoTemplate</code> 更新文档",
+      "count": 1
+    },
+    {
+      "source": "Example 1. <code>@MongoId</code> mapping",
+      "translation": "示例 1。<code>@MongoId</code> 映射",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>",
+      "translation": "<a class=\"title\" href=\"../data-commons/index.html\">Spring Data 公共模块</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../index.html\">Spring Data MongoDB</a>",
+      "translation": "<a class=\"title\" href=\"../index.html\">Spring Data MongoDB</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Inserting and retrieving documents using the MongoTemplate",
+      "translation": "使用 MongoTemplate 插入和检索文档",
+      "count": 1
+    },
+    {
+      "source": "Batch Insert",
+      "translation": "批量插入",
+      "count": 1
+    },
+    {
+      "source": "BulkWrite (multiple collections)",
+      "translation": "批量写入（多个集合）",
+      "count": 1
+    },
+    {
+      "source": "BulkWrite (single collection)",
+      "translation": "批量写入（单个集合）",
+      "count": 1
+    },
+    {
+      "source": "Example 2. Update Aggregation",
+      "translation": "示例 2：更新聚合",
+      "count": 1
+    },
+    {
+      "source": "Replace one",
+      "translation": "替换一个",
+      "count": 1
+    },
+    {
+      "source": "Example 3. Find and Replace Documents",
+      "translation": "示例 3：查找并替换文档",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../preface.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">Connecting to MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"template-api.html\">Template API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-config.html\">Configuration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-collection-management.html\">Index and Collection Management</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-crud-operations.html\">Saving, Updating, and Removing Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-query-operations.html\">Querying Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-document-count.html\">Counting Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"aggregation-framework.html\">Aggregation Framework Support</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template-gridfs.html\">GridFS Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping/mapping.html\">Object Mapping</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/custom-conversions.html\">Type based Converter</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/property-converters.html\">Property Converters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/unwrapping-entities.html\">Unwrapping Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/document-references.html\">Object References</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-index-management.html\">Index Creation</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"lifecycle-events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Auditing</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"client-session-transactions.html\">Sessions &amp; Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"change-streams.html\">Change Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"tailable-cursors.html\">Tailable Cursors</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sharding.html\">Sharding</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-search-indexes.html\">MongoDB Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-encryption.html\">Encryption</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"aot.html\">Ahead of Time Optimizations</a>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../preface.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">快速入门</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">连接 MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"template-api.html\">模板 API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-config.html\">配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-collection-management.html\">索引和集合管理</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-crud-operations.html\">保存、更新和删除文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-query-operations.html\">查询文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-document-count.html\">统计文档数量</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"aggregation-framework.html\">聚合框架支持</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template-gridfs.html\">GridFS 支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping/mapping.html\">对象映射</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/custom-conversions.html\">基于类型的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/property-converters.html\">属性转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/unwrapping-entities.html\">类型解包</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/document-references.html\">对象引用</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-index-management.html\">索引创建</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">值表达式基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"lifecycle-events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">审计</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"client-session-transactions.html\">会话与事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"change-streams.html\">变更流</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"tailable-cursors.html\">可锁定游标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sharding.html\">分片</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-search-indexes.html\">MongoDB 搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-encryption.html\">加密</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"aot.html\">提前优化</a>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">MongoDB Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">MongoDB-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/modifying-methods.html\">MongoDB-specific Data Manipulation Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">仓储 (Repositories)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">MongoDB 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data 扩展功能</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">MongoDB 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/modifying-methods.html\">MongoDB 专用数据操作方法的定义</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影 (Projections)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓储查询关键字参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓储查询返回类型参考</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Remove a single entity specified by its <code>_id</code> from the associated collection.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Remove all documents that match the criteria of the query from the <code>GOT</code> collection.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Remove the first three documents in the <code>GOT</code> collection.\nUnlike &lt;2&gt;, the documents to remove are identified by their <code>_id</code>, running the given query, applying <code>sort</code>, <code>limit</code>, and <code>skip</code> options first, and then removing all at once in a separate step.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Remove all documents matching the criteria of the query from the <code>GOT</code> collection.\nUnlike &lt;3&gt;, documents do not get deleted in a batch but one by one.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>Remove the first three documents in the <code>GOT</code> collection.\nUnlike &lt;3&gt;, documents do not get deleted in a batch but one by one.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>根据指定的 <code>_id</code> 从关联集合中删除单个实体。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>从 <code>GOT</code> 集合中删除所有匹配查询条件的文档。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>删除 <code>GOT</code> 集合中的前三个文档。与 &lt;2&gt; 不同，要删除的文档是通过其 <code>_id</code> 来标识的：首先运行给定查询并应用 <code>sort</code>、<code>limit</code> 和 <code>skip</code> 选项，然后在单独的步骤中一次性删除所有匹配的文档。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>从 <code>GOT</code> 集合中删除所有匹配查询条件的文档。与 &lt;3&gt; 不同，文档不是批量删除，而是逐个删除。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>删除 <code>GOT</code> 集合中的前三个文档。与 &lt;3&gt; 不同，文档不是批量删除，而是逐个删除。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Use the fluent update API with the domain type given for mapping the query and deriving the collection name or just use <code>MongoOperations#findAndReplace</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The actual match query mapped against the given domain type.\nProvide <code>sort</code>, <code>fields</code> and <code>collation</code> settings via the query.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Additional optional hook to provide options other than the defaults, like <code>upsert</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>An optional projection type used for mapping the operation result.\nIf none given the initial domain type is used.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>Trigger the actual processing.\nUse <code>findAndReplaceValue</code> to obtain the nullable result instead of an <code>Optional</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>使用流式更新 API 配合给定的域类型来映射查询并推导集合名称，或直接使用 <code>MongoOperations#findAndReplace</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>针对给定域类型进行实际匹配查询。\n通过查询提供 <code>sort</code>、<code>fields</code> 和 <code>collation</code> 设置。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>额外的可选钩子，用于提供除默认值之外的选项，例如 <code>upsert</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>一个用于映射操作结果的可选投影类型。\n如果未提供，则使用初始域类型。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>触发实际处理。\n使用 <code>findAndReplaceValue</code> 获取可空结果，而不是 <code>Optional</code>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Initially insert document. <code>version</code> is set to <code>0</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Load the just inserted document. <code>version</code> is still <code>0</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Update the document with <code>version = 0</code>.\nSet the <code>lastname</code> and bump <code>version</code> to <code>1</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Try to update the previously loaded document that still has <code>version = 0</code>.\nThe operation fails with an <code>OptimisticLockingFailureException</code>, as the current <code>version</code> is <code>1</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>最初插入文档。<code>version</code> 被设置为 <code>0</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>加载刚刚插入的文档。<code>version</code> 仍然是 <code>0</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>使用 <code>version = 0</code> 更新文档。\n设置 <code>lastname</code> 并将 <code>version</code> 递增为 <code>1</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>尝试更新之前加载的文档，该文档仍具有 <code>version = 0</code>。\n由于当前的 <code>version</code> 为 <code>1</code>，操作失败并抛出 <code>OptimisticLockingFailureException</code>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The 1st <code>$set</code> stage calculates a new field <em>average</em> based on the average of the <em>tests</em> field.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The 2nd <code>$set</code> stage calculates a new field <em>grade</em> based on the <em>average</em> field calculated by the first aggregation stage.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The pipeline is run on the <em>students</em> collection and uses <code>Student</code> for the aggregation field mapping.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Apply the update to all matching documents in the collection.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>第一个 <code>$set</code> 阶段根据 <em>tests</em> 字段的平均值计算出一个新字段 <em>average</em>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>第二个 <code>$set</code> 阶段根据第一个聚合阶段计算的 <em>average</em> 字段计算出一个新字段 <em>grade</em>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>该管道在 <em>students</em> 集合上运行，并使用 <code>Student</code> 进行聚合字段映射。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>将更新应用于集合中所有匹配的文档。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../observability/observability.html\">Observability</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/conventions.html\">Conventions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/metrics.html\">Metrics</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/spans.html\">Spans</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../observability/observability.html\">可观测性</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/conventions.html\">约定</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/metrics.html\">指标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/spans.html\">跨度</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">要求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空值安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The id is treated as <code>String</code> without further conversion.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The id is treated as <code>ObjectId</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The id is treated as <code>ObjectId</code> if the given <code>String</code> is a valid <code>ObjectId</code> hex, otherwise as <code>String</code>.\nCorresponds to <code>@Id</code> usage.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>ID 被视为 <code>String</code>，无需进一步转换。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>ID 被视为 <code>ObjectId</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>如果给定的 <code>String</code> 是有效的 <code>ObjectId</code> 十六进制字符串，则 ID 被视为 <code>ObjectId</code>；否则视为 <code>String</code>。对应于 <code>@Id</code> 的用法。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Insert a new document.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The query used to identify the single document to replace.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Set up the replacement document which must hold either the same <code>_id</code> as the existing or no <code>_id</code> at all.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Run the replace operation.\n.Replace one with upsert</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>插入新文档。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>用于标识要替换的单个文档的查询条件。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>设置替换文档，该文档必须具有与现有文档相同的 <code>_id</code>，或者完全不包含 <code>_id</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>执行替换操作。\n使用 upsert 进行替换一个文档</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The <code>_id</code> value needs to be present for upsert, otherwise MongoDB will create a new potentially with the domain type incompatible <code>ObjectId</code>.\nAs MongoDB is not aware of your domain type, any <code>@Field(targetType)</code> hints are not considered and the resulting <code>ObjectId</code> might be not compatible with your domain model.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Use <code>upsert</code> to insert a new document if no match is found</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>执行更新或插入（upsert）操作时，必须包含 <code>_id</code> 值；否则 MongoDB 可能会创建一个与您的领域类型不兼容的潜在新 <code>ObjectId</code>。由于 MongoDB 无法感知您的领域类型，任何 <code>@Field(targetType)</code> 提示都将被忽略，由此生成的 <code>ObjectId</code> 可能与您的领域模型不兼容。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>使用 <code>upsert</code> 在找不到匹配项时插入新文档。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.x-to-3.x.html\">Migration Guide from 2.x to 3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.x-to-4.x.html\">Migration Guide from 3.x to 4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.x-to-5.x.html\">Migration Guide from 4.x to 5.x</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概述</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.x-to-3.x.html\">从 2.x 到 3.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.x-to-4.x.html\">从 3.x 到 4.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.x-to-5.x.html\">从 4.x 到 5.x 的迁移指南</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nAs of Version 2.2 <code>MongoOperations</code> also includes the <code>@Version</code> property when removing an entity from the database.\nTo remove a <code>Document</code> without version check use <code>MongoOperations#remove(Query,…​)</code> instead of <code>MongoOperations#remove(Object)</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n自 2.2 版本起，<code>MongoOperations</code> 在从数据库中删除实体时也会包含 <code>@Version</code> 属性。\n若要移除无需版本检查的 <code>Document</code>，请使用 <code>MongoOperations#remove(Query,…​)</code> 替代 <code>MongoOperations#remove(Object)</code>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nPlease note that the replacement must not hold an <code>id</code> itself as the <code>id</code> of the existing <code>Document</code> will be carried over to the replacement by the store itself.\nAlso keep in mind that <code>findAndReplace</code> will only replace the first document matching the query criteria depending on a potentially given sort order.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\n请注意，替换项本身不应包含 <code>id</code>，因为现有 <code>Document</code> 的 <code>id</code> 将由存储系统自动传递到替换项中。\n此外，请牢记 <code>findAndReplace</code> 仅会根据可能提供的排序顺序，替换匹配查询条件的第一份文档。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n<code>updateFirst</code> does not support ordering for MongoDB Versions below 8.0. Running one of the older versions, please use <a href=\"#mongo-template.find-and-upsert\">findAndModify</a> to apply <code>Sort</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n<code>updateFirst</code> 不支持 MongoDB 8.0 以下版本的排序。如果您使用的是旧版本，请使用 <a href=\"#mongo-template.find-and-upsert\">findAndModify</a> 来应用 <code>Sort</code>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n<code>upsert</code> does not support ordering.\nPlease use <a href=\"#mongo-template.find-and-upsert\">findAndModify</a> to apply <code>Sort</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n<code>upsert</code> 不支持排序。\n请使用 <a href=\"#mongo-template.find-and-upsert\">findAndModify</a> 来应用 <code>Sort</code>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nAs of Version 2.2 repositories check for the outcome of acknowledged deletes when removing versioned entities.\nAn <code>OptimisticLockingFailureException</code> is raised if a versioned entity cannot be deleted through <code>CrudRepository.delete(Object)</code>.\nIn such case, the version was changed or the object was deleted in the meantime.\nUse <code>CrudRepository.deleteById(ID)</code> to bypass optimistic locking functionality and delete objects regardless of their version.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n自版本 2.2 起，仓库在删除带版本控制的实体时会检查已确认删除的结果。\n如果无法通过 <code>CrudRepository.delete(Object)</code> 删除带版本控制的实体，则会抛出 <code>OptimisticLockingFailureException</code>。\n在这种情况下，该实体的版本可能已被更改，或者该对象在此期间已被删除。\n请使用 <code>CrudRepository.deleteById(ID)</code> 绕过乐观锁机制，无论对象的版本如何均执行删除操作。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nMongoDB requires that you have an <code>_id</code> field for all documents.\nPlease refer to the <a href=\"#\">ID handling</a> section for details on the special treatment of this field.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nMongoDB 要求所有文档都必须包含一个 <code>_id</code> 字段。有关该字段的特殊处理方式，请参阅<a href=\"#\">ID 处理</a>部分以获取详细信息。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nOptimistic Locking requires write acknowledgement (a write result response) by the server.\nUsing <code>WriteConcern.UNACKNOWLEDGED</code> can lead to silently swallowed <code>OptimisticLockingFailureException</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n乐观锁需要服务器端的写确认（即写结果响应）。使用 <code>WriteConcern.UNACKNOWLEDGED</code> 可能导致 <code>OptimisticLockingFailureException</code> 异常被静默吞没。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nMongoDB collections can contain documents that represent instances of a variety of types.\nPlease refer to the <a class=\"xref page\" href=\"converters-type-mapping.html\">type mapping</a> for details.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nMongoDB 集合可以包含代表多种类型实例的文档。有关详细信息，请参阅<a class=\"xref page\" href=\"converters-type-mapping.html\">类型映射</a>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nIndex hints for the update operation can be provided via <code>Query.withHint(…​)</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n可以通过 <code>Query.withHint(…​)</code> 为更新操作提供索引提示。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe difference between insert and save operations is that a save operation performs an insert if the object is not already present.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n插入和保存操作的区别在于：如果对象尚未存在，保存操作会执行插入。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.id-handling\"></a>How the <code>_id</code> Field is Handled in the Mapping Layer",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.id-handling\"></a>映射层中如何处理 <code>_id</code> 字段",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongodb-template-update.update\"></a>Methods in the <code>Update</code> Class",
+      "translation": "<a class=\"anchor\" href=\"#mongodb-template-update.update\"></a><code>Update</code> 类中的方法",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.save-insert.collection\"></a>Into Which Collection Are My Documents Saved?",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.save-insert.collection\"></a>文档将保存到哪个集合？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.save-insert.individual\"></a>Inserting or Saving Individual Objects",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.save-insert.individual\"></a>插入或保存单个对象",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.save-insert.batch\"></a>Inserting Several Objects in a Batch",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.save-insert.batch\"></a>批量插入多个对象",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_bulk_writes\"></a>Bulk Writes",
+      "translation": "<a class=\"anchor\" href=\"#_bulk_writes\"></a>批量写入",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongodb-template-update.methods\"></a>Methods for Running Updates for Documents",
+      "translation": "<a class=\"anchor\" href=\"#mongodb-template-update.methods\"></a>运行文档更新的方法",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.aggregation-update\"></a>Aggregation Pipeline Updates",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.aggregation-update\"></a>聚合管道更新",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.replace\"></a>Replacing Documents in a Collection",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.replace\"></a>集合中的文档替换",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.find-and-upsert\"></a>Find and Modify",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.find-and-upsert\"></a>查找和修改",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.find-and-replace\"></a>Find and Replace",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.find-and-replace\"></a>查找和替换",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo-template.optimistic-locking\"></a>Optimistic Locking",
+      "translation": "<a class=\"anchor\" href=\"#mongo-template.optimistic-locking\"></a>乐观锁",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data MongoDB",
+      "translation": "Spring Data MongoDB",
+      "count": 1
+    },
+    {
+      "source": "MongoDB Support",
+      "translation": "MongoDB 支持",
+      "count": 1
+    },
+    {
+      "source": "Saving, Updating, and Removing Documents",
+      "translation": "保存、更新和删除文档",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

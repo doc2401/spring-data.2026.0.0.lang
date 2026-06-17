@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-06-16 11:03:07",
+  "updated_at": "2026-06-16 11:03:07",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 35,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "This method should be overridden when the <a href=\"#spliterator()\"><code>spliterator()</code></a> method cannot return a spliterator that is\n<code>IMMUTABLE</code>, <code>CONCURRENT</code>, or <em>late-binding</em>. (See <a href=\"#spliterator()\"><code>spliterator()</code></a> for details.)",
+      "translation": "当 `<a href=\"#spliterator()\"><code>spliterator()</code></a>` 方法无法返回一个 `IMMUTABLE`、`CONCURRENT` 或<em>延迟绑定</em>的分割器时，应重写此方法。（有关详细信息，请参阅 `<a href=\"#spliterator()\"><code>spliterator()</code></a>`。）",
+      "count": 1
+    },
+    {
+      "source": "The default implementation should be overridden by subclasses that can return a more efficient spliterator. To\npreserve expected laziness behavior for the <a href=\"#stream()\"><code>stream()</code></a> method, spliterators should either have the\ncharacteristic of <code>IMMUTABLE</code> or <code>CONCURRENT</code>, or be late-binding.",
+      "translation": "默认实现应由能够返回更高效 Spliterator 的子类覆盖。为了保持<a href=\"#stream()\"><code>stream()</code></a>方法的预期惰性行为，Spliterator 应具有<code>IMMUTABLE</code>或<code>CONCURRENT</code>特性，或者是延迟绑定的。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The default implementation does not report a size.",
+      "translation": "默认实现不报告大小。",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-java.util.Iterator\">Methods inherited from interface <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#method-summary\" title=\"class or interface in java.util\">Iterator</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#forEachRemaining(java.util.function.Consumer)\" title=\"class or interface in java.util\">forEachRemaining</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#hasNext()\" title=\"class or interface in java.util\">hasNext</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#next()\" title=\"class or interface in java.util\">next</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#remove()\" title=\"class or interface in java.util\">remove</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-java.util.Iterator\">从接口继承的方法 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#method-summary\" title=\"java.util 中的类或接口\">Iterator</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#forEachRemaining(java.util.function.Consumer)\" title=\"java.util 中的类或接口\">forEachRemaining</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#hasNext()\" title=\"java.util 中的类或接口\">hasNext</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#next()\" title=\"java.util 中的类或接口\">next</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html#remove()\" title=\"java.util 中的类或接口\">remove</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CloseableIterator&lt;T&gt;</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\">Iterator</a>&lt;T&gt;, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a></span>",
+      "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CloseableIterator&lt;T&gt;</span><span class=\"extends-implements\">\n扩展 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"java.util 中的类或接口\">Iterator</a>&lt;T&gt; 和 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"java.io 中的类或接口\">Closeable</a></span>",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"CloseableIterator.html\" title=\"interface in org.springframework.data.util\"><code>CloseableIterator</code></a> serves as a bridging data structure for the underlying data store specific results that\ncan be wrapped in a Java 8 <a href=\"#stream()\"><code>java.util.stream.Stream</code></a>. This allows implementations to clean up any\nresources they need to keep open to iterate over elements.",
+      "translation": "<a href=\"CloseableIterator.html\" title=\"interface in org.springframework.data.util\"><code>CloseableIterator</code></a> 充当底层数据存储特定结果的桥接数据结构，这些结果可以封装为 Java 8 <a href=\"#stream()\"><code>java.util.stream.Stream</code></a>。这使得实现能够清理在遍历元素过程中需要保持打开的任何资源。",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Default Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">默认方法</button>",
+      "count": 1
+    },
+    {
+      "source": "Create a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Spliterator.html\" title=\"class or interface in java.util\"><code>Spliterator</code></a> over the elements provided by this <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator</code></a>.",
+      "translation": "基于此<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"类或接口 java.util\"><code>Iterator</code></a>提供的元素，创建一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Spliterator.html\" title=\"类或接口 java.util\"><code>Spliterator</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Return a sequential <code>Stream</code> with this <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator</code></a> as its source.",
+      "translation": "返回一个顺序的 <code>Stream</code>，其源为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface CloseableIterator\">Interface CloseableIterator&lt;T&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 CloseableIterator\">接口 CloseableIterator&lt;T&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Core",
+      "translation": "Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#close()\" tabindex=\"0\">close()</a></li>\n<li><a href=\"#spliterator()\" tabindex=\"0\">spliterator()</a></li>\n<li><a href=\"#stream()\" tabindex=\"0\">stream()</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#close()\" tabindex=\"0\">close()</a></li>\n<li><a href=\"#spliterator()\" tabindex=\"0\">spliterator()</a></li>\n<li><a href=\"#stream()\" tabindex=\"0\">stream()</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code></dd>\n<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"class or interface in java.io\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"java.lang 中的类或接口\">close</a></code>，位于接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"java.lang 中的类或接口\">AutoCloseable</a></code></dd>\n<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"java.io 中的类或接口\">close</a></code>，位于接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"java.io 中的类或接口\">Closeable</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Spliterator.html\" title=\"class or interface in java.util\"><code>Spliterator</code></a> over the elements in this <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator</code></a>.</dd>\n<dt>Since:</dt>\n<dd>2.4</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>一个针对此 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator</code></a> 中元素的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Spliterator.html\" title=\"class or interface in java.util\"><code>Spliterator</code></a>。</dd>\n<dt>版本：</dt>\n<dd>2.4</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>a sequential <code>Stream</code> over the elements in this <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator</code></a>.</dd>\n<dt>Since:</dt>\n<dd>2.4</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>一个按顺序遍历此<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator</code></a>中元素的<code>Stream</code>。</dd>\n<dt>版本：</dt>\n<dd>2.4</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Superinterfaces:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\">Iterator</a>&lt;T&gt;</code></dd>",
+      "translation": "<dt>所有超级接口：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"java.lang 中的类或接口\">AutoCloseable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"java.io 中的类或接口\">Closeable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"java.util 中的类或接口\">Iterator</a>&lt;T&gt;</code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - </span></dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - </span></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>1.10</dd>\n<dt>Author:</dt>\n<dd>Thomas Darimont, Mark Paluch</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>1.10</dd>\n<dt>作者：</dt>\n<dd>Thomas Darimont, Mark Paluch</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Create a",
+      "translation": "创建一个",
+      "count": 1
+    },
+    {
+      "source": "over the elements provided by this",
+      "translation": "在此提供的元素之上",
+      "count": 1
+    },
+    {
+      "source": ". Implementations should document\ncharacteristic values reported by the spliterator. Such characteristic values are not required to be reported if\nthe spliterator reports",
+      "translation": "实现应记录由 spliterator 报告的属性值。如果 spliterator 报告了，则不需要报告这些属性值。",
+      "count": 1
+    },
+    {
+      "source": "and this collection contains no elements.",
+      "translation": "且此集合不含任何元素。",
+      "count": 1
+    },
+    {
+      "source": "Return a sequential",
+      "translation": "返回顺序",
+      "count": 1
+    },
+    {
+      "source": "with this",
+      "translation": "以此",
+      "count": 1
+    },
+    {
+      "source": "as its source. The resulting stream calls",
+      "translation": "作为其来源。由此产生的流称为",
+      "count": 1
+    },
+    {
+      "source": ". The resulting",
+      "translation": ". 由此产生的",
+      "count": 1
+    },
+    {
+      "source": "must be closed after use, it can\nbe declared as a resource in a",
+      "translation": "使用后必须关闭，它可以在一个中声明为资源。",
+      "count": 1
+    },
+    {
+      "source": "-with-resources statement.",
+      "translation": "-with-resources 语句。",
+      "count": 1
+    }
+  ]
+}

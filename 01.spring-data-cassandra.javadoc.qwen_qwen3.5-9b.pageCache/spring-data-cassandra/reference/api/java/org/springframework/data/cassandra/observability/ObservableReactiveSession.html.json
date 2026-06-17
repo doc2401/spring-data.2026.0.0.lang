@@ -1,0 +1,361 @@
+{
+  "created_at": "2026-06-16 16:27:41",
+  "updated_at": "2026-06-16 16:27:41",
+  "stats": {
+    "total_entries": 69,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 86,
+    "entries_with_hits": 69,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2463768115942029,
+    "usage_percentage": 0.0069
+  },
+  "items": [
+    {
+      "source": "Factory method for creation of a <a href=\"ObservableReactiveSession.html\" title=\"class in org.springframework.data.cassandra.observability\"><code>ObservableReactiveSession</code></a>.",
+      "translation": "用于创建<a href=\"ObservableReactiveSession.html\" title=\"org.springframework.data.cassandra.observability 中的类\"><code>ObservableReactiveSession</code></a>的工厂方法。",
+      "count": 6
+    },
+    {
+      "source": "Executes the provided query.",
+      "translation": "执行提供的查询。",
+      "count": 4
+    },
+    {
+      "source": "This is a convenience method for <code>execute(new SimpleStatement(query, values))</code>.",
+      "translation": "这是一个用于 `execute(new SimpleStatement(query, values))` 的便捷方法。",
+      "count": 2
+    },
+    {
+      "source": "Initiates a shutdown of this session instance and blocks until that shutdown completes.",
+      "translation": "启动此会话实例的关闭，并阻塞直到该关闭操作完成。",
+      "count": 2
+    },
+    {
+      "source": "Executes the provided query using the provided values.",
+      "translation": "使用提供的值执行提供的查询。",
+      "count": 2
+    },
+    {
+      "source": "Executes the provided query using the provided named values.",
+      "translation": "使用提供的命名值执行所提供的查询。",
+      "count": 2
+    },
+    {
+      "source": "Returns a context that provides access to all the policies used by this driver instance.",
+      "translation": "返回一个上下文，该上下文提供对此驱动程序实例所使用的所有策略的访问权限。",
+      "count": 2
+    },
+    {
+      "source": "Returns a snapshot of the Cassandra cluster's topology and schema metadata.",
+      "translation": "返回 Cassandra 集群拓扑结构和模式元数据的快照。",
+      "count": 2
+    },
+    {
+      "source": "Whether this Session instance has been closed.",
+      "translation": "此 Session 实例是否已关闭。",
+      "count": 2
+    },
+    {
+      "source": "Prepares the provided query.",
+      "translation": "准备提供的查询。",
+      "count": 2
+    },
+    {
+      "source": "Prepares the provided query string.",
+      "translation": "准备提供的查询字符串。",
+      "count": 2
+    },
+    {
+      "source": "This method behaves like <a href=\"../ReactiveSession.html#prepare(java.lang.String)\"><code>ReactiveSession.prepare(String)</code></a>, but note that the resulting <code>PreparedStatement</code> will\ninherit the query properties set on <code>statement</code>. Concretely, this means that in the following code:",
+      "translation": "该方法的行为类似于<a href=\"../ReactiveSession.html#prepare(java.lang.String)\"><code>ReactiveSession.prepare(String)</code></a>，但请注意，由此生成的<code>PreparedStatement</code>将继承在<code>statement</code>上设置的查询属性。具体来说，在以下代码中：",
+      "count": 1
+    },
+    {
+      "source": "There are two ways that this can be set: before initializing the session (either with the <code>session-keyspace</code>\noption in the configuration, or with <code>SessionBuilder.withKeyspace(CqlIdentifier)</code>); or at runtime, if the\nclient issues a request that changes the keyspace (such as a CQL <code>USE</code> query). Note that this second method\nis inherently unsafe, since other requests expecting the old keyspace might be executing concurrently. Therefore it\nis highly discouraged, aside from trivial cases (such as a cqlsh-style program where requests are never\nconcurrent).",
+      "translation": "有两种方式可以设置此选项：在初始化会话之前（通过配置中的 <code>session-keyspace</code> 选项，或使用 <code>SessionBuilder.withKeyspace(CqlIdentifier)</code>）；或者在运行时，如果客户端发出更改键空间的请求（例如 CQL <code>USE</code> 查询）。请注意，第二种方法本质上是不安全的，因为其他期望旧键空间的请求可能正在并发执行。因此，除了微不足道的情况（例如类似 cqlsh 的程序，其中请求永远不会并发）外，强烈不建议使用这种方法。",
+      "count": 1
+    },
+    {
+      "source": "Note that this method returns true as soon as the closing of this Session has started but it does not guarantee\nthat the closing is done. If you want to guarantee that the closing is done, you can call <code>close()</code> and wait\nuntil it returns (or call the get method on <code>closeAsync()</code> with a very short timeout and check this doesn't\ntimeout).",
+      "translation": "请注意，此方法在会话关闭开始时即返回 true，但并不保证关闭操作已完成。如果您希望确保关闭操作确实完成，可以调用<code>close()</code>并等待其返回（或调用<code>closeAsync()</code>的 get 方法并设置一个极短的超时时间，然后检查是否发生超时）。",
+      "count": 1
+    },
+    {
+      "source": "In order to provide atomic updates, this method returns an immutable object: the node list, token map, and schema\ncontained in a given instance will always be consistent with each other (but note that <code>Node</code> itself is not\nimmutable: some of its properties will be updated dynamically, in particular <code>Node.getState()</code>).",
+      "translation": "为了提供原子更新，此方法返回一个不可变对象：给定实例中包含的节点列表、令牌映射和模式将始终彼此一致（但请注意，<code>Node</code> 本身并非不可变：其某些属性将动态更新，特别是 <code>Node.getState()</code>）。",
+      "count": 1
+    },
+    {
+      "source": "Please note that if the same CQL statement is prepared more than once, all calls to this method will return the\nsame <code>PreparedStatement</code> object but the method will still apply the properties of the prepared\n<code>Statement</code> to this object.",
+      "translation": "请注意，如果同一个 CQL 语句被多次准备，对该方法的所有调用都将返回相同的 <code>PreparedStatement</code> 对象，但该方法仍会将已准备的 <code>Statement</code> 的属性应用到该对象上。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "As a consequence of the above, you should call this method each time you need a fresh view of the metadata. <b>Do\nnot</b> call it once and store the result, because it is a frozen snapshot that will become stale over time.",
+      "translation": "因此，每次需要获取元数据的最新视图时，都应调用此方法。<b>切勿</b>仅调用一次并存储结果，因为它是一个冻结的快照，随着时间的推移会变得过时。",
+      "count": 1
+    },
+    {
+      "source": "This is a convenience method for <code>execute(new SimpleStatement(query))</code>.",
+      "translation": "这是一个用于 `execute(new SimpleStatement(query))` 的便捷方法。",
+      "count": 1
+    },
+    {
+      "source": "If a metadata refresh triggers events (such as node added/removed, or schema events), then the new version of the\nmetadata is guaranteed to be visible by the time you receive these events.",
+      "translation": "如果元数据刷新触发了事件（例如节点添加/删除或模式变更事件），则当您收到这些事件时，新版本的元数据保证已可见。",
+      "count": 1
+    },
+    {
+      "source": "This method blocks until at least some result has been received from the database. However, for SELECT queries, it\ndoes not guarantee that the result has been received in full. But it does guarantee that some response has been\nreceived from the database, and in particular guarantees that if the request is invalid, an exception will be\nthrown by this method.",
+      "translation": "该方法会阻塞，直到从数据库收到至少部分结果。然而，对于 SELECT 查询，它并不保证已完整接收所有结果。但它确实保证已从数据库收到某种响应，特别是如果请求无效，此方法将抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">从类 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"java.lang 中的类或接口\">Object</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"java.lang 中的类或接口\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"java.lang 中的类或接口\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"java.lang 中的类或接口\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"java.lang 中的类或接口\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"java.lang 中的类或接口\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"java.lang 中的类或接口\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"java.lang 中的类或接口\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"java.lang 中的类或接口\">wait</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> session,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a> remoteServiceName,\n <a href=\"CassandraObservationConvention.html\" title=\"interface in org.springframework.data.cassandra.observability\">CassandraObservationConvention</a> convention,\n io.micrometer.observation.ObservationRegistry observationRegistry)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(ReactiveSession session,\n String remoteServiceName,\n CassandraObservationConvention convention,\n io.micrometer.observation.ObservationRegistry observationRegistry)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> session,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a> remoteServiceName,\n io.micrometer.observation.ObservationRegistry observationRegistry)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(ReactiveSession session,\n String remoteServiceName,\n io.micrometer.observation.ObservationRegistry observationRegistry)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> session,\n io.micrometer.observation.ObservationRegistry observationRegistry)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> session,\n io.micrometer.observation.ObservationRegistry observationRegistry)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\"><a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\">Mono</a>&lt;com.datastax.oss.driver.api.core.cql.PreparedStatement&gt;</span> <span class=\"element-name\">prepare</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.SimpleStatement statement)</span>",
+      "translation": "public Mono<PreparedStatement> prepare(SimpleStatement statement)",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">ObservableReactiveSession</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span>",
+      "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">ObservableReactiveSession</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#isClosed()\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#isClosed()\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#getContext()\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#getContext()\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#getKeyspace()\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#getKeyspace()\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#getMetadata()\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#getMetadata()\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#execute(java.lang.String)\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#execute(java.lang.String)\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.lang.Object...)\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.lang.Object...)\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.util.Map)\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.util.Map)\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#execute(com.datastax.oss.driver.api.core.cql.Statement)\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#execute(com.datastax.oss.driver.api.core.cql.Statement)\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#prepare(java.lang.String)\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#prepare(java.lang.String)\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../ReactiveSession.html#close()\">ReactiveSession</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../ReactiveSession.html#close()\">ReactiveSession</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Instrumented <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> for observability.",
+      "translation": "带观测能力的<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The keyspace that this session is currently connected to, or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if this session is not\nconnected to any keyspace.",
+      "translation": "当前会话连接到的键空间，或者如果该会话未连接到任何键空间，则为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Class ObservableReactiveSession\">Class ObservableReactiveSession</h1>",
+      "translation": "<h1 class=\"title\" title=\"类 ObservableReactiveSession\">类 ObservableReactiveSession</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#create(org.springframework.data.cassandra.ReactiveSession,io.micrometer.observation.ObservationRegistry)\" tabindex=\"0\">create(ReactiveSession, ObservationRegistry)</a></li>\n<li><a href=\"#create(org.springframework.data.cassandra.ReactiveSession,java.lang.String,io.micrometer.observation.ObservationRegistry)\" tabindex=\"0\">create(ReactiveSession, String, ObservationRegistry)</a></li>\n<li><a href=\"#create(org.springframework.data.cassandra.ReactiveSession,java.lang.String,org.springframework.data.cassandra.observability.CassandraObservationConvention,io.micrometer.observation.ObservationRegistry)\" tabindex=\"0\">create(ReactiveSession, String, CassandraObservationConvention, ObservationRegistry)</a></li>\n<li><a href=\"#isClosed()\" tabindex=\"0\">isClosed()</a></li>\n<li><a href=\"#getContext()\" tabindex=\"0\">getContext()</a></li>\n<li><a href=\"#getKeyspace()\" tabindex=\"0\">getKeyspace()</a></li>\n<li><a href=\"#getMetadata()\" tabindex=\"0\">getMetadata()</a></li>\n<li><a href=\"#execute(java.lang.String)\" tabindex=\"0\">execute(String)</a></li>\n<li><a href=\"#execute(java.lang.String,java.lang.Object...)\" tabindex=\"0\">execute(String, Object...)</a></li>\n<li><a href=\"#execute(java.lang.String,java.util.Map)\" tabindex=\"0\">execute(String, Map)</a></li>\n<li><a href=\"#execute(com.datastax.oss.driver.api.core.cql.Statement)\" tabindex=\"0\">execute(Statement)</a></li>\n<li><a href=\"#prepare(java.lang.String)\" tabindex=\"0\">prepare(String)</a></li>\n<li><a href=\"#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\" tabindex=\"0\">prepare(SimpleStatement)</a></li>\n<li><a href=\"#close()\" tabindex=\"0\">close()</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#create(org.springframework.data.cassandra.ReactiveSession,io.micrometer.observation.ObservationRegistry)\" tabindex=\"0\">create(ReactiveSession, ObservationRegistry)</a></li>\n<li><a href=\"#create(org.springframework.data.cassandra.ReactiveSession,java.lang.String,io.micrometer.observation.ObservationRegistry)\" tabindex=\"0\">create(ReactiveSession, String, ObservationRegistry)</a></li>\n<li><a href=\"#create(org.springframework.data.cassandra.ReactiveSession,java.lang.String,org.springframework.data.cassandra.observability.CassandraObservationConvention,io.micrometer.observation.ObservationRegistry)\" tabindex=\"0\">create(ReactiveSession, String, CassandraObservationConvention, ObservationRegistry)</a></li>\n<li><a href=\"#isClosed()\" tabindex=\"0\">isClosed()</a></li>\n<li><a href=\"#getContext()\" tabindex=\"0\">getContext()</a></li>\n<li><a href=\"#getKeyspace()\" tabindex=\"0\">getKeyspace()</a></li>\n<li><a href=\"#getMetadata()\" tabindex=\"0\">getMetadata()</a></li>\n<li><a href=\"#execute(java.lang.String)\" tabindex=\"0\">execute(String)</a></li>\n<li><a href=\"#execute(java.lang.String,java.lang.Object...)\" tabindex=\"0\">execute(String, Object...)</a></li>\n<li><a href=\"#execute(java.lang.String,java.util.Map)\" tabindex=\"0\">execute(String, Map)</a></li>\n<li><a href=\"#execute(com.datastax.oss.driver.api.core.cql.Statement)\" tabindex=\"0\">execute(Statement)</a></li>\n<li><a href=\"#prepare(java.lang.String)\" tabindex=\"0\">prepare(String)</a></li>\n<li><a href=\"#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\" tabindex=\"0\">prepare(SimpleStatement)</a></li>\n<li><a href=\"#close()\" tabindex=\"0\">close()</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code></dd>\n<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"class or interface in java.io\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a></code></dd>\n<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#close()\">close</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd>接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"java.lang 中的类或接口\">AutoCloseable</a></code> 中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"java.lang 中的类或接口\">close</a></code></dd>\n<dt>指定于：</dt>\n<dd>接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"java.io 中的类或接口\">Closeable</a></code> 中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"java.io 中的类或接口\">close</a></code></dd>\n<dt>指定于：</dt>\n<dd>接口 <code><a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a></code> 中的 <code><a href=\"../ReactiveSession.html#close()\">close</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>session</code> - reactive session.</dd>\n<dd><code>remoteServiceName</code> - the remote service name.</dd>\n<dd><code>convention</code> - the observation convention.</dd>\n<dd><code>observationRegistry</code> - observation registry.</dd>\n<dt>Returns:</dt>\n<dd>traced representation of a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>.</dd>\n<dt>Since:</dt>\n<dd>4.3.4</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>session</code> - 响应式会话。</dd>\n<dd><code>remoteServiceName</code> - 远程服务名称。</dd>\n<dd><code>convention</code> - 观察约定。</dd>\n<dd><code>observationRegistry</code> - 观察注册表。</dd>\n<dt>返回：</dt>\n<dd>表示 <a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a> 的追踪形式。</dd>\n<dt>版本：</dt>\n<dd>4.3.4</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.lang.Object...)\">execute</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Parameters:</dt>\n<dd><code>cql</code> - the CQL query to execute.</dd>\n<dd><code>objects</code> - values required for the execution of <code>query</code>. See\n         <code>SimpleStatement.newInstance(String, Object...)</code> for more details.</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.lang.Object...)\">execute</a></code> 接口 <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code> 中的方法</dd>\n<dt>参数：</dt>\n<dd><code>cql</code> - 要执行的 CQL 查询。</dd>\n<dd><code>objects</code> - 执行 <code>query</code> 所需的值。有关更多详细信息，请参阅 <code>SimpleStatement.newInstance(String, Object...)</code>。</dd>\n<dt>返回：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均为空）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.util.Map)\">execute</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Parameters:</dt>\n<dd><code>cql</code> - the CQL query to execute.</dd>\n<dd><code>map</code> - values required for the execution of <code>query</code>. See\n         <code>SimpleStatement.newInstance(String, Map)</code> for more details.</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(java.lang.String,java.util.Map)\">execute</a></code> 接口 <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code> 中的方法</dd>\n<dt>参数：</dt>\n<dd><code>cql</code> - 要执行的 CQL 查询。</dd>\n<dd><code>map</code> - 执行 <code>query</code> 所需的值。有关更多详细信息，请参阅 <code>SimpleStatement.newInstance(String, Map)</code>。</dd>\n<dt>返回：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均为空）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(com.datastax.oss.driver.api.core.cql.Statement)\">execute</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Parameters:</dt>\n<dd><code>statement</code> - the CQL query to execute (that can be any <code>Statement</code>).</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(com.datastax.oss.driver.api.core.cql.Statement)\">execute</a></code> 接口 <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code> 中的方法</dd>\n<dt>参数：</dt>\n<dd><code>statement</code> - 要执行的 CQL 查询（可以是任何 <code>Statement</code>）。</dd>\n<dt>返回：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均为空）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#prepare(java.lang.String)\">prepare</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Parameters:</dt>\n<dd><code>cql</code> - the CQL query string to prepare</dd>\n<dt>Returns:</dt>\n<dd>the prepared statement corresponding to <code>query</code>.</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd>接口 <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code> 中的 <code><a href=\"../ReactiveSession.html#prepare(java.lang.String)\">prepare</a></code></dd>\n<dt>参数：</dt>\n<dd><code>cql</code> - 要准备的 CQL 查询字符串</dd>\n<dt>返回：</dt>\n<dd>与 <code>query</code> 对应的已准备语句。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\">prepare</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Parameters:</dt>\n<dd><code>statement</code> - the statement to prepare</dd>\n<dt>Returns:</dt>\n<dd>the prepared statement corresponding to <code>statement</code>.</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd>接口 <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code> 中的方法 <code><a href=\"../ReactiveSession.html#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\">prepare</a></code></dd>\n<dt>参数：</dt>\n<dd><code>statement</code> - 要准备的语句</dd>\n<dt>返回：</dt>\n<dd>与 <code>statement</code> 对应的已准备语句。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>session</code> - reactive session.</dd>\n<dd><code>remoteServiceName</code> - the remote service name.</dd>\n<dd><code>observationRegistry</code> - observation registry.</dd>\n<dt>Returns:</dt>\n<dd>traced representation of a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>session</code> - 响应式会话。</dd>\n<dd><code>remoteServiceName</code> - 远程服务名称。</dd>\n<dd><code>observationRegistry</code> - 观测注册表。</dd>\n<dt>返回：</dt>\n<dd>对 <a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a> 的追踪表示。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(java.lang.String)\">execute</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Parameters:</dt>\n<dd><code>cql</code> - the CQL query to execute.</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"../ReactiveSession.html#execute(java.lang.String)\">execute</a></code> 接口 <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code> 中的方法</dd>\n<dt>参数：</dt>\n<dd><code>cql</code> - 要执行的 CQL 查询。</dd>\n<dt>返回：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均如此）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#isClosed()\">isClosed</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Returns:</dt>\n<dd><code>true</code> if this Session instance has been closed, <code>false</code> otherwise.</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"../ReactiveSession.html#isClosed()\">isClosed</a></code> 接口 <code><a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a></code> 中的方法</dd>\n<dt>返回：</dt>\n<dd>如果此 Session 实例已关闭，则返回 <code>true</code>；否则返回 <code>false</code>。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>session</code> - reactive session.</dd>\n<dd><code>observationRegistry</code> - observation registry.</dd>\n<dt>Returns:</dt>\n<dd>traced representation of a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>session</code> - 响应式会话。</dd>\n<dd><code>observationRegistry</code> - 观察注册表。</dd>\n<dt>返回：</dt>\n<dd><a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra.ReactiveSession 接口\"><code>ReactiveSession</code></a> 的带追踪表示形式。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#getMetadata()\">getMetadata</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Returns:</dt>\n<dd>never <code>null</code>, but may be empty if metadata has been disabled in the configuration.</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"../ReactiveSession.html#getMetadata()\">getMetadata</a></code> 接口 <code><a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a></code> 中的方法</dd>\n<dt>返回：</dt>\n<dd>永远不会为 <code>null</code>，但如果配置中禁用了元数据，则可能为空。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#getContext()\">getContext</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>\n<dt>Returns:</dt>\n<dd>a context that provides access to all the policies used by this driver instance.</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"../ReactiveSession.html#getContext()\">getContext</a></code> 接口 <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code> 中的方法</dd>\n<dt>返回：</dt>\n<dd>一个提供访问此驱动程序实例所用所有策略的上下文。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Implemented Interfaces:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a>, <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>",
+      "translation": "<dt>所有已实现的接口：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"java.io 中的类或接口\">Closeable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"java.lang 中的类或接口\">AutoCloseable</a>, <a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"../ReactiveSession.html#getKeyspace()\">getKeyspace</a></code> in interface <code><a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd>接口 <code><a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a></code> 中的方法 <code><a href=\"../ReactiveSession.html#getKeyspace()\">getKeyspace</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>4.0</dd>\n<dt>Author:</dt>\n<dd>Mark Paluch, Marcin Grzejszczak</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>4.0</dd>\n<dt>作者：</dt>\n<dd>Mark Paluch, Marcin Grzejszczak</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "The keyspace that this session is currently connected to, or",
+      "translation": "当前会话连接到的密钥空间，或",
+      "count": 1
+    },
+    {
+      "source": "if this session is not\nconnected to any keyspace.",
+      "translation": "如果此会话未连接到任何键空间。",
+      "count": 1
+    },
+    {
+      "source": "the final execution will be performed with Quorum consistency.",
+      "translation": "最终执行将采用一致性级别为Quorum。",
+      "count": 1
+    }
+  ]
+}

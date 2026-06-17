@@ -1,0 +1,226 @@
+{
+  "created_at": "2026-06-16 11:14:27",
+  "updated_at": "2026-06-16 11:14:27",
+  "stats": {
+    "total_entries": 42,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 59,
+    "entries_with_hits": 42,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4047619047619047,
+    "usage_percentage": 0.0042
+  },
+  "items": [
+    {
+      "source": "Inspect the given type and resolve those reachable via fields, methods, generics, ...",
+      "translation": "检查给定类型，并解析通过字段、方法、泛型等可达到的所有相关类型。",
+      "count": 8
+    },
+    {
+      "source": "Create a new <a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\"><code>TypeCollector</code></a> applying all <a href=\"TypeCollector.TypeCollectorFilters.html\" title=\"interface in org.springframework.data.util\"><code>TypeCollector.TypeCollectorFilters</code></a> discovered through\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/AotServices.html\" title=\"class or interface in org.springframework.beans.factory.aot\"><code>AotServices</code></a>.",
+      "translation": "创建一个新的<a href=\"TypeCollector.html\" title=\"类，位于 org.springframework.data.util\"><code>TypeCollector</code></a>，该收集器应用了通过<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/AotServices.html\" title=\"类或接口，位于 org.springframework.beans.factory.aot\"><code>AotServices</code></a>发现的所有<a href=\"TypeCollector.TypeCollectorFilters.html\" title=\"接口，位于 org.springframework.data.util\"><code>TypeCollector.TypeCollectorFilters</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return the combined type filter used when collecting reachable types (SPI <a href=\"TypeCollector.TypeCollectorFilters.html\" title=\"interface in org.springframework.data.util\"><code>TypeCollector.TypeCollectorFilters</code></a> including\nany <a href=\"#filterTypes(java.util.function.Predicate)\"><code>filterTypes</code></a> predicates).",
+      "translation": "返回在收集可达类型时使用的组合类型过滤器（包括 SPI<a href=\"TypeCollector.TypeCollectorFilters.html\" title=\"interface in org.springframework.data.util\"><code>TypeCollector.TypeCollectorFilters</code></a>中的任何<a href=\"#filterTypes(java.util.function.Predicate)\"><code>filterTypes</code></a>谓词）。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>TypeCollector</code> applying <code>customizer</code> to configure the <code>TypeCollector</code>.",
+      "translation": "创建一个新的 <code>TypeCollector</code>，并应用 <code>customizer</code> 来配置该 <code>TypeCollector</code>。",
+      "count": 2
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 2
+    },
+    {
+      "source": "Add a filter to exclude fields from being introspected.",
+      "translation": "添加过滤器以排除字段不被进行内省。",
+      "count": 2
+    },
+    {
+      "source": "Add a filter to exclude methods from being introspected.",
+      "translation": "添加一个过滤器，以排除对方法的内省。",
+      "count": 2
+    },
+    {
+      "source": "Add a filter to exclude types from being introspected.",
+      "translation": "添加一个过滤器以排除某些类型不被进行内省。",
+      "count": 2
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>collectorCustomizer</code> - the customizer function to configure the <a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\"><code>TypeCollector</code></a>.</dd>\n<dd><code>types</code> - the types to inspect.</dd>\n<dt>Returns:</dt>\n<dd>a type model collector for the type.</dd>\n<dt>Since:</dt>\n<dd>4.0</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>collectorCustomizer</code> - 用于配置 <a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\"><code>TypeCollector</code></a> 的自定义函数。</dd>\n<dd><code>types</code> - 要检查的类型。</dd>\n<dt>返回：</dt>\n<dd>该类型的类型模型收集器。</dd>\n<dt>版本：</dt>\n<dd>4.0</dd>",
+      "count": 2
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>filter</code> - filter predicate matching a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>Class</code></a>.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> TypeCollector instance.</dd>\n<dt>Since:</dt>\n<dd>4.0</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>filter</code> - 匹配 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>Class</code></a> 的过滤谓词。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> 类型的 TypeCollector 实例。</dd>\n<dt>版本：</dt>\n<dd>4.0</dd>",
+      "count": 2
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>types</code> - the types to inspect</dd>\n<dt>Returns:</dt>\n<dd>a type model collector for the type</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>types</code> - 要检查的类型</dd>\n<dt>返回：</dt>\n<dd>用于该类型的类型模型收集器</dd>",
+      "count": 2
+    },
+    {
+      "source": "The collector uses <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/AotServices.html\" title=\"class or interface in org.springframework.beans.factory.aot\"><code>AotServices</code></a> to discover implementations of <a href=\"TypeCollector.TypeCollectorFilters.html\" title=\"interface in org.springframework.data.util\"><code>TypeCollector.TypeCollectorFilters</code></a> so that components\nusing <a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\"><code>TypeCollector</code></a> can contribute their own filtering logic to exclude types, fields, and methods from being\ninspected.",
+      "translation": "收集器使用<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/AotServices.html\" title=\"org.springframework.beans.factory.aot 中的类或接口\"><code>AotServices</code></a>来发现<a href=\"TypeCollector.TypeCollectorFilters.html\" title=\"org.springframework.data.util 中的接口\"><code>TypeCollector.TypeCollectorFilters</code></a>的实现，以便使用<a href=\"TypeCollector.html\" title=\"org.springframework.data.util 中的类\"><code>TypeCollector</code></a>的组件能够贡献自己的过滤逻辑，以排除对类型、字段和方法的检查。",
+      "count": 1
+    },
+    {
+      "source": "Type collection can be customized by providing filters that stop introspection when encountering a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html\" title=\"class or interface in java.util.function\"><code>Predicate</code></a>\nthat returns <code>false</code>. Filters are <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html#and(java.util.function.Predicate)\" title=\"class or interface in java.util.function\"><code>combined</code></a> so that multiple filters can be\ntaken into account. A type/field/method must pass all filters to be considered for further inspection.",
+      "translation": "可以通过提供过滤器来自定义类型收集，这些过滤器在遇到返回 <code>false</code> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html\" title=\"class or interface in java.util.function\"><code>Predicate</code></a> 时停止内省。过滤器会 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html#and(java.util.function.Predicate)\" title=\"class or interface in java.util.function\"><code>组合</code></a>，以便考虑多个过滤器。类型、字段或方法必须通过所有过滤器才能被进一步检查。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Type inspection walks through all class members (fields, methods, constructors) and introspects those for additional\ntypes that are part of the domain model.",
+      "translation": "类型检查会遍历所有类成员（字段、方法和构造函数），并内省这些成员以查找属于领域模型的额外类型。",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">从类 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"java.lang 中的类或接口\">Object</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"java.lang 中的类或接口\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"java.lang 中的类或接口\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"java.lang 中的类或接口\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"java.lang 中的类或接口\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"java.lang 中的类或接口\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"java.lang 中的类或接口\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"java.lang 中的类或接口\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"java.lang 中的类或接口\">wait</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"class in org.springframework.data.util\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\">Consumer</a>&lt;<a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\">TypeCollector</a>&gt; collectorCustomizer,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\">Collection</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;?&gt;&gt; types)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"类 org.springframework.data.util\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"类或接口 java.util.function\">Consumer</a>&lt;<a href=\"TypeCollector.html\" title=\"类 org.springframework.data.util\">TypeCollector</a>&gt; collectorCustomizer,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"类或接口 java.util\">Collection</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"类或接口 java.lang\">Class</a>&lt;?&gt;&gt; types)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"class in org.springframework.data.util\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\">Consumer</a>&lt;<a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\">TypeCollector</a>&gt; collectorCustomizer,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;?&gt;... types)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"类 org.springframework.data.util 中的类\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"类或接口 java.util.function 中的类或接口\">Consumer</a>&lt;<a href=\"TypeCollector.html\" title=\"类 org.springframework.data.util 中的类\">TypeCollector</a>&gt; collectorCustomizer,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"类或接口 java.lang 中的类或接口\">Class</a>&lt;?&gt;... types)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\">TypeCollector</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\">Consumer</a>&lt;<a href=\"TypeCollector.html\" title=\"class in org.springframework.data.util\">TypeCollector</a>&gt; customizer)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.html\" title=\"类 org.springframework.data.util.TypeCollector\">TypeCollector</a></span> <span class=\"element-name\">create</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"类或接口 java.util.function.Consumer\">Consumer</a>&lt;<a href=\"TypeCollector.html\" title=\"类 org.springframework.data.util.TypeCollector\">TypeCollector</a>&gt; customizer)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"class in org.springframework.data.util\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\">Collection</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;?&gt;&gt; types)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"类 org.springframework.data.util\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"类或接口 java.util\">Collection</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"类或接口 java.lang\">Class</a>&lt;?&gt;&gt; types)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"class in org.springframework.data.util\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;?&gt;... types)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"TypeCollector.ReachableTypes.html\" title=\"类 org.springframework.data.util\">TypeCollector.ReachableTypes</a></span> <span class=\"element-name\">inspect</span><wbr/><span class=\"parameters\">(Class<? extends Object>... types)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">TypeCollector</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>",
+      "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">TypeCollector</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Class TypeCollector\">Class TypeCollector</h1>",
+      "translation": "<h1 class=\"title\" title=\"类 TypeCollector\">类 TypeCollector</h1>",
+      "count": 1
+    },
+    {
+      "source": "<span>Nested Classes</span>",
+      "translation": "<span>嵌套类</span>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Core",
+      "translation": "Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Container for reachable types starting from a set of root types.",
+      "translation": "从一组根类型开始可达类型的容器。",
+      "count": 1
+    },
+    {
+      "source": "Strategy interface providing predicates to filter types, fields, and methods from being introspected and\ncontributed to AOT processing.",
+      "translation": "提供谓词以过滤类型、字段和方法，防止其被内省并贡献给 AOT 处理的策略接口。",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">Nested Class Summary</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">Constructor Summary</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">Constructor Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E()\" tabindex=\"0\">TypeCollector()</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#create(java.util.function.Consumer)\" tabindex=\"0\">create(Consumer)</a></li>\n<li><a href=\"#inspect(java.lang.Class...)\" tabindex=\"0\">inspect(Class...)</a></li>\n<li><a href=\"#inspect(java.util.Collection)\" tabindex=\"0\">inspect(Collection)</a></li>\n<li><a href=\"#inspect(java.util.function.Consumer,java.lang.Class...)\" tabindex=\"0\">inspect(Consumer, Class...)</a></li>\n<li><a href=\"#inspect(java.util.function.Consumer,java.util.Collection)\" tabindex=\"0\">inspect(Consumer, Collection)</a></li>\n<li><a href=\"#filterTypes(java.util.function.Predicate)\" tabindex=\"0\">filterTypes(Predicate)</a></li>\n<li><a href=\"#filterMethods(java.util.function.Predicate)\" tabindex=\"0\">filterMethods(Predicate)</a></li>\n<li><a href=\"#filterFields(java.util.function.Predicate)\" tabindex=\"0\">filterFields(Predicate)</a></li>\n<li><a href=\"#getTypeFilter()\" tabindex=\"0\">getTypeFilter()</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">嵌套类摘要</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">构造函数摘要</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">构造函数详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E()\" tabindex=\"0\">TypeCollector()</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#create(java.util.function.Consumer)\" tabindex=\"0\">create(Consumer)</a></li>\n<li><a href=\"#inspect(java.lang.Class...)\" tabindex=\"0\">inspect(Class...)</a></li>\n<li><a href=\"#inspect(java.util.Collection)\" tabindex=\"0\">inspect(Collection)</a></li>\n<li><a href=\"#inspect(java.util.function.Consumer,java.lang.Class...)\" tabindex=\"0\">inspect(Consumer, Class...)</a></li>\n<li><a href=\"#inspect(java.util.function.Consumer,java.util.Collection)\" tabindex=\"0\">inspect(Consumer, Collection)</a></li>\n<li><a href=\"#filterTypes(java.util.function.Predicate)\" tabindex=\"0\">filterTypes(Predicate)</a></li>\n<li><a href=\"#filterMethods(java.util.function.Predicate)\" tabindex=\"0\">filterMethods(Predicate)</a></li>\n<li><a href=\"#filterFields(java.util.function.Predicate)\" tabindex=\"0\">filterFields(Predicate)</a></li>\n<li><a href=\"#getTypeFilter()\" tabindex=\"0\">getTypeFilter()</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>customizer</code> - customizer function to configure the <code>TypeCollector</code>.</dd>\n<dt>Returns:</dt>\n<dd>the configured <code>TypeCollector</code>.</dd>\n<dt>Since:</dt>\n<dd>4.0.5</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>customizer</code> - 用于配置 <code>TypeCollector</code> 的自定义函数。</dd>\n<dt>返回：</dt>\n<dd>已配置的 <code>TypeCollector</code>。</dd>\n<dt>版本：</dt>\n<dd>4.0.5</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>filter</code> - filter predicate matching a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>Class</code></a>.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> TypeCollector instance.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>filter</code> - 匹配 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>Class</code></a> 的过滤谓词。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> 类型的 TypeCollector 实例。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>3.0</dd>\n<dt>Author:</dt>\n<dd>Christoph Strobl, Sebastien Deleuze, John Blum, Mark Paluch</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>3.0</dd>\n<dt>作者：</dt>\n<dd>Christoph Strobl, Sebastien Deleuze, John Blum, Mark Paluch</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the type filter.</dd>\n<dt>Since:</dt>\n<dd>4.0.5</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>类型过滤器。</dd>\n<dt>版本：</dt>\n<dd>4.0.5</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Constructor Summary",
+      "translation": "构造函数摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Constructor Details",
+      "translation": "构造器详情",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Collector to inspect domain types and discover the type graph that is relevant for Spring Data operations.",
+      "translation": "收集器用于检查域类型并发现与 Spring Data 操作相关的类型图。",
+      "count": 1
+    }
+  ]
+}

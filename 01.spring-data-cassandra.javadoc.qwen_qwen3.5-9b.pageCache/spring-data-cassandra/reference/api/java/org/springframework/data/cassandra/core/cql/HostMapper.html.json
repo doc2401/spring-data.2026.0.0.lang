@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-06-16 17:46:06",
+  "updated_at": "2026-06-16 17:46:06",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 19,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0555555555555556,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "Implementations must implement this method to map each <code>Node</code>.",
+      "translation": "实现必须实现此方法以映射每个 `<code>Node</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "An interface used by <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> for mapping <code>Node</code>s of metadata on a per-item basis.. Implementations\nof this interface perform the actual work of mapping each host to a result object, but don't need to worry about\nexception handling. <code>DriverException</code> will be caught and handled by the calling <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>.",
+      "translation": "这是一个由<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>使用的接口，用于按项目级别映射元数据的<code>Node</code>。该接口的实现负责执行将每个主机映射到结果对象的实际工作，但无需担心异常处理。<code>DriverException</code> 将由调用的<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>捕获并处理。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"class or interface in java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">HostMapper&lt;T&gt;</span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"java.lang 中的类或接口\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">HostMapper&lt;T&gt;</span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface HostMapper\">Interface HostMapper&lt;<span id=\"type-param-T\">T</span>&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 HostMapper\">接口 HostMapper&lt;<span id=\"type-param-T\">T</span>&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>hosts</code> - the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> of <code>Node</code>s to map, must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the result objects for the given hosts.</dd>\n<dt>Throws:</dt>\n<dd><code>com.datastax.oss.driver.api.core.DriverException</code> - if a <code>DriverException</code> is encountered mapping values (that is, there's no need to\n          catch <code>DriverException</code>).</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>hosts</code> - 要映射的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> 类型的 <code>Node</code> 集合，不能为 null。</dd>\n<dt>返回：</dt>\n<dd>给定主机的结果对象。</dd>\n<dt>抛出：</dt>\n<dd><code>com.datastax.oss.driver.api.core.DriverException</code> - 如果在映射值时遇到 <code>DriverException</code>（即无需捕获 <code>DriverException</code>）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#mapHosts(java.lang.Iterable)\" tabindex=\"0\">mapHosts(Iterable)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#mapHosts(java.lang.Iterable)\" tabindex=\"0\">mapHosts(Iterable)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Author:</dt>\n<dd>Matthew T. Adams, Mark Paluch</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>作者：</dt>\n<dd>Matthew T. Adams, Mark Paluch</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlTemplate.html\" title=\"org.springframework.data.cassandra.core.cql 中的类\"><code>CqlTemplate</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Known Implementing Classes:</dt>\n<dd><code><a href=\"RingMemberHostMapper.html\" title=\"enum class in org.springframework.data.cassandra.core.cql\">RingMemberHostMapper</a></code></dd>",
+      "translation": "<dt>所有已知的实现类：</dt>\n<dd><code><a href=\"RingMemberHostMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的枚举类\">RingMemberHostMapper</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Functional Interface:</dt>\n<dd>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</dd>",
+      "translation": "<dt>功能接口：</dt>\n<dd>这是一个功能接口，因此可以作为 Lambda 表达式或方法引用的赋值目标。</dd>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    }
+  ]
+}

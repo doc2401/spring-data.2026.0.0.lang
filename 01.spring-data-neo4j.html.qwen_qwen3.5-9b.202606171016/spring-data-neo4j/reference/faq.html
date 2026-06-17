@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>常见问题解答 :: Spring Data Neo4j</title>
+    <link href="https://docs.spring.io/spring-data/neo4j/reference/faq.html" rel="canonical"/>
+    <meta content="Antora 3.2.0-alpha.6" name="generator"/>
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link href="./_/css/site.css" rel="stylesheet"/>
+    <link href="./_/css/vendor/search.css" rel="stylesheet"/>
+    <link href="./_/css/vendor/page-search.css" rel="stylesheet"/>
+    <link href="./_/css/vendor/asciidoctor-tabs.css" rel="stylesheet"/>
+
+    <meta content="v0.4.16" name="antora-ui-version"/> 
+    <meta content="8.1.0" name="version"/>
+    <meta content="data-neo4j" name="component"/>
+    <meta content="false" name="latest-version"/>
+    <link href="./_/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img alt="Spring" class="block" id="springlogo" src="./_/img/spring-logo.svg"/>
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-menu" id="topbar-nav">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">为何是春天</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.io/why-spring">概览</a>
+<a class="navbar-item" href="https://spring.io/microservices">微服务</a>
+<a class="navbar-item" href="https://spring.io/reactive">响应式</a>
+<a class="navbar-item" href="https://spring.io/event-driven">事件驱动</a>
+<a class="navbar-item" href="https://spring.io/cloud">云</a>
+<a class="navbar-item" href="https://spring.io/web-applications">Web 应用</a>
+<a class="navbar-item" href="https://spring.io/serverless">无服务器</a>
+<a class="navbar-item" href="https://spring.io/batch">批处理</a></div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px"><a class="navbar-item" href="https://spring.io/projects">概览</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+<a class="navbar-item navbar-item-special" href="https://spring.io/projects">查看所有项目</a>
+<li class="navbar-item navbar-item-special-3">开发工具</li>
+<a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+<a class="navbar-item navbar-item-special-2" href="https://start.spring.io">Spring Initializr
+              <svg class="external-link-icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="15 10.94 15 15 1 15 1 1 5.06 1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><polyline fill="none" points="8.93 1 15 1 15 7.07" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><line fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" x1="15" x2="8" y1="1" y2="8"></line></svg></a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.academy/courses">课程</a>
+<a class="navbar-item" href="https://spring.academy/learning-path">获取认证</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg"><a class="navbar-item" href="https://spring.io/solutions">概览</a>
+<a class="navbar-item" href="https://spring.io/support">Spring 运行时</a>
+<a class="navbar-item" href="https://spring.io/consulting">Spring 咨询</a>
+<a class="navbar-item" href="https://spring.academy/teams">Spring Academy 团队培训</a>
+<a class="navbar-item" href="https://spring.io/security">安全公告</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input id="switch-theme-checkbox" name="switch-theme-checkbox" type="checkbox"/>
+      <span class="icon"><svg aria-hidden="true" class="svg-inline--fa fa-moon moon" data-icon="moon" data-prefix="fas" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" fill="currentColor"></path>
+</svg>
+        <svg aria-hidden="true" class="svg-inline--fa fa-sun sun" data-icon="sun" data-prefix="fas" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" fill="currentColor"></path>
+</svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-neo4j" data-version="8.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Neo4j</span>
+  <span class="version">8.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg height="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="24px" xml:space="preserve"><g><path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"></path><path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"></path><path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewbox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+</svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="introduction-and-preface/index.html">序言</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="introduction-and-preface/preface-neo4j.html">介绍 Neo4j</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="introduction-and-preface/preface-sd.html">介绍 Spring Data</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="introduction-and-preface/preface-sdn.html">介绍 Spring Data Neo4j</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="introduction-and-preface/building-blocks.html">Spring Data Neo4j 的构建模块</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="introduction-and-preface/new-and-noteworthy.html">新特性与亮点</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="dependencies.html">依赖项</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="getting-started.html">入门指南</a></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="object-mapping.html">对象映射</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="object-mapping/metadata-based-mapping.html">基于元数据的映射</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="object-mapping/mapping-ids.html">唯一 ID 的处理与配置</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="object-mapping/sdc-object-mapping.html">Spring Data 对象映射基础</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="repositories.html">仓储</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/core-concepts.html">核心概念</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/query-methods.html">查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/definition.html">定义仓储接口</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/query-methods-details.html">定义查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/create-instances.html">创建仓储实例</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/custom-implementations.html">自定义仓储实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/core-domain-events.html">从聚合根发布事件</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/core-extensions.html">Spring Data 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-by-example.html">按示例查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/scrolling.html">滚动</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/sdn-extension.html">Spring Data Neo4j 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/query-keywords-reference.html">仓储查询关键字</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/query-return-types-reference.html">仓储查询返回类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/vector-search.html">Neo4j 向量搜索</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="repositories/projections.html">投影</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="projections/sdn-projections.html">Spring Data Neo4j 投影</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="testing.html">测试</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="testing/testing-without-spring-boot.html">不使用 Spring Boot</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="testing/testing-with-spring-boot.html">使用 Spring Boot 和 <code>@DataNeo4jTest</code></a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="appendix/index.html">附录</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/conversions.html">转换</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/neo4j-client.html">Neo4jClient</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/logging.html">日志记录</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/query-creation.html">查询创建</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/custom-queries.html">自定义查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/spatial-types.html">空间类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/migrating.html">从 SDN+OGM 迁移到 SDN</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="appendix/build.html">构建 Spring Data Neo4j</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external" href="api/java/index.html" target="_blank">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external" href="https://github.com/spring-projects/spring-data-commons/wiki" target="_blank">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button class="nav-toggle" id="nav-toggle-2"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle" id="nav-toggle-1"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg id="svg-stash-de15fb15"></svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="toc" data-levels="2" data-title="FAQ">
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links"><a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/faq.adoc">
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          编辑此页面
+        </a>
+<a href="https://github.com/spring-projects/spring-data-neo4j" title="GitHub">
+<svg height="512px" id="Layer_1" version="1.1" viewbox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg"><style type="text/css">
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} </style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          GitHub 项目
+        </a></div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container"><nav aria-label="面包屑" class="breadcrumbs">
+<ul>
+<li><a href="index.html">Spring Data Neo4j</a></li>
+<li><a href="faq.html">常见问题解答</a></li>
+</ul>
+</nav></div><h1 class="page" id="page-title">FAQ</h1>
+<div class="sect1">
+<h2 id="faq.sdn-related-to-ogm"><a class="anchor" href="#faq.sdn-related-to-ogm"></a>SDN 与 Neo4j-OGM 有何关系？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://neo4j.com/docs/ogm-manual/current/">Neo4j-OGM</a> 是一个对象图映射库，主要用于旧版 Spring Data Neo4j 作为后端，负责将节点和关系映射到领域对象的繁重工作。  
+当前的 SDN <strong>不需要</strong> 也<strong>不支持</strong> Neo4j-OGM。  
+SDN 仅使用 Spring Data 的映射上下文来扫描类并构建元模型。</p>
+</div>
+<div class="paragraph">
+<p>虽然这将 SDN 绑定到 Spring 生态系统，但它具有诸多优势，其中包括更小的 CPU 和内存占用，尤其是拥有 Spring 映射上下文的所有功能。</p>
+</div>
+<div class="sect2">
+<h3 id="faq.why-should-you-favor-sdn"><a class="anchor" href="#faq.why-should-you-favor-sdn"></a>为什么我应该使用 SDN 而不是 SDN+OGM？</h3>
+<div class="paragraph">
+<p>SDN 具有若干在 SDN+OGM 中不存在的功能，特别是</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>全面支持 Spring 响应式栈，包括响应式事务。</p>
+</li>
+<li>
+<p>完全支持<a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#query-by-example">示例查询</a></p>
+</li>
+<li>
+<p>完全支持完全不可变实体</p>
+</li>
+<li>
+<p>支持所有派生查找方法的修饰符和变体，包括空间查询。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.sdn-and-http-support"><a class="anchor" href="#faq.sdn-and-http-support"></a>SDN 是否支持通过 HTTP 连接到 Neo4j？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>No.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.sdn-and-embedded-support"><a class="anchor" href="#faq.sdn-and-embedded-support"></a>SDN 是否支持嵌入式 Neo4j？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>嵌入式 Neo4j 具有多个方面：</p>
+</div>
+<div class="sect2">
+<h3 id="faq.sdn-and-embedded-instances-support"><a class="anchor" href="#faq.sdn-and-embedded-instances-support"></a>SDN 是否为您的应用程序提供嵌入式实例？</h3>
+<div class="paragraph">
+<p>No.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="faq.sdn-interact-with-embedded-instances"><a class="anchor" href="#faq.sdn-interact-with-embedded-instances"></a>SDN 是否直接与嵌入式实例交互？</h3>
+<div class="paragraph">
+<p>否。
+嵌入式数据库通常由 <code>org.neo4j.graphdb.GraphDatabaseService</code> 的一个实例表示，且默认不包含 Bolt 连接器。</p>
+</div>
+<div class="paragraph">
+<p>然而，SDN 可以与 Neo4j 的测试框架很好地协同工作，该测试框架专为作为真实数据库的直接替换方案而设计。  
+对 Neo4j 3.5、4.x 和 5.x 测试框架的支持是通过 <a href="https://github.com/neo4j/neo4j-java-driver-spring-boot-starter">驱动程序 Spring Boot Starter</a> 实现的。  
+请查看相应的模块 <code>org.neo4j.driver:neo4j-java-driver-test-harness-spring-boot-autoconfigure</code>。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.change-driver-version"><a class="anchor" href="#faq.change-driver-version"></a>可以使用哪个 Neo4j Java 驱动程序，如何使用？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SDN 依赖 Neo4j Java 驱动。每个 SDN 发布版本均使用与其发布时间点可用的最新 Neo4j 兼容的 Neo4j Java 驱动版本。虽然 Neo4j Java 驱动的补丁版本通常是即插即用的替代品，但 SDN 会确保即使是次要版本也可互换使用；如有必要，它会检查是否存在方法或接口变更。</p>
+</div>
+<div class="paragraph">
+<p>因此，您可以使用任何 4.x 版本的 Neo4j Java 驱动与任何 6.x 版本的 SDN 配合使用，以及任何 5.x 版本的 Neo4j 驱动与任何 7.x 版本的 SDN 配合使用。</p>
+</div>
+<div class="sect2">
+<h3 id="_with_spring_boot"><a class="anchor" href="#_with_spring_boot"></a>使用 Spring Boot</h3>
+<div class="paragraph">
+<p>如今，基于 Spring Data 的应用程序最可能的部署方式是使用 Spring Boot。请使用 Spring Boot 的依赖管理功能来更改驱动版本，如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">将驱动程序版本从 Maven（pom.xml）中更改。</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;properties&gt;
+  &lt;neo4j-java-driver.version&gt;5.4.0&lt;/neo4j-java-driver.version&gt;
+&lt;/properties&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or</p>
+</div>
+<div class="listingblock">
+<div class="title">将驱动程序版本从 Gradle（gradle.properties）中更改。</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">neo4j-java-driver.version = 5.4.0</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_without_spring_boot"><a class="anchor" href="#_without_spring_boot"></a>不使用 Spring Boot</h3>
+<div class="paragraph">
+<p>如果没有 Spring Boot，您只需手动声明依赖项。对于 Maven，我们建议使用如下所示的 `<dependencymanagement></dependencymanagement>` 部分：</p>
+</div>
+<div class="listingblock">
+<div class="title">通过 Maven（pom.xml）更改非 Spring Boot 的驱动程序版本。</div>
+<div class="content">
+<pre>&lt;dependencyManagement&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.neo4j.driver&lt;/groupId&gt;
+        &lt;artifactId&gt;neo4j-java-driver&lt;/artifactId&gt;
+        &lt;version&gt;5.4.0&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencyManagement&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.multidatabase"><a class="anchor" href="#faq.multidatabase"></a>Neo4j 4 支持多个数据库——如何使用它们？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您可以静态配置数据库名称，也可以运行自己的数据库名称提供者。请注意，SDN 不会为您创建数据库。您可以借助 <a href="https://github.com/michael-simons/neo4j-migrations">迁移工具</a> 来完成此操作，当然也可以使用一个简单的初始脚本来实现。</p>
+</div>
+<div class="sect2">
+<h3 id="faq.multidatabase.statically"><a class="anchor" href="#faq.multidatabase.statically"></a>静态配置</h3>
+<div class="paragraph">
+<p>在 Spring Boot 配置中设置要使用的数据库名称，方式如下（当然，该属性同样适用于基于 YML 或环境的配置，并遵循 Spring Boot 的约定）：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">spring.data.neo4j.database = yourDatabase</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>配置完成后，所有由 SDN 存储库实例（包括反应式和命令式）以及分别由 `<code>ReactiveNeo4jTemplate</code>` 和 `<code>Neo4jTemplate</code>` 生成的查询都将在数据库 `<code>yourDatabase</code>` 上执行。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="faq.multidatabase.dynamically"><a class="anchor" href="#faq.multidatabase.dynamically"></a>动态配置</h3>
+<div class="paragraph">
+<p>根据 Spring 应用程序的类型，提供一个类型为<code>Neo4jDatabaseNameProvider</code>或<code>ReactiveDatabaseSelectionProvider</code>的 Bean。</p>
+</div>
+<div class="paragraph">
+<p>该 Bean 可以使用 Spring 的安全上下文来检索租户。
+以下是一个使用 Spring Security 保护的命令式应用程序的工作示例：</p>
+</div>
+<div class="listingblock" id="faq.databaseSelectionProvider">
+<div class="title">Neo4jConfig.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.neo4j.springframework.data.core.DatabaseSelection;
+import org.neo4j.springframework.data.core.DatabaseSelectionProvider;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+
+</span><span class="fold-block">@Configuration
+public class Neo4jConfig {
+	@Bean
+	DatabaseSelectionProvider databaseSelectionProvider() {
+
+		return () -&gt; Optional.ofNullable(SecurityContextHolder.getContext())
+			.map(SecurityContext::getAuthentication)
+			.filter(Authentication::isAuthenticated)
+			.map(Authentication::getPrincipal)
+			.map(User.class::cast)
+			.map(User::getUsername)
+			.map(DatabaseSelection::byName)
+			.orElseGet(DatabaseSelection::undecided);
+	}
+}</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+请注意，不要将从一个数据库检索到的实体与另一个数据库的实体混淆。
+每次新事务都会请求数据库名称，因此在调用之间更改数据库名称时，您可能会得到比预期少或多的实体。
+更糟糕的是，您不可避免地会将错误的实体存储到错误的数据库中。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="faq.multidatabase.health"><a class="anchor" href="#faq.multidatabase.health"></a>Spring Boot Neo4j 健康指示器针对的是默认数据库，如何更改它？</h3>
+<div class="paragraph">
+<p>Spring Boot 提供了命令式和响应式两种 Neo4j <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-health">健康指示器</a>。  
+这两种变体均能够检测应用程序上下文中的多个 `org.neo4j.driver.Driver` Bean，并为每个实例提供对整体健康状况的贡献。  
+然而，Neo4j 驱动程序连接的是服务器，而非该服务器内的特定数据库。  
+Spring Boot 可以在不使用 Spring Data Neo4j 的情况下配置驱动程序；但由于要使用的数据库信息是与 Spring Data Neo4j 绑定的，因此内置的健康指示器无法获取这些信息。</p>
+</div>
+<div class="paragraph">
+<p>在许多部署场景中，这通常不是问题。  
+但如果配置的数据库用户没有至少对默认数据库的访问权限，健康检查将会失败。</p>
+</div>
+<div class="paragraph">
+<p>这可以通过自定义的、能够感知数据库选择的 Neo4j 健康贡献者来缓解。</p>
+</div>
+<div class="sect3">
+<h4 id="_imperative_variant"><a class="anchor" href="#_imperative_variant"></a>祈使变体</h4>
+<div class="listingblock" id="faq.multidatabase.health.imperative">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Optional;
+
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.SessionConfig;
+import org.neo4j.driver.summary.DatabaseInfo;
+import org.neo4j.driver.summary.ResultSummary;
+import org.neo4j.driver.summary.ServerInfo;
+import org.springframework.boot.actuate.health.AbstractHealthIndicator;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.data.neo4j.core.DatabaseSelection;
+import org.springframework.data.neo4j.core.DatabaseSelectionProvider;
+import org.springframework.util.StringUtils;
+
+</span><span class="fold-block">public class DatabaseSelectionAwareNeo4jHealthIndicator extends AbstractHealthIndicator {
+
+    private final Driver driver;
+
+    private final DatabaseSelectionProvider databaseSelectionProvider;
+
+    public DatabaseSelectionAwareNeo4jHealthIndicator(
+        Driver driver, DatabaseSelectionProvider databaseSelectionProvider
+    ) {
+        this.driver = driver;
+        this.databaseSelectionProvider = databaseSelectionProvider;
+    }
+
+    @Override
+    protected void doHealthCheck(Health.Builder builder) {
+        try {
+            SessionConfig sessionConfig = Optional
+                .ofNullable(databaseSelectionProvider.getDatabaseSelection())
+                .filter(databaseSelection -&gt; databaseSelection != DatabaseSelection.undecided())
+                .map(DatabaseSelection::getValue)
+                .map(v -&gt; SessionConfig.builder().withDatabase(v).build())
+                .orElseGet(SessionConfig::defaultConfig);
+
+            class Tuple {
+                String edition;
+                ResultSummary resultSummary;
+
+                Tuple(String edition, ResultSummary resultSummary) {
+                    this.edition = edition;
+                    this.resultSummary = resultSummary;
+                }
+            }
+
+            String query =
+                "CALL dbms.components() YIELD name, edition WHERE name = 'Neo4j Kernel' RETURN edition";
+            Tuple health = driver.session(sessionConfig)
+                .writeTransaction(tx -&gt; {
+                    Result result = tx.run(query);
+                    String edition = result.single().get("edition").asString();
+                    return new Tuple(edition, result.consume());
+                });
+
+            addHealthDetails(builder, health.edition, health.resultSummary);
+        } catch (Exception ex) {
+            builder.down().withException(ex);
+        }
+    }
+
+    static void addHealthDetails(Health.Builder builder, String edition, ResultSummary resultSummary) {
+        ServerInfo serverInfo = resultSummary.server();
+        builder.up()
+            .withDetail(
+                "server", serverInfo.version() + "@" + serverInfo.address())
+            .withDetail("edition", edition);
+        DatabaseInfo databaseInfo = resultSummary.database();
+        if (StringUtils.hasText(databaseInfo.name())) {
+            builder.withDetail("database", databaseInfo.name());
+        }
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>此方法利用可用的数据库选择，运行与 Boot 相同的查询以检查连接是否健康。请使用以下配置进行应用：</p>
+</div>
+<div class="listingblock" id="faq.multidatabase.health.imperative.config">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Map;
+
+import org.neo4j.driver.Driver;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.boot.actuate.health.CompositeHealthContributor;
+import org.springframework.boot.actuate.health.HealthContributor;
+import org.springframework.boot.actuate.health.HealthContributorRegistry;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.neo4j.core.DatabaseSelectionProvider;
+
+</span><span class="fold-block">@Configuration(proxyBeanMethods = false)
+public class Neo4jHealthConfig {
+
+    @Bean <i class="conum" data-value="1"></i><b>(1)</b>
+    DatabaseSelectionAwareNeo4jHealthIndicator databaseSelectionAwareNeo4jHealthIndicator(
+        Driver driver, DatabaseSelectionProvider databaseSelectionProvider
+    ) {
+        return new DatabaseSelectionAwareNeo4jHealthIndicator(driver, databaseSelectionProvider);
+    }
+
+    @Bean <i class="conum" data-value="2"></i><b>(2)</b>
+    HealthContributor neo4jHealthIndicator(
+        Map&lt;String, DatabaseSelectionAwareNeo4jHealthIndicator&gt; customNeo4jHealthIndicators) {
+        return CompositeHealthContributor.fromMap(customNeo4jHealthIndicators);
+    }
+
+    @Bean <i class="conum" data-value="3"></i><b>(3)</b>
+    InitializingBean healthContributorRegistryCleaner(
+        HealthContributorRegistry healthContributorRegistry,
+        Map&lt;String, DatabaseSelectionAwareNeo4jHealthIndicator&gt; customNeo4jHealthIndicators
+    ) {
+        return () -&gt; customNeo4jHealthIndicators.keySet()
+            .stream()
+            .map(HealthContributorNameFactory.INSTANCE)
+            .forEach(healthContributorRegistry::unregisterContributor);
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>如果您有多个驱动程序和数据库选择提供者，则需要为每种组合创建一个指标</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>这样可以确保所有这些指标都归类在 Neo4j 下，替换默认的 Neo4j 健康指标</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>这可以防止各个贡献者在健康端点中直接显示</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_reactive_variant"><a class="anchor" href="#_reactive_variant"></a>响应式变体</h4>
+<div class="paragraph">
+<p>反应式变体基本相同，使用反应式类型和相应的反应式基础设施类：</p>
+</div>
+<div class="listingblock" id="faq.multidatabase.health.reactive">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import reactor.core.publisher.Mono;
+import reactor.util.function.Tuple2;
+
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.SessionConfig;
+import org.neo4j.driver.reactivestreams.RxResult;
+import org.neo4j.driver.reactivestreams.RxSession;
+import org.neo4j.driver.summary.DatabaseInfo;
+import org.neo4j.driver.summary.ResultSummary;
+import org.neo4j.driver.summary.ServerInfo;
+import org.reactivestreams.Publisher;
+import org.springframework.boot.actuate.health.AbstractReactiveHealthIndicator;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.data.neo4j.core.DatabaseSelection;
+import org.springframework.data.neo4j.core.ReactiveDatabaseSelectionProvider;
+import org.springframework.util.StringUtils;
+
+</span><span class="fold-block">public final class DatabaseSelectionAwareNeo4jReactiveHealthIndicator
+    extends AbstractReactiveHealthIndicator {
+
+    private final Driver driver;
+
+    private final ReactiveDatabaseSelectionProvider databaseSelectionProvider;
+
+    public DatabaseSelectionAwareNeo4jReactiveHealthIndicator(
+        Driver driver,
+        ReactiveDatabaseSelectionProvider databaseSelectionProvider
+    ) {
+        this.driver = driver;
+        this.databaseSelectionProvider = databaseSelectionProvider;
+    }
+
+    @Override
+    protected Mono&lt;Health&gt; doHealthCheck(Health.Builder builder) {
+        String query =
+            "CALL dbms.components() YIELD name, edition WHERE name = 'Neo4j Kernel' RETURN edition";
+        return databaseSelectionProvider.getDatabaseSelection()
+            .map(databaseSelection -&gt; databaseSelection == DatabaseSelection.undecided() ?
+                SessionConfig.defaultConfig() :
+                SessionConfig.builder().withDatabase(databaseSelection.getValue()).build()
+            )
+            .flatMap(sessionConfig -&gt;
+                Mono.usingWhen(
+                    Mono.fromSupplier(() -&gt; driver.rxSession(sessionConfig)),
+                    s -&gt; {
+                        Publisher&lt;Tuple2&lt;String, ResultSummary&gt;&gt; f = s.readTransaction(tx -&gt; {
+                            RxResult result = tx.run(query);
+                            return Mono.from(result.records())
+                                .map((record) -&gt; record.get("edition").asString())
+                                .zipWhen((edition) -&gt; Mono.from(result.consume()));
+                        });
+                        return Mono.fromDirect(f);
+                    },
+                    RxSession::close
+                )
+            ).map((result) -&gt; {
+                addHealthDetails(builder, result.getT1(), result.getT2());
+                return builder.build();
+            });
+    }
+
+    static void addHealthDetails(Health.Builder builder, String edition, ResultSummary resultSummary) {
+        ServerInfo serverInfo = resultSummary.server();
+        builder.up()
+            .withDetail(
+                "server", serverInfo.version() + "@" + serverInfo.address())
+            .withDetail("edition", edition);
+        DatabaseInfo databaseInfo = resultSummary.database();
+        if (StringUtils.hasText(databaseInfo.name())) {
+            builder.withDetail("database", databaseInfo.name());
+        }
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>当然，还有配置的反应式变体。它需要两个不同的注册表清理器，因为 Spring Boot 会将现有的反应式指标包装起来，以便与非反应式的监控端点一起使用。</p>
+</div>
+<div class="listingblock" id="faq.multidatabase.health.reactive.config">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Map;
+
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.boot.actuate.health.CompositeReactiveHealthContributor;
+import org.springframework.boot.actuate.health.HealthContributorNameFactory;
+import org.springframework.boot.actuate.health.HealthContributorRegistry;
+import org.springframework.boot.actuate.health.ReactiveHealthContributor;
+import org.springframework.boot.actuate.health.ReactiveHealthContributorRegistry;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+</span><span class="fold-block">@Configuration(proxyBeanMethods = false)
+public class Neo4jHealthConfig {
+
+    @Bean
+    ReactiveHealthContributor neo4jHealthIndicator(
+        Map&lt;String, DatabaseSelectionAwareNeo4jReactiveHealthIndicator&gt; customNeo4jHealthIndicators) {
+        return CompositeReactiveHealthContributor.fromMap(customNeo4jHealthIndicators);
+    }
+
+    @Bean
+    InitializingBean healthContributorRegistryCleaner(HealthContributorRegistry healthContributorRegistry,
+        Map&lt;String, DatabaseSelectionAwareNeo4jReactiveHealthIndicator&gt; customNeo4jHealthIndicators) {
+        return () -&gt; customNeo4jHealthIndicators.keySet()
+            .stream()
+            .map(HealthContributorNameFactory.INSTANCE)
+            .forEach(healthContributorRegistry::unregisterContributor);
+    }
+
+    @Bean
+    InitializingBean reactiveHealthContributorRegistryCleaner(
+        ReactiveHealthContributorRegistry healthContributorRegistry,
+        Map&lt;String, DatabaseSelectionAwareNeo4jReactiveHealthIndicator&gt; customNeo4jHealthIndicators) {
+        return () -&gt; customNeo4jHealthIndicators.keySet()
+            .stream()
+            .map(HealthContributorNameFactory.INSTANCE)
+            .forEach(healthContributorRegistry::unregisterContributor);
+    }
+}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.impersonation"><a class="anchor" href="#faq.impersonation"></a>Neo4j 4.4 及以上版本支持模拟不同用户——如何使用它们？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>用户模拟在大型多租户环境中尤为引人注目，在这种环境中，一个物理连接（或技术）用户可以代表多个租户。根据您的具体配置，这将大幅减少所需的物理驱动程序实例数量。</p>
+</div>
+<div class="paragraph">
+<p>该功能要求服务器端使用 Neo4j Enterprise 4.4 及以上版本，客户端需使用 4.4 及以上版本的驱动程序（<code>org.neo4j.driver:neo4j-java-driver:4.4.0</code> 或更高版本）。</p>
+</div>
+<div class="paragraph">
+<p>对于命令式和响应式版本，您分别需要提供 `<code>UserSelectionProvider</code>` 和 `<code>ReactiveUserSelectionProvider`。  
+相同的实例需要传递给 `<code>Neo4Client</code>` 和 `<code>Neo4jTransactionManager</code>`，以及它们各自的响应式变体。</code></p>
+</div>
+<div class="paragraph">
+<p>在<a href="#bootless-imperative-configuration">命令式</a>和<a href="#bootless-reactive-configuration">响应式</a>配置中，您只需提供相应类型的 Bean：</p>
+</div>
+<div class="listingblock" id="faq.impersonation.userselectionbean">
+<div class="title">用户选择提供者 Bean</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.neo4j.core.UserSelection;
+import org.springframework.data.neo4j.core.UserSelectionProvider;
+
+</span><span class="fold-block">public class CustomConfig {
+
+    @Bean
+    public UserSelectionProvider getUserSelectionProvider() {
+        return () -&gt; UserSelection.impersonate("someUser");
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在典型的 Spring Boot 场景中，启用此功能需要额外的工作量，因为 Spring Boot 也支持不包含该功能的 SDN 版本。因此，针对<a href="#faq.impersonation.userselectionbean">用户选择提供者 Bean</a>中的 Bean，您需要完全自定义客户端和事务管理器：</p>
+</div>
+<div class="listingblock" id="faq.impersonation.boot">
+<div class="title">Spring Boot 所需的自定义配置</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.neo4j.driver.Driver;
+
+import org.springframework.data.neo4j.core.DatabaseSelectionProvider;
+import org.springframework.data.neo4j.core.Neo4jClient;
+import org.springframework.data.neo4j.core.UserSelectionProvider;
+import org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager;
+
+import org.springframework.transaction.PlatformTransactionManager;
+
+</span><span class="fold-block">public class CustomConfig {
+
+    @Bean
+    public Neo4jClient neo4jClient(
+        Driver driver,
+        DatabaseSelectionProvider databaseSelectionProvider,
+        UserSelectionProvider userSelectionProvider
+    ) {
+
+        return Neo4jClient.with(driver)
+            .withDatabaseSelectionProvider(databaseSelectionProvider)
+            .withUserSelectionProvider(userSelectionProvider)
+            .build();
+	}
+
+    @Bean
+    public PlatformTransactionManager transactionManager(
+        Driver driver,
+        DatabaseSelectionProvider databaseSelectionProvider,
+        UserSelectionProvider userSelectionProvider
+    ) {
+
+        return Neo4jTransactionManager
+            .with(driver)
+            .withDatabaseSelectionProvider(databaseSelectionProvider)
+            .withUserSelectionProvider(userSelectionProvider)
+            .build();
+	}
+}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.cluster"><a class="anchor" href="#faq.cluster"></a>使用 Spring Data Neo4j 中的 Neo4j 集群实例</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>以下问题同样适用于 Neo4j AuraDB 以及本地部署的 Neo4j 集群实例。</p>
+</div>
+<div class="sect2">
+<h3 id="faq.transactions.cluster"><a class="anchor" href="#faq.transactions.cluster"></a>是否需要特定配置，才能使事务在 Neo4j 因果集群中无缝运行？</h3>
+<div class="paragraph">
+<p>不，您不需要。
+SDN 在内部使用 Neo4j 因果集群书签，无需您在侧进行任何配置。
+同一线程或同一响应式流中按顺序执行的事务将能够读取其先前更改的值，正如您所预期的那样。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="faq.transactions.cluster.rw"><a class="anchor" href="#faq.transactions.cluster.rw"></a>在 Neo4j 集群中使用只读事务是否重要？</h3>
+<div class="paragraph">
+<p>是的，确实如此。
+Neo4j 集群架构采用因果一致性集群架构，并区分主服务器和从服务器。
+主服务器可以是单实例或核心实例，两者均可响应读写操作。
+写操作会在集群内部从核心实例传播到读副本，更一般地说是从属节点。
+这些从属节点即为从服务器。
+从服务器不响应写操作。</p>
+</div>
+<div class="paragraph">
+<p>在标准的部署场景中，集群内会包含一些核心实例和大量只读副本。因此，将操作或查询标记为只读至关重要，这样可以扩展集群规模，确保主节点不会被压垮，同时尽可能将查询分发到只读副本上。</p>
+</div>
+<div class="paragraph">
+<p>Spring Data Neo4j 和底层的 Java 驱动均不执行 Cypher 解析，且这两个构建块默认假设操作为写操作。做出这一决定是为了开箱即用地支持所有操作。如果堆栈中的某个组件默认假设为只读，则可能导致堆栈向只读副本发送写查询，从而在执行时失败。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+所有 <code>findById</code>、<code>findAllById</code>、<code>findAll</code> 以及预定义的生存性方法默认都标记为只读。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>以下是对部分选项的描述：</p>
+</div>
+<div class="listingblock">
+<div class="title">将整个仓库设置为只读</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.transaction.annotation.Transactional;
+
+</span><span class="fold-block">@Transactional(readOnly = true)
+interface PersonRepository extends Neo4jRepository&lt;Person, Long&gt; {
+}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">将选定的仓库方法设置为只读</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.data.neo4j.repository.query.Query;
+import org.springframework.transaction.annotation.Transactional;
+
+</span><span class="fold-block">interface PersonRepository extends Neo4jRepository&lt;Person, Long&gt; {
+
+  @Transactional(readOnly = true)
+  Person findOneByName(String name); <i class="conum" data-value="1"></i><b>(1)</b>
+
+  @Transactional(readOnly = true)
+  @Query("""
+    CALL apoc.search.nodeAll('{Person: "name",Movie: ["title","tagline"]}','contains','her')
+    YIELD node AS n RETURN n""")
+  Person findByCustomQuery(); <i class="conum" data-value="2"></i><b>(2)</b>
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>1 为什么默认不是只读？虽然对于上述派生查找器（我们实际上知道它是只读的）来说这样是可行的，但我们经常看到用户添加自定义的 `@Query` 并通过 `MERGE` 构造来实现它，这当然是一个写操作。
+2 自定义过程可以做各种各样的事情，目前我们无法在此处检查它们是只读还是可写。</table>
+</div>
+<div class="listingblock">
+<div class="title">从服务编排对存储库的调用。</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Optional;
+
+import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.transaction.annotation.Transactional;
+
+</span><span class="fold-block">interface PersonRepository extends Neo4jRepository&lt;Person, Long&gt; {
+}
+
+interface MovieRepository extends Neo4jRepository&lt;Movie, Long&gt; {
+  List&lt;Movie&gt; findByLikedByPersonName(String name);
+}
+
+public class PersonService {
+
+  private final PersonRepository personRepository;
+  private final MovieRepository movieRepository;
+
+  public PersonService(PersonRepository personRepository,
+        MovieRepository movieRepository) {
+    this.personRepository = personRepository;
+    this.movieRepository = movieRepository;
+  }
+
+  @Transactional(readOnly = true)
+  public Optional&lt;PersonDetails&gt; getPerson(Long id) { <i class="conum" data-value="1"></i><b>(1)</b>
+    return this.repository.findById(id)
+      .map(person -&gt; {
+        var movies = this.movieRepository
+          .findByLikedByPersonName(person.getName());
+        return new PersonDetails(person, movies);
+            });
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>此处，对多个存储库的多次调用被封装在一个单一的只读事务中。</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">在私有服务方法中使用 Spring 的 `TransactionTemplate`，以及/或者与 Neo4j 客户端一起使用时。</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Collection;
+
+import org.neo4j.driver.types.Node;
+import org.springframework.data.neo4j.core.Neo4jClient;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.support.TransactionTemplate;
+
+</span><span class="fold-block">public class PersonService {
+
+  private final TransactionTemplate readOnlyTx;
+
+  private final Neo4jClient neo4jClient;
+
+  public PersonService(PlatformTransactionManager transactionManager, Neo4jClient neo4jClient) {
+
+    this.readOnlyTx = new TransactionTemplate(transactionManager, <i class="conum" data-value="1"></i><b>(1)</b>
+        new TransactionDefinition() {
+          @Override public boolean isReadOnly() {
+            return true;
+          }
+        }
+    );
+    this.neo4jClient = neo4jClient;
+  }
+
+  void internalOperation() { <i class="conum" data-value="2"></i><b>(2)</b>
+
+    Collection&lt;Node&gt; nodes = this.readOnlyTx.execute(state -&gt; {
+      return neo4jClient.query("MATCH (n) RETURN n").fetchAs(Node.class) <i class="conum" data-value="3"></i><b>(3)</b>
+          .mappedBy((types, record) -&gt; record.get(0).asNode())
+          .all();
+    });
+  }
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>创建一个具有所需特性的 <code>TransactionTemplate</code> 实例。当然，这也可以是一个全局 Bean。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>使用事务模板的第一个原因：声明式事务无法在包私有或私有方法中工作，也无法在内层方法调用中工作（想象一下该服务中的另一个方法调用 <code>internalOperation</code>），因为它们是通过切面和代理实现的。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><code>Neo4jClient</code> 是 SDN 提供的一个固定工具类，它无法被注解，但与 Spring 集成。因此，它可以为您提供使用纯驱动、无需自动映射且包含事务时所能实现的所有功能。它也遵循声明式事务。</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="faq.bookmarks.seeding"><a class="anchor" href="#faq.bookmarks.seeding"></a>我可以检索最新的书签或播种交易管理器吗？</h3>
+<div class="paragraph">
+<p>如<a class="xref page" href="appendix/migrating.html#migrating.bookmarks">书签管理</a>中简要提到的，无需对书签进行任何配置。不过，从数据库中检索 SDN 事务系统接收到的最新书签可能很有用。您可以添加一个类似<code>@Bean</code>的<code>BookmarkCapture</code>来实现此功能：</p>
+</div>
+<div class="listingblock">
+<div class="title">BookmarkCapture.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Set;
+
+import org.neo4j.driver.Bookmark;
+import org.springframework.context.ApplicationListener;
+
+</span><span class="fold-block">public final class BookmarkCapture
+    implements ApplicationListener&lt;Neo4jBookmarksUpdatedEvent&gt; {
+
+    @Override
+    public void onApplicationEvent(Neo4jBookmarksUpdatedEvent event) {
+        // We make sure that this event is called only once,
+        // the thread safe application of those bookmarks is up to your system.
+        Set&lt;Bookmark&gt; latestBookmarks = event.getBookmarks();
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>为了初始化交易系统，需要一个如下所示的自定义事务管理器：</p>
+</div>
+<div class="listingblock">
+<div class="title">BookmarkSeedingConfig.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Set;
+import java.util.function.Supplier;
+
+import org.neo4j.driver.Bookmark;
+import org.neo4j.driver.Driver;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.neo4j.core.DatabaseSelectionProvider;
+import org.springframework.data.neo4j.core.transaction.Neo4jBookmarkManager;
+import org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+
+</span><span class="fold-block">@Configuration
+public class BookmarkSeedingConfig {
+
+    @Bean
+    public PlatformTransactionManager transactionManager(
+            Driver driver, DatabaseSelectionProvider databaseNameProvider) { <i class="conum" data-value="1"></i><b>(1)</b>
+
+        Supplier&lt;Set&lt;Bookmark&gt;&gt; bookmarkSupplier = () -&gt; { <i class="conum" data-value="2"></i><b>(2)</b>
+            Bookmark a = null;
+            Bookmark b = null;
+            return Set.of(a, b);
+        };
+
+        Neo4jBookmarkManager bookmarkManager =
+            Neo4jBookmarkManager.create(bookmarkSupplier); <i class="conum" data-value="3"></i><b>(3)</b>
+        return new Neo4jTransactionManager(
+            driver, databaseNameProvider, bookmarkManager); <i class="conum" data-value="4"></i><b>(4)</b>
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>让 Spring 注入这些组件</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>该供应者可以是任何持有您希望引入系统的最新书签的对象</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>使用它创建书签管理器</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>将其传递给自定义的事务管理器</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock warning">
+<table><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+除非您的应用程序需要访问或提供这些数据，否则<strong>无需</strong>执行上述任何操作。如有疑虑，请勿进行任何操作。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="faq.bookmarks.noop"><a class="anchor" href="#faq.bookmarks.noop"></a>我可以禁用书签管理吗？</h3>
+<div class="paragraph">
+<p>我们提供了一个无操作书签管理器，可有效禁用书签管理功能。</p>
+</div>
+<div class="admonitionblock warning">
+<table><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+请谨慎使用此书签管理器，因为它会删除所有书签且不再提供任何书签，从而有效禁用任何书签管理功能。在集群环境中，您将面临极高的读取陈旧数据风险；而在单实例环境中，通常不会产生明显影响。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>在集群环境中，这种方法可能仅在某些情况下是合理的：即您能够容忍读取过时数据，且不存在覆盖旧数据的风险。</p>
+</div>
+<div class="paragraph">
+<p>以下配置将创建一个“noop"变体的书签管理器，该变体会从相关类中被识别。</p>
+</div>
+<div class="listingblock">
+<div class="title">BookmarksDisabledConfig.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.neo4j.driver.Driver;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.neo4j.core.transaction.Neo4jBookmarkManager;
+
+</span><span class="fold-block">@Configuration
+public class BookmarksDisabledConfig {
+
+    @Bean
+    public Neo4jBookmarkManager neo4jBookmarkManager() {
+
+        return Neo4jBookmarkManager.noop();
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您可以分别配置 `<code>Neo4jTransactionManager/Neo4jClient</code>` 和 `<code>ReactiveNeo4jTransactionManager/ReactiveNeo4jClient</code>` 的对，但我们建议仅在已针对特定数据库选择需求进行配置时才这样做。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.annotations.specific"><a class="anchor" href="#faq.annotations.specific"></a>我需要使用 Neo4j 特定的注解吗？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>否。
+您可以自由使用以下等效的 Spring Data 注解：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;"/>
+<col style="width: 25%;"/>
+<col style="width: 25%;"/>
+<col style="width: 25%;"/>
+</colgroup>
+<thead><tr>
+<th class="tableblock halign-left valign-top">SDN 特定注解</th>
+<th class="tableblock halign-left valign-top">Spring Data 通用注解</th>
+<th class="tableblock halign-left valign-top">目的</th>
+<th class="tableblock halign-left valign-top">差异</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.springframework.data.neo4j.core.schema.Id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.springframework.data.annotation.Id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将标注的属性标记为唯一标识符。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">特定注释没有附加功能。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.springframework.data.neo4j.core.schema.Node</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>org.springframework.data.annotation.Persistent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">将类标记为持久实体。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@Node</code> 允许自定义标签。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.ids.assignment"><a class="anchor" href="#faq.ids.assignment"></a>如何使用分配的 ID？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>只需使用 `<code>@Id</code>` 而无需 `<code>@GeneratedValue</code>`，并通过构造函数参数、setter 方法或 <em>wither</em> 方法来填充 id 属性。有关查找良好 id 的一般性建议，请参阅此<a href="https://medium.com/neo4j/neo4j-ogm-and-spring-data-neo4j-a55a866df68c">博客文章</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.ids.externally"><a class="anchor" href="#faq.ids.externally"></a>如何使用外部生成的 ID？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>我们提供接口 `org.springframework.data.neo4j.core.schema.IdGenerator`。  
+您可以以任意方式实现该接口，并按照如下方式配置您的实现：</p>
+</div>
+<div class="listingblock">
+<div class="title">ThingWithGeneratedId.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node
+public class ThingWithGeneratedId {
+
+	@Id @GeneratedValue(TestSequenceGenerator.class)
+	private String theId;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果向 `<code>@GeneratedValue</code>` 传入一个类名，该类必须具有无参默认构造函数。  
+不过，您也可以使用字符串：</p>
+</div>
+<div class="listingblock">
+<div class="title">ThingWithIdGeneratedByBean.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node
+public class ThingWithIdGeneratedByBean {
+
+	@Id @GeneratedValue(generatorRef = "idGeneratingBean")
+	private String theId;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>因此，<code>idGeneratingBean</code> 指的是 Spring 上下文中的一个 Bean。
+这在序列生成方面可能很有用。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+非 final 字段的 id 不需要设置 setter。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="template-support"><a class="anchor" href="#template-support"></a>我是否为每个领域类创建仓库？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>否。
+请查看<a class="xref page" href="introduction-and-preface/building-blocks.html#sdn-building-blocks">SDN 构建块</a>，并找到<code>Neo4jTemplate</code>或<code>ReactiveNeo4jTemplate</code>。</p>
+</div>
+<div class="paragraph">
+<p>这些模板了解您的领域，并提供所有必要的增删改查（CRUD）方法，用于检索、写入和统计实体。</p>
+</div>
+<div class="paragraph">
+<p>这是我们使用祈使句模板的规范电影示例：</p>
+</div>
+<div class="listingblock" id="imperative-template-example">
+<div class="title">TemplateExampleTest.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Collections;
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTest;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
+import org.springframework.data.neo4j.documentation.domain.MovieEntity;
+import org.springframework.data.neo4j.documentation.domain.PersonEntity;
+import org.springframework.data.neo4j.documentation.domain.Roles;
+import org.springframework.data.neo4j.test.Neo4jIntegrationTest;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+</span><span class="fold-block">@Neo4jIntegrationTest
+@DataNeo4jTest
+public class TemplateExampleTest {
+
+	@Test
+	void shouldSaveAndReadEntities(@Autowired Neo4jTemplate neo4jTemplate) {
+
+		MovieEntity movie = new MovieEntity("The Love Bug",
+				"A movie that follows the adventures of Herbie, Herbie's driver, "
+						+ "Jim Douglas (Dean Jones), and Jim's love interest, " + "Carole Bennett (Michele Lee)");
+
+		Roles roles1 = new Roles(new PersonEntity(1931, "Dean Jones"), Collections.singletonList("Didi"));
+		Roles roles2 = new Roles(new PersonEntity(1942, "Michele Lee"), Collections.singletonList("Michi"));
+		movie.getActorsAndRoles().add(roles1);
+		movie.getActorsAndRoles().add(roles2);
+
+		MovieEntity result = neo4jTemplate.save(movie);
+		assertThat(result.getActorsAndRoles()).allSatisfy(relationship -&gt; assertThat(relationship.getId()).isNotNull());
+
+		Optional&lt;PersonEntity&gt; person = neo4jTemplate.findById("Dean Jones", PersonEntity.class);
+		assertThat(person).map(PersonEntity::getBorn).hasValue(1931);
+
+		assertThat(neo4jTemplate.count(PersonEntity.class)).isEqualTo(2L);
+	}
+
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>以下是反应式版本，为简洁起见省略了设置部分：</p>
+</div>
+<div class="listingblock" id="reactive-template-example">
+<div class="title">ReactiveTemplateExampleTest.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Collections;
+
+import org.junit.jupiter.api.Test;
+import org.testcontainers.neo4j.Neo4jContainer;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
+import reactor.test.StepVerifier;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.data.neo4j.DataNeo4jTest;
+import org.springframework.data.neo4j.core.ReactiveNeo4jTemplate;
+import org.springframework.data.neo4j.documentation.domain.MovieEntity;
+import org.springframework.data.neo4j.documentation.domain.PersonEntity;
+import org.springframework.data.neo4j.documentation.domain.Roles;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+
+</span><span class="fold-block">@Testcontainers
+@DataNeo4jTest
+class ReactiveTemplateExampleTest {
+
+	@Container
+	private static Neo4jContainer neo4jContainer = new Neo4jContainer("neo4j:5");
+
+	@DynamicPropertySource
+	static void neo4jProperties(DynamicPropertyRegistry registry) {
+		registry.add("org.neo4j.driver.uri", neo4jContainer::getBoltUrl);
+		registry.add("org.neo4j.driver.authentication.username", () -&gt; "neo4j");
+		registry.add("org.neo4j.driver.authentication.password", neo4jContainer::getAdminPassword);
+	}
+
+	@Test
+	void shouldSaveAndReadEntities(@Autowired ReactiveNeo4jTemplate neo4jTemplate) {
+
+		MovieEntity movie = new MovieEntity("The Love Bug",
+				"A movie that follows the adventures of Herbie, Herbie's driver, Jim Douglas (Dean Jones), and Jim's love interest, Carole Bennett (Michele Lee)");
+
+		Roles role1 = new Roles(new PersonEntity(1931, "Dean Jones"), Collections.singletonList("Didi"));
+		Roles role2 = new Roles(new PersonEntity(1942, "Michele Lee"), Collections.singletonList("Michi"));
+		movie.getActorsAndRoles().add(role1);
+		movie.getActorsAndRoles().add(role2);
+
+		StepVerifier.create(neo4jTemplate.save(movie)).expectNextCount(1L).verifyComplete();
+
+		StepVerifier.create(neo4jTemplate.findById("Dean Jones", PersonEntity.class).map(PersonEntity::getBorn))
+			.expectNext(1931)
+			.verifyComplete();
+
+		StepVerifier.create(neo4jTemplate.count(PersonEntity.class)).expectNext(2L).verifyComplete();
+	}
+
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>请注意，这两个示例都使用了来自 Spring Boot 的<code>@DataNeo4jTest</code>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.custom-queries-with-page-and-slice"><a class="anchor" href="#faq.custom-queries-with-page-and-slice"></a>如何使用返回 <code>Page&lt;T&gt;</code> 或 <code>Slice&lt;T&gt;</code> 的仓储方法中的自定义查询？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>虽然您无需在返回 <code>Page&lt;T&gt;</code> 或 <code>Slice&lt;T&gt;</code> 的派生查询方法中提供除 <code>Pageable</code> 参数之外的任何内容，但仍需准备自定义查询以处理该分页对象。有关所需内容的概述，请参阅<a href="#custom-queries-with-page-and-slice-examples">页面和切片</a>部分。</p>
+</div>
+<div class="listingblock" id="custom-queries-with-page-and-slice-examples">
+<div class="title">页面与切片</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.domain.Pageable;
+import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.data.neo4j.repository.query.Query;
+
+</span><span class="fold-block">public interface MyPersonRepository extends Neo4jRepository&lt;Person, Long&gt; {
+
+    Page&lt;Person&gt; findByName(String name, Pageable pageable); <i class="conum" data-value="1"></i><b>(1)</b>
+
+    @Query(""
+        + "MATCH (n:Person) WHERE n.name = $name RETURN n "
+        + "ORDER BY n.name ASC SKIP $skip LIMIT $limit"
+    )
+    Slice&lt;Person&gt; findSliceByName(String name, Pageable pageable); <i class="conum" data-value="2"></i><b>(2)</b>
+
+    @Query(
+    	value = ""
+            + "MATCH (n:Person) WHERE n.name = $name RETURN n "
+            + "ORDER BY n.name ASC SKIP $skip LIMIT $limit",
+        countQuery = ""
+            + "MATCH (n:Person) WHERE n.name = $name RETURN count(n)"
+    )
+    Page&lt;Person&gt; findPageByName(String name, Pageable pageable); <i class="conum" data-value="3"></i><b>(3)</b>
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>这是一个派生的查找方法，会自动为您创建查询。它会自动处理 <code>Pageable</code> 对象。您应当使用已排序的 pageable。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>此方法使用 <code>@Query</code> 注解来定义自定义查询，并返回一个 <code>Slice&lt;Person&gt;</code>。Slice 不知道总页数，因此自定义查询无需专门的计数查询。SDN 会通知您它估算了下一个 Slice。Cypher 模板必须同时包含 <code>$skip</code> 和 <code>$limit</code> Cypher 参数。如果省略它们，SDN 将发出警告，结果很可能不符合您的预期。此外，<code>Pageable</code> 不应包含排序信息，您应提供稳定的排序顺序。我们不会使用 pageable 中的排序信息。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>此方法返回一个 Page（分页对象）。Page 知道确切的总页数。因此，您必须指定额外的计数查询。第二条方法中的所有其他限制同样适用。</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.path-mapping"><a class="anchor" href="#faq.path-mapping"></a>我能否映射命名路径？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在 Neo4j 中，一系列相连的节点和关系被称为“路径”。
+Cypher 允许使用标识符来命名路径，例如：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">p = (a)-[*3..5]-&gt;(b)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>或者就像臭名昭著的“电影图”那样，其中包含以下路径（在这种情况下，这是两个演员之间的最短路径之一）：</p>
+</div>
+<div class="listingblock" id="bacon-distance">
+<div class="title">The "Bacon" distance</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=shortestPath((bacon:Person {name:"Kevin Bacon"})-[*]-(meg:Person {name:"Meg Ryan"}))
+RETURN p</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>看起来是这样的：</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="image$bacon distance" src="_images/bacon-distance.png"/>
+</div>
+</div>
+<div class="paragraph">
+<p>我们找到 3 个标记为 `<code>Vertex</code>` 的节点和 2 个标记为 `<code>Movie</code>` 的节点。两者都可以通过自定义查询进行映射。假设存在用于 `<code>Vertex</code>`、`<code>Movie</code>` 以及负责处理关系的 `<code>Actor</code>` 的节点实体：</p>
+</div>
+<div class="listingblock">
+<div class="title">“标准”电影图域模型</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node
+public final class Person {
+
+	@Id @GeneratedValue
+	private final Long id;
+
+	private final String name;
+
+	private Integer born;
+
+	@Relationship("REVIEWED")
+	private List&lt;Movie&gt; reviewed = new ArrayList&lt;&gt;();
+}
+
+@RelationshipProperties
+public final class Actor {
+
+	@RelationshipId
+	private final Long id;
+
+	@TargetNode
+	private final Person person;
+
+	private final List&lt;String&gt; roles;
+}
+
+@Node
+public final class Movie {
+
+	@Id
+	private final String title;
+
+	@Property("tagline")
+	private final String description;
+
+	@Relationship(value = "ACTED_IN", direction = Direction.INCOMING)
+	private final List&lt;Actor&gt; actors;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>当使用如下所示的查询<a href="#bacon-distance">“培根”距离</a>，针对类型为<code>Vertex</code>的域类时</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface PeopleRepository extends Neo4jRepository&lt;Person, Long&gt; {
+    @Query(""
+        + "MATCH p=shortestPath((bacon:Person {name: $person1})-[*]-(meg:Person {name: $person2}))\n"
+        + "RETURN p"
+    )
+    List&lt;Person&gt; findAllOnShortestPathBetween(@Param("person1") String person1, @Param("person2") String person2);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>它将检索路径中的所有人员并将其映射。如果路径中存在与域中相同的实体关系类型（如 `<code>REVIEWED</code>`），则将从路径中相应填充这些关系。</p>
+</div>
+<div class="admonitionblock warning">
+<table><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+使用基于路径查询水合的节点保存数据时，请格外小心。
+如果未水合所有关系，数据将会丢失。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>反过来同样适用。相同的查询也可用于`Movie`实体，此时它将仅填充电影数据。以下示例展示了如何实现这一点，以及如何通过添加路径上不存在的数据来丰富该查询。这些数据将用于正确填充缺失的关系（在本例中即为所有演员）。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface MovieRepository extends Neo4jRepository&lt;Movie, String&gt; {
+
+    @Query(""
+        + "MATCH p=shortestPath(\n"
+        + "(bacon:Person {name: $person1})-[*]-(meg:Person {name: $person2}))\n"
+        + "WITH p, [n IN nodes(p) WHERE n:Movie] AS x\n"
+        + "UNWIND x AS m\n"
+        + "MATCH (m) &lt;-[r:DIRECTED]-(d:Person)\n"
+        + "RETURN p, collect(r), collect(d)"
+    )
+    List&lt;Movie&gt; findAllOnShortestPathBetween(@Param("person1") String person1, @Param("person2") String person2);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>该查询返回路径以及所有已收集的关联和关系节点，以确保电影实体完全填充。</p>
+</div>
+<div class="paragraph">
+<p>路径映射既适用于单个路径，也适用于多条路径记录（这些记录由<code>allShortestPath</code>函数返回）。</p>
+</div>
+<div class="admonitionblock tip">
+<table><tr>
+<td class="icon">
+<i class="fa icon-tip" title="提示"></i>
+</td>
+<td class="content">
+命名路径可高效地用于填充和返回根节点以外的内容，详见 <a class="xref page" href="appendix/custom-queries.html#custom-query.paths">附录/自定义查询.adoc#自定义查询.路径</a>。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.custom-queries-and-custom-mappings"><a class="anchor" href="#faq.custom-queries-and-custom-mappings"></a><code>@Query</code> 是使用自定义查询的唯一方式吗？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>不，<code>@Query</code> 并非执行自定义查询的唯一方式。  
+当您的自定义查询能够完整覆盖领域模型时，该注解使用起来非常便捷。  
+请记住，SDN 假定您映射的领域模型是真理。  
+这意味着，如果您通过 <code>@Query</code> 执行一个仅部分填充模型的自定义查询，您将面临风险：使用同一个对象将数据写回时，最终可能会擦除或覆盖您在查询中未考虑到的数据。</p>
+</div>
+<div class="paragraph">
+<p>因此，请始终使用仓储和声明式方法配合 `<code>@Query` 注解，特别是在结果形状与您的领域模型一致，或您确定不会在写命令中使用部分映射模型的情况下。</code></p>
+</div>
+<div class="paragraph">
+<p>有哪些替代方案？</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a class="xref page" href="projections/sdn-projections.html#projections.sdn.general-remarks">投影</a>可能已经足以塑造您对图的<strong>视图</strong>：它们可用于以显式方式定义获取属性及相关实体的深度：通过对其进行建模。</p>
+</li>
+<li>
+<p>如果您的目标仅是使查询条件<strong>动态化</strong>，请查看 <a class="xref page" href="repositories/core-extensions.html#core.extensions.querydsl"><code>QuerydslPredicateExecutor</code></a>，尤其是我们自己的变体 <code>CypherdslConditionExecutor</code>。这两个 <a class="xref page" href="repositories/sdn-extension.html#sdn-mixins">混入类（mixins）</a> 均允许向为您生成的完整查询添加条件。因此，您将获得完全填充的领域数据以及自定义条件。当然，您的条件必须与我们生成的内容兼容。有关根节点名称、相关节点等信息，请参见 <a class="xref page" href="appendix/custom-queries.html#custom-queries">此处</a>。</p>
+</li>
+<li>
+<p>通过 <a href="https://neo4j.github.io/cypher-dsl">Cypher-DSL</a> 使用 <code>CypherdslStatementExecutor</code> 或 <code>ReactiveCypherdslStatementExecutor</code>。Cypher-DSL 专为创建动态查询而设计，毕竟 SDN 底层也是依赖它来实现的。相应的混入（mixins）既支持仓库本身的领域类型，也支持投影（这是添加条件的混入所不具备的功能）。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果您认为可以通过部分动态查询或完整动态查询结合投影来解决您的问题，请现在返回到<a class="xref page" href="repositories/sdn-extension.html#sdn-mixins">关于 Spring Data Neo4j Mixins 的章节</a>。</p>
+</div>
+<div class="paragraph">
+<p>否则，请阅读以下两个主题：<a class="xref page" href="repositories/custom-implementations.html#repositories.custom-implementations">自定义存储库片段</a>以及我们在 SDN 中提供的<a class="xref page" href="introduction-and-preface/building-blocks.html#sdn-building-blocks">抽象层级</a>。</p>
+</div>
+<div class="paragraph">
+<p>现在为何要谈论自定义存储库片段？</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>您可能遇到更复杂的情况，其中需要多个动态查询，但这些查询在概念上仍属于仓储层，而非服务层。</p>
+</li>
+<li>
+<p>您的自定义查询返回的图形化结果与领域模型不完全匹配，因此该自定义查询应同时配备自定义映射。</p>
+</li>
+<li>
+<p>您需要与驱动程序进行交互，即处理不应经过对象映射的大批量数据。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>假设有一个名为<em>declaration</em>的仓库，它基本上聚合了一个基础仓库和三个片段：</p>
+</div>
+<div class="listingblock" id="aggregating-repository">
+<div class="title">由多个碎片组成的仓库</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.neo4j.documentation.domain.MovieEntity;
+import org.springframework.data.neo4j.repository.Neo4jRepository;
+
+</span><span class="fold-block">public interface MovieRepository
+        extends Neo4jRepository&lt;MovieEntity, String&gt;, DomainResults, NonDomainResults, LowlevelInteractions {
+
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>该仓库包含如<a class="xref page" href="getting-started.html#movie-entity">开始部分</a>所示的<a class="xref page" href="getting-started.html#example-node-spring-boot-project">电影</a>实体。</p>
+</div>
+<div class="paragraph">
+<p>从仓库扩展的附加接口（<code>DomainResults</code>、<code>NonDomainResults</code> 和 <code>LowlevelInteractions</code>）是解决上述所有关注点的片段。</p>
+</div>
+<div class="sect2">
+<h3 id="_using_complex_dynamic_custom_queries_but_still_returning_domain_types"><a class="anchor" href="#_using_complex_dynamic_custom_queries_but_still_returning_domain_types"></a>使用复杂的动态自定义查询，但仍返回领域类型</h3>
+<div class="paragraph">
+<p>片段<code>DomainResults</code>声明了一个额外的方法<code>findMoviesAlongShortestPath</code>：</p>
+</div>
+<div class="listingblock" id="domain-results">
+<div class="title">域结果片段</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.List;
+
+import org.springframework.data.neo4j.documentation.domain.MovieEntity;
+import org.springframework.data.neo4j.documentation.domain.PersonEntity;
+import org.springframework.transaction.annotation.Transactional;
+
+</span><span class="fold-block">interface DomainResults {
+
+    @Transactional(readOnly = true)
+    List&lt;MovieEntity&gt; findMoviesAlongShortestPath(PersonEntity from, PersonEntity to);
+
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>此方法使用 `<code>@Transactional(readOnly = true)</code>` 注解进行标记，表明读者可以对其进行查询。  
+该操作无法通过 SDN 推导得出，而需要自定义查询。  
+该自定义查询由该接口的一个实现类提供。  
+该实现类的名称与接口相同，但后缀为 `<code>Impl</code>`：</p>
+</div>
+<div class="listingblock" id="domain-results-impl">
+<div class="title">使用 Neo4jTemplate 的片段实现</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.neo4j.cypherdsl.core.Cypher;
+
+import org.springframework.data.neo4j.core.Neo4jTemplate;
+import org.springframework.data.neo4j.documentation.domain.MovieEntity;
+import org.springframework.data.neo4j.documentation.domain.PersonEntity;
+
+import static org.neo4j.cypherdsl.core.Cypher.anyNode;
+import static org.neo4j.cypherdsl.core.Cypher.listWith;
+import static org.neo4j.cypherdsl.core.Cypher.name;
+import static org.neo4j.cypherdsl.core.Cypher.node;
+import static org.neo4j.cypherdsl.core.Cypher.parameter;
+
+</span><span class="fold-block">class DomainResultsImpl implements DomainResults {
+
+    private final Neo4jTemplate neo4jTemplate; <i class="conum" data-value="1"></i><b>(1)</b>
+
+    DomainResultsImpl(Neo4jTemplate neo4jTemplate) {
+        this.neo4jTemplate = neo4jTemplate;
+    }
+
+    @Override
+    public List&lt;MovieEntity&gt; findMoviesAlongShortestPath(PersonEntity from, PersonEntity to) {
+
+        var p1 = node("Person").withProperties("name", parameter("person1"));
+        var p2 = node("Person").withProperties("name", parameter("person2"));
+        var shortestPath = Cypher.shortestK(1).named("p").definedBy(p1.relationshipBetween(p2).unbounded());
+        var p = shortestPath.getRequiredSymbolicName();
+        var statement = Cypher.match(shortestPath)
+            .with(p, listWith(name("n")).in(Cypher.nodes(shortestPath))
+                .where(anyNode().named("n").hasLabels("Movie"))
+                .returning()
+                .as("mn"))
+            .unwind(name("mn"))
+            .as("m")
+            .with(p, name("m"))
+            .match(node("Person").named("d").relationshipTo(anyNode("m"), "DIRECTED").named("r"))
+            .returning(p, Cypher.collect(name("r")), Cypher.collect(name("d")))
+            .build();
+
+        Map&lt;String, Object&gt; parameters = new HashMap&lt;&gt;();
+        parameters.put("person1", from.getName());
+        parameters.put("person2", to.getName());
+        return this.neo4jTemplate.findAll(statement, parameters, MovieEntity.class); <i class="conum" data-value="2"></i><b>(2)</b>
+    }
+
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>Neo4jTemplate</code> 由运行时通过 <code>DomainResultsImpl</code> 的构造函数注入，无需使用 <code>@Autowired</code>。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Cypher-DSL 用于构建复杂的语句（与<a href="#faq.path-mapping">路径映射</a>中所示的几乎相同）。该语句可直接传递给模板。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>模板也支持基于字符串的查询重载，因此您也可以将查询以字符串形式书写。
+这里的关键要点是：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>该模板“了解”您的领域对象，并据此进行映射。</p>
+</li>
+<li>
+<p>@Query 并非定义自定义查询的唯一选项。</p>
+</li>
+<li>
+<p>它们可以通过多种方式生成。</p>
+</li>
+<li>
+<p><code>@Transactional</code> 注解会被尊重</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_custom_queries_and_custom_mappings"><a class="anchor" href="#_using_custom_queries_and_custom_mappings"></a>使用自定义查询和自定义映射</h3>
+<div class="paragraph">
+<p>通常情况下，自定义查询会返回自定义结果。是否应该将所有这些结果都映射为 `<code>@Node`？当然不是！很多时候，这些对象代表的是读操作命令，并不适合作为写操作命令使用。此外，SDN 可能无法或不愿映射所有 Cypher 所能实现的功能。不过，它确实提供了多个钩子来执行您自己的映射逻辑：在 `<code>Neo4jClient</code>` 上。使用 SDN 的 `<code>Neo4jClient</code>` 而非驱动器的优势在于：</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Neo4jClient</code> 已集成 Spring 的事务管理功能。</p>
+</li>
+<li>
+<p>它提供了用于绑定参数的流式 API。</p>
+</li>
+<li>
+<p>它提供了一个流式 API，同时暴露记录数据和 Neo4j 类型系统，使您能够访问结果中的所有数据以执行映射。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>声明片段与之前完全相同：</p>
+</div>
+<div class="listingblock" id="non-domain-results">
+<div class="title">声明非域类型结果的片段</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Collection;
+
+import org.springframework.data.neo4j.documentation.domain.MovieEntity;
+import org.springframework.transaction.annotation.Transactional;
+
+</span><span class="fold-block">interface NonDomainResults {
+
+    @Transactional(readOnly = true)
+    Collection&lt;Result&gt; findRelationsToMovie(MovieEntity movie); <i class="conum" data-value="1"></i><b>(1)</b>
+
+    class Result {
+
+        <i class="conum" data-value="2"></i><b>(2)</b>
+        public final String name;
+
+        public final String typeOfRelation;
+
+        Result(String name, String typeOfRelation) {
+            this.name = name;
+            this.typeOfRelation = typeOfRelation;
+        }
+
+    }
+
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>这是一个虚构的非领域结果。现实世界中的查询结果可能看起来更复杂。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>此片段添加的方法。同样，该方法使用 Spring 的 <code>@Transactional</code> 注解进行了标注。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>由于缺少该碎片的实现，启动将会失败，因此这里提供如下内容：</p>
+</div>
+<div class="listingblock" id="non-domain-results-impl">
+<div class="title">使用 Neo4jClient 的片段实现</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.Collection;
+
+import org.springframework.data.neo4j.core.Neo4jClient;
+import org.springframework.data.neo4j.documentation.domain.MovieEntity;
+
+</span><span class="fold-block">class NonDomainResultsImpl implements NonDomainResults {
+
+    private final Neo4jClient neo4jClient; <i class="conum" data-value="1"></i><b>(1)</b>
+
+    NonDomainResultsImpl(Neo4jClient neo4jClient) {
+        this.neo4jClient = neo4jClient;
+    }
+
+    @Override
+    public Collection&lt;Result&gt; findRelationsToMovie(MovieEntity movie) {
+        return this.neo4jClient
+            .query("" + "MATCH (people:Person)-[relatedTo]-(:Movie {title: $title}) " + "RETURN people.name AS name, "
+                    + "       Type(relatedTo) as typeOfRelation") <i class="conum" data-value="2"></i><b>(2)</b>
+            .bind(movie.getTitle())
+            .to("title") <i class="conum" data-value="3"></i><b>(3)</b>
+            .fetchAs(Result.class) <i class="conum" data-value="4"></i><b>(4)</b>
+            .mappedBy((typeSystem, record) -&gt; new Result(record.get("name").asString(),
+                    record.get("typeOfRelation").asString())) <i class="conum" data-value="5"></i><b>(5)</b>
+            .all(); <i class="conum" data-value="6"></i><b>(6)</b>
+    }
+
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>此处我们使用由基础设施提供的 <code>Neo4jClient</code>。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>该客户端仅接受字符串输入，但在渲染为字符串时仍可使用 Cypher-DSL。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>将一个单一值绑定到命名参数。此外，还有一个重载方法可用于绑定整个参数映射。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>这是您期望的结果类型。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>最后是 <code>mappedBy</code> 方法，它为结果中的每个条目暴露一个 <code>Record</code>，并在需要时提供驱动器的类型系统。这是您进行自定义映射的 API 接口。</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>整个查询在 Spring 事务上下文中执行，此处为只读事务。</p>
+</div>
+<div class="sect3">
+<h4 id="_low_level_interactions"><a class="anchor" href="#_low_level_interactions"></a>低级交互</h4>
+<div class="paragraph">
+<p>有时您可能需要从存储库执行批量加载，删除整个子图，或以非常特定的方式与 Neo4j Java 驱动程序进行交互。这也是可行的。以下示例展示了如何实现：</p>
+</div>
+<div class="listingblock" id="low-level-interactions">
+<div class="title">使用普通驱动器的碎片</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block">interface LowlevelInteractions {
+
+    int deleteGraph();
+
+}
+
+
+</span><span class="fold-block is-hidden-folded">import org.neo4j.driver.Driver;
+import org.neo4j.driver.Session;
+import org.neo4j.driver.summary.SummaryCounters;
+
+</span><span class="fold-block">class LowlevelInteractionsImpl implements LowlevelInteractions {
+
+    private final Driver driver; <i class="conum" data-value="1"></i><b>(1)</b>
+
+    LowlevelInteractionsImpl(Driver driver) {
+        this.driver = driver;
+    }
+
+    @Override
+    public int deleteGraph() {
+
+        try (Session session = this.driver.session()) {
+            SummaryCounters counters = session.executeWrite(tx -&gt; tx.run("MATCH (n) DETACH DELETE n").consume()) <i class="conum" data-value="2"></i><b>(2)</b>
+                .counters();
+            return counters.nodesDeleted() + counters.relationshipsDeleted();
+        }
+    }
+
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>直接与驱动程序协作。与所有示例一样：无需使用 <code>@Autowired</code> 魔法。所有片段实际上都可以独立进行测试。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>用例是虚构的。此处我们使用由驱动程序管理的事务来删除整个图，并返回被删除节点和关系关系的数量。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>此交互当然不在 Spring 事务中运行，因为驱动程序并不了解 Spring。</p>
+</div>
+<div class="paragraph">
+<p>综上所述，此测试通过：</p>
+</div>
+<div class="listingblock" id="custom-queries-test">
+<div class="title">测试组合后的仓库</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+void customRepositoryFragmentsShouldWork(@Autowired PersonRepository people, @Autowired MovieRepository movies) {
+
+    PersonEntity meg = people.findById("Meg Ryan").get();
+    PersonEntity kevin = people.findById("Kevin Bacon").get();
+
+    List&lt;MovieEntity&gt; moviesBetweenMegAndKevin = movies.findMoviesAlongShortestPath(meg, kevin);
+    assertThat(moviesBetweenMegAndKevin).isNotEmpty();
+
+    Collection&lt;NonDomainResults.Result&gt; relatedPeople = movies
+        .findRelationsToMovie(moviesBetweenMegAndKevin.get(0));
+    assertThat(relatedPeople).isNotEmpty();
+
+    assertThat(movies.deleteGraph()).isGreaterThan(0);
+    assertThat(movies.findAll()).isEmpty();
+    assertThat(people.findAll()).isEmpty();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>最后说明：Spring Data Neo4j 会自动识别所有三个接口和实现，无需进行额外配置。此外，仅通过添加一个额外的片段（即定义所有三个方法的接口）和一个实现类，同样可以创建相同的整体仓储。该实现类将注入所有三个抽象对象（模板、客户端和驱动）。</p>
+</div>
+<div class="paragraph">
+<p>当然，这些内容同样适用于反应式存储库。它们可与 `<code>ReactiveNeo4jTemplate</code>` 和 `<code>ReactiveNeo4jClient</code>` 以及驱动程序提供的反应式会话配合使用。</p>
+</div>
+<div class="paragraph">
+<p>如果您为所有仓库都使用了重复的方法，则可以替换默认的仓库实现。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.custom-base-repositories"><a class="anchor" href="#faq.custom-base-repositories"></a>如何使用自定义的 Spring Data Neo4j 基础仓库？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>基本上与共享的 Spring Data Commons 文档中关于在<a class="xref page" href="repositories/custom-implementations.html#repositories.customize-base-repository">自定义基础仓库</a>中为 Spring Data JPA 展示的方式相同。只是在我们这种情况下，您需要继承自</p>
+</div>
+<div class="listingblock" id="custom-base-repository">
+<div class="title">自定义基础仓库</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static class MyRepositoryImpl&lt;T, ID&gt; extends SimpleNeo4jRepository&lt;T, ID&gt; {
+
+    MyRepositoryImpl(Neo4jOperations neo4jOperations, Neo4jEntityInformation&lt;T, ID&gt; entityInformation) {
+        super(neo4jOperations, entityInformation); <i class="conum" data-value="1"></i><b>(1)</b>
+    }
+
+    @Override
+    public List&lt;T&gt; findAll() {
+        throw new UnsupportedOperationException("This implementation does not support `findAll`");
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>基类需要此签名。获取 <code>Neo4jOperations</code>（即 <code>Neo4jTemplate</code> 的实际规范）和实体信息，并在必要时将其存储到某个属性中。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>在本示例中，我们禁止使用 `findAll` 方法。您可以添加接收获取深度的方法，并基于该深度运行自定义查询。实现方式之一如<a href="#domain-results">DomainResults 片段</a>所示。</p>
+</div>
+<div class="paragraph">
+<p>若要启用所有已声明仓库的基础仓库，请使用以下配置启用 Neo4j 仓库：<code>@EnableNeo4jRepositories(repositoryBaseClass = MyRepositoryImpl.class)</code>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.entities.auditing"><a class="anchor" href="#faq.entities.auditing"></a>如何审计实体？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>支持所有 Spring Data 注解。
+这些是</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.springframework.data.annotation.CreatedBy</code></p>
+</li>
+<li>
+<p><code>org.springframework.data.annotation.CreatedDate</code></p>
+</li>
+<li>
+<p><code>org.springframework.data.annotation.LastModifiedBy</code></p>
+</li>
+<li>
+<p><code>org.springframework.data.annotation.LastModifiedDate</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a class="xref page" href="auditing.html">审计</a> 为您提供在 Spring Data Commons 更广泛背景下使用审计功能的一般视图。
+以下列表展示了 Spring Data Neo4j 提供的所有配置选项：</p>
+</div>
+<div class="listingblock">
+<div class="title">启用和配置 Neo4j 审计功能</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableNeo4jAuditing(modifyOnCreate = false, <i class="conum" data-value="1"></i><b>(1)</b>
+        auditorAwareRef = "auditorProvider", <i class="conum" data-value="2"></i><b>(2)</b>
+        dateTimeProviderRef = "fixedDateTimeProvider" <i class="conum" data-value="3"></i><b>(3)</b>
+)
+class AuditingConfig {
+
+    @Bean
+    AuditorAware&lt;String&gt; auditorProvider() {
+        return () -&gt; Optional.of("A user");
+    }
+
+    @Bean
+    DateTimeProvider fixedDateTimeProvider() {
+        return () -&gt; Optional.of(AuditingITBase.DEFAULT_CREATION_AND_MODIFICATION_DATE);
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>如果希望创建时同时写入修改数据，则设置为 true</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>使用此属性指定提供审计器（即用户名）的 Bean 名称</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>使用此属性指定提供当前日期的 Bean 名称。在此情况下，将使用固定日期，因为上述配置是我们测试的一部分</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>反应式版本基本相同，唯一的区别在于审计器感知 Bean 的类型为 `<code>ReactiveAuditorAware</code>`，因此审计器的获取是响应式流程的一部分。</p>
+</div>
+<div class="paragraph">
+<p>除了上述审计机制外，您还可以向上下文中添加任意数量的实现 `<code>BeforeBindCallback&lt;T&gt;</code>` 或 `<code>ReactiveBeforeBindCallback&lt;T&gt;</code>` 的 Bean。Spring Data Neo4j 将自动拾取这些 Bean，并在实体持久化之前按顺序调用它们（如果它们实现了 `<code>Ordered</code>` 接口或标注了 `<code>@Order</code>`）。</p>
+</div>
+<div class="paragraph">
+<p>它们可以修改该实体，或者返回一个全新的实体。  
+以下示例向上下文添加了一个回调，在实体持久化之前更改其一个属性：</p>
+</div>
+<div class="listingblock">
+<div class="title">保存前修改实体</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import java.util.UUID;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.neo4j.core.mapping.callback.AfterConvertCallback;
+import org.springframework.data.neo4j.core.mapping.callback.BeforeBindCallback;
+import org.springframework.data.neo4j.integration.shared.common.ThingWithAssignedId;
+
+</span><span class="fold-block">@Configuration
+class CallbacksConfig {
+
+    @Bean
+    BeforeBindCallback&lt;ThingWithAssignedId&gt; nameChanger() {
+        return entity -&gt; {
+            ThingWithAssignedId updatedThing = new ThingWithAssignedId(entity.getTheId(),
+                    entity.getName() + " (Edited)");
+            return updatedThing;
+        };
+    }
+
+    @Bean
+    AfterConvertCallback&lt;ThingWithAssignedId&gt; randomValueAssigner() {
+        return (entity, definition, source) -&gt; {
+            entity.setRandomValue(UUID.randomUUID().toString());
+            return entity;
+        };
+    }
+
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>无需额外配置。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.find-by-example"><a class="anchor" href="#faq.find-by-example"></a>如何使用“按示例查找”？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>"Find by Example" 是 SDN 的一项新功能。  
+您可以实例化一个实体，或使用现有的实体。  
+通过该实例，您可以创建一个 `<code>org.springframework.data.domain.Example</code>` 对象。  
+如果您的仓库扩展了 `<code>org.springframework.data.neo4j.repository.Neo4jRepository</code>` 或 `<code>org.springframework.data.neo4j.repository.ReactiveNeo4jRepository</code>`，则可以立即使用可用的接受示例参数的 `<code>findBy</code>` 方法，如下所示：<a href="#find-by-example-example">findByExample</a>。</p>
+</div>
+<div class="listingblock" id="find-by-example-example">
+<div class="title">通过示例查找</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Example&lt;MovieEntity&gt; movieExample = Example.of(new MovieEntity("The Matrix", null));
+Flux&lt;MovieEntity&gt; movies = this.movieRepository.findAll(movieExample);
+
+movieExample = Example.of(
+    new MovieEntity("Matrix", null),
+    ExampleMatcher
+        .matchingAny()
+        .withMatcher(
+            "title",
+            ExampleMatcher.GenericPropertyMatcher.of(ExampleMatcher.StringMatcher.CONTAINING)
+        )
+);
+movies = this.movieRepository.findAll(movieExample);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您还可以否定单个属性。这将添加适当的 `<code>NOT</code>` 操作，从而将 `<code>=</code>` 转换为 `<code>&lt;&gt;</code>`。  
+支持所有标量数据类型和所有字符串运算符：</p>
+</div>
+<div class="listingblock" id="find-by-example-example-with-negated-properties">
+<div class="title">使用否定值的 findByExample</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Example&lt;MovieEntity&gt; movieExample = Example.of(
+    new MovieEntity("Matrix", null),
+    ExampleMatcher
+        .matchingAny()
+        .withMatcher(
+            "title",
+            ExampleMatcher.GenericPropertyMatcher.of(ExampleMatcher.StringMatcher.CONTAINING)
+        )
+       .withTransformer("title", Neo4jPropertyValueTransformers.notMatching())
+);
+Flux&lt;MovieEntity&gt; allMoviesThatNotContainMatrix = this.movieRepository.findAll(movieExample);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq.spring-boot.sdn"><a class="anchor" href="#faq.spring-boot.sdn"></a>使用 Spring Data Neo4j 是否需要 Spring Boot？</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>不，您不必如此。
+虽然通过 Spring Boot 自动配置许多 Spring 切面可以省去大量手动繁琐的工作，并且是设置新 Spring 项目的推荐方式，但您并不一定要使用这种方法。</p>
+</div>
+<div class="paragraph">
+<p>上述解决方案需要以下依赖项：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.springframework.data&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-data-neo4j&lt;/artifactId&gt;
+	&lt;version&gt;8.1.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Gradle 配置的坐标也相同。</p>
+</div>
+<div class="paragraph">
+<p>若要选择不同的数据库（无论是静态还是动态），您可以按照<a href="#faq.multidatabase">Neo4j 4 支持多个数据库 - 如何使用它们？</a>中的说明，添加一个类型为<code>DatabaseSelectionProvider</code>的 Bean。  
+对于响应式场景，我们提供了<code>ReactiveDatabaseSelectionProvider</code>。</p>
+</div>
+<div class="sect2">
+<h3 id="faq.sdn-without-spring-boot"><a class="anchor" href="#faq.sdn-without-spring-boot"></a>在无需 Spring Boot 的 Spring 上下文中使用 Spring Data Neo4j</h3>
+<div class="paragraph">
+<p>我们提供两个抽象配置类以支持您引入所需的 Bean：用于命令式数据库访问的<code>org.springframework.data.neo4j.config.AbstractNeo4jConfig</code>和用于响应式版本的<code>org.springframework.data.neo4j.config.AbstractReactiveNeo4jConfig</code>。它们分别旨在与<code>@EnableNeo4jRepositories</code>和<code>@EnableReactiveNeo4jRepositories</code>配合使用。有关示例用法，请参阅<a href="#bootless-imperative-configuration">为命令式数据库访问启用 Spring Data Neo4j 基础设施</a>和<a href="#bootless-reactive-configuration">为响应式数据库访问启用 Spring Data Neo4j 基础设施</a>。这两个类都要求您重写<code>driver()</code>方法，在该方法中创建驱动。</p>
+</div>
+<div class="paragraph">
+<p>要获取<a class="xref page" href="appendix/neo4j-client.html#neo4j-client">Neo4j 客户端</a>的强制版本以及用于强制存储库的模板和支持，请使用如下所示的类似内容：</p>
+</div>
+<div class="listingblock" id="bootless-imperative-configuration">
+<div class="title">启用 Spring Data Neo4j 的基础设施以支持命令式数据库访问</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.neo4j.driver.Driver;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import org.springframework.data.neo4j.config.AbstractNeo4jConfig;
+import org.springframework.data.neo4j.core.DatabaseSelectionProvider;
+import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
+
+</span><span class="fold-block">@Configuration
+@EnableNeo4jRepositories
+@EnableTransactionManagement
+class MyConfiguration extends AbstractNeo4jConfig {
+
+    @Override @Bean
+    public Driver driver() { <i class="conum" data-value="1"></i><b>(1)</b>
+        return GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "secret"));
+    }
+
+    @Override
+    protected Collection&lt;String&gt; getMappingBasePackages() {
+        return Collections.singletonList(Person.class.getPackage().getName());
+    }
+
+    @Override @Bean <i class="conum" data-value="2"></i><b>(2)</b>
+    protected DatabaseSelectionProvider databaseSelectionProvider() {
+
+        return DatabaseSelectionProvider.createStaticDatabaseSelectionProvider("yourDatabase");
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>需要配置驱动 Bean。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>此步骤静态选择名为 <code>yourDatabase</code> 的数据库，且为<strong>可选</strong>。</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>以下列表提供了反应式的 Neo4j 客户端和模板，支持反应式事务管理，并能发现与 Neo4j 相关的仓库：</p>
+</div>
+<div class="listingblock" id="bootless-reactive-configuration">
+<div class="title">启用 Spring Data Neo4j 的基础设施以支持反应式数据库访问</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.neo4j.driver.Driver;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.neo4j.config.AbstractReactiveNeo4jConfig;
+import org.springframework.data.neo4j.repository.config.EnableReactiveNeo4jRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+</span><span class="fold-block">@Configuration
+@EnableReactiveNeo4jRepositories
+@EnableTransactionManagement
+class MyConfiguration extends AbstractReactiveNeo4jConfig {
+
+    @Bean
+    @Override
+    public Driver driver() {
+        return GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "secret"));
+    }
+
+    @Override
+    protected Collection&lt;String&gt; getMappingBasePackages() {
+        return Collections.singletonList(Person.class.getPackage().getName());
+    }
+}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="faq.sdn-in-cdi-2.0"><a class="anchor" href="#faq.sdn-in-cdi-2.0"></a>在 CDI 2.0 环境中使用 Spring Data Neo4j</h3>
+<div class="paragraph">
+<p>为方便起见，我们提供了带有<code>Neo4jCdiExtension</code>的 CDI 扩展。
+当在兼容的 CDI 2.0 容器中运行时，它将通过<a href="https://docs.oracle.com/javase/tutorial/ext/basics/spi.html">Java 的服务加载器 SPI</a>自动注册并加载。</p>
+</div>
+<div class="paragraph">
+<p>您需要在应用程序中引入的唯一内容是一个能够生成 Neo4j Java 驱动程序的注解类型：</p>
+</div>
+<div class="listingblock" id="cdi-driver-producer">
+<div class="title">Neo4j Java Driver 的 CDI 生产者</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Disposes;
+import javax.enterprise.inject.Produces;
+
+import org.neo4j.driver.AuthTokens;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.GraphDatabase;
+
+</span><span class="fold-block">public class Neo4jConfig {
+
+    @Produces @ApplicationScoped
+    public Driver driver() { <i class="conum" data-value="1"></i><b>(1)</b>
+        return GraphDatabase
+            .driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "secret"));
+    }
+
+    public void close(@Disposes Driver driver) {
+        driver.close();
+    }
+
+    @Produces @Singleton
+    public DatabaseSelectionProvider getDatabaseSelectionProvider() { <i class="conum" data-value="2"></i><b>(2)</b>
+        return DatabaseSelectionProvider.createStaticDatabaseSelectionProvider("yourDatabase");
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>与在<a href="#bootless-imperative-configuration">为命令式数据库访问启用 Spring Data Neo4j 基础设施</a>中的普通 Spring 配置相同，但添加了相应的 CDI 基础设施注解。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>这是<strong>可选的</strong>。但是，如果您运行自定义数据库选择提供者，则<span style="text-decoration: underline;">必须</span>不要为该 Bean 指定限定符。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>如果您正在运行在 SE 容器中（例如 Weld 提供的容器），您可以像这样启用该扩展：</p>
+</div>
+<div class="listingblock" id="cdi-driver-producer-se">
+<div class="title">在 SE 容器中启用 Neo4j CDI 扩展</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import javax.enterprise.inject.se.SeContainer;
+import javax.enterprise.inject.se.SeContainerInitializer;
+
+import org.springframework.data.neo4j.config.Neo4jCdiExtension;
+
+</span><span class="fold-block">public class SomeClass {
+    void someMethod() {
+        try (SeContainer container = SeContainerInitializer.newInstance()
+                .disableDiscovery()
+                .addExtensions(Neo4jCdiExtension.class)
+                .addBeanClasses(YourDriverFactory.class)
+                .addPackages(Package.getPackage("your.domain.package"))
+            .initialize()
+        ) {
+            SomeRepository someRepository = container.select(SomeRepository.class).get();
+        }
+    }
+}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-versions">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-versions-content">
+              <button class="modal-versions-close" data-micromodal-close="">
+                <svg height="28px" viewbox="0 0 32 32" width="28px" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title></title><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"></line><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"></line></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left"><ul class="nav-versions">
+<li class="component">
+<a class="title" href="data-commons/index.html">Spring Data Commons</a>
+<ul class="versions">
+<li class="version is-latest">
+<a href="data-commons/index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="component is-current">
+<a class="title" href="index.html">Spring Data Neo4j</a>
+<ul class="versions">
+<li class="version is-current is-latest">
+<a href="index.html">
+                            8.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+</ul></div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>相关 Spring 文档<ul class="projects-list">
+        <li><a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a></li>
+        <li><a href="https://docs.spring.io/spring-framework/reference/">
+  Spring 框架
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Cloud
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Data
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a></li>
+        <li><a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a></li>
+        <li><a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a></li>
+        <li><a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a></li>
+        <li><a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a></li>
+        <li><a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a></li>
+        <li><a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a></li>
+    </ul>
+  </li><a href="spring-projects.html">所有文档...</a>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img alt="Spring" id="springlogo" src="./_/img/spring-logo.svg"/>
+        <p class="smallest antialiased">版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href="https://www.vmware.com/help/legal.html">使用条款</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">隐私政策</a> • <a href="https://spring.io/trademarks">商标指南</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">致谢</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">您的加州隐私权利</a> • <a class="ot-sdk-show-settings">Cookie 设置</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS”和“Amazon Web Services"是 Amazon.com Inc. 及其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。</p>
+    </div>
+    <div class="flex jc-between" id="social-icons">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" data-name="Twitter" id="Twitter-2"></path></svg></a>
+    </div>
+</footer>
+<script src="./_/js/vendor/import.js"></script>
+<script src="./_/js/site.js"></script>
+<script async="" src="./_/js/vendor/highlight.js"></script>
+<script async="" data-sync-storage-key="docs:preferred-tab" src="./_/js/vendor/asciidoctor-tabs.js"></script>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box"><a class="search-link" href="search.html">在 Spring 文档中搜索</a></div>
+                <div class="search-by">
+                    <a aria-label="Search by Algolia" href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
+                        <img class="light" src="./_/img/algolia-light.svg" width="140"/>
+                        <img class="dark" src="./_/img/algolia-dark.svg" width="140"/>
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js"></script>
+<script async="" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-app-id="WB1FQYI187" data-index-name="springdocs" data-page-component="data-neo4j" data-page-version="8.1.0" data-stylesheet="./_/css/vendor/search.css" id="search-script" src="./_/js/vendor/search.js"></script>
+  
+
+</body></html>

@@ -1,0 +1,296 @@
+{
+  "created_at": "2026-06-16 10:01:24",
+  "updated_at": "2026-06-16 10:01:24",
+  "stats": {
+    "total_entries": 56,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 69,
+    "entries_with_hits": 56,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2321428571428572,
+    "usage_percentage": 0.0056
+  },
+  "items": [
+    {
+      "source": "Syntax sugar to create a <a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\"><code>PropertyReference</code></a> from a method reference to a Java beans property.",
+      "translation": "用于从 Java Bean 的属性方法引用创建<a href=\"PropertyReference.html\" title=\"org.springframework.data.core 中的接口\"><code>PropertyReference</code></a>的语法糖。",
+      "count": 3
+    },
+    {
+      "source": "Extend the property to a property path by appending the <code>next</code> path segment and return a new property path\ninstance.",
+      "translation": "将属性扩展为属性路径，通过追加<code>next</code>路径段，并返回一个新的属性路径实例。",
+      "count": 3
+    },
+    {
+      "source": "Syntax sugar to create a",
+      "translation": "用于创建语法糖的",
+      "count": 3
+    },
+    {
+      "source": "This method returns a resolved <a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\"><code>PropertyReference</code></a> by introspecting the given method reference.",
+      "translation": "此方法通过内省给定的方法引用，返回一个解析后的 <a href=\"PropertyReference.html\" title=\"org.springframework.data.core 中的接口\"><code>PropertyReference</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get the property value for the given object.",
+      "translation": "获取给定对象的属性值。",
+      "count": 2
+    },
+    {
+      "source": "Returns the name of the property.",
+      "translation": "返回属性的名称。",
+      "count": 2
+    },
+    {
+      "source": "Returns the owning type of the referenced property.",
+      "translation": "返回所引用属性的拥有类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the type information for the property at this segment.",
+      "translation": "返回此段属性上的类型信息。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the property is a collection.",
+      "translation": "返回该属性是否为集合。",
+      "count": 2
+    },
+    {
+      "source": "from a method reference to a Java beans property.",
+      "translation": "从方法引用到 JavaBean 属性。",
+      "count": 2
+    },
+    {
+      "source": "This method returns a resolved <a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\"><code>PropertyReference</code></a> by introspecting the given method reference. Note that\n<a href=\"#get(T)\"><code>get(Object)</code></a> becomes unusable for collection properties as the property type adapted from\n<code>Iterable &amp;lt;P&amp;gt;</code> and a single <code>P</code> cannot represent a collection of items.",
+      "translation": "该方法通过内省给定的方法引用，返回一个解析后的<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\"><code>PropertyReference</code></a>。请注意，<a href=\"#get(T)\"><code>get(Object)</code></a>对于集合属性将变得不可用，因为从<code>Iterable &amp;lt;P&amp;gt;</code>适配的属性类型与单个<code>P</code>无法表示项目集合。",
+      "count": 1
+    },
+    {
+      "source": "Note that <a href=\"#get(T)\"><code>get(Object)</code></a> becomes unusable for collection properties as the property type adapted from\n<code>Iterable &amp;lt;P&amp;gt;</code> and a single <code>P</code> cannot represent a collection of items.",
+      "translation": "请注意，由于从 `<code>Iterable &amp;lt;P&amp;gt;</code>` 适配的属性类型与单个 `<code>P</code>` 无法代表项目集合，因此 `<a href=\"#get(T)\"><code>get(Object)</code></a>` 对于集合属性将变得不可用。",
+      "count": 1
+    },
+    {
+      "source": "The generic type parameters preserve type information across the property path chain: <code>T</code> represents the owning\ntype of the current segment (or the root type for composed paths), while <code>P</code> represents the property value type\nat this segment. Composition automatically flows type information forward, ensuring that <code>then()</code> preserves the\nfull chain's type safety.",
+      "translation": "泛型类型参数在属性路径链中保留类型信息：<code>T</code> 表示当前段（或组合路径的根）的所有者类型，而 <code>P</code> 表示该段的属性值类型。组合会自动将类型信息向前传递，确保 <code>then()</code> 保持整个链的类型安全性。",
+      "count": 1
+    },
+    {
+      "source": "Implement <code>PropertyReference</code> using method references (strongly recommended) or lambdas that directly access a\nproperty getter. Constructor references, method calls with parameters, and complex expressions are not supported and\nresult in <a href=\"PropertyResolutionException.html\" title=\"class in org.springframework.data.core\"><code>PropertyResolutionException</code></a>. Unlike method references, introspection of lambda expressions requires\nbytecode analysis of the declaration site classes and thus depends on their availability at runtime.",
+      "translation": "使用直接访问属性获取器的方法引用（强烈推荐）或 lambda 表达式来实现 <code>PropertyReference</code>。不支持构造函数引用、带参数的方法调用以及复杂表达式，这些会导致抛出 <a href=\"PropertyResolutionException.html\" title=\"class in org.springframework.data.core\"><code>PropertyResolutionException</code></a>。与直接的方法引用不同，lambda 表达式的内省需要对其声明位置类的字节码进行分析，因此依赖于这些类在运行时的可用性。",
+      "count": 1
+    },
+    {
+      "source": "Create a typed property reference using the static factory method <a href=\"#property(org.springframework.data.core.PropertyReference)\"><code>property(PropertyReference)</code></a> with a method\nreference, for example:",
+      "translation": "使用静态工厂方法 <a href=\"#property(org.springframework.data.core.PropertyReference)\"><code>property(PropertyReference)</code></a> 创建一个类型化的属性引用，并配合方法引用，例如：",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "This functional interface is typically implemented through method references that allow for compile-time type safety\nand refactoring support. Instead of string-based property names that are easy to miss when changing the domain model,\n<code>PropertyReference</code> leverages Java's declarative method references to ensure type-safe property access.",
+      "translation": "该功能接口通常通过方法引用来实现，从而支持编译时的类型安全和重构。与在修改领域模型时容易遗漏的基于字符串的属性名称不同，<code>PropertyReference</code> 利用 Java 的声明式方法引用，确保属性访问的类型安全。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">default</span> <span class=\"type-parameters\">&lt;N extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>\n<span class=\"return-type\"><a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\">TypedPropertyPath</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in PropertyReference\">T</a>,<wbr/>N&gt;</span> <span class=\"element-name\">then</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in PropertyReference\">P</a>,<wbr/>N&gt; next)</span>",
+      "translation": "<span class=\"modifiers\">default</span> <span class=\"type-parameters\">&lt;N extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>\n<span class=\"return-type\"><a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\">TypedPropertyPath</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in PropertyReference\">T</a>,<wbr/>N&gt;</span> <span class=\"element-name\">then</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in PropertyReference\">P</a>,<wbr/>N&gt; next)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">default</span> <span class=\"type-parameters\">&lt;N extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>\n<span class=\"return-type\"><a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\">TypedPropertyPath</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in PropertyReference\">T</a>,<wbr/>N&gt;</span> <span class=\"element-name\">thenMany</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in PropertyReference\">P</a>, ? extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\">Iterable</a>&lt;N&gt;&gt; next)</span>",
+      "translation": "<span class=\"modifiers\">default</span> <span class=\"type-parameters\">&lt;N extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>\n<span class=\"return-type\"><a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\">TypedPropertyPath</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in PropertyReference\">T</a>,<wbr/>N&gt;</span> <span class=\"element-name\">thenMany</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in PropertyReference\">P</a>, ? extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\">Iterable</a>&lt;N&gt;&gt; next)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">static</span> <span class=\"type-parameters\">&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt;</span> <span class=\"element-name\">property</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt; property)</span>",
+      "translation": "```html\n<span class=\"modifiers\">static</span> <span class=\"type-parameters\">&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span><br/>\n<span class=\"return-type\"><a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt;</span> <span class=\"element-name\">property</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt; property)</span>\n```",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">static</span> <span class=\"type-parameters\">&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt;</span> <span class=\"element-name\">of</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt; property)</span>",
+      "translation": "```html\n<span class=\"modifiers\">static</span> <span class=\"type-parameters\">&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span><br/>\n<span class=\"return-type\"><a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt;</span> <span class=\"element-name\">of</span><wbr/><span class=\"parameters\">(<a href=\"PropertyReference.html\" title=\"interface in org.springframework.data.core\">PropertyReference</a>&lt;T,<wbr/>P&gt; property)</span>\n```",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"class or interface in java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">PropertyReference&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html\" title=\"class or interface in java.io\">Serializable</a></span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"类或接口在 java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">PropertyReference&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"类或接口在 java.lang\">Object</a>&gt;</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html\" title=\"类或接口在 java.io\">Serializable</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Default Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">默认方法</button>",
+      "count": 1
+    },
+    {
+      "source": "Returns the actual type of the property at this segment. Will return the plain resolved type for simple properties,\nthe component type for any <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> or the value type of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> properties.",
+      "translation": "返回此段属性上的实际类型。对于简单属性，将返回解析后的基本类型；对于任何 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 属性的值类型，将返回组件类型。",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface PropertyReference\">Interface PropertyReference&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 PropertyReference\">接口 PropertyReference&lt;T, P extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a>&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Core",
+      "translation": "Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "Returns the actual type of the property at this segment.",
+      "translation": "返回此段中属性的实际类型。",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#property(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">property(PropertyReference)</a></li>\n<li><a href=\"#of(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">of(PropertyReference)</a></li>\n<li><a href=\"#ofMany(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">ofMany(PropertyReference)</a></li>\n<li><a href=\"#get(T)\" tabindex=\"0\">get(T)</a></li>\n<li><a href=\"#getOwningType()\" tabindex=\"0\">getOwningType()</a></li>\n<li><a href=\"#getName()\" tabindex=\"0\">getName()</a></li>\n<li><a href=\"#getType()\" tabindex=\"0\">getType()</a></li>\n<li><a href=\"#getTypeInformation()\" tabindex=\"0\">getTypeInformation()</a></li>\n<li><a href=\"#isCollection()\" tabindex=\"0\">isCollection()</a></li>\n<li><a href=\"#then(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">then(PropertyReference)</a></li>\n<li><a href=\"#thenMany(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">thenMany(PropertyReference)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#property(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">property(PropertyReference)</a></li>\n<li><a href=\"#of(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">of(PropertyReference)</a></li>\n<li><a href=\"#ofMany(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">ofMany(PropertyReference)</a></li>\n<li><a href=\"#get(T)\" tabindex=\"0\">get(T)</a></li>\n<li><a href=\"#getOwningType()\" tabindex=\"0\">getOwningType()</a></li>\n<li><a href=\"#getName()\" tabindex=\"0\">getName()</a></li>\n<li><a href=\"#getType()\" tabindex=\"0\">getType()</a></li>\n<li><a href=\"#getTypeInformation()\" tabindex=\"0\">getTypeInformation()</a></li>\n<li><a href=\"#isCollection()\" tabindex=\"0\">isCollection()</a></li>\n<li><a href=\"#then(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">then(PropertyReference)</a></li>\n<li><a href=\"#thenMany(org.springframework.data.core.PropertyReference)\" tabindex=\"0\">thenMany(PropertyReference)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>4.1</dd>\n<dt>Author:</dt>\n<dd>Mark Paluch</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"#property(org.springframework.data.core.PropertyReference)\"><code>property(PropertyReference)</code></a></li>\n<li><a href=\"#then(org.springframework.data.core.PropertyReference)\"><code>then(PropertyReference)</code></a></li>\n<li><a href=\"#of(org.springframework.data.core.PropertyReference)\"><code>of(PropertyReference)</code></a></li>\n<li><a href=\"#ofMany(org.springframework.data.core.PropertyReference)\"><code>ofMany(PropertyReference)</code></a></li>\n<li><a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyDescriptor.html\" title=\"class or interface in java.beans\"><code>PropertyDescriptor</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>版本:</dt>\n<dd>4.1</dd>\n<dt>作者:</dt>\n<dd>Mark Paluch</dd>\n<dt>参见:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"#property(org.springframework.data.core.PropertyReference)\"><code>property(PropertyReference)</code></a></li>\n<li><a href=\"#then(org.springframework.data.core.PropertyReference)\"><code>then(PropertyReference)</code></a></li>\n<li><a href=\"#of(org.springframework.data.core.PropertyReference)\"><code>of(PropertyReference)</code></a></li>\n<li><a href=\"#ofMany(org.springframework.data.core.PropertyReference)\"><code>ofMany(PropertyReference)</code></a></li>\n<li><a href=\"TypedPropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>TypedPropertyPath</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyDescriptor.html\" title=\"java.beans 中的类或接口\"><code>PropertyDescriptor</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"property(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - owning type.</span></dd>\n<dd><span id=\"property(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - property type.</span></dd>\n<dt>Parameters:</dt>\n<dd><code>property</code> - the method reference to a Java beans property.</dd>\n<dt>Returns:</dt>\n<dd>the typed property reference.</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"property(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - 拥有类型。</span></dd>\n<dd><span id=\"property(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - 属性类型。</span></dd>\n<dt>参数：</dt>\n<dd><code>property</code> - 指向 JavaBean 属性的方法引用。</dd>\n<dt>返回：</dt>\n<dd>带类型的属性引用。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"of(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - owning type.</span></dd>\n<dd><span id=\"of(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - property type.</span></dd>\n<dt>Parameters:</dt>\n<dd><code>property</code> - the method reference to a Java beans property.</dd>\n<dt>Returns:</dt>\n<dd>the typed property reference.</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"of(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - 拥有类型。</span></dd>\n<dd><span id=\"of(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - 属性类型。</span></dd>\n<dt>参数：</dt>\n<dd><code>property</code> - 指向 Java Bean 属性的方法引用。</dd>\n<dt>返回：</dt>\n<dd>带类型的属性引用。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"ofMany(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - owning type.</span></dd>\n<dd><span id=\"ofMany(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - property type.</span></dd>\n<dt>Parameters:</dt>\n<dd><code>property</code> - the method reference to a Java beans property.</dd>\n<dt>Returns:</dt>\n<dd>the typed property reference.</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"ofMany(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - 拥有类型。</span></dd>\n<dd><span id=\"ofMany(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - 属性类型。</span></dd>\n<dt>参数：</dt>\n<dd><code>property</code> - 指向 Java Bean 属性的方法引用。</dd>\n<dt>返回：</dt>\n<dd>带类型的属性引用。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"then(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - the new property value type.</span></dd>\n<dt>Parameters:</dt>\n<dd><code>next</code> - the next property path segment as method reference accepting the owner object <code>P</code> type and\n         returning <code>N</code> as result of accessing the property.</dd>\n<dt>Returns:</dt>\n<dd>a new composed <code>TypedPropertyPath</code>.</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"then(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - 新属性值的类型。</span></dd>\n<dt>参数：</dt>\n<dd><code>next</code> - 作为方法引用的下一个属性路径段，该方法接受所有者对象 <code>P</code> 类型作为输入，并返回访问属性后的结果 <code>N</code>。</dd>\n<dt>返回值：</dt>\n<dd>一个新的组合 <code>TypedPropertyPath</code>。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"thenMany(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - the new property value type.</span></dd>\n<dt>Parameters:</dt>\n<dd><code>next</code> - the next property path segment as method reference accepting the owner object <code>P</code> type and\n         returning <code>N</code> as result of accessing the property.</dd>\n<dt>Returns:</dt>\n<dd>a new composed <code>TypedPropertyPath</code>.</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"thenMany(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - 新属性值的类型。</span></dd>\n<dt>参数：</dt>\n<dd><code>next</code> - 作为方法引用的下一个属性路径段，该方法接受所有者对象 <code>P</code> 类型，并返回访问属性后的结果 <code>N</code>。</dd>\n<dt>返回：</dt>\n<dd>一个新的组合 <code>TypedPropertyPath</code>。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the actual type of the property.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getTypeInformation()\"><code>getTypeInformation()</code></a></li>\n<li><a href=\"TypeInformation.html#getRequiredActualType()\"><code>TypeInformation.getRequiredActualType()</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>属性的实际类型。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getTypeInformation()\"><code>getTypeInformation()</code></a></li>\n<li><a href=\"TypeInformation.html#getRequiredActualType()\"><code>TypeInformation.getRequiredActualType()</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>true if the property is a collection.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getTypeInformation()\"><code>getTypeInformation()</code></a></li>\n<li><a href=\"TypeInformation.html#isCollectionLike()\"><code>TypeInformation.isCollectionLike()</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>如果该属性是集合，则返回 true。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getTypeInformation()\"><code>getTypeInformation()</code></a></li>\n<li><a href=\"TypeInformation.html#isCollectionLike()\"><code>TypeInformation.isCollectionLike()</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - the owning type of this property.</span></dd>\n<dd><span id=\"type-param-P\"><code>P</code> - the property value type.</span></dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - 此属性的拥有类型。</span></dd>\n<dd><span id=\"type-param-P\"><code>P</code> - 属性值的类型。</span></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>obj</code> - the object to get the property value from.</dd>\n<dt>Returns:</dt>\n<dd>the property value.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>obj</code> - 要获取属性值的对象。</dd>\n<dt>返回值：</dt>\n<dd>属性值。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Superinterfaces:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html\" title=\"class or interface in java.io\">Serializable</a></code></dd>",
+      "translation": "<dt>所有超级接口：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html\" title=\"java.io 中的类或接口\">Serializable</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Functional Interface:</dt>\n<dd>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</dd>",
+      "translation": "<dt>功能接口：</dt>\n<dd>这是一个功能接口，因此可以作为 Lambda 表达式或方法引用的赋值目标。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the owningType will never be null.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>owningType 永远不会为 null。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the current property name.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>当前属性名称。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the type information for the property at this segment.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>该段属性类型信息。</dd>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Interface providing type-safe property references.",
+      "translation": "提供类型安全的属性引用的接口。",
+      "count": 1
+    },
+    {
+      "source": "The resulting object can be used to obtain the",
+      "translation": "生成的对象可用于获取",
+      "count": 1
+    },
+    {
+      "source": "and to interact with the target\nproperty. Typed references can be used to compose",
+      "translation": "并与目标属性进行交互。类型化的引用可用于组合",
+      "count": 1
+    },
+    {
+      "source": "to navigate nested object\nstructures using",
+      "translation": "使用...导航嵌套对象结构",
+      "count": 1
+    },
+    {
+      "source": "from a method reference to a Java beans property. Suitable for\nstatic imports.",
+      "translation": "从方法引用到 Java Bean 属性的映射。适用于静态导入。",
+      "count": 1
+    },
+    {
+      "source": "Extend the property to a property path by appending the",
+      "translation": "将属性扩展为属性路径，通过追加",
+      "count": 1
+    },
+    {
+      "source": "path segment and return a new property path\ninstance.",
+      "translation": "路径段并返回一个新的属性路径实例。",
+      "count": 1
+    }
+  ]
+}

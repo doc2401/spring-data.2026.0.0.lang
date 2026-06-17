@@ -1,0 +1,346 @@
+{
+  "created_at": "2026-06-17 12:04:50",
+  "updated_at": "2026-06-17 12:04:50",
+  "stats": {
+    "total_entries": 66,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 66,
+    "entries_with_hits": 66,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.006600000000000001
+  },
+  "items": [
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date();document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "<code>path = \"people\"</code> changed the value in <code>href</code> from <code>/persons</code> to <code>/people</code>.",
+      "translation": "`path = \"people\"` 将 `<code>href</code>` 中的值从 `/persons` 更改为 `/people`。",
+      "count": 1
+    },
+    {
+      "source": "You may not want a certain repository, a query method on a repository, or a field of your entity to be exported at all. Examples include hiding fields like <code>password</code> on a <code>User</code> object and similar sensitive data. To tell the exporter to not export these items, annotate them with <code>@RestResource</code> and set <code>exported = false</code>.",
+      "translation": "您可能不希望导出某个仓库、仓库上的查询方法或实体字段。例如，需要隐藏<code>User</code>对象上的<code>password</code>字段以及其他类似敏感数据。若要指示导出器不导出这些项，请使用<code>@RestResource</code>注解进行标记，并将<code>exported</code>设置为<code>false</code>。",
+      "count": 1
+    },
+    {
+      "source": "To change the <code>rel</code> value, use the <code>rel</code> property on the <code>@RestResource</code> annotation, as the following example shows:",
+      "translation": "要更改 `<code>rel</code>` 值，请使用 `<code>@RestResource</code>` 注解上的 `<code>rel</code>` 属性，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "<code>rel = \"people\"</code> changed the name of that link from <code>persons</code> to <code>people</code>.",
+      "translation": "<code>rel=\"people\"</code> 将该链接的名称从 <code>persons</code> 更改为 <code>people</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>rel = \"names\"</code> changes the name of that link from <code>findByNames</code> to <code>names</code>.",
+      "translation": "将 `rel` 属性设置为 `\"names\"` 会将该链接的名称从 `findByNames` 更改为 `names`。",
+      "count": 1
+    },
+    {
+      "source": "If you do not want to expose a save or delete method on your <code>CrudRepository</code>, you can use the <code>@RestResource(exported = false)</code> setting by overriding the method you want to turn off and placing the annotation on the overridden version. For example, to prevent HTTP users from invoking the delete methods of <code>CrudRepository</code>, override all of them and add the annotation to the overridden methods, as follows:",
+      "translation": "如果您不想在 <code>CrudRepository</code> 上暴露保存或删除方法，可以通过覆盖您希望禁用的方法并将 <code>@RestResource(exported = false)</code> 注解添加到覆盖版本上来实现。例如，若要防止 HTTP 用户调用 <code>CrudRepository</code> 的删除方法，请覆盖所有相关方法并为这些覆盖的方法添加该注解，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "By default, the exporter exposes your <code>CrudRepository</code> by using the name of the domain class. Spring Data REST also applies the <a href=\"https://github.com/atteo/evo-inflector\">Evo Inflector</a> to pluralize this word. Consider the following repository definition:",
+      "translation": "默认情况下，导出器使用领域类的名称来暴露您的 `<code>CrudRepository</code>`。Spring Data REST 还会应用 <a href=\"https://github.com/atteo/evo-inflector\">Evo Inflector</a> 将该词复数化。考虑以下存储库定义：",
+      "count": 1
+    },
+    {
+      "source": "The repository defined by the preceding example is exposed at <code><a class=\"bare\" href=\"http://localhost:8080/persons/\">localhost:8080/persons/</a></code>.",
+      "translation": "由前述示例定义的仓库在 <code><a class=\"bare\" href=\"http://localhost:8080/persons/\">localhost:8080/persons/</a></code> 处公开。",
+      "count": 1
+    },
+    {
+      "source": "The repository defined by the preceding example is accessible at <code><a class=\"bare\" href=\"http://localhost:8080/people/\">localhost:8080/people/</a></code>.",
+      "translation": "由前述示例定义的仓库可在 <code><a class=\"bare\" href=\"http://localhost:8080/people/\">localhost:8080/people/</a></code> 访问。",
+      "count": 1
+    },
+    {
+      "source": "The method in the preceding example is exposed at <code><a class=\"bare\" href=\"http://localhost:8080/persons/search/findByName\">localhost:8080/persons/search/findByName</a></code>.",
+      "translation": "前例中的方法暴露于 <code><a class=\"bare\" href=\"http://localhost:8080/persons/search/findByName\">localhost:8080/persons/search/findByName</a></code>。",
+      "count": 1
+    },
+    {
+      "source": "Now the query method in the preceding example is exposed at <code><a class=\"bare\" href=\"http://localhost:8080/people/search/names\">localhost:8080/people/search/names</a></code>.",
+      "translation": "现在，前面示例中的查询方法已暴露于 <code><a class=\"bare\" href=\"http://localhost:8080/people/search/names\">localhost:8080/people/search/names</a></code>。",
+      "count": 1
+    },
+    {
+      "source": "For instance, in the default configuration, if you issue a request to <code><a class=\"bare\" href=\"http://localhost:8080/persons/search\">localhost:8080/persons/search</a></code> to find out what query methods are exposed, you get back a list of links similar to the following:",
+      "translation": "例如，在默认配置下，如果您向 <code><a class=\"bare\" href=\"http://localhost:8080/persons/search\">localhost:8080/persons/search</a></code> 发出请求以查看暴露了哪些查询方法，您将获得一个类似于以下内容的链接列表：",
+      "count": 1
+    },
+    {
+      "source": "When you navigate to the <code>search</code> resource of this repository, the finder method’s <code>@RestResource</code> annotation has altered the path, as follows:",
+      "translation": "当导航到此存储库的<code>search</code>资源时，查找方法的<code>@RestResource</code>注解已更改了路径，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "The Repository-level annotation’s <code>path = \"people\"</code> is reflected in the base URI with <code>/people</code>.",
+      "translation": "Repository 级注解中的 `<code>path = \"people\"</code>` 会反映在基础 URI 的 `/people` 路径中。",
+      "count": 1
+    },
+    {
+      "source": "<code>path = \"names\"</code> creates a URI of <code>/people/search/names</code>.",
+      "translation": "`path = \"names\"` 会创建一个 `/people/search/names` 的 URI。",
+      "count": 1
+    },
+    {
+      "source": "To change how the repository is exported, add a <code>@RestResource</code> annotation at the class level, as the following example shows:",
+      "translation": "若要更改仓库的导出方式，请在类级别添加一个<code>@RestResource</code>注解，示例如下：",
+      "count": 1
+    },
+    {
+      "source": "To change the segment of the URL under which this query method is exposed, you can use the <code>@RestResource</code> annotation again, as the following example shows:",
+      "translation": "若要更改此查询方法所暴露的 URL 段，可以再次使用<code>@RestResource</code>注解，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "Since these resources are all discoverable, you can also affect how the <code>rel</code> attribute is displayed in the links sent out by the exporter.",
+      "translation": "由于这些资源均可被发现，您还可以影响导出器发送的链接中 `<code>rel</code>` 属性的显示方式。",
+      "count": 1
+    },
+    {
+      "source": "You can change the <code>rel</code> of a repository, as the following example shows:",
+      "translation": "您可以更改仓库的 `<code>rel</code>`，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "Altering the <code>rel</code> of a repository changes the top-level name, as the following example output shows:",
+      "translation": "修改仓库的 `<code>rel</code>` 会改变顶层名称，如下列出的示例输出所示：",
+      "count": 1
+    },
+    {
+      "source": "The inclusion of a finder method provides you with <code>/people/search</code>.",
+      "translation": "添加查找方法将为您提供 `<code>/people/search</code>`。",
+      "count": 1
+    },
+    {
+      "source": "To skip exporting a query method, you can annotate the query method with <code>@RestResource(exported = false)</code>, as follows:",
+      "translation": "若要跳过查询方法的导出，您可以使用 <code>@RestResource(exported = false)</code> 注解来标记该查询方法，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "Similarly, to skip exporting a field, you can annotate the field with <code>@RestResource(exported = false)</code>, as follows:",
+      "translation": "同样，若要跳过字段的导出，您可以使用 <code>@RestResource(exported = false)</code> 注解该字段，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "You can configure the segments of the URL path under which the resources of a JPA repository are exported. To do so, add an annotation at the class level or at the query method level.",
+      "translation": "您可以配置 JPA 仓库资源导出时的 URL 路径段。为此，请在类级别或查询方法级别添加注解。",
+      "count": 1
+    },
+    {
+      "source": "If you have query methods defined, those also default to being exposed by their name, as the following example shows:",
+      "translation": "如果定义了查询方法，这些方法也会默认通过其名称暴露出来，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "The preceding example results in the following link value:",
+      "translation": "前一个示例生成的链接值如下：",
+      "count": 1
+    },
+    {
+      "source": "In the top level fragment shown in the preceding output:",
+      "translation": "在上一输出中显示的最高级别片段：",
+      "count": 1
+    },
+    {
+      "source": "This collection of annotations in your repository definition has caused the following changes:",
+      "translation": "此仓库定义中的注释集合导致了以下变更：",
+      "count": 1
+    },
+    {
+      "source": "For example, to skip exporting a repository, you could create a repository definition similar to the following example:",
+      "translation": "例如，若要跳过导出某个仓库，您可以创建一个类似于以下示例的仓库定义：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS\"和“Amazon Web Services”是 Amazon.com Inc. 公司及其关联公司的商标或注册商标。所有其他商标和版权均归其各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-rest/src/main/antora/modules/ROOT/pages/customizing/configuring-the-rest-url-path.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-rest\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-rest/src/main/antora/modules/ROOT/pages/customizing/configuring-the-rest-url-path.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-rest\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data REST</a></li>\n      <li><a href=\"../customizing-sdr.html\">Customizing Spring Data REST</a></li>\n      <li><a href=\"configuring-the-rest-url-path.html\">Configuring the REST URL Path</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data REST</a></li>\n      <li><a href=\"../customizing-sdr.html\">自定义 Spring Data REST</a></li>\n      <li><a href=\"configuring-the-rest-url-path.html\">配置 REST URL 路径</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data REST</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data REST</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"0\">\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../index.html\">Spring Data REST</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../intro.html\">Introduction</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/getting-started.html\">Getting started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/example-api-usage-with-curl.html\">Using cURL to talk to Spring Data REST</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/spring-data-rest-examples.html\">Spring Data REST example projects</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repository-resources.html\">Repository resources</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../paging-and-sorting.html\">Paging and Sorting</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../projections-excerpts.html\">Projections and Excerpts</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../representations.html\">Representations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../etags-and-other-conditionals.html\">Conditional Operations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../validation.html\">Validation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../events.html\">Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../integration.html\">Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../metadata.html\">Metadata</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../security.html\">Security</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../tools.html\">Tools</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../customizing-sdr.html\">Customizing Spring Data REST</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuring-the-rest-url-path.html\">Configuring the REST URL Path</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"adding-sdr-to-spring-mvc-app.html\">Adding Spring Data REST to an Existing Spring MVC Application</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"overriding-sdr-response-handlers.html\">Overriding Spring Data REST Response Handlers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing-json-output.html\">Customizing the JSON Output</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-jackson-deserialization.html\">Adding Custom Serializers and Deserializers to Jackson’s <code>ObjectMapper</code></a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuring-cors.html\">Configuring CORS</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>\n  </li>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../index.html\">Spring Data REST</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../intro.html\">简介</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/getting-started.html\">快速入门</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/example-api-usage-with-curl.html\">使用 cURL 与 Spring Data REST 交互</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction/spring-data-rest-examples.html\">Spring Data REST 示例项目</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repository-resources.html\">存储库资源</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../paging-and-sorting.html\">分页与排序</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../projections-excerpts.html\">投影与摘录</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../representations.html\">表示形式</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../etags-and-other-conditionals.html\">条件操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../validation.html\">验证</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../events.html\">事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../integration.html\">集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../metadata.html\">元数据</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../security.html\">安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../tools.html\">工具</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../customizing-sdr.html\">自定义 Spring Data REST</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuring-the-rest-url-path.html\">配置 REST URL 路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"adding-sdr-to-spring-mvc-app.html\">将 Spring Data REST 添加到现有的 Spring MVC 应用程序</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"overriding-sdr-response-handlers.html\">覆盖 Spring Data REST 响应处理器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"customizing-json-output.html\">自定义 JSON 输出</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-jackson-deserialization.html\">向 Jackson 的 <code>ObjectMapper</code> 添加自定义序列化器和反序列化器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuring-cors.html\">配置 CORS</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nIt is important that you override <em>both</em> <code>delete</code> methods. In the interest of faster runtime performance, the exporter currently uses a somewhat naive algorithm for determining which CRUD method to use. You cannot currently turn off the version of <code>delete</code> that takes an ID but export the version that takes an entity instance. For the time being, you can either export the <code>delete</code> methods or not. If you want turn them off, keep in mind that you have to annotate both versions with <code>exported = false</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n务必同时重写 <em>两个</em> <code>delete</code> 方法。出于提升运行时性能的考虑，导出器当前采用一种较为简单的算法来决定使用哪个 CRUD 方法。目前，您无法禁用接受 ID 的 <code>delete</code> 版本，而仅导出接受实体实例的版本。暂时而言，您可以选择导出或不导出 <code>delete</code> 方法。如果您希望禁用它们，请注意必须同时用 <code>exported = false</code> 注解这两个版本。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThese snippets of JSON assume you use Spring Data REST’s default format of <a href=\"https://stateless.co/hal_specification.html\">HAL</a>. You can turn off HAL, which would cause the output to look different. However, your ability to override <code>rel</code> names is totally independent of the rendering format.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n这些 JSON 片段假设您使用的是 Spring Data REST 的默认格式 <a href=\"https://stateless.co/hal_specification.html\">HAL</a>。您可以关闭 HAL，这将导致输出外观有所不同。然而，覆盖 <code>rel</code> 名称的能力与渲染格式完全独立。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nAll query method resources are exposed under the <code>search</code> resource.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n所有查询方法资源均通过 <code>search</code> 资源暴露。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nProjections provide the means to change what is exported and effectively <a href=\"#projections-excerpts.hidden-data\">side-step these settings</a>. If you create any projections against the same domain object, be sure to NOT export the fields.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"警告\"></i>\n</td>\n<td class=\"content\">\n投影提供了更改导出内容并有效<a href=\"#projections-excerpts.hidden-data\">绕过这些设置</a>的方法。如果您针对同一域对象创建任何投影，请确保不要导出字段。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#customizing-sdr.hiding-repositories\"></a>Hiding Certain Repositories, Query Methods, or Fields",
+      "translation": "<a class=\"anchor\" href=\"#customizing-sdr.hiding-repositories\"></a>隐藏某些仓库、查询方法或字段",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#customizing-sdr.hiding-repository-crud-methods\"></a>Hiding Repository CRUD Methods",
+      "translation": "<a class=\"anchor\" href=\"#customizing-sdr.hiding-repository-crud-methods\"></a>隐藏仓储的 CRUD 方法",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\nSpring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data REST",
+      "translation": "Spring Data REST",
+      "count": 1
+    },
+    {
+      "source": "Configuring the REST URL Path",
+      "translation": "配置 REST URL 路径",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

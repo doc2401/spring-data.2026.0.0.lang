@@ -1,0 +1,336 @@
+{
+  "created_at": "2026-06-17 08:52:42",
+  "updated_at": "2026-06-17 08:52:42",
+  "stats": {
+    "total_entries": 64,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 64,
+    "entries_with_hits": 64,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0063999999999999994
+  },
+  "items": [
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "Additionally you can extend <code>PagingAndSortingRepository</code>, <code>ReactiveSortingRepository</code>, <code>RxJava3SortingRepository</code>, or <code>CoroutineSortingRepository</code> if you need methods that allow to specify a <code>Sort</code> abstraction or in the first case a <code>Pageable</code> abstraction.\nNote that the various sorting repositories no longer extend their respective CRUD repository as they did in Spring Data versions prior to 3.0.\nTherefore, you need to extend both interfaces if you want functionality of both.",
+      "translation": "此外，如果您需要能够指定 <code>Sort</code> 抽象的方法，或者在第一种情况下指定 <code>Pageable</code> 抽象，则可以扩展 <code>PagingAndSortingRepository</code>、<code>ReactiveSortingRepository</code>、<code>RxJava3SortingRepository</code> 或 <code>CoroutineSortingRepository</code>。  \n请注意，在 Spring Data 3.0 之前的版本中，各种排序存储库曾扩展其各自的 CRUD 存储库，但在当前版本中已不再如此。因此，如果您需要同时具备两者的功能，则需要同时扩展这两个接口。",
+      "count": 1
+    },
+    {
+      "source": "In the prior example, you defined a common base interface for all your domain repositories and exposed <code>findById(…)</code> as well as <code>save(…)</code>.These methods are routed into the base repository implementation of the store of your choice provided by Spring Data (for example, if you use JPA, the implementation is <code>SimpleJpaRepository</code>), because they match the method signatures in <code>CrudRepository</code>.\nSo the <code>UserRepository</code> can now save users, find individual users by ID, and trigger a query to find <code>Users</code> by email address.",
+      "translation": "在前面的示例中，您为所有领域仓库定义了一个公共基接口，并暴露了 `<code>findById(…)</code>` 和 `<code>save(…)</code>` 方法。这些方法会被路由到您所选的 Spring Data 存储（例如，如果您使用 JPA，实现类为 `<code>SimpleJpaRepository</code>`）的基仓库实现中，因为它们与 `<code>CrudRepository</code>` 中的方法签名相匹配。因此，`<code>UserRepository</code>` 现在可以保存用户、通过 ID 查找单个用户，并触发查询以根据电子邮件地址查找 `<code>Users</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<code>PersonRepository</code> references <code>Person</code>, which is annotated with the JPA <code>@Entity</code> annotation, so this repository clearly belongs to Spring Data JPA. <code>UserRepository</code> references <code>User</code>, which is annotated with Spring Data MongoDB’s <code>@Document</code> annotation.",
+      "translation": "`PersonRepository` 引用了带有 JPA `@Entity` 注解的 `Person`，因此该仓库显然属于 Spring Data JPA。而 `UserRepository` 引用了带有 Spring Data MongoDB 的 `@Document` 注解的 `User`。",
+      "count": 1
+    },
+    {
+      "source": "The typical approach is to extend <code>CrudRepository</code>, which gives you methods for CRUD functionality.\nCRUD stands for Create, Read, Update, Delete.\nWith version 3.0 we also introduced <code>ListCrudRepository</code> which is very similar to the <code>CrudRepository</code> but for those methods that return multiple entities it returns a <code>List</code> instead of an <code>Iterable</code> which you might find easier to use.",
+      "translation": "典型的方法是扩展<code>CrudRepository</code>，它提供了用于 CRUD 功能的方法。CRUD 代表创建（Create）、读取（Read）、更新（Update）和删除（Delete）。  \n在版本 3.0 中，我们还引入了<code>ListCrudRepository</code>，它与<code>CrudRepository</code>非常相似，但对于返回多个实体的方法，它返回一个<code>List</code>而不是<code>Iterable</code>，后者可能更易于使用。",
+      "count": 1
+    },
+    {
+      "source": "If you do not want to extend Spring Data interfaces, you can also annotate your repository interface with <code>@RepositoryDefinition</code>.\nExtending one of the CRUD repository interfaces exposes a complete set of methods to manipulate your entities.\nIf you prefer to be selective about the methods being exposed, copy the methods you want to expose from the CRUD repository into your domain repository.\nWhen doing so, you may change the return type of methods.\nSpring Data will honor the return type if possible.\nFor example, for methods returning multiple entities you may choose <code>Iterable&lt;T&gt;</code>, <code>List&lt;T&gt;</code>, <code>Collection&lt;T&gt;</code> or a VAVR list.",
+      "translation": "如果您不想扩展 Spring Data 接口，也可以为您的存储库接口添加 `<code>@RepositoryDefinition</code>` 注解。  \n通过继承 CRUD 存储库接口之一，您可以获得一套完整的用于操作实体的方法。  \n如果您希望更灵活地选择要暴露的方法，可以将 CRUD 存储库中的所需方法复制到您的领域存储库中。  \n在此过程中，您可以更改方法的返回类型。  \nSpring Data 会在可能的情况下尊重您指定的返回类型。  \n例如，对于返回多个实体的方法，您可以选择 `<code>Iterable&lt;T&gt;</code>`、`<code>List&lt;T&gt;</code>`、`<code>Collection&lt;T&gt;</code>` 或 Vavr 列表作为返回类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>AmbiguousRepository</code> and <code>AmbiguousUserRepository</code> extend only <code>Repository</code> and <code>CrudRepository</code> in their type hierarchy.\nWhile this is fine when using a unique Spring Data module, multiple modules cannot distinguish to which particular Spring Data these repositories should be bound.",
+      "translation": "`AmbiguousRepository` 和 `AmbiguousUserRepository` 在其类型层次结构中仅继承自 `Repository` 和 `CrudRepository`。虽然在使用唯一的 Spring Data 模块时这没有问题，但在多个模块共存的情况下，无法区分这些仓库应绑定到哪一个特定的 Spring Data 实现。",
+      "count": 1
+    },
+    {
+      "source": "To define a repository interface, you first need to define a domain class-specific repository interface.\nThe interface must extend <code>Repository</code> and be typed to the domain class and an ID type.\nIf you want to expose CRUD methods for that domain type, you may extend <code>CrudRepository</code>, or one of its variants instead of <code>Repository</code>.",
+      "translation": "要定义仓储接口，首先需要定义一个针对特定领域类的仓储接口。  \n该接口必须扩展 `<code>Repository`》，并指定为领域类和 ID 类型。  \n如果希望为该领域类型暴露 CRUD 方法，可以扩展 `<code>CrudRepository>` 或其变体，而不是直接扩展 `<code>Repository`。",
+      "count": 1
+    },
+    {
+      "source": "If the domain class is <a href=\"#repositories.multiple-modules.annotations\">annotated with the module-specific type annotation</a>, it is a valid candidate for the particular Spring Data module.\nSpring Data modules accept either third-party annotations (such as JPA’s <code>@Entity</code>) or provide their own annotations (such as <code>@Document</code> for Spring Data MongoDB and Spring Data Elasticsearch).",
+      "translation": "如果领域类<a href=\"#repositories.multiple-modules.annotations\">带有模块特定的类型注解</a>，则该领域类是特定 Spring Data 模块的有效候选者。Spring Data 模块可以接受第三方注解（例如 JPA 的<code>@Entity</code>），也可以提供自己的注解（例如 Spring Data MongoDB 和 Spring Data Elasticsearch 中的<code>@Document</code>）。",
+      "count": 1
+    },
+    {
+      "source": "<code>MyRepository</code> and <code>UserRepository</code> extend <code>JpaRepository</code> in their type hierarchy.\nThey are valid candidates for the Spring Data JPA module.",
+      "translation": "`MyRepository` 和 `UserRepository` 在其类型层次结构中扩展了 `JpaRepository`。  \n它们是 Spring Data JPA 模块的有效候选者。",
+      "count": 1
+    },
+    {
+      "source": "If you are using a reactive store you might choose <code>ReactiveCrudRepository</code>, or <code>RxJava3CrudRepository</code> depending on which reactive framework you are using.",
+      "translation": "如果您使用的是响应式存储，可以根据所使用的响应式框架选择<code>ReactiveCrudRepository</code>或<RxJava3CrudRepository>。",
+      "count": 1
+    },
+    {
+      "source": "The following example shows how to selectively expose CRUD methods (<code>findById</code> and <code>save</code>, in this case):",
+      "translation": "以下示例展示了如何有选择地暴露 CRUD 方法（本例中为 `findById` 和 `save`）：",
+      "count": 1
+    },
+    {
+      "source": "This example shows a domain class using both JPA and Spring Data MongoDB annotations.\nIt defines two repositories, <code>JpaPersonRepository</code> and <code>MongoDBPersonRepository</code>.\nOne is intended for JPA and the other for MongoDB usage.\nSpring Data is no longer able to tell the repositories apart, which leads to undefined behavior.",
+      "translation": "本示例展示了一个同时使用 JPA 和 Spring Data MongoDB 注解的领域类。  \n它定义了两个仓库：<code>JpaPersonRepository</code> 和 <code>MongoDBPersonRepository</code>，其中一个专为 JPA 设计，另一个专为 MongoDB 使用。  \nSpring Data 已无法区分这两个仓库，从而导致未定义的行为。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#repositories.multiple-modules.types\">Repository type details</a> and <a href=\"#repositories.multiple-modules.annotations\">distinguishing domain class annotations</a> are used for strict repository configuration to identify repository candidates for a particular Spring Data module.\nUsing multiple persistence technology-specific annotations on the same domain type is possible and enables reuse of domain types across multiple persistence technologies.\nHowever, Spring Data can then no longer determine a unique module with which to bind the repository.",
+      "translation": "<a href=\"#repositories.multiple-modules.types\">存储库类型详情</a> 和 <a href=\"#repositories.multiple-modules.annotations\">区分领域类注解</a> 用于严格的存储库配置，以识别特定 Spring Data 模块的存储库候选项。  \n在同一领域类型上使用多个持久化技术特定的注解是可行的，这支持跨多种持久化技术复用领域类型。  \n然而，Spring Data 将无法确定唯一的模块来绑定该存储库。",
+      "count": 1
+    },
+    {
+      "source": "If you are using Kotlin you might pick <code>CoroutineCrudRepository</code> which utilizes Kotlin’s coroutines.",
+      "translation": "如果您使用的是 Kotlin，可以选择利用 Kotlin 协程的<code>CoroutineCrudRepository</code>。",
+      "count": 1
+    },
+    {
+      "source": "If many repositories in your application should have the same set of methods you can define your own base interface to inherit from.\nSuch an interface must be annotated with <code>@NoRepositoryBean</code>.\nThis prevents Spring Data to try to create an instance of it directly and failing because it can’t determine the entity for that repository, since it still contains a generic type variable.",
+      "translation": "如果您的应用程序中的多个仓库需要拥有相同的一组方法，您可以定义自己的基础接口供其继承。  \n此类接口必须使用 <code>@NoRepositoryBean</code> 注解进行标记。  \n这可以防止 Spring Data 尝试直接创建该接口的实例并因无法确定该仓库对应的实体而失败，因为此时它仍然包含泛型类型变量。",
+      "count": 1
+    },
+    {
+      "source": "If the repository definition <a href=\"#repositories.multiple-modules.types\">extends the module-specific repository</a>, it is a valid candidate for the particular Spring Data module.",
+      "translation": "如果仓库定义<a href=\"#repositories.multiple-modules.types\">扩展了特定模块的仓库</a>，则该仓库是相应 Spring Data 模块的有效候选项。",
+      "count": 1
+    },
+    {
+      "source": "The last way to distinguish repositories is by scoping repository base packages.\nBase packages define the starting points for scanning for repository interface definitions, which implies having repository definitions located in the appropriate packages.\nBy default, annotation-driven configuration uses the package of the configuration class.\nThe <a class=\"xref page\" href=\"create-instances.html#repositories.create-instances.xml\">base package in XML-based configuration</a> is mandatory.",
+      "translation": "区分仓库的另一种方法是限定仓库基础包的范围。基础包定义了扫描仓库接口定义的起点，这意味着仓库定义必须位于相应的包中。默认情况下，注解驱动的配置文件使用配置类所在的包。而在基于 XML 的配置中，<a class=\"xref page\" href=\"create-instances.html#repositories.create-instances.xml\">基础包</a>是必需的。",
+      "count": 1
+    },
+    {
+      "source": "There are a few ways to get started with your repository interface.",
+      "translation": "有几种方法可以开始使用您的仓库界面。",
+      "count": 1
+    },
+    {
+      "source": "Using a unique Spring Data module in your application makes things simple, because all repository interfaces in the defined scope are bound to the Spring Data module.\nSometimes, applications require using more than one Spring Data module.\nIn such cases, a repository definition must distinguish between persistence technologies.\nWhen it detects multiple repository factories on the class path, Spring Data enters strict repository configuration mode.\nStrict configuration uses details on the repository or the domain class to decide about Spring Data module binding for a repository definition:",
+      "translation": "在应用程序中使用独特的 Spring Data 模块可以简化操作，因为定义作用域内的所有存储库接口都会绑定到该 Spring Data 模块。  \n有时，应用程序需要使用多个 Spring Data 模块。  \n在这种情况下，存储库定义必须能够区分不同的持久化技术。  \n当检测到类路径中存在多个存储库工厂时，Spring Data 会进入严格的存储库配置模式。  \n严格配置利用存储库或领域类的详细信息来决定存储库定义的 Spring Data 模块绑定：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows a repository that uses module-specific interfaces (JPA in this case):",
+      "translation": "以下示例展示了一个使用模块特定接口（此处为 JPA）的仓库：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows a repository that uses generic interfaces:",
+      "translation": "以下示例展示了一个使用通用接口的仓库：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows a repository that uses domain classes with annotations:",
+      "translation": "以下示例展示了一个使用带有注解的领域类的仓库：",
+      "count": 1
+    },
+    {
+      "source": "The following bad example shows a repository that uses domain classes with mixed annotations:",
+      "translation": "以下是一个不良示例，展示了一个使用混合注解的领域类仓库：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows annotation-driven configuration of base packages:",
+      "translation": "以下示例展示了基础包的注解驱动配置：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS\"和“Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data KeyValue</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data KeyValue</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-keyvalue/src/main/antora/modules/ROOT/pages/repositories/definition.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-keyvalue\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-keyvalue/src/main/antora/modules/ROOT/pages/repositories/definition.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-keyvalue\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data KeyValue</a></li>\n      <li><a href=\"../repositories.html\">KeyValue Repositories</a></li>\n      <li><a href=\"definition.html\">Defining Repository Interfaces</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data KeyValue</a></li>\n      <li><a href=\"../repositories.html\">KeyValue 存储库</a></li>\n      <li><a href=\"definition.html\">定义存储库接口</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring 团队学院</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Selectively exposing CRUD methods",
+      "translation": "有选择地暴露 CRUD 方法",
+      "count": 1
+    },
+    {
+      "source": "Example 1. Repository definitions using module-specific interfaces",
+      "translation": "示例 1：使用模块特定接口定义仓库",
+      "count": 1
+    },
+    {
+      "source": "Example 2. Repository definitions using generic interfaces",
+      "translation": "示例 2：使用通用接口的仓库定义",
+      "count": 1
+    },
+    {
+      "source": "Example 3. Repository definitions using domain classes with annotations",
+      "translation": "示例 3：使用带有注解的领域类定义仓库",
+      "count": 1
+    },
+    {
+      "source": "Example 4. Repository definitions using domain classes with mixed annotations",
+      "translation": "示例 4：使用混合注解的领域类定义仓库",
+      "count": 1
+    },
+    {
+      "source": "Annotation-driven configuration of base packages",
+      "translation": "基于注解的基础包配置",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"0\">\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../keyvalue.html\">KeyValue</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../keyvalue/template.html\">Template API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">KeyValue Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../keyvalue/repository/map-repositories.html\">Map Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../keyvalue/value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"0\">\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../index.html\">概述</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../keyvalue.html\">键值存储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link\" href=\"../keyvalue/template.html\">模板 API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">键值存储仓库</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"definition.html\">定义仓库接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"create-instances.html\">创建仓库实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../keyvalue/repository/map-repositories.html\">映射仓库</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../keyvalue/value-expressions.html\">值表达式基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-keywords-reference.html\">仓库查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-return-types-reference.html\">仓库查询返回类型</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe intermediate repository interface is annotated with <code>@NoRepositoryBean</code>.\nMake sure you add that annotation to all repository interfaces for which Spring Data should not create instances at runtime.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n中间层存储库接口已标注 <code>@NoRepositoryBean</code>。\n请确保为所有 Spring Data 不应在运行时创建实例的存储库接口添加该注解。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.definition-tuning\"></a>Fine-tuning Repository Definition",
+      "translation": "<a class=\"anchor\" href=\"#repositories.definition-tuning\"></a>微调仓库定义",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.multiple-modules\"></a>Using Repositories with Multiple Spring Data Modules",
+      "translation": "<a class=\"anchor\" href=\"#repositories.multiple-modules\"></a>在多个 Spring Data 模块中使用 Repository",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data KeyValue",
+      "translation": "Spring Data KeyValue",
+      "count": 1
+    },
+    {
+      "source": "Defining Repository Interfaces",
+      "translation": "定义存储库接口",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

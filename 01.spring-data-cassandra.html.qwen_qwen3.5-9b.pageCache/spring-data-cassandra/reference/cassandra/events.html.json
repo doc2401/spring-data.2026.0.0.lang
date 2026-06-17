@@ -1,0 +1,366 @@
+{
+  "created_at": "2026-06-16 07:14:56",
+  "updated_at": "2026-06-17 06:56:43",
+  "stats": {
+    "total_entries": 70,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 140,
+    "entries_with_hits": 70,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.006999999999999999
+  },
+  "items": [
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 2
+    },
+    {
+      "source": "The Spring Data infrastructure provides hooks for modifying an entity before and after certain methods are invoked.\nThose so called <code>EntityCallback</code> instances provide a convenient way to check and potentially modify an entity in a callback fashioned style.<br/>\nAn <code>EntityCallback</code> looks pretty much like a specialized <code>ApplicationListener</code>.\nSome Spring Data modules publish store specific events (such as <code>BeforeSaveEvent</code>) that allow modifying the given entity. In some cases, such as when working with immutable types, these events can cause trouble.\nAlso, event publishing relies on <code>ApplicationEventMulticaster</code>. If configuring that with an asynchronous <code>TaskExecutor</code> it can lead to unpredictable outcomes, as event processing can be forked onto a Thread.",
+      "translation": "Spring Data 基础设施提供了在调用某些方法前后修改实体的钩子。这些所谓的 `<code>EntityCallback`</code> 实例提供了一种便捷的方式，以回调风格检查和潜在地修改实体。<br/>\n一个 `<code>EntityCallback`</code> 看起来非常像一个专门的 `<code>ApplicationListener`</code>。  \n一些 Spring Data 模块会发布存储特定的事件（例如 `<code>BeforeSaveEvent`</code>），允许修改给定的实体。在某些情况下，例如处理不可变类型时，这些事件可能会引发问题。此外，事件发布依赖于 `<code>ApplicationEventMulticaster`</code>。如果将其配置为异步的 `<code>TaskExecutor`</code>，可能会导致不可预测的结果，因为事件处理可能会被分叉到另一个线程上执行。",
+      "count": 2
+    },
+    {
+      "source": "To intercept an object before it goes into the database, you can register a subclass of <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/cassandra/core/mapping/event/AbstractCassandraEventListener.html\">AbstractCassandraEventListener</a></code> that overrides the <code>onBeforeSave(…)</code> method.\nWhen the event is dispatched, your listener is called and passed the domain object (which is a Java entity).\nEntity lifecycle events can be costly and you may notice a change in the performance profile when loading large result sets.\nYou can disable lifecycle events on the <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/cassandra/core/CassandraTemplate.html#setEntityLifecycleEventsEnabled(boolean)\">Template API</a></code>.\nThe following example uses the <code>onBeforeSave</code> method:",
+      "translation": "要在对象进入数据库之前拦截它，可以注册一个继承自<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/cassandra/core/mapping/event/AbstractCassandraEventListener.html\">AbstractCassandraEventListener</a></code>的子类，并重写<code>onBeforeSave(…)</code>方法。\n当事件被分发时，您的监听器会被调用，并传入领域对象（即 Java 实体）。\n实体生命周期事件可能会产生开销，在加载大型结果集时，您可能会注意到性能特征发生变化。\n您可以在<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/cassandra/core/CassandraTemplate.html#setEntityLifecycleEventsEnabled(boolean)\">模板 API</a></code>上禁用生命周期事件。\n以下示例使用<code>onBeforeSave</code>方法：",
+      "count": 2
+    },
+    {
+      "source": "<code>onBeforeSave</code>: Called in <code>CassandraTemplate.insert(…)</code> and <code>.update(…)</code> operations before inserting or updating a row in the database but after creating the <code>Statement</code>.",
+      "translation": "`onBeforeSave`：在 `CassandraTemplate.insert(…)` 和 `.update(…)` 操作中，于创建 `Statement` 之后但在向数据库插入或更新行之前调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>onAfterLoad</code>: Called in the <code>CassandraTemplate.select(…)</code>, <code>.slice(…)</code>, and <code>.stream(…)</code> methods after each row is retrieved from the database.",
+      "translation": "`onAfterLoad`：在 `CassandraTemplate.select(…)`、`.slice(…)` 和 `.stream(…)` 方法中，每次从数据库检索到一行数据后都会调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>onAfterConvert</code>: Called in the <code>CassandraTemplate.select(…)</code>, <code>.slice(…)</code>, and <code>.stream(…)</code> methods after converting a row retrieved from the database to a POJO.",
+      "translation": "<code>onAfterConvert</code>：在 <code>CassandraTemplate.select(…)</code>、<code>.slice(…)</code> 和 <code>.stream(…)</code> 方法中，将数据库检索到的行转换为 POJO 之后调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>EntityCallback</code> beans are picked up by the store specific implementations in case they are registered in the <code>ApplicationContext</code>.\nMost template APIs already implement <code>ApplicationContextAware</code> and therefore have access to the <code>ApplicationContext</code>",
+      "translation": "如果 `EntityCallback` 类型的 Bean 已注册在 `ApplicationContext` 中，它们将被特定存储实现的类拾取。大多数模板 API 已经实现了 `ApplicationContextAware` 接口，因此可以访问 `ApplicationContext`。",
+      "count": 2
+    },
+    {
+      "source": "<code>onAfterSave</code>: Called in <code>CassandraTemplate…insert(…)</code> and <code>.update(…)</code> operations after inserting or updating a row in the database.",
+      "translation": "<code>onAfterSave</code>：在数据库插入或更新行之后，于 <code>CassandraTemplate…insert(…)</code> 和 <code>.update(…)</code> 操作中调用。",
+      "count": 2
+    },
+    {
+      "source": "The Entity Callback API has been introduced with Spring Data Commons 2.2. It is the recommended way of applying entity modifications.\nExisting store specific <code>ApplicationEvents</code> are still published <strong>before</strong> the invoking potentially registered <code>EntityCallback</code> instances.",
+      "translation": "Spring Data Commons 2.2 引入了实体回调 API，这是应用实体修改的推荐方式。  \n现有的存储特定<code>ApplicationEvents</code>仍会在调用可能已注册的<code>EntityCallback</code>实例<strong>之前</strong>发布。",
+      "count": 2
+    },
+    {
+      "source": "Invoked before a domain object is saved.<br/>\nCan modify the target object after the <code>Statement</code> has been created. The provided statement contains all mapped entity information but changes to the domain object are not included in the <code>Statement</code>.",
+      "translation": "在保存域对象之前调用。<br/>\n可以在创建<code>Statement</code>后修改目标对象。提供的语句包含所有映射的实体信息，但域对象的更改不会包含在<code>Statement</code>中。",
+      "count": 2
+    },
+    {
+      "source": "The Cassandra mapping framework has several built-in <code>org.springframework.context.ApplicationEvent</code> events that your application can respond to by registering special beans in the <code>ApplicationContext</code>.\nBeing based on Spring’s application context event infrastructure lets other products, such as Spring Integration, easily receive these events as they are a well known eventing mechanism in Spring-based applications.",
+      "translation": "Cassandra 映射框架提供了几个内置的 `<code>org.springframework.context.ApplicationEvent</code>` 事件，您的应用程序可以通过在 `<code>ApplicationContext</code>` 中注册特殊 Bean 来响应这些事件。  \n基于 Spring 的应用上下文事件基础设施，使得其他产品（如 Spring Integration）能够轻松接收这些事件，因为它们是 Spring 应用程序中广为人知的事件机制。",
+      "count": 2
+    },
+    {
+      "source": "The <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/cassandra/core/mapping/event/AbstractCassandraEventListener.html\">AbstractCassandraEventListener</a></code> has the following callback methods:",
+      "translation": "<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/cassandra/core/mapping/event/AbstractCassandraEventListener.html\">AbstractCassandraEventListener</a></code> 具有以下回调方法：",
+      "count": 2
+    },
+    {
+      "source": "<code>onBeforeDelete</code>: Called in <code>CassandraTemplate.delete(…)</code> operations before deleting row from the database.",
+      "translation": "`onBeforeDelete`：在从数据库删除行之前，于 `CassandraTemplate.delete(…)` 操作中调用。",
+      "count": 2
+    },
+    {
+      "source": "<code>onAfterDelete</code>: Called in <code>CassandraTemplate.delete(…)</code> operations after deleting row from the database.",
+      "translation": "<code>onAfterDelete</code>：在从数据库中删除行后，于 <code>CassandraTemplate.delete(…)</code> 操作中调用。",
+      "count": 2
+    },
+    {
+      "source": "An <code>EntityCallback</code> is directly associated with its domain type through its generic type argument.\nEach Spring Data module typically ships with a set of predefined <code>EntityCallback</code> interfaces covering the entity lifecycle.",
+      "translation": "`EntityCallback` 通过其泛型类型参数直接与域类型关联。  \n每个 Spring Data 模块通常都提供一组预定义的 `EntityCallback` 接口，涵盖实体生命周期。",
+      "count": 2
+    },
+    {
+      "source": "Invoked before a domain object is converted to <code>Statement</code>.\nDomain objects can be updated to include the change in the <code>Statement</code>.",
+      "translation": "在将域对象转换为<code>Statement</code>之前调用。  \n域对象可以更新以包含<code>Statement</code>中的变更。",
+      "count": 2
+    },
+    {
+      "source": "Marks an auditable entity <em>created</em> or <em>modified</em>",
+      "translation": "标记一个可审计实体已<em>创建</em>或<em>修改</em>。",
+      "count": 2
+    },
+    {
+      "source": "Declaring these beans in your Spring <code>ApplicationContext</code> will cause them to be invoked whenever the event is dispatched.",
+      "translation": "在 Spring 的 `<code>ApplicationContext</code>` 中声明这些 Bean，将导致每当事件被分发时它们被调用。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data for Apache Cassandra uses the <code>EntityCallback</code> API for its auditing support and reacts on the following callbacks.",
+      "translation": "Spring Data for Apache Cassandra 使用 <code>EntityCallback</code> API 提供审计支持，并响应以下回调。",
+      "count": 2
+    },
+    {
+      "source": "Entity callbacks provide integration points with both synchronous and reactive APIs to guarantee in-order execution at well-defined checkpoints within the processing chain, returning a potentially modified entity or a reactive wrapper type.",
+      "translation": "实体回调提供了与同步和响应式 API 的集成点，以确保在数据处理链中定义的明确检查点处按顺序执行，并返回可能经过修改的实体或响应式包装类型。",
+      "count": 2
+    },
+    {
+      "source": "Entity callbacks are typically separated by API type. This separation means that a synchronous API considers only synchronous entity callbacks and a reactive implementation considers only reactive entity callbacks.",
+      "translation": "实体回调通常按 API 类型进行分离。这种分离意味着同步 API 仅考虑同步实体回调，而反应式实现则仅考虑反应式实体回调。",
+      "count": 2
+    },
+    {
+      "source": "Implement the interface suiting your application needs like shown in the example below:",
+      "translation": "按照以下示例实现适合您应用程序需求的接口：",
+      "count": 2
+    },
+    {
+      "source": "The following example explains a collection of valid entity callback registrations:",
+      "translation": "以下示例说明了一组有效的实体回调注册：",
+      "count": 2
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Cassandra</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Cassandra</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-cassandra/src/main/antora/modules/ROOT/pages/cassandra/events.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-cassandra\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-cassandra/src/main/antora/modules/ROOT/pages/cassandra/events.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-cassandra\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 2
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Cassandra</a></li>\n      <li><a href=\"../cassandra.html\">Cassandra Support</a></li>\n      <li><a href=\"events.html\">Lifecycle Events</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Cassandra</a></li>\n      <li><a href=\"../cassandra.html\">Cassandra 支持</a></li>\n      <li><a href=\"events.html\">生命周期事件</a></li>\n    </ul>\n  </nav>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring 团队学院</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 2
+    },
+    {
+      "source": "Anatomy of an <code>EntityCallback</code>",
+      "translation": "`EntityCallback` 的解剖结构",
+      "count": 2
+    },
+    {
+      "source": "Anatomy of a reactive <code>EntityCallback</code>",
+      "translation": "反应式 `EntityCallback` 的解剖学",
+      "count": 2
+    },
+    {
+      "source": "Example <code>EntityCallback</code> Bean registration",
+      "translation": "<code>EntityCallback</code> 实体回调 Bean 注册示例",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在所有的 Spring 文档中搜索</a>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">Cassandra Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">Cassandra-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/aot.html\">Ahead of Time Optimizations</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories.html\">仓储</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">Cassandra 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">Cassandra 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/aot.html\">提前优化</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../cassandra.html\">Cassandra Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">Connecting to Cassandra with Spring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"schema-management.html\">Schema Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cql-template.html\">CQL Template API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactive-cassandra.html\">Reactive Infrastructure</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">Persisting Entities</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"prepared-statements.html\">Prepared Statements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"converters.html\">Type-based Converter</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"property-converters.html\">Property-based Converters</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Auditing Configuration for Cassandra</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../cassandra.html\">Cassandra 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">入门指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">使用 Spring 连接 Cassandra</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"schema-management.html\">模式管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cql-template.html\">CQL 模板 API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactive-cassandra.html\">响应式基础设施</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">实体持久化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"prepared-statements.html\">预编译语句</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"converters.html\">基于类型的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"property-converters.html\">基于属性的转换器</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Cassandra 审计配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">值表达式基础</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>BeforeSaveCallback</code> receiving its order from the <code>@Order</code> annotation.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>BeforeSaveCallback</code> receiving its order via the <code>Ordered</code> interface implementation.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>BeforeSaveCallback</code> using a lambda expression. Unordered by default and invoked last. Note that callbacks implemented by a lambda expression do not expose typing information hence invoking these with a non-assignable entity affects the callback throughput. Use a <code>class</code> or <code>enum</code> to enable type filtering for the callback bean.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Combine multiple entity callback interfaces in a single implementation class.</td>\n</tr>\n</tbody>",
+      "translation": "<table>\n<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>BeforeSaveCallback</code> 通过 <code>@Order</code> 注解获取其执行顺序。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>BeforeSaveCallback</code> 通过实现 <code>Ordered</code> 接口来获取其执行顺序。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>BeforeSaveCallback</code> 使用 Lambda 表达式。默认无序且最后被调用。请注意，由 Lambda 表达式实现的回调不暴露类型信息，因此使用不可分配实体调用这些回调会影响回调吞吐量。请使用 <code>class</code> 或 <code>enum</code> 来为回调 Bean 启用类型过滤。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>将多个实体回调接口组合在单个实现类中。</td>\n</tr>\n</table>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>BeforeSaveCallback</code> specific method to be called before an entity is saved. Returns a potentially modified instance.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The entity right before persisting.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>A number of store specific arguments like the <em>collection</em> the entity is persisted to.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>BeforeSaveCallback</code> 特定方法，在实体保存之前调用。返回一个可能已被修改的实例。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>持久化之前的实体。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>一系列存储特定的参数，例如实体被持久化的<em>集合</em>。</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>BeforeSaveCallback</code> specific method to be called on subscription, before an entity is saved. Emits a potentially modified instance.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The entity right before persisting.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>A number of store specific arguments like the <em>collection</em> the entity is persisted to.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>在保存实体之前，订阅上会调用的特定 <code>BeforeSaveCallback</code> 方法。该方法会发出一个可能已被修改的实例。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>在持久化实体之前的实体状态。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>一系列存储特定的参数，例如实体被持久化到的 <em>集合</em>。</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-1.5-to-2.0.html\">Migration Guide from 1.x to 2.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.2-to-3.0.html\">Migration Guide from 2.x to 3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.0-to-4.0.html\">Migration Guide from 3.x to 4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.0-to-4.3.html\">Migration Guide from 4.x to 4.3</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-1.5-to-2.0.html\">从 1.x 到 2.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.2-to-3.0.html\">从 2.x 到 3.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.0-to-4.0.html\">从 3.x 到 4.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.0-to-4.3.html\">从 4.x 到 4.3 的迁移指南</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">Object Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Callback implementation according to your requirements.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Potentially order the entity callback if multiple ones for the same domain type exist. Ordering follows lowest precedence.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>根据您的要求实现回调。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>如果存在多个针对同一域类型的实体回调，则可能对其进行排序。排序遵循最低优先级原则。</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nOptional entity callback parameters are defined by the implementing Spring Data module and inferred from call site of <code>EntityCallback.callback()</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n可选的实体回调参数由实现的 Spring Data 模块定义，并从 <code>EntityCallback.callback()</code> 的调用站点推断得出。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nLifecycle events are emitted only for root-level types.\nComplex types used as properties within an aggregate root are not subject to event publication.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n生命周期事件仅针对根级别类型发布。作为聚合根属性使用的复杂类型不受事件发布的影响。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-callbacks\"></a>Entity Callbacks",
+      "translation": "<a class=\"anchor\" href=\"#entity-callbacks\"></a>实体回调",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-callbacks.implement\"></a>Implementing Entity Callbacks",
+      "translation": "<a class=\"anchor\" href=\"#entity-callbacks.implement\"></a>实现实体回调",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-callbacks.register\"></a>Registering Entity Callbacks",
+      "translation": "<a class=\"anchor\" href=\"#entity-callbacks.register\"></a>注册实体回调",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.entity-callbacks\"></a>Store-specific EntityCallbacks",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.entity-callbacks\"></a>特定存储的实体回调",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 2
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 2
+    },
+    {
+      "source": "Spring Data Cassandra",
+      "translation": "Spring Data Cassandra",
+      "count": 2
+    },
+    {
+      "source": "Lifecycle Events",
+      "translation": "生命周期事件",
+      "count": 2
+    },
+    {
+      "source": "Table 1. Supported Entity Callbacks",
+      "translation": "表 1。支持的实体回调",
+      "count": 2
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 2
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 2
+    }
+  ]
+}

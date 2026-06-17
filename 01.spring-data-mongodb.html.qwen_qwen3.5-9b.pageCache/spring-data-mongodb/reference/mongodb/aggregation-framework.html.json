@@ -1,0 +1,751 @@
+{
+  "created_at": "2026-06-17 09:37:02",
+  "updated_at": "2026-06-17 09:37:02",
+  "stats": {
+    "total_entries": 147,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 148,
+    "entries_with_hits": 147,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0068027210884354,
+    "usage_percentage": 0.0147
+  },
+  "items": [
+    {
+      "source": "The preceding listings use the following algorithm:",
+      "translation": "前述列表采用以下算法：",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "Projection expressions are used to define the fields that are the outcome of a particular aggregation step. Projection expressions can be defined through the <code>project</code> method of the <code>Aggregation</code> class, either by passing a list of <code>String</code> objects or an aggregation framework <code>Fields</code> object. The projection can be extended with additional fields through a fluent API by using the <code>and(String)</code> method and aliased by using the <code>as(String)</code> method.\nNote that you can also define fields with aliases by using the <code>Fields.field</code> static factory method of the aggregation framework, which you can then use to construct a new <code>Fields</code> instance. References to projected fields in later aggregation stages are valid only for the field names of included fields or their aliases (including newly defined fields and their aliases). Fields not included in the projection cannot be referenced in later aggregation stages. The following listings show examples of projection expression:",
+      "translation": "投影表达式用于定义特定聚合步骤的输出字段。可以通过 <code>Aggregation</code> 类的 <code>project</code> 方法定义投影表达式，该方法接受一个 <code>String</code> 对象列表或聚合框架的 <code>Fields</code> 对象作为参数。还可以使用流式 API 中的 <code>and(String)</code> 方法添加更多字段，并使用 <code>as(String)</code> 方法为字段设置别名。\n\n请注意，您也可以通过聚合框架中 <code>Fields.field</code> 静态工厂方法来定义带别名的字段，然后使用该对象构建一个新的 <code>Fields</code> 实例。后续聚合阶段中对投影字段的引用仅对已包含字段或其别名（包括新定义的字段及其别名）有效。未包含在投影中的字段无法在后续聚合阶段中被引用。以下示例展示了投影表达式的用法：",
+      "count": 1
+    },
+    {
+      "source": "Bucket operations categorize incoming documents into groups, called buckets, based on a specified expression and bucket boundaries. Bucket operations require a grouping field or a grouping expression. You can define them by using the <code>bucket()</code> and <code>bucketAuto()</code> methods of the <code>Aggregate</code> class. <code>BucketOperation</code> and <code>BucketAutoOperation</code> can expose accumulations based on aggregation expressions for input documents. You can extend the bucket operation with additional parameters through a fluent API by using the <code>with…()</code> methods and the <code>andOutput(String)</code> method. You can alias the operation by using the <code>as(String)</code> method. Each bucket is represented as a document in the output.",
+      "translation": "Bucket 操作根据指定的表达式和桶边界，将传入的文档分类到称为“桶”的组中。Bucket 操作需要一个分组字段或分组表达式。您可以使用 <code>Aggregate</code> 类的 <code>bucket()</code> 和 <code>bucketAuto()</code> 方法来定义它们。<code>BucketOperation</code> 和 <code>BucketAutoOperation</code> 可以基于输入文档的聚合表达式暴露累积结果。您可以通过使用 <code>with…()</code> 方法和 <code>andOutput(String)</code> 方法，通过流式 API 为 Bucket 操作添加额外参数。您可以使用 <code>as(String)</code> 方法为操作设置别名。每个桶在输出中均表示为一个文档。",
+      "count": 1
+    },
+    {
+      "source": "This one-step aggregation uses a projection operation with the <code>inventory</code> collection. We project the <code>discount</code> field by using a conditional operation for all inventory items that have a <code>qty</code> greater than or equal to <code>250</code>. A second conditional projection is performed for the <code>description</code> field. We apply the <code>Unspecified</code> description to all items that either do not have a <code>description</code> field or items that have a <code>null</code> description.",
+      "translation": "此一步聚合操作使用了对<code>inventory</code>集合的投影。我们利用条件操作，对所有库存项中<code>qty</code>大于或等于<code>250</code>的项目投影<code>discount</code>字段。随后，对<code>description</code>字段执行了第二次条件投影。我们将<code>Unspecified</code>描述应用于所有缺少<code>description</code>字段或该字段值为<code>null</code>的项目。",
+      "count": 1
+    },
+    {
+      "source": "Use the <code>group</code> operation to define a group from the input-collection. The grouping criteria is the combination of the <code>state</code> and <code>city</code> fields, which forms the ID structure of the group. We aggregate the value of the <code>population</code> property from the grouped elements by using the <code>sum</code> operator and save the result in the <code>pop</code> field.",
+      "translation": "使用 `group` 操作从输入集合中定义分组。分组依据是 `state` 和 `city` 字段的组合，它们构成了分组的 ID 结构。我们使用 `sum` 操作符对分组元素的 `population` 属性值进行聚合，并将结果保存在 `pop` 字段中。",
+      "count": 1
+    },
+    {
+      "source": "Use the <code>sort</code> operation to sort the intermediate-result by the <code>pop</code>, <code>state</code> and <code>city</code> fields, in ascending order, such that the smallest city is at the top and the biggest city is at the bottom of the result. Note that the sorting on <code>state</code> and <code>city</code> is implicitly performed against the group ID fields (which Spring Data MongoDB handled).",
+      "translation": "使用<code>sort</code>操作按<code>pop</code>、<code>state</code>和<code>city</code>字段对中间结果进行升序排序，使得城市最小的记录位于结果顶部，城市最大的记录位于底部。请注意，对<code>state</code>和<code>city</code>的排序是隐式针对组 ID 字段进行的（由 Spring Data MongoDB 处理）。",
+      "count": 1
+    },
+    {
+      "source": "Use a <code>group</code> operation again to group the intermediate result by <code>state</code>. Note that <code>state</code> again implicitly references a group ID field. We select the name and the population count of the biggest and smallest city with calls to the <code>last(…)</code> and <code>first(…​)</code> operators, respectively, in the <code>project</code> operation.",
+      "translation": "再次使用<code>group</code>操作，根据<code>state</code>对中间结果进行分组。注意，<code>state</code>同样隐式引用了一个组 ID 字段。在<code>project</code>操作中，我们分别通过调用<code>last(…)</code>和<code>first(…​)</code>操作符，选择名称最大和最小的城市及其人口数量。",
+      "count": 1
+    },
+    {
+      "source": "An <code>Aggregation</code> represents a MongoDB <code>aggregate</code> operation and holds the description of the aggregation pipeline instructions. Aggregations are created by invoking the appropriate <code>newAggregation(…)</code> static factory method of the <code>Aggregation</code> class, which takes a list of <code>AggregateOperation</code> and an optional input class.",
+      "translation": "<code>Aggregation</code> 表示 MongoDB 的 <code>aggregate</code> 操作，并包含聚合管道指令的描述。聚合是通过调用 <code>Aggregation</code> 类的适当静态工厂方法 <code>newAggregation(…)</code> 创建的，该方法接受一个 <code>AggregateOperation</code> 列表和一个可选的输入类。",
+      "count": 1
+    },
+    {
+      "source": "Select the <code>state</code> field from the previous <code>group</code> operation. Note that <code>state</code> again implicitly references a group ID field. Because we do not want an implicitly generated ID to appear, we exclude the ID from the previous operation by using <code>and(previousOperation()).exclude()</code>. Because we want to populate the nested <code>City</code> structures in our output class, we have to emit appropriate sub-documents by using the nested method.",
+      "translation": "从上一个<code>group</code>操作中选取<code>state</code>字段。请注意，<code>state</code>再次隐式引用了一个组 ID 字段。由于我们不希望出现隐式生成的 ID，因此通过使用<code>and(previousOperation()).exclude()</code>将 ID 从之前的操作中排除。因为我们要在输出类中填充嵌套的<code>City</code>结构，所以必须使用嵌套方法发出适当的子文档。",
+      "count": 1
+    },
+    {
+      "source": "The Aggregation Framework support in Spring Data MongoDB is based on the following key abstractions: <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/mongodb/core/aggregation/Aggregation.html\">Aggregation</a></code> and <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/mongodb/core/aggregation/AggregationResults.html\">AggregationResults</a></code>.",
+      "translation": "Spring Data MongoDB 中的聚合框架支持基于以下关键抽象：<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/mongodb/core/aggregation/Aggregation.html\">Aggregation</a></code> 和 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/mongodb/core/aggregation/AggregationResults.html\">AggregationResults</a></code>。",
+      "count": 1
+    },
+    {
+      "source": "An <code>AggregationDefinition</code> represents a MongoDB aggregation pipeline operation and describes the processing that should be performed in this aggregation step. Although you could manually create an <code>AggregationDefinition</code>, we recommend using the static factory methods provided by the <code>Aggregate</code> class to construct an <code>AggregateOperation</code>.",
+      "translation": "<code>AggregationDefinition</code> 表示 MongoDB 聚合管道操作，并描述应在该聚合步骤中执行的处理。尽管您可以手动创建 <code>AggregationDefinition</code>，但我们建议使用 <code>Aggregate</code> 类提供的静态工厂方法来构建 <code>AggregateOperation</code>。",
+      "count": 1
+    },
+    {
+      "source": "Unsupported aggregation stages (like <a href=\"https://www.mongodb.com/docs/atlas/atlas-search/query-syntax/\">$search</a> for MongoDB Atlas) can be provided by implementing either <code>AggregationOperation</code>.\n<code>Aggregation.stage</code> is a shortcut for registering a pipeline stage by providing its JSON or <code>Bson</code> representation.",
+      "translation": "不支持的聚合阶段（例如 MongoDB Atlas 的<a href=\"https://www.mongodb.com/docs/atlas/atlas-search/query-syntax/\">$search</a>）可以通过实现<code>AggregationOperation</code>来提供。\n<code>Aggregation.stage</code>是用于通过提供其 JSON 或<code>Bson</code>表示形式来注册管道阶段的快捷方式。",
+      "count": 1
+    },
+    {
+      "source": "To create output fields in buckets, bucket operations can use <code>AggregationExpression</code> through <code>andOutput()</code> and <a href=\"#mongo.aggregation.projection.expressions\">SpEL expressions</a> through <code>andOutputExpression()</code>.",
+      "translation": "要在桶中创建输出字段，桶操作可以通过<code>AggregationExpression</code>使用<code>andOutput()</code>，并通过<code>andOutputExpression()</code>使用<a href=\"#mongo.aggregation.projection.expressions\">SpEL 表达式</a>。",
+      "count": 1
+    },
+    {
+      "source": "Note that further details regarding bucket expressions can be found in the <a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/bucket/\"><code>$bucket</code> section</a> and\n<a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/bucketAuto/\"><code>$bucketAuto</code> section</a> of the MongoDB Aggregation Framework reference documentation.",
+      "translation": "请注意，有关桶表达式的更多详细信息可以在 MongoDB 聚合框架参考文档的 <a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/bucket/\"><code>$bucket</code></a> 和 <a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/bucketAuto/\"><code>$bucketAuto</code></a> 部分中找到。",
+      "count": 1
+    },
+    {
+      "source": "You can define a <code>FacetOperation</code> by using the <code>facet()</code> method of the <code>Aggregation</code> class. You can customize it with multiple aggregation pipelines by using the <code>and()</code> method. Each sub-pipeline has its own field in the output document where its results are stored as an array of documents.",
+      "translation": "您可以使用 `Aggregation` 类的 `facet()` 方法来定义一个 `<code>FacetOperation</code>`。您可以通过 `and()` 方法使用多个聚合管道对其进行自定义。每个子管道在输出文档中都有自己的字段，其结果以文档数组的形式存储在该字段中。",
+      "count": 1
+    },
+    {
+      "source": "Use the <code>group</code> operation to define a group for each <code>tags</code> value for which we aggregate the occurrence count (by using the <code>count</code> aggregation operator and collecting the result in a new field called <code>n</code>).",
+      "translation": "使用<code>group</code>操作为每个<code>tags</code>值定义一个组，并聚合其出现次数（通过使用<code>count</code>聚合算子并将结果收集到一个名为<code>n</code>的新字段中）。",
+      "count": 1
+    },
+    {
+      "source": "<code>BucketAutoOperation</code> determines boundaries in an attempt to evenly distribute documents into a specified number of buckets. <code>BucketAutoOperation</code> optionally takes a granularity value that specifies the <a href=\"https://en.wikipedia.org/wiki/Preferred_number\">preferred number</a> series to use to ensure that the calculated boundary edges end on preferred round numbers or on powers of 10. The following listing shows examples of bucket operations:",
+      "translation": "`BucketAutoOperation` 通过确定边界，尝试将文档均匀分配到指定数量的桶中。`BucketAutoOperation` 可选地接受一个粒度值，该值用于指定要使用的<a href=\"https://en.wikipedia.org/wiki/Preferred_number\">优选数</a>系列，以确保计算出的边界边缘落在优选的整数或 10 的幂上。以下示例展示了桶操作：",
+      "count": 1
+    },
+    {
+      "source": "We support the use of SpEL expressions in projection expressions through the <code>andExpression</code> method of the <code>ProjectionOperation</code> and <code>BucketOperation</code> classes. This feature lets you define the desired expression as a SpEL expression. On running a query, the SpEL expression is translated into a corresponding MongoDB projection expression part. This arrangement makes it much easier to express complex calculations.",
+      "translation": "我们支持在 `<code>ProjectionOperation</code>` 和 `<code>BucketOperation</code>` 类的 `<code>andExpression</code>` 方法中使用 SpEL 表达式作为投影表达式。此功能允许您将所需的表达式定义为 SpEL 表达式。在执行查询时，SpEL 表达式会被转换为相应的 MongoDB 投影表达式部分。这种安排使得表达复杂的计算变得更加容易。",
+      "count": 1
+    },
+    {
+      "source": "You can see examples in more context in <a href=\"#mongo.aggregation.examples.example5\">Aggregation Framework Example 5</a> and <a href=\"#mongo.aggregation.examples.example6\">Aggregation Framework Example 6</a>.\nYou can find more usage examples for supported SpEL expression constructs in <code>SpelExpressionTransformerUnitTests</code>.",
+      "translation": "您可以在<a href=\"#mongo.aggregation.examples.example5\">聚合框架示例 5</a>和<a href=\"#mongo.aggregation.examples.example6\">聚合框架示例 6</a>中查看更完整的上下文示例。  \n有关支持的 SpEL 表达式构造的更多使用示例，请参阅<code>SpelExpressionTransformerUnitTests</code>。",
+      "count": 1
+    },
+    {
+      "source": "Select the <code>n</code> field and create an alias for the ID field generated from the previous group operation (hence the call to <code>previousOperation()</code>) with a name of <code>tag</code>.",
+      "translation": "选择 `<code>n</code>` 字段，并为上一个分组操作生成的 ID 字段创建一个名为 `<code>tag</code>` 的别名（因此需要调用 `<code>previousOperation()</code>`）。",
+      "count": 1
+    },
+    {
+      "source": "Call the <code>aggregate</code> method on <code>MongoTemplate</code> to let MongoDB perform the actual aggregation operation, with the created <code>Aggregation</code> as an argument.",
+      "translation": "在 <code>MongoTemplate</code> 上调用 <code>aggregate</code> 方法，将创建的 <code>Aggregation</code> 作为参数传入，以让 MongoDB 执行实际的聚合操作。",
+      "count": 1
+    },
+    {
+      "source": "Note that the input collection is explicitly specified as the <code>tags</code> parameter to the <code>aggregate</code> Method. If the name of the input collection is not specified explicitly, it is derived from the input class passed as the first parameter to the <code>newAggreation</code> method.",
+      "translation": "请注意，输入集合被显式指定为传递给 `aggregate` 方法的 `<code>tags</code>` 参数。如果未显式指定输入集合的名称，则它将从作为第一个参数传递给 `newAggreation` 方法的输入类中推导出来。",
+      "count": 1
+    },
+    {
+      "source": "Group the input collection by the <code>state</code> field and calculate the sum of the <code>population</code> field and store the result in the new field <code>\"totalPop\"</code>.",
+      "translation": "按 `<code>state</code>` 字段对输入集合进行分组，计算 `<code>population</code>` 字段的总和，并将结果存储在新字段 `<code>\"totalPop\"</code>` 中。",
+      "count": 1
+    },
+    {
+      "source": "The actual aggregate operation is run by the <code>aggregate</code> method of the <code>MongoTemplate</code>, which takes the desired output class as a parameter.",
+      "translation": "实际的聚合操作由 `MongoTemplate` 的 `aggregate` 方法执行，该方法将期望的输出类作为参数传入。",
+      "count": 1
+    },
+    {
+      "source": "A <code>TypedAggregation</code>, just like an <code>Aggregation</code>, holds the instructions of the aggregation pipeline and a reference to the input type, that is used for mapping domain properties to actual document fields.",
+      "translation": "`TypedAggregation` 与 `Aggregation` 类似，既包含聚合管道的指令，又包含对输入类型的引用，该类型用于将领域属性映射到实际的文档字段。",
+      "count": 1
+    },
+    {
+      "source": "Changed in 3.2 referencing non-existent properties does no longer raise errors. To restore the previous behaviour use the <code>strictMapping</code> option of <code>AggregationOptions</code>.",
+      "translation": "在 3.2 版本中，引用不存在的属性不再抛出错误。若要恢复之前的行为，请使用<code>AggregationOptions</code>的<code>strictMapping</code>选项。",
+      "count": 1
+    },
+    {
+      "source": "<code>AggregationResults</code> is the container for the result of an aggregate operation. It provides access to the raw aggregation result, in the form of a <code>Document</code> to the mapped objects and other information about the aggregation.",
+      "translation": "`AggregationResults` 是聚合操作结果的容器。它提供对原始聚合结果（以 `Document` 形式）的访问，以及关于聚合的映射对象和其他信息。",
+      "count": 1
+    },
+    {
+      "source": "Note that, if you provide an input class as the first parameter to the <code>newAggregation</code> method, the <code>MongoTemplate</code> derives the name of the input collection from this class. Otherwise, if you do not not specify an input class, you must provide the name of the input collection explicitly. If both an input class and an input collection are provided, the latter takes precedence.",
+      "translation": "请注意，如果您将输入类作为第一个参数传递给 <code>newAggregation</code> 方法，<code>MongoTemplate</code> 将从该类中推导输入集合的名称。否则，如果您未指定输入类，则必须显式提供输入集合的名称。如果同时提供了输入类和输入集合，以后者为准。",
+      "count": 1
+    },
+    {
+      "source": "More examples for project operations can be found in the <code>AggregationTests</code> class. Note that further details regarding the projection expressions can be found in the <a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/project/#pipe._S_project\">corresponding section</a> of the MongoDB Aggregation Framework reference documentation.",
+      "translation": "有关项目操作的更多示例，请参阅<code>AggregationTests</code>类。请注意，关于投影表达式的进一步详细信息，可参考MongoDB聚合框架参考文档中的<a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/project/#pipe._S_project\">相应部分</a>。",
+      "count": 1
+    },
+    {
+      "source": "Note that further details regarding facet operation can be found in the <a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/facet/\"><code>$facet</code> section</a> of the MongoDB Aggregation Framework reference documentation.",
+      "translation": "请注意，有关 facet 操作的更多详细信息可以在 MongoDB 聚合框架参考文档的<a href=\"https://docs.mongodb.org/manual/reference/operator/aggregation/facet/\"><code>$facet</code></a>部分中找到。",
+      "count": 1
+    },
+    {
+      "source": "Create a new aggregation by using the <code>newAggregation</code> static factory method, to which we pass a list of aggregation operations. These aggregate operations define the aggregation pipeline of our <code>Aggregation</code>.",
+      "translation": "使用 `newAggregation` 静态工厂方法创建一个新的聚合，并传入一个聚合操作列表。这些聚合操作定义了我们的 `Aggregation` 的聚合管道。",
+      "count": 1
+    },
+    {
+      "source": "Use the <code>project</code> operation to select the <code>tags</code> field (which is an array of strings) from the input collection.",
+      "translation": "使用 `project` 操作从输入集合中选取 `tags` 字段（该字段为字符串数组）。",
+      "count": 1
+    },
+    {
+      "source": "Use the <code>unwind</code> operation to generate a new document for each tag within the <code>tags</code> array.",
+      "translation": "使用<code>unwind</code>操作为<code>tags</code>数组中的每个标签生成一个新文档。",
+      "count": 1
+    },
+    {
+      "source": "Note that the <code>ZipInfo</code> class maps the structure of the given input-collection. The <code>ZipInfoStats</code> class defines the structure in the desired output format.",
+      "translation": "请注意，<code>ZipInfo</code> 类映射给定输入集合的结构。<code>ZipInfoStats</code> 类定义所需输出格式的结构。",
+      "count": 1
+    },
+    {
+      "source": "Sort the resulting list of <code>StateStats</code> by their state name in ascending order in the <code>sort</code> operation.",
+      "translation": "在 `sort` 操作中，按州名升序对生成的 `<code>StateStats</code>` 列表进行排序。",
+      "count": 1
+    },
+    {
+      "source": "Note that we derive the name of the input collection from the <code>ZipInfo</code> class passed as the first parameter to the <code>newAggregation</code> method.",
+      "translation": "请注意，输入集合的名称是从作为<code>newAggregation</code>方法第一个参数传递的<code>ZipInfo</code>类中派生的。",
+      "count": 1
+    },
+    {
+      "source": "Filter the intermediate result by using a <code>match</code> operation which accepts a <code>Criteria</code> query as an argument.",
+      "translation": "使用接受<code>Criteria</code>查询作为参数的<code>match</code>操作来过滤中间结果。",
+      "count": 1
+    },
+    {
+      "source": "Note that we derive the name of the input collection from the <code>ZipInfo</code> class passed as first parameter to the <code>newAggregation</code> method.",
+      "translation": "请注意，输入集合的名称是从作为<code>newAggregation</code>方法第一个参数传递的<code>ZipInfo</code>类中派生的。",
+      "count": 1
+    },
+    {
+      "source": "Note that we derive the name of the input collection from the <code>Product</code> class passed as first parameter to the <code>newAggregation</code> method.",
+      "translation": "请注意，输入集合的名称是从作为<code>newAggregation</code>方法第一个参数传递的<code>Product</code>类中派生的。",
+      "count": 1
+    },
+    {
+      "source": "Note: The additional parameters passed to the <code>addExpression</code> method can be referenced with indexer expressions according to their position. In this example, we reference the first parameter of the parameters array with <code>[0]</code>. When the SpEL expression is transformed into a MongoDB aggregation framework expression, external parameter expressions are replaced with their respective values.",
+      "translation": "注意：传递给<code>addExpression</code>方法的额外参数可以根据其位置使用索引表达式进行引用。在本示例中，我们使用<code>[0]</code>引用参数数组中的第一个参数。当 SpEL 表达式转换为 MongoDB 聚合框架表达式时，外部参数表达式将被替换为其各自的值。",
+      "count": 1
+    },
+    {
+      "source": "For further information, see the full <a href=\"https://docs.mongodb.org/manual/aggregation/\">reference documentation</a> of the aggregation framework and other data aggregation tools for MongoDB.",
+      "translation": "如需更多信息，请参阅聚合框架的完整<a href=\"https://docs.mongodb.org/manual/aggregation/\">参考文档</a>以及 MongoDB 的其他数据聚合工具。",
+      "count": 1
+    },
+    {
+      "source": "At runtime, field references get checked against the given input type, considering potential <code>@Field</code> annotations.",
+      "translation": "运行时，字段引用会根据给定的输入类型进行检查，并考虑潜在的 `<code>@Field</code>` 注解。",
+      "count": 1
+    },
+    {
+      "source": "Note that the aggregation operations not listed here are currently not supported by Spring Data MongoDB. Comparison aggregation operators are expressed as <code>Criteria</code> expressions.",
+      "translation": "请注意，此处未列出的聚合操作当前尚不支持于 Spring Data MongoDB。比较聚合操作以<code>Criteria</code>表达式表示。",
+      "count": 1
+    },
+    {
+      "source": "<code>BucketOperation</code> takes a defined set of boundaries to group incoming documents into these categories. Boundaries are required to be sorted. The following listing shows some examples of bucket operations:",
+      "translation": "`BucketOperation` 接收一组预定义的边界，用于将传入的文档分组到这些类别中。边界必须是排序好的。以下示例展示了某些分桶操作的用法：",
+      "count": 1
+    },
+    {
+      "source": "Sort by count operations group incoming documents based on the value of a specified expression, compute the count of documents in each distinct group, and sort the results by count. It offers a handy shortcut to apply sorting when using <a href=\"#mongo.aggregation.facet\">Faceted Classification</a>. Sort by count operations require a grouping field or grouping expression. The following listing shows a sort by count example:",
+      "translation": "按计数操作根据指定表达式的值对传入文档进行分组，计算每个不同组中的文档数量，并按计数对结果进行排序。它提供了一种便捷的快捷方式，可在使用<a href=\"#mongo.aggregation.facet\">分面分类</a>时应用排序。按计数操作需要一个分组字段或分组表达式。以下示例展示了按计数排序的情况：",
+      "count": 1
+    },
+    {
+      "source": "In addition to the transformations shown in the preceding table, you can use standard SpEL operations such as <code>new</code> to (for example) create arrays and reference expressions through their names (followed by the arguments to use in brackets). The following example shows how to create an array in this fashion:",
+      "translation": "除了前表中所示的转换外，您还可以使用标准的 SpEL 操作（例如 `<code>new</code>`）来创建数组并通过名称引用表达式（后跟括号中的参数）。以下示例展示了如何以这种方式创建数组：",
+      "count": 1
+    },
+    {
+      "source": "In this introductory example, we want to aggregate a list of tags to get the occurrence count of a particular tag from a MongoDB collection (called <code>tags</code>) sorted by the occurrence count in descending order. This example demonstrates the usage of grouping, sorting, projections (selection), and unwinding (result splitting).",
+      "translation": "在本入门示例中，我们要聚合一个标签列表，以获取来自 MongoDB 集合（称为 <code>tags</code>）中特定标签的出现次数，并按出现次数降序排序。本示例展示了分组、排序、投影（选择）以及展开（结果拆分）的使用方法。",
+      "count": 1
+    },
+    {
+      "source": "Use the <code>sort</code> operation to sort the resulting list of tags by their occurrence count in descending order.",
+      "translation": "使用 `<code>sort</code>` 操作按出现次数降序对生成的标签列表进行排序。",
+      "count": 1
+    },
+    {
+      "source": "This example is based on the <a href=\"https://docs.mongodb.org/manual/tutorial/aggregation-examples/#largest-and-smallest-cities-by-state\">Largest and Smallest Cities by State</a> example from the MongoDB Aggregation Framework documentation. We added additional sorting to produce stable results with different MongoDB versions. Here we want to return the smallest and largest cities by population for each state by using the aggregation framework. This example demonstrates grouping, sorting, and projections (selection).",
+      "translation": "本示例基于 MongoDB 聚合框架文档中的<a href=\"https://docs.mongodb.org/manual/tutorial/aggregation-examples/#largest-and-smallest-cities-by-state\">按州划分的最大城市和最小城市</a>示例。我们添加了额外的排序，以确保在不同版本的 MongoDB 中产生稳定的结果。在此示例中，我们希望使用聚合框架返回每个州人口最少和最多的城市。本示例展示了分组、排序和投影（选择）操作。",
+      "count": 1
+    },
+    {
+      "source": "This example is based on the <a href=\"https://docs.mongodb.org/manual/tutorial/aggregation-examples/#states-with-populations-over-10-million\">States with Populations Over 10 Million</a> example from the MongoDB Aggregation Framework documentation. We added additional sorting to produce stable results with different MongoDB versions. Here we want to return all states with a population greater than 10 million, using the aggregation framework. This example demonstrates grouping, sorting, and matching (filtering).",
+      "translation": "本示例基于 MongoDB 聚合框架文档中的<a href=\"https://docs.mongodb.org/manual/tutorial/aggregation-examples/#states-with-populations-over-10-million\">人口超过 1000 万的国家</a>示例。我们添加了额外的排序操作，以确保在不同版本的 MongoDB 中产生稳定的结果。本例旨在使用聚合框架返回所有人口超过 1000 万的国家，并演示了分组、排序和匹配（过滤）操作。",
+      "count": 1
+    },
+    {
+      "source": "Sort the intermediate result by the id-reference of the previous group operation in addition to the <code>\"totalPop\"</code> field in ascending order.",
+      "translation": "按前一组操作的 id-reference 以及\"<code>totalPop</code>\"字段对中间结果进行升序排序。",
+      "count": 1
+    },
+    {
+      "source": "This example uses conditional projection. It is derived from the <a href=\"https://docs.mongodb.com/manual/reference/operator/aggregation/cond/\">$cond reference documentation</a>.",
+      "translation": "本示例使用条件投影。它源自<a href=\"https://docs.mongodb.com/manual/reference/operator/aggregation/cond/\">$cond 参考文档</a>。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data MongoDB provides support for the Aggregation Framework introduced to MongoDB in version 2.2.",
+      "translation": "Spring Data MongoDB 提供了对 MongoDB 在 2.2 版本中引入的聚合框架的支持。",
+      "count": 1
+    },
+    {
+      "source": "The following listing shows the canonical example for using the Spring Data MongoDB support for the MongoDB Aggregation Framework:",
+      "translation": "以下示例展示了使用 MongoDB 聚合框架的 Spring Data MongoDB 支持的标准范例：",
+      "count": 1
+    },
+    {
+      "source": "The MongoDB Aggregation Framework provides the following types of aggregation stages and operations:",
+      "translation": "MongoDB 聚合框架提供以下类型的聚合阶段和操作：",
+      "count": 1
+    },
+    {
+      "source": "At the time of this writing, we provide support for the following Aggregation Operators in Spring Data MongoDB:",
+      "translation": "截至本文撰写之时，我们在 Spring Data MongoDB 中支持以下聚合操作符：",
+      "count": 1
+    },
+    {
+      "source": "Set Aggregation Operators",
+      "translation": "集合聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Group/Accumulator Aggregation Operators",
+      "translation": "组/累加器聚合算子",
+      "count": 1
+    },
+    {
+      "source": "Arithmetic Aggregation Operators",
+      "translation": "算术聚合算子",
+      "count": 1
+    },
+    {
+      "source": "String Aggregation Operators",
+      "translation": "字符串聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Comparison Aggregation Operators",
+      "translation": "比较聚合算子",
+      "count": 1
+    },
+    {
+      "source": "Array Aggregation Operators",
+      "translation": "数组聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Literal Operators",
+      "translation": "字面量运算符",
+      "count": 1
+    },
+    {
+      "source": "Date Aggregation Operators",
+      "translation": "日期聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Variable Operators",
+      "translation": "变量运算符",
+      "count": 1
+    },
+    {
+      "source": "Conditional Aggregation Operators",
+      "translation": "条件聚合算子",
+      "count": 1
+    },
+    {
+      "source": "Type Aggregation Operators",
+      "translation": "类型聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Convert Aggregation Operators",
+      "translation": "转换聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Object Aggregation Operators",
+      "translation": "对象聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Script Aggregation Operators",
+      "translation": "脚本聚合算子",
+      "count": 1
+    },
+    {
+      "source": "* The operation is mapped or added by Spring Data MongoDB.",
+      "translation": "* 该操作由 Spring Data MongoDB 映射或添加。",
+      "count": 1
+    },
+    {
+      "source": "As of Version 3.4, MongoDB supports faceted classification by using the Aggregation Framework. A faceted classification uses semantic categories (either general or subject-specific) that are combined to create the full classification entry. Documents flowing through the aggregation pipeline are classified into buckets. A multi-faceted classification enables various aggregations on the same set of input documents, without needing to retrieve the input documents multiple times.",
+      "translation": "从版本 3.4 开始，MongoDB 支持使用聚合框架进行分面分类。分面分类采用语义类别（可以是通用类别或特定主题类别）并将其组合以创建完整的分类条目。流经聚合管道的文档会被分类到相应的桶中。多分面分类允许对同一组输入文档执行各种聚合操作，而无需多次检索这些输入文档。",
+      "count": 1
+    },
+    {
+      "source": "Multiple aggregation pipelines can be used to create multi-faceted aggregations that characterize data across multiple dimensions (or facets) within a single aggregation stage. Multi-faceted aggregations provide multiple filters and categorizations to guide data browsing and analysis. A common implementation of faceting is how many online retailers provide ways to narrow down search results by applying filters on product price, manufacturer, size, and other factors.",
+      "translation": "可以使用多个聚合管道来创建多面聚合，从而在单个聚合阶段内对数据按多个维度（或方面）进行特征描述。多面聚合提供了多种过滤器和分类方式，以指导数据浏览和分析。一种常见的方面实现方式是，许多在线零售商允许用户通过应用产品价格、制造商、尺寸及其他因素的过滤器来缩小搜索结果范围。",
+      "count": 1
+    },
+    {
+      "source": "Sub-pipelines can project and filter input documents prior to grouping. Common use cases include extraction of date parts or calculations before categorization. The following listing shows facet operation examples:",
+      "translation": "子流水线可以在分组之前对输入文档进行投影和过滤。常见用例包括在分类之前提取日期部分或执行计算。以下示例展示了面操作：",
+      "count": 1
+    },
+    {
+      "source": "A sort by count operation is equivalent to the following BSON (Binary JSON):",
+      "translation": "按计数排序操作等效于以下 BSON（二进制 JSON）：",
+      "count": 1
+    },
+    {
+      "source": "Consider the following SpEL expression:",
+      "translation": "考虑以下 SpEL 表达式：",
+      "count": 1
+    },
+    {
+      "source": "The preceding expression is translated into the following projection expression part:",
+      "translation": "前述表达式被转换为以下投影表达式部分：",
+      "count": 1
+    },
+    {
+      "source": "The examples in this section demonstrate the usage patterns for the MongoDB Aggregation Framework with Spring Data MongoDB.",
+      "translation": "本节中的示例展示了在 Spring Data MongoDB 中使用 MongoDB 聚合框架的模式。",
+      "count": 1
+    },
+    {
+      "source": "The preceding listing uses the following algorithm:",
+      "translation": "前述列表使用了以下算法：",
+      "count": 1
+    },
+    {
+      "source": "This example demonstrates the use of simple arithmetic operations in the projection operation.",
+      "translation": "本示例演示了投影运算中简单算术操作的使用。",
+      "count": 1
+    },
+    {
+      "source": "This example demonstrates the use of simple arithmetic operations derived from SpEL Expressions in the projection operation.",
+      "translation": "本示例演示了在投影操作中如何使用源自 SpEL 表达式的简单算术运算。",
+      "count": 1
+    },
+    {
+      "source": "This example demonstrates the use of complex arithmetic operations derived from SpEL Expressions in the projection operation.",
+      "translation": "本示例展示了在投影操作中如何使用源自 SpEL 表达式的复杂算术运算。",
+      "count": 1
+    },
+    {
+      "source": "Note that we can also refer to other fields of the document within the SpEL expression.",
+      "translation": "请注意，在 SpEL 表达式中，我们也可以引用文档中的其他字段。",
+      "count": 1
+    },
+    {
+      "source": "As of MongoDB 3.6, it is possible to exclude fields from the projection by using a conditional expression.",
+      "translation": "从 MongoDB 3.6 版本开始，可以使用条件表达式来排除投影中的字段。",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS\"和“Amazon Web Services”是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归其各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../mongodb.html\">MongoDB Support</a></li>\n      <li><a href=\"template-api.html\">Template API</a></li>\n      <li><a href=\"aggregation-framework.html\">Aggregation Framework Support</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../mongodb.html\">MongoDB 支持</a></li>\n      <li><a href=\"template-api.html\">模板 API</a></li>\n      <li><a href=\"aggregation-framework.html\">聚合框架支持</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/aggregation-framework.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/aggregation-framework.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>",
+      "translation": "<a class=\"title\" href=\"../data-commons/index.html\">Spring Data 公共模块</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../index.html\">Spring Data MongoDB</a>",
+      "translation": "<a class=\"title\" href=\"../index.html\">Spring Data MongoDB</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Example 1. Projection expression examples",
+      "translation": "示例 1。投影表达式示例",
+      "count": 1
+    },
+    {
+      "source": "Example 2. Multi-Stage Aggregation using Projection and Sorting",
+      "translation": "示例 2：使用投影和排序进行多阶段聚合",
+      "count": 1
+    },
+    {
+      "source": "Example 3. Bucket operation examples",
+      "translation": "示例 3。Bucket 操作示例",
+      "count": 1
+    },
+    {
+      "source": "Example 4. Bucket operation examples",
+      "translation": "示例 4。Bucket 操作示例",
+      "count": 1
+    },
+    {
+      "source": "Example 5. Facet operation examples",
+      "translation": "示例 5。Facet 操作示例",
+      "count": 1
+    },
+    {
+      "source": "Example 6. Sort by count example",
+      "translation": "示例 6：按计数排序示例",
+      "count": 1
+    },
+    {
+      "source": "Example 7. Conditional aggregation projection",
+      "translation": "示例 7：条件聚合投影",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../preface.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">Connecting to MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"template-api.html\">Template API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-config.html\">Configuration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-collection-management.html\">Index and Collection Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-crud-operations.html\">Saving, Updating, and Removing Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-query-operations.html\">Querying Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-document-count.html\">Counting Documents</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"aggregation-framework.html\">Aggregation Framework Support</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template-gridfs.html\">GridFS Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping/mapping.html\">Object Mapping</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/custom-conversions.html\">Type based Converter</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/property-converters.html\">Property Converters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/unwrapping-entities.html\">Unwrapping Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/document-references.html\">Object References</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-index-management.html\">Index Creation</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"lifecycle-events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Auditing</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"client-session-transactions.html\">Sessions &amp; Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"change-streams.html\">Change Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"tailable-cursors.html\">Tailable Cursors</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sharding.html\">Sharding</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-search-indexes.html\">MongoDB Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-encryption.html\">Encryption</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"aot.html\">Ahead of Time Optimizations</a>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../preface.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">快速入门</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">连接 MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"template-api.html\">模板 API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-config.html\">配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-collection-management.html\">索引和集合管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-crud-operations.html\">保存、更新和删除文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-query-operations.html\">查询文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-document-count.html\">统计文档数量</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"aggregation-framework.html\">聚合框架支持</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template-gridfs.html\">GridFS 支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping/mapping.html\">对象映射</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/custom-conversions.html\">基于类型的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/property-converters.html\">属性转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/unwrapping-entities.html\">类型解包</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/document-references.html\">对象引用</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-index-management.html\">索引创建</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">值表达式基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"lifecycle-events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">审计</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"client-session-transactions.html\">会话与事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"change-streams.html\">变更流</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"tailable-cursors.html\">可锁定游标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sharding.html\">分片</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-search-indexes.html\">MongoDB 搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-encryption.html\">加密</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"aot.html\">提前优化</a>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">MongoDB Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">MongoDB-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/modifying-methods.html\">MongoDB-specific Data Manipulation Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">仓储 (Repositories)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">MongoDB 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data 扩展功能</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">MongoDB 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/modifying-methods.html\">MongoDB 专用数据操作方法的定义</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影 (Projections)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓储查询关键字参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓储查询返回类型参考</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../observability/observability.html\">Observability</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/conventions.html\">Conventions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/metrics.html\">Metrics</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/spans.html\">Spans</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../observability/observability.html\">可观测性</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/conventions.html\">约定</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/metrics.html\">指标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/spans.html\">跨度</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">要求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空值安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>If the value of the field <code>author.middle</code></td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>does not contain a value,</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>then use <a href=\"https://docs.mongodb.com/manual/reference/aggregation-variables/#variable.REMOVE\"><code>$$REMOVE</code></a> to exclude the field.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Otherwise, add the field value of <code>author.middle</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>如果字段 <code>author.middle</code> 的值</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>不包含任何值，</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>则使用 <a href=\"https://docs.mongodb.com/manual/reference/aggregation-variables/#variable.REMOVE\"><code>$$REMOVE</code></a> 来排除该字段。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>否则，添加 <code>author.middle</code> 的字段值。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.x-to-3.x.html\">Migration Guide from 2.x to 3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.x-to-4.x.html\">Migration Guide from 3.x to 4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.x-to-5.x.html\">Migration Guide from 4.x to 5.x</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概述</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.x-to-3.x.html\">从 2.x 到 3.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.x-to-4.x.html\">从 3.x 到 4.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.x-to-5.x.html\">从 4.x 到 5.x 的迁移指南</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">SpEL Expression</th>\n<th class=\"tableblock halign-left valign-top\">Mongo Expression Part</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">SpEL 表达式</th>\n<th class=\"tableblock halign-left valign-top\">MongoDB 表达式部分</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.basic-concepts\"></a>Basic Concepts",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.basic-concepts\"></a>基本概念",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.projection\"></a>Projection Expressions",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.projection\"></a>投影表达式",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.facet\"></a>Faceted Classification",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.facet\"></a>分面分类",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#multi-faceted-aggregation\"></a>Multi-faceted Aggregation",
+      "translation": "<a class=\"anchor\" href=\"#multi-faceted-aggregation\"></a>多面聚合",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.sort-by-count\"></a>Sort By Count",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.sort-by-count\"></a>按计数排序",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.projection.expressions\"></a>Spring Expression Support in Projection Expressions",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.projection.expressions\"></a>投影表达式中的 Spring 表达式支持",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#complex-calculations-with-spel-expressions\"></a>Complex Calculations with SpEL expressions",
+      "translation": "<a class=\"anchor\" href=\"#complex-calculations-with-spel-expressions\"></a>使用 SpEL 表达式进行复杂计算",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples\"></a>Aggregation Framework Examples",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples\"></a>聚合框架示例",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example1\"></a>Aggregation Framework Example 1",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example1\"></a>聚合框架示例 1",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example2\"></a>Aggregation Framework Example 2",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example2\"></a>聚合框架示例 2",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example3\"></a>Aggregation Framework Example 3",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example3\"></a>聚合框架示例 3",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example4\"></a>Aggregation Framework Example 4",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example4\"></a>聚合框架示例 4",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example5\"></a>Aggregation Framework Example 5",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example5\"></a>聚合框架示例 5",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example6\"></a>Aggregation Framework Example 6",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example6\"></a>聚合框架示例 6",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example7\"></a>Aggregation Framework Example 7",
+      "translation": "<a class=\"anchor\" href=\"#mongo.aggregation.examples.example7\"></a>聚合框架示例 7",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data MongoDB",
+      "translation": "Spring Data MongoDB",
+      "count": 1
+    },
+    {
+      "source": "MongoDB Support",
+      "translation": "MongoDB 支持",
+      "count": 1
+    },
+    {
+      "source": "Aggregation Framework Support",
+      "translation": "聚合框架支持",
+      "count": 1
+    },
+    {
+      "source": "Supported Aggregation Operations &amp; Stages",
+      "translation": "支持的聚合操作与阶段",
+      "count": 1
+    },
+    {
+      "source": "Table 1. Aggregation Operators currently supported by Spring Data MongoDB",
+      "translation": "表 1。Spring Data MongoDB 当前支持的聚合运算符",
+      "count": 1
+    },
+    {
+      "source": "Supported SpEL transformations",
+      "translation": "支持的 SpEL 转换",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

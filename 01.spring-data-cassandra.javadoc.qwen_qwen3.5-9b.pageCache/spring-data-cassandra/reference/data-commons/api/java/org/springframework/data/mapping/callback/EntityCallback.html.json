@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-16 12:58:26",
+  "updated_at": "2026-06-16 12:58:26",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 17,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "While it is possible for a <a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a> to declare that it throws arbitrary exception types, any checked\nexceptions thrown from a <a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a> are wrapped in an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/UndeclaredThrowableException.html\" title=\"class or interface in java.lang.reflect\"><code>UndeclaredThrowableException</code></a> since the callback mechanism can\nonly handle runtime exceptions. Entity callback processing is stopped on the <a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a> that raised an\nexception and the caused exception is propagated to the caller.",
+      "translation": "虽然 `<a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a>` 可以声明抛出任意类型的异常，但任何从 `<a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a>` 抛出的受检异常都会被包装在\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/UndeclaredThrowableException.html\" title=\"class or interface in java.lang.reflect\"><code>UndeclaredThrowableException</code></a> 中，因为回调机制只能处理运行时异常。当 `<a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a>` 抛出异常时，实体回调处理将在此处停止，并引发的异常会传播给调用者。",
+      "count": 1
+    },
+    {
+      "source": "An <a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a> can generically declare the domain type that it is able to process by specifying the\ngeneric type parameter <code>&lt;T&gt;</code>. When registered with a Spring\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContext.html\" title=\"class or interface in org.springframework.context\"><code>ApplicationContext</code></a>, callbacks are filtered accordingly, with the callback getting\ninvoked for assignable domain objects only.",
+      "translation": "<a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a> 可以通过指定泛型类型参数 <code>&lt;T&gt;</code> 来泛化声明其能够处理的域类型。当将其注册到 Spring <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContext.html\" title=\"class or interface in org.springframework.context\"><code>ApplicationContext</code></a> 时，回调会根据此类型进行过滤，仅对可赋值给该类型的域对象触发回调。",
+      "count": 1
+    },
+    {
+      "source": "Multiple entity callbacks are invoked sequentially with the result of the previous callback. Callbacks are unordered\nby default. It is possible to define the order in which listeners for a certain domain type are to be invoked. To do\nso, add Spring's common <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/annotation/Order.html\" title=\"class or interface in org.springframework.core.annotation\"><code>@Order</code></a> annotation or implement\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/Ordered.html\" title=\"class or interface in org.springframework.core\"><code>Ordered</code></a>.",
+      "translation": "多个实体回调按顺序依次调用，且前一个回调的结果会传递给下一个。默认情况下，回调是无序的。可以定义特定领域类型监听器的调用顺序：为此，请添加 Spring 通用的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/annotation/Order.html\" title=\"class or interface in org.springframework.core.annotation\"><code>@Order</code></a> 注解，或实现 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/Ordered.html\" title=\"class or interface in org.springframework.core\"><code>Ordered</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a> interface needs to define a callback method accepting an object of the parameterized type as\nits first argument followed by additional <i>optional</i> arguments.",
+      "translation": "<a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>EntityCallback</code></a> 接口需要定义一个回调方法，该方法接受参数化类型的对象作为第一个参数，随后是额外的<i>可选</i>参数。",
+      "count": 1
+    },
+    {
+      "source": "Typically, entity callbacks are invoked after publishing <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationEvent.html\" title=\"class or interface in org.springframework.context\"><code>events</code></a>.",
+      "translation": "通常情况下，实体回调会在发布<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationEvent.html\" title=\"class or interface in org.springframework.context\"><code>events</code></a>之后被调用。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/hint/annotation/Reflective.html\" title=\"class or interface in org.springframework.aot.hint.annotation\">@Reflective</a>(<a href=\"../../aot/PublicMethodReflectiveProcessor.html\" title=\"class in org.springframework.data.aot\">PublicMethodReflectiveProcessor</a>.class)\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">EntityCallback&lt;T&gt;</span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/hint/annotation/Reflective.html\" title=\"类或接口在 org.springframework.aot.hint.annotation\">@Reflective</a>(<a href=\"../../aot/PublicMethodReflectiveProcessor.html\" title=\"org.springframework.data.aot 中的类\">PublicMethodReflectiveProcessor</a>.class)\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">EntityCallback&lt;T&gt;</span>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface EntityCallback\">Interface EntityCallback&lt;T&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 EntityCallback\">接口 EntityCallback&lt;T&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Core",
+      "translation": "Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>2.2</dd>\n<dt>Author:</dt>\n<dd>Mark Paluch, Christoph Strobl</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/Ordered.html\" title=\"class or interface in org.springframework.core\"><code>Ordered</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/annotation/Order.html\" title=\"class or interface in org.springframework.core.annotation\"><code>Order</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>自：</dt>\n<dd>2.2</dd>\n<dt>作者：</dt>\n<dd>Mark Paluch, Christoph Strobl</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/Ordered.html\" title=\"org.springframework.core 中的类或接口\"><code>Ordered</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/annotation/Order.html\" title=\"org.springframework.core.annotation 中的类或接口\"><code>Order</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - Entity type used to detect <a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>callbacks</code></a> to invoke via their generic type signature.</span></dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - 用于检测通过其泛型类型签名调用的<a href=\"EntityCallback.html\" title=\"interface in org.springframework.data.mapping.callback\"><code>回调</code></a>的实体类型。</span></dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Exception Handling",
+      "translation": "异常处理",
+      "count": 1
+    },
+    {
+      "source": "Domain Type Binding",
+      "translation": "域类型绑定",
+      "count": 1
+    },
+    {
+      "source": "Marker interface for entity callbacks to be implemented in specific callback subtypes. Intended for internal usage\nwithin store specific implementations.",
+      "translation": "实体回调在特定回调子类型中实现的标记接口。专为存储特定实现内部使用而设计。",
+      "count": 1
+    }
+  ]
+}

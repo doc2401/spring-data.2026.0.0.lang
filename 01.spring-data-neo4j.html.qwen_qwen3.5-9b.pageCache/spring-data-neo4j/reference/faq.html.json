@@ -1,0 +1,1236 @@
+{
+  "created_at": "2026-06-17 10:19:54",
+  "updated_at": "2026-06-17 10:19:54",
+  "stats": {
+    "total_entries": 244,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 244,
+    "entries_with_hits": 244,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.024399999999999998
+  },
+  "items": [
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "We provide two abstract configuration classes to support you in bringing in the necessary beans:\n<code>org.springframework.data.neo4j.config.AbstractNeo4jConfig</code> for imperative database access and\n<code>org.springframework.data.neo4j.config.AbstractReactiveNeo4jConfig</code> for the reactive version.\nThey are meant to be used with <code>@EnableNeo4jRepositories</code> and <code>@EnableReactiveNeo4jRepositories</code> respectively.\nSee <a href=\"#bootless-imperative-configuration\">Enabling Spring Data Neo4j infrastructure for imperative database access</a> and <a href=\"#bootless-reactive-configuration\">Enabling Spring Data Neo4j infrastructure for reactive database access</a> for an example usage.\nBoth classes require you to override <code>driver()</code> in which you are supposed to create the driver.",
+      "translation": "我们提供两个抽象配置类以支持您引入所需的 Bean：用于命令式数据库访问的<code>org.springframework.data.neo4j.config.AbstractNeo4jConfig</code>和用于响应式版本的<code>org.springframework.data.neo4j.config.AbstractReactiveNeo4jConfig</code>。它们分别旨在与<code>@EnableNeo4jRepositories</code>和<code>@EnableReactiveNeo4jRepositories</code>配合使用。有关示例用法，请参阅<a href=\"#bootless-imperative-configuration\">为命令式数据库访问启用 Spring Data Neo4j 基础设施</a>和<a href=\"#bootless-reactive-configuration\">为响应式数据库访问启用 Spring Data Neo4j 基础设施</a>。这两个类都要求您重写<code>driver()</code>方法，在该方法中创建驱动。",
+      "count": 1
+    },
+    {
+      "source": "If your goal is to make only the conditions of your queries <strong>dynamic</strong>, then have a look at the <a class=\"xref page\" href=\"repositories/core-extensions.html#core.extensions.querydsl\"><code>QuerydslPredicateExecutor</code></a>\nbut especially our own variant of it, the <code>CypherdslConditionExecutor</code>. Both <a class=\"xref page\" href=\"repositories/sdn-extension.html#sdn-mixins\">mixins</a> allow adding conditions to\nthe full queries we create for you. Thus, you will have the domain fully populated together with custom conditions.\nOf course, your conditions must work with what we generate. Find the names of the root node, the related nodes and more\n<a class=\"xref page\" href=\"appendix/custom-queries.html#custom-queries\">here</a>.",
+      "translation": "如果您的目标仅是使查询条件<strong>动态化</strong>，请查看 <a class=\"xref page\" href=\"repositories/core-extensions.html#core.extensions.querydsl\"><code>QuerydslPredicateExecutor</code></a>，尤其是我们自己的变体 <code>CypherdslConditionExecutor</code>。这两个 <a class=\"xref page\" href=\"repositories/sdn-extension.html#sdn-mixins\">混入类（mixins）</a> 均允许向为您生成的完整查询添加条件。因此，您将获得完全填充的领域数据以及自定义条件。当然，您的条件必须与我们生成的内容兼容。有关根节点名称、相关节点等信息，请参见 <a class=\"xref page\" href=\"appendix/custom-queries.html#custom-queries\">此处</a>。",
+      "count": 1
+    },
+    {
+      "source": "We find 3 nodes labeled <code>Vertex</code> and 2 nodes labeled <code>Movie</code>. Both can be mapped with a custom query.\nAssume there’s a node entity for both <code>Vertex</code> and <code>Movie</code> as well as <code>Actor</code> taking care of the relationship:",
+      "translation": "我们找到 3 个标记为 `<code>Vertex</code>` 的节点和 2 个标记为 `<code>Movie</code>` 的节点。两者都可以通过自定义查询进行映射。假设存在用于 `<code>Vertex</code>`、`<code>Movie</code>` 以及负责处理关系的 `<code>Actor</code>` 的节点实体：",
+      "count": 1
+    },
+    {
+      "source": "\"Find by example\" is a new feature in SDN.\nYou instantiate an entity or use an existing one.\nWith this instance you create an <code>org.springframework.data.domain.Example</code>.\nIf your repository extends <code>org.springframework.data.neo4j.repository.Neo4jRepository</code> or <code>org.springframework.data.neo4j.repository.ReactiveNeo4jRepository</code>, you can immediately use the available <code>findBy</code> methods taking in an example, like shown in <a href=\"#find-by-example-example\">findByExample</a>.",
+      "translation": "\"Find by Example\" 是 SDN 的一项新功能。  \n您可以实例化一个实体，或使用现有的实体。  \n通过该实例，您可以创建一个 `<code>org.springframework.data.domain.Example</code>` 对象。  \n如果您的仓库扩展了 `<code>org.springframework.data.neo4j.repository.Neo4jRepository</code>` 或 `<code>org.springframework.data.neo4j.repository.ReactiveNeo4jRepository</code>`，则可以立即使用可用的接受示例参数的 `<code>findBy</code>` 方法，如下所示：<a href=\"#find-by-example-example\">findByExample</a>。",
+      "count": 1
+    },
+    {
+      "source": "For both imperative and reactive versions you need to provide a <code>UserSelectionProvider</code> respectively a <code>ReactiveUserSelectionProvider</code>.\nThe same instance needs to be passed along to the <code>Neo4Client</code> and <code>Neo4jTransactionManager</code> respectively their reactive variants.",
+      "translation": "对于命令式和响应式版本，您分别需要提供 `<code>UserSelectionProvider</code>` 和 `<code>ReactiveUserSelectionProvider`。  \n相同的实例需要传递给 `<code>Neo4Client</code>` 和 `<code>Neo4jTransactionManager</code>`，以及它们各自的响应式变体。",
+      "count": 1
+    },
+    {
+      "source": "Just use <code>@Id</code> without <code>@GeneratedValue</code> and fill your id attribute via a constructor parameter or a setter or <em>wither</em>.\nSee this <a href=\"https://medium.com/neo4j/neo4j-ogm-and-spring-data-neo4j-a55a866df68c\">blog post</a> for some general remarks about finding good ids.",
+      "translation": "只需使用 `<code>@Id</code>` 而无需 `<code>@GeneratedValue</code>`，并通过构造函数参数、setter 方法或 <em>wither</em> 方法来填充 id 属性。有关查找良好 id 的一般性建议，请参阅此<a href=\"https://medium.com/neo4j/neo4j-ogm-and-spring-data-neo4j-a55a866df68c\">博客文章</a>。",
+      "count": 1
+    },
+    {
+      "source": "While you don’t have to provide anything else apart a <code>Pageable</code> as a parameter on derived finder methods\nthat return a <code>Page&lt;T&gt;</code> or a <code>Slice&lt;T&gt;</code>, you must prepare your custom query to handle the pageable.\n<a href=\"#custom-queries-with-page-and-slice-examples\">Pages and Slices</a> gives you an overview about what’s needed.",
+      "translation": "虽然您无需在返回 <code>Page&lt;T&gt;</code> 或 <code>Slice&lt;T&gt;</code> 的派生查询方法中提供除 <code>Pageable</code> 参数之外的任何内容，但仍需准备自定义查询以处理该分页对象。有关所需内容的概述，请参阅<a href=\"#custom-queries-with-page-and-slice-examples\">页面和切片</a>部分。",
+      "count": 1
+    },
+    {
+      "source": "In addition to those auditing mechanism you can add as many beans implementing <code>BeforeBindCallback&lt;T&gt;</code> or <code>ReactiveBeforeBindCallback&lt;T&gt;</code>\nto the context. These beans will be picked up by Spring Data Neo4j and called in order (in case they implement <code>Ordered</code> or\nare annotated with <code>@Order</code>) just before an entity is persisted.",
+      "translation": "除了上述审计机制外，您还可以向上下文中添加任意数量的实现 `<code>BeforeBindCallback&lt;T&gt;</code>` 或 `<code>ReactiveBeforeBindCallback&lt;T&gt;</code>` 的 Bean。Spring Data Neo4j 将自动拾取这些 Bean，并在实体持久化之前按顺序调用它们（如果它们实现了 `<code>Ordered</code>` 接口或标注了 `<code>@Order</code>`）。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://neo4j.com/docs/ogm-manual/current/\">Neo4j-OGM</a> is an Object Graph Mapping library, which is mainly used by previous versions of Spring Data Neo4j as its backend for the heavy lifting of mapping nodes and relationships into domain object.\nThe current SDN <strong>does not need</strong> and <strong>does not support</strong> Neo4j-OGM.\nSDN uses Spring Data’s mapping context exclusively for scanning classes and building the meta model.",
+      "translation": "<a href=\"https://neo4j.com/docs/ogm-manual/current/\">Neo4j-OGM</a> 是一个对象图映射库，主要用于旧版 Spring Data Neo4j 作为后端，负责将节点和关系映射到领域对象的繁重工作。  \n当前的 SDN <strong>不需要</strong> 也<strong>不支持</strong> Neo4j-OGM。  \nSDN 仅使用 Spring Data 的映射上下文来扫描类并构建元模型。",
+      "count": 1
+    },
+    {
+      "source": "With that configuration in place, all queries generated by all instances of SDN repositories (both reactive and imperative) and by the <code>ReactiveNeo4jTemplate</code> respectively <code>Neo4jTemplate</code> will be executed against the database <code>yourDatabase</code>.",
+      "translation": "配置完成后，所有由 SDN 存储库实例（包括反应式和命令式）以及分别由 `<code>ReactiveNeo4jTemplate</code>` 和 `<code>Neo4jTemplate</code>` 生成的查询都将在数据库 `<code>yourDatabase</code>` 上执行。",
+      "count": 1
+    },
+    {
+      "source": "As mentioned briefly in <a class=\"xref page\" href=\"appendix/migrating.html#migrating.bookmarks\">Bookmark Management</a>, there is no need to configure anything with regard to bookmarks.\nIt may however be useful to retrieve the latest bookmark the SDN transaction system received from a database.\nYou can add a <code>@Bean</code> like <code>BookmarkCapture</code> to do this:",
+      "translation": "如<a class=\"xref page\" href=\"appendix/migrating.html#migrating.bookmarks\">书签管理</a>中简要提到的，无需对书签进行任何配置。不过，从数据库中检索 SDN 事务系统接收到的最新书签可能很有用。您可以添加一个类似<code>@Bean</code>的<code>BookmarkCapture</code>来实现此功能：",
+      "count": 1
+    },
+    {
+      "source": "No.\nHave a look at the <a class=\"xref page\" href=\"introduction-and-preface/building-blocks.html#sdn-building-blocks\">SDN building blocks</a> and find the <code>Neo4jTemplate</code> or the <code>ReactiveNeo4jTemplate</code>.",
+      "translation": "否。\n请查看<a class=\"xref page\" href=\"introduction-and-preface/building-blocks.html#sdn-building-blocks\">SDN 构建块</a>，并找到<code>Neo4jTemplate</code>或<code>ReactiveNeo4jTemplate</code>。",
+      "count": 1
+    },
+    {
+      "source": "No, <code>@Query</code> is <strong>not</strong> the only way to run custom queries.\nThe annotation is comfortable in situations in which your custom query fills your domain completely.\nPlease remember that SDN assumes your mapped domain model to be the truth.\nThat means if you use a custom query via <code>@Query</code> that only fills a model partially, you are in danger of using the same\nobject to write the data back which will eventually erase or overwrite data you didn’t consider in your query.",
+      "translation": "不，<code>@Query</code> 并非执行自定义查询的唯一方式。  \n当您的自定义查询能够完整覆盖领域模型时，该注解使用起来非常便捷。  \n请记住，SDN 假定您映射的领域模型是真理。  \n这意味着，如果您通过 <code>@Query</code> 执行一个仅部分填充模型的自定义查询，您将面临风险：使用同一个对象将数据写回时，最终可能会擦除或覆盖您在查询中未考虑到的数据。",
+      "count": 1
+    },
+    {
+      "source": "Use the <a href=\"https://neo4j.github.io/cypher-dsl\">Cypher-DSL</a> via the <code>CypherdslStatementExecutor</code> or the <code>ReactiveCypherdslStatementExecutor</code>.\nThe Cypher-DSL is predestined to create dynamic queries. In the end, it’s what SDN uses under the hood anyway. The corresponding\nmixins work both with the domain type of repository itself and with projections (something that the mixins for adding\nconditions don’t).",
+      "translation": "通过 <a href=\"https://neo4j.github.io/cypher-dsl\">Cypher-DSL</a> 使用 <code>CypherdslStatementExecutor</code> 或 <code>ReactiveCypherdslStatementExecutor</code>。Cypher-DSL 专为创建动态查询而设计，毕竟 SDN 底层也是依赖它来实现的。相应的混入（mixins）既支持仓库本身的领域类型，也支持投影（这是添加条件的混入所不具备的功能）。",
+      "count": 1
+    },
+    {
+      "source": "The additional interface from which the repository extends (<code>DomainResults</code>, <code>NonDomainResults</code> and <code>LowlevelInteractions</code>)\nare the fragments that addresses all the concerns above.",
+      "translation": "从仓库扩展的附加接口（<code>DomainResults</code>、<code>NonDomainResults</code> 和 <code>LowlevelInteractions</code>）是解决上述所有关注点的片段。",
+      "count": 1
+    },
+    {
+      "source": "Often times a custom query indicates custom results.\nShould all of those results be mapped as <code>@Node</code>? Of course not! Many times those objects represents read commands\nand are not meant to be used as write commands.\nIt is also not unlikely that SDN cannot or want not map everything that is possible with Cypher.\nIt does however offer several hooks to run your own mapping: On the <code>Neo4jClient</code>.\nThe benefit of using the SDN <code>Neo4jClient</code> over the driver:",
+      "translation": "通常情况下，自定义查询会返回自定义结果。是否应该将所有这些结果都映射为 `<code>@Node`？当然不是！很多时候，这些对象代表的是读操作命令，并不适合作为写操作命令使用。此外，SDN 可能无法或不愿映射所有 Cypher 所能实现的功能。不过，它确实提供了多个钩子来执行您自己的映射逻辑：在 `<code>Neo4jClient</code>` 上。使用 SDN 的 `<code>Neo4jClient</code>` 而非驱动器的优势在于：",
+      "count": 1
+    },
+    {
+      "source": "You can also negate individual properties. This will add an appropriate <code>NOT</code> operation, thus turning an <code>=</code> into a <code>&lt;&gt;</code>.\nAll scalar datatypes and all string operators are supported:",
+      "translation": "您还可以否定单个属性。这将添加适当的 `<code>NOT</code>` 操作，从而将 `<code>=</code>` 转换为 `<code>&lt;&gt;</code>`。  \n支持所有标量数据类型和所有字符串运算符：",
+      "count": 1
+    },
+    {
+      "source": "To select a different database - either statically or dynamically - you can add a Bean of type <code>DatabaseSelectionProvider</code> as explained in <a href=\"#faq.multidatabase\">Neo4j 4 supports multiple databases - How can I use them?</a>.\nFor a reactive scenario, we provide <code>ReactiveDatabaseSelectionProvider</code>.",
+      "translation": "若要选择不同的数据库（无论是静态还是动态），您可以按照<a href=\"#faq.multidatabase\">Neo4j 4 支持多个数据库 - 如何使用它们？</a>中的说明，添加一个类型为<code>DatabaseSelectionProvider</code>的 Bean。  \n对于响应式场景，我们提供了<code>ReactiveDatabaseSelectionProvider</code>。",
+      "count": 1
+    },
+    {
+      "source": "SDN can however work very much with Neo4j’s test harness, the test harness is specially meant to be a drop-in replacement for the real database.\nSupport for Neo4j 3.5, 4.x and 5.x test harness is implemented via <a href=\"https://github.com/neo4j/neo4j-java-driver-spring-boot-starter\">the Spring Boot starter for the driver</a>.\nHave a look at the corresponding module <code>org.neo4j.driver:neo4j-java-driver-test-harness-spring-boot-autoconfigure</code>.",
+      "translation": "然而，SDN 可以与 Neo4j 的测试框架很好地协同工作，该测试框架专为作为真实数据库的直接替换方案而设计。  \n对 Neo4j 3.5、4.x 和 5.x 测试框架的支持是通过 <a href=\"https://github.com/neo4j/neo4j-java-driver-spring-boot-starter\">驱动程序 Spring Boot Starter</a> 实现的。  \n请查看相应的模块 <code>org.neo4j.driver:neo4j-java-driver-test-harness-spring-boot-autoconfigure</code>。",
+      "count": 1
+    },
+    {
+      "source": "Provide a bean with the type <code>Neo4jDatabaseNameProvider</code> or <code>ReactiveDatabaseSelectionProvider</code> depending on the type of your Spring application.",
+      "translation": "根据 Spring 应用程序的类型，提供一个类型为<code>Neo4jDatabaseNameProvider</code>或<code>ReactiveDatabaseSelectionProvider</code>的 Bean。",
+      "count": 1
+    },
+    {
+      "source": "Spring Boot comes with both imperative and reactive Neo4j <a href=\"https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-health\">health indicators.</a>\nBoth variants are able to detect multiple beans of <code>org.neo4j.driver.Driver</code> inside the application context and provide\na contribution to the overall health for each instance.\nThe Neo4j driver however does connect to a server and not to a specific database inside that server.\nSpring Boot is able to configure the driver without Spring Data Neo4j and as the information which database is to be used\nis tied to Spring Data Neo4j, this information is not available to the built-in health indicator.",
+      "translation": "Spring Boot 提供了命令式和响应式两种 Neo4j <a href=\"https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-health\">健康指示器</a>。  \n这两种变体均能够检测应用程序上下文中的多个 `org.neo4j.driver.Driver` Bean，并为每个实例提供对整体健康状况的贡献。  \n然而，Neo4j 驱动程序连接的是服务器，而非该服务器内的特定数据库。  \nSpring Boot 可以在不使用 Spring Data Neo4j 的情况下配置驱动程序；但由于要使用的数据库信息是与 Spring Data Neo4j 绑定的，因此内置的健康指示器无法获取这些信息。",
+      "count": 1
+    },
+    {
+      "source": "In <a href=\"#bootless-imperative-configuration\">Bootless imperative</a> and <a href=\"#bootless-reactive-configuration\">reactive</a> configurations you just need to provide a bean of the\ntype in question:",
+      "translation": "在<a href=\"#bootless-imperative-configuration\">命令式</a>和<a href=\"#bootless-reactive-configuration\">响应式</a>配置中，您只需提供相应类型的 Bean：",
+      "count": 1
+    },
+    {
+      "source": "You can configure the pairs of <code>Neo4jTransactionManager/Neo4jClient</code> and <code>ReactiveNeo4jTransactionManager/ReactiveNeo4jClient</code> individually, but we recommend in doing so only when you already configuring them for specific database selection needs.",
+      "translation": "您可以分别配置 `<code>Neo4jTransactionManager/Neo4jClient</code>` 和 `<code>ReactiveNeo4jTransactionManager/ReactiveNeo4jClient</code>` 的对，但我们建议仅在已针对特定数据库选择需求进行配置时才这样做。",
+      "count": 1
+    },
+    {
+      "source": "When using a query as shown in <a href=\"#bacon-distance\">The \"Bacon\" distance</a> for a domain class of type <code>Vertex</code> like this",
+      "translation": "当使用如下所示的查询<a href=\"#bacon-distance\">“培根”距离</a>，针对类型为<code>Vertex</code>的域类时",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"xref page\" href=\"projections/sdn-projections.html#projections.sdn.general-remarks\">Projections</a> might be already enough to shape your <strong>view</strong> on the graph: They can be used to define\nthe depth of fetching properties and related entities in an explicit way: By modelling them.",
+      "translation": "<a class=\"xref page\" href=\"projections/sdn-projections.html#projections.sdn.general-remarks\">投影</a>可能已经足以塑造您对图的<strong>视图</strong>：它们可用于以显式方式定义获取属性及相关实体的深度：通过对其进行建模。",
+      "count": 1
+    },
+    {
+      "source": "Otherwise, please read up on two things: <a class=\"xref page\" href=\"repositories/custom-implementations.html#repositories.custom-implementations\">custom repository fragments</a>\nthe <a class=\"xref page\" href=\"introduction-and-preface/building-blocks.html#sdn-building-blocks\">levels of abstractions</a> we offer in SDN.",
+      "translation": "否则，请阅读以下两个主题：<a class=\"xref page\" href=\"repositories/custom-implementations.html#repositories.custom-implementations\">自定义存储库片段</a>以及我们在 SDN 中提供的<a class=\"xref page\" href=\"introduction-and-preface/building-blocks.html#sdn-building-blocks\">抽象层级</a>。",
+      "count": 1
+    },
+    {
+      "source": "The repository contains <a class=\"xref page\" href=\"getting-started.html#movie-entity\">Movies</a> as shown in <a class=\"xref page\" href=\"getting-started.html#example-node-spring-boot-project\">the getting started section</a>.",
+      "translation": "该仓库包含如<a class=\"xref page\" href=\"getting-started.html#movie-entity\">开始部分</a>所示的<a class=\"xref page\" href=\"getting-started.html#example-node-spring-boot-project\">电影</a>实体。",
+      "count": 1
+    },
+    {
+      "source": "The fragment <code>DomainResults</code> declares one additional method <code>findMoviesAlongShortestPath</code>:",
+      "translation": "片段<code>DomainResults</code>声明了一个额外的方法<code>findMoviesAlongShortestPath</code>：",
+      "count": 1
+    },
+    {
+      "source": "This method is annotated with <code>@Transactional(readOnly = true)</code> to indicate that readers can answer it.\nIt cannot be derived by SDN but would need a custom query.\nThis custom query is provided by the one implementation of that interface.\nThe implementation has the same name with the suffix <code>Impl</code>:",
+      "translation": "此方法使用 `<code>@Transactional(readOnly = true)</code>` 注解进行标记，表明读者可以对其进行查询。  \n该操作无法通过 SDN 推导得出，而需要自定义查询。  \n该自定义查询由该接口的一个实现类提供。  \n该实现类的名称与接口相同，但后缀为 `<code>Impl</code>`：",
+      "count": 1
+    },
+    {
+      "source": "All of this applies of course to reactive repositories as well.\nThey would work with the <code>ReactiveNeo4jTemplate</code> and <code>ReactiveNeo4jClient</code> and the reactive session provided by the driver.",
+      "translation": "当然，这些内容同样适用于反应式存储库。它们可与 `<code>ReactiveNeo4jTemplate</code>` 和 `<code>ReactiveNeo4jClient</code>` 以及驱动程序提供的反应式会话配合使用。",
+      "count": 1
+    },
+    {
+      "source": "In this example we forbid the use of the <code>findAll</code> method.\nYou could add methods taking in a fetch depth and run custom queries based on that depth.\nOne way to do this is shown in <a href=\"#domain-results\">DomainResults fragment</a>.",
+      "translation": "在本示例中，我们禁止使用 `findAll` 方法。您可以添加接收获取深度的方法，并基于该深度运行自定义查询。实现方式之一如<a href=\"#domain-results\">DomainResults 片段</a>所示。",
+      "count": 1
+    },
+    {
+      "source": "For your convenience we provide a CDI extension with <code>Neo4jCdiExtension</code>.\nWhen run in a compatible CDI 2.0 container, it will be automatically be registered and loaded through <a href=\"https://docs.oracle.com/javase/tutorial/ext/basics/spi.html\">Java’s service loader SPI</a>.",
+      "translation": "为方便起见，我们提供了带有<code>Neo4jCdiExtension</code>的 CDI 扩展。\n当在兼容的 CDI 2.0 容器中运行时，它将通过<a href=\"https://docs.oracle.com/javase/tutorial/ext/basics/spi.html\">Java 的服务加载器 SPI</a>自动注册并加载。",
+      "count": 1
+    },
+    {
+      "source": "Full support for <a href=\"https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#query-by-example\">Query By Example</a>",
+      "translation": "完全支持<a href=\"https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#query-by-example\">示例查询</a>",
+      "count": 1
+    },
+    {
+      "source": "No.\nAn embedded database is usually represented by an instance of <code>org.neo4j.graphdb.GraphDatabaseService</code> and has no Bolt connector out of the box.",
+      "translation": "否。\n嵌入式数据库通常由 <code>org.neo4j.graphdb.GraphDatabaseService</code> 的一个实例表示，且默认不包含 Bolt 连接器。",
+      "count": 1
+    },
+    {
+      "source": "Without Spring Boot, you would just manually declare the dependency. For Maven, we recommend using the <code>&lt;dependencyManagement /&gt;</code>\nsection like this:",
+      "translation": "如果没有 Spring Boot，您只需手动声明依赖项。对于 Maven，我们建议使用如下所示的 `<dependencyManagement/>` 部分：",
+      "count": 1
+    },
+    {
+      "source": "You can either statically configure the database name or run your own database name provider.\nBear in mind that SDN will not create the databases for you.\nYou can do this with the help of a <a href=\"https://github.com/michael-simons/neo4j-migrations\">migrations tool</a>\nor of course with a simple script upfront.",
+      "translation": "您可以静态配置数据库名称，也可以运行自己的数据库名称提供者。请注意，SDN 不会为您创建数据库。您可以借助 <a href=\"https://github.com/michael-simons/neo4j-migrations\">迁移工具</a> 来完成此操作，当然也可以使用一个简单的初始脚本来实现。",
+      "count": 1
+    },
+    {
+      "source": "The feature requires Neo4j Enterprise 4.4+ on the server side and a 4.4+ driver on the client side (<code>org.neo4j.driver:neo4j-java-driver:4.4.0</code> or higher).",
+      "translation": "该功能要求服务器端使用 Neo4j Enterprise 4.4 及以上版本，客户端需使用 4.4 及以上版本的驱动程序（<code>org.neo4j.driver:neo4j-java-driver:4.4.0</code> 或更高版本）。",
+      "count": 1
+    },
+    {
+      "source": "In a typical Spring Boot scenario this feature requires a bit more work, as Boot supports also SDN versions without that feature.\nSo given the bean in <a href=\"#faq.impersonation.userselectionbean\">User selection provider bean</a> you would need fully customize the client and transaction manager:",
+      "translation": "在典型的 Spring Boot 场景中，启用此功能需要额外的工作量，因为 Spring Boot 也支持不包含该功能的 SDN 版本。因此，针对<a href=\"#faq.impersonation.userselectionbean\">用户选择提供者 Bean</a>中的 Bean，您需要完全自定义客户端和事务管理器：",
+      "count": 1
+    },
+    {
+      "source": "<code>@Node</code> allows customizing the labels",
+      "translation": "<code>@Node</code> 允许自定义标签。",
+      "count": 1
+    },
+    {
+      "source": "We provide the interface <code>org.springframework.data.neo4j.core.schema.IdGenerator</code>.\nImplement it in any way you want and configure your implementation like this:",
+      "translation": "我们提供接口 `org.springframework.data.neo4j.core.schema.IdGenerator`。  \n您可以以任意方式实现该接口，并按照如下方式配置您的实现：",
+      "count": 1
+    },
+    {
+      "source": "If you pass in the name of a class to <code>@GeneratedValue</code>, this class must have a no-args default constructor.\nYou can however use a string as well:",
+      "translation": "如果向 `<code>@GeneratedValue</code>` 传入一个类名，该类必须具有无参默认构造函数。  \n不过，您也可以使用字符串：",
+      "count": 1
+    },
+    {
+      "source": "With that, <code>idGeneratingBean</code> refers to a bean in the Spring context.\nThis might be useful for sequence generating.",
+      "translation": "因此，<code>idGeneratingBean</code> 指的是 Spring 上下文中的一个 Bean。\n这在序列生成方面可能很有用。",
+      "count": 1
+    },
+    {
+      "source": "Please note that both examples use <code>@DataNeo4jTest</code> from Spring Boot.",
+      "translation": "请注意，这两个示例都使用了来自 Spring Boot 的<code>@DataNeo4jTest</code>。",
+      "count": 1
+    },
+    {
+      "source": "it will retrieve all people from the path and map them.\nIf there are relationship types on the path like <code>REVIEWED</code> that are also present on the domain, these\nwill be filled accordingly from the path.",
+      "translation": "它将检索路径中的所有人员并将其映射。如果路径中存在与域中相同的实体关系类型（如 `<code>REVIEWED</code>`），则将从路径中相应填充这些关系。",
+      "count": 1
+    },
+    {
+      "source": "The other way round works as well. The same query can be used with the <code>Movie</code> entity.\nIt then will only populate movies.\nThe following listing shows how todo this as well as how the query can be enriched with additional data\nnot found on the path. That data is used to correctly populate the missing relationships (in that case, all the actors)",
+      "translation": "反过来同样适用。相同的查询也可用于`Movie`实体，此时它将仅填充电影数据。以下示例展示了如何实现这一点，以及如何通过添加路径上不存在的数据来丰富该查询。这些数据将用于正确填充缺失的关系（在本例中即为所有演员）。",
+      "count": 1
+    },
+    {
+      "source": "The path mapping works for single paths as well for multiple records of paths (which are returned by the <code>allShortestPath</code> function.)",
+      "translation": "路径映射既适用于单个路径，也适用于多条路径记录（这些记录由<code>allShortestPath</code>函数返回）。",
+      "count": 1
+    },
+    {
+      "source": "So, please use repositories and declarative methods with <code>@Query</code> in all cases where the result is shaped like your domain\nmodel or you are sure you don’t use a partially mapped model for write commands.",
+      "translation": "因此，请始终使用仓储和声明式方法配合 `<code>@Query` 注解，特别是在结果形状与您的领域模型一致，或您确定不会在写命令中使用部分映射模型的情况下。",
+      "count": 1
+    },
+    {
+      "source": "If you think that you can solve your problem with a partially dynamic query or a full dynamic query together with a projection,\nplease jump back now to the chapter <a class=\"xref page\" href=\"repositories/sdn-extension.html#sdn-mixins\">about Spring Data Neo4j Mixins</a>.",
+      "translation": "如果您认为可以通过部分动态查询或完整动态查询结合投影来解决您的问题，请现在返回到<a class=\"xref page\" href=\"repositories/sdn-extension.html#sdn-mixins\">关于 Spring Data Neo4j Mixins 的章节</a>。",
+      "count": 1
+    },
+    {
+      "source": "Assume the following repository <em>declaration</em> that basically aggregates one base repository plus 3 fragments:",
+      "translation": "假设有一个名为<em>declaration</em>的仓库，它基本上聚合了一个基础仓库和三个片段：",
+      "count": 1
+    },
+    {
+      "source": "<code>@Query</code> is not the only option to define custom queries",
+      "translation": "@Query 并非定义自定义查询的唯一选项。",
+      "count": 1
+    },
+    {
+      "source": "The <code>@Transactional</code> annotation is respected",
+      "translation": "<code>@Transactional</code> 注解会被尊重",
+      "count": 1
+    },
+    {
+      "source": "The <code>Neo4jClient</code> is integrated with Springs transaction management",
+      "translation": "<code>Neo4jClient</code> 已集成 Spring 的事务管理功能。",
+      "count": 1
+    },
+    {
+      "source": "Basically the same ways as the shared Spring Data Commons documentation shows for Spring Data JPA in <a class=\"xref page\" href=\"repositories/custom-implementations.html#repositories.customize-base-repository\">Customize the Base Repository</a>.\nOnly that in our case you would extend from",
+      "translation": "基本上与共享的 Spring Data Commons 文档中关于在<a class=\"xref page\" href=\"repositories/custom-implementations.html#repositories.customize-base-repository\">自定义基础仓库</a>中为 Spring Data JPA 展示的方式相同。只是在我们这种情况下，您需要继承自",
+      "count": 1
+    },
+    {
+      "source": "To enable this base repository for all declared repositories enable Neo4j repositories with: <code>@EnableNeo4jRepositories(repositoryBaseClass = MyRepositoryImpl.class)</code>.",
+      "translation": "若要启用所有已声明仓库的基础仓库，请使用以下配置启用 Neo4j 仓库：<code>@EnableNeo4jRepositories(repositoryBaseClass = MyRepositoryImpl.class)</code>。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"xref page\" href=\"auditing.html\">Auditing</a> gives you a general view how to use auditing in the bigger context of Spring Data Commons.\nThe following listing presents every configuration option provided by Spring Data Neo4j:",
+      "translation": "<a class=\"xref page\" href=\"auditing.html\">审计</a> 为您提供在 Spring Data Commons 更广泛背景下使用审计功能的一般视图。\n以下列表展示了 Spring Data Neo4j 提供的所有配置选项：",
+      "count": 1
+    },
+    {
+      "source": "The reactive version is basically the same apart from the fact the auditor aware bean is of type <code>ReactiveAuditorAware</code>,\nso that the retrieval of an auditor is part of the reactive flow.",
+      "translation": "反应式版本基本相同，唯一的区别在于审计器感知 Bean 的类型为 `<code>ReactiveAuditorAware</code>`，因此审计器的获取是响应式流程的一部分。",
+      "count": 1
+    },
+    {
+      "source": "To get the imperative version of the <a class=\"xref page\" href=\"appendix/neo4j-client.html#neo4j-client\">Neo4j client</a>, the template and support for imperative repositories, use something similar as shown here:",
+      "translation": "要获取<a class=\"xref page\" href=\"appendix/neo4j-client.html#neo4j-client\">Neo4j 客户端</a>的强制版本以及用于强制存储库的模板和支持，请使用如下所示的类似内容：",
+      "count": 1
+    },
+    {
+      "source": "If you are running in a SE Container - like the one <a href=\"https://weld.cdi-spec.org\">Weld</a> provides for example, you can enable the extension like that:",
+      "translation": "如果您正在运行在 SE 容器中（例如 Weld 提供的容器），您可以像这样启用该扩展：",
+      "count": 1
+    },
+    {
+      "source": "While this pins SDN to the Spring ecosystem, it has several advantages, among them the smaller footprint regarding CPU and memory usage and especially, all the features of Spring’s mapping context.",
+      "translation": "虽然这将 SDN 绑定到 Spring 生态系统，但它具有诸多优势，其中包括更小的 CPU 和内存占用，尤其是拥有 Spring 映射上下文的所有功能。",
+      "count": 1
+    },
+    {
+      "source": "SDN has several features not present in SDN+OGM, notably",
+      "translation": "SDN 具有若干在 SDN+OGM 中不存在的功能，特别是",
+      "count": 1
+    },
+    {
+      "source": "Full support for Springs reactive story, including reactive transaction",
+      "translation": "全面支持 Spring 响应式栈，包括响应式事务。",
+      "count": 1
+    },
+    {
+      "source": "Full support for fully immutable entities",
+      "translation": "完全支持完全不可变实体",
+      "count": 1
+    },
+    {
+      "source": "Support for all modifiers and variations of derived finder methods, including spatial queries",
+      "translation": "支持所有派生查找方法的修饰符和变体，包括空间查询。",
+      "count": 1
+    },
+    {
+      "source": "Embedded Neo4j has multiple facets to it:",
+      "translation": "嵌入式 Neo4j 具有多个方面：",
+      "count": 1
+    },
+    {
+      "source": "SDN relies on the Neo4j Java Driver.\nEach SDN release uses a Neo4j Java Driver version compatible with the latest Neo4j available at the time of its\nrelease.\nWhile patch versions of the Neo4j Java Driver are usually drop-in replacements, SDN makes sure that even minor versions\nare interchangeable as it checks for the presence or absence of methods or interface changes if necessary.",
+      "translation": "SDN 依赖 Neo4j Java 驱动。每个 SDN 发布版本均使用与其发布时间点可用的最新 Neo4j 兼容的 Neo4j Java 驱动版本。虽然 Neo4j Java 驱动的补丁版本通常是即插即用的替代品，但 SDN 会确保即使是次要版本也可互换使用；如有必要，它会检查是否存在方法或接口变更。",
+      "count": 1
+    },
+    {
+      "source": "Therefore, you are able to use any 4.x Neo4j Java Driver with any SDN 6.x version,\nand any 5.x Neo4j Driver with any SDN 7.x version.",
+      "translation": "因此，您可以使用任何 4.x 版本的 Neo4j Java 驱动与任何 6.x 版本的 SDN 配合使用，以及任何 5.x 版本的 Neo4j 驱动与任何 7.x 版本的 SDN 配合使用。",
+      "count": 1
+    },
+    {
+      "source": "These days, a Spring boot deployment is the most likely deployment of a Spring Data based applications. Please use\nSpring Boots dependency management to change the driver version like this:",
+      "translation": "如今，基于 Spring Data 的应用程序最可能的部署方式是使用 Spring Boot。请使用 Spring Boot 的依赖管理功能来更改驱动版本，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "Configure the database name to use in your Spring Boot configuration like this (the same property applies of course for YML or environment based configuration, with Spring Boot’s conventions applied):",
+      "translation": "在 Spring Boot 配置中设置要使用的数据库名称，方式如下（当然，该属性同样适用于基于 YML 或环境的配置，并遵循 Spring Boot 的约定）：",
+      "count": 1
+    },
+    {
+      "source": "That bean could use for example Spring’s security context to retrieve a tenant.\nHere is a working example for an imperative application secured with Spring Security:",
+      "translation": "该 Bean 可以使用 Spring 的安全上下文来检索租户。\n以下是一个使用 Spring Security 保护的命令式应用程序的工作示例：",
+      "count": 1
+    },
+    {
+      "source": "This is most likely not a problem in many deployment scenarios.\nHowever, if configured database user does not have at least access rights to the default database, the health checks will fail.",
+      "translation": "在许多部署场景中，这通常不是问题。  \n但如果配置的数据库用户没有至少对默认数据库的访问权限，健康检查将会失败。",
+      "count": 1
+    },
+    {
+      "source": "This can be mitigated by custom Neo4j health contributors that are aware of the database selection.",
+      "translation": "这可以通过自定义的、能够感知数据库选择的 Neo4j 健康贡献者来缓解。",
+      "count": 1
+    },
+    {
+      "source": "This uses the available database selection to run the same query that Boot runs to check whether a connection is healthy or not.\nUse the following configuration to apply it:",
+      "translation": "此方法利用可用的数据库选择，运行与 Boot 相同的查询以检查连接是否健康。请使用以下配置进行应用：",
+      "count": 1
+    },
+    {
+      "source": "The reactive variant is basically the same, using reactive types and the corresponding reactive infrastructure classes:",
+      "translation": "反应式变体基本相同，使用反应式类型和相应的反应式基础设施类：",
+      "count": 1
+    },
+    {
+      "source": "And of course, the reactive variant of the configuration. It needs two different registry cleaners, as Spring Boot will\nwrap existing reactive indicators to be used with the non-reactive actuator endpoint, too.",
+      "translation": "当然，还有配置的反应式变体。它需要两个不同的注册表清理器，因为 Spring Boot 会将现有的反应式指标包装起来，以便与非反应式的监控端点一起使用。",
+      "count": 1
+    },
+    {
+      "source": "User impersonation is especially interesting in big multi-tenant settings, in which one physically connected (or technical)\nuser can impersonate many tenants. Depending on your setup this will drastically reduce the number of physical driver instances needed.",
+      "translation": "用户模拟在大型多租户环境中尤为引人注目，在这种环境中，一个物理连接（或技术）用户可以代表多个租户。根据您的具体配置，这将大幅减少所需的物理驱动程序实例数量。",
+      "count": 1
+    },
+    {
+      "source": "The following questions apply to Neo4j AuraDB as well as to Neo4j on-premise cluster instances.",
+      "translation": "以下问题同样适用于 Neo4j AuraDB 以及本地部署的 Neo4j 集群实例。",
+      "count": 1
+    },
+    {
+      "source": "No, you don’t.\nSDN uses Neo4j Causal Cluster bookmarks internally without any configuration on your side required.\nTransactions in the same thread or the same reactive stream following each other will be able to read their previously changed values as you would expect.",
+      "translation": "不，您不需要。\nSDN 在内部使用 Neo4j 因果集群书签，无需您在侧进行任何配置。\n同一线程或同一响应式流中按顺序执行的事务将能够读取其先前更改的值，正如您所预期的那样。",
+      "count": 1
+    },
+    {
+      "source": "Yes, it is.\nThe Neo4j cluster architecture is a causal clustering architecture, and it distinguishes between primary and secondary servers.\nPrimary server either are single instances or core instances. Both of them can answer to read and write operations.\nWrite operations are propagated from the core instances to read replicas or more generally, followers, inside the cluster.\nThose followers are secondary servers.\nSecondary servers don’t answer to write operations.",
+      "translation": "是的，确实如此。\nNeo4j 集群架构采用因果一致性集群架构，并区分主服务器和从服务器。\n主服务器可以是单实例或核心实例，两者均可响应读写操作。\n写操作会在集群内部从核心实例传播到读副本，更一般地说是从属节点。\n这些从属节点即为从服务器。\n从服务器不响应写操作。",
+      "count": 1
+    },
+    {
+      "source": "In a standard deployment scenario you’ll have some core instances and many read replicas inside a cluster.\nTherefore, it is important to mark operations or queries as read-only to scale your cluster in such a way that leaders are\nnever overwhelmed and queries are propagated as much as possible to read replicas.",
+      "translation": "在标准的部署场景中，集群内会包含一些核心实例和大量只读副本。因此，将操作或查询标记为只读至关重要，这样可以扩展集群规模，确保主节点不会被压垮，同时尽可能将查询分发到只读副本上。",
+      "count": 1
+    },
+    {
+      "source": "Neither Spring Data Neo4j nor the underlying Java driver do Cypher parsing and both building blocks assume\nwrite operations by default. This decision has been made to support all operations out of the box. If something in the\nstack would assume read-only by default, the stack might end up sending write queries to read replicas and fail\non executing them.",
+      "translation": "Spring Data Neo4j 和底层的 Java 驱动均不执行 Cypher 解析，且这两个构建块默认假设操作为写操作。做出这一决定是为了开箱即用地支持所有操作。如果堆栈中的某个组件默认假设为只读，则可能导致堆栈向只读副本发送写查询，从而在执行时失败。",
+      "count": 1
+    },
+    {
+      "source": "Some options are described below:",
+      "translation": "以下是对部分选项的描述：",
+      "count": 1
+    },
+    {
+      "source": "For seeding the transaction system, a customized transaction manager like the following is required:",
+      "translation": "为了初始化交易系统，需要一个如下所示的自定义事务管理器：",
+      "count": 1
+    },
+    {
+      "source": "We provide a Noop bookmark manager that effectively disables bookmark management.",
+      "translation": "我们提供了一个无操作书签管理器，可有效禁用书签管理功能。",
+      "count": 1
+    },
+    {
+      "source": "+\nIn a cluster this can be a sensible approach only and if only you can tolerate stale reads and are not in danger of\noverwriting old data.",
+      "translation": "在集群环境中，这种方法可能仅在某些情况下是合理的：即您能够容忍读取过时数据，且不存在覆盖旧数据的风险。",
+      "count": 1
+    },
+    {
+      "source": "The following configuration creates a \"noop\" variant of the bookmark manager that will be picked up from relevant classes.",
+      "translation": "以下配置将创建一个“noop\"变体的书签管理器，该变体会从相关类中被识别。",
+      "count": 1
+    },
+    {
+      "source": "No.\nYou are free to use the following, equivalent Spring Data annotations:",
+      "translation": "否。\n您可以自由使用以下等效的 Spring Data 注解：",
+      "count": 1
+    },
+    {
+      "source": "Marks the annotated attribute as the unique id.",
+      "translation": "将标注的属性标记为唯一标识符。",
+      "count": 1
+    },
+    {
+      "source": "Specific annotation has no additional features.",
+      "translation": "特定注释没有附加功能。",
+      "count": 1
+    },
+    {
+      "source": "Marks the class as persistent entity.",
+      "translation": "将类标记为持久实体。",
+      "count": 1
+    },
+    {
+      "source": "Those templates know your domain and provide all necessary basic CRUD methods for retrieving, writing and counting entities.",
+      "translation": "这些模板了解您的领域，并提供所有必要的增删改查（CRUD）方法，用于检索、写入和统计实体。",
+      "count": 1
+    },
+    {
+      "source": "This is our canonical movie example with the imperative template:",
+      "translation": "这是我们使用祈使句模板的规范电影示例：",
+      "count": 1
+    },
+    {
+      "source": "And here is the reactive version, omitting the setup for brevity:",
+      "translation": "以下是反应式版本，为简洁起见省略了设置部分：",
+      "count": 1
+    },
+    {
+      "source": "A series of connected nodes and relationships is called a \"path\" in Neo4j.\nCypher allows paths to be named using an identifier, as exemplified by:",
+      "translation": "在 Neo4j 中，一系列相连的节点和关系被称为“路径”。\nCypher 允许使用标识符来命名路径，例如：",
+      "count": 1
+    },
+    {
+      "source": "or as in the infamous Movie graph, that includes the following path (in that case, one of the shortest path between two actors):",
+      "translation": "或者就像臭名昭著的“电影图”那样，其中包含以下路径（在这种情况下，这是两个演员之间的最短路径之一）：",
+      "count": 1
+    },
+    {
+      "source": "Which looks like this:",
+      "translation": "看起来是这样的：",
+      "count": 1
+    },
+    {
+      "source": "The query returns the path plus all relationships and related nodes collected so that the movie entities are fully hydrated.",
+      "translation": "该查询返回路径以及所有已收集的关联和关系节点，以确保电影实体完全填充。",
+      "count": 1
+    },
+    {
+      "source": "What are the alternatives?",
+      "translation": "有哪些替代方案？",
+      "count": 1
+    },
+    {
+      "source": "Why speaking about custom repository fragments now?",
+      "translation": "现在为何要谈论自定义存储库片段？",
+      "count": 1
+    },
+    {
+      "source": "You might have more complex situation in which more than one dynamic query is required, but the queries still belong\nconceptually in a repository and not in the service layer",
+      "translation": "您可能遇到更复杂的情况，其中需要多个动态查询，但这些查询在概念上仍属于仓储层，而非服务层。",
+      "count": 1
+    },
+    {
+      "source": "Your custom queries return a graph shaped result that fits not quite to your domain model\nand therefore the custom query should be accompanied by a custom mapping as well",
+      "translation": "您的自定义查询返回的图形化结果与领域模型不完全匹配，因此该自定义查询应同时配备自定义映射。",
+      "count": 1
+    },
+    {
+      "source": "You have the need for interacting with the driver, i.e. for bulk loads that should not go through object mapping.",
+      "translation": "您需要与驱动程序进行交互，即处理不应经过对象映射的大批量数据。",
+      "count": 1
+    },
+    {
+      "source": "The template has overloads for String-based queries as well, so you could write down the query as String as well.\nThe important takeaway here is:",
+      "translation": "模板也支持基于字符串的查询重载，因此您也可以将查询以字符串形式书写。\n这里的关键要点是：",
+      "count": 1
+    },
+    {
+      "source": "The template \"knows\" your domain objects and maps them accordingly",
+      "translation": "该模板“了解”您的领域对象，并据此进行映射。",
+      "count": 1
+    },
+    {
+      "source": "They can be generated in various ways",
+      "translation": "它们可以通过多种方式生成。",
+      "count": 1
+    },
+    {
+      "source": "It has a fluent API for binding parameters",
+      "translation": "它提供了用于绑定参数的流式 API。",
+      "count": 1
+    },
+    {
+      "source": "It has a fluent API exposing both the records and the Neo4j type system so that you can access\neverything in your result to execute the mapping",
+      "translation": "它提供了一个流式 API，同时暴露记录数据和 Neo4j 类型系统，使您能够访问结果中的所有数据以执行映射。",
+      "count": 1
+    },
+    {
+      "source": "Declaring the fragment is exactly the same as before:",
+      "translation": "声明片段与之前完全相同：",
+      "count": 1
+    },
+    {
+      "source": "Without an implementation for that fragment, startup would fail, so here it is:",
+      "translation": "由于缺少该碎片的实现，启动将会失败，因此这里提供如下内容：",
+      "count": 1
+    },
+    {
+      "source": "The whole query runs in the context of a Spring transaction, in this case, a read-only one.",
+      "translation": "整个查询在 Spring 事务上下文中执行，此处为只读事务。",
+      "count": 1
+    },
+    {
+      "source": "Sometimes you might want to do bulk loadings from a repository or delete whole subgraphs or interact in very specific ways\nwith the Neo4j Java-Driver. This is possible as well. The following example shows how:",
+      "translation": "有时您可能需要从存储库执行批量加载，删除整个子图，或以非常特定的方式与 Neo4j Java 驱动程序进行交互。这也是可行的。以下示例展示了如何实现：",
+      "count": 1
+    },
+    {
+      "source": "This interaction does of course not run in a Spring transaction, as the driver does not know about Spring.",
+      "translation": "此交互当然不在 Spring 事务中运行，因为驱动程序并不了解 Spring。",
+      "count": 1
+    },
+    {
+      "source": "Putting it all together, this test succeeds:",
+      "translation": "综上所述，此测试通过：",
+      "count": 1
+    },
+    {
+      "source": "As a final word: All three interfaces and implementations are picked up by Spring Data Neo4j automatically.\nThere is no need for further configuration.\nAlso, the same overall repository could have been created with only one additional fragment (the interface defining all three methods)\nand one implementation. The implementation would than have had all three abstractions injected (template, client and driver).",
+      "translation": "最后说明：Spring Data Neo4j 会自动识别所有三个接口和实现，无需进行额外配置。此外，仅通过添加一个额外的片段（即定义所有三个方法的接口）和一个实现类，同样可以创建相同的整体仓储。该实现类将注入所有三个抽象对象（模板、客户端和驱动）。",
+      "count": 1
+    },
+    {
+      "source": "If you have recurring methods for all repositories, you could swap out the default repository implementation.",
+      "translation": "如果您为所有仓库都使用了重复的方法，则可以替换默认的仓库实现。",
+      "count": 1
+    },
+    {
+      "source": "All Spring Data annotations are supported.\nThose are",
+      "translation": "支持所有 Spring Data 注解。\n这些是",
+      "count": 1
+    },
+    {
+      "source": "They can modify the entity or return a completely new one.\nThe following example adds one callback to the context that changes one attribute before the entity is persisted:",
+      "translation": "它们可以修改该实体，或者返回一个全新的实体。  \n以下示例向上下文添加了一个回调，在实体持久化之前更改其一个属性：",
+      "count": 1
+    },
+    {
+      "source": "No additional configuration is required.",
+      "translation": "无需额外配置。",
+      "count": 1
+    },
+    {
+      "source": "No, you don’t.\nWhile the automatic configuration of many Spring aspects through Spring Boot takes away a lot of manual cruft and is the recommended approach for setting up new Spring projects, you don’t need to have to use this.",
+      "translation": "不，您不必如此。\n虽然通过 Spring Boot 自动配置许多 Spring 切面可以省去大量手动繁琐的工作，并且是设置新 Spring 项目的推荐方式，但您并不一定要使用这种方法。",
+      "count": 1
+    },
+    {
+      "source": "The following dependency is required for the solutions described above:",
+      "translation": "上述解决方案需要以下依赖项：",
+      "count": 1
+    },
+    {
+      "source": "The coordinates for a Gradle setup are the same.",
+      "translation": "Gradle 配置的坐标也相同。",
+      "count": 1
+    },
+    {
+      "source": "The following listing provides the reactive Neo4j client and template, enables reactive transaction management and discovers Neo4j related repositories:",
+      "translation": "以下列表提供了反应式的 Neo4j 客户端和模板，支持反应式事务管理，并能发现与 Neo4j 相关的仓库：",
+      "count": 1
+    },
+    {
+      "source": "The only thing you have to bring into your application is an annotated type that produces the Neo4j Java Driver:",
+      "translation": "您需要在应用程序中引入的唯一内容是一个能够生成 Neo4j Java 驱动程序的注解类型：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS”和“Amazon Web Services\"是 Amazon.com Inc. 及其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"index.html\">Spring Data Neo4j</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"index.html\">\n                            8.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"index.html\">Spring Data Neo4j</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"index.html\">\n                            8.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/faq.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-neo4j\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/faq.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-neo4j\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"index.html\">Spring Data Neo4j</a></li>\n      <li><a href=\"faq.html\">FAQ</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"index.html\">Spring Data Neo4j</a></li>\n      <li><a href=\"faq.html\">常见问题解答</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "Using Springs <code>TransactionTemplate</code> inside private service methods and / or with the Neo4j client",
+      "translation": "在私有服务方法中使用 Spring 的 `TransactionTemplate`，以及/或者与 Neo4j 客户端一起使用时。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"search.html\">在 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Change the driver version from Maven (pom.xml)",
+      "translation": "将驱动程序版本从 Maven（pom.xml）中更改。",
+      "count": 1
+    },
+    {
+      "source": "Change the driver version from Gradle (gradle.properties)",
+      "translation": "将驱动程序版本从 Gradle（gradle.properties）中更改。",
+      "count": 1
+    },
+    {
+      "source": "Change the driver version without Spring Boot from Maven (pom.xml)",
+      "translation": "通过 Maven（pom.xml）更改非 Spring Boot 的驱动程序版本。",
+      "count": 1
+    },
+    {
+      "source": "User selection provider bean",
+      "translation": "用户选择提供者 Bean",
+      "count": 1
+    },
+    {
+      "source": "Necessary customization for Spring Boot",
+      "translation": "Spring Boot 所需的自定义配置",
+      "count": 1
+    },
+    {
+      "source": "Making a whole repository read-only",
+      "translation": "将整个仓库设置为只读",
+      "count": 1
+    },
+    {
+      "source": "Making selected repository methods read-only",
+      "translation": "将选定的仓库方法设置为只读",
+      "count": 1
+    },
+    {
+      "source": "Orchestrate calls to a repository from a service",
+      "translation": "从服务编排对存储库的调用。",
+      "count": 1
+    },
+    {
+      "source": "Pages and Slices",
+      "translation": "页面与切片",
+      "count": 1
+    },
+    {
+      "source": "\"Standard\" movie graph domain model",
+      "translation": "“标准”电影图域模型",
+      "count": 1
+    },
+    {
+      "source": "A repository composed of several fragments",
+      "translation": "由多个碎片组成的仓库",
+      "count": 1
+    },
+    {
+      "source": "DomainResults fragment",
+      "translation": "域结果片段",
+      "count": 1
+    },
+    {
+      "source": "A fragment implementation using the Neo4jTemplate",
+      "translation": "使用 Neo4jTemplate 的片段实现",
+      "count": 1
+    },
+    {
+      "source": "A fragment declaring non-domain-type results",
+      "translation": "声明非域类型结果的片段",
+      "count": 1
+    },
+    {
+      "source": "A fragment implementation using the Neo4jClient",
+      "translation": "使用 Neo4jClient 的片段实现",
+      "count": 1
+    },
+    {
+      "source": "Fragments using the plain driver",
+      "translation": "使用普通驱动器的碎片",
+      "count": 1
+    },
+    {
+      "source": "Testing the composed repository",
+      "translation": "测试组合后的仓库",
+      "count": 1
+    },
+    {
+      "source": "Custom base repository",
+      "translation": "自定义基础仓库",
+      "count": 1
+    },
+    {
+      "source": "Enabling and configuring Neo4j auditing",
+      "translation": "启用和配置 Neo4j 审计功能",
+      "count": 1
+    },
+    {
+      "source": "Modifying entities before save",
+      "translation": "保存前修改实体",
+      "count": 1
+    },
+    {
+      "source": "findByExample in Action",
+      "translation": "通过示例查找",
+      "count": 1
+    },
+    {
+      "source": "findByExample with negated values",
+      "translation": "使用否定值的 findByExample",
+      "count": 1
+    },
+    {
+      "source": "Enabling Spring Data Neo4j infrastructure for imperative database access",
+      "translation": "启用 Spring Data Neo4j 的基础设施以支持命令式数据库访问",
+      "count": 1
+    },
+    {
+      "source": "Enabling Spring Data Neo4j infrastructure for reactive database access",
+      "translation": "启用 Spring Data Neo4j 的基础设施以支持反应式数据库访问",
+      "count": 1
+    },
+    {
+      "source": "A CDI producer for the Neo4j Java Driver",
+      "translation": "Neo4j Java Driver 的 CDI 生产者",
+      "count": 1
+    },
+    {
+      "source": "Enabling the Neo4j CDI extension in a SE container",
+      "translation": "在 SE 容器中启用 Neo4j CDI 扩展",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-by-example.html\">Query by Example</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/scrolling.html\">Scrolling</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/sdn-extension.html\">Spring Data Neo4j Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">Neo4j Vector Search</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"repositories.html\">仓储</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/core-extensions.html\">Spring Data 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-by-example.html\">按示例查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/scrolling.html\">滚动</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/sdn-extension.html\">Spring Data Neo4j 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">Neo4j 向量搜索</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Here we use the <code>Neo4jClient</code>, as provided by the infrastructure.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The client takes only in Strings, but the Cypher-DSL can still be used when rendering into a String</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Bind one single value to a named parameter. There’s also an overload to bind a whole map of parameters</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>This is the type of the result you want</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>And finally, the <code>mappedBy</code> method, exposing one <code>Record</code> for each entry in the result plus the drivers type system if needed.\nThis is the API in which you hook in for your custom mappings</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>此处我们使用由基础设施提供的 <code>Neo4jClient</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>该客户端仅接受字符串输入，但在渲染为字符串时仍可使用 Cypher-DSL。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>将一个单一值绑定到命名参数。此外，还有一个重载方法可用于绑定整个参数映射。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>这是您期望的结果类型。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>最后是 <code>mappedBy</code> 方法，它为结果中的每个条目暴露一个 <code>Record</code>，并在需要时提供驱动器的类型系统。这是您进行自定义映射的 API 接口。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>A derived finder method that creates a query for you.\nIt handles the <code>Pageable</code> for you.\nYou should use a sorted pageable.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>This method uses <code>@Query</code> to define a custom query. It returns a <code>Slice&lt;Person&gt;</code>.\nA slice does not know about the total number of pages, so the custom query\ndoesn’t need a dedicated count query. SDN will notify you that it estimates the next slice.\nThe Cypher template must spot both <code>$skip</code> and <code>$limit</code> Cypher parameter.\nIf you omit them, SDN will issue a warning. The will probably not match your expectations.\nAlso, the <code>Pageable</code> should be unsorted and you should provide a stable order.\nWe won’t use the sorting information from the pageable.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>This method returns a page. A page knows about the exact number of total pages.\nTherefore, you must specify an additional count query.\nAll other restrictions from the second method apply.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>这是一个派生的查找方法，会自动为您创建查询。它会自动处理 <code>Pageable</code> 对象。您应当使用已排序的 pageable。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>此方法使用 <code>@Query</code> 注解来定义自定义查询，并返回一个 <code>Slice&lt;Person&gt;</code>。Slice 不知道总页数，因此自定义查询无需专门的计数查询。SDN 会通知您它估算了下一个 Slice。Cypher 模板必须同时包含 <code>$skip</code> 和 <code>$limit</code> Cypher 参数。如果省略它们，SDN 将发出警告，结果很可能不符合您的预期。此外，<code>Pageable</code> 不应包含排序信息，您应提供稳定的排序顺序。我们不会使用 pageable 中的排序信息。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>此方法返回一个 Page（分页对象）。Page 知道确切的总页数。因此，您必须指定额外的计数查询。第二条方法中的所有其他限制同样适用。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Let Spring inject those</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>This supplier can be anything that holds the latest bookmarks you want to bring into the system</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Create the bookmark manager with it</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Pass it on to the customized transaction manager</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>让 Spring 注入这些组件</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>该供应者可以是任何持有您希望引入系统的最新书签的对象</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>使用它创建书签管理器</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>将其传递给自定义的事务管理器</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"appendix/index.html\">Appendix</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/conversions.html\">Conversions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/neo4j-client.html\">Neo4jClient</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/logging.html\">Logging</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/query-creation.html\">Query creation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/custom-queries.html\">Custom queries</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/spatial-types.html\">Spatial types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/migrating.html\">Migrating from SDN+OGM to SDN</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/build.html\">Building Spring Data Neo4j</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"appendix/index.html\">附录</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/conversions.html\">转换</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/neo4j-client.html\">Neo4jClient</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/logging.html\">日志记录</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/query-creation.html\">查询创建</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/custom-queries.html\">自定义查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/spatial-types.html\">空间类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/migrating.html\">从 SDN+OGM 迁移到 SDN</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"appendix/build.html\">构建 Spring Data Neo4j</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Create an instance of the <code>TransactionTemplate</code> with the characteristics you need.\nOf course, this can be a global bean, too.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Reason number one for using the transaction template: Declarative transactions don’t work\nin package private or private methods and also not in inner method calls (imagine another method\nin this service calling <code>internalOperation</code>) due to their nature being implemented with Aspects\nand proxies.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The <code>Neo4jClient</code> is a fixed utility provided by SDN. It cannot be annotated, but it integrates with Spring.\nSo it gives you everything you would do with the pure driver and without automatic mapping and with\ntransactions. It also obeys declarative transactions.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>创建一个具有所需特性的 <code>TransactionTemplate</code> 实例。当然，这也可以是一个全局 Bean。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>使用事务模板的第一个原因：声明式事务无法在包私有或私有方法中工作，也无法在内层方法调用中工作（想象一下该服务中的另一个方法调用 <code>internalOperation</code>），因为它们是通过切面和代理实现的。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>Neo4jClient</code> 是 SDN 提供的一个固定工具类，它无法被注解，但与 Spring 集成。因此，它可以为您提供使用纯驱动、无需自动映射且包含事务时所能实现的所有功能。它也遵循声明式事务。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>If you have multiple drivers and database selection providers, you would need to create one indicator per combination</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>This makes sure that all of those indicators are grouped under Neo4j, replacing the default Neo4j health indicator</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>This prevents the individual contributors showing up in the health endpoint directly</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>如果您有多个驱动程序和数据库选择提供者，则需要为每种组合创建一个指标</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>这样可以确保所有这些指标都归类在 Neo4j 下，替换默认的 Neo4j 健康指标</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>这可以防止各个贡献者在健康端点中直接显示</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Set to true if you want the modification data to be written during creating as well</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Use this attribute to specify the name of the bean that provides the auditor (i.e. a user name)</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Use this attribute to specify the name of a bean that provides the current date. In this case\na fixed date is used as the above configuration is part of our tests</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>如果希望创建时同时写入修改数据，则设置为 true</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>使用此属性指定提供审计器（即用户名）的 Bean 名称</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>使用此属性指定提供当前日期的 Bean 名称。在此情况下，将使用固定日期，因为上述配置是我们测试的一部分</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"introduction-and-preface/index.html\">Preface</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/preface-neo4j.html\">Introducing Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/preface-sd.html\">Introducing Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/preface-sdn.html\">Introducing Spring Data Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/building-blocks.html\">Building blocks of Spring Data Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/new-and-noteworthy.html\">New &amp; Noteworthy</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"dependencies.html\">Dependencies</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"introduction-and-preface/index.html\">序言</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/preface-neo4j.html\">介绍 Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/preface-sd.html\">介绍 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/preface-sdn.html\">介绍 Spring Data Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/building-blocks.html\">Spring Data Neo4j 的构建模块</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"introduction-and-preface/new-and-noteworthy.html\">新特性与亮点</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"dependencies.html\">依赖项</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The <code>Neo4jTemplate</code> is injected by the runtime through the constructor of <code>DomainResultsImpl</code>. No need for <code>@Autowired</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The Cypher-DSL is used to build a complex statement (pretty much the same as shown in <a href=\"#faq.path-mapping\">path mapping</a>.)\nThe statement can be passed directly to the template.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td><code>Neo4jTemplate</code> 由运行时通过 <code>DomainResultsImpl</code> 的构造函数注入，无需使用 <code>@Autowired</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Cypher-DSL 用于构建复杂的语句（与<a href=\"#faq.path-mapping\">路径映射</a>中所示的几乎相同）。该语句可直接传递给模板。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Same as with plain Spring in <a href=\"#bootless-imperative-configuration\">Enabling Spring Data Neo4j infrastructure for imperative database access</a>, but annotated with the corresponding CDI infrastructure.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>This is <strong>optional</strong>. However, if you run a custom database selection provider, you <em>must</em> not qualify this bean.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>与在<a href=\"#bootless-imperative-configuration\">为命令式数据库访问启用 Spring Data Neo4j 基础设施</a>中的普通 Spring 配置相同，但添加了相应的 CDI 基础设施注解。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>这是<strong>可选的</strong>。但是，如果您运行自定义数据库选择提供者，则<span style=\"text-decoration: underline;\">必须</span>不要为该 Bean 指定限定符。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Why isn’t this read-only be default? While it would work for the derived finder above (which we actually know to be read-only),\nwe often have seen cases in which user add a custom <code>@Query</code> and implement it via a <code>MERGE</code> construct,\nwhich of course is a write operation.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Custom procedures can do all kinds of things, there’s no way at the moment to check for read-only vs write here for us.</td>\n</tr>\n</tbody>",
+      "translation": "1 为什么默认不是只读？虽然对于上述派生查找器（我们实际上知道它是只读的）来说这样是可行的，但我们经常看到用户添加自定义的 `@Query` 并通过 `MERGE` 构造来实现它，这当然是一个写操作。\n2 自定义过程可以做各种各样的事情，目前我们无法在此处检查它们是只读还是可写。",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The driver bean is required.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>This statically selects a database named <code>yourDatabase</code> and is <strong>optional</strong>.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>需要配置驱动 Bean。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>此步骤静态选择名为 <code>yourDatabase</code> 的数据库，且为<strong>可选</strong>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>This is a made up non-domain result. A real world query result would probably look more complex.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The method this fragment adds. Again, the method is annotated with Spring’s <code>@Transactional</code></td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>这是一个虚构的非领域结果。现实世界中的查询结果可能看起来更复杂。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>此片段添加的方法。同样，该方法使用 Spring 的 <code>@Transactional</code> 注解进行了标注。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Work with the driver directly. As with all the examples: There is no need for <code>@Autowired</code> magic. All the fragments\nare actually testable on their own.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The use case is made up. Here we use a driver managed transaction deleting the whole graph and return the number of\ndeleted nodes and relationships</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>直接与驱动程序协作。与所有示例一样：无需使用 <code>@Autowired</code> 魔法。所有片段实际上都可以独立进行测试。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>用例是虚构的。此处我们使用由驱动程序管理的事务来删除整个图，并返回被删除节点和关系关系的数量。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"object-mapping.html\">Object Mapping</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"object-mapping/metadata-based-mapping.html\">Metadata-based Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"object-mapping/mapping-ids.html\">Handling and provisioning of unique IDs</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"object-mapping/sdc-object-mapping.html\">Spring Data Object Mapping Fundamentals</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"object-mapping.html\">对象映射</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"object-mapping/metadata-based-mapping.html\">基于元数据的映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"object-mapping/mapping-ids.html\">唯一 ID 的处理与配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"object-mapping/sdc-object-mapping.html\">Spring Data 对象映射基础</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"testing.html\">Testing</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"testing/testing-without-spring-boot.html\">Without Spring Boot</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"testing/testing-with-spring-boot.html\">With Spring Boot and <code>@DataNeo4jTest</code></a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"testing.html\">测试</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"testing/testing-without-spring-boot.html\">不使用 Spring Boot</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"testing/testing-with-spring-boot.html\">使用 Spring Boot 和 <code>@DataNeo4jTest</code></a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nAll <code>findById</code>, <code>findAllById</code>, <code>findAll</code> and predefined existential methods are marked as read-only by default.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n所有 <code>findById</code>、<code>findAllById</code>、<code>findAll</code> 以及预定义的生存性方法默认都标记为只读。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>This signature is required by the base class. Take the <code>Neo4jOperations</code> (the actual specification of the <code>Neo4jTemplate</code>)\nand the entity information and store them on an attribute if needed.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>基类需要此签名。获取 <code>Neo4jOperations</code>（即 <code>Neo4jTemplate</code> 的实际规范）和实体信息，并在必要时将其存储到某个属性中。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Here, several calls to multiple repositories are wrapped in one single, read-only transaction.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>此处，对多个存储库的多次调用被封装在一个单一的只读事务中。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nThere is <strong>no</strong> need to do any of these things above, unless your application has the need to access or provide\nthis data. If in doubt, don’t do either.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n除非您的应用程序需要访问或提供这些数据，否则<strong>无需</strong>执行上述任何操作。如有疑虑，请勿进行任何操作。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-tip\" title=\"Tip\"></i>\n</td>\n<td class=\"content\">\nNamed paths can be used efficiently to populate and return more than just a root node, see <a class=\"xref page\" href=\"appendix/custom-queries.html#custom-query.paths\">appendix/custom-queries.adoc#custom-query.paths</a>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-tip\" title=\"提示\"></i>\n</td>\n<td class=\"content\">\n命名路径可高效地用于填充和返回根节点以外的内容，详见 <a class=\"xref page\" href=\"appendix/custom-queries.html#custom-query.paths\">附录/自定义查询.adoc#自定义查询.路径</a>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"repositories/projections.html\">Projections</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections/sdn-projections.html\">Spring Data Neo4j Projections</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"repositories/projections.html\">投影</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections/sdn-projections.html\">Spring Data Neo4j 投影</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nBe careful that you don’t mix up entities retrieved from one database with another database.\nThe database name is requested for each new transaction, so you might end up with less or more entities than expected when changing the database name in between calls.\nOr worse, you could inevitably store the wrong entities in the wrong database.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n请注意，不要将从一个数据库检索到的实体与另一个数据库的实体混淆。\n每次新事务都会请求数据库名称，因此在调用之间更改数据库名称时，您可能会得到比预期少或多的实体。\n更糟糕的是，您不可避免地会将错误的实体存储到错误的数据库中。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nUse this bookmark manager at your own risk, it will effectively disable any bookmark management by dropping all\nbookmarks and never  supplying any. In a cluster you will be at a high risk of experiencing stale reads. In a single\ninstance it will most likely not make any difference.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n请谨慎使用此书签管理器，因为它会删除所有书签且不再提供任何书签，从而有效禁用任何书签管理功能。在集群环境中，您将面临极高的读取陈旧数据风险；而在单实例环境中，通常不会产生明显影响。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">SDN specific annotation</th>\n<th class=\"tableblock halign-left valign-top\">Spring Data common annotation</th>\n<th class=\"tableblock halign-left valign-top\">Purpose</th>\n<th class=\"tableblock halign-left valign-top\">Difference</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">SDN 特定注解</th>\n<th class=\"tableblock halign-left valign-top\">Spring Data 通用注解</th>\n<th class=\"tableblock halign-left valign-top\">目的</th>\n<th class=\"tableblock halign-left valign-top\">差异</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nSetters are not required on non-final fields for the id.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n非 final 字段的 id 不需要设置 setter。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nTake special care when you use nodes hydrated from a path based query to save data.\nIf not all relationships are hydrated, data will be lost.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n使用基于路径查询水合的节点保存数据时，请格外小心。\n如果未水合所有关系，数据将会丢失。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.custom-queries-with-page-and-slice\"></a>How do I use custom queries with repository methods returning <code>Page&lt;T&gt;</code> or <code>Slice&lt;T&gt;</code>?",
+      "translation": "<a class=\"anchor\" href=\"#faq.custom-queries-with-page-and-slice\"></a>如何使用返回 <code>Page&lt;T&gt;</code> 或 <code>Slice&lt;T&gt;</code> 的仓储方法中的自定义查询？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.custom-queries-and-custom-mappings\"></a>Is <code>@Query</code> the only way to use custom queries?",
+      "translation": "<a class=\"anchor\" href=\"#faq.custom-queries-and-custom-mappings\"></a><code>@Query</code> 是使用自定义查询的唯一方式吗？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"getting-started.html\">Getting started</a>",
+      "translation": "<a class=\"nav-link\" href=\"getting-started.html\">入门指南</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.sdn-related-to-ogm\"></a>How does SDN relate to Neo4j-OGM?",
+      "translation": "<a class=\"anchor\" href=\"#faq.sdn-related-to-ogm\"></a>SDN 与 Neo4j-OGM 有何关系？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.why-should-you-favor-sdn\"></a>Why should I use SDN in favor of SDN+OGM",
+      "translation": "<a class=\"anchor\" href=\"#faq.why-should-you-favor-sdn\"></a>为什么我应该使用 SDN 而不是 SDN+OGM？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.sdn-and-http-support\"></a>Does SDN support connections over HTTP to Neo4j?",
+      "translation": "<a class=\"anchor\" href=\"#faq.sdn-and-http-support\"></a>SDN 是否支持通过 HTTP 连接到 Neo4j？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.sdn-and-embedded-support\"></a>Does SDN support embedded Neo4j?",
+      "translation": "<a class=\"anchor\" href=\"#faq.sdn-and-embedded-support\"></a>SDN 是否支持嵌入式 Neo4j？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.sdn-and-embedded-instances-support\"></a>Does SDN provide an embedded instance for your application?",
+      "translation": "<a class=\"anchor\" href=\"#faq.sdn-and-embedded-instances-support\"></a>SDN 是否为您的应用程序提供嵌入式实例？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.sdn-interact-with-embedded-instances\"></a>Does SDN interact directly with an embedded instance?",
+      "translation": "<a class=\"anchor\" href=\"#faq.sdn-interact-with-embedded-instances\"></a>SDN 是否直接与嵌入式实例交互？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.change-driver-version\"></a>Which Neo4j Java Driver can be used and how?",
+      "translation": "<a class=\"anchor\" href=\"#faq.change-driver-version\"></a>可以使用哪个 Neo4j Java 驱动程序，如何使用？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_with_spring_boot\"></a>With Spring Boot",
+      "translation": "<a class=\"anchor\" href=\"#_with_spring_boot\"></a>使用 Spring Boot",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_without_spring_boot\"></a>Without Spring Boot",
+      "translation": "<a class=\"anchor\" href=\"#_without_spring_boot\"></a>不使用 Spring Boot",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.multidatabase\"></a>Neo4j 4 supports multiple databases - How can I use them?",
+      "translation": "<a class=\"anchor\" href=\"#faq.multidatabase\"></a>Neo4j 4 支持多个数据库——如何使用它们？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.multidatabase.statically\"></a>Statically configured",
+      "translation": "<a class=\"anchor\" href=\"#faq.multidatabase.statically\"></a>静态配置",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.multidatabase.dynamically\"></a>Dynamically configured",
+      "translation": "<a class=\"anchor\" href=\"#faq.multidatabase.dynamically\"></a>动态配置",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.multidatabase.health\"></a>The Spring Boot Neo4j health indicator targets the default database, how can I change that?",
+      "translation": "<a class=\"anchor\" href=\"#faq.multidatabase.health\"></a>Spring Boot Neo4j 健康指示器针对的是默认数据库，如何更改它？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_imperative_variant\"></a>Imperative variant",
+      "translation": "<a class=\"anchor\" href=\"#_imperative_variant\"></a>祈使变体",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_reactive_variant\"></a>Reactive variant",
+      "translation": "<a class=\"anchor\" href=\"#_reactive_variant\"></a>响应式变体",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.impersonation\"></a>Neo4j 4.4+ supports impersonation of different users - How can I use them?",
+      "translation": "<a class=\"anchor\" href=\"#faq.impersonation\"></a>Neo4j 4.4 及以上版本支持模拟不同用户——如何使用它们？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.cluster\"></a>Using a Neo4j cluster instance from Spring Data Neo4j",
+      "translation": "<a class=\"anchor\" href=\"#faq.cluster\"></a>使用 Spring Data Neo4j 中的 Neo4j 集群实例",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.transactions.cluster\"></a>Do I need specific configuration so that transactions work seamless with a Neo4j Causal Cluster?",
+      "translation": "<a class=\"anchor\" href=\"#faq.transactions.cluster\"></a>是否需要特定配置，才能使事务在 Neo4j 因果集群中无缝运行？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.transactions.cluster.rw\"></a>Is it important to use read-only transactions for Neo4j cluster?",
+      "translation": "<a class=\"anchor\" href=\"#faq.transactions.cluster.rw\"></a>在 Neo4j 集群中使用只读事务是否重要？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.bookmarks.seeding\"></a>Can I retrieve the latest Bookmarks or seed the transaction manager?",
+      "translation": "<a class=\"anchor\" href=\"#faq.bookmarks.seeding\"></a>我可以检索最新的书签或播种交易管理器吗？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.bookmarks.noop\"></a>Can I disable bookmark management?",
+      "translation": "<a class=\"anchor\" href=\"#faq.bookmarks.noop\"></a>我可以禁用书签管理吗？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.annotations.specific\"></a>Do I need to use Neo4j specific annotations?",
+      "translation": "<a class=\"anchor\" href=\"#faq.annotations.specific\"></a>我需要使用 Neo4j 特定的注解吗？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.ids.assignment\"></a>How do I use assigned ids?",
+      "translation": "<a class=\"anchor\" href=\"#faq.ids.assignment\"></a>如何使用分配的 ID？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.ids.externally\"></a>How do I use externally generated ids?",
+      "translation": "<a class=\"anchor\" href=\"#faq.ids.externally\"></a>如何使用外部生成的 ID？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#template-support\"></a>Do I have to create repositories for each domain class?",
+      "translation": "<a class=\"anchor\" href=\"#template-support\"></a>我是否为每个领域类创建仓库？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.path-mapping\"></a>Can I map named paths?",
+      "translation": "<a class=\"anchor\" href=\"#faq.path-mapping\"></a>我能否映射命名路径？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_using_complex_dynamic_custom_queries_but_still_returning_domain_types\"></a>Using complex, dynamic custom queries but still returning domain types",
+      "translation": "<a class=\"anchor\" href=\"#_using_complex_dynamic_custom_queries_but_still_returning_domain_types\"></a>使用复杂的动态自定义查询，但仍返回领域类型",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_using_custom_queries_and_custom_mappings\"></a>Using custom queries and custom mappings",
+      "translation": "<a class=\"anchor\" href=\"#_using_custom_queries_and_custom_mappings\"></a>使用自定义查询和自定义映射",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_low_level_interactions\"></a>Low level interactions",
+      "translation": "<a class=\"anchor\" href=\"#_low_level_interactions\"></a>低级交互",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.custom-base-repositories\"></a>How do I use custom Spring Data Neo4j base repositories?",
+      "translation": "<a class=\"anchor\" href=\"#faq.custom-base-repositories\"></a>如何使用自定义的 Spring Data Neo4j 基础仓库？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.entities.auditing\"></a>How do I audit entities?",
+      "translation": "<a class=\"anchor\" href=\"#faq.entities.auditing\"></a>如何审计实体？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.find-by-example\"></a>How do I use \"Find by example\"?",
+      "translation": "<a class=\"anchor\" href=\"#faq.find-by-example\"></a>如何使用“按示例查找”？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.spring-boot.sdn\"></a>Do I need Spring Boot to use Spring Data Neo4j?",
+      "translation": "<a class=\"anchor\" href=\"#faq.spring-boot.sdn\"></a>使用 Spring Data Neo4j 是否需要 Spring Boot？",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.sdn-without-spring-boot\"></a>Using Spring Data Neo4j inside a Spring context without Spring Boot",
+      "translation": "<a class=\"anchor\" href=\"#faq.sdn-without-spring-boot\"></a>在无需 Spring Boot 的 Spring 上下文中使用 Spring Data Neo4j",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#faq.sdn-in-cdi-2.0\"></a>Using Spring Data Neo4j in a CDI 2.0 environment",
+      "translation": "<a class=\"anchor\" href=\"#faq.sdn-in-cdi-2.0\"></a>在 CDI 2.0 环境中使用 Spring Data Neo4j",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Neo4j",
+      "translation": "Spring Data Neo4j",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

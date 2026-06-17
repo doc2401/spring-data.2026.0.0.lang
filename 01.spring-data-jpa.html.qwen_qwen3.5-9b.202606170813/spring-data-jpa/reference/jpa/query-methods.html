@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>JPA 查询方法:: Spring Data JPA</title>
+    <link href="https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html" rel="canonical"/>
+    <meta content="Antora 3.2.0-alpha.6" name="generator"/>
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link href="../_/css/site.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/page-search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/asciidoctor-tabs.css" rel="stylesheet"/>
+
+    <meta content="v0.4.16" name="antora-ui-version"/> 
+    <meta content="4.1.0" name="version"/>
+    <meta content="data-jpa" name="component"/>
+    <meta content="false" name="latest-version"/>
+    <link href="../_/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img alt="Spring" class="block" id="springlogo" src="../_/img/spring-logo.svg"/>
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-menu" id="topbar-nav">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">为何是春天</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.io/why-spring">概览</a>
+<a class="navbar-item" href="https://spring.io/microservices">微服务</a>
+<a class="navbar-item" href="https://spring.io/reactive">响应式</a>
+<a class="navbar-item" href="https://spring.io/event-driven">事件驱动</a>
+<a class="navbar-item" href="https://spring.io/cloud">云</a>
+<a class="navbar-item" href="https://spring.io/web-applications">Web 应用</a>
+<a class="navbar-item" href="https://spring.io/serverless">无服务器</a>
+<a class="navbar-item" href="https://spring.io/batch">批处理</a></div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px"><a class="navbar-item" href="https://spring.io/projects">概览</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+<a class="navbar-item navbar-item-special" href="https://spring.io/projects">查看所有项目</a>
+<li class="navbar-item navbar-item-special-3">开发工具</li>
+<a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+<a class="navbar-item navbar-item-special-2" href="https://start.spring.io">Spring Initializr
+              <svg class="external-link-icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="15 10.94 15 15 1 15 1 1 5.06 1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><polyline fill="none" points="8.93 1 15 1 15 7.07" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><line fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" x1="15" x2="8" y1="1" y2="8"></line></svg></a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.academy/courses">课程</a>
+<a class="navbar-item" href="https://spring.academy/learning-path">获取认证</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg"><a class="navbar-item" href="https://spring.io/solutions">概览</a>
+<a class="navbar-item" href="https://spring.io/support">Spring 运行时</a>
+<a class="navbar-item" href="https://spring.io/consulting">Spring 咨询</a>
+<a class="navbar-item" href="https://spring.academy/teams">Spring Academy 团队培训</a>
+<a class="navbar-item" href="https://spring.io/security">安全公告</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input id="switch-theme-checkbox" name="switch-theme-checkbox" type="checkbox"/>
+      <span class="icon"><svg aria-hidden="true" class="svg-inline--fa fa-moon moon" data-icon="moon" data-prefix="fas" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" fill="currentColor"></path>
+</svg>
+        <svg aria-hidden="true" class="svg-inline--fa fa-sun sun" data-icon="sun" data-prefix="fas" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" fill="currentColor"></path>
+</svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-jpa" data-version="4.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data JPA</span>
+  <span class="version">4.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg height="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="24px" xml:space="preserve"><g><path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"></path><path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"></path><path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewbox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+</svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../index.html">概览</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../commons/upgrade.html">升级 Spring Data</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../jpa.html">JPA</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="getting-started.html">入门指南</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-concepts.html">核心概念</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/definition.html">定义存储库接口</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/create-instances.html">配置</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="entity-persistence.html">持久化实体</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-methods-details.html">定义查询方法</a>
+</li>
+<li class="nav-item is-current-page" data-depth="2">
+<a class="nav-link" href="query-methods.html">JPA 查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="value-expressions.html">值表达式基础</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/projections.html">投影</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="stored-procedures.html">存储过程</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="specifications.html">规范</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-by-example.html">基于示例的查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/vector-search.html">向量搜索</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="transactions.html">事务性</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="locking.html">锁定</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../auditing.html">审计</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="misc-merging-persistence-units.html">合并持久化单元</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="jpd-misc-cdi-integration.html">CDI 集成</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/custom-implementations.html">自定义存储库实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-domain-events.html">从聚合根发布事件</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/null-handling.html">存储库方法的空值处理</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-extensions.html">Spring Data 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-keywords-reference.html">存储库查询关键字</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-return-types-reference.html">存储库查询返回类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="aot.html">提前优化</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="faq.html">常见问题解答</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="glossary.html">术语表</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../envers.html">Envers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../envers/introduction.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../envers/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../envers/usage.html">Usage</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external" href="../api/java/index.html" target="_blank">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external" href="https://github.com/spring-projects/spring-data-commons/wiki" target="_blank">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button class="nav-toggle" id="nav-toggle-2"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle" id="nav-toggle-1"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg id="svg-stash-de15fb15"></svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="toc" data-levels="2" data-title="JPA Query Methods">
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links"><a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-jpa/src/main/antora/modules/ROOT/pages/jpa/query-methods.adoc">
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          编辑此页面
+        </a>
+<a href="https://github.com/spring-projects/spring-data-jpa" title="GitHub">
+<svg height="512px" id="Layer_1" version="1.1" viewbox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg"><style type="text/css">
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} </style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          GitHub 项目
+        </a></div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container"><nav aria-label="面包屑" class="breadcrumbs">
+<ul>
+<li><a href="../index.html">Spring Data JPA</a></li>
+<li><a href="../jpa.html">JPA</a></li>
+<li><a href="query-methods.html">JPA 查询方法</a></li>
+</ul>
+</nav></div><h1 class="page" id="page-title">JPA 查询方法</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本节介绍了使用 Spring Data JPA 创建查询的各种方法。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.sample-app.finders.strategies"><a class="anchor" href="#jpa.sample-app.finders.strategies"></a>查询查找策略</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JPA 模块支持将查询手动定义为字符串，或从方法名派生。</p>
+</div>
+<div class="paragraph">
+<p>使用谓词 <code>IsStartingWith</code>、<code>StartingWith</code>、<code>StartsWith</code>、<code>IsEndingWith</code>、<code>EndingWith</code>、<code>EndsWith</code>、<code>IsNotContaining</code>、<code>NotContaining</code>、<code>NotContains</code>、<code>IsContaining</code>、<code>Containing</code> 和 <code>Contains</code> 的派生查询，其相应参数将经过清理。这意味着如果参数中实际包含被 <code>LIKE</code> 识别为通配符的字符，这些字符将被转义，从而仅作为字面量进行匹配。
+所使用的转义字符可以通过设置 <code>@EnableJpaRepositories</code> 注解的 <code>escapeCharacter</code> 属性来配置。
+请参见 <a href="#jpa.query.spel-expressions">使用值表达式</a>。</p>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.declared-queries"><a class="anchor" href="#jpa.query-methods.declared-queries"></a>声明查询</h3>
+<div class="paragraph">
+<p>虽然通过方法名获取查询非常方便，但有时可能会遇到方法名解析器不支持您想要使用的关键字，或者导致方法名变得过于冗长丑陋的情况。因此，您可以选择使用遵循命名约定的 JPA 命名查询（有关详细信息，请参阅<a href="#jpa.query-methods.named-queries">使用 JPA 命名查询</a>），或者更直接地通过 <code>@Query</code> 注解来标注您的查询方法（有关详情，请参阅<a href="#jpa.query-methods.at-query">使用 <code>@Query</code></a>）。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query-methods.query-creation"><a class="anchor" href="#jpa.query-methods.query-creation"></a>查询创建</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>通常，JPA 的查询创建机制如<a href="https://docs.spring.io/spring-data/commons/reference/4.1/repositories/query-methods.html">查询方法</a>中所描述的那样工作。以下示例展示了 JPA 查询方法的转换结果：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 1：从方法名创建查询</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends Repository&lt;User, Long&gt; {
+
+  List&lt;User&gt; findByEmailAddressAndLastname(String emailAddress, String lastname);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>我们使用 JPQL 创建查询，将其转换为以下查询：<code>select u from User u where u.emailAddress = ?1 and u.lastname = ?2</code>。Spring Data JPA 会执行属性检查并遍历嵌套属性，具体描述请参阅<a class="xref page" href="../repositories/query-methods-details.html#repositories.query-methods.query-property-expressions">属性表达式</a>。</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>下表描述了 JPA 支持的关键词以及包含该关键词的方法所对应的含义：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">表 1。方法名中支持的关键词</caption>
+<colgroup>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead><tr>
+<th class="tableblock halign-left valign-top">关键字</th>
+<th class="tableblock halign-left valign-top">示例</th>
+<th class="tableblock halign-left valign-top">JPQL 片段</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Distinct</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findDistinctByLastnameAndFirstname</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>select distinct …​ where x.lastname = ?1 and x.firstname = ?2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>And</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByLastnameAndFirstname</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.lastname = ?1 and x.firstname = ?2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Or</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByLastnameOrFirstname</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.lastname = ?1 or x.firstname = ?2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Is</code>, <code>Equals</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByFirstname</code>,<code>findByFirstnameIs</code>,<code>findByFirstnameEquals</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.firstname = ?1</code>（或者，如果参数为<code>null</code>，则使用<code>… where x.firstname IS NULL</code>）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Between</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByStartDateBetween</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.startDate between ?1 and ?2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LessThan</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAgeLessThan</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age &lt; ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LessThanEqual</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAgeLessThanEqual</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age &lt;= ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GreaterThan</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAgeGreaterThan</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age &gt; ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GreaterThanEqual</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAgeGreaterThanEqual</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age &gt;= ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>After</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByStartDateAfter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.startDate &gt; ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Before</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByStartDateBefore</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.startDate &lt; ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IsNull</code>, <code>Null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAge(Is)Null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age is null</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IsNotNull</code>, <code>NotNull</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAge(Is)NotNull</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age is not null</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Like</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByFirstnameLike</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.firstname like ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NotLike</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByFirstnameNotLike</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.firstname not like ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>StartingWith</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByFirstnameStartingWith</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… 其中 x.firstname like ?1</code>（参数绑定并追加了 <code>%</code>）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EndingWith</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByFirstnameEndingWith</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… 其中 x.firstname like ?1</code>（参数前缀绑定有 <code>%</code>）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Containing</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByFirstnameContaining</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… 其中 x.firstname like ?1</code>（参数绑定用 <code>%</code> 包裹）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OrderBy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAgeOrderByLastnameDesc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age = ?1 order by x.lastname desc</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Not</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByLastnameNot</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.lastname &lt;&gt; ?1</code>（如果参数为<code>null</code>，则使用<code>… where x.lastname IS NOT NULL</code>）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>In</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAgeIn(Collection&lt;Age&gt; ages)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age in ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NotIn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByAgeNotIn(Collection&lt;Age&gt; ages)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.age not in ?1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>True</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByActiveTrue()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.active = true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>False</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByActiveFalse()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where x.active = false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IgnoreCase</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findByFirstnameIgnoreCase</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>… where UPPER(x.firstname) = UPPER(?1)</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table><tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>In</code> 和 <code>NotIn</code> 同样接受任何 <code>Collection</code> 的子类作为参数，同时也支持数组或可变参数。对于同一逻辑运算符的其他语法形式，请查阅<a class="xref page" href="../repositories/query-keywords-reference.html">仓储查询关键字</a>。
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>`DISTINCT` 有时颇具陷阱，并不总能产生你预期的结果。例如，`select distinct u from User u` 会产生与 `select distinct u.lastname from User u` 完全不同的结果。在第一种情况下，由于包含了 `User.id`，因此不会有重复项，你会得到整个表的数据，且结果为 `User` 对象。</p>
+</div>
+<div class="paragraph">
+<p>然而，后一种查询会将焦点缩小到仅 `<code>User.lastname</code>`，并找出该表中所有唯一的姓氏。  
+这也会返回一个 `<code>List&lt;String&gt;</code>` 结果集，而不是 `<code>List&lt;User&gt;</code>` 结果集。</p>
+</div>
+<div class="paragraph">
+<p>`countDistinctByLastname(String lastname)` 也可能产生意外结果。  
+Spring Data JPA 会推导出 `select count(distinct u.id) from User u where u.lastname = ?1`。  
+同样，由于 `u.id` 不会产生重复项，该查询将统计所有具有绑定姓名的用户数量。  
+这与 `countByLastname(String lastname)` 的结果相同！</p>
+</div>
+<div class="paragraph">
+<p>这个查询的目的是什么呢？是为了找出具有某个特定姓氏的人数吗？还是为了找出拥有该绑定姓氏的<em>不同</em>人数？亦或是为了找出<em>不同的姓氏</em>的数量？（最后一种情况完全是另一个查询！）使用<code>distinct</code>有时需要手动编写查询语句，并利用<code>@Query</code>来最准确地捕捉所需信息，因为你可能还需要一个投影来捕获结果集。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.named-queries.annotation-based-configuration"><a class="anchor" href="#jpa.query-methods.named-queries.annotation-based-configuration"></a>基于注解的配置</h3>
+<div class="paragraph">
+<p>基于注解的配置具有无需编辑其他配置文件从而降低维护工作量的优势。为此付出的代价是，每声明一个新的查询都需要重新编译您的领域类。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 2：基于注解的命名查询配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Entity
+@NamedQuery(name = "User.findByEmailAddress",
+  query = "select u from User u where u.emailAddress = ?1")
+public class User {
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query-methods.named-queries"><a class="anchor" href="#jpa.query-methods.named-queries"></a>使用 JPA 命名查询</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+示例使用了 <code>&lt;named-query /&gt;</code> 元素和 <code>@NamedQuery</code> 注解。这些配置元素的查询必须在 JPA 查询语言中定义。当然，您也可以使用 <code>&lt;named-native-query /&gt;</code> 或 <code>@NamedNativeQuery</code>。这些元素允许您通过牺牲数据库平台独立性来以原生 SQL 形式定义查询。
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.named-queries.xml-named-query-definition"><a class="anchor" href="#jpa.query-methods.named-queries.xml-named-query-definition"></a>XML 命名查询定义</h3>
+<div class="paragraph">
+<p>若要使用 XML 配置，请将必要的 `<named-query></named-query>` 元素添加到位于类路径中 `META-INF` 文件夹下的 JPA 配置文件 `orm.xml` 中。通过使用某些定义的命名约定，可以启用命名查询的自动调用。有关更多详细信息，请参见下文。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 3。XML 命名查询配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;named-query name="User.findByLastname"&gt;
+  &lt;query&gt;select u from User u where u.lastname = ?1&lt;/query&gt;
+&lt;/named-query&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>该查询具有一个特殊名称，用于在运行时解析它。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.named-queries.declaring-interfaces"><a class="anchor" href="#jpa.query-methods.named-queries.declaring-interfaces"></a>声明接口</h3>
+<div class="paragraph">
+<p>若要启用这些命名查询，请按如下方式指定 `<code>UserRepository</code>`：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 4。UserRepository 中的查询方法声明</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  List&lt;User&gt; findByLastname(String lastname);
+
+  User findByEmailAddress(String emailAddress);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Spring Data 尝试将这些方法的调用解析为命名查询，其格式以配置的实体类的简单名称开头，后跟由点号分隔的方法名。因此，上述示例将使用之前定义的命名查询，而不是尝试根据方法名创建查询。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query-methods.at-query"><a class="anchor" href="#jpa.query-methods.at-query"></a>Using <code>@Query</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>使用命名查询来声明实体查询是一种有效的方法，适用于少量查询的场景。由于这些查询本身与执行它们的 Java 方法绑定，您可以直接使用 Spring Data JPA 的 `<code>@Query</code>` 注解将它们直接绑定到方法上，而不是将其注解到领域类中。这样做可以将领域类从持久化特定的信息中解耦，并将查询逻辑与仓库接口放在一起。</p>
+</div>
+<div class="paragraph">
+<p>注解到查询方法的查询优先于使用 `<code>@NamedQuery</code>` 定义或在 `<code>orm.xml</code>` 中声明的命名查询。</p>
+</div>
+<div class="paragraph">
+<p>以下示例展示了使用 `@Query` 注解创建的查询：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 5：在查询方法中使用 `<code>@Query</code>` 声明查询。</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  @Query("select u from User u where u.emailAddress = ?1")
+  User findByEmailAddress(String emailAddress);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.at-query.advanced-like"><a class="anchor" href="#jpa.query-methods.at-query.advanced-like"></a>使用高级 <code>LIKE</code> 表达式</h3>
+<div class="paragraph">
+<p>手动定义的查询（使用 `<code>@Query</code>` 创建）的运行机制允许在查询定义中指定高级的 `<code>LIKE</code>` 表达式，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 6。@Query 中的高级 <code>like</code> 表达式</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  @Query("select u from User u where u.firstname like %?1")
+  List&lt;User&gt; findByFirstnameEndsWith(String firstname);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>在上面的示例中，识别了 `<code>LIKE</code>` 分隔符字符（<code>%</code>），并将查询转换为有效的 JPQL 查询（移除了 <code>%</code>）。执行该查询时，传递给方法调用的参数会附加之前识别的 <code>LIKE</code> 模式。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.at-query.native"><a class="anchor" href="#jpa.query-methods.at-query.native"></a>原生查询</h3>
+<div class="paragraph">
+<p>使用 `<code>@NativeQuery</code>` 注解可以执行原生查询，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 7：在查询方法中使用 `<code>@NativeQuery</code>` 声明原生查询。</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  @NativeQuery(value = "SELECT * FROM USERS WHERE EMAIL_ADDRESS = ?1")
+  User findByEmailAddress(String emailAddress);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>@NativeQuery</code> 注解主要是一个组合注解，用于 <code>@Query(nativeQuery=true)</code>，但它还提供了其他属性，例如 <code>sqlResultSetMapping</code>，以便利用 JPA 的 <code>@SqlResultSetMapping(…)</code>。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table><tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Spring Data 可以重写简单的分页和排序查询。
+更复杂的查询需要 <a href="https://github.com/JSQLParser/JSqlParser">JSqlParser</a> 位于类路径中，或者在代码中声明一个 <code>countQuery</code>。
+有关更多详细信息，请参见下面的示例。
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="exampleblock">
+<div class="title">示例 8：在查询方法中使用 `<code>@NativeQuery</code>` 声明用于分页的原生计数查询。</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  @NativeQuery(value = "SELECT * FROM USERS WHERE LASTNAME = ?1",
+    countQuery = "SELECT count(*) FROM USERS WHERE LASTNAME = ?1")
+  Page&lt;User&gt; findByLastname(String lastname, Pageable pageable);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>对于命名原生查询，也可以采用类似的方法，只需在查询副本后添加<code>.count</code>后缀即可。不过，您可能需要为计数查询注册一个结果集映射。</p>
+</div>
+<div class="paragraph">
+<p>除了获取映射结果外，原生查询允许您通过选择<code>Map</code>容器作为方法的返回类型来读取数据库中的原始<code>Tuple</code>。  
+生成的 Map 包含键值对，分别代表实际的数据库列名和对应的值。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 9：返回原始列名/值对的本地查询</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  @NativeQuery("SELECT * FROM USERS WHERE EMAIL_ADDRESS = ?1")
+  Map&lt;String, Object&gt; findRawMapByEmail(String emailAddress);      <i class="conum" data-value="1"></i><b>(1)</b>
+
+  @NativeQuery("SELECT * FROM USERS WHERE LASTNAME = ?1")
+  List&lt;Map&lt;String, Object&gt;&gt; findRawMapByLastname(String lastname); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>由 <code>Tuple</code> 支持的单个 <code>Map</code> 结果。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>由多个 <code>Tuple</code> 支持的多个 <code>Map</code> 结果。</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+基于字符串的元组查询仅由 Hibernate 支持。
+Eclipselink 仅支持基于条件的元组查询。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.query-introspection-rewriting"><a class="anchor" href="#jpa.query-methods.query-introspection-rewriting"></a>查询内省与重写</h3>
+<div class="paragraph">
+<p>Spring Data JPA 提供了广泛的功能，可用于执行各种类型的查询。  
+具体来说，给定一个声明的查询，Spring Data JPA 可以：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>introspect 查询以获取其投影，并针对接口投影运行元组查询。</p>
+</li>
+<li>
+<p>如果查询使用构造函数表达式，请使用 DTO 投影；如果查询声明了实体别名或仅包含多字段表达式选择，请重写该投影。</p>
+</li>
+<li>
+<p>应用动态排序</p>
+</li>
+<li>
+<p>推导一个 `COUNT` 查询。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>为此目的，我们针对定义明确的 HQL（Hibernate）和 EQL（EclipseLink）方言提供了专用的查询解析器。另一方面，SQL 在不同方言间存在相当大的差异。因此，Spring Data 永远无法支持所有级别的查询复杂度。我们并非通用的 SQL 解析库，而是旨在通过简化查询执行来提高开发人员生产力的工具。我们内置的 SQL 查询增强功能仅支持用于元数据探查的简单查询（如 <code>COUNT</code> 查询推导）。对于更复杂的查询，您需要使用 <a href="https://github.com/JSQLParser/JSqlParser">JSqlParser</a>，或者通过 <code>@Query(countQuery=…)</code> 提供 <code>COUNT</code> 查询。如果 JSqlParser 位于类路径中，Spring Data JPA 将对其原生查询使用该解析器。</p>
+</div>
+<div class="paragraph">
+<p>若要实现对选择的细粒度控制，您可以使用 <code>@EnableJpaRepositories</code> 配置 <code><a class="xref attachment apiref" href="../api/java/org/springframework/data/jpa/repository/query/QueryEnhancerSelector.html">QueryEnhancerSelector</a></code>：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 10：使用 JavaConfig 配置 Spring Data JPA 仓库</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableJpaRepositories(queryEnhancerSelector = MyQueryEnhancerSelector.class)
+class ApplicationConfig {
+  // …
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><code>QueryEnhancerSelector</code> 是一个策略接口，旨在根据特定查询选择一个 <code><a class="xref attachment apiref" href="../api/java/org/springframework/data/jpa/repository/query/QueryEnhancer.html">QueryEnhancer</a></code>。如果您需要，也可以提供自己的 <code>QueryEnhancer</code> 实现。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-methods.query-rewriter"><a class="anchor" href="#jpa.query-methods.query-rewriter"></a>应用 QueryRewriter</h3>
+<div class="paragraph">
+<p>有时，无论你尝试应用多少特性，似乎都无法在查询被发送到 `<code>EntityManager` 之前让 Spring Data JPA 应用你希望它应用的所有内容。</code></p>
+</div>
+<div class="paragraph">
+<p>您可以在查询发送至 `<code>EntityManager</code>` 之前获取该查询，并对其进行“重写”。也就是说，您可以在最后一刻对查询进行任何修改。  
+查询重写适用于实际查询，以及在适用情况下适用于计数查询。  
+计数查询经过优化，因此要么不需要执行，要么通过其他方式获取计数（例如，如果存在外部事务，则从 Hibernate `<code>SelectionQuery</code>` 派生）。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 11：使用 `<code>@Query</code>` 和 `<code>@NativeQuery</code>` 声明查询重写器。</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface MyRepository extends JpaRepository&lt;User, Long&gt; {
+
+		@NativeQuery(value = "select original_user_alias.* from SD_USER original_user_alias",
+				queryRewriter = MyQueryRewriter.class)
+		List&lt;User&gt; findByNativeQuery(String param);
+
+		@Query(value = "select original_user_alias from User original_user_alias",
+                queryRewriter = MyQueryRewriter.class)
+		List&lt;User&gt; findByNonNativeQuery(String param);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>本示例展示了原生（纯 SQL）重写器和 JPQL 查询，两者均利用相同的 `<code>QueryRewriter`。在此场景中，Spring Data JPA 将在对应类型的应用程序上下文中查找已注册的 Bean。</code></p>
+</div>
+<div class="paragraph">
+<p>您可以这样编写查询重写器：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 12。示例<code>QueryRewriter</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyQueryRewriter implements QueryRewriter {
+
+     @Override
+     public String rewrite(String query, Sort sort) {
+         return query.replaceAll("original_user_alias", "rewritten_user_alias");
+     }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>您必须确保您的 `<code>QueryRewriter`</code> 已注册到应用程序上下文中，无论是通过应用 Spring Framework 的某个基于 `<code>@Component</code>` 的注解，还是将其作为 `<code>@Configuration</code>` 类中的 `<code>@Bean</code>` 方法的一部分来实现。</p>
+</div>
+<div class="paragraph">
+<p>另一种选择是让仓库本身实现该接口。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 13。提供<code>QueryRewriter</code>的存储库</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface MyRepository extends JpaRepository&lt;User, Long&gt;, QueryRewriter {
+
+		@Query(value = "select original_user_alias.* from SD_USER original_user_alias",
+                nativeQuery = true,
+				queryRewriter = MyRepository.class)
+		List&lt;User&gt; findByNativeQuery(String param);
+
+		@Query(value = "select original_user_alias from User original_user_alias",
+                queryRewriter = MyRepository.class)
+		List&lt;User&gt; findByNonNativeQuery(String param);
+
+		@Override
+		default String rewrite(String query, Sort sort) {
+			return query.replaceAll("original_user_alias", "rewritten_user_alias");
+		}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>根据您对 `<code>QueryRewriter</code>` 的使用方式，可能需要配置多个实例，并将它们分别注册到应用上下文中。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+在基于 CDI 的环境中，Spring Data JPA 将在 <code>BeanManager</code> 中搜索您实现的<code>QueryRewriter</code>实例。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query-methods.sorting"><a class="anchor" href="#jpa.query-methods.sorting"></a>使用 Sort</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>排序可以通过提供 `<code>PageRequest`</code> 或使用 `<code>Sort`</code> 直接完成。`<code>Sort`</code> 中的 `<code>Order`</code> 实例实际使用的属性需要与领域模型匹配，这意味着它们必须解析为查询中使用的属性或别名。JPQL 将其定义为一个状态字段路径表达式。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+使用任何不可引用的路径表达式将导致 <code>Exception</code>。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>然而，将 `<code>Sort</code>` 与 <a href="#jpa.query-methods.at-query"><code>@Query</code></a> 结合使用，允许你在 `<code>ORDER BY</code>` 子句中插入包含函数的非路径检查的 `<code>Order</code>` 实例。这是可行的，因为 `<code>Order</code>` 会被追加到给定的查询字符串中。默认情况下，Spring Data JPA 会拒绝任何包含函数调用的 `<code>Order</code>` 实例，但你可以通过使用 `<code>JpaSort.unsafe</code>` 来添加可能存在风险的排序。</p>
+</div>
+<div class="paragraph">
+<p>以下示例使用了 `<code>Sort</code>` 和 `<code>JpaSort</code>`，其中包括 `<code>JpaSort</code>` 上的一个不安全选项：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 14。使用<code>Sort</code>和<code>JpaSort</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  @Query("select u from User u where u.lastname like ?1%")
+  List&lt;User&gt; findByAndSort(String lastname, Sort sort);
+
+  @Query("select u.id, LENGTH(u.firstname) as fn_len from User u where u.lastname like ?1%")
+  List&lt;Object[]&gt; findByAsArrayAndSort(String lastname, Sort sort);
+}
+
+repo.findByAndSort("lannister", Sort.by("firstname"));                <i class="conum" data-value="1"></i><b>(1)</b>
+repo.findByAndSort("stark", Sort.by("LENGTH(firstname)"));            <i class="conum" data-value="2"></i><b>(2)</b>
+repo.findByAndSort("targaryen", JpaSort.unsafe("LENGTH(firstname)")); <i class="conum" data-value="3"></i><b>(3)</b>
+repo.findByAsArrayAndSort("bolton", Sort.by("fn_len"));               <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>指向领域模型属性的有效 <code>Sort</code> 表达式。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>包含函数调用的无效 <code>Sort</code>。抛出异常。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>包含显式标记为 <em>不安全</em> 的 <code>Order</code> 的有效 <code>Sort</code>。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>指向别名函数的有效 <code>Sort</code> 表达式。</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jpasort_unsafe_limitations"><a class="anchor" href="#_jpasort_unsafe_limitations"></a>JpaSort.unsafe(…) limitations</h3>
+<div class="paragraph">
+<p><code>JpaSort.unsafe(…)</code> 以两种模式运行：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>当与派生查询或基于字符串的查询一起使用时，顺序字符串会被追加到查询中。</p>
+</li>
+<li>
+<p>当与示例查询或规范（使用<code>CriteriaQuery</code>）一起使用时，排序表达式会被解析并作为表达式添加到<code>CriteriaQuery</code>中。</p>
+</li>
+<li>
+<p><code>JpaSort.JpaOrder.withUnsafe(…)</code> 会创建一个应用了当前排序方向、大小写敏感性和空值处理策略的新的 <code>JpaSort</code> 对象，作用于指定的属性。查询表达式可以包含函数调用、各种子句（例如 <code>CASE WHEN</code>、算术表达式）或属性路径。排序转换不支持子查询表达式、<code>TREAT</code> 和 <code>CAST</code>。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query-methods.scroll"><a class="anchor" href="#jpa.query-methods.scroll"></a>滚动大型查询结果</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在处理大型数据集时，<a class="xref page" href="../repositories/query-methods-details.html#repositories.scrolling">滚动查询</a>可以帮助高效地处理这些结果，而无需将所有结果加载到内存中。</p>
+</div>
+<div class="paragraph">
+<p>您有多种方式消费大型查询结果：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a class="xref page" href="../repositories/query-methods-details.html#repositories.paging-and-sorting">分页</a>。
+在上一章中，您已经学习了<code>Pageable</code>和<code>PageRequest</code>。</p>
+</li>
+<li>
+<p><a class="xref page" href="../repositories/query-methods-details.html#repositories.scrolling.offset">基于偏移量的滚动</a>。  
+与分页相比，这是一种更轻量级的变体，因为它不需要总结果数量。</p>
+</li>
+<li>
+<p><a class="xref page" href="../repositories/query-methods-details.html#repositories.scrolling.keyset">基于键集的滚动</a>。  
+该方法通过利用数据库索引，避免了<a href="https://use-the-index-luke.com/no-offset">基于偏移量的结果检索的缺点</a>。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>了解更多关于<a class="xref page" href="../repositories/query-methods-details.html#repositories.scrolling.guidance">针对您的特定配置应使用哪种方法</a>的信息。</p>
+</div>
+<div class="paragraph">
+<p>您可以使用滚动 API 配合查询方法，例如<a class="xref page" href="../repositories/query-by-example.html">示例查询</a>和<a class="xref page" href="../repositories/core-extensions.html#core.extensions.querydsl">Querydsl</a>。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+目前尚不支持使用基于字符串的查询方法进行滚动操作。
+此外，也不支持使用存储的 <code>@Procedure</code> 查询方法进行滚动操作。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.named-parameters"><a class="anchor" href="#jpa.named-parameters"></a>使用命名参数</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>默认情况下，Spring Data JPA 使用基于位置的参数绑定，如前面所有示例中所述。这使得在重构时，查询方法容易因参数位置的变化而引发错误。为解决此问题，您可以使用 <code>@Param</code> 注解为方法参数指定具体名称，并在查询中绑定该名称，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 15：使用命名参数</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends JpaRepository&lt;User, Long&gt; {
+
+  @Query("select u from User u where u.firstname = :firstname or u.lastname = :lastname")
+  User findByLastnameOrFirstname(@Param("lastname") String lastname,
+                                 @Param("firstname") String firstname);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+方法参数将根据其在定义查询中的顺序进行交换。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+从版本 4 开始，Spring 完全支持基于 <code>-parameters</code> 编译器标志的 Java 8 参数名称发现功能。通过在构建中使用此标志作为调试信息的替代方案，您可以省略命名参数的 <code>@Param</code> 注解。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query.spel-expressions"><a class="anchor" href="#jpa.query.spel-expressions"></a>模板化查询和表达式</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>我们支持在通过 `<code>@Query</code>` 手动定义的查询中使用受限表达式。  
+当执行该查询时，这些表达式将针对一组预定义的变量进行求值。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+如果您不熟悉值表达式，请参阅<a class="xref page" href="value-expressions.html">值表达式基础</a>以了解 SpEL 表达式和属性占位符。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Spring Data JPA 支持一个名为 `<code>entityName</code>` 的模板变量。  
+其用法为 `<code>select x from #{#entityName} x</code>`。  
+该变量会插入与给定存储库关联的域类型的 `<code>entityName</code>`。  
+`<code>entityName</code>` 的解析方式如下：  
+* 如果域类型在 `<code>@Entity</code>` 注解中设置了 name 属性，则使用该属性值；  
+* 否则，使用域类型的简单类名。</p>
+</div>
+<div class="paragraph">
+<p>以下示例展示了在查询字符串中使用<code>#{#entityName}</code>表达式的一个用例，用于定义一个包含查询方法和手动定义查询的仓储接口：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 16：在仓储查询方法中使用 SpEL 表达式：实体名称</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Entity
+public class User {
+
+  @Id
+  @GeneratedValue
+  Long id;
+
+  String lastname;
+}
+
+public interface UserRepository extends JpaRepository&lt;User,Long&gt; {
+
+  @Query("select u from #{#entityName} u where u.lastname = ?1")
+  List&lt;User&gt; findByLastname(String lastname);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>为避免在 `<code>@Query` 注解的查询字符串中直接声明实体名称，您可以使用 `<code>#{#entityName}</code>` 变量。</code></p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+可以使用 <code>@Entity</code> 注解来自定义 <code>entityName</code>。
+SpEL 表达式不支持在 <code>orm.xml</code> 中进行自定义。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>当然，您也可以在查询声明中直接使用 `<code>User</code>`，但这需要同时修改查询本身。  
+对 `<code>#entityName</code>` 的引用可以拾取未来可能将 `<code>User</code>` 类重映射到不同实体名称的情况（例如，通过使用 `<code>@Entity(name = "MyUser")</code>`）。</p>
+</div>
+<div class="paragraph">
+<p>在查询字符串中使用 `#{#entityName}` 表达式的另一个用例是：定义一个通用仓储接口，并为具体的领域类型创建专门的仓储接口。为了避免在具体接口中重复定义自定义查询方法，您可以在通用仓储接口的 `@Query` 注解的查询字符串中使用实体名称表达式，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 17：在仓储查询方法中使用 SpEL 表达式——带继承的实体名称</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@MappedSuperclass
+public abstract class AbstractMappedType {
+  …
+  String attribute;
+}
+
+@Entity
+public class ConcreteType extends AbstractMappedType { … }
+
+@NoRepositoryBean
+public interface MappedTypeRepository&lt;T extends AbstractMappedType&gt;
+  extends Repository&lt;T, Long&gt; {
+
+  @Query("select t from #{#entityName} t where t.attribute = ?1")
+  List&lt;T&gt; findAllByAttribute(String attribute);
+}
+
+public interface ConcreteRepository
+  extends MappedTypeRepository&lt;ConcreteType&gt; { … }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>在前面的示例中，<code>MappedTypeRepository</code> 接口是几个扩展自 <code>AbstractMappedType</code> 的领域类型的通用父接口。它还定义了通用的 <code>findAllByAttribute(…)</code> 方法，该方法可用于专用仓库接口的实例。如果您现在在 <code>ConcreteRepository</code> 上调用 <code>findAllByAttribute(…)</code>，查询将变为 <code>select t from ConcreteType t where t.attribute = ?1</code>。</p>
+</div>
+<div class="paragraph">
+<p>您还可以使用表达式来控制方法参数。在这些表达式中，实体名称不可用，但参数是可用的。它们可以通过名称或索引进行访问，如下面的示例所示。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 18：在仓储查询方法中使用值表达式：访问参数</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Query("select u from User u where u.firstname = ?1 and u.firstname=?#{[0]} and u.emailAddress = ?#{principal.emailAddress}")
+List&lt;User&gt; findByFirstnameAndCurrentUserWithCustomQuery(String firstname);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>对于 `like` 条件，通常希望向字符串类型的参数开头或末尾追加 `%`。这可以通过在绑定参数标记或 SpEL 表达式前或后追加 `%` 来实现。以下示例再次演示了这一点。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 19：在仓储查询方法中使用值表达式：通配符快捷方式</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Query("select u from User u where u.lastname like %:#{[0]}% and u.lastname like %:lastname%")
+List&lt;User&gt; findByLastnameWithSpelExpression(@Param("lastname") String lastname);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>在使用来自不安全源的值的 `<code>like</code>` 条件时，应对这些值进行清理，以防止其包含通配符，从而避免攻击者获取超出其权限范围的数据。为此，SpEL 上下文中提供了 `<code>escape(String)</code>` 方法。该方法会在第一个参数中所有 `<code>_</code>` 和 `<code>%</code>` 实例前添加第二个参数中的单个字符作为转义字符。结合 JPQL 和标准 SQL 中可用的 `<code>like</code>` 表达式的 `<code>escape</code>` 子句，这种方法可以方便地清理绑定参数。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 20：在仓储查询方法中使用值表达式：清理输入值</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Query("select u from User u where u.firstname like %?#{escape([0])}% escape ?#{escapeCharacter()}")
+List&lt;User&gt; findContainingEscaped(String namePart);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>在仓库接口中给定此方法声明，<code>findContainingEscaped("Peter_")</code> 将找到 <code>Peter_Parker</code> 但不会找到 <code>Peter Parker</code>。  
+可以通过设置 <code>@EnableJpaRepositories</code> 注解的 <code>escapeCharacter</code> 来配置所使用的转义字符。  
+请注意，SpEL 上下文中可用的 <code>escape(String)</code> 方法仅会转义 SQL 和 JPQL 标准通配符 <code>_</code> 和 <code>%</code>。  
+如果底层数据库或 JPA 实现支持额外的通配符，这些通配符将不会被转义。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 21：在仓储查询方法中使用值表达式：配置属性</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Query("select u from User u where u.applicationName = ?${spring.application.name:unknown}")
+List&lt;User&gt; findContainingEscaped(String namePart);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>在查询方法中，您也可以引用配置属性名称（包括回退值），以便在运行时从<code>Environment</code> 解析属性。  
+属性的评估发生在查询执行时。  
+通常，属性占位符会解析为类似字符串的值。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query.other-methods"><a class="anchor" href="#jpa.query.other-methods"></a>其他方法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data JPA 提供了多种构建查询的方法。  
+但有时，您的查询可能过于复杂，无法使用这些技术来实现。  
+在这种情况下，请考虑：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果尚未这样做，只需使用<a href="#jpa.query-methods.at-query"><code>@Query</code></a>自行编写查询即可。</p>
+</li>
+<li>
+<p>如果这无法满足您的需求，可以考虑实现<a class="xref page" href="../repositories/custom-implementations.html">自定义实现</a>。这样您就可以在仓储中注册方法，而将具体的实现完全交由您自行决定。这将使您能够：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>直接与 <code>EntityManager</code> 通信（编写纯 HQL/JPQL/EQL/原生 SQL，或使用<strong>Criteria API</strong>）</p>
+</li>
+<li>
+<p>利用 Spring Framework 的<code>JdbcTemplate</code>（原生 SQL）</p>
+</li>
+<li>
+<p>使用另一个第三方数据库工具包。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>另一种选择是将查询放入数据库中，然后使用 Spring Data JPA 的<a class="xref page" href="stored-procedures.html"><code>@StoredProcedure</code> 注解</a>，或者如果它是一个数据库函数，则使用<a href="#jpa.query-methods.at-query"><code>@Query</code> 注解</a>并通过 <code>CALL</code> 调用它。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>这些策略在您需要最大程度控制查询，同时仍让 Spring Data JPA 负责资源管理时最为有效。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.modifying-queries"><a class="anchor" href="#jpa.modifying-queries"></a>修改查询</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>前面的所有章节都描述了如何声明查询以访问给定的实体或实体集合。  
+您可以通过使用<a href="https://docs.spring.io/spring-data/commons/reference/4.1/repositories/custom-implementations.html">Spring Data 存储库的自定义实现</a>中描述的自定义方法设施，添加自定义的修改行为。  
+由于这种方法适用于全面的自定义功能，因此对于仅需参数绑定的查询，您可以通过在查询方法上标注<code>@Modifying</code>来对其进行修改，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 22：声明操纵查询</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Modifying
+@Query("update User u set u.firstname = ?1 where u.lastname = ?2")
+int setFixedFirstnameFor(String firstname, String lastname);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>这样会将注解到该方法上的查询触发为更新查询，而非选择查询。由于在执行修改查询后，<code>EntityManager</code> 可能包含过期的实体，我们不会自动清空它（有关详细信息请参阅 <a href="https://jakarta.ee/specifications/persistence/3.2/apidocs/jakarta.persistence/jakarta/persistence/entitymanager">JavaDoc</a> 中关于 <code>EntityManager.clear()</code> 的说明），因为这实际上会丢弃 <code>EntityManager</code> 中所有尚未刷新的待处理更改。  
+如果您希望自动清空 <code>EntityManager</code>，可以将 <code>@Modifying</code> 注解的 <code>clearAutomatically</code> 属性设置为 <code>true</code>。</p>
+</div>
+<div class="paragraph">
+<p>`@Modifying` 注解仅在结合 `@Query` 注解使用时才有效。  
+派生查询方法或自定义方法不需要此注解。</p>
+</div>
+<div class="sect2">
+<h3 id="jpa.modifying-queries.derived-delete"><a class="anchor" href="#jpa.modifying-queries.derived-delete"></a>派生删除查询</h3>
+<div class="paragraph">
+<p>Spring Data JPA 还支持派生删除查询，让您无需显式声明 JPQL 查询即可实现删除操作，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 23：使用派生删除查询</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface UserRepository extends Repository&lt;User, Long&gt; {
+
+  void deleteByRoleId(long roleId);
+
+  @Modifying
+  @Query("delete from User u where u.role.id = ?1")
+  void deleteInBulkByRoleId(long roleId);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>尽管 `<code>deleteByRoleId(…)</code>` 方法看起来基本上会产生与 `<code>deleteInBulkByRoleId(…)</code>` 相同的结果，但这两个方法声明在执行方式上存在重要区别。  
+正如名称所示，后者方法会向数据库发出单个 JPQL 查询（即注解中定义的那个）。  
+这意味着即使当前已加载的 `<code>User</code>` 实例也不会触发生命周期回调。</p>
+</div>
+<div class="paragraph">
+<p>为了确保生命周期查询确实被调用，对 `<code>deleteByRoleId(…)</code>` 的调用会先执行一次查询，然后逐个删除返回的实例，以便持久化提供者能够真正在这些实体上调用 `<code>@PreRemove</code>` 回调。</p>
+</div>
+<div class="paragraph">
+<p>实际上，派生删除查询是运行查询后对结果调用 `<code>CrudRepository.delete(Iterable&lt;User&gt; users)</code>` 的快捷方式，并使其行为与其他 `<code>delete(…)</code>` 方法的实现保持一致。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+删除大量对象时，需考虑性能影响以确保有足够的内存可用。所有生成的对象在删除前都会先加载到内存中，并在会话中保留，直到刷新或完成事务为止。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.query-hints"><a class="anchor" href="#jpa.query-hints"></a>应用查询提示</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要将 JPA 查询提示应用于您在存储库接口中声明的查询，可以使用 `<code>@QueryHints</code>` 注解。  
+该注解接受一个由 JPA `<code>@QueryHint</code>` 注解组成的数组，以及一个布尔标志位，用于在应用分页时可能禁用针对额外计数查询（即触发分页时产生的附加 COUNT 查询）所应用的提示，示例如下：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 24：在仓储方法中使用查询提示</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface UserRepository extends Repository&lt;User, Long&gt; {
+
+  @QueryHints(value = { @QueryHint(name = "name", value = "value")},
+              forCounting = false)
+  Page&lt;User&gt; findByLastname(String lastname, Pageable pageable);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>上述声明将对实际查询应用配置的 `<code>@QueryHint</code>`，但不会将其应用于用于计算总页数的计数查询。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+使用 Java <code>Stream&lt;T&gt;</code> 时，请结合您的 JPA 提供程序和 JDBC 驱动程序审查<a class="xref page" href="../repositories/query-return-types-reference.html#return-type.stream"><code>Stream</code>语义和资源处理</a>，特别关注特定于提供程序的获取行为以及驱动程序的获取大小设置。
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="jpa.query-hints.comments"><a class="anchor" href="#jpa.query-hints.comments"></a>为查询添加注释</h3>
+<div class="paragraph">
+<p>有时，您需要根据数据库性能对查询进行调试。  
+数据库管理员向您展示的查询可能与使用 `<code>@Query` 编写的查询看起来非常不同，或者与您推测的 Spring Data JPA 为自定义查找方法或示例查询所生成的查询完全不同。</code></p>
+</div>
+<div class="paragraph">
+<p>为简化此过程，您可以通过应用 `<code>@Meta</code>` 注解，在几乎任何 JPA 操作中插入自定义注释，无论是查询还是其他操作。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 25。将<code>@Meta</code>注解应用于仓储操作。</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface RoleRepository extends JpaRepository&lt;Role, Integer&gt; {
+
+	@Meta(comment = "find roles by name")
+	List&lt;Role&gt; findByName(String name);
+
+	@Override
+	@Meta(comment = "find roles using QBE")
+	&lt;S extends Role&gt; List&lt;S&gt; findAll(Example&lt;S&gt; example);
+
+	@Meta(comment = "count roles for a given name")
+	long countByName(String name);
+
+	@Override
+	@Meta(comment = "exists based on QBE")
+	&lt;S extends Role&gt; boolean exists(Example&lt;S&gt; example);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>此示例仓库混合使用了自定义查找器以及覆盖从 `<code>JpaRepository</code>` 继承的操作。无论采用哪种方式，`<code>@Meta</code>` 注解都允许您添加一个 `comment`，该注释将在查询发送至数据库之前插入到查询语句中。</p>
+</div>
+<div class="paragraph">
+<p>同样重要的是，此功能不仅限于查询操作，还适用于<code>count</code>和<code>exists</code>操作。虽然未在此展示，它同样适用于某些<code>delete</code>操作。</p>
+</div>
+<div class="admonitionblock important">
+<table>虽然我们已尽可能在所有地方应用此功能，但底层 `EntityManager` 的某些操作并不支持注释。例如，`entityManager.createQuery()` 明确文档说明支持注释，但 `entityManager.find()` 操作则不支持。</table>
+</div>
+<div class="paragraph">
+<p>JPQL 日志记录或 SQL 日志记录均不是 JPA 的标准功能，因此每个提供者都需要进行自定义配置，如下文各节所示。</p>
+</div>
+<div class="sect3">
+<h4 id="activating-hibernate-comments"><a class="anchor" href="#activating-hibernate-comments"></a>启用 Hibernate 注释</h4>
+<div class="paragraph">
+<p>要在 Hibernate 中启用查询注释，必须将<code>hibernate.use_sql_comments</code>设置为<code>true</code>。</p>
+</div>
+<div class="paragraph">
+<p>如果您使用的是基于 Java 的配置设置，可以像这样进行配置：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 26。基于 Java 的 JPA 配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public Properties jpaProperties() {
+
+	Properties properties = new Properties();
+	properties.setProperty("hibernate.use_sql_comments", "true");
+	return properties;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>如果您有 `<code>persistence.xml</code>` 文件，可以在该文件中应用它：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 27。基于 <code>persistence.xml</code> 的配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;persistence-unit name="my-persistence-unit"&gt;
+
+   ...registered classes...
+
+	&lt;properties&gt;
+		&lt;property name="hibernate.use_sql_comments" value="true" /&gt;
+	&lt;/properties&gt;
+&lt;/persistence-unit&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>最后，如果您使用的是 Spring Boot，可以在您的 `<code>application.properties</code>` 文件中设置它：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 28：基于属性的 Spring Boot 配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>spring.jpa.properties.hibernate.use_sql_comments=true</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="activating-eclipselink-comments"><a class="anchor" href="#activating-eclipselink-comments"></a>启用 EclipseLink 注释</h4>
+<div class="paragraph">
+<p>要在 EclipseLink 中激活查询注释，请将 <code>eclipselink.logging.level.sql</code> 设置为 <code>FINE</code>。</p>
+</div>
+<div class="paragraph">
+<p>如果您使用的是基于 Java 的配置设置，可以像这样进行配置：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 29。基于 Java 的 JPA 配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public Properties jpaProperties() {
+
+	Properties properties = new Properties();
+	properties.setProperty("eclipselink.logging.level.sql", "FINE");
+	return properties;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>如果您有 `<code>persistence.xml</code>` 文件，可以在该文件中应用它：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 30。基于 <code>persistence.xml</code> 的配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;persistence-unit name="my-persistence-unit"&gt;
+
+   ...registered classes...
+
+	&lt;properties&gt;
+		&lt;property name="eclipselink.logging.level.sql" value="FINE" /&gt;
+	&lt;/properties&gt;
+&lt;/persistence-unit&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>最后，如果您使用的是 Spring Boot，可以在您的 `<code>application.properties</code>` 文件中设置它：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 31。基于属性的 Spring Boot 配置</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>spring.jpa.properties.eclipselink.logging.level.sql=FINE</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jpa.entity-graph"><a class="anchor" href="#jpa.entity-graph"></a>配置获取图和加载图</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JPA 2.1 规范引入了对指定 Fetch-和 LoadGraph 的支持，我们也通过 `<code>@EntityGraph</code>` 注解提供了该支持，该注解允许您引用 `<code>@NamedEntityGraph</code>` 定义。您可以在实体上使用此注解来配置查询结果的获取计划。可以通过在 `<code>@EntityGraph</code>` 注解上使用 `type` 属性来配置获取的类型（`<code>Fetch</code>` 或 `<code>Load</code>`）。有关进一步参考，请查看 JPA 2.1 规范第 3.7.4 节。</p>
+</div>
+<div class="paragraph">
+<p>以下示例展示了如何在实体上定义命名实体图：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 32：在实体上定义命名实体图。</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Entity
+@NamedEntityGraph(name = "GroupInfo.detail",
+  attributeNodes = @NamedAttributeNode("members"))
+public class GroupInfo {
+
+  // default fetch mode is lazy.
+  @ManyToMany
+  List&lt;GroupMember&gt; members = new ArrayList&lt;GroupMember&gt;();
+
+  …
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>以下示例展示了如何在存储库查询方法中引用命名实体图：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 33：在存储库查询方法中引用命名实体图定义。</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface GroupRepository extends CrudRepository&lt;GroupInfo, String&gt; {
+
+  @EntityGraph(value = "GroupInfo.detail", type = EntityGraphType.LOAD)
+  GroupInfo getByGroupName(String name);
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>还可以使用 `<code>@EntityGraph</code>` 定义临时实体图。提供的 `<code>attributePaths</code>` 会被转换为相应的 `<code>EntityGraph</code>`，而无需像以下示例中那样在域类型上显式添加 `<code>@NamedEntityGraph</code>`：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 34：在存储库查询方法中使用临时实体图定义</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface GroupRepository extends CrudRepository&lt;GroupInfo, String&gt; {
+
+  @EntityGraph(attributePaths = { "members" })
+  GroupInfo getByGroupName(String name);
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.scrolling"><a class="anchor" href="#repositories.scrolling"></a>Scrolling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>滚动是一种更细粒度的方法，用于遍历大型结果集的分块数据。  
+滚动包括稳定排序、滚动类型（基于偏移量或基于键集的滚动）以及结果限制。  
+您可以通过使用属性名称定义简单的排序表达式，并通过查询推导使用 <a class="xref page" href="../repositories/query-methods-details.html#repositories.limit-query-result"><code>Top</code> 或 <code>First</code> 关键字</a> 定义静态的结果限制。  
+您可以连接表达式以将多个条件收集到一个表达式中。</p>
+</div>
+<div class="paragraph">
+<p>滚动查询返回一个 `<code>Window&lt;T&gt;</code>`，允许获取元素的滚动位置以获取下一个 `<code>Window&lt;T&gt;</code>`，直到您的应用程序消费完整个查询结果。  
+类似于通过获取下一批结果来消费 Java 的 `<code>Iterator&lt;List&lt;…&gt;&gt;</code>`，查询结果滚动让您可以通过 `<code>ScrollPosition</code>` 访问位置，方式如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Window&lt;User&gt; users = repository.findFirst10ByLastnameOrderByFirstname("Doe", ScrollPosition.offset());
+do {
+
+  for (User u : users) {
+    // consume the user
+  }
+
+  if (users.isLast() || users.isEmpty()) {
+    break;
+  }
+
+  // obtain the next Scroll
+  users = repository.findFirst10ByLastnameOrderByFirstname("Doe", users.positionAt(users.size() - 1));
+} while (!users.isEmpty());</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>`ScrollPosition` 标识了包含整个查询结果的元素的精确位置。  
+查询执行将位置参数视为<em>排他性</em>的，结果将从给定位置之后开始返回。  
+`ScrollPosition#offset()` 和 `ScrollPosition#keyset()` 是 `ScrollPosition` 的特殊形式，用于指示滚动操作的起始点。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>上述示例展示了静态排序和限制。  
+您可以定义替代的查询方法，接受一个 `<code>Sort`</code> 对象以定义更复杂的排序顺序或按请求进行排序。  
+同样地，提供一个 `<code>Limit`</code> 对象允许您按请求定义动态限制，而不是应用静态限制。  
+有关动态排序和限制的更多信息，请参阅<a class="xref page" href="../repositories/query-methods-details.html#repositories.special-parameters">查询方法详情</a>。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>遍历并消费<code>Window</code>实例需要大量的条件判断才能实现最优的数据库往返操作，这很容易变成一项重复性工作，而使用<code>WindowIterator</code>可以简化这一过程。</p>
+</div>
+<div class="paragraph">
+<p>`WindowIterator` 提供了一种工具，通过消除检查下一个 `Window` 是否存在并应用 `ScrollPosition` 的需求，从而简化了在多个 `Window` 之间滚动浏览的操作。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WindowIterator&lt;User&gt; users = WindowIterator.of(position -&gt; repository.findFirst10ByLastnameOrderByFirstname("Doe", position))
+  .startingAt(ScrollPosition.offset());
+
+while (users.hasNext()) {
+  User u = users.next();
+  // consume the user
+}</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repositories.scrolling.offset"><a class="anchor" href="#repositories.scrolling.offset"></a>使用偏移量进行滚动</h3>
+<div class="paragraph">
+<p>偏移分页类似于传统分页，它使用一个偏移量（Offset）计数器来跳过指定数量的结果，并让数据源仅返回从给定偏移量开始的结果。  
+这种简单的机制可以避免将大量结果发送给客户端应用程序。  
+然而，大多数数据库要求在服务器返回结果之前，必须先将完整的查询结果物化到内存中。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 35：在仓储查询方法中使用<code>OffsetScrollPosition</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface UserRepository extends Repository&lt;User, Long&gt; {
+
+  Window&lt;User&gt; findFirst10ByLastnameOrderByFirstname(String lastname, OffsetScrollPosition position);
+}
+
+WindowIterator&lt;User&gt; users = WindowIterator.of(position -&gt; repository.findFirst10ByLastnameOrderByFirstname("Doe", position))
+  .startingAt(OffsetScrollPosition.initial()); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>从偏移量为 0 开始，以包含位置 <code>0</code> 处的元素。</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>`ScrollPosition.offset()` 与 `ScrollPosition.offset(0L)` 之间存在区别。前者表示滚动操作的开始，指向一个不特定的偏移量；而后者则标识结果中的第一个元素（位于位置 `<code>0</code>`）。鉴于滚动的**独占性**，使用 `ScrollPosition.offset(0)` 会跳过第一个元素并将其转换为偏移量 `<code>1</code>`。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repositories.scrolling.keyset"><a class="anchor" href="#repositories.scrolling.keyset"></a>使用键集过滤进行滚动</h3>
+<div class="paragraph">
+<p>基于偏移量的滚动要求大多数数据库在服务器返回结果之前，先将整个结果集物化。因此，虽然客户端仅能看到请求结果的一部分，但您的服务器仍需构建完整的结果集，从而导致额外的负载。</p>
+</div>
+<div class="paragraph">
+<p>键集过滤方法通过利用数据库的内置功能实现子集检索，旨在降低单个查询的计算和 I/O 需求。  
+该方法维护一组用于恢复滚动操作的键，通过将键传入查询来有效修改过滤条件。</p>
+</div>
+<div class="paragraph">
+<p>Keyset-Filtering 的核心思想是依据稳定的排序顺序开始检索结果。当你希望滚动到下一批数据时，会获取一个 <code>ScrollPosition</code>，该位置用于在已排序的结果中重建当前位置。<code>ScrollPosition</code> 捕获了当前 <code>Window</code> 内最后一个实体的键集（keyset）。执行查询时，重建过程会将条件子句重写为包含所有排序字段和主键，以便数据库能够利用潜在索引来运行查询。数据库只需根据给定的键集位置构建一个较小的结果集，而无需完全生成一个大结果集再跳过部分数据以到达特定的偏移量。</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>键集过滤要求用于排序的键属性必须为非空值。此限制是由于存储特定比较运算符对 `<code>null</code>` 值的处理方式以及需要在索引源上运行查询所导致的。在可空属性上执行键集过滤将导致意外结果。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="listingblock">
+<div class="title">使用 <code>KeysetScrollPosition</code> 与仓储查询方法</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface UserRepository extends Repository&lt;User, Long&gt; {
+
+  Window&lt;User&gt; findFirst10ByLastnameOrderByFirstname(String lastname, KeysetScrollPosition position);
+}
+
+WindowIterator&lt;User&gt; users = WindowIterator.of(position -&gt; repository.findFirst10ByLastnameOrderByFirstname("Doe", position))
+  .startingAt(ScrollPosition.keyset()); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><i class="conum" data-value="1"></i><b>1</b> 从最开头开始，不要应用额外的过滤。</table>
+</div>
+<div class="paragraph">
+<p>当数据库中存在与排序字段匹配的索引时，键集过滤效果最佳，因此静态排序非常适用。  
+应用键集过滤的滚动查询要求查询返回用于排序顺序的属性，并且这些属性必须在返回的实体中进行映射。</p>
+</div>
+<div class="paragraph">
+<p>您可以使用接口和 DTO 投影，但请确保包含所有已排序的属性，以避免键集提取失败。</p>
+</div>
+<div class="paragraph">
+<p>在指定 `<code>Sort</code>` 顺序时，只需包含与查询相关的排序属性即可；如果您不希望确保查询结果唯一，则无需为此操心。键集查询机制会通过添加主键（或复合主键的其余部分）来修正您的排序顺序，从而保证每个查询结果都是唯一的。</p>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-versions">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-versions-content">
+              <button class="modal-versions-close" data-micromodal-close="">
+                <svg height="28px" viewbox="0 0 32 32" width="28px" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title></title><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"></line><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"></line></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left"><ul class="nav-versions">
+<li class="component">
+<a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+<ul class="versions">
+<li class="version is-latest">
+<a href="../data-commons/index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="component is-current">
+<a class="title" href="../index.html">Spring Data JPA</a>
+<ul class="versions">
+<li class="version is-current is-latest">
+<a href="../index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+</ul></div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>相关 Spring 文档<ul class="projects-list">
+        <li><a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a></li>
+        <li><a href="https://docs.spring.io/spring-framework/reference/">
+  Spring 框架
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Cloud
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Data
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a></li>
+        <li><a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a></li>
+        <li><a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a></li>
+        <li><a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a></li>
+        <li><a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a></li>
+        <li><a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a></li>
+        <li><a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a></li>
+    </ul>
+  </li><a href="../spring-projects.html">所有文档...</a>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img alt="Spring" id="springlogo" src="../_/img/spring-logo.svg"/>
+        <p class="smallest antialiased">版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href="https://www.vmware.com/help/legal.html">使用条款</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">隐私政策</a> • <a href="https://spring.io/trademarks">商标指南</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">致谢</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">您的加州隐私权利</a> • <a class="ot-sdk-show-settings">Cookie 设置</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS"和“Amazon Web Services"是 Amazon.com Inc. 及其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。</p>
+    </div>
+    <div class="flex jc-between" id="social-icons">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" data-name="Twitter" id="Twitter-2"></path></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async="" src="../_/js/vendor/highlight.js"></script>
+<script async="" data-sync-storage-key="docs:preferred-tab" src="../_/js/vendor/asciidoctor-tabs.js"></script>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box"><a class="search-link" href="../search.html">在全部 Spring 文档中搜索</a></div>
+                <div class="search-by">
+                    <a aria-label="Search by Algolia" href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
+                        <img class="light" src="../_/img/algolia-light.svg" width="140"/>
+                        <img class="dark" src="../_/img/algolia-dark.svg" width="140"/>
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js"></script>
+<script async="" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-app-id="WB1FQYI187" data-index-name="springdocs" data-page-component="data-jpa" data-page-version="4.1.0" data-stylesheet="../_/css/vendor/search.css" id="search-script" src="../_/js/vendor/search.js"></script>
+  
+
+</body></html>

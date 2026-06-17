@@ -1,0 +1,506 @@
+{
+  "created_at": "2026-06-17 09:39:41",
+  "updated_at": "2026-06-17 09:39:41",
+  "stats": {
+    "total_entries": 98,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 98,
+    "entries_with_hits": 98,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0098
+  },
+  "items": [
+    {
+      "source": "<code>MongoTransactionManager</code> / <code>ReactiveMongoTransactionManager</code> is the gateway to the well known Spring transaction support.\nIt lets applications use <a href=\"https://docs.spring.io/spring-framework/reference/7.0/data-access.html#transaction\">the managed transaction features of Spring</a>.\nThe <code>MongoTransactionManager</code> binds a <code>ClientSession</code> to the thread whereas the <code>ReactiveMongoTransactionManager</code> is using the <code>ReactorContext</code> for this.\n<code>MongoTemplate</code> detects the session and operates on these resources which are associated with the transaction accordingly.\n<code>MongoTemplate</code> can also participate in other, ongoing transactions.\nThe following example shows how to create and use transactions with a <code>MongoTransactionManager</code>:",
+      "translation": "MongoTransactionManager 和 ReactiveMongoTransactionManager 是通往广为人知的 Spring 事务支持的入口。它们使应用程序能够使用<a href=\"https://docs.spring.io/spring-framework/reference/7.0/data-access.html#transaction\">Spring 的事务管理功能</a>。MongoTransactionManager 将 ClientSession 绑定到线程，而 ReactiveMongoTemplate 则利用 ReactorContext 实现此功能。MongoTemplate 会检测会话，并针对与事务关联的资源执行相应操作。此外，MongoTemplate 还可以参与其他正在进行的事务。以下示例展示了如何使用 MongoTransactionManager 创建和使用事务：",
+      "count": 1
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "MongoDB <code>count</code> operates upon collection statistics which may not reflect the actual situation within a transaction.\nThe server responds with <em>error 50851</em> when issuing a <code>count</code> command inside a multi-document transaction.\nOnce <code>MongoTemplate</code> detects an active transaction, all exposed <code>count()</code> methods are converted and delegated to the aggregation framework using <code>$match</code> and <code>$count</code> operators, preserving <code>Query</code> settings, such as <code>collation</code>.",
+      "translation": "MongoDB 的 `count` 操作基于集合统计信息，这些信息可能无法反映事务内的实际情况。  \n当在多文档事务中发出 `count` 命令时，服务器会返回错误 50851。  \n一旦 `MongoTemplate` 检测到活动事务，所有暴露的 `count()` 方法都会被转换并委托给聚合框架，使用 `$match` 和 `$count` 运算符，同时保留 `Query` 设置（如 `collation`）。",
+      "count": 1
+    },
+    {
+      "source": "Both <code>MongoOperations</code> and <code>ReactiveMongoOperations</code> provide gateway methods for tying a <code>ClientSession</code> to the operations.\n<code>MongoCollection</code> and <code>MongoDatabase</code> use session proxy objects that implement MongoDB’s collection and database interfaces, so you need not add a session on each call.\nThis means that a potential call to <code>MongoCollection#find()</code> is delegated to <code>MongoCollection#find(ClientSession)</code>.",
+      "translation": "`MongoOperations` 和 `ReactiveMongoOperations` 均提供了将 `ClientSession` 绑定到操作的方法。  \n`MongoCollection` 和 `MongoDatabase` 使用实现了 MongoDB 集合和数据库接口的会话代理对象，因此无需在每次调用时显式添加会话。  \n这意味着对 `MongoCollection#find()` 的潜在调用会被委托给 `MongoCollection#find(ClientSession)`。",
+      "count": 1
+    },
+    {
+      "source": "Queries using <code>Criteria.near(…)</code> and <code>Criteria.nearSphere(…)</code> must be rewritten to <code>Criteria.within(…)</code> respective <code>Criteria.withinSphere(…)</code>.\nSame applies for the <code>near</code> query keyword in repository query methods that must be changed to <code>within</code>.\nSee also MongoDB JIRA ticket <a href=\"https://jira.mongodb.org/browse/DRIVERS-518\">DRIVERS-518</a> for further reference.",
+      "translation": "使用 `<code>Criteria.near(…)</code>` 和 `<code>Criteria.nearSphere(…)</code>` 的查询必须重写为 `<code>Criteria.within(…)</code>` 或相应的 `<code>Criteria.withinSphere(…)</code>`。  \n此规则同样适用于仓库查询方法中的 `near` 查询关键字，需将其更改为 `within`。  \n有关更多信息，请参阅 MongoDB JIRA 工单 <a href=\"https://jira.mongodb.org/browse/DRIVERS-518\">DRIVERS-518</a>。",
+      "count": 1
+    },
+    {
+      "source": "By using a <code>Publisher</code> that provides the actual session, you can defer session acquisition to the point of actual subscription.\nStill, you need to close the session when done, so as to not pollute the server with stale sessions.\nUse the <code>doFinally</code> hook on <code>execute</code> to call <code>ClientSession#close()</code> when you no longer need the session.\nIf you prefer having more control over the session itself, you can obtain the <code>ClientSession</code> through the driver and provide it through a <code>Supplier</code>.",
+      "translation": "通过使用提供实际会话的 <code>Publisher</code>，您可以将会话获取推迟到实际订阅时。  \n不过，在使用完毕后仍需关闭会话，以免服务器中残留过期的会话。  \n请使用 <code>execute</code> 上的 <code>doFinally</code> 钩子来调用 <code>ClientSession#close()</code>，以在不再需要会话时关闭它。  \n如果您希望对会话本身拥有更多控制权，可以通过驱动程序获取 <code>ClientSession</code>，并通过一个 <code>Supplier</code> 提供它。",
+      "count": 1
+    },
+    {
+      "source": "By default, the label namespace using the <code>mongo:</code> prefix is evaluated by <code>MongoTransactionOptionsResolver</code> that is configured by default.\nTransaction labels are provided by <code>TransactionAttribute</code> and available to programmatic transaction control through <code>TransactionTemplate</code> and <code>TransactionalOperator</code>.\nDue to their declarative nature, <code>@Transactional(label = …)</code> provides a good starting point that also can serve as documentation.",
+      "translation": "默认情况下，使用 `<code>mongo:</code>` 前缀的标签命名空间由默认配置的 `<code>MongoTransactionOptionsResolver` 进行评估。\n事务标签由 `<code>TransactionAttribute`》提供，并通过 `<code>TransactionTemplate`》和 `<code>TransactionalOperator`》用于程序化事务控制。\n由于其声明式特性，`<code>@Transactional(label = …)</code>` 提供了一个良好的起点，同时也可以作为文档使用。",
+      "count": 1
+    },
+    {
+      "source": "As of version 3.6, MongoDB supports the concept of sessions.\nThe use of sessions enables MongoDB’s <a href=\"https://docs.mongodb.com/manual/core/read-isolation-consistency-recency/#causal-consistency\">Causal Consistency</a> model, which guarantees running operations in an order that respects their causal relationships.\nThose are split into <code>ServerSession</code> instances and <code>ClientSession</code> instances.\nIn this section, when we speak of a session, we refer to <code>ClientSession</code>.",
+      "translation": "从版本 3.6 开始，MongoDB 支持会话的概念。\n使用会话可以启用 MongoDB 的<a href=\"https://docs.mongodb.com/manual/core/read-isolation-consistency-recency/#causal-consistency\">因果一致性</a>模型，该模型保证操作按照尊重其因果关系的方式运行。\n这些会话分为 <code>ServerSession</code> 实例和 <code>ClientSession</code> 实例。\n在本节中，当我们提到会话时，指的是 <code>ClientSession</code>。",
+      "count": 1
+    },
+    {
+      "source": "As of version 4, MongoDB supports <a href=\"https://www.mongodb.com/transactions\">Transactions</a>.\nTransactions are built on top of <a href=\"#\">Sessions</a> and, consequently, require an active <code>ClientSession</code>.",
+      "translation": "从版本 4 开始，MongoDB 支持<a href=\"https://www.mongodb.com/transactions\">事务</a>。  \n事务构建在<a href=\"#\">会话</a>之上，因此需要一个活跃的<code>ClientSession</code>。",
+      "count": 1
+    },
+    {
+      "source": "The culprit of the above operation is in keeping the main flows <code>DeleteResult</code> instead of the transaction outcome published via either <code>commitTransaction()</code> or <code>abortTransaction()</code>, which leads to a rather complicated setup.",
+      "translation": "上述操作的罪魁祸首在于保留了主流程中的 `<code>DeleteResult`，而不是通过 `<code>commitTransaction()</code>` 或 `<code>abortTransaction()</code>` 发布事务结果，这导致了一个相当复杂的设置。",
+      "count": 1
+    },
+    {
+      "source": "MongoDB can add special labels to errors raised during transactional operations.\nThose may indicate transient failures that might vanish by merely retrying the operation.\nWe highly recommend <a href=\"https://github.com/spring-projects/spring-retry\">Spring Retry</a> for those purposes.\nNevertheless, one may override <code>MongoTransactionManager#doCommit(MongoTransactionObject)</code> to implement a <a href=\"https://docs.mongodb.com/manual/core/transactions/#retry-commit-operation\">Retry Commit Operation</a>\nbehavior as outlined in the MongoDB reference manual.",
+      "translation": "MongoDB 可以在事务操作期间抛出的错误上添加特殊标签。这些标签可能表示瞬态失败，仅通过重试操作即可消除。我们强烈建议为此目的使用 <a href=\"https://github.com/spring-projects/spring-retry\">Spring Retry</a>。尽管如此，也可以重写 <code>MongoTransactionManager#doCommit(MongoTransactionObject)</code> 来实现 MongoDB 参考手册中概述的 <a href=\"https://docs.mongodb.com/manual/core/transactions/#retry-commit-operation\">重试提交操作</a> 行为。",
+      "count": 1
+    },
+    {
+      "source": "The preceding example lets you have full control over transactional behavior while using the session scoped <code>MongoOperations</code> instance within the callback to ensure the session is passed on to every server call.\nTo avoid some of the overhead that comes with this approach, you can use a <code>TransactionTemplate</code> to take away some of the noise of manual transaction flow.",
+      "translation": "前面的示例让您在使用会话范围的 `<code>MongoOperations` 实例时能够完全控制事务行为，同时确保在回调中将会话传递给每个服务器调用。  \n为避免这种方法带来的一些开销，您可以使用 `<code>TransactionTemplate</code>` 来简化手动事务流程中的繁琐操作。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data MongoDB transactions support both <code>TransactionTemplate</code> and <code>TransactionalOperator</code>.",
+      "translation": "Spring Data MongoDB 的事务支持同时涵盖 `<code>TransactionTemplate</code>` 和 `<code>TransactionalOperator</code>`。",
+      "count": 1
+    },
+    {
+      "source": "To get full programmatic control over transactions, you may want to use the session callback on <code>MongoOperations</code>.",
+      "translation": "若要实现对事务的完全程序化控制，您可能希望使用 <code>MongoOperations</code> 上的会话回调。",
+      "count": 1
+    },
+    {
+      "source": "Transactional service methods can require specific transaction options to run a transaction.\nSpring Data MongoDB’s transaction managers support evaluation of transaction labels such as <code>@Transactional(label = { \"mongo:readConcern=available\" })</code>.",
+      "translation": "事务服务方法可能需要特定的事务选项来运行事务。Spring Data MongoDB 的事务管理器支持评估事务标签，例如 `<code>@Transactional(label = { \"mongo:readConcern=available\" })</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Controls the maximum execution time on the server for the commitTransaction operation.\nThe format of the value corresponds with ISO-8601 duration format as used with <code>Duration.parse(…)</code>.",
+      "translation": "控制服务器上 `commitTransaction` 操作的最大执行时间。  \n该值的格式对应于 `<code>Duration.parse(…)</code>` 中使用的 ISO-8601 持续时间格式。",
+      "count": 1
+    },
+    {
+      "source": "<strong>Connection Settings</strong>",
+      "translation": "<strong>连接设置</strong>",
+      "count": 1
+    },
+    {
+      "source": "<strong>Collection Operations</strong>",
+      "translation": "<strong>集合操作</strong>",
+      "count": 1
+    },
+    {
+      "source": "MongoDB does <strong>not</strong> support collection operations, such as collection creation, within a transaction.\nThis also affects the on the fly collection creation that happens on first usage.\nTherefore, make sure to have all required structures in place.",
+      "translation": "MongoDB 不支持在事务内执行集合操作，例如创建集合。  \n这也影响了首次使用时动态创建的集合。  \n因此，请确保所有必要的结构均已就绪。",
+      "count": 1
+    },
+    {
+      "source": "<strong>Transient Errors</strong>",
+      "translation": "<strong>瞬态错误</strong>",
+      "count": 1
+    },
+    {
+      "source": "The following snippet shows <code>count</code> usage inside the session-bound closure:",
+      "translation": "以下代码片段展示了在会话绑定闭包中使用`<code>count</code>`的情况：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows the usage of a session:",
+      "translation": "以下示例展示了会话的使用：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows programmatic transaction control:",
+      "translation": "以下示例展示了程序化事务控制：",
+      "count": 1
+    },
+    {
+      "source": "Currently, the following options are supported:",
+      "translation": "目前支持以下选项：",
+      "count": 1
+    },
+    {
+      "source": "Sets the read concern for the transaction.",
+      "translation": "设置事务的读关注级别。",
+      "count": 1
+    },
+    {
+      "source": "Sets the read preference for the transaction.",
+      "translation": "设置事务的读取偏好。",
+      "count": 1
+    },
+    {
+      "source": "Sets the write concern for the transaction.",
+      "translation": "设置事务的写关注。",
+      "count": 1
+    },
+    {
+      "source": "Inside transactions, MongoDB server has a slightly different behavior.",
+      "translation": "在内部事务中，MongoDB 服务器的行为略有不同。",
+      "count": 1
+    },
+    {
+      "source": "The MongoDB drivers offer a dedicated replica set name configuration option turing the driver into auto-detection mode.\nThis option helps identify the primary replica set nodes and command routing during a transaction.",
+      "translation": "MongoDB 驱动程序提供了一个专用的副本集名称配置选项，可将驱动程序切换为自动检测模式。该选项有助于在事务期间识别主副本集节点并路由命令。",
+      "count": 1
+    },
+    {
+      "source": "Restrictions apply when using geo commands inside of the aggregation count helper.\nThe following operators cannot be used and must be replaced with a different operator:",
+      "translation": "在聚合计数辅助函数中使用地理命令时存在限制。以下运算符无法使用，必须替换为其他运算符：",
+      "count": 1
+    },
+    {
+      "source": "The snippet above materializes in the following command:",
+      "translation": "上述片段对应于以下命令：",
+      "count": 1
+    },
+    {
+      "source": "instead of:",
+      "translation": "改为：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS\"和“Amazon Web Services”是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归其各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/client-session-transactions.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/client-session-transactions.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../mongodb.html\">MongoDB Support</a></li>\n      <li><a href=\"client-session-transactions.html\">Sessions &amp; Transactions</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../mongodb.html\">MongoDB 支持</a></li>\n      <li><a href=\"client-session-transactions.html\">会话与事务</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "Transactions with <code>TransactionTemplate</code> / <code>TransactionalOperator</code>",
+      "translation": "使用 <code>TransactionTemplate</code> / <code>TransactionalOperator</code> 的事务操作",
+      "count": 1
+    },
+    {
+      "source": "Transactions with <code>MongoTransactionManager</code> / <code>ReactiveMongoTransactionManager</code>",
+      "translation": "与 <code>MongoTransactionManager</code> / <code>ReactiveMongoTransactionManager</code> 的交互",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>",
+      "translation": "<a class=\"title\" href=\"../data-commons/index.html\">Spring Data 公共模块</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../index.html\">Spring Data MongoDB</a>",
+      "translation": "<a class=\"title\" href=\"../index.html\">Spring Data MongoDB</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Programmatic transactions",
+      "translation": "程序化交易",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../preface.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">Connecting to MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"template-api.html\">Template API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-config.html\">Configuration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-collection-management.html\">Index and Collection Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-crud-operations.html\">Saving, Updating, and Removing Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-query-operations.html\">Querying Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-document-count.html\">Counting Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"aggregation-framework.html\">Aggregation Framework Support</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template-gridfs.html\">GridFS Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping/mapping.html\">Object Mapping</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/custom-conversions.html\">Type based Converter</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/property-converters.html\">Property Converters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/unwrapping-entities.html\">Unwrapping Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/document-references.html\">Object References</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-index-management.html\">Index Creation</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"lifecycle-events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Auditing</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"client-session-transactions.html\">Sessions &amp; Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"change-streams.html\">Change Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"tailable-cursors.html\">Tailable Cursors</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sharding.html\">Sharding</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-search-indexes.html\">MongoDB Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-encryption.html\">Encryption</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"aot.html\">Ahead of Time Optimizations</a>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../preface.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">快速入门</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">连接 MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"template-api.html\">模板 API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-config.html\">配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-collection-management.html\">索引和集合管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-crud-operations.html\">保存、更新和删除文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-query-operations.html\">查询文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"template-document-count.html\">统计文档数量</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"aggregation-framework.html\">聚合框架支持</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template-gridfs.html\">GridFS 支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping/mapping.html\">对象映射</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/custom-conversions.html\">基于类型的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/property-converters.html\">属性转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/unwrapping-entities.html\">类型解包</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/document-references.html\">对象引用</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping/mapping-index-management.html\">索引创建</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">值表达式基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"lifecycle-events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">审计</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"client-session-transactions.html\">会话与事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"change-streams.html\">变更流</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"tailable-cursors.html\">可尾随游标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sharding.html\">分片</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-search-indexes.html\">MongoDB 搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mongo-encryption.html\">加密</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"aot.html\">提前优化</a>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">MongoDB Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">MongoDB-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/modifying-methods.html\">MongoDB-specific Data Manipulation Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">仓储 (Repositories)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">MongoDB 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data 扩展功能</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">MongoDB 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/modifying-methods.html\">MongoDB 专用数据操作方法的定义</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影 (Projections)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓储查询关键字参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓储查询返回类型参考</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>First we obviously need to initiate the session.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Once we have the <code>ClientSession</code> at hand, start the transaction.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Operate within the transaction by passing on the <code>ClientSession</code> to the operation.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>If the operations completes exceptionally, we need to stop the transaction and preserve the error.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>Or of course, commit the changes in case of success.\nStill preserving the operations result.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"6\"></i><b>6</b></td>\n<td>Lastly, we need to make sure to close the session.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>首先，我们显然需要启动会话。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>一旦手头有了 <code>ClientSession</code>，就开始事务。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>通过将 <code>ClientSession</code> 传递给操作，在事务内执行操作。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>如果操作异常完成，我们需要中止事务并保留错误信息。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>或者当然，在成功时提交更改。\n同时保留操作结果。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"6\"></i><b>6</b></td>\n<td>最后，我们需要确保关闭会话。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../observability/observability.html\">Observability</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/conventions.html\">Conventions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/metrics.html\">Metrics</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/spans.html\">Spans</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../observability/observability.html\">可观测性</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/conventions.html\">约定</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/metrics.html\">指标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../observability/spans.html\">跨度</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">要求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空值安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Obtain a new <code>ClientSession</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Start the transaction.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>If everything works out as expected, commit the changes.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Something broke, so roll back everything.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>Do not forget to close the session when done.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>获取一个新的 <code>ClientSession</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>启动事务。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>如果一切按预期进行，则提交更改。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>若出现问题，则回滚所有操作。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>完成后别忘了关闭会话。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Obtain a <code>Publisher</code> for new session retrieval.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Use <code>ReactiveMongoOperation</code> methods as before.\nThe <code>ClientSession</code> is obtained and applied automatically.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Make sure to close the <code>ClientSession</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Nothing happens until you subscribe.\nSee <a href=\"https://projectreactor.io/docs/core/release/reference/#reactive.subscribe\">the Project Reactor Reference Guide</a> for details.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>获取用于新会话检索的 <code>Publisher</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>像往常一样使用 <code>ReactiveMongoOperation</code> 方法。\n<code>ClientSession</code> 会自动获取并应用。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>务必关闭 <code>ClientSession</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>在订阅之前不会发生任何操作。\n有关详细信息，请参阅<a href=\"https://projectreactor.io/docs/core/release/reference/#reactive.subscribe\">Project Reactor 参考指南</a>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Obtain a new session from the server.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Use <code>MongoOperation</code> methods as before.\nThe <code>ClientSession</code> gets applied automatically.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Make sure to close the <code>ClientSession</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Close the session.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>从服务器获取新会话。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>像往常一样使用 <code>MongoOperation</code> 方法。\n<code>ClientSession</code> 会自动应用。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>确保关闭 <code>ClientSession</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>关闭会话。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Enable transaction synchronization during Template API configuration.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Create the <code>TransactionTemplate</code> using the provided <code>PlatformTransactionManager</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Within the callback the <code>ClientSession</code> and transaction are already registered.</td>\n</tr>\n</tbody>",
+      "translation": "<table>\n<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>在配置 Template API 时启用事务同步。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>使用提供的 <code>PlatformTransactionManager</code> 创建 <code>TransactionTemplate</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>在回调中，<code>ClientSession</code> 和事务已经注册。</td>\n</tr>\n</table>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Enable transaction synchronization for Transactional participation.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Create the <code>TransactionalOperator</code> using the provided <code>ReactiveTransactionManager</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>TransactionalOperator.transactional(…)</code> provides transaction management for all upstream operations.</td>\n</tr>\n</tbody>",
+      "translation": "<table>\n<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>启用事务同步以支持事务性参与。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>使用提供的 <code>ReactiveTransactionManager</code> 创建 <code>TransactionalOperator</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>TransactionalOperator.transactional(…)</code> 为所有上游操作提供事务管理。</td>\n</tr>\n</table>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.x-to-3.x.html\">Migration Guide from 2.x to 3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.x-to-4.x.html\">Migration Guide from 3.x to 4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.x-to-5.x.html\">Migration Guide from 4.x to 5.x</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概述</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.x-to-3.x.html\">从 2.x 到 3.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.x-to-4.x.html\">从 3.x 到 4.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.x-to-5.x.html\">从 4.x 到 5.x 的迁移指南</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Register <code>MongoTransactionManager</code> in the application context.\nAlso, make sure to use the same <code>MongoDatabaseFactory</code> when creating <code>MongoTemplate</code> to participate in transactions in the scope of the same <code>MongoDatabaseFactory</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Mark methods as transactional.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>在应用程序上下文中注册 <code>MongoTransactionManager</code>。此外，确保在创建用于同一 <code>MongoDatabaseFactory</code> 事务范围的 <code>MongoTemplate</code> 时，使用相同的 <code>MongoDatabaseFactory</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>将方法标记为事务性。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Register <code>ReactiveMongoTransactionManager</code> in the application context.\nAlso, make sure to use the same <code>ReactiveMongoDatabaseFactory</code> when creating <code>ReactiveMongoTemplate</code> to participate in transactions in the scope of the same <code>ReactiveMongoDatabaseFactory</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Mark methods as transactional.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>在应用程序上下文中注册 <code>ReactiveMongoTransactionManager</code>。此外，确保在创建 <code>ReactiveMongoTemplate</code> 时使用相同的 <code>ReactiveMongoDatabaseFactory</code>，以便在同一 <code>ReactiveMongoDatabaseFactory</code> 的范围内参与事务。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>将方法标记为事务性。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nMethods such as <code>(Reactive)MongoOperations#getCollection</code> return native MongoDB Java Driver gateway objects (such as <code>MongoCollection</code>) that themselves offer dedicated methods for <code>ClientSession</code>.\nThese methods are <strong>NOT</strong> session-proxied.\nYou should provide the <code>ClientSession</code> where needed when interacting directly with a <code>MongoCollection</code> or <code>MongoDatabase</code> and not through one of the <code>#execute</code> callbacks on <code>MongoOperations</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n诸如<code>(Reactive)MongoOperations#getCollection</code>之类的方法会返回原生 MongoDB Java 驱动网关对象（例如<code>MongoCollection</code>），这些对象本身提供了用于<code>ClientSession</code>的专用方法。\n这些方法<strong>并非</strong>会话代理。\n在与<code>MongoCollection</code>或<code>MongoDatabase</code>直接交互时，您需要在需要的位置提供<code>ClientSession</code>，而不应通过<code>MongoOperations</code>上的某个<code>#execute</code>回调进行交互。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nWhen dealing with <code>DBRef</code> instances, especially lazily loaded ones, it is essential to <strong>not</strong> close the <code>ClientSession</code> before all data is loaded.\nOtherwise, lazy fetch fails.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n在处理 <code>DBRef</code> 实例（尤其是懒加载的实例）时，务必在所有数据加载完成之前<strong>不要</strong>关闭 <code>ClientSession</code>。否则，懒加载将失败。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nUnless you specify a <code>MongoTransactionManager</code> within your application context, transaction support is <strong>DISABLED</strong>.\nYou can use <code>setSessionSynchronization(ALWAYS)</code> to participate in ongoing non-native MongoDB transactions.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n除非在应用程序上下文中指定了 <code>MongoTransactionManager</code>，否则事务支持处于<strong>禁用</strong>状态。\n您可以使用 <code>setSessionSynchronization(ALWAYS)</code> 来参与正在进行的非原生 MongoDB 事务。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nUnless you specify a <code>ReactiveMongoTransactionManager</code> within your application context, transaction support is <strong>DISABLED</strong>.\nYou can use <code>setSessionSynchronization(ALWAYS)</code> to participate in ongoing non-native MongoDB transactions.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n除非在您的应用程序上下文中指定了 <code>ReactiveMongoTransactionManager</code>，否则事务支持处于<strong>禁用</strong>状态。\n您可以使用 <code>setSessionSynchronization(ALWAYS)</code> 来参与正在进行的非原生 MongoDB 事务。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>@Transactional(readOnly = true)</code> advises <code>MongoTransactionManager</code> to also start a transaction that adds the\n<code>ClientSession</code> to outgoing requests.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>@Transactional(readOnly = true)</code> 会建议 <code>MongoTransactionManager</code> 启动一个事务，并将 <code>ClientSession</code> 添加到出站请求中。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>@Transactional(readOnly = true)</code> advises <code>ReactiveMongoTransactionManager</code> to also start a transaction that adds the <code>ClientSession</code> to outgoing requests.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>@Transactional(readOnly = true)</code> 会建议 <code>ReactiveMongoTransactionManager</code> 启动一个事务，并将 <code>ClientSession</code> 添加到出站请求中。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nMake sure to add <code>replicaSet</code> to the MongoDB URI.\nPlease refer to <a href=\"https://docs.mongodb.com/manual/reference/connection-string/#connections-connection-options\">connection string options</a> for further details.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n请确保在 MongoDB URI 中添加 <code>replicaSet</code>。\n有关详细信息，请参阅<a href=\"https://docs.mongodb.com/manual/reference/connection-string/#connections-connection-options\">连接字符串选项</a>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nReactive use of <code>ClientSession</code> is limited to Template API usage.\nThere’s currently no session integration with reactive repositories.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n对 <code>ClientSession</code> 的反应式使用仅限于模板 API。\n目前尚未实现与反应式存储库的会话集成。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-caution\" title=\"Caution\"></i>\n</td>\n<td class=\"content\">\nChanging state of <code>MongoTemplate</code> during runtime (as you might think would be possible in item 1 of the preceding listing) can cause threading and visibility issues.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-caution\" title=\"Caution\"></i>\n</td>\n<td class=\"content\">\n在运行时更改 <code>MongoTemplate</code> 的状态（正如您可能会认为在上一列表的第 1 项中那样可行）可能会导致线程和可见性问题。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nOperations within a client session are not isolated from operations outside the session.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"警告\"></i>\n</td>\n<td class=\"content\">\n客户端会话内的操作与会话外的操作之间不存在隔离。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nNested transactions that join the outer transaction do not affect the initial transaction options as the transaction is already started.\nTransaction options are only applied when a new transaction is started.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n与外部事务关联的嵌套事务不会影响初始的事务选项，因为该事务已经启动。\n事务选项仅在启动新事务时才会应用。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.sessions.reactive\"></a>ClientSession support",
+      "translation": "<a class=\"anchor\" href=\"#mongo.sessions.reactive\"></a>客户端会话支持",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.transactions\"></a>MongoDB Transactions",
+      "translation": "<a class=\"anchor\" href=\"#mongo.transactions\"></a>MongoDB 事务",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.transactions.reactive-operator\"></a>Transactions with TransactionTemplate / TransactionalOperator",
+      "translation": "<a class=\"anchor\" href=\"#mongo.transactions.reactive-operator\"></a>使用 TransactionTemplate/TransactionalOperator 进行事务操作",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.transactions.reactive-tx-manager\"></a>Transactions with MongoTransactionManager &amp; ReactiveMongoTransactionManager",
+      "translation": "<a class=\"anchor\" href=\"#mongo.transactions.reactive-tx-manager\"></a>MongoTransactionManager 与 ReactiveMongoTransactionManager 的事务",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.transaction.options\"></a>Controlling MongoDB-specific Transaction Options",
+      "translation": "<a class=\"anchor\" href=\"#mongo.transaction.options\"></a>控制 MongoDB 特定的事务选项",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mongo.transactions.behavior\"></a>Special behavior inside transactions",
+      "translation": "<a class=\"anchor\" href=\"#mongo.transactions.behavior\"></a>事务内的特殊行为",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data MongoDB",
+      "translation": "Spring Data MongoDB",
+      "count": 1
+    },
+    {
+      "source": "MongoDB Support",
+      "translation": "MongoDB 支持",
+      "count": 1
+    },
+    {
+      "source": "Max Commit Time",
+      "translation": "最大提交时间",
+      "count": 1
+    },
+    {
+      "source": "Read Concern",
+      "translation": "读关注",
+      "count": 1
+    },
+    {
+      "source": "Read Preference",
+      "translation": "读偏好",
+      "count": 1
+    },
+    {
+      "source": "Write Concern",
+      "translation": "写入关注",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "created_at": "2026-06-16 11:01:11",
+  "updated_at": "2026-06-16 11:01:11",
+  "stats": {
+    "total_entries": 27,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 28,
+    "entries_with_hits": 27,
+    "entries_without_hits": 0,
+    "hit_rate": 1.037037037037037,
+    "usage_percentage": 0.0026999999999999997
+  },
+  "items": [
+    {
+      "source": "Creates a new <a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> delegating to the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>s.",
+      "translation": "创建一个新的 <a href=\"ChainedTransactionManager.html\" title=\"org.springframework.data.transaction 中的类\"><code>ChainedTransactionManager</code></a>，该管理器将委托给指定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\"><code>PlatformTransactionManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "As consequence, a transaction can get into a state, where the first <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> has committed\nits transaction and a subsequent <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> failed to commit its transaction (e.g. caused by\nan I/O error or the transactional resource failed to commit for other reasons). In that case,\n<a href=\"#commit(org.springframework.transaction.TransactionStatus)\"><code>commit(TransactionStatus)</code></a> throws a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/HeuristicCompletionException.html\" title=\"class or interface in org.springframework.transaction\"><code>HeuristicCompletionException</code></a> to indicate a partially committed\ntransaction. Rollback isn't affected as the natural consequence of a missing commit is a rollback of a transactional\nresource. <a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> should be only used if the application can tolerate or recover from\ninconsistent state caused by partially committed transactions. In any other case, the use of\n<a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> is not recommended.",
+      "translation": "因此，事务可能进入一种状态：第一个 `<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 已提交其事务，而随后的 `<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>` 未能提交其事务（例如，由 I/O 错误引起，或由于其他原因导致事务性资源无法提交）。在这种情况下，`<a href=\"#commit(org.springframework.transaction.TransactionStatus)\"><code>commit(TransactionStatus)</code></a>` 会抛出一个 `<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/HeuristicCompletionException.html\" title=\"class or interface in org.springframework.transaction\"><code>HeuristicCompletionException</code></a>`，以指示部分提交的事务。回滚不受影响，因为缺少提交的自然后果是事务性资源的回滚。<a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> 仅应在应用程序能够容忍或从部分提交事务导致的不一致状态中恢复时才使用。在任何其他情况下，不建议使用 `<a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "The configured instances will start transactions in the order given and commit/rollback in <em>reverse</em> order,\nwhich means the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> most likely to break the transaction should be the <em>last</em>\nin the list configured. A <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> throwing an exception during commit will automatically\ncause the remaining transaction managers to roll back instead of committing.",
+      "translation": "配置的实例将按照给定顺序启动事务，并以<em>相反</em>的顺序提交或回滚。这意味着最有可能破坏事务的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>应该是配置列表中的<em>最后一个</em>。如果在提交过程中某个<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>抛出异常，将自动导致其余事务管理器回滚，而不是提交。",
+      "count": 1
+    },
+    {
+      "source": "Instead of using <a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> for attaching callbacks to transaction commit (pre commit/post\ncommit), either register a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/TransactionSynchronization.html\" title=\"class or interface in org.springframework.transaction.reactive\"><code>TransactionSynchronization</code></a> to explicitly\nfollow transaction cleanup with simplified semantics in case of exceptions.",
+      "translation": "不要使用 <a href=\"ChainedTransactionManager.html\" title=\"org.springframework.data.transaction 中的类\"><code>ChainedTransactionManager</code></a> 来为事务提交（预提交/后提交）附加回调，而是注册一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/TransactionSynchronization.html\" title=\"org.springframework.transaction.reactive 中的类或接口\"><code>TransactionSynchronization</code></a>，以便在发生异常时通过简化的语义显式地跟随事务清理。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">从类 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"java.lang 中的类或接口\">Object</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"java.lang 中的类或接口\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"java.lang 中的类或接口\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"java.lang 中的类或接口\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"java.lang 中的类或接口\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"java.lang 中的类或接口\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"java.lang 中的类或接口\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"java.lang 中的类或接口\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"java.lang 中的类或接口\">wait</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html\" title=\"class or interface in java.lang\">@Deprecated</a>\n</span><span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">ChainedTransactionManager</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html\" title=\"java.lang 中的类或接口\">@Deprecated</a>\n</span><span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">ChainedTransactionManager</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a>\nimplements <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\">PlatformTransactionManager</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab6\" onclick=\"show('method-summary-table', 'method-summary-table-tab6', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Deprecated Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab6\" onclick=\"show('method-summary-table', 'method-summary-table-tab6', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">已弃用方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Class ChainedTransactionManager\">Class ChainedTransactionManager</h1>",
+      "translation": "<h1 class=\"title\" title=\"类 ChainedTransactionManager\">类 ChainedTransactionManager</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Core",
+      "translation": "Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "since 2.5",
+      "translation": "自 2.5 版本以来",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">Constructor Summary</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">Constructor Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E(org.springframework.transaction.PlatformTransactionManager...)\" tabindex=\"0\">ChainedTransactionManager(PlatformTransactionManager...)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getTransaction(org.springframework.transaction.TransactionDefinition)\" tabindex=\"0\">getTransaction(TransactionDefinition)</a></li>\n<li><a href=\"#commit(org.springframework.transaction.TransactionStatus)\" tabindex=\"0\">commit(TransactionStatus)</a></li>\n<li><a href=\"#rollback(org.springframework.transaction.TransactionStatus)\" tabindex=\"0\">rollback(TransactionStatus)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">构造函数摘要</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">构造函数详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E(org.springframework.transaction.PlatformTransactionManager...)\" tabindex=\"0\">ChainedTransactionManager(PlatformTransactionManager...)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getTransaction(org.springframework.transaction.TransactionDefinition)\" tabindex=\"0\">getTransaction(TransactionDefinition)</a></li>\n<li><a href=\"#commit(org.springframework.transaction.TransactionStatus)\" tabindex=\"0\">commit(TransactionStatus)</a></li>\n<li><a href=\"#rollback(org.springframework.transaction.TransactionStatus)\" tabindex=\"0\">rollback(TransactionStatus)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>1.6</dd>\n<dt>Author:</dt>\n<dd>Michael Hunger, Oliver Gierke, Mark Paluch</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html#beforeCommit(boolean)\" title=\"class or interface in org.springframework.transaction.support\"><code>TransactionSynchronization.beforeCommit(boolean)</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html#afterCommit()\" title=\"class or interface in org.springframework.transaction.support\"><code>TransactionSynchronization.afterCommit()</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>1.6</dd>\n<dt>作者：</dt>\n<dd>Michael Hunger, Oliver Gierke, Mark Paluch</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html#beforeCommit(boolean)\" title=\"org.springframework.transaction.support 中的类或接口\"><code>TransactionSynchronization.beforeCommit(boolean)</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html#afterCommit()\" title=\"org.springframework.transaction.support 中的类或接口\"><code>TransactionSynchronization.afterCommit()</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#getTransaction(org.springframework.transaction.TransactionDefinition)\" title=\"class or interface in org.springframework.transaction\">getTransaction</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></code></dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionException.html\" title=\"class or interface in org.springframework.transaction\">TransactionException</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#getTransaction(org.springframework.transaction.TransactionDefinition)\" title=\"org.springframework.transaction 中的类或接口\">getTransaction</a></code>（接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\">PlatformTransactionManager</a></code>）</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionException.html\" title=\"org.springframework.transaction 中的类或接口\">TransactionException</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\" title=\"class or interface in org.springframework.transaction\">commit</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></code></dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionException.html\" title=\"class or interface in org.springframework.transaction\">TransactionException</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\" title=\"org.springframework.transaction 中的类或接口\">commit</a></code>，位于接口<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\">PlatformTransactionManager</a></code></dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionException.html\" title=\"org.springframework.transaction 中的类或接口\">TransactionException</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\" title=\"class or interface in org.springframework.transaction\">rollback</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></code></dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionException.html\" title=\"class or interface in org.springframework.transaction\">TransactionException</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\" title=\"org.springframework.transaction 中的类或接口\">rollback</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\">PlatformTransactionManager</a></code> 中</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionException.html\" title=\"org.springframework.transaction 中的类或接口\">TransactionException</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Implemented Interfaces:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionManager.html\" title=\"class or interface in org.springframework.transaction\">TransactionManager</a></code></dd>",
+      "translation": "<dt>所有已实现的接口：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\">PlatformTransactionManager</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\">TransactionManager</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>transactionManagers</code> - must not be null or empty.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>transactionManagers</code> - 不能为 null 或空。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Constructor Summary",
+      "translation": "构造函数摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Constructor Details",
+      "translation": "构造器详情",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "implementation that orchestrates transaction creation, commits and rollbacks to a\nlist of delegates. Using this implementation assumes that errors causing a transaction rollback will usually happen\nbefore the transaction completion or during the commit of the most inner",
+      "translation": "该实现负责协调向委托列表创建事务、提交和回滚的操作。使用此实现时，需假设导致事务回滚的错误通常发生在事务完成之前或最内层事务的提交过程中。",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "created_at": "2026-06-17 09:23:21",
+  "updated_at": "2026-06-17 09:23:21",
+  "stats": {
+    "total_entries": 111,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 112,
+    "entries_with_hits": 111,
+    "entries_without_hits": 0,
+    "hit_rate": 1.009009009009009,
+    "usage_percentage": 0.0111
+  },
+  "items": [
+    {
+      "source": "Changes to your repository interface",
+      "translation": "您的仓库接口已更新",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "Given the following two custom implementations for the <code>CustomizedUserRepository</code> shown earlier, the first implementation is used.\nIts bean name is <code>customizedUserRepositoryImpl</code>, which matches that of the fragment interface (<code>CustomizedUserRepository</code>) plus the postfix <code>Impl</code>.",
+      "translation": "鉴于之前展示的<code>CustomizedUserRepository</code>的两个自定义实现，将使用第一个实现。其 Bean 名称为<code>customizedUserRepositoryImpl</code>，该名称由片段接口（<code>CustomizedUserRepository</code>）的名称加上后缀<code>Impl</code>组成。",
+      "count": 1
+    },
+    {
+      "source": "If you annotate the <code>UserRepository</code> interface with <code>@Component(\"specialCustom\")</code>, the bean name plus <code>Impl</code> then matches the one defined for the repository implementation in <code>com.acme.impl.two</code>, and it is used instead of the first one.",
+      "translation": "如果将 `<code>UserRepository</code>` 接口注解为 `<code>@Component(\"specialCustom\")</code>`，则生成的 Bean 名称加上 `<code>Impl</code>` 后缀后，将与 `<code>com.acme.impl.two</code>` 中定义的仓库实现类匹配，从而优先使用该实现而非第一个。",
+      "count": 1
+    },
+    {
+      "source": "The most powerful approach to customize repository creation is to provide a custom repository factory bean, typically a subclass of <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFactorySupport.html\"><code>RepositoryFactorySupport</code></a>,\n<a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/TransactionalRepositoryFactoryBeanSupport.html\"><code>TransactionalRepositoryFactoryBeanSupport</code></a> or the store-specific repository factory bean.",
+      "translation": "定制仓库创建的最强大方法是提供一个自定义的仓库工厂 Bean，通常是 <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFactorySupport.html\"><code>RepositoryFactorySupport</code></a>、<a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/TransactionalRepositoryFactoryBeanSupport.html\"><code>TransactionalRepositoryFactoryBeanSupport</code></a> 或特定存储的仓库工厂 Bean 的子类。",
+      "count": 1
+    },
+    {
+      "source": "Let’s assume the actual full-text search is available via a <code>SearchService</code> that is registered as a <code>Bean</code> within the context so you can consume it in our <code>SearchExtension</code> implementation.\nAll you need to run the search is the collection (or index) name and an object mapper that converts the search results into actual domain objects as sketched out below.",
+      "translation": "假设实际的全文搜索功能通过一个名为<code>SearchService</code>的服务提供，该服务已在上下文中注册为<code>Bean</code>，因此您可以在我们的<code>SearchExtension</code>实现中调用它。\n要执行搜索，您只需要集合（或索引）名称以及一个对象映射器，该映射器可将搜索结果转换为实际的领域对象，具体方案如下所示。",
+      "count": 1
+    },
+    {
+      "source": "Customizing the <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFactorySupport.html\">repository factory</a> through <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFactoryCustomizer.html\"><code>RepositoryFactoryCustomizer</code></a> provides direct access to components involved with repository instance creation.\nThis mechanism is useful when you want to adjust selected aspects of proxy creation without introducing a fully custom repository factory bean.\nThe following example, demonstrates registering additional listeners and proxy advisors:",
+      "translation": "通过<a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFactorySupport.html\">仓库工厂</a>的<a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFactoryCustomizer.html\"><code>RepositoryFactoryCustomizer</code></a>进行自定义，可以直接访问参与仓库实例创建的组件。  \n当您需要调整代理创建的相关方面，而又不想引入完全自定义的仓库工厂 Bean 时，这种机制非常有用。  \n以下示例演示了如何注册额外的监听器和代理顾问：",
+      "count": 1
+    },
+    {
+      "source": "<code>repositoryFragmentsContributor</code>: A <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFragmentsContributor.html\"><code>RepositoryFragmentsContributor</code></a> allows contributions to repository composition after all standard fragments have been collected.\nStore modules use this mechanism to add features such as Querydsl or Query-by-Example support.\nIt also serves as an SPI for third-party extensions.",
+      "translation": "<code>repositoryFragmentsContributor</code>：一个<a href=\"https://docs.spring.io/spring-data/commons/reference/4.1.0/api/java/org/springframework/data/repository/core/support/RepositoryFragmentsContributor.html\"><code>RepositoryFragmentsContributor</code></a>允许在收集完所有标准片段后对仓库组合进行贡献。存储模块使用此机制添加功能，例如 Querydsl 或按示例查询支持。它同时也作为第三方扩展的 SPI（服务提供者接口）。",
+      "count": 1
+    },
+    {
+      "source": "<code>exposeMetadata</code>: Controls whether <a href=\"#expose-repository-metadata\">invocation metadata</a> is available through <code>RepositoryMethodContext.getContext()</code>.",
+      "translation": "`exposeMetadata`：控制是否可通过 `RepositoryMethodContext.getContext()` 获取<a href=\"#expose-repository-metadata\">调用元数据</a>。",
+      "count": 1
+    },
+    {
+      "source": "The most important part of the class name that corresponds to the fragment interface is the <code>Impl</code> postfix.\nYou can customize the store-specific postfix by setting <code>@Enable&lt;StoreModule&gt;Repositories(repositoryImplementationPostfix = …)</code>.",
+      "translation": "类名中与片段接口相对应的最重要部分是 `<code>Impl</code>` 后缀。您可以通过设置 `<code>@Enable&lt;StoreModule&gt;Repositories(repositoryImplementationPostfix = …)</code>` 来自定义特定于存储的后缀。",
+      "count": 1
+    },
+    {
+      "source": "A type located in the same package as the repository interface, matching <em>repository interface name</em> followed by <em>implementation postfix</em>,\nis considered a custom implementation and will be treated as a custom implementation.\nA class following that name can lead to undesired behavior.",
+      "translation": "与存储库接口位于同一包中、且名称匹配<em>存储库接口名称</em>后跟<em>实现后缀</em>的类型，被视为自定义实现，并将被当作自定义实现处理。遵循该命名规则可能导致意外行为。",
+      "count": 1
+    },
+    {
+      "source": "The first configuration in the preceding example tries to look up a class called <code>com.acme.repository.CustomizedUserRepositoryImpl</code> to act as a custom repository implementation.\nThe second example tries to look up <code>com.acme.repository.CustomizedUserRepositoryMyPostfix</code>.",
+      "translation": "前一个示例尝试查找名为<code>com.acme.repository.CustomizedUserRepositoryImpl</code>的类，以作为自定义仓库实现。第二个示例则尝试查找<code>com.acme.repository.CustomizedUserRepositoryMyPostfix</code>。",
+      "count": 1
+    },
+    {
+      "source": "As already mentioned in the <a href=\"#repositories.configuration\">Configuration</a> section, the infrastructure only auto-detects fragments within the repository base-package.\nTherefore, fragments residing in another location or want to be contributed by an external archive will not be found if they do not share a common namespace.\nRegistering fragments within <code>spring.factories</code> allows you to circumvent this restriction as explained in the following section.",
+      "translation": "如<a href=\"#repositories.configuration\">配置</a>部分所述，基础设施仅自动检测仓库基础包内的片段。因此，如果位于其他位置或由外部归档贡献的片段不具有公共命名空间，则不会被发现。在<code>spring.factories</code>中注册片段可以规避此限制，具体说明如下。",
+      "count": 1
+    },
+    {
+      "source": "In the example above <code>RepositoryMethodContext.getContext()</code> is used to retrieve metadata for the actual method invocation.\n<code>RepositoryMethodContext</code> exposes information attached to the repository such as the domain type.\nIn this case we use the repository domain type to identify the name of the index to be searched.",
+      "translation": "在上面的示例中，使用 <code>RepositoryMethodContext.getContext()</code> 来获取实际方法调用的元数据。\n<code>RepositoryMethodContext</code> 暴露了附加到存储库的信息，例如领域类型。\n在这种情况下，我们使用存储库的领域类型来识别要搜索的索引名称。",
+      "count": 1
+    },
+    {
+      "source": "The <code>exposeMetadata</code> flag can be set directly on the repository factory bean via a <code>BeanPostProcessor</code>.",
+      "translation": "可以通过 `BeanPostProcessor` 直接在仓库工厂 Bean 上设置 `<code>exposeMetadata</code>` 标志。",
+      "count": 1
+    },
+    {
+      "source": "A <code>RepositoryFactoryCustomizer</code> is associated with a particular repository factory bean, ideally through <code>BeanPostProcessor</code> so that only specific repositories are affected.\nNote that customizer beans are not applied automatically to prevent unwanted wiring that become especially relevant in multi-repository arrangements or when using multiple Spring Data modules.",
+      "translation": "<code>RepositoryFactoryCustomizer</code> 与特定的仓库工厂 Bean 相关联，理想情况下通过 <code>BeanPostProcessor</code> 实现，以确保仅影响指定的仓库。请注意，自定义器 Bean 不会自动应用，以避免产生不必要的依赖注入问题；这一问题在多仓库配置或使用多个 Spring Data 模块时尤为关键。",
+      "count": 1
+    },
+    {
+      "source": "Historically, Spring Data custom repository implementation discovery followed a\n<a href=\"https://docs.spring.io/spring-data/commons/docs/1.9.0.RELEASE/reference/html/#repositories.single-repository-behaviour\">naming pattern</a>\nthat derived the custom implementation class name from the repository allowing effectively a single custom implementation.",
+      "translation": "历史上，Spring Data 自定义存储库实现的发现遵循一种<a href=\"https://docs.spring.io/spring-data/commons/docs/1.9.0.RELEASE/reference/html/#repositories.single-repository-behaviour\">命名模式</a>，该模式从存储库推导出自定义实现类的名称，从而有效地只支持单个自定义实现。",
+      "count": 1
+    },
+    {
+      "source": "The implementation itself does not depend on Spring Data and can be a regular Spring bean.\nConsequently, you can use standard dependency injection behavior to inject references to other beans (such as a <code>JdbcTemplate</code>), take part in aspects, and so on.",
+      "translation": "实现本身并不依赖于 Spring Data，可以是一个普通的 Spring Bean。因此，您可以使用标准的依赖注入行为来注入对其他 Bean 的引用（例如 `<code>JdbcTemplate</code>`），并参与切面等机制。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data repositories are implemented by using fragments that form a repository composition.\nFragments are the base repository, functional aspects (such as <a class=\"xref page\" href=\"core-extensions.html#core.extensions.querydsl\">Querydsl</a>), and custom interfaces along with their implementations.\nEach time you add an interface to your repository interface, you enhance the composition by adding a fragment.\nThe base repository and repository aspect implementations are provided by each Spring Data module.",
+      "translation": "Spring Data 仓库通过形成仓库组合的片段来实现。  \n片段包括基础仓库、功能方面（例如 <a class=\"xref page\" href=\"core-extensions.html#core.extensions.querydsl\">Querydsl</a>）以及自定义接口及其实现。  \n每次向您的仓库接口添加一个接口时，您都会通过添加一个片段来增强该组合。  \n基础仓库和仓库方面实现由每个 Spring Data 模块提供。",
+      "count": 1
+    },
+    {
+      "source": "The following example shows the interface for a custom repository that extends <code>CrudRepository</code>:",
+      "translation": "以下示例展示了扩展 <code>CrudRepository</code> 的自定义仓库接口：",
+      "count": 1
+    },
+    {
+      "source": "The repository infrastructure tries to autodetect custom implementation fragments by scanning for classes below the package in which it found a repository.\nThese classes need to follow the naming convention of appending a postfix defaulting to <code>Impl</code>.",
+      "translation": "仓库基础设施会尝试通过扫描位于发现仓库所在包之下的类来自动检测自定义实现片段。这些类需要遵循命名约定，即在名称后追加后缀，默认后缀为<code>Impl</code>。",
+      "count": 1
+    },
+    {
+      "source": "If your custom implementation uses annotation-based configuration and autowiring only, the preceding approach shown works well, because it is treated as any other Spring bean.\nIf your implementation fragment bean needs special wiring, you can declare the bean and name it according to the conventions described in the <a href=\"#repositories.single-repository-behaviour.ambiguity\">preceding section</a>.\nThe infrastructure then refers to the manually defined bean definition by name instead of creating one itself.\nThe following example shows how to manually wire a custom implementation:",
+      "translation": "如果您的自定义实现仅使用基于注解的配置和自动装配，上述方法同样适用，因为它被视为普通的 Spring  Bean。  \n如果您的实现片段 Bean 需要特殊的装配方式，您可以声明该 Bean，并按照<a href=\"#repositories.single-repository-behaviour.ambiguity\">前文所述</a>的约定为其命名。  \n此时，基础设施将不再自行创建 Bean 定义，而是通过名称引用您手动定义的 Bean 定义。  \n以下示例展示了如何手动装配自定义实现：",
+      "count": 1
+    },
+    {
+      "source": "First all you need is the fragment interface.\nNote the generic <code>&lt;T&gt;</code> parameter to align the fragment with the repository domain type.",
+      "translation": "首先，你需要定义一个 Fragment 接口。  \n请注意泛型参数 `<code>&lt;T&gt;</code>`，它用于将 Fragment 与仓库的领域类型对齐。",
+      "count": 1
+    },
+    {
+      "source": "Exposing invocation metadata is costly, hence it is disabled by default.\nTo access <code>RepositoryMethodContext.getContext()</code> you need to advise the repository factory responsible for creating the actual repository to expose method metadata.",
+      "translation": "暴露调用元数据成本较高，因此默认情况下该功能被禁用。  \n若要访问 `<code>RepositoryMethodContext.getContext()</code>`，您需要建议负责创建实际仓库的工厂类以暴露方法元数据。",
+      "count": 1
+    },
+    {
+      "source": "Adding the <code>RepositoryMetadataAccess</code> marker interface to the fragments implementation will trigger the infrastructure and enable metadata exposure for those repositories using the fragment.",
+      "translation": "在片段实现中添加 `<code>RepositoryMetadataAccess</code>` 标记接口将触发基础设施，从而为使用该片段的仓库启用元数据暴露功能。",
+      "count": 1
+    },
+    {
+      "source": "Having both, the fragment declaration and implementation in place you can register the extension in the <code>META-INF/spring.factories</code> file and package things up if needed.",
+      "translation": "同时拥有片段声明和实现后，您可以在 `<code>META-INF/spring.factories</code>` 文件中注册扩展，并在需要时打包相关资源。",
+      "count": 1
+    },
+    {
+      "source": "The approach described in the <a href=\"#repositories.manual-wiring\">preceding section</a> requires customization of each repository interfaces when you want to customize the base repository behavior so that all repositories are affected.\nTo instead change behavior for all repositories, you can create an implementation that extends the persistence technology-specific repository base class.\nThis class then acts as a custom base class for the repository proxies, as shown in the following example:",
+      "translation": "前面<a href=\"#repositories.manual-wiring\">一节</a>中描述的方法要求，若要自定义基础仓库行为以影响所有仓库，则需对每个仓库接口进行定制。  \n若要改为统一更改所有仓库的行为，可以创建一个继承自特定持久化技术仓库基类的实现类。  \n该类随后将作为仓库代理的自定义基类，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "The final step is to make the Spring Data infrastructure aware of the customized repository base class.\nIn configuration, you can do so by using the <code>repositoryBaseClass</code>, as shown in the following example:",
+      "translation": "最后一步是让 Spring Data 基础设施识别自定义的仓库基类。在配置中，可以通过使用 `<code>repositoryBaseClass</code>` 来实现，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "<code>repositoryBaseClass</code>: The repository base class defines which methods are implemented by the base class and which methods require additional handling through aspects or custom implementations.",
+      "translation": "<code>repositoryBaseClass</code>：仓库基类定义了由基类实现的方法，以及需要通过切面或自定义实现进行额外处理的方法。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data provides various options to create query methods with little coding.\nBut when those options don’t fit your needs you can also provide your own custom implementation for repository methods.\nThis section describes how to do that.",
+      "translation": "Spring Data 提供了多种选项，只需少量代码即可创建查询方法。  \n但如果这些选项无法满足您的需求，您还可以为仓库方法提供自定义实现。  \n本节将介绍如何实现这一点。",
+      "count": 1
+    },
+    {
+      "source": "To enrich a repository with custom functionality, you must first define a fragment interface and an implementation for the custom functionality, as follows:",
+      "translation": "要丰富存储库的自定义功能，首先必须定义该自定义功能的片段接口及其实现，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "We consider the single-custom implementation naming deprecated and recommend not using this pattern.\nInstead, migrate to a fragment-based programming model.",
+      "translation": "我们建议不再使用单自定义实现命名，并推荐避免采用此模式。  \n相反，请迁移至基于片段的编程模型。",
+      "count": 1
+    },
+    {
+      "source": "Then you can let your repository interface extend the fragment interface, as follows:",
+      "translation": "然后，您可以让仓库接口扩展片段接口，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "Extending the fragment interface with your repository interface combines the CRUD and custom functionality and makes it available to clients.",
+      "translation": "通过用您的仓储接口扩展片段接口，可以将 CRUD 功能和自定义功能结合起来，并使其可供客户端使用。",
+      "count": 1
+    },
+    {
+      "source": "The following example shows custom interfaces and their implementations:",
+      "translation": "以下示例展示了自定义接口及其实现：",
+      "count": 1
+    },
+    {
+      "source": "Repositories may be composed of multiple custom implementations that are imported in the order of their declaration.\nCustom implementations have a higher priority than the base implementation and repository aspects.\nThis ordering lets you override base repository and aspect methods and resolves ambiguity if two fragments contribute the same method signature.\nRepository fragments are not limited to use in a single repository interface.\nMultiple repositories may use a fragment interface, letting you reuse customizations across different repositories.",
+      "translation": "仓库可以由多个自定义实现组成，这些实现按照其声明的顺序进行导入。  \n自定义实现的优先级高于基础实现和仓库切面。  \n这种排序允许您覆盖基础仓库和切面方法，并在两个片段贡献了相同的方法签名时解决歧义。  \n仓库片段不仅限于在单个仓库接口中使用。  \n多个仓库可以使用同一个片段接口，从而让您在不同仓库之间复用自定义功能。",
+      "count": 1
+    },
+    {
+      "source": "The following example shows a repository fragment and its implementation:",
+      "translation": "以下示例展示了一个仓库片段及其实现：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows a repository that uses the preceding repository fragment:",
+      "translation": "以下示例展示了使用前述仓库片段的仓库：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows a repository that uses the default postfix and a repository that sets a custom value for the postfix:",
+      "translation": "以下示例展示了一个使用默认后缀的仓库，以及一个为后缀设置自定义值的仓库：",
+      "count": 1
+    },
+    {
+      "source": "If multiple implementations with matching class names are found in different packages, Spring Data uses the bean names to identify which one to use.",
+      "translation": "如果在不同的包中发现了多个具有相同类名的实现，Spring Data 将使用 Bean 名称来确定使用哪一个。",
+      "count": 1
+    },
+    {
+      "source": "Imagine you’d like to provide some custom search functionality usable across multiple repositories for your organization leveraging a text search index.",
+      "translation": "假设您希望为您的组织构建一种可跨多个仓库使用的自定义搜索功能，并利用文本搜索索引来实现。",
+      "count": 1
+    },
+    {
+      "source": "Marker Interface",
+      "translation": "标记接口",
+      "count": 1
+    },
+    {
+      "source": "Bean Post Processor",
+      "translation": "Bean 后置处理器",
+      "count": 1
+    },
+    {
+      "source": "Please do not just copy/paste the above but consider your actual use case which may require a more fine-grained approach as the above will simply enable the flag on every repository.",
+      "translation": "请勿直接复制/粘贴上述内容，而应考虑您的实际使用场景，可能需要更精细的方法，因为上述方法会简单地为每个仓库启用该标志。",
+      "count": 1
+    },
+    {
+      "source": "Now you are ready to make use of your extension; Simply add the interface to your repository.",
+      "translation": "现在您已准备好使用您的扩展；只需将接口添加到您的代码库中即可。",
+      "count": 1
+    },
+    {
+      "source": "Customizing the repository factory bean allows you to change repository creation entirely with full access to the underlying repository factory.",
+      "translation": "自定义仓库工厂 Bean 可让您完全更改仓库的创建方式，并拥有对底层仓库工厂的完整访问权限。",
+      "count": 1
+    },
+    {
+      "source": "Note that this approach requires the most effort and is typically only needed when you want to change core aspects of repository creation.\nAlso, you need to take into consideration repository metadata derivation that is used to identify query methods, base implementation methods and custom implementations.\nThe following summary outlines the key aspects:",
+      "translation": "请注意，这种方法需要付出最多的努力，通常仅在需要更改仓库创建的核心方面时才使用。此外，您还需要考虑用于识别查询方法、基础实现方法和自定义实现的仓库元数据推导。以下摘要概述了关键方面：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../../index.html\">Spring Data LDAP</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../../index.html\">Spring Data LDAP</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-commons/src/main/antora/modules/ROOT/pages/repositories/custom-implementations.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-commons\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-commons/src/main/antora/modules/ROOT/pages/repositories/custom-implementations.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-commons\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Commons</a></li>\n      <li><a href=\"../repositories.html\">Working with Spring Data Repositories</a></li>\n      <li><a href=\"custom-implementations.html\">Custom Repository Implementations</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Commons</a></li>\n      <li><a href=\"../repositories.html\">使用 Spring Data 仓库</a></li>\n      <li><a href=\"custom-implementations.html\">自定义仓库实现</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring 团队学院</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "Fragments overriding <code>save(…)</code>",
+      "translation": "覆盖 `save(…)` 的片段",
+      "count": 1
+    },
+    {
+      "source": "Register the fragment in <code>META-INF/spring.factories</code>",
+      "translation": "在 `<code>META-INF/spring.factories</code>` 中注册该片段。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Interface for custom repository functionality",
+      "translation": "自定义仓库功能的接口",
+      "count": 1
+    },
+    {
+      "source": "Implementation of custom repository functionality",
+      "translation": "自定义仓储功能的实现",
+      "count": 1
+    },
+    {
+      "source": "Fragments with their implementations",
+      "translation": "带有其实现的片段",
+      "count": 1
+    },
+    {
+      "source": "Customized repository interfaces",
+      "translation": "自定义仓储接口",
+      "count": 1
+    },
+    {
+      "source": "Example 1. Configuration example",
+      "translation": "示例 1。配置示例",
+      "count": 1
+    },
+    {
+      "source": "Example 2. Resolution of ambiguous implementations",
+      "translation": "示例 2：歧义实现的解析",
+      "count": 1
+    },
+    {
+      "source": "Example 3. Manual wiring of custom implementations",
+      "translation": "示例 3：自定义实现的接线",
+      "count": 1
+    },
+    {
+      "source": "Fragment Interface",
+      "translation": "片段接口",
+      "count": 1
+    },
+    {
+      "source": "Fragment implementation",
+      "translation": "片段实现",
+      "count": 1
+    },
+    {
+      "source": "Expose Repository Metadata",
+      "translation": "暴露仓库元数据",
+      "count": 1
+    },
+    {
+      "source": "Using it",
+      "translation": "使用它",
+      "count": 1
+    },
+    {
+      "source": "Custom repository base class",
+      "translation": "自定义仓库基类",
+      "count": 1
+    },
+    {
+      "source": "Example 4. Configuring a custom repository base class",
+      "translation": "示例 4：配置自定义仓库基类",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Working with Spring Data Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods.html\">Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scrolling.html\">Scrolling</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections.html\">Projections</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories.html\">使用 Spring Data Repository</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods.html\">查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"definition.html\">定义 Repository 接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"create-instances.html\">创建 Repository 实例</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-implementations.html\">自定义 Repository 实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"core-extensions.html\">Spring Data 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scrolling.html\">滚动查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"null-handling.html\">Repository 方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"projections.html\">投影</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">Object Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空值安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <span class=\"nav-text\">Appendices</span>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"namespace-reference.html\">Namespace reference</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"populator-namespace-reference.html\">Populators namespace reference</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<span class=\"nav-text\">附录</span>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"namespace-reference.html\">命名空间参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"populator-namespace-reference.html\">填充器命名空间参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-caution\" title=\"Caution\"></i>\n</td>\n<td class=\"content\">\nThe class needs to have a constructor of the super class which the store-specific repository factory implementation uses.\nIf the repository base class has multiple constructors, override the one taking an <code>EntityInformation</code> plus a store specific infrastructure object (such as an <code>EntityManager</code> or a template class).\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-caution\" title=\"Caution\"></i>\n</td>\n<td class=\"content\">\n该类需要包含一个由特定存储仓库工厂实现所使用的超类构造函数。\n如果仓库基类有多个构造函数，请重写接受 <code>EntityInformation</code> 以及特定存储基础设施对象（例如 <code>EntityManager</code> 或模板类）的那个构造函数。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../upgrade.html\">Upgrading Spring Data</a>",
+      "translation": "<a class=\"nav-link\" href=\"../upgrade.html\">升级 Spring Data</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../object-mapping.html\">Object Mapping Fundamentals</a>",
+      "translation": "<a class=\"nav-link\" href=\"../object-mapping.html\">对象映射基础</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../query-by-example.html\">Query by Example</a>",
+      "translation": "<a class=\"nav-link\" href=\"../query-by-example.html\">按示例查询</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../value-expressions.html\">Value Expressions Fundamentals</a>",
+      "translation": "<a class=\"nav-link\" href=\"../value-expressions.html\">值表达式基础</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../property-paths.html\">Property Paths</a>",
+      "translation": "<a class=\"nav-link\" href=\"../property-paths.html\">属性路径</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../custom-conversions.html\">Custom Conversions</a>",
+      "translation": "<a class=\"nav-link\" href=\"../custom-conversions.html\">自定义转化</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../entity-callbacks.html\">Entity Callbacks</a>",
+      "translation": "<a class=\"nav-link\" href=\"../entity-callbacks.html\">实体回调</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../is-new-state-detection.html\">Entity State Detection Strategies</a>",
+      "translation": "<a class=\"nav-link\" href=\"../is-new-state-detection.html\">实体状态检测策略</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../aot.html\">Ahead of Time Optimizations</a>",
+      "translation": "<a class=\"nav-link\" href=\"../aot.html\">提前优化</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.single-repository-behavior\"></a>Customizing Individual Repositories",
+      "translation": "<a class=\"anchor\" href=\"#repositories.single-repository-behavior\"></a>自定义单个仓库",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.single-repository-behaviour.ambiguity\"></a>Resolution of Ambiguity",
+      "translation": "<a class=\"anchor\" href=\"#repositories.single-repository-behaviour.ambiguity\"></a>歧义解析",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.manual-wiring\"></a>Manual Wiring",
+      "translation": "<a class=\"anchor\" href=\"#repositories.manual-wiring\"></a>手动接线",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.spring-factories\"></a>Registering Fragments with spring.factories",
+      "translation": "<a class=\"anchor\" href=\"#repositories.spring-factories\"></a>使用 spring.factories 注册片段",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.customize-base-repository\"></a>Customize the Base Repository",
+      "translation": "<a class=\"anchor\" href=\"#repositories.customize-base-repository\"></a>自定义基础仓库",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.customize-repository-factory\"></a>Customizing the Repository Factory",
+      "translation": "<a class=\"anchor\" href=\"#repositories.customize-repository-factory\"></a>自定义仓储工厂",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#repositories.customize-repository-factory-bean\"></a>Customize the Repository Factory Bean",
+      "translation": "<a class=\"anchor\" href=\"#repositories.customize-repository-factory-bean\"></a>自定义存储库工厂 Bean",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Commons",
+      "translation": "Spring Data 公共模块",
+      "count": 1
+    },
+    {
+      "source": "Custom Repository Implementations",
+      "translation": "自定义仓库实现",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

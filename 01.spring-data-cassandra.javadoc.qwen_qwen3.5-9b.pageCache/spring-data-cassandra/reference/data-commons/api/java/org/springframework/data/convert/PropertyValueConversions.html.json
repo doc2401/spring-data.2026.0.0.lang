@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-06-16 09:51:58",
+  "updated_at": "2026-06-16 09:51:58",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1304347826086956,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "Helper method used to create a <a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a> instance with the configured\n<a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>converters</code></a> provided by the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>callback</code></a>.",
+      "translation": "用于通过由 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"类或接口在 java.util.function\"><code>callback</code></a> 提供的配置的 <a href=\"PropertyValueConverter.html\" title=\"接口在 org.springframework.data.convert\"><code>converters</code></a> 来创建 <a href=\"PropertyValueConversions.html\" title=\"接口在 org.springframework.data.convert\"><code>PropertyValueConversions</code></a> 实例的辅助方法。",
+      "count": 2
+    },
+    {
+      "source": "Get the <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>converter</code></a> registered for the given <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>property</code></a>.",
+      "translation": "获取为给定<a href=\"../mapping/PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>property</code></a>注册的<a href=\"PropertyValueConverter.html\" title=\"org.springframework.data.convert 中的接口\"><code>converter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Check if a <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>converter</code></a> is registered for\nthe given <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>property</code></a>.",
+      "translation": "检查是否已为给定的<a href=\"../mapping/PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>property</code></a>注册了<a href=\"PropertyValueConverter.html\" title=\"org.springframework.data.convert 中的接口\"><code>converter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a> provides access to <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>converters</code></a> that may only be\napplied to a specific <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>property</code></a>. Other than\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>converters</code></a> registered in <a href=\"CustomConversions.html\" title=\"class in org.springframework.data.convert\"><code>CustomConversions</code></a>,\nthe <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>property</code></a> based variants accept and allow returning null values\nand provide access to a store-specific <a href=\"ValueConversionContext.html\" title=\"interface in org.springframework.data.convert\"><code>conversion context</code></a>.",
+      "translation": "<a href=\"PropertyValueConversions.html\" title=\"org.springframework.data.convert 中的接口\"><code>PropertyValueConversions</code></a> 提供了对 <a href=\"PropertyValueConverter.html\" title=\"org.springframework.data.convert 中的接口\"><code>converters</code></a> 的访问，这些转换器仅可应用于特定的 <a href=\"../mapping/PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>property</code></a>。除了注册在 <a href=\"CustomConversions.html\" title=\"org.springframework.data.convert 中的类\"><code>CustomConversions</code></a> 中的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"org.springframework.core.convert.converter 中的类或接口\"><code>converters</code></a> 之外，基于 <a href=\"../mapping/PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>property</code></a> 的变体接受并允许返回 null 值，并提供对特定存储的 <a href=\"ValueConversionContext.html\" title=\"org.springframework.data.convert 中的接口\"><code>conversion context</code></a> 的访问。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"type-parameters\">&lt;DV, SV, P extends <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;P&gt;, VCC extends <a href=\"ValueConversionContext.html\" title=\"interface in org.springframework.data.convert\">ValueConversionContext</a>&lt;P&gt;&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\">PropertyValueConverter</a>&lt;DV,<wbr/>SV,<wbr/>VCC&gt;</span> <span class=\"element-name\">getValueConverter</span><wbr/><span class=\"parameters\">(P property)</span>",
+      "translation": "```html\n<span class=\"type-parameters\">&lt;DV, SV, P extends <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;P&gt;, VCC extends <a href=\"ValueConversionContext.html\" title=\"interface in org.springframework.data.convert\">ValueConversionContext</a>&lt;P&gt;&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\">PropertyValueConverter</a>&lt;DV,<wbr/>SV,<wbr/>VCC&gt;</span><span class=\"element-name\">getValueConverter</span><wbr/><span class=\"parameters\">(P property)</span>\n```",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">static</span> <span class=\"type-parameters\">&lt;P extends <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;P&gt;&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\">PropertyValueConversions</a></span> <span class=\"element-name\">simple</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\">Consumer</a>&lt;<a href=\"PropertyValueConverterRegistrar.html\" title=\"class in org.springframework.data.convert\">PropertyValueConverterRegistrar</a>&lt;P&gt;&gt; config)</span>",
+      "translation": "<span class=\"modifiers\">static</span> <span class=\"type-parameters\">&lt;P extends <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;P&gt;&gt;</span>\n<span class=\"return-type\"><a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\">PropertyValueConversions</a></span> <span class=\"element-name\">simple</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\">Consumer</a>&lt;<a href=\"PropertyValueConverterRegistrar.html\" title=\"class in org.springframework.data.convert\">PropertyValueConverterRegistrar</a>&lt;P&gt;&gt; config)</span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">PropertyValueConversions</span>",
+      "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">PropertyValueConversions</span>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface PropertyValueConversions\">Interface PropertyValueConversions</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 PropertyValueConversions\">接口 PropertyValueConversions</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Core",
+      "translation": "Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"getValueConverter(P)-type-param-DV\"><code>DV</code> - domain-specific type</span></dd>\n<dd><span id=\"getValueConverter(P)-type-param-SV\"><code>SV</code> - store-native type</span></dd>\n<dd><span id=\"getValueConverter(P)-type-param-P\"><code>P</code> - conversion context type</span></dd>\n<dt>Parameters:</dt>\n<dd><code>property</code> - <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> used to look up the registered <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a>;\nmust not be null.</dd>\n<dt>Returns:</dt>\n<dd>the <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a> registered for the given <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>;\nnever null.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if no <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a> was registered for\nthe given <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>hasValueConverter(PersistentProperty)</code></a></li>\n<li><a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a></li>\n<li><a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>类型参数:</dt>\n<dd><span id=\"getValueConverter(P)-type-param-DV\"><code>DV</code> - 领域特定类型</span></dd>\n<dd><span id=\"getValueConverter(P)-type-param-SV\"><code>SV</code> - 存储原生类型</span></dd>\n<dd><span id=\"getValueConverter(P)-type-param-P\"><code>P</code> - 转换上下文类型</span></dd>\n<dt>参数:</dt>\n<dd><code>property</code> - 用于查找已注册的 <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 的 <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a>；\n不能为 null。</dd>\n<dt>返回:</dt>\n<dd>为给定 <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 注册的 <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a>；\n永远不会为 null。</dd>\n<dt>抛出:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果未为给定的 <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 注册任何 <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a>。</dd>\n<dt>另请参见:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\"><code>hasValueConverter(PersistentProperty)</code></a></li>\n<li><a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConverter</code></a></li>\n<li><a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>property</code> - <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> to evaluate; must not be null.</dd>\n<dt>Returns:</dt>\n<dd>true if a specific <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>converter</code></a> is registered for\nthe given <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>property</code> - 要评估的 <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>；不能为 null。</dd>\n<dt>返回：</dt>\n<dd>如果已为该给定的 <a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 注册了特定的 <a href=\"PropertyValueConverter.html\" title=\"interface in org.springframework.data.convert\"><code>converter</code></a>，则返回 true。</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"../mapping/PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\" tabindex=\"0\">hasValueConverter(PersistentProperty)</a></li>\n<li><a href=\"#getValueConverter(P)\" tabindex=\"0\">getValueConverter(P)</a></li>\n<li><a href=\"#simple(java.util.function.Consumer)\" tabindex=\"0\">simple(Consumer)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#hasValueConverter(org.springframework.data.mapping.PersistentProperty)\" tabindex=\"0\">hasValueConverter(PersistentProperty)</a></li>\n<li><a href=\"#getValueConverter(P)\" tabindex=\"0\">getValueConverter(P)</a></li>\n<li><a href=\"#simple(java.util.function.Consumer)\" tabindex=\"0\">simple(Consumer)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"PropertyValueConverterRegistrar.html\" title=\"class in org.springframework.data.convert\"><code>PropertyValueConverterRegistrar</code></a></li>\n<li><a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"PropertyValueConverterRegistrar.html\" title=\"class in org.springframework.data.convert\"><code>PropertyValueConverterRegistrar</code></a></li>\n<li><a href=\"PropertyValueConversions.html\" title=\"interface in org.springframework.data.convert\"><code>PropertyValueConversions</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Known Implementing Classes:</dt>\n<dd><code><a href=\"SimplePropertyValueConversions.html\" title=\"class in org.springframework.data.convert\">SimplePropertyValueConversions</a></code></dd>",
+      "translation": "<dt>所有已知的实现类：</dt>\n<dd><code><a href=\"SimplePropertyValueConversions.html\" title=\"org.springframework.data.convert 中的类\">SimplePropertyValueConversions</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>2.7</dd>\n<dt>Author:</dt>\n<dd>Christoph Strobl</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>2.7</dd>\n<dt>作者：</dt>\n<dd>Christoph Strobl</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    }
+  ]
+}

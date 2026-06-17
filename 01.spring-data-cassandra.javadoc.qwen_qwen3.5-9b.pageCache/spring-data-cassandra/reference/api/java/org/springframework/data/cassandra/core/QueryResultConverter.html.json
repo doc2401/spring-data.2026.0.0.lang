@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-06-16 16:12:29",
+  "updated_at": "2026-06-16 16:12:29",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.103448275862069,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "Map a <code>Row</code> that is read from the Cassandra database to a query result.",
+      "translation": "将已从 Cassandra 数据库读取的<code>Row</code>映射到查询结果。",
+      "count": 2
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 2
+    },
+    {
+      "source": "Returns a function that returns the materialized entity.",
+      "translation": "返回一个用于返回实体化实体的函数。",
+      "count": 2
+    },
+    {
+      "source": "This is a functional interface that allows for mapping a <code>Row</code> to a result type.\n<a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\"><code>row mapping</code></a> can obtain upstream a <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>upstream converter</code></a> to enrich the final result object. This is useful when e.g. wrapping result objects where the\nwrapper needs to obtain information from the actual <code>Row</code>.",
+      "translation": "这是一个功能接口，用于将 `<code>Row` 映射到结果类型。  \n<a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\"><code>row mapping</code></a> 可以获取上游的 <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>upstream converter</code></a>，以丰富最终结果对象。这在需要包装结果对象且包装器需要从实际的 `<code>Row` 中获取信息时非常有用。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">default</span> <span class=\"type-parameters\">&lt;V&gt;</span> <span class=\"return-type\"><a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.cassandra.core\">QueryResultConverter</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in QueryResultConverter\">T</a>,<wbr/>V&gt;</span> <span class=\"element-name\">andThen</span><wbr/><span class=\"parameters\">(<a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.cassandra.core\">QueryResultConverter</a>&lt;? super <a href=\"#type-param-R\" title=\"type parameter in QueryResultConverter\">R</a>, ? extends V&gt; after)</span>",
+      "translation": "<span class=\"modifiers\">default</span> <span class=\"type-parameters\">&lt;V&gt;</span> <span class=\"return-type\"><a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.cassandra.core\">QueryResultConverter</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in QueryResultConverter\">T</a>,<wbr/>V&gt;</span> <span class=\"element-name\">andThen</span><wbr/><span class=\"parameters\">(<a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.cassandra.core\">QueryResultConverter</a>&lt;? super <a href=\"#type-param-R\" title=\"type parameter in QueryResultConverter\">R</a>, ? extends V&gt; after)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"return-type\"><a href=\"#type-param-R\" title=\"type parameter in QueryResultConverter\">R</a></span> <span class=\"element-name\">mapRow</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"interface in org.springframework.data.cassandra.core\">QueryResultConverter.ConversionResultSupplier</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in QueryResultConverter\">T</a>&gt; reader)</span>",
+      "translation": "<span class=\"return-type\"><a href=\"#type-param-R\" title=\"查询结果转换器中的类型参数\">R</a></span> <span class=\"element-name\">mapRow</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"org.springframework.data.cassandra.core 中的接口\">QueryResultConverter.ConversionResultSupplier</a>&lt;<a href=\"#type-param-T\" title=\"查询结果转换器中的类型参数\">T</a>&gt; reader)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"class or interface in java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">QueryResultConverter&lt;T, R extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"类或接口在 java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">QueryResultConverter&lt;T, R extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"类或接口在 java.lang\">Object</a>&gt;</span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Default Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">默认方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface QueryResultConverter\">Interface QueryResultConverter&lt;T, R extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 QueryResultConverter\">接口 QueryResultConverter&lt;T, R extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a>&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "A supplier that converts a <code>Row</code> into <code>T</code>.",
+      "translation": "将<code>Row</code>转换为<T>的供应商。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<span>Nested Classes</span>",
+      "translation": "<span>嵌套类</span>",
+      "count": 1
+    },
+    {
+      "source": "Returns a composed function that first applies this function to its input, and then applies the <code>after</code>\nfunction to the result.",
+      "translation": "返回一个组合函数，该函数首先将输入应用到此函数上，然后将结果应用于<code>after</code>函数。",
+      "count": 1
+    },
+    {
+      "source": "Returns a composed function that first applies this function to its input, and then applies the <code>after</code>\nfunction to the result. If evaluation of either function throws an exception, it is relayed to the caller of the\ncomposed function.",
+      "translation": "返回一个组合函数，该函数首先将输入传递给此函数，然后将结果传递给 `<code>after</code>` 函数。如果任一函数的求值抛出异常，则该异常会传递给组合函数的调用者。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">Nested Class Summary</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#entity()\" tabindex=\"0\">entity()</a></li>\n<li><a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\" tabindex=\"0\">mapRow(Row, QueryResultConverter.ConversionResultSupplier)</a></li>\n<li><a href=\"#andThen(org.springframework.data.cassandra.core.QueryResultConverter)\" tabindex=\"0\">andThen(QueryResultConverter)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">嵌套类摘要</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#entity()\" tabindex=\"0\">entity()</a></li>\n<li><a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\" tabindex=\"0\">mapRow(Row, QueryResultConverter.ConversionResultSupplier)</a></li>\n<li><a href=\"#andThen(org.springframework.data.cassandra.core.QueryResultConverter)\" tabindex=\"0\">andThen(QueryResultConverter)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"andThen(org.springframework.data.cassandra.core.QueryResultConverter)-type-param-V\"><code>V</code> - the type of output of the <code>after</code> function, and of the composed function.</span></dd>\n<dt>Parameters:</dt>\n<dd><code>after</code> - the function to apply after this function is applied.</dd>\n<dt>Returns:</dt>\n<dd>a composed function that first applies this function and then applies the <code>after</code> function.</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"andThen(org.springframework.data.cassandra.core.QueryResultConverter)-type-param-V\"><code>V</code> - 为 <code>after</code> 函数的输出类型，也是组合函数的返回类型。</span></dd>\n<dt>参数：</dt>\n<dd><code>after</code> - 在此函数应用后应用的函数。</dd>\n<dt>返回：</dt>\n<dd>一个组合函数，首先应用此函数，然后应用 <code>after</code> 函数。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - object type accepted by this converter.</span></dd>\n<dd><span id=\"type-param-R\"><code>R</code> - the returned result type.</span></dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - 此转换器接受的对象类型。</span></dd>\n<dd><span id=\"type-param-R\"><code>R</code> - 返回结果类型。</span></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>row</code> - the raw row from the Cassandra result.</dd>\n<dd><code>reader</code> - reader object that supplies an upstream result from an earlier converter.</dd>\n<dt>Returns:</dt>\n<dd>the mapped result.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>row</code> - 来自 Cassandra 结果的原始行。</dd>\n<dd><code>reader</code> - 提供上游结果的读取器对象，该结果来自之前的转换器。</dd>\n<dt>返回：</dt>\n<dd>映射后的结果。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"entity()-type-param-T\"><code>T</code> - the type of the input and output entity to the function.</span></dd>\n<dt>Returns:</dt>\n<dd>a function that returns the materialized entity.</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"entity()-type-param-T\"><code>T</code> - 函数的输入和输出实体的类型。</span></dd>\n<dt>返回：</dt>\n<dd>一个返回已物质化实体的函数。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>5.0</dd>\n<dt>Author:</dt>\n<dd>Mark Paluch</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>5.0</dd>\n<dt>作者：</dt>\n<dd>Mark Paluch</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Functional Interface:</dt>\n<dd>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</dd>",
+      "translation": "<dt>功能接口：</dt>\n<dd>这是一个功能接口，因此可以作为 Lambda 表达式或方法引用的赋值目标。</dd>",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Converter for Cassandra query results.",
+      "translation": "Cassandra 查询结果转换器。",
+      "count": 1
+    }
+  ]
+}

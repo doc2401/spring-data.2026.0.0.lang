@@ -1,0 +1,431 @@
+{
+  "created_at": "2026-06-17 10:24:59",
+  "updated_at": "2026-06-17 10:24:59",
+  "stats": {
+    "total_entries": 83,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 84,
+    "entries_with_hits": 83,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0120481927710843,
+    "usage_percentage": 0.0083
+  },
+  "items": [
+    {
+      "source": "No replacement, not needed",
+      "translation": "无需替换，不必需要。",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "You have added <code>org.neo4j:neo4j-ogm-http-driver</code> and configured an url like <code><a class=\"bare\" href=\"http://user:password@localhost:7474\">user:password@localhost:7474</a></code>.\nThe dependency has to be replaced with <code>org.neo4j:neo4j-ogm-bolt-driver</code> and you need to configure a Bolt url like <code>bolt://localhost:7687</code> or use the new <code>neo4j://</code> scheme, which takes care of routing, too.",
+      "translation": "您已添加 `<code>org.neo4j:neo4j-ogm-http-driver</code>` 并配置了类似 `<code><a class=\"bare\" href=\"http://user:password@localhost:7474\">user:password@localhost:7474</a></code>` 的 URL。  \n该依赖需要替换为 `<code>org.neo4j:neo4j-ogm-bolt-driver</code>`，并且您需要配置一个 Bolt URL，例如 `<code>bolt://localhost:7687</code>`，或使用新的 `<code>neo4j://</code>` 方案，后者也能自动处理路由。",
+      "count": 1
+    },
+    {
+      "source": "Both <code>@EnableBookmarkManagement</code> and <code>@UseBookmark</code> as well as the <code>org.springframework.data.neo4j.bookmark.BookmarkManager</code>\ninterface and its only implementation <code>org.springframework.data.neo4j.bookmark.CaffeineBookmarkManager</code> are gone and are not needed anymore.",
+      "translation": "<code>@EnableBookmarkManagement</code> 和 <code>@UseBookmark</code>，以及 <code>org.springframework.data.neo4j.bookmark.BookmarkManager</code> 接口及其唯一实现类 <code>org.springframework.data.neo4j.bookmark.CaffeineBookmarkManager</code> 已被移除且不再需要。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Index</code>, <code>@CompositeIndex</code> and <code>@Required</code> have been removed without replacement.\nWhy?\nWe think that creating the schema - even for a schemaless database - is not part of the domain modelling.\nYou could argue that an SDN model is the schema, but than we would answer that we even prefer a <a href=\"https://en.wikipedia.org/wiki/Command–query_separation\">Command-query separation</a>,\nmeaning that we would rather define separate read and write models.\nThose come in very handy for writing \"boring\" things and reading graph-shaped answers.",
+      "translation": "<code>@Index</code>、<code>@CompositeIndex</code> 和 <code>@Required</code> 已被移除且无替代方案。  \n原因何在？  \n我们认为，即使对于无模式数据库，构建模式也不属于领域建模的范畴。  \n有人可能会争辩说 SDN 模型本身就是模式，但我们的回答是：我们甚至更倾向于采用<a href=\"https://en.wikipedia.org/wiki/Command–query_separation\">命令 - 查询分离</a>原则，  \n这意味着我们更愿意定义独立的读写模型。  \n这些模型在编写“枯燥”的操作以及读取图形化结果时非常实用。",
+      "count": 1
+    },
+    {
+      "source": "Migrating off from previous Neo4j-OGM annotations affects <code>@Index</code>, <code>@CompositeIndex</code> and <code>@Required</code> and an example for those is given here in <a href=\"#indexed.class\">A class making use of Neo4j-OGM automatic index manager</a>:",
+      "translation": "从之前的 Neo4j-OGM 注解迁移会影响 `<code>@Index`</code>、`<code>@CompositeIndex`</code> 和 `<code>@Required`</code>，这些注解的使用示例在此给出：<a href=\"#indexed.class\">一个使用 Neo4j-OGM 自动索引管理器的类</a>：",
+      "count": 1
+    },
+    {
+      "source": "Using <code>@Index</code> without <code>unique = true</code> is equivalent to <code>CREATE INDEX movie_title_index FOR (m:Movie) ON (m.title)</code>.\nNote that a unique index already implies an index.",
+      "translation": "使用<code>@Index</code>而不设置<code>unique = true</code>等同于执行<code>CREATE INDEX movie_title_index FOR (m:Movie) ON (m.title)</code>。  \n请注意，唯一索引本身就隐含了普通索引。",
+      "count": 1
+    },
+    {
+      "source": "You have added <code>org.neo4j:neo4j-ogm-embedded-driver</code> and <code>org.neo4j:neo4j</code> to you project and starting the database via OGM facilities.\nThis is no longer supported and you have to set up a standard Neo4j server (both standalone and cluster are supported).",
+      "translation": "您已在项目中添加了 <code>org.neo4j:neo4j-ogm-embedded-driver</code> 和 <code>org.neo4j:neo4j</code>，并通过 OGM 设施启动了数据库。  \n此方式已不再受支持，您需要配置标准的 Neo4j 服务器（同时支持独立部署和集群模式）。",
+      "count": 1
+    },
+    {
+      "source": "Configuring SDN through a <code>org.neo4j.ogm.config.Configuration</code> bean is not supported, instead of, all configuration of the driver goes through our new Java driver starter.\nYou will especially have to adapt the properties for the url and authentication, see <a href=\"#migrating-auth\">Old and new properties compared</a>",
+      "translation": "通过 `<code>org.neo4j.ogm.config.Configuration</code>` Bean 配置 SDN 不再受支持，所有驱动器的配置现在都需通过我们的新 Java 驱动器启动器进行。您尤其需要调整 URL 和身份验证相关的属性，请参阅<a href=\"#migrating-auth\">旧属性与新属性的对比</a>。",
+      "count": 1
+    },
+    {
+      "source": "SDN uses bookmarks for all transactions, without configuration.\nYou can remove the bean declaration of <code>CaffeineBookmarkManager</code> as well as the dependency to <code>com.github.ben-manes.caffeine:caffeine</code>.",
+      "translation": "SDN 无需配置即可为所有事务使用书签。您可以移除 `<code>CaffeineBookmarkManager</code>` 的 Bean 声明以及其对 `<code>com.github.ben-manes.caffeine:caffeine</code>` 的依赖。",
+      "count": 1
+    },
+    {
+      "source": "We think it’s better to take control about this upfront and recommend using controlled database migrations, based on a tool like <a href=\"https://www.liquigraph.org\">Liquigraph</a> or <a href=\"https://github.com/michael-simons/neo4j-migrations\">Neo4j migrations</a>.\nThe latter has been seen in use with SDN inside the JHipster project.\nBoth projects have in common that they store the current version of the schema within the database and make sure that a schema matches expectations before things are being updated.",
+      "translation": "我们认为，最好从一开始就掌控局面，并推荐使用受控的数据库迁移工具，例如 <a href=\"https://www.liquigraph.org\">Liquigraph</a> 或 <a href=\"https://github.com/michael-simons/neo4j-migrations\">Neo4j 迁移</a>。后者已在 JHipster 项目中与 SDN 配合使用过。这两个项目的共同之处在于，它们都将当前模式的版本存储在数据库中，并在执行更新之前确保模式符合预期。",
+      "count": 1
+    },
+    {
+      "source": "It’s not easy to get the terms right.\nWe wrote the building blocks of an SDN+OGM setting <a href=\"https://michael-simons.github.io/neo4j-examples-and-tips/what_are_the_building_blocks_of_sdn_and_ogm.html\">here</a>.\nIt may be so that all of them have been added by coincidence and you’re dealing with a lot of conflicting dependencies.",
+      "translation": "要准确掌握这些术语并不容易。  \n我们在 <a href=\"https://michael-simons.github.io/neo4j-examples-and-tips/what_are_the_building_blocks_of_sdn_and_ogm.html\">这里</a> 编写了 SDN+OGM 环境下的构建模块。  \n有可能所有这些依赖都是巧合地添加的，导致你面临大量相互冲突的依赖项。",
+      "count": 1
+    },
+    {
+      "source": "A default SDN+OGM project uses <code>org.neo4j:neo4j-ogm-bolt-driver</code> and thus indirectly, the pure Java Driver.\nYou can keep your existing URL.",
+      "translation": "默认 SDN+OGM 项目使用 `<code>org.neo4j:neo4j-ogm-bolt-driver</code>`，因此间接使用了纯 Java 驱动。您可以保留现有的 URL。",
+      "count": 1
+    },
+    {
+      "source": "Remove all <code>org.neo4j:neo4j-ogm-*</code> dependencies",
+      "translation": "移除所有 `<code>org.neo4j:neo4j-ogm-*</code>` 依赖项",
+      "count": 1
+    },
+    {
+      "source": "And finally, add the new dependency, see <a class=\"xref page\" href=\"../getting-started.html\">Getting started</a> for both Gradle and Maven.",
+      "translation": "最后，添加新的依赖项，有关 Gradle 和 Maven 的详细信息，请参阅<a class=\"xref page\" href=\"../getting-started.html\">入门指南</a>。",
+      "count": 1
+    },
+    {
+      "source": "Use <a class=\"xref page\" href=\"../repositories/projections.html\">projections</a>; arbitrary result mapping not supported anymore",
+      "translation": "使用<a class=\"xref page\" href=\"../repositories/projections.html\">投影</a>；不再支持任意结果映射。",
+      "count": 1
+    },
+    {
+      "source": "If you absolutely must, you can disable the automatic bookmark management by following <a class=\"xref page\" href=\"../faq.html#faq.bookmarks.noop\">these instructions</a>.",
+      "translation": "如果确实必须，您可以通过<a class=\"xref page\" href=\"../faq.html#faq.bookmarks.noop\">这些说明</a>来禁用自动书签管理。",
+      "count": 1
+    },
+    {
+      "source": "SDN+OGM has had quite a history over the years and we understand that migrating big application systems is neither fun nor something that provides immediate profit.\nThe main issues we observed when migrating from older versions of Spring Data Neo4j to newer ones are roughly in order the following:",
+      "translation": "SDN+OGM 多年来经历了一段不平凡的发展历程，我们深知迁移大型应用系统既非易事，也无法立即带来收益。\n在将旧版本的 Spring Data Neo4j 迁移到新版本时，我们观察到的主要问题大致如下：",
+      "count": 1
+    },
+    {
+      "source": "While Neo4j-OGM can be used stand-alone, Spring Data Neo4j cannot.\nIt depends to large extend on the Spring Data and therefore, on the Spring Framework itself, which eventually affects large parts of your application.\nDepending on how the application has been structured, that is, how much the any of the framework part leaked into your business code, the more you have to adapt your application.\nIt gets worse when you have more than one Spring Data module in your application, if you accessed a relational database in the same service layer as your graph database.\nUpdating two object mapping frameworks is not fun.",
+      "translation": "虽然 Neo4j-OGM 可以独立使用，但 Spring Data Neo4j 则不行。它很大程度上依赖于 Spring Data，进而依赖于 Spring Framework 本身，这最终会影响您应用程序的大部分组件。根据应用程序的结构方式——即有多少框架部分泄露到了业务代码中——您需要对应用程序进行相应调整的程度也会有所不同。如果您的应用程序中包含多个 Spring Data 模块，并且在同一服务层中同时访问关系型数据库和图数据库，情况会更加糟糕。更新两个对象映射框架绝非易事。",
+      "count": 1
+    },
+    {
+      "source": "The embedded database in a SDN+OGM project is configured by Neo4j-OGM.\nSay you want to upgrade from Neo4j 3.0 to 3.5, you can’t without upgrading your whole application.\nWhy is that?\nAs you chose to embed a database into your application, you tied yourself into the modules that configure this embedded database.\nTo have another, embedded database version, you have to upgrade the module that configured it, because the old one does not support the new database.\nAs there is always a Spring Data version corresponding to Neo4j-OGM, you would have to upgrade that as well.\nSpring Data however depends on Spring Framework and then the arguments from the first bullet apply.",
+      "translation": "在 SDN+OGM 项目中，嵌入式数据库由 Neo4j-OGM 进行配置。\n如果您希望将 Neo4j 从 3.0 版本升级到 3.5 版本，则必须对整个应用程序进行升级，无法单独完成此操作。\n这是为什么呢？\n由于您选择将数据库嵌入到应用程序中，因此您的应用与配置该嵌入式数据库的模块紧密耦合。\n若要使用另一个版本的嵌入式数据库，就必须升级配置它的模块，因为旧版本模块不支持新版本的数据库。\n由于始终存在与 Neo4j-OGM 相对应的 Spring Data 版本，因此您也必须对其进行升级。\n然而，Spring Data 依赖于 Spring Framework，此时第一点中提到的限制条件同样适用。",
+      "count": 1
+    },
+    {
+      "source": "First, you must make sure that your application runs against Neo4j in server mode over the Bolt protocol, which means work in two of three cases:",
+      "translation": "首先，您必须确保您的应用程序通过 Bolt 协议在服务器模式下与 Neo4j 交互，这意味着您需要满足以下三种情况中的两种：",
+      "count": 1
+    },
+    {
+      "source": "The above dependencies have to be removed.",
+      "translation": "必须移除上述依赖项。",
+      "count": 1
+    },
+    {
+      "source": "Migrating from the embedded solution is probably the toughest migration, as you need to set up a server, too.\nIt is however the one that gives you much value in itself:\nIn the future, you will be able to upgrade the database itself without having to consider your application framework, and your data access framework as well.",
+      "translation": "从嵌入式解决方案迁移可能是最具挑战性的迁移，因为您还需要搭建服务器。  \n然而，这也是能为您带来最大价值的一种方案：  \n未来，您将能够独立升级数据库本身，而无需考虑您的应用程序框架以及数据访问框架。",
+      "count": 1
+    },
+    {
+      "source": "Once you have made sure, that your SDN+OGM application works over Bolt as expected, you can start migrating to SDN.",
+      "translation": "一旦确认您的 SDN+OGM 应用程序通过 Bolt 按预期运行，即可开始迁移至 SDN。",
+      "count": 1
+    },
+    {
+      "source": "You’re then ready to replace annotations:",
+      "translation": "此时，您已准备好替换注释：",
+      "count": 1
+    },
+    {
+      "source": "SDN 5.3 and prior provided the \"Automatic index manager\" from Neo4j-OGM.",
+      "translation": "SDN 5.3 及更早版本提供了来自 Neo4j-OGM 的“自动索引管理器”。",
+      "count": 1
+    },
+    {
+      "source": "Apart from that, some of those annotations respectively their values are tied to specific Neo4j editions or versions, which makes them\nhard to maintain.",
+      "translation": "除此之外，部分注解及其值与特定的 Neo4j 版本或发行版绑定，这使得维护变得困难。",
+      "count": 1
+    },
+    {
+      "source": "The best argument however is going to production: While all tools that generate a schema are indeed helpful during development, even more so with databases that enforces a strict scheme,\nthey tend to be not so nice in production: How do you handle different versions of your application running at the same time?\nVersion A asserting the indexes that have been created by a newer version B?",
+      "translation": "然而，最好的论证在于生产环境：虽然所有生成模式的工具在开发阶段确实很有用，尤其是对于强制严格模式的数据库而言，但在生产环境中它们往往并不那么友好：当不同版本的应用程序同时运行时该如何处理？例如，版本 A 断言由更新版本 B 创建的索引是否存在？",
+      "count": 1
+    },
+    {
+      "source": "It’s annotations are equivalent to the following scheme in Cypher (as of Neo4j 4.2):",
+      "translation": "其注释等效于以下 Cypher 方案（截至 Neo4j 4.2）：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS”和“Amazon Web Services\"是 Amazon.com Inc. 及其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Neo4j</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            8.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Neo4j</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            8.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/appendix/migrating.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-neo4j\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/appendix/migrating.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-neo4j\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Neo4j</a></li>\n      <li><a href=\"index.html\">Appendix</a></li>\n      <li><a href=\"migrating.html\">Migrating from SDN+OGM to SDN</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Neo4j</a></li>\n      <li><a href=\"index.html\">附录</a></li>\n      <li><a href=\"migrating.html\">从 SDN+OGM 迁移到 SDN</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Old and new properties compared",
+      "translation": "新旧房产对比",
+      "count": 1
+    },
+    {
+      "source": "A class making use of Neo4j-OGM automatic index manager",
+      "translation": "一个使用 Neo4j-OGM 自动索引管理器的类",
+      "count": 1
+    },
+    {
+      "source": "Example Cypher based migration",
+      "translation": "基于 Cypher 的迁移示例",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods.html\">Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../query-by-example.html\">Query by Example</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/scrolling.html\">Scrolling</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/sdn-extension.html\">Spring Data Neo4j Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/vector-search.html\">Neo4j Vector Search</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories.html\">存储库</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods.html\">查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义存储库接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建存储库实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义存储库实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../query-by-example.html\">按示例查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/scrolling.html\">滚动</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/sdn-extension.html\">Spring Data Neo4j 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">存储库查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">存储库查询返回类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/vector-search.html\">Neo4j 向量搜索</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"index.html\">Appendix</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"conversions.html\">Conversions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"neo4j-client.html\">Neo4jClient</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"logging.html\">Logging</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-creation.html\">Query creation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-queries.html\">Custom queries</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"spatial-types.html\">Spatial types</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"migrating.html\">Migrating from SDN+OGM to SDN</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"build.html\">Building Spring Data Neo4j</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"index.html\">附录</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"conversions.html\">类型转换</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"neo4j-client.html\">Neo4jClient</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"logging.html\">日志记录</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-creation.html\">查询创建</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"custom-queries.html\">自定义查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"spatial-types.html\">空间类型</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"migrating.html\">从 SDN+OGM 迁移到 SDN</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"build.html\">构建 Spring Data Neo4j</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../introduction-and-preface/index.html\">Preface</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/preface-neo4j.html\">Introducing Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/preface-sd.html\">Introducing Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/preface-sdn.html\">Introducing Spring Data Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/building-blocks.html\">Building blocks of Spring Data Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/new-and-noteworthy.html\">New &amp; Noteworthy</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../dependencies.html\">Dependencies</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../introduction-and-preface/index.html\">前言</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/preface-neo4j.html\">介绍 Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/preface-sd.html\">介绍 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/preface-sdn.html\">介绍 Spring Data Neo4j</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/building-blocks.html\">Spring Data Neo4j 的构建模块</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../introduction-and-preface/new-and-noteworthy.html\">新特性与亮点</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../dependencies.html\">依赖项</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../object-mapping.html\">Object Mapping</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping/metadata-based-mapping.html\">Metadata-based Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping/mapping-ids.html\">Handling and provisioning of unique IDs</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping/sdc-object-mapping.html\">Spring Data Object Mapping Fundamentals</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../object-mapping.html\">对象映射</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping/metadata-based-mapping.html\">基于元数据的映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping/mapping-ids.html\">唯一 ID 的处理与配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping/sdc-object-mapping.html\">Spring Data 对象映射基础</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../testing.html\">Testing</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../testing/testing-without-spring-boot.html\">Without Spring Boot</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../testing/testing-with-spring-boot.html\">With Spring Boot and <code>@DataNeo4jTest</code></a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../testing.html\">测试</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../testing/testing-without-spring-boot.html\">不使用 Spring Boot</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../testing/testing-with-spring-boot.html\">使用 Spring Boot 和 <code>@DataNeo4jTest</code></a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe <em>Lovelace</em> release train corresponds to SDN 5.1.x and OGM 3.1.x, while the <em>Moore</em> is SDN 5.2.x and OGM 3.2.x.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<em>Lovelace</em> 发布系列对应 SDN 5.1.x 和 OGM 3.1.x，而<em>Moore</em>则对应 SDN 5.2.x 和 OGM 3.2.x。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../projections/sdn-projections.html\">Spring Data Neo4j Projections</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../projections/sdn-projections.html\">Spring Data Neo4j 投影</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-tip\" title=\"Tip\"></i>\n</td>\n<td class=\"content\">\nBacked by those observations, we recommend to make sure you’re using only the Bolt or http transport in your current application before switching from SDN+OGM to SDN.\nThus, your application and the access layer of your application is to a large extent independent of the database’s version.\nFrom that state, consider moving from SDN+OGM to SDN.\n</td>\n</tr>\n</tbody>",
+      "translation": "基于上述观察，我们建议在从 SDN+OGM 迁移到 SDN 之前，确保您的当前应用程序仅使用 Bolt 或 http 传输。  \n这样一来，您的应用程序及其访问层在很大程度上将独立于数据库的版本。  \n在此状态下，可以考虑从 SDN+OGM 迁移到 SDN。",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-tip\" title=\"Tip\"></i>\n</td>\n<td class=\"content\">\nYou cannot configure SDN through XML.\nIn case you did this with your SDN+OGM application, make sure you learn about annotation-driven or functional configuration of Spring Applications.\nThe easiest choice these days is Spring Boot.\nWith our starter in place, all the necessary bits apart from the connection URL and the authentication is already configured for you.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-tip\" title=\"提示\"></i>\n</td>\n<td class=\"content\">\n无法通过 XML 配置 SDN。\n如果您曾使用 SDN+OGM 应用程序进行此操作，请确保您已了解 Spring 应用程序的注解驱动或功能式配置方式。\n目前最简便的选择是 Spring Boot。\n借助我们的启动器，除了连接 URL 和认证信息外，所有必要的配置均已为您设置完毕。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nThose new properties might change in the future again when SDN and the driver eventually fully replace the old setup.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n这些新属性在未来可能会再次发生变化，届时 SDN 和驱动程序将最终完全取代旧版配置。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nSeveral Neo4j-OGM annotations have not yet a corresponding annotation in SDN, some will never have.\nWe will add to the list above as we support additional features.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nSeveral Neo4j-OGM annotations do not yet have a corresponding annotation in SDN, and some will never have one.\nWe will add to the list above as we support additional features.\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"nav-link\" href=\"../getting-started.html\">Getting started</a>",
+      "translation": "<a class=\"nav-link\" href=\"../getting-started.html\">入门指南</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#migrating.known-issues\"></a>Known issues with past SDN+OGM migrations",
+      "translation": "<a class=\"anchor\" href=\"#migrating.known-issues\"></a>以往 SDN+OGM 迁移中存在的已知问题",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#migrating.preparation\"></a>Prepare the migration from SDN+OGM Lovelace or SDN+OGM Moore to SDN",
+      "translation": "<a class=\"anchor\" href=\"#migrating.preparation\"></a>准备从 SDN+OGM Lovelace 或 SDN+OGM Moore 迁移到 SDN。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#migrating.embedded\"></a>You’re on embedded",
+      "translation": "<a class=\"anchor\" href=\"#migrating.embedded\"></a>您已处于嵌入式环境中。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#migrating.http\"></a>You’re using the HTTP transport",
+      "translation": "<a class=\"anchor\" href=\"#migrating.http\"></a>您正在使用 HTTP 传输",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#migrating.bolt\"></a>You’re already using Bolt indirectly",
+      "translation": "<a class=\"anchor\" href=\"#migrating.bolt\"></a>您已经在间接使用 Bolt 了",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#migrating.bookmarks\"></a>Bookmark management",
+      "translation": "<a class=\"anchor\" href=\"#migrating.bookmarks\"></a>书签管理",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#migrating.autoindex\"></a>Automatic creation of constraints and indexes",
+      "translation": "<a class=\"anchor\" href=\"#migrating.autoindex\"></a>约束和索引的自动创建",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Neo4j",
+      "translation": "Spring Data Neo4j",
+      "count": 1
+    },
+    {
+      "source": "Migrating from SDN+OGM to SDN",
+      "translation": "从 SDN+OGM 迁移到 SDN",
+      "count": 1
+    },
+    {
+      "source": "Having skipped more than one major upgrade",
+      "translation": "已跳过一次以上重大升级",
+      "count": 1
+    },
+    {
+      "source": "Relying on an embedded database configured through Spring Data itself",
+      "translation": "依托通过 Spring Data 自身配置的嵌入式数据库",
+      "count": 1
+    },
+    {
+      "source": "Being unsure about which building blocks to include",
+      "translation": "不确定应包含哪些构建模块",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

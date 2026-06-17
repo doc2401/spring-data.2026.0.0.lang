@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-06-16 17:30:48",
+  "updated_at": "2026-06-16 17:30:48",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 25,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0416666666666667,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "Implementations must implement this method to process the entire <code>AsyncResultSet</code>.",
+      "translation": "实现必须实现此方法以处理整个 `<code>AsyncResultSet</code>`。",
+      "count": 2
+    },
+    {
+      "source": "This interface is mainly used within the CQL framework itself. A <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> is usually a simpler choice for\n<code>AsyncResultSet</code> processing, mapping one result object per row instead of one result object for the entire\n<code>AsyncResultSet</code>.",
+      "translation": "该接口主要在 CQL 框架内部使用。对于 `<code>AsyncResultSet</code>` 的处理，通常选择 <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> 更为简单，因为它将每一行映射为一个结果对象，而不是将整个 `<code>AsyncResultSet</code>` 映射为一个结果对象。",
+      "count": 1
+    },
+    {
+      "source": "Note: In contrast to a <a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>, a <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a> object is typically stateless\nand thus reusable, as long as it doesn't access stateful resources or keep result state within the object.",
+      "translation": "注意：与<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>不同，<a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>对象通常是无状态的，因此只要它不访问有状态资源或在对象内部保留结果状态，就可以重复使用。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\">CompletableFuture</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AsyncResultSetExtractor\">T</a>&gt;</span> <span class=\"element-name\">extractData</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.AsyncResultSet resultSet)</span>\n                          throws <span class=\"exceptions\">com.datastax.oss.driver.api.core.DriverException,\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></span>",
+      "translation": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"类或接口 java.util.concurrent\">CompletableFuture</a>&lt;<a href=\"#type-param-T\" title=\"AsyncResultSetExtractor 中的类型参数\">T</a>&gt;</span> <span class=\"element-name\">extractData</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.AsyncResultSet resultSet)</span>\n                          throws <span class=\"exceptions\">com.datastax.oss.driver.api.core.DriverException,\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"类或接口 org.springframework.dao\">DataAccessException</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"class or interface in java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">AsyncResultSetExtractor&lt;T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"java.lang 中的类或接口\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">AsyncResultSetExtractor&lt;T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a>&gt;</span>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface AsyncResultSetExtractor\">Interface AsyncResultSetExtractor&lt;<span id=\"type-param-T\">T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 AsyncResultSetExtractor\">接口 AsyncResultSetExtractor&lt;<span id=\"type-param-T\">T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a></span>&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>resultSet</code> - <code>AsyncResultSet</code> to extract data from.</dd>\n<dt>Returns:</dt>\n<dd>an arbitrary result object, or null if none (the extractor will typically be stateful in the\n        latter case).</dd>\n<dt>Throws:</dt>\n<dd><code>com.datastax.oss.driver.api.core.DriverException</code> - if a <code>DriverException</code> is encountered getting column values or navigating (that is,\n          there's no need to catch <code>DriverException</code>)</dd>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></code> - in case of custom exceptions</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>resultSet</code> - 从中提取数据的 <code>AsyncResultSet</code>。</dd>\n<dt>返回：</dt>\n<dd>任意结果对象，若无则返回 null（在后一种情况下，提取器通常是状态敏感的）。</dd>\n<dt>抛出：</dt>\n<dd><code>com.datastax.oss.driver.api.core.DriverException</code> - 如果在获取列值或导航时遇到 <code>DriverException</code>（即无需捕获 <code>DriverException</code>）。</dd>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></code> - 在出现自定义异常的情况下。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>3.0</dd>\n<dt>Author:</dt>\n<dd>Mark Paluch</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a></li>\n<li><a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>版本:</dt>\n<dd>3.0</dd>\n<dt>作者:</dt>\n<dd>Mark Paluch</dd>\n<dt>参见:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"AsyncCqlTemplate.html\" title=\"org.springframework.data.cassandra.core.cql 中的类\"><code>AsyncCqlTemplate</code></a></li>\n<li><a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowMapper</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#extractData(com.datastax.oss.driver.api.core.cql.AsyncResultSet)\" tabindex=\"0\">extractData(AsyncResultSet)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#extractData(com.datastax.oss.driver.api.core.cql.AsyncResultSet)\" tabindex=\"0\">extractData(AsyncResultSet)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Known Implementing Classes:</dt>\n<dd><code><a href=\"AsyncCqlTemplate.AsyncRowCallbackHandlerResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\">AsyncCqlTemplate.AsyncRowCallbackHandlerResultSetExtractor</a>, <a href=\"AsyncRowMapperResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\">AsyncRowMapperResultSetExtractor</a></code></dd>",
+      "translation": "<dt>所有已知的实现类：</dt>\n<dd><code><a href=\"AsyncCqlTemplate.AsyncRowCallbackHandlerResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\">AsyncCqlTemplate.AsyncRowCallbackHandlerResultSetExtractor</a>, <a href=\"AsyncRowMapperResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\">AsyncRowMapperResultSetExtractor</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Functional Interface:</dt>\n<dd>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</dd>",
+      "translation": "<dt>功能接口：</dt>\n<dd>这是一个功能接口，因此可以作为 Lambda 表达式或方法引用的赋值目标。</dd>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Callback interface used by",
+      "translation": "由...使用的回调接口",
+      "count": 1
+    },
+    {
+      "source": "'s query methods. Implementations of this interface perform the\nactual work of extracting results from a",
+      "translation": "的查询方法。该接口的实现负责从",
+      "count": 1
+    },
+    {
+      "source": ", but don't need to worry about exception handling.",
+      "translation": "，但无需担心异常处理。",
+      "count": 1
+    },
+    {
+      "source": "s will be caught and handled by the calling",
+      "translation": "将被调用方捕获并处理。",
+      "count": 1
+    }
+  ]
+}

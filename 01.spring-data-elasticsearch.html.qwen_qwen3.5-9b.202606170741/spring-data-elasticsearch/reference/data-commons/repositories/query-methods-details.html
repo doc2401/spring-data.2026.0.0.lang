@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>定义查询方法 :: Spring Data Elasticsearch</title>
+    <link href="https://docs.spring.io/spring-data-elasticsearch/reference/data-commons/repositories/query-methods-details.html" rel="canonical"/>
+    <meta content="Antora 3.2.0-alpha.6" name="generator"/>
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link href="../../_/css/site.css" rel="stylesheet"/>
+    <link href="../../_/css/vendor/search.css" rel="stylesheet"/>
+    <link href="../../_/css/vendor/page-search.css" rel="stylesheet"/>
+    <link href="../../_/css/vendor/asciidoctor-tabs.css" rel="stylesheet"/>
+
+    <meta content="v0.4.16" name="antora-ui-version"/> 
+    <meta content="4.1.0" name="version"/>
+    <meta content="data-commons" name="component"/>
+    <meta content="false" name="latest-version"/>
+    <link href="../../_/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img alt="Spring" class="block" id="springlogo" src="../../_/img/spring-logo.svg"/>
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-menu" id="topbar-nav">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">为何是春天</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.io/why-spring">概览</a>
+<a class="navbar-item" href="https://spring.io/microservices">微服务</a>
+<a class="navbar-item" href="https://spring.io/reactive">响应式</a>
+<a class="navbar-item" href="https://spring.io/event-driven">事件驱动</a>
+<a class="navbar-item" href="https://spring.io/cloud">云</a>
+<a class="navbar-item" href="https://spring.io/web-applications">Web 应用</a>
+<a class="navbar-item" href="https://spring.io/serverless">无服务器</a>
+<a class="navbar-item" href="https://spring.io/batch">批处理</a></div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px"><a class="navbar-item" href="https://spring.io/projects">概览</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+<a class="navbar-item navbar-item-special" href="https://spring.io/projects">查看所有项目</a>
+<li class="navbar-item navbar-item-special-3">开发工具</li>
+<a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+<a class="navbar-item navbar-item-special-2" href="https://start.spring.io">Spring Initializr
+              <svg class="external-link-icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="15 10.94 15 15 1 15 1 1 5.06 1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><polyline fill="none" points="8.93 1 15 1 15 7.07" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><line fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" x1="15" x2="8" y1="1" y2="8"></line></svg></a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.academy/courses">课程</a>
+<a class="navbar-item" href="https://spring.academy/learning-path">获取认证</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg"><a class="navbar-item" href="https://spring.io/solutions">概览</a>
+<a class="navbar-item" href="https://spring.io/support">Spring 运行时</a>
+<a class="navbar-item" href="https://spring.io/consulting">Spring 咨询</a>
+<a class="navbar-item" href="https://spring.academy/teams">Spring Academy 团队培训</a>
+<a class="navbar-item" href="https://spring.io/security">安全公告</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input id="switch-theme-checkbox" name="switch-theme-checkbox" type="checkbox"/>
+      <span class="icon"><svg aria-hidden="true" class="svg-inline--fa fa-moon moon" data-icon="moon" data-prefix="fas" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" fill="currentColor"></path>
+</svg>
+        <svg aria-hidden="true" class="svg-inline--fa fa-sun sun" data-icon="sun" data-prefix="fas" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" fill="currentColor"></path>
+</svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-commons" data-version="4.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data 公共模块</span>
+  <span class="version">4.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg height="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="24px" xml:space="preserve"><g><path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"></path><path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"></path><path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewbox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+</svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../dependencies.html">Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../upgrade.html">升级 Spring Data</a></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../object-mapping.html">对象映射基础</a></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../repositories.html">使用 Spring Data Repository</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="core-concepts.html">核心概念</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-methods.html">查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="definition.html">定义 Repository 接口</a>
+</li>
+<li class="nav-item is-current-page" data-depth="2">
+<a class="nav-link" href="query-methods-details.html">定义查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="vector-search.html">向量搜索</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="create-instances.html">创建 Repository 实例</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="custom-implementations.html">自定义 Repository 实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="core-domain-events.html">从聚合根发布事件</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="core-extensions.html">Spring Data 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="scrolling.html">滚动查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="null-handling.html">Repository 方法的空值处理</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="projections.html">投影</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../query-by-example.html">按示例查询</a></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../value-expressions.html">值表达式基础</a></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../property-paths.html">属性路径</a></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../custom-conversions.html">自定义转化</a></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../entity-callbacks.html">实体回调</a></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../is-new-state-detection.html">实体状态检测策略</a></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../aot.html">提前优化</a></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../kotlin.html">Kotlin 支持</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/requirements.html">需求</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/null-safety.html">空值安全</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/object-mapping.html">对象映射</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/extensions.html">扩展函数</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/coroutines.html">协程</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<span class="nav-text">附录</span>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="namespace-reference.html">命名空间参考</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="populator-namespace-reference.html">填充器命名空间参考</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-keywords-reference.html">仓储查询关键字</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-return-types-reference.html">仓储查询返回类型</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external" href="../api/java/index.html" target="_blank">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external" href="https://github.com/spring-projects/spring-data-commons/wiki" target="_blank">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button class="nav-toggle" id="nav-toggle-2"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle" id="nav-toggle-1"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg id="svg-stash-de15fb15"></svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="toc" data-levels="2" data-title="Defining Query Methods">
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links"><a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-commons/src/main/antora/modules/ROOT/pages/repositories/query-methods-details.adoc">
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          编辑此页面
+        </a>
+<a href="https://github.com/spring-projects/spring-data-commons" title="GitHub">
+<svg height="512px" id="Layer_1" version="1.1" viewbox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg"><style type="text/css">
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} </style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          GitHub 项目
+        </a></div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container"><nav aria-label="面包屑" class="breadcrumbs">
+<ul>
+<li><a href="../index.html">Spring Data Commons</a></li>
+<li><a href="../repositories.html">使用 Spring Data 仓库</a></li>
+<li><a href="query-methods-details.html">定义查询方法</a></li>
+</ul>
+</nav></div><h1 class="page" id="page-title">定义查询方法</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>仓库代理有两种方式从方法名派生出特定存储的查询：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>通过直接从方法名推导查询。</p>
+</li>
+<li>
+<p>通过使用手动定义的查询。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>可用选项取决于具体商店。
+然而，必须有一种策略来决定实际生成的查询。
+下一节将介绍可用的选项。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.query-methods.query-lookup-strategies"><a class="anchor" href="#repositories.query-methods.query-lookup-strategies"></a>查询查找策略</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>仓库基础设施可采用以下策略来解析查询。  
+使用 XML 配置时，可通过 `<code>query-lookup-strategy</code>` 属性在命名空间级别进行策略配置。  
+对于 Java 配置，可使用 `<code>EnableJpaRepositories</code>` 注解的 `<code>queryLookupStrategy</code>` 属性。  
+某些策略可能不适用于特定的数据存储源。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>`CREATE` 尝试从查询方法名构建特定存储库的查询。一般方法是移除给定的一组已知前缀，然后解析方法名的其余部分。有关查询构建的更多信息，请参阅"<a href="#repositories.query-methods.query-creation">查询创建</a>"。</p>
+</li>
+<li>
+<p><code>USE_DECLARED_QUERY</code> 尝试查找已声明的查询，若未找到则抛出异常。  
+该查询可通过某处的注解定义，或通过其他方式声明。  
+请参阅特定存储器的文档以了解其可用的选项。  
+如果在引导阶段，仓库基础设施未能找到方法对应的已声明查询，则会失败。</p>
+</li>
+<li>
+<p><code>CREATE_IF_NOT_FOUND</code>（默认值）结合了 <code>CREATE</code> 和 <code>USE_DECLARED_QUERY</code>。  
+它首先查找已声明的查询，如果未找到已声明的查询，则创建基于自定义方法名的查询。  
+这是默认的查找策略，因此如果您没有显式配置任何内容，将使用该策略。  
+它允许通过方法名快速定义查询，同时也可以通过根据需要引入已声明的查询来对这些查询进行自定义调整。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.query-methods.query-creation"><a class="anchor" href="#repositories.query-methods.query-creation"></a>查询创建</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data 存储库基础设施中内置的查询构建器机制，可用于构建针对存储库实体的约束查询。</p>
+</div>
+<div class="paragraph">
+<p>以下示例展示了如何创建多个查询：</p>
+</div>
+<div class="listingblock">
+<div class="title">通过方法名创建查询</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface PersonRepository extends Repository&lt;Person, Long&gt; {
+
+  List&lt;Person&gt; findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
+
+  // Enables the distinct flag for the query
+  List&lt;Person&gt; findDistinctPeopleByLastnameOrFirstname(String lastname, String firstname);
+  List&lt;Person&gt; findPeopleDistinctByLastnameOrFirstname(String lastname, String firstname);
+
+  // Enabling ignoring case for an individual property
+  List&lt;Person&gt; findByLastnameIgnoreCase(String lastname);
+  // Enabling ignoring case for all suitable properties
+  List&lt;Person&gt; findByLastnameAndFirstnameAllIgnoreCase(String lastname, String firstname);
+
+  // Enabling static ORDER BY for a query
+  List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
+  List&lt;Person&gt; findByLastnameOrderByFirstnameDesc(String lastname);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>查询方法名称的解析分为主体和谓词两部分。第一部分（如 `<code>find…By</code>`、`<code>exists…By</code>`）定义查询的主体，第二部分构成谓词。引入子句（即主体）可以包含进一步的表达式。在 `<code>find</code>`（或其他引入关键字）与 `<code>By</code>` 之间的任何文本均被视为描述性内容，除非使用了结果限制关键字之一，例如使用 `<code>Distinct</code>` 为要创建的查询设置 distinct 标志，或使用 <a href="#repositories.limit-query-result"><code>Top</code>/<code>First</code></a> 来限制查询结果。</p>
+</div>
+<div class="paragraph">
+<p>附录包含<a class="xref page" href="query-keywords-reference.html#appendix.query.method.subject">查询方法主体关键词的完整列表</a>以及<a class="xref page" href="query-keywords-reference.html#appendix.query.method.predicate">查询方法谓词关键词，包括排序和大小写修饰符</a>。  
+然而，第一个<code>By</code>充当分隔符，用于指示实际谓词条件的开始。  
+在最基本的层面上，您可以定义实体属性的条件，并使用<code>And</code>和<code>Or</code>将它们连接起来。</p>
+</div>
+<div class="paragraph">
+<p>解析方法的实际结果取决于您创建查询所使用的数据持久化存储。
+不过，有一些通用事项需要注意：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>表达式通常是属性遍历与可连接的运算符的组合。  
+您可以使用 `<code>AND</code>` 和 `<code>OR</code>` 组合属性表达式。  
+此外，属性表达式还支持诸如 `<code>Between</code>`、`<code>LessThan</code>`、`<code>GreaterThan</code>` 和 `<code>Like</code>` 等运算符。  
+支持的运算符可能因数据存储而异，请参阅参考文档的相关部分。</p>
+</li>
+<li>
+<p>方法解析器支持为单个属性设置<code>IgnoreCase</code>标志（例如<code>findByLastnameIgnoreCase(…)</code>），或为所有支持忽略大小写的类型的所有属性设置该标志（通常是<code>String</code>实例——例如<code>findByLastnameAndFirstnameAllIgnoreCase(…)</code>）。
+是否支持忽略大小写可能因存储而异，因此请查阅相关存储特定查询方法的参考文档中的相应部分。</p>
+</li>
+<li>
+<p>您可以通过在查询方法中附加引用属性的 `<code>OrderBy</code>` 子句，并提供排序方向（`<code>Asc</code>` 或 `<code>Desc</code>`）来应用静态排序。  
+若要创建支持动态排序的查询方法，请参阅"<a href="#repositories.special-parameters">分页、迭代大量结果、排序与限制</a>"部分。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.query-methods.reserved-methods"><a class="anchor" href="#repositories.query-methods.reserved-methods"></a>保留方法名</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>虽然派生仓库方法通过名称绑定到属性，但在针对标识符（<em>identifier</em>）属性的某些从基础仓库继承的方法名上，存在少数例外情况。这些<em>保留方法</em>（例如 <code>CrudRepository#findById</code> 或简写为 <code>findById</code>）将始终针对<em>标识符</em>属性，而不管声明方法中实际使用的属性名称是什么。</p>
+</div>
+<div class="paragraph">
+<p>考虑以下域类型，它包含一个通过 <code>@Id</code> 标记为标识符的属性 <code>pk</code>，以及一个名为 <code>id</code> 的属性。  
+在这种情况下，您需要特别注意查找方法的命名，因为它们可能与预定义的签名发生冲突：</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class User {
+  @Id Long pk;                          <i class="conum" data-value="1"></i><b>(1)</b>
+
+  Long id;                              <i class="conum" data-value="2"></i><b>(2)</b>
+
+  // …
+}
+
+interface UserRepository extends Repository&lt;User, Long&gt; {
+
+  Optional&lt;User&gt; findById(Long id);     <i class="conum" data-value="3"></i><b>(3)</b>
+
+  Optional&lt;User&gt; findByPk(Long pk);     <i class="conum" data-value="4"></i><b>(4)</b>
+
+  Optional&lt;User&gt; findUserById(Long id); <i class="conum" data-value="5"></i><b>(5)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>标识符属性（主键）。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>一个名为 <code>id</code> 的属性，但不是标识符。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>针对 <code>pk</code> 属性（即标记有 <code>@Id</code> 且被视为标识符的属性），因为它引用的是 <code>CrudRepository</code> 基础仓库方法。因此，它不是基于 <code>id</code> 作为属性名所暗示的派生查询，而是属于<em>保留方法</em>之一。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>通过名称针对 <code>pk</code> 属性，因为这是一个派生查询。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>通过在 <code>find</code> 和 <code>by</code> 之间使用描述性标记来针对 <code>id</code> 属性，以避免与<em>保留方法</em>发生冲突。</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>这种特殊行为不仅针对查找方法，也适用于 <code>exists</code> 和 <code>delete</code> 方法。有关方法的列表，请参阅“<a class="xref page" href="query-keywords-reference.html#appendix.query.method.reserved">仓库查询关键字</a>"。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.query-methods.query-property-expressions"><a class="anchor" href="#repositories.query-methods.query-property-expressions"></a>属性表达式</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>属性表达式只能引用托管实体的直接属性，如前面的示例所示。  
+在查询创建时，您已确保解析的属性是托管领域类的属性。  
+然而，您也可以通过遍历嵌套属性来定义约束条件。  
+请考虑以下方法签名：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">List&lt;Person&gt; findByAddressZipCode(ZipCode zipCode);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>假设一个 `<code>Person</code>` 拥有一个包含 `<code>ZipCode</code>` 的 `<code>Address</code>`。在这种情况下，该方法会创建 `<code>x.address.zipCode</code>` 属性遍历。解析算法首先将整个部分（`<code>AddressZipCode</code>`）解释为属性，并检查领域类中是否存在同名（未首字母大写）的属性。如果算法成功找到该属性，则使用它；否则，算法会从右侧按驼峰命名法将源字符串拆分为头部和尾部，并尝试查找对应的属性——在本例中即为 `<code>AddressZip</code>` 和 `<code>Code</code>`。如果算法找到了具有该头部的属性，它会取尾部并继续从该处向下构建树结构，按照上述方式拆分尾部。如果第一次拆分不匹配，算法会将拆分点向左移动（变为 `<code>Address</code>` 和 `<code>ZipCode</code>`），然后继续执行。</p>
+</div>
+<div class="paragraph">
+<p>虽然这在大多数情况下是可行的，但算法仍有可能选择错误的属性。  
+假设 `<code>Person</code>` 类还有一个 `<code>addressZip</code>` 属性。  
+算法会在第一次拆分轮次中就匹配到该属性并做出错误选择，从而导致失败（因为 `<code>addressZip</code>` 的类型很可能没有 `<code>code</code>` 属性）。</p>
+</div>
+<div class="paragraph">
+<p>要解决这种歧义，您可以在方法名中使用 `<code>_</code>` 来手动定义遍历点。因此，我们的方法名如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">List&lt;Person&gt; findByAddress_ZipCode(ZipCode zipCode);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>由于我们将下划线（<code>_</code>）视为保留字符，因此强烈建议遵循标准的 Java 命名约定（即不在属性名中使用下划线，而是改用驼峰命名法）。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<div class="title">以下划线开头的字段名：</div>
+<p>字段名称可以以下划线开头，例如 <code>String _name</code>。  
+请确保保留 <code>_</code>（如 <code>_name</code>），并使用双下划线 <code>_</code> 来分隔嵌套路径，例如 <code>user__name</code>。</p>
+</div>
+<div class="paragraph">
+<div class="title">大写字段名：</div>
+<p>全大写的字段名可以按原样使用。  
+如果适用嵌套路径，则需通过 `<code>_</code>` 进行拆分，例如 `<code>USER_name</code>`。</p>
+</div>
+<div class="paragraph">
+<div class="title">第二个字母为大写的字段名：</div>
+<p>由小写字母开头后跟大写字母的字段名（如 <code>String qCode</code>）可以通过使用两个大写字母开头的方式（如 <code>QCode</code>）进行解析。请注意潜在的路径歧义问题。</p>
+</div>
+<div class="paragraph">
+<div class="title">路径歧义：</div>
+<p>在以下示例中，属性 <code>qCode</code> 和 <code>q</code>（其中 <code>q</code> 包含一个名为 <code>code</code> 的属性）的排列方式，为路径 <code>QCode</code> 造成了歧义。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">record Container(String qCode, Code q) {}
+record Code(String code) {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>由于属性上的直接匹配会被优先考虑，因此不会考虑任何潜在的嵌套路径，算法将选择<code>qCode</code>字段。  
+若要选择<code>q</code>中的<code>code</code>字段，则必须使用下划线表示法<code>Q_Code</code>。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.collections-and-iterables"><a class="anchor" href="#repositories.collections-and-iterables"></a>返回集合或可迭代对象的 Repository 方法</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>返回多个结果的查询方法可以使用标准的 Java <code>Iterable</code>、<code>List</code> 和 <code>Set</code>。  
+除此之外，我们还支持返回 Spring Data 的 <code>Streamable</code>（这是 <code>Iterable</code> 的自定义扩展），以及由 <a href="https://www.vavr.io/">Vavr</a> 提供的集合类型。  
+请参阅附录中关于所有可能的查询方法返回类型的说明：<a class="xref page" href="query-return-types-reference.html#appendix.query.return.types">查询方法返回类型参考</a>。</p>
+</div>
+<div class="sect2">
+<h3 id="repositories.collections-and-iterables.streamable"><a class="anchor" href="#repositories.collections-and-iterables.streamable"></a>使用 Streamable 作为查询方法返回类型</h3>
+<div class="paragraph">
+<p>您可以使用<code>Streamable</code>作为<code>Iterable</code>或任何集合类型的替代方案。它提供了访问非并行<code>Stream</code>的便捷方法（这是<code>Iterable</code>所缺失的），并能够直接对元素进行<code>….filter(…)</code>和<code>….map(…)</code>操作，并将<code>Streamable</code>与其他对象连接：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用 Streamable 合并查询方法的结果</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface PersonRepository extends Repository&lt;Person, Long&gt; {
+  Streamable&lt;Person&gt; findByFirstnameContaining(String firstname);
+  Streamable&lt;Person&gt; findByLastnameContaining(String lastname);
+}
+
+Streamable&lt;Person&gt; result = repository.findByFirstnameContaining("av")
+  .and(repository.findByLastnameContaining("ea"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repositories.collections-and-iterables.streamable-wrapper"><a class="anchor" href="#repositories.collections-and-iterables.streamable-wrapper"></a>返回自定义可流式包装类型</h3>
+<div class="paragraph">
+<p>为集合提供专用包装类型是一种常用模式，用于为返回多个元素的查询结果提供 API。  
+通常，这些类型通过调用返回集合样式的类型的仓库方法，并手动创建包装类型的实例来使用。  
+您可以避免这一额外步骤，因为 Spring Data 允许在满足以下条件时将这些包装类型用作查询方法的返回类型：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>该类型实现了<code>Streamable</code>接口。</p>
+</li>
+<li>
+<p>该类型暴露了一个构造函数或名为 `<code>of(…)</code>` 或 `<code>valueOf(…)</code>` 的静态工厂方法，该方法接受一个 `<code>Streamable</code>` 作为参数。</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>以下列表展示了一个示例：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Product {                                         <i class="conum" data-value="1"></i><b>(1)</b>
+  MonetaryAmount getPrice() { … }
+}
+
+@RequiredArgsConstructor(staticName = "of")
+class Products implements Streamable&lt;Product&gt; {         <i class="conum" data-value="2"></i><b>(2)</b>
+
+  private final Streamable&lt;Product&gt; streamable;
+
+  public MonetaryAmount getTotal() {                    <i class="conum" data-value="3"></i><b>(3)</b>
+    return streamable.stream()
+      .map(Product::getPrice)
+      .reduce(Money.of(0), MonetaryAmount::add);
+  }
+
+
+  @Override
+  public Iterator&lt;Product&gt; iterator() {                 <i class="conum" data-value="4"></i><b>(4)</b>
+    return streamable.iterator();
+  }
+}
+
+interface ProductRepository extends Repository&lt;Product, Long&gt; {
+  Products findAllByDescriptionContaining(String text); <i class="conum" data-value="5"></i><b>(5)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>一个 <code>Product</code> 实体，提供 API 以访问产品价格。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>一种用于 <code>Streamable&lt;Product&gt;</code> 的包装类型，可通过使用 <code>Products.of(…)</code>（由 Lombok 注解创建的工厂方法）构建。采用接受 <code>Streamable&lt;Product&gt;</code> 的标准构造函数同样可行。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>该包装类型提供额外的 API，可在 <code>Streamable&lt;Product&gt;</code> 上计算新值。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>实现 <code>Streamable</code> 接口，并将其委托给实际结果。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>该包装类型 <code>Products</code> 可直接用作查询方法的返回类型。无需返回 <code>Streamable&lt;Product&gt;</code>，并在存储库客户端中手动对其进行包装。</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repositories.collections-and-iterables.vavr"><a class="anchor" href="#repositories.collections-and-iterables.vavr"></a>Vavr 集合支持</h3>
+<div class="paragraph">
+<p><a href="https://www.vavr.io/">Vavr</a> 是一个在 Java 中拥抱函数式编程概念的库。  
+它提供了一套自定义的集合类型，可作为查询方法的返回类型使用，如下表所示：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;"/>
+<col style="width: 33.3333%;"/>
+<col style="width: 33.3334%;"/>
+</colgroup>
+<thead><tr>
+<th class="tableblock halign-left valign-top">Vavr 集合类型</th>
+<th class="tableblock halign-left valign-top">使用的 Vavr 实现类型</th>
+<th class="tableblock halign-left valign-top">有效的 Java 源类型</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.vavr.collection.Seq</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.vavr.collection.List</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>java.util.Iterable</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.vavr.collection.Set</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.vavr.collection.LinkedHashSet</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>java.util.Iterable</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.vavr.collection.Map</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>io.vavr.collection.LinkedHashMap</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>java.util.Map</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>您可以使用第一列中的类型（或其子类型）作为查询方法的返回类型，并根据实际查询结果的 Java 类型（第三列），将第二列中的类型用作实现类型。  
+或者，您也可以声明 `<code>Traversable`》（Vavr 中 `<code>Iterable</code>` 的等价类型），然后从实际的返回值派生出具体的实现类。也就是说，`<code>java.util.List</code>` 会被转换为 Vavr 的 `<code>List</code>` 或 `<code>Seq</code>`，`<code>java.util.Set</code>` 会转换为 Vavr 的 `<code>LinkedHashSet</code>` `<code>Set</code>`，依此类推。</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.query-streaming"><a class="anchor" href="#repositories.query-streaming"></a>流式查询结果</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您可以使用 `<code>Stream&lt;T&gt;</code>` 作为返回类型，以增量方式处理查询方法的结果。  
+与将查询结果包装在 `<code>Stream</code>` 中不同，数据源特定的方法用于执行流式处理，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用 Java 8 的 `<code>Stream&lt;T&gt;</code>` 流式处理查询结果。</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Query("select u from User u")
+Stream&lt;User&gt; findAllByCustomQueryAndStream();
+
+Stream&lt;User&gt; readAllByFirstnameNotNull();
+
+@Query("select u from User u")
+Stream&lt;User&gt; streamAllPaged(Pageable pageable);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>Stream</code> 可能封装了底层数据存储特定的资源，因此在使用后必须关闭。您可以使用 <code>close()</code> 方法手动关闭 <code>Stream</code>，或者使用 try-with-resources 块进行关闭，如下例所示：
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">在 `try-with-resources` 块中使用 `<code>Stream&lt;T&gt;</code>`。</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">try (Stream&lt;User&gt; stream = repository.findAllByCustomQueryAndStream()) {
+  stream.forEach(…);
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+并非所有的 Spring Data 模块当前都支持将 <code>Stream&lt;T&gt;</code> 作为返回类型。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.query-async"><a class="anchor" href="#repositories.query-async"></a>异步查询结果</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您可以使用<a href="https://docs.spring.io/spring-framework/reference/7.0/integration/scheduling.html">Spring 的异步方法执行能力</a>来异步运行存储库查询。这意味着方法在调用后会立即返回，而实际的查询操作将在提交给 Spring <code>TaskExecutor</code> 的任务中执行。异步查询与响应式查询不同，不应混合使用。有关响应式支持的更多详细信息，请参阅特定存储器的文档。以下示例展示了多种异步查询：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Async
+Future&lt;User&gt; findByFirstname(String firstname);               <i class="conum" data-value="1"></i><b>(1)</b>
+
+@Async
+CompletableFuture&lt;User&gt; findOneByFirstname(String firstname); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>使用 <code>java.util.concurrent.Future</code> 作为返回类型。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>使用 <code>java.util.concurrent.CompletableFuture</code> 作为返回类型。</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="repositories.special-parameters"><a class="anchor" href="#repositories.special-parameters"></a>分页、遍历大量结果、排序与限制</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在查询中处理参数时，请按照前面示例中所示定义方法参数。  
+此外，基础设施还识别某些特定类型（如<code>Pageable</code>、<code>Sort</code>和<code>Limit</code>），以便动态地为查询应用分页、排序和限制功能。  
+以下示例展示了这些功能：</p>
+</div>
+<div class="listingblock">
+<div class="title">在查询方法中使用<code>Pageable</code>、<code>Slice</code>、<code>Sort</code>和<code>Limit</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Page&lt;User&gt; findByLastname(String lastname, Pageable pageable);
+
+Slice&lt;User&gt; findByLastname(String lastname, Pageable pageable);
+
+List&lt;User&gt; findByLastname(String lastname, Sort sort);
+
+List&lt;User&gt; findByLastname(String lastname, Sort sort, Limit limit);
+
+List&lt;User&gt; findByLastname(String lastname, Pageable pageable);</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table><table><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+接受 <code>Sort</code>、<code>Pageable</code> 和 <code>Limit</code> 的 API 期望传入非 <code>null</code> 值。
+如果您不想应用任何排序或分页，请使用 <code>Sort.unsorted()</code>、<code>Pageable.unpaged()</code> 和 <code>Limit.unlimited()</code>。
+</td>
+</tr>
+</table></table>
+</div>
+<div class="paragraph">
+<p>第一种方法允许您将一个 `org.springframework.data.domain.Pageable` 实例传递给查询方法，从而为静态定义的查询动态添加分页功能。  
+`Page` 对象了解可用的元素总数和页面总数。这是通过基础设施触发计数查询来计算总体数量来实现的。由于这可能成本较高（具体取决于所使用的存储），您可以改为返回一个 `Slice`。  
+`Slice` 仅知道是否存在下一个 `Slice`，这在遍历较大的结果集时可能已经足够。</p>
+</div>
+<div class="paragraph">
+<p>排序选项同样通过 `<code>Pageable</code>` 实例进行处理。  
+如果您仅需排序功能，只需在方法中添加一个 `<code>org.springframework.data.domain.Sort</code>` 参数即可。  
+如您所见，返回一个 `<code>List</code>` 也是可行的。  
+在这种情况下，构建实际 `<code>Page</code>` 实例所需的额外元数据不会被创建（这也意味着原本必要的额外计数查询将不会被执行）。  
+相反，它会将查询限制为仅检索指定范围内的实体。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+要获取整个查询的总页数，您需要触发一个额外的计数查询。
+默认情况下，该查询是基于您实际触发的查询生成的。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>特殊参数在查询方法中只能使用一次。<br/>
+上述部分特殊参数是互斥的。
+请考虑以下无效参数组合列表。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;"/>
+<col style="width: 33.3333%;"/>
+<col style="width: 33.3334%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameters</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Pageable</code> and <code>Sort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findBy…​(Pageable page, Sort sort)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Pageable</code> 已经定义了 <code>Sort</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Pageable</code> and <code>Limit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>findBy…​(Pageable page, Limit limit)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Pageable</code> 已定义了限制。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>`Top` 关键字可与 `Pageable` 一起使用：`Top` 定义结果的最大总数，而 `Pageable` 参数可进一步减少该数量。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="sect2">
+<h3 id="repositories.scrolling.guidance"><a class="anchor" href="#repositories.scrolling.guidance"></a>哪种方法更合适？</h3>
+<div class="paragraph">
+<p>Spring Data 抽象所提供的价值，或许最好通过下表所示的查询方法可能返回的类型来体现。  
+该表展示了可以从查询方法中返回哪些类型。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">表 1。消耗大量查询结果</caption>
+<colgroup>
+<col style="width: 12.5%;"/>
+<col style="width: 25%;"/>
+<col style="width: 25%;"/>
+<col style="width: 37.5%;"/>
+</colgroup>
+<thead><tr>
+<th class="tableblock halign-left valign-top">方法</th>
+<th class="tableblock halign-left valign-top">获取的数据量</th>
+<th class="tableblock halign-left valign-top">查询结构</th>
+<th class="tableblock halign-left valign-top">约束条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#repositories.collections-and-iterables"><code>List&lt;T&gt;</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">所有结果。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单个查询。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">查询结果可能耗尽所有内存。获取全部数据可能会耗费大量时间。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#repositories.collections-and-iterables.streamable"><code>Streamable&lt;T&gt;</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">所有结果。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单个查询。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">查询结果可能耗尽所有内存。获取全部数据可能会耗费大量时间。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#repositories.query-streaming"><code>Stream&lt;T&gt;</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">分块（逐个或分批），具体取决于对 `<code>Stream</code>` 的消费方式。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">通常使用游标执行单个查询。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">使用后必须关闭流，以避免资源泄漏。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flux&lt;T&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">分块（逐个或批量），具体取决于<code>Flux</code>的消耗方式。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">通常使用游标执行单个查询。</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">存储模块必须提供响应式基础设施。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Slice&lt;T&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Pageable.getPageSize() + 1</code> at <code>Pageable.getOffset()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">执行一对多查询以获取数据，起始位置为 `<code>Pageable.getOffset()</code>` 并应用限制。</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>一个 `<code>Slice</code>` 只能导航到下一个 `<code>Slice</code>`。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Slice 提供详细信息，说明是否还有更多数据需要获取。</p>
+</li>
+<li>
+<p>当偏移量过大时，基于偏移的查询会变得低效，因为数据库仍然需要生成完整的结果集。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Page&lt;T&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Pageable.getPageSize()</code>  at <code>Pageable.getOffset()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">从 `<code>Pageable.getOffset()</code>` 开始的一对多查询应用了限制。此外，可能需要执行 `<code>COUNT(…)</code>` 查询以确定元素总数。</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>很多时候，需要执行代价高昂的<code>COUNT(…)</code>查询。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>当偏移量过大时，基于偏移的查询会变得低效，因为数据库仍然需要生成完整的结果集。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="repositories.paging-and-sorting"><a class="anchor" href="#repositories.paging-and-sorting"></a>分页与排序</h3>
+<div class="paragraph">
+<p>您可以使用属性名称定义简单的排序表达式。  
+您可以连接多个表达式，将多个条件合并为一个表达式。</p>
+</div>
+<div class="listingblock">
+<div class="title">定义排序表达式</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Sort sort = Sort.by("firstname").ascending()
+  .and(Sort.by("lastname").descending());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>若要采用更类型安全的方式定义排序表达式，首先指定要定义排序表达式的类型，然后使用方法引用来定义用于排序的属性。</p>
+</div>
+<div class="listingblock">
+<div class="title">使用类型安全 API 定义排序表达式</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TypedSort&lt;Person&gt; person = Sort.sort(Person.class);
+
+Sort sort = person.by(Person::getFirstname).ascending()
+  .and(person.by(Person::getLastname).descending());</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>TypedSort.by(…)</code> 使用运行时代理（通常通过 CGlib 实现），这在使用 GraalVM Native Image 等工具进行原生镜像编译时可能会产生干扰。
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>如果您的商店实现支持 Querydsl，您还可以使用生成的元模型类型来定义排序表达式：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用 Querydsl API 定义排序表达式</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">QSort sort = QSort.by(QPerson.firstname.asc())
+  .and(QSort.by(QPerson.lastname.desc()));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repositories.limit-query-result"><a class="anchor" href="#repositories.limit-query-result"></a>限制查询结果</h3>
+<div class="paragraph">
+<p>除了分页，还可以使用专用的<code>Limit</code>参数来限制结果集大小。  
+您也可以通过使用<code>First</code>或<code>Top</code>关键字来限制查询方法的结果，这两个关键字可以互换使用，但不能与<code>Limit</code>参数混用。  
+您可以在<code>Top</code>或<code>First</code>后附加一个可选的数值，以指定要返回的最大结果集大小。  
+如果省略该数值，则默认假设结果集大小为 1。  
+以下示例展示了如何限制查询结果的大小：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用 <code>Top</code> 和 <code>First</code> 限制查询结果的大小</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">List&lt;User&gt; findByLastname(String lastname, Limit limit);
+
+User findFirstByOrderByLastnameAsc();
+
+User findTopByLastnameOrderByAgeDesc(String lastname);
+
+Page&lt;User&gt; queryFirst10ByLastname(String lastname, Pageable pageable);
+
+Slice&lt;User&gt; findTop3By(Pageable pageable);
+
+List&lt;User&gt; findFirst10ByLastname(String lastname, Sort sort);
+
+List&lt;User&gt; findTop10ByLastname(String lastname, Pageable pageable);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>限制表达式同样支持对支持 DISTINCT 查询的数据存储使用 <code>Distinct</code> 关键字。此外，对于将结果集限制为单个实例的查询，支持使用 <code>Optional</code> 关键字将结果包装起来。</p>
+</div>
+<div class="paragraph">
+<p>如果针对限制查询的排序或切片操作（以及可用页面数量的计算）被应用，则这些操作将在限定结果内部执行。</p>
+</div>
+<div class="admonitionblock note">
+<table><td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+结合动态排序并使用 <code>Sort</code> 参数限制结果，可以表达查询“K 个最小”以及“K 个最大”元素的方法。
+</td>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-versions">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-versions-content">
+              <button class="modal-versions-close" data-micromodal-close="">
+                <svg height="28px" viewbox="0 0 32 32" width="28px" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title></title><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"></line><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"></line></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left"><ul class="nav-versions">
+<li class="component is-current">
+<a class="title" href="../index.html">Spring Data Commons</a>
+<ul class="versions">
+<li class="version is-current is-latest">
+<a href="../index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="component">
+<a class="title" href="../../index.html">Spring Data Elasticsearch</a>
+<ul class="versions">
+<li class="version is-latest">
+<a href="../../index.html">
+                            6.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+</ul></div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>相关 Spring 文档<ul class="projects-list">
+        <li><a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a></li>
+        <li><a href="https://docs.spring.io/spring-framework/reference/">
+  Spring 框架
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Cloud
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Data
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a></li>
+        <li><a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a></li>
+        <li><a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a></li>
+        <li><a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a></li>
+        <li><a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a></li>
+        <li><a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a></li>
+        <li><a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a></li>
+    </ul>
+  </li><a href="../../spring-projects.html">所有文档...</a>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img alt="Spring" id="springlogo" src="../../_/img/spring-logo.svg"/>
+        <p class="smallest antialiased">版权所有 © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href="https://www.vmware.com/help/legal.html">使用条款</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">隐私政策</a> • <a href="https://spring.io/trademarks">商标指南</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">致谢</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">您的加州隐私权利</a> • <a class="ot-sdk-show-settings">Cookie 设置</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 及其附属公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。"AWS"和"Amazon Web Services"是 Amazon.com Inc. 或其附属公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。</p>
+    </div>
+    <div class="flex jc-between" id="social-icons">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" data-name="Twitter" id="Twitter-2"></path></svg></a>
+    </div>
+</footer>
+<script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async="" src="../../_/js/vendor/highlight.js"></script>
+<script async="" data-sync-storage-key="docs:preferred-tab" src="../../_/js/vendor/asciidoctor-tabs.js"></script>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box"><a class="search-link" href="../../search.html">在全部 Spring 文档中搜索</a></div>
+                <div class="search-by">
+                    <a aria-label="Search by Algolia" href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
+                        <img class="light" src="../../_/img/algolia-light.svg" width="140"/>
+                        <img class="dark" src="../../_/img/algolia-dark.svg" width="140"/>
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js"></script>
+<script async="" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-app-id="WB1FQYI187" data-index-name="springdocs" data-page-component="data-commons" data-page-version="4.1.0" data-stylesheet="../../_/css/vendor/search.css" id="search-script" src="../../_/js/vendor/search.js"></script>
+  
+
+</body></html>

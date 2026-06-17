@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-06-16 17:31:26",
+  "updated_at": "2026-06-16 17:31:26",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 24,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "This is particularly useful for delegating to existing data access code that expects a <code>CqlSession</code> to work on\nand throws <code>DriverException</code>. For newly written code, it is strongly recommended to use\n<a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a>'s more specific operations, for example a <code>query</code> or <code>update</code> variant.",
+      "translation": "这对于委托给现有的数据访问代码非常有用，这些代码期望使用 `<code>CqlSession</code>` 进行操作并抛出 `<code>DriverException</code>`。对于新编写的代码，强烈建议使用<a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a>中更具体的操作，例如 `<code>query</code>` 或 `<code>update</code>` 的变体。",
+      "count": 1
+    },
+    {
+      "source": "Allows for returning a result object created within the callback, i.e. a domain object or a collection of domain\nobjects. Note that there's special support for single step actions: see <a href=\"AsyncCqlTemplate.html#queryForObject(java.lang.String,java.lang.Class)\"><code>AsyncCqlTemplate.queryForObject(String, Class)</code></a>\netc. A thrown <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> is treated as application exception: it gets propagated to the caller of the\ntemplate.",
+      "translation": "支持返回在回调中创建的结果对象，即领域对象或领域对象的集合。请注意，单步操作具有特殊支持：请参阅 <a href=\"AsyncCqlTemplate.html#queryForObject(java.lang.String,java.lang.Class)\"><code>AsyncCqlTemplate.queryForObject(String, Class)</code></a> 等方法。抛出的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> 被视为应用程序异常：它会被传播到模板的调用者。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\">CompletableFuture</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in AsyncSessionCallback\">T</a>&gt;</span> <span class=\"element-name\">doInSession</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlSession session)</span>\n                          throws <span class=\"exceptions\">com.datastax.oss.driver.api.core.DriverException,\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></span>",
+      "translation": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"类或接口 java.util.concurrent\">CompletableFuture</a>&lt;<a href=\"#type-param-T\" title=\"异步会话回调中的类型参数\">T</a>&gt;</span> <span class=\"element-name\">doInSession</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlSession session)</span>\n                          抛出 <span class=\"exceptions\">com.datastax.oss.driver.api.core.DriverException,\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"类或接口 org.springframework.dao\">DataAccessException</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"class or interface in java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">AsyncSessionCallback&lt;T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"java.lang 中的类或接口\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">AsyncSessionCallback&lt;T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a>&gt;</span>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface AsyncSessionCallback\">Interface AsyncSessionCallback&lt;<span id=\"type-param-T\">T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 AsyncSessionCallback\">接口 AsyncSessionCallback&lt;<span id=\"type-param-T\">T extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a></span>&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
+      "count": 1
+    },
+    {
+      "source": "Gets called by <a href=\"AsyncCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.AsyncSessionCallback)\"><code>AsyncCqlTemplate.execute(AsyncSessionCallback)</code></a> with an active Cassandra <code>CqlSession</code>.",
+      "translation": "由<a href=\"AsyncCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.AsyncSessionCallback)\"><code>AsyncCqlTemplate.execute(AsyncSessionCallback)</code></a>调用，并传入一个活跃的 Cassandra <code>CqlSession</code>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>session</code> - active Cassandra Session, must not be null.</dd>\n<dt>Returns:</dt>\n<dd>a result object, or <code>CompletableFuture&lt;Void&gt;</code> if none.</dd>\n<dt>Throws:</dt>\n<dd><code>com.datastax.oss.driver.api.core.DriverException</code> - if thrown by a Session method, to be auto-converted to a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.</dd>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></code> - in case of custom exceptions.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"AsyncCqlTemplate.html#queryForObject(java.lang.String,java.lang.Class)\"><code>AsyncCqlTemplate.queryForObject(String, Class)</code></a></li>\n<li><a href=\"AsyncCqlTemplate.html#queryForResultSet(java.lang.String)\"><code>AsyncCqlTemplate.queryForResultSet(String)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>session</code> - 活跃的 Cassandra Session，不能为 null。</dd>\n<dt>返回：</dt>\n<dd>一个结果对象，或者如果没有则为 <code>CompletableFuture&lt;Void&gt;</code>。</dd>\n<dt>抛出：</dt>\n<dd><code>com.datastax.oss.driver.api.core.DriverException</code> - 如果由 Session 方法抛出，将自动转换为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>。</dd>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></code> - 在出现自定义异常的情况下。</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"AsyncCqlTemplate.html#queryForObject(java.lang.String,java.lang.Class)\"><code>AsyncCqlTemplate.queryForObject(String, Class)</code></a></li>\n<li><a href=\"AsyncCqlTemplate.html#queryForResultSet(java.lang.String)\"><code>AsyncCqlTemplate.queryForResultSet(String)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>2.0</dd>\n<dt>Author:</dt>\n<dd>David Webb, Mark Paluch</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"AsyncCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.AsyncSessionCallback)\"><code>AsyncCqlTemplate.execute(AsyncSessionCallback)</code></a></li>\n<li><a href=\"AsyncCqlTemplate.html#query(java.lang.String,org.springframework.data.cassandra.core.cql.AsyncResultSetExtractor)\"><code>AsyncCqlTemplate.query(String, AsyncResultSetExtractor)</code></a></li>\n<li><a href=\"AsyncCqlTemplate.html#execute(java.lang.String)\"><code>AsyncCqlTemplate.execute(String)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>版本:</dt>\n<dd>2.0</dd>\n<dt>作者:</dt>\n<dd>David Webb, Mark Paluch</dd>\n<dt>参见:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"AsyncCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.AsyncSessionCallback)\"><code>AsyncCqlTemplate.execute(AsyncSessionCallback)</code></a></li>\n<li><a href=\"AsyncCqlTemplate.html#query(java.lang.String,org.springframework.data.cassandra.core.cql.AsyncResultSetExtractor)\"><code>AsyncCqlTemplate.query(String, AsyncResultSetExtractor)</code></a></li>\n<li><a href=\"AsyncCqlTemplate.html#execute(java.lang.String)\"><code>AsyncCqlTemplate.execute(String)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#doInSession(com.datastax.oss.driver.api.core.CqlSession)\" tabindex=\"0\">doInSession(CqlSession)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#doInSession(com.datastax.oss.driver.api.core.CqlSession)\" tabindex=\"0\">doInSession(CqlSession)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Functional Interface:</dt>\n<dd>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</dd>",
+      "translation": "<dt>功能接口：</dt>\n<dd>这是一个功能接口，因此可以作为 Lambda 表达式或方法引用的赋值目标。</dd>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Generic callback interface for code that operates asynchronously on a Cassandra",
+      "translation": "用于在 Cassandra 上异步执行操作的通用回调接口。",
+      "count": 1
+    },
+    {
+      "source": ". Allows to execute\nany number of operations on a single session, using any type and number of statements.",
+      "translation": "允许在单个会话中执行任意数量的操作，可使用任意类型和数量的语句。",
+      "count": 1
+    },
+    {
+      "source": "Gets called by",
+      "translation": "由...调用",
+      "count": 1
+    },
+    {
+      "source": "with an active Cassandra",
+      "translation": "带有活动状态的 Cassandra",
+      "count": 1
+    },
+    {
+      "source": ". Does not need to care\nabout activating or closing the",
+      "translation": "无需关心激活或关闭",
+      "count": 1
+    }
+  ]
+}

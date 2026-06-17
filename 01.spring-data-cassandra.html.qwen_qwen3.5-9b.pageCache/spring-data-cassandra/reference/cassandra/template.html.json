@@ -1,0 +1,936 @@
+{
+  "created_at": "2026-06-16 07:19:00",
+  "updated_at": "2026-06-17 06:56:44",
+  "stats": {
+    "total_entries": 184,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 370,
+    "entries_with_hits": 184,
+    "entries_without_hits": 0,
+    "hit_rate": 2.010869565217391,
+    "usage_percentage": 0.0184
+  },
+  "items": [
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The query fields are mapped against the <code>SWCharacter</code> type.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Resulting rows are mapped into <code>Jedi</code>.</td>\n</tr>\n</tbody>",
+      "translation": "1 查询字段映射到 `SWCharacter` 类型。\n2 结果行被映射为 `Jedi`。",
+      "count": 3
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Skip this step if <code>SWCharacter</code> defines the table name with <code>@Table</code> or if using the class name as the table name is not a problem</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>如果 <code>SWCharacter</code> 使用 <code>@Table</code> 定义了表名，或者直接使用类名作为表名没有问题，则跳过此步骤</td>\n</tr>\n</tbody>",
+      "count": 3
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 2
+    },
+    {
+      "source": "The <code>select</code>, <code>selectOne</code>, and <code>stream</code> methods take a <code>Query</code> object as a parameter.\nThis object defines the criteria and options used to perform the query.\nThe criteria is specified by using a <code>Criteria</code> object that has a static factory method named <code>where</code> that instantiates a new <code>Criteria</code> object.\nWe recommend using a static import for <code>org.springframework.data.cassandra.core.query.Criteria.where</code> and <code>Query.query</code>, to make the query more readable.",
+      "translation": "`select`、`selectOne` 和 `stream` 方法均接受一个 `<code>Query</code>` 对象作为参数。该对象定义了执行查询时所使用的条件和选项。条件是通过使用名为 `<code>where</code>` 的静态工厂方法来实例化的一个新 `<code>Criteria</code>` 对象来指定的。我们建议使用静态导入 `org.springframework.data.cassandra.core.query.Criteria.where` 和 `Query.query`，以使查询更易读。",
+      "count": 2
+    },
+    {
+      "source": "<code>FluentCassandraOperations</code> and its reactive variant <code>ReactiveFluentCassandraOperations</code> provide a more narrow interface for common methods of <code>[Reactive]CassandraOperations</code>\nproviding a more readable, fluent API.\nThe entry points (<code>query(…)</code>, <code>insert(…)</code>, <code>update(…)</code>, and <code>delete(…)</code>) follow a natural naming scheme based on the operation to execute.\nMoving on from the entry point, the API is designed to offer only context-dependent methods that guide the developer towards a terminating method that invokes the actual <code>[Reactive]CassandraOperations</code>.\nThe following example shows the fluent API:",
+      "translation": "<code>FluentCassandraOperations</code> 及其响应式变体 <code>ReactiveFluentCassandraOperations</code> 为 <code>[Reactive]CassandraOperations</code> 的常用方法提供了更窄的接口，从而提供更可读、更具流畅性的 API。  \n入口点（<code>query(…)</code>、<code>insert(…)</code>、<code>update(…)</code> 和 <code>delete(…)</code>）采用基于所执行操作的命名方案，符合自然命名规范。  \n从入口点开始，该 API 仅提供上下文相关的方法，引导开发者调用实际执行操作的 <code>[Reactive]CassandraOperations</code> 终止方法。  \n以下示例展示了流畅式 API：",
+      "count": 2
+    },
+    {
+      "source": "For example, you can find methods such as <code>select</code>, <code>insert</code>, <code>delete</code>, and <code>update</code>.\nThe design goal was to make it as easy as possible to transition between the use of the base Cassandra driver and <code>[Reactive]CassandraOperations</code>.\nA major difference between the two APIs is that <code>CassandraOperations</code> can be passed domain objects instead of CQL and query objects.",
+      "translation": "例如，您可以找到诸如<code>select</code>、<code>insert</code>、<code>delete</code>和<code>update</code>等方法。\n设计目标是尽可能简化在基础 Cassandra 驱动与<code>[Reactive]CassandraOperations</code>之间进行切换的过程。\n这两个 API 之间的一个主要区别在于，<code>CassandraOperations</code>可以传递领域对象，而不是 CQL 和查询对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>pageRequest</strong> <code>(Pageable pageRequest)</code>: Used to associate <code>Sort</code>, <code>PagingState</code>, and <code>fetchSize</code> with the query (used for paging).",
+      "translation": "<code>Query</code> <strong>pageRequest</strong> <code>(Pageable pageRequest)</code>：用于将 <code>Sort</code>、<code>PagingState</code> 和 <code>fetchSize</code> 与查询关联（用于分页）。",
+      "count": 2
+    },
+    {
+      "source": "If a table in Cassandra holds entities of different types, such as a <code>Jedi</code> within a Table of <code>SWCharacters</code>, you can use different types to map the query result.\nYou can use <code>as(Class&lt;?&gt; targetType)</code> to map results to a different target type, while <code>query(Class&lt;?&gt; entityType)</code> still applies to the query and table name.\nThe following example uses the <code>query</code> and <code>as</code> methods:",
+      "translation": "如果 Cassandra 表中的实体类型不同，例如在 <code>SWCharacters</code> 表中包含一个 <code>Jedi</code> 实体，您可以使用不同的类型来映射查询结果。  \n您可以使用 <code>as(Class&lt;?&gt; targetType)</code> 将结果映射到不同的目标类型，而 <code>query(Class&lt;?&gt; entityType)</code> 仍然适用于查询和表名。  \n以下示例展示了如何使用 <code>query</code> 和 <code>as</code> 方法：",
+      "count": 2
+    },
+    {
+      "source": "The terminating methods (<code>first()</code>, <code>one()</code>, <code>all()</code>, and <code>stream()</code>) handle switching between retrieving a single entity and retrieving multiple entities as <code>List</code> or <code>Stream</code> and similar operations.",
+      "translation": "终止方法（`first()`、`one()`、`all()` 和 `stream()`）用于处理在检索单个实体与检索多个实体（如作为 `List` 或 `Stream` 等）之间的切换。",
+      "count": 2
+    },
+    {
+      "source": "The <code>CassandraTemplate</code> class implements the <code>CassandraOperations</code> interface and its reactive variant <code>ReactiveCassandraTemplate</code> implements <code>ReactiveCassandraOperations</code>.\nIn as much as possible, the methods on <code>[Reactive]CassandraOperations</code> are named after methods available in Cassandra to make the API familiar to developers who are already familiar with Cassandra.",
+      "translation": "`CassandraTemplate` 类实现了 `CassandraOperations` 接口，而其响应式变体 `ReactiveCassandraTemplate` 则实现了 `ReactiveCassandraOperations` 接口。  \n在尽可能多的情况下，`[Reactive]CassandraOperations` 上的方法命名与 Cassandra 中可用的方法保持一致，以便让熟悉 Cassandra 的开发者能够轻松理解该 API。",
+      "count": 2
+    },
+    {
+      "source": "You can express your queries by using the <code>Query</code> and <code>Criteria</code> classes, which have method names that reflect the native Cassandra predicate operator names, such as <code>lt</code>, <code>lte</code>, <code>is</code>, and others.",
+      "translation": "您可以使用<code>Query</code>和<code>Criteria</code>类来表达查询，这些类的名称反映了原生 Cassandra 谓词操作符的名称，例如<code>lt</code>、<code>lte</code>、<code>is</code>等。",
+      "count": 2
+    },
+    {
+      "source": "<code>Slice&lt;T&gt;</code> <strong>slice</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>: Starts or continues paging by querying for a <code>Slice</code> of objects of type <code>T</code> from the table.",
+      "translation": "<code>Slice&lt;T&gt;</code> <strong>slice</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>: 开始或继续分页，从表中查询类型为 <code>T</code> 的对象的 <code>Slice</code>。",
+      "count": 2
+    },
+    {
+      "source": "The <code>@Version</code> annotation provides syntax similar to that of JPA in the context of Cassandra and makes sure updates are only applied to rows with a matching version.\nOptimistic Locking leverages Cassandra’s lightweight transactions to conditionally insert, update and delete rows.\nTherefore, <code>INSERT</code> statements are executed with the <code>IF NOT EXISTS</code> condition.\nFor updates and deletes, the actual value of the version property is added to the <code>UPDATE</code> condition in such a way that the modification does not have any effect if another operation altered the row in the meantime.\nIn that case, an <code>OptimisticLockingFailureException</code> is thrown.\nThe following example shows these features:",
+      "translation": "@Version 注解在 Cassandra 上下文中提供了与 JPA 相似的语法，并确保更新仅应用于具有匹配版本的行。  \n乐观锁利用 Cassandra 的轻量级事务来有条件地插入、更新和删除行。  \n因此，INSERT 语句会配合 IF NOT EXISTS 条件执行。  \n对于更新和删除操作，会将版本属性的实际值添加到 UPDATE 条件中，使得如果在此期间有其他操作修改了该行，则该修改将不产生任何效果。  \n在这种情况下，会抛出 OptimisticLockingFailureException 异常。  \n以下示例展示了这些功能：",
+      "count": 2
+    },
+    {
+      "source": "The default converter implementation used by <code>[Reactive]CassandraTemplate</code> is <code>MappingCassandraConverter</code>.\nWhile <code>MappingCassandraConverter</code> can use additional metadata to specify the mapping of objects to rows, it can also convert objects that contain no additional metadata by using some conventions for the mapping of fields and table names.\nThese conventions, as well as the use of mapping annotations, are explained in the <a class=\"xref page\" href=\"../object-mapping.html\">“Mapping” chapter</a>.",
+      "translation": "<code>[Reactive]CassandraTemplate</code> 使用的默认转换器实现是 <code>MappingCassandraConverter</code>。\n虽然 <code>MappingCassandraConverter</code> 可以使用额外的元数据来指定对象到行的映射，但它也可以利用字段和表名映射的一些约定，来转换不包含额外元数据的对象。\n这些约定以及映射注解的使用方式，在<a class=\"xref page\" href=\"../object-mapping.html\">“映射”章节</a>中有详细说明。",
+      "count": 2
+    },
+    {
+      "source": "As with all Spring autowiring, this assumes there is only one bean of type <code>[Reactive]CassandraOperations</code> in the <code>ApplicationContext</code>.\nIf you have multiple <code>[Reactive]CassandraTemplate</code> beans (which is the case if you work with multiple keyspaces in the same project), then you can use the <code>@Qualifier</code> annotation to designate the bean you want to autowire.",
+      "translation": "与所有 Spring 自动装配一样，这假设在 `ApplicationContext` 中只有一个类型为 `<code>[Reactive]CassandraOperations</code>` 的 Bean。  \n如果您有多个 `<code>[Reactive]CassandraTemplate</code>` Bean（例如在同一项目中处理多个 keyspace 时），则可以使用 `<code>@Qualifier</code>` 注解来指定要自动装配的 Bean。",
+      "count": 2
+    },
+    {
+      "source": "The <code>Query</code> and <code>Criteria</code> classes follow a fluent API style so that you can easily chain together multiple method criteria and queries while having easy-to-understand code.\nStatic imports are used in Java when creating <code>Query</code>\nand <code>Criteria</code> instances to improve readability.",
+      "translation": "`Query` 和 `Criteria` 类采用流式 API 风格，使您可以轻松地将多个方法条件和查询串联起来，同时保持代码易于理解。在 Java 中创建 `Query` 和 `Criteria` 实例时，使用静态导入可以提高可读性。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>gt</strong> <code>(Object value)</code>: Creates a criterion by using the <code>&gt;</code> operator.",
+      "translation": "<code>CriteriaDefinition</code> <strong>gt</strong> <code>(Object value)</code>：使用 > 运算符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>gte</strong> <code>(Object value)</code>: Creates a criterion by using the <code>&gt;=</code> operator.",
+      "translation": "<code>CriteriaDefinition</code> <strong>gte</strong> <code>(Object value)</code>：使用 >= 运算符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>in</strong> <code>(Object…​ values)</code>: Creates a criterion by using the <code>IN</code> operator for a varargs argument.",
+      "translation": "<code>CriteriaDefinition</code> <strong>in</strong> <code>(Object…​ values)</code>：使用 <code>IN</code> 运算符为变长参数创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>in</strong> <code>(Collection&lt;?&gt; collection)</code>: Creates a criterion by using the <code>IN</code> operator using a collection.",
+      "translation": "<code>CriteriaDefinition</code> <strong>in</strong> <code>(Collection&lt;?&gt; collection)</code>：使用集合通过 IN 操作符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>is</strong> <code>(Object value)</code>: Creates a criterion by using field matching (<code>column = value</code>).",
+      "translation": "<code>CriteriaDefinition</code> <strong>是</strong> <code>(Object value)</code>：通过字段匹配（<code>column = value</code>）创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>lt</strong> <code>(Object value)</code>: Creates a criterion by using the <code>&lt;</code> operator.",
+      "translation": "<code>CriteriaDefinition</code> <strong>lt</strong> <code>(Object value)</code>：使用 <code>&lt;</code> 运算符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>lte</strong> <code>(Object value)</code>: Creates a criterion by using the <code>⇐</code> operator.",
+      "translation": "<code>CriteriaDefinition</code> <strong>lte</strong> <code>(Object value)</code>：使用 ⇐ 运算符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>like</strong> <code>(Object value)</code>: Creates a criterion by using the <code>LIKE</code> operator.",
+      "translation": "<code>CriteriaDefinition</code> <strong>like</strong> <code>(Object value)</code>：使用 <code>LIKE</code> 运算符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>contains</strong> <code>(Object value)</code>: Creates a criterion by using the <code>CONTAINS</code> operator.",
+      "translation": "<code>CriteriaDefinition</code> <strong>包含</strong> <code>(Object value)</code>：使用 <code>CONTAINS</code> 运算符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>CriteriaDefinition</code> <strong>containsKey</strong> <code>(Object key)</code>: Creates a criterion by using the <code>CONTAINS KEY</code> operator.",
+      "translation": "<code>CriteriaDefinition</code> 的 <strong>containsKey</strong> <code>(Object key)</code>：使用 <code>CONTAINS KEY</code> 运算符创建条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>by</strong> <code>(CriteriaDefinition…​ criteria)</code>: Used to create a <code>Query</code> object.",
+      "translation": "<code>Query</code> 通过 <code>(CriteriaDefinition…​ criteria)</code> 创建：用于创建 <code>Query</code> 对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>limit</strong> <code>(Limit limit)</code>: Used to limit the size of the returned results to the provided limit (used <code>SELECT</code> limiting).",
+      "translation": "<code>Query</code> <strong>limit</strong> <code>(Limit limit)</code>：用于将返回结果的大小限制为提供的 limit（用于 SELECT 语句的限制）。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>limit</strong> <code>(long limit)</code>: Used to limit the size of the returned results to the provided limit (used <code>SELECT</code> limiting).",
+      "translation": "<code>Query</code> <strong>limit</strong> <code>(long limit)</code>：用于将返回结果的大小限制为提供的 limit（用于 SELECT 语句的结果限制）。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>pagingState</strong> <code>(CassandraScrollPosition pagingState)</code>: Used to associate a <code>CassandraScrollPosition</code> with the query (used for paging).",
+      "translation": "<code>查询</code> <strong>分页状态</strong> <code>(CassandraScrollPosition 分页状态)</code>：用于将 <code>CassandraScrollPosition</code> 与查询关联（用于分页）。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>pagingState</strong> <code>(ByteBuffer pagingState)</code>: Used to associate a raw <code>ByteBuffer</code> with the query (used for paging).",
+      "translation": "<code>Query</code> <strong>pagingState</strong> <code>(ByteBuffer pagingState)</code>：用于将原始 <code>ByteBuffer</code> 与查询关联（用于分页）。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>queryOptions</strong> <code>(QueryOptions queryOptions)</code>: Used to associate <code>QueryOptions</code> with the query.",
+      "translation": "<code>Query</code> <strong>queryOptions</strong> <code>(QueryOptions queryOptions)</code>：用于将 <code>QueryOptions</code> 与查询关联。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>withAllowFiltering</strong> <code>()</code>: Used to render <code>ALLOW FILTERING</code> queries.",
+      "translation": "<code>Query</code> <strong>withAllowFiltering</strong> <code>()</code>：用于渲染带有 <code>ALLOW FILTERING</code> 的查询。",
+      "count": 2
+    },
+    {
+      "source": "<code>List&lt;T&gt;</code> <strong>select</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>: Query for a list of objects of type <code>T</code> from the table.",
+      "translation": "<code>List&lt;T&gt;</code> <strong>select</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>: 从表中查询类型为 <code>T</code> 的对象列表。",
+      "count": 2
+    },
+    {
+      "source": "<code>T</code> <strong>selectOne</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>: Query for a single object of type <code>T</code> from the table.",
+      "translation": "<code>T</code> <strong>selectOne</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>：从表中查询类型为 <code>T</code> 的单个对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>Stream&lt;T&gt;</code> <strong>stream</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>: Query for a stream of objects of type <code>T</code> from the table.",
+      "translation": "<code>Stream&lt;T&gt;</code> <strong>stream</strong> <code>(Query query, Class&lt;T&gt; entityClass)</code>：从表中查询类型为 <code>T</code> 的对象的流。",
+      "count": 2
+    },
+    {
+      "source": "<code>List&lt;T&gt;</code> <strong>select</strong> <code>(String cql, Class&lt;T&gt; entityClass)</code>: Ad-hoc query for a list of objects of type <code>T</code> from the table by providing a CQL statement.",
+      "translation": "<code>List&lt;T&gt;</code> <strong>select</strong> <code>(String cql, Class&lt;T&gt; entityClass)</code>: 通过提供 CQL 语句，从表中查询类型为 <code>T</code> 的对象的临时列表。",
+      "count": 2
+    },
+    {
+      "source": "<code>T</code> <strong>selectOne</strong> <code>(String cql, Class&lt;T&gt; entityClass)</code>: Ad-hoc query for a single object of type <code>T</code> from the table by providing a CQL statement.",
+      "translation": "<code>T</code> <strong>selectOne</strong> <code>(String cql, Class&lt;T&gt; entityClass)</code>：通过提供 CQL 语句，从表中查询单个类型为 <code>T</code> 的对象的临时查询。",
+      "count": 2
+    },
+    {
+      "source": "<code>Stream&lt;T&gt;</code> <strong>stream</strong> <code>(String cql, Class&lt;T&gt; entityClass)</code>: Ad-hoc query for a stream of objects of type <code>T</code> from the table by providing a CQL statement.",
+      "translation": "<code>Stream&lt;T&gt;</code> <strong>stream</strong> <code>(String cql, Class&lt;T&gt; entityClass)</code>：通过提供 CQL 语句，从表中查询类型为 <code>T</code> 的对象的流式结果。",
+      "count": 2
+    },
+    {
+      "source": "<code>[Reactive]CassandraTemplate</code> has several convenient methods for saving and inserting your objects.\nTo have more fine-grained control over the conversion process, you can register Spring <code>Converter</code> instances with the <code>MappingCassandraConverter</code>\n(for example, <code>Converter&lt;Row, Person&gt;</code>).",
+      "translation": "<code>[Reactive]CassandraTemplate</code> 提供了多种便捷的方法来保存和插入对象。  \n若需对转换过程进行更精细的控制，您可以将 Spring <code>Converter</code> 实例注册到 <code>MappingCassandraConverter</code> 中（例如 <code>Converter&lt;Row, Person&gt;</code>）。",
+      "count": 2
+    },
+    {
+      "source": "<code>WriteResult</code> <strong>insert</strong> <code>(Object objectToSave, InsertOptions options)</code>: Inserts the object in an Apache Cassandra table and applies <code>InsertOptions</code>.",
+      "translation": "<code>WriteResult</code> <strong>insert</strong> <code>(Object objectToSave, InsertOptions options)</code>：将对象插入到 Apache Cassandra 表中并应用 <code>InsertOptions</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>WriteResult</code> <strong>update</strong> <code>(Object objectToSave, UpdateOptions options)</code>: Updates the object in an Apache Cassandra table and applies <code>UpdateOptions</code>.",
+      "translation": "<code>WriteResult</code> <strong>update</strong> <code>(Object objectToSave, UpdateOptions options)</code>：更新 Apache Cassandra 表中的对象并应用 <code>UpdateOptions</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>Update</code> <strong>remove</strong> <code>(String columnName, Object value)</code>: Removes the value from the collection by using the <code>-</code> update assignment.",
+      "translation": "<code>Update</code> <strong>remove</strong> <code>(String columnName, Object value)</code>：使用 `-` 更新赋值从集合中移除该值。",
+      "count": 2
+    },
+    {
+      "source": "<code>Update</code> <strong>increment</strong> <code>(String columnName, Number delta)</code>: Updates by using the <code>+</code> update assignment.",
+      "translation": "<code>Update</code> <strong>increment</strong> <code>(String columnName, Number delta)</code>：使用 `+` 更新赋值进行更新。",
+      "count": 2
+    },
+    {
+      "source": "<code>Update</code> <strong>decrement</strong> <code>(String columnName, Number delta)</code>: Updates by using the <code>-</code> update assignment.",
+      "translation": "<code>Update</code> <strong>decrement</strong> <code>(String columnName, Number delta)</code>：使用减号（-）更新赋值进行更新。",
+      "count": 2
+    },
+    {
+      "source": "<code>Update</code> <strong>set</strong> <code>(String columnName, Object value)</code>: Updates by using the <code>=</code> update assignment.",
+      "translation": "<code>Update</code> <strong>set</strong> <code>(String columnName, Object value)</code>：使用 <code>=</code> 赋值运算符进行更新。",
+      "count": 2
+    },
+    {
+      "source": "<code>boolean</code> <strong>delete</strong> <code>(Query query, Class&lt;?&gt; entityClass)</code>: Deletes the objects selected by <code>Query</code>.",
+      "translation": "<code>boolean</code> <strong>delete</strong> <code>(Query query, Class&lt;?&gt; entityClass)</code>：删除由 <code>Query</code> 选中的对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>T</code> <strong>delete</strong> <code>(T entity, QueryOptions queryOptions)</code>: Deletes the given object applying <code>QueryOptions</code>.",
+      "translation": "<code>T</code> <strong>delete</strong> <code>(T entity, QueryOptions queryOptions)</code>：应用 <code>QueryOptions</code> 删除给定对象。",
+      "count": 2
+    },
+    {
+      "source": "The <code>CassandraTemplate</code> class (and its reactive variant <code>ReactiveCassandraTemplate</code>), located in the <code>org.springframework.data.cassandra</code> package, is the central class in Spring’s Cassandra support and provides a rich feature set to interact with the database.\nThe template offers convenience operations to create, update, delete, and query Cassandra, and provides a mapping between your domain objects and rows in Cassandra tables.",
+      "translation": "位于 `org.springframework.data.cassandra` 包中的 `<code>CassandraTemplate</code>` 类（及其响应式变体 `<code>ReactiveCassandraTemplate</code>`）是 Spring 对 Cassandra 支持的核心类，提供了丰富的功能集以与数据库进行交互。该模板提供了创建、更新、删除和查询 Cassandra 的便捷操作，并在您的领域对象与 Cassandra 表中的行之间建立映射关系。",
+      "count": 2
+    },
+    {
+      "source": "The mapping between rows in Cassandra and application domain classes is done by delegating to an implementation of the <code>CassandraConverter</code> interface.\nSpring provides a default implementation, <code>MappingCassandraConverter</code>, but you can also write your own custom converter.\nSee the section on\n<a class=\"xref page\" href=\"../object-mapping.html\">Cassandra conversion</a> for more detailed information.",
+      "translation": "Cassandra 行与应用领域类之间的映射是通过委托给 <code>CassandraConverter</code> 接口的实现来完成的。Spring 提供了一个默认实现 <code>MappingCassandraConverter</code>，但您也可以编写自己的自定义转换器。有关更详细的信息，请参阅<a class=\"xref page\" href=\"../object-mapping.html\">Cassandra 转换</a>部分。",
+      "count": 2
+    },
+    {
+      "source": "In earlier sections, we saw how to retrieve a single object by using the <code>selectOneById</code> method on <code>[Reactive]CassandraTemplate</code>.\nDoing so returns a single domain object.\nWe can also query for a collection of rows to be returned as a list of domain objects.\nAssuming we have a number of <code>Person</code> objects with name and age values stored as rows in a table and that each person has an account balance, we can now run a query by using the following code:",
+      "translation": "在前面的章节中，我们了解了如何使用 <code>[Reactive]CassandraTemplate</code> 上的 <code>selectOneById</code> 方法来检索单个对象。这样做会返回一个单一的领域对象。我们也可以查询一组行，并将其作为领域对象的列表返回。假设我们有多个 <code>Person</code> 对象，其姓名和年龄值以行的形式存储在表中，并且每个人都有一个账户余额，那么我们可以使用以下代码运行查询：",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>and</strong> <code>(CriteriaDefinition criteria)</code>: Used to add additional criteria to the query.",
+      "translation": "<code>Query</code> 与 <code>(CriteriaDefinition criteria)</code>：用于向查询添加附加条件。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>columns</strong> <code>(Columns columns)</code>: Used to define columns to be included in the query results.",
+      "translation": "<code>Query</code> <strong>columns</strong> <code>(Columns columns)</code>：用于定义要包含在查询结果中的列。",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> <strong>sort</strong> <code>(Sort sort)</code>: Used to provide a sort definition for the results.",
+      "translation": "<code>Query</code> <strong>sort</strong> <code>(Sort sort)</code>：用于为结果提供排序定义。",
+      "count": 2
+    },
+    {
+      "source": "When not specifying <code>Query.colums(…)</code>, all columns are selected (<code>SELECT * FROM …</code>) to enable access to all available columns from entities through <code>@Value(…)</code> and when using open projections.",
+      "translation": "当未指定 `Query.columns(…)` 时，将选择所有列（即执行 `SELECT * FROM …`），以便通过 `@Value(…)` 和开放投影访问实体中的所有可用列。",
+      "count": 2
+    },
+    {
+      "source": "You can configure the default <code>ProjectionFunction</code> on <code>StatementFactory</code> for each <code>CassandraTemplate</code> instance to influence the default column selection:",
+      "translation": "您可以为每个 `CassandraTemplate` 实例在 `StatementFactory` 上配置默认的 `<code>ProjectionFunction</code>`，以影响默认列的选择：",
+      "count": 2
+    },
+    {
+      "source": "Spring Data for Apache Cassandra relies on the DataStax Java driver’s <code>CodecRegistry</code> to ensure type support.\nAs types are added or changed, the Spring Data for Apache Cassandra module continues to function without requiring changes.\nSee <a href=\"https://docs.datastax.com/en/cql/3.3/cql/cql_reference/cql_data_types_c.html\">CQL data types</a>\nand “<a class=\"xref page\" href=\"../object-mapping.html#mapping-conversion\">Data Mapping and Type Conversion</a>” for the current type mapping matrix.",
+      "translation": "Spring Data for Apache Cassandra 依赖 DataStax Java 驱动程序的 `<code>CodecRegistry` 来确保类型支持。  \n当添加或更改类型时，Spring Data for Apache Cassandra 模块将继续正常工作，无需进行任何修改。  \n请参阅 <a href=\"https://docs.datastax.com/en/cql/3.3/cql/cql_reference/cql_data_types_c.html\">CQL 数据类型</a>  \n以及\"<a class=\"xref page\" href=\"../object-mapping.html#mapping-conversion\">数据映射与类型转换</a>\"以获取当前的类型映射矩阵。",
+      "count": 2
+    },
+    {
+      "source": "<code>void</code> <strong>insert</strong> <code>(Object objectToSave)</code>: Inserts the object in an Apache Cassandra table.",
+      "translation": "<code>void</code> <strong>insert</strong> <code>(Object objectToSave)</code>：将对象插入到 Apache Cassandra 表中。",
+      "count": 2
+    },
+    {
+      "source": "<code>void</code> <strong>update</strong> <code>(Object objectToSave)</code>: Updates the object in an Apache Cassandra table.",
+      "translation": "<code>void</code> <strong>update</strong> <code>(Object objectToSave)</code>：更新 Apache Cassandra 表中的对象。",
+      "count": 2
+    },
+    {
+      "source": "You can manage the table name that is used for operating on the tables in two ways.\nThe default table name is the simple class name changed to start with a lower-case letter.\nSo, an instance of the <code>com.example.Person</code> class would be stored in the <code>person</code> table.\nThe second way is to specify a table name in the <code>@Table</code> annotation.",
+      "translation": "您可以通过两种方式来管理用于操作表的表名。  \n默认表名是将简单的类名转换为以小写字母开头的形式。因此，<code>com.example.Person</code> 类的实例将存储在 <code>person</code> 表中。  \n第二种方式是在 <code>@Table</code> 注解中指定表名。",
+      "count": 2
+    },
+    {
+      "source": "In addition to the <code>Query</code> discussed earlier, we provide the update definition by using an <code>Update</code> object.\nThe <code>Update</code> class has methods that match the update assignments available for Apache Cassandra.",
+      "translation": "除了前面讨论的<code>Query</code>，我们还通过<code>Update</code>对象提供更新定义。\n<code>Update</code>类提供了与Apache Cassandra中可用的更新赋值相匹配的方法。",
+      "count": 2
+    },
+    {
+      "source": "<code>boolean</code> <strong>update</strong> <code>(Query query, Update update, Class&lt;?&gt; entityClass)</code>: Updates a selection of objects in the Apache Cassandra table.",
+      "translation": "<code>boolean</code> <strong>update</strong> <code>(Query query, Update update, Class&lt;?&gt; entityClass)</code>：更新 Apache Cassandra 表中的选定对象。",
+      "count": 2
+    },
+    {
+      "source": "The <code>Update</code> class can be used with a little 'syntax sugar', as its methods are meant to be chained together.\nAlso, you can kick-start the creation of a new <code>Update</code> instance with the static method <code>public static Update update(String key, Object value)</code> and by using static imports.",
+      "translation": "`Update` 类可以配合少量“语法糖”使用，因为其方法设计为可链式调用。此外，您可以利用静态方法 `public static Update update(String key, Object value)` 以及静态导入来快速创建新的 `Update` 实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>Update</code> <strong>clear</strong> <code>(String columnName)</code>: Clears the collection.",
+      "translation": "<code>Update</code> <strong>clear</strong> <code>(String columnName)</code>：清空集合。",
+      "count": 2
+    },
+    {
+      "source": "<code>T</code> <strong>delete</strong> <code>(T entity)</code>: Deletes the given object.",
+      "translation": "<code>T</code> <strong>delete</strong> <code>(T entity)</code>：删除给定对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>boolean</code> <strong>deleteById</strong> <code>(Object id, Class&lt;?&gt; entityClass)</code>: Deletes the object using the given Id.",
+      "translation": "<code>boolean</code> <strong>deleteById</strong> <code>(Object id, Class&lt;?&gt; entityClass)</code>：使用给定的 ID 删除对象。",
+      "count": 2
+    },
+    {
+      "source": "Another central feature of <code>[Reactive]CassandraTemplate</code> is exception translation of exceptions thrown in the Cassandra Java driver into Spring’s portable Data Access Exception hierarchy.\nSee the section on\n<a class=\"xref page\" href=\"cql-template.html#exception-translation\">exception translation</a> for more information.",
+      "translation": "[Reactive]CassandraTemplate 的另一个核心特性是将 Cassandra Java 驱动抛出的异常转换为 Spring 可移植的数据访问异常层次结构。有关更多信息，请参阅<a class=\"xref page\" href=\"cql-template.html#exception-translation\">异常转换</a>部分。",
+      "count": 2
+    },
+    {
+      "source": "There are two ways to get a <code>CassandraTemplate</code>, depending on how you load you Spring <code>ApplicationContext</code>:",
+      "translation": "获取 `<code>CassandraTemplate</code>` 有两种方式，具体取决于您加载 Spring `<code>ApplicationContext</code>` 的方式：",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"#cassandra-template-bean-lookup-applicationcontext\">Bean Lookup with <code>ApplicationContext</code></a>",
+      "translation": "<a href=\"#cassandra-template-bean-lookup-applicationcontext\">使用 ApplicationContext 查找 Bean</a>",
+      "count": 2
+    },
+    {
+      "source": "You can also look up the <code>[Reactive]CassandraTemplate</code> bean from the <code>ApplicationContext</code>, as shown in the following example:",
+      "translation": "此外，还可以从<code>ApplicationContext</code>中查找<code>[Reactive]CassandraTemplate</code>bean，示例如下：",
+      "count": 2
+    },
+    {
+      "source": "This query should return a list of <code>Person</code> objects that meet the specified criteria.\nThe <code>Criteria</code> class has the following methods that correspond to the operators provided in Apache Cassandra:",
+      "translation": "该查询应返回符合指定条件的 <code>Person</code> 对象列表。  \n<code>Criteria</code> 类包含以下方法，分别对应 Apache Cassandra 提供的运算符：",
+      "count": 2
+    },
+    {
+      "source": "<code>Query</code> is immutable once created.\nInvoking methods creates new immutable (intermediate) <code>Query</code> objects.",
+      "translation": "`Query` 在创建后是不可变的。  \n调用方法会生成新的不可变（中间）`Query` 对象。",
+      "count": 2
+    },
+    {
+      "source": "Explicitly specifying columns through <code>ProjectionFunctions.mappedProperties()</code> will limit the selection to mapped properties of the entity type but its explicit nature will validate queries against the entity mapping when running the query and any undesired schema changes will become visible through exceptions.\nNote that any unmapped properties won’t be available to <code>@Value(…)</code>.",
+      "translation": "通过显式指定 `<code>ProjectionFunctions.mappedProperties()</code>` 中的列，将把选择范围限制在实体类型的映射属性上；其显式的特性会在执行查询时针对实体映射验证查询，任何不期望的架构变更都可通过异常显现。  \n请注意，任何未映射的属性对 `<code>@Value(…)</code>` 均不可用。",
+      "count": 2
+    },
+    {
+      "source": "Using explicit column selection through <code>Query.columns(…)</code> will bypass <code>Columns</code> computation from projection functions.",
+      "translation": "通过显式使用 `<code>Query.columns(…)</code>` 进行列选择，将绕过由投影函数执行的 `<code>Columns</code>` 计算。",
+      "count": 2
+    },
+    {
+      "source": "<code>Comments</code> is the domain type defining a vector column and the <code>comment</code> column.",
+      "translation": "`Comments` 是定义向量列和 `comment` 列的领域类型。",
+      "count": 2
+    },
+    {
+      "source": "You can also configure additional options such as TTL, consistency level, and lightweight transactions when using <code>InsertOptions</code> and <code>UpdateOptions</code>.",
+      "translation": "在使用<code>InsertOptions</code>和<code>UpdateOptions</code>时，您还可以配置其他选项，例如TTL、一致性级别和轻量级事务。",
+      "count": 2
+    },
+    {
+      "source": "<code>batchOps</code>: Creates a new <code>[Reactive]CassandraBatchOperations</code> to populate the batch.",
+      "translation": "<code>batchOps</code>：创建一个新的 <code>[Reactive]CassandraBatchOperations</code> 以填充批处理操作。",
+      "count": 2
+    },
+    {
+      "source": "<code>insert</code>: Takes a single object, an array (var-args), or an <code>Iterable</code> of objects to insert.",
+      "translation": "<code>insert</code>：接受单个对象、数组（可变参数）或对象的 <code>Iterable</code> 以执行插入操作。",
+      "count": 2
+    },
+    {
+      "source": "<code>update</code>: Takes a single object, an array (var-args), or an <code>Iterable</code> of objects to update.",
+      "translation": "<code>update</code>：接受单个对象、数组（可变参数）或对象的 <code>Iterable</code> 集合以进行更新。",
+      "count": 2
+    },
+    {
+      "source": "<code>delete</code>: Takes a single object, an array (var-args), or an <code>Iterable</code> of objects to delete.",
+      "translation": "<code>delete</code>：接受单个对象、数组（可变参数）或对象的 <code>Iterable</code> 以执行删除操作。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>prepend(Object value)</code>: Prepends a collection value to the existing collection by using the <code>+</code> update assignment.",
+      "translation": "更新 <code>prepend(Object value)</code>：通过使用 <code>+</code> 更新赋值操作符，将集合值添加到现有集合的开头。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>prependAll(Object…​ values)</code>: Prepends all collection values to the existing collection by using the <code>+</code> update assignment.",
+      "translation": "更新 <code>prependAll(Object…​ values)</code>：通过使用 <code>+</code> 更新赋值，将所有集合值添加到现有集合的前面。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>append(Object value)</code>: Appends a collection value to the existing collection by using the <code>+</code> update assignment.",
+      "translation": "更新 <code>append(Object value)</code>：使用 <code>+</code> 更新赋值将集合值追加到现有集合中。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>append(Object…​ values)</code>: Appends all collection values to the existing collection by using the <code>+</code> update assignment.",
+      "translation": "更新 <code>append(Object…​ values)</code>：使用 <code>+</code> 更新赋值将所有集合值追加到现有集合中。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>entry(Object key, Object value)</code>: Adds a map entry by using the <code>+</code> update assignment.",
+      "translation": "更新 <code>entry(Object key, Object value)</code>：使用 <code>+</code> 更新赋值添加映射条目。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>addAll(Map&lt;? extends Object, ? extends Object&gt; map)</code>: Adds all map entries to the map by using the <code>+</code> update assignment.",
+      "translation": "更新 <code>addAll(Map&lt;? extends Object, ? extends Object&gt; map)</code>：使用 <code>+</code> 更新赋值操作符将所有映射条目添加到该映射中。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>atIndex(int index).to(Object value)</code>: Sets a collection at the given index to a value using the <code>=</code> update assignment.",
+      "translation": "更新<code>atIndex(int index).to(Object value)</code>：使用<code>=</code>赋值操作符将集合在给定索引处设置为指定值。",
+      "count": 2
+    },
+    {
+      "source": "Update <code>atKey(String object).to(Object value)</code>: Sets a map entry at the given key to a value the <code>=</code> update assignment.",
+      "translation": "更新<code>atKey(String object).to(Object value)</code>：在指定键处设置一个使用<code>=</code>更新赋值运算符的值。",
+      "count": 2
+    },
+    {
+      "source": "Note that <code>Update</code> is immutable once created.\nInvoking methods creates new immutable (intermediate) <code>Update</code> objects.",
+      "translation": "请注意，<code>Update</code> 一旦创建即为不可变对象。\n调用方法会生成新的不可变（中间）<code>Update</code> 对象。",
+      "count": 2
+    },
+    {
+      "source": "<code>CassandraTemplate</code> should always be configured as a Spring bean, although we show an example earlier where you can instantiate it directly.\nHowever, because we are assuming the context of making a Spring module, we assume the presence of the Spring container.",
+      "translation": "`CassandraTemplate` 应始终配置为 Spring Bean，尽管我们之前展示了一个可以直接实例化它的示例。然而，由于我们假设的是构建 Spring 模块的上下文，因此我们假定存在 Spring 容器。",
+      "count": 2
+    },
+    {
+      "source": "You can autowire a <code>[Reactive]CassandraOperations</code> into your project, as the following example shows:",
+      "translation": "您可以将 <code>[Reactive]CassandraOperations</code> 自动注入到您的项目中，示例如下：",
+      "count": 2
+    },
+    {
+      "source": "<code>Criteria</code> is immutable once created.",
+      "translation": "<code>Criteria</code> 在创建后是不可变的。",
+      "count": 2
+    },
+    {
+      "source": "The <code>Query</code> class has some additional methods that you can use to provide options for the query:",
+      "translation": "`Query` 类包含一些额外的方法，可用于为查询提供选项：",
+      "count": 2
+    },
+    {
+      "source": "The <code>Query</code> class has the following methods that return rows:",
+      "translation": "`Query` 类包含以下用于返回行的方法：",
+      "count": 2
+    },
+    {
+      "source": "The query methods must specify the target type <code>T</code> that is returned.",
+      "translation": "查询方法必须指定返回的目标类型<T>。",
+      "count": 2
+    },
+    {
+      "source": "If you provide more information to a query (e.g. when using closed DTO or Interface projections through <a href=\"#cassandra.template.query.fluent-template-api\">Fluent Template API</a>) then the column selection will be limited.",
+      "translation": "如果您向查询提供更多信息（例如，在使用通过<a href=\"#cassandra.template.query.fluent-template-api\">Fluent 模板 API</a>的封闭 DTO 或接口投影时），列选择将受到限制。",
+      "count": 2
+    },
+    {
+      "source": "The <code>[Reactive]CassandraOperations</code> interface is one of the central components when it comes to more low-level interaction with Apache Cassandra.\nIt offers a wide range of methods.\nYou can find multiple overloads for every method.\nMost of them cover optional (nullable) parts of the API.",
+      "translation": "<code>[Reactive]CassandraOperations</code> 接口是进行更底层 Apache Cassandra 交互时的核心组件之一。  \n它提供了广泛的方法集。  \n每个方法都有多个重载版本。  \n其中大多数覆盖了 API 的可选（可为 null）部分。",
+      "count": 2
+    },
+    {
+      "source": "Projections are the foundation for querying data returned in a different form than the entity.\nWhile Cassandra’s primary use-case follows a key-value model – storing what you retrieve – Vector search is different.\nRunning Vector search queries typically results in an aggregation or report-like result set.\nA typical query would return some form of content (such as a <code>text</code> column) along with its score (or distance) to the actual vector.",
+      "translation": "投影是查询以不同于实体形式返回的数据的基础。  \n虽然 Cassandra 的主要用例遵循键值模型——存储您检索的内容——但向量搜索则不同。  \n运行向量搜索查询通常会产生聚合或类似报表的结果集。  \n典型的查询会返回某种形式的内容（例如 `<code>text</code>` 列）及其与真实向量的得分（或距离）。",
+      "count": 2
+    },
+    {
+      "source": "Running a Vector Search requires usage of <code>ANN</code> sorting and would typically define a similarity function to determine its distance from the given vector.",
+      "translation": "运行向量搜索需要使用<code>ANN</code>排序，并通常定义一个相似度函数来确定其与给定向量的距离。",
+      "count": 2
+    },
+    {
+      "source": "<code>[Reactive]CassandraTemplate</code> provides a simple way for you to save, update, and delete your domain objects and map those objects to tables managed in Cassandra.",
+      "translation": "<code>[Reactive]CassandraTemplate</code> 提供了一种简单的方法，用于保存、更新和删除您的领域对象，并将这些对象映射到 Cassandra 中管理的表。",
+      "count": 2
+    },
+    {
+      "source": "The simple case of using the <code>INSERT</code> operation is to save a POJO.\nIn this case, the table name is determined by the simple class name (not the fully qualified class name).\nThe table to store the object can be overridden by using mapping metadata.",
+      "translation": "使用 `<code>INSERT</code>` 操作的简单情况是保存一个 POJO。  \n在这种情况下，表名由简单的类名决定（而非完全限定类名）。  \n可以通过映射元数据覆盖用于存储对象的表。",
+      "count": 2
+    },
+    {
+      "source": "When inserting or updating, the <code>id</code> property must be set.\nApache Cassandra has no means to generate an ID.",
+      "translation": "插入或更新时，必须设置 `<code>id</code>` 属性。  \nApache Cassandra 没有生成 ID 的机制。",
+      "count": 2
+    },
+    {
+      "source": "The following methods in the <code>[Reactive]CassandraTemplate</code> interface support this functionality:",
+      "translation": "<code>[Reactive]CassandraTemplate</code> 接口中的以下方法支持此功能：",
+      "count": 2
+    },
+    {
+      "source": "<code>withTimestamp</code>: Applies a TTL to the batch.",
+      "translation": "<code>withTimestamp</code>：为批次应用 TTL。",
+      "count": 2
+    },
+    {
+      "source": "<code>execute</code>: Executes the batch.",
+      "translation": "<code>execute</code>：执行批处理。",
+      "count": 2
+    },
+    {
+      "source": "The following example shows updating a single account object by adding a one-time $50.00 bonus to the balance with the <code>+</code> assignment:",
+      "translation": "以下示例展示了通过添加一次性 50.00 美元奖金到余额中，使用 `<code>+</code>` 赋值运算符来更新单个账户对象：",
+      "count": 2
+    },
+    {
+      "source": "Most methods return the <code>Update</code> object to provide a fluent API for code styling purposes.",
+      "translation": "大多数方法会返回 `<code>Update` 对象，以便为代码风格提供流式 API。",
+      "count": 2
+    },
+    {
+      "source": "The <code>Update</code> class has the following methods:",
+      "translation": "`Update` 类具有以下方法：",
+      "count": 2
+    },
+    {
+      "source": "Consider the following domain model:",
+      "translation": "考虑以下领域模型：",
+      "count": 2
+    },
+    {
+      "source": "The following example uses the save operation and retrieves its contents:",
+      "translation": "以下示例使用保存操作并检索其内容：",
+      "count": 2
+    },
+    {
+      "source": "You can use the following operations to insert and save:",
+      "translation": "您可以使用以下操作进行插入和保存：",
+      "count": 2
+    },
+    {
+      "source": "You can use the following update operations:",
+      "translation": "您可以使用以下更新操作：",
+      "count": 2
+    },
+    {
+      "source": "You can also use the old fashioned way and write your own CQL statements, as the following example shows:",
+      "translation": "您还可以采用传统方式，自行编写 CQL 语句，如下例所示：",
+      "count": 2
+    },
+    {
+      "source": "The Cassandra protocol supports inserting a collection of rows in one operation by using a batch.",
+      "translation": "Cassandra 协议支持通过批处理一次性插入多行数据。",
+      "count": 2
+    },
+    {
+      "source": "For updates, you can select to update a number of rows.",
+      "translation": "若要更新，您可以选择更新多行。",
+      "count": 2
+    },
+    {
+      "source": "The update method can update rows, as follows:",
+      "translation": "update 方法可以更新行，如下所示：",
+      "count": 2
+    },
+    {
+      "source": "The following listing shows a few update examples:",
+      "translation": "以下列表展示了一些更新示例：",
+      "count": 2
+    },
+    {
+      "source": "You can use the following overloaded methods to remove an object from the database:",
+      "translation": "您可以使用以下重载方法来从数据库中删除对象：",
+      "count": 2
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Cassandra</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Cassandra</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-cassandra/src/main/antora/modules/ROOT/pages/cassandra/template.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-cassandra\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-cassandra/src/main/antora/modules/ROOT/pages/cassandra/template.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-cassandra\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 2
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Cassandra</a></li>\n      <li><a href=\"../cassandra.html\">Cassandra Support</a></li>\n      <li><a href=\"template.html\">Persisting Entities</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Cassandra</a></li>\n      <li><a href=\"../cassandra.html\">Cassandra 支持</a></li>\n      <li><a href=\"template.html\">持久化实体</a></li>\n    </ul>\n  </nav>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring 团队学院</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 2
+    },
+    {
+      "source": "Querying for rows using <code>[Reactive]CassandraTemplate</code>",
+      "translation": "使用 `<code>[Reactive]CassandraTemplate</code>` 查询行数据",
+      "count": 2
+    },
+    {
+      "source": "Inserting and retrieving objects by using the <code>[Reactive]CassandraTemplate</code>",
+      "translation": "使用 `<code>[Reactive]CassandraTemplate</code>` 插入和检索对象",
+      "count": 2
+    },
+    {
+      "source": "Updating rows using <code>[Reactive]CasandraTemplate</code>",
+      "translation": "使用 `<code>[Reactive]CasandraTemplate</code>` 更新行数据",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在所有的 Spring 文档中搜索</a>",
+      "count": 2
+    },
+    {
+      "source": "Example 1. Vector Search model",
+      "translation": "示例 1。向量搜索模型",
+      "count": 2
+    },
+    {
+      "source": "Example 2. Using Vector Search",
+      "translation": "示例 2：使用向量搜索",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">Cassandra Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">Cassandra-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/aot.html\">Ahead of Time Optimizations</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories.html\">仓储</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/repositories.html\">Cassandra 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/query-methods.html\">Cassandra 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories/aot.html\">提前优化</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Initially insert document. <code>version</code> is set to <code>0</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Load the just inserted document. <code>version</code> is still <code>0</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Update the document with <code>version = 0</code>.\nSet the <code>lastname</code> and bump <code>version</code> to <code>1</code>.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Try to update the previously loaded document that still has <code>version = 0</code>.\nThe operation fails with an <code>OptimisticLockingFailureException</code>, as the current <code>version</code> is <code>1</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>最初插入文档。<code>version</code> 被设置为 <code>0</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>加载刚刚插入的文档。<code>version</code> 仍然是 <code>0</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>使用 <code>version = 0</code> 更新文档。\n设置 <code>lastname</code> 并将 <code>version</code> 提升至 <code>1</code>。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>尝试更新之前加载的文档，该文档仍具有 <code>version = 0</code>。\n由于当前的 <code>version</code> 为 <code>1</code>，操作失败并抛出 <code>OptimisticLockingFailureException</code>。</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../cassandra.html\">Cassandra Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">Connecting to Cassandra with Spring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"schema-management.html\">Schema Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cql-template.html\">CQL Template API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactive-cassandra.html\">Reactive Infrastructure</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">Persisting Entities</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"prepared-statements.html\">Prepared Statements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"converters.html\">Type-based Converter</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"property-converters.html\">Property-based Converters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Auditing Configuration for Cassandra</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../cassandra.html\">Cassandra 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">入门指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">使用 Spring 连接 Cassandra</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"schema-management.html\">模式管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cql-template.html\">CQL 模板 API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactive-cassandra.html\">响应式基础设施</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">持久化实体</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"prepared-statements.html\">预编译语句</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"converters.html\">基于类型的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"property-converters.html\">基于属性的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Cassandra 审计配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"value-expressions.html\">值表达式基础</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Select the columns to query.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Include a function call to <code>similarity_cosine(vector, […])</code>. <code>Columns.select(…)</code> uses a selector builder customizer to configure the actual selection.\nMake sure to declare an alias to map the result onto <code>CommentSearch.similarity</code> as result mapping uses column names.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>Use the <code>VectorSort.ann(…)</code> to define the sort order in comparison to the given vector.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Define the target type to map the result to.\nThe <code>CommentSearch</code> type is result projection type defining columns that map the result.</td>\n</tr>\n</tbody>",
+      "translation": "1 选择要查询的列。\n2 包含对 `similarity_cosine(vector, […])` 的函数调用。`Columns.select(…)` 使用选择器构建自定义器来配置实际的选择。确保声明一个别名以将结果映射到 `CommentSearch.similarity`，因为结果映射使用列名。\n3 使用 `VectorSort.ann(…)` 定义相对于给定向量的排序顺序。\n4 定义目标类型以将结果映射到该类型。`CommentSearch` 类型是结果投影类型，定义了映射结果的列。",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-1.5-to-2.0.html\">Migration Guide from 1.x to 2.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.2-to-3.0.html\">Migration Guide from 2.x to 3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.0-to-4.0.html\">Migration Guide from 3.x to 4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.0-to-4.3.html\">Migration Guide from 4.x to 4.3</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-1.5-to-2.0.html\">从 1.x 到 2.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-2.2-to-3.0.html\">从 2.x 到 3.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-3.0-to-4.0.html\">从 3.x 到 4.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../migration-guide/migration-guide-4.0-to-4.3.html\">从 4.x 到 4.3 的迁移指南</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">Object Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe Template API has different execution model flavors.\nThe basic <code>CassandraTemplate</code> uses a blocking (imperative-synchronous) execution model.\nYou can use <code>AsyncCassandraTemplate</code> for asynchronous execution and synchronization with <code>CompletableFuture</code> instances or <code>ReactiveCassandraTemplate</code> for reactive execution.\n</td>\n</tr>\n</tbody>",
+      "translation": "模板 API 具有不同的执行模型类型。\n基本的 `CassandraTemplate` 使用阻塞（命令式同步）执行模型。\n您可以使用 `AsyncCassandraTemplate` 进行异步执行，并通过 `CompletableFuture` 实例进行同步；或者使用 `ReactiveCassandraTemplate` 进行响应式执行。",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nThe new fluent template API methods (that is, <code>query(…)</code>, <code>insert(…)</code>, <code>update(…)</code>, and <code>delete(…)</code>) use effectively thread-safe supporting objects to compose the CQL statement.\nHowever, it comes at the added cost of additional young-gen JVM heap overhead, since the design is based on final fields for the various CQL statement components and construction on mutation.\nYou should be careful when possibly inserting or deleting a large number of objects (such as inside a loop, for instance).\n</td>\n</tr>\n</tbody>",
+      "translation": "新的流式模板 API 方法（即 `query(…)`、`insert(…)`、`update(…)` 和 `delete(…)`）使用有效的线程安全支持对象来组合 CQL 语句。然而，这种设计基于各种 CQL 语句组件的最终字段以及可变性构建，因此会带来额外的年轻代 JVM 堆开销。在可能插入或删除大量对象时（例如在循环中），请格外小心。",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-tip\" title=\"Tip\"></i>\n</td>\n<td class=\"content\">\nYou can directly apply <a class=\"xref page\" href=\"../repositories/projections.html\">Projections</a> to resulting documents by providing only the <code>interface</code> type through <code>as(Class&lt;?&gt;)</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-tip\" title=\"提示\"></i>\n</td>\n<td class=\"content\">\n您可以通过仅通过 <code>as(Class&lt;?&gt;)</code> 提供 <code>interface</code> 类型，直接将<a class=\"xref page\" href=\"../repositories/projections.html\">投影 (Projections)</a>应用于生成的文档。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe preferred way to reference operations on a <code>[Reactive]CassandraTemplate</code> instance is through the\n<code>[Reactive]CassandraOperations</code> interface.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n引用 <code>[Reactive]CassandraTemplate</code> 实例上操作的首选方式是通过 <code>[Reactive]CassandraOperations</code> 接口。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe difference between insert and update operations is that <code>INSERT</code> operations do not insert <code>null</code> values.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nINSERT 操作与 UPDATE 操作的差异在于，INSERT 操作不会插入 <code>null</code> 值。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nOnce configured, a template instance is thread-safe and can be reused across multiple instances.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n配置完成后，模板实例是线程安全的，可在多个实例中重复使用。\n</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nOptimistic Locking is only supported with single-entity operations and not for batch operations.\n</td>\n</tr>\n</tbody>",
+      "translation": "<p><span class=\"icon\"><i class=\"fa icon-note\" title=\"Note\"></i></span><span class=\"content\">乐观锁仅支持单实体操作，不支持批量操作。</span></p>",
+      "count": 2
+    },
+    {
+      "source": "Bean Lookup with <code>ApplicationContext</code>",
+      "translation": "使用 <code>ApplicationContext</code> 进行 Bean 查找",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.query\"></a>Querying Rows",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.query\"></a>查询行",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.query.table\"></a>Querying Rows in a Table",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.query.table\"></a>查询表中的行",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.query.criteria\"></a>Methods for the Criteria class",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.query.criteria\"></a>Criteria 类的方法",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.query.query-class\"></a>Methods for the Query class",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.query.query-class\"></a>Query 类的方法",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.query.rows\"></a>Methods for Querying for Rows",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.query.rows\"></a>查询行的方法",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.query.columns\"></a>Column Projection",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.query.columns\"></a>列投影",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.query.fluent-template-api\"></a>Fluent Template API",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.query.fluent-template-api\"></a>流式模板 API",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_vector_search_queries\"></a>Vector Search Queries",
+      "translation": "<a class=\"anchor\" href=\"#_vector_search_queries\"></a>向量搜索查询",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra-template.save-update-remove\"></a>Saving, Updating, and Removing Rows",
+      "translation": "<a class=\"anchor\" href=\"#cassandra-template.save-update-remove\"></a>保存、更新和删除行",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.type-mapping\"></a>Type Mapping",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.type-mapping\"></a>类型映射",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.insert-update\"></a>Methods for Inserting and Updating rows",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.insert-update\"></a>插入和更新行的方法",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.insert-update.table\"></a>Which Table Are My Rows Inserted into?",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.insert-update.table\"></a>我的行被插入到哪个表中？",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.batch\"></a>Inserting, Updating, and Deleting Individual Objects in a Batch",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.batch\"></a>在批处理中插入、更新和删除单个对象",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.update\"></a>Updating Rows in a Table",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.update\"></a>更新表中的行",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.update.methods\"></a>Methods for Executing Updates for Rows",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.update.methods\"></a>执行行更新的命令",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.update.update\"></a>Methods for the Update class",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.update.update\"></a>Update 类的方法",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.delete\"></a>Methods for Removing Rows",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.delete\"></a>删除行的方法",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#cassandra.template.optimistic-locking\"></a>Optimistic Locking",
+      "translation": "<a class=\"anchor\" href=\"#cassandra.template.optimistic-locking\"></a>乐观锁",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 2
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 2
+    },
+    {
+      "source": "Spring Data Cassandra",
+      "translation": "Spring Data Cassandra",
+      "count": 2
+    },
+    {
+      "source": "Persisting Entities",
+      "translation": "持久实体",
+      "count": 2
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 2
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 2
+    }
+  ]
+}

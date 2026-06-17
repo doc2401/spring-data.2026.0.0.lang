@@ -1,0 +1,871 @@
+{
+  "created_at": "2026-06-17 07:20:02",
+  "updated_at": "2026-06-17 07:20:02",
+  "stats": {
+    "total_entries": 171,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 181,
+    "entries_with_hits": 171,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0584795321637428,
+    "usage_percentage": 0.0171
+  },
+  "items": [
+    {
+      "source": "If there is a single static factory method annotated with <code>@PersistenceCreator</code> then it is used.",
+      "translation": "如果存在一个带有<code>@PersistenceCreator</code>注解的单个静态工厂方法，则使用该方法。",
+      "count": 2
+    },
+    {
+      "source": "If there are multiple constructors and exactly one is annotated with <code>@PersistenceCreator</code>, it is used.",
+      "translation": "如果存在多个构造函数且其中恰好有一个被标注为<code>@PersistenceCreator</code>，则使用该构造函数。",
+      "count": 2
+    },
+    {
+      "source": "If the type is a Java <code>Record</code> the canonical constructor is used.",
+      "translation": "如果类型是 Java 的<code>Record</code>，则使用规范构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Which property should be persisted (default to all declared properties)?\nYou can exclude properties by annotating these with <code>@Transient</code>.",
+      "translation": "应持久化哪些属性（默认为所有声明的属性）？  \n您可以通过使用 <code>@Transient</code> 注解来排除某些属性。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data automatically tries to detect a persistent entity’s constructor to be used to materialize objects of that type.\nThe resolution algorithm works as follows:",
+      "translation": "Spring Data 会自动尝试检测持久化实体中用于实例化该类型对象的构造函数。\n解析算法的工作方式如下：",
+      "count": 2
+    },
+    {
+      "source": "If there is a single constructor, it is used.",
+      "translation": "如果只有一个构造函数，则使用它。",
+      "count": 2
+    },
+    {
+      "source": "If there’s a no-argument constructor, it is used.\nOther constructors will be ignored.",
+      "translation": "如果有无参构造函数，则使用它。  \n其他构造函数将被忽略。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data modules generally support overridden properties holding different values.\nFrom a programming model perspective there are a few things to consider:",
+      "translation": "Spring Data 模块通常支持覆盖属性以持有不同的值。从编程模型的角度来看，有几点需要考虑：",
+      "count": 2
+    },
+    {
+      "source": "How to represent properties in your data store?\nUsing the same field/column name for different values typically leads to corrupt data so you should annotate least one of the properties using an explicit field/column name.",
+      "translation": "如何在数据存储中表示属性？\n使用相同的字段/列名存储不同的值通常会导致数据损坏，因此您应该至少为其中一个属性显式指定字段/列名。",
+      "count": 2
+    },
+    {
+      "source": "A populated object can look like:",
+      "translation": "已填充的对象可能如下所示：",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "Both classes define a <code>field</code> using assignable types. <code>SubType</code> however shadows <code>SuperType.field</code>.\nDepending on the class design, using the constructor could be the only default approach to set <code>SuperType.field</code>.\nAlternatively, calling <code>super.setField(…)</code> in the setter could set the <code>field</code> in <code>SuperType</code>.\nAll these mechanisms create conflicts to some degree because the properties share the same name yet might represent two distinct values.\nSpring Data skips super-type properties if types are not assignable.\nThat is, the type of the overridden property must be assignable to its super-type property type to be registered as override, otherwise the super-type property is considered transient.\nWe generally recommend using distinct property names.",
+      "translation": "两个类都使用可赋值类型定义了 <code>field</code>。然而，<code>SubType</code> 会遮蔽 <code>SuperType.field</code>。  \n根据类的设计，使用构造函数可能是设置 <code>SuperType.field</code> 的唯一默认方式。  \n或者，在 setter 中调用 <code>super.setField(…)</code> 也可以设置 <code>SuperType</code> 中的 <code>field</code>。  \n所有这些机制在某种程度上都会产生冲突，因为属性名称相同，但可能代表两个不同的值。  \n如果类型不可赋值，Spring Data 会跳过超类型的属性。  \n也就是说，被覆盖属性的类型必须可赋值于其超类型属性类型才能注册为覆盖属性；否则，超类型属性将被视为瞬态。  \n我们通常建议使用不同的属性名称。",
+      "count": 1
+    },
+    {
+      "source": "Getters and setters on <code>SubType</code> set only <code>SubType.field</code> and not <code>SuperType.field</code>.\nIn such an arrangement, using the constructor is the only default approach to set <code>SuperType.field</code>.\nAdding a method to <code>SubType</code> to set <code>SuperType.field</code> via <code>this.SuperType.field = …</code> is possible but falls outside of supported conventions.\nProperty overrides create conflicts to some degree because the properties share the same name yet might represent two distinct values.\nWe generally recommend using distinct property names.",
+      "translation": "<code>SubType</code> 上的 getter 和 setter 仅设置 <code>SubType.field</code>，而不会设置 <code>SuperType.field</code>。  \n在这种安排下，使用构造函数是设置 <code>SuperType.field</code> 的唯一默认方法。  \n虽然可以通过在 <code>SubType</code> 中添加一个方法来通过 <code>this.SuperType.field = …</code> 设置 <code>SuperType.field</code>，但这不符合支持的习惯用法。  \n属性重写会在一定程度上产生冲突，因为这些属性具有相同的名称，但可能代表两个不同的值。  \n我们通常建议使用不同的属性名称。",
+      "count": 1
+    },
+    {
+      "source": "Auditing works by annotating fields with <code>@CreatedBy</code>, <code>@CreatedDate</code>, <code>@LastModifiedBy</code> and <code>@LastModifiedDate</code>.\nThe framework will automatically inject the correct values on those fields when persisting the entity.\nThe xxxDate annotations must be put on a <code>Date</code> field (or compatible, eg. jodatime classes) while the xxxBy annotations can be put on fields of any class <code>T</code> (albeit both fields must be of the same type).",
+      "translation": "审计功能通过为字段添加 `<code>@CreatedBy</code>`、`<code>@CreatedDate</code>`、`<code>@LastModifiedBy</code>` 和 `<code>@LastModifiedDate</code>` 注解来实现。在持久化实体时，框架会自动向这些字段注入正确的值。  \n`xxxDate` 类型的注解必须应用于 `<code>Date</code>` 字段（或兼容类型，如 JodaTime 类），而 `xxxBy` 类型的注解可以应用于任意类型 `<code>T</code>` 的字段（尽管两个字段必须具有相同的类型）。",
+      "count": 1
+    },
+    {
+      "source": "Couchbase Server supports automatic expiration for documents.\nThe library implements support for it through the <code>@Document</code> annotation.\nYou can set a <code>expiry</code> value which translates to the number of seconds until the document gets removed automatically.\nIf you want to make it expire in 10 seconds after mutation, set it like <code>@Document(expiry = 10)</code>.\nAlternatively, you can configure the expiry using Spring’s property support and the <code>expiryExpression</code> parameter, to allow for dynamically changing the expiry value.\nFor example: <code>@Document(expiryExpression = \"${valid.document.expiry}\")</code>.\nThe property must be resolvable to an int value and the two approaches cannot be mixed.",
+      "translation": "Couchbase Server 支持文档的自动过期功能。该库通过 `<code>@Document</code>` 注解实现了对此功能的支持。您可以设置一个 `<code>expiry</code>` 值，该值表示文档被自动移除前的秒数。如果您希望文档在突变后 10 秒内过期，可以将其设置为 `<code>@Document(expiry = 10)</code>`。或者，您可以使用 Spring 的属性支持以及 `<code>expiryExpression</code>` 参数来配置过期时间，以便动态更改过期值。例如：<code>@Document(expiryExpression = \"${valid.document.expiry}\")</code>。该属性必须可解析为整数值，且这两种方法不能混用。",
+      "count": 1
+    },
+    {
+      "source": "Notice both <code>@CreatedBy</code> and <code>@LastModifiedBy</code> are both put on a <code>String</code> field, so our <code>AuditorAware</code> must work with <code>String</code>.",
+      "translation": "注意，<code>@CreatedBy</code> 和 <code>@LastModifiedBy</code> 都放置在 <code>String</code> 字段上，因此我们的 <code>AuditorAware</code> 必须与 <code>String</code> 配合使用。",
+      "count": 1
+    },
+    {
+      "source": "Every time the <code>name</code> parameter is either not part of the result or its value is <code>null</code>, then the <code>name</code> defaults to <code>unknown</code>.",
+      "translation": "每次 `<code>name</code>` 参数不在结果中或其值为 `<code>null</code>` 时，`<code>name</code>` 将默认为 `<code>unknown</code>`。",
+      "count": 1
+    },
+    {
+      "source": "If you want a different representation of the field name inside the document in contrast to the field name used in your entity, you can set a different name on the <code>@Field</code> annotation.\nFor example if you want to keep your documents small you can set the firstname field to <code>@Field(\"fname\")</code>.\nIn the JSON document, you’ll see <code>{\"fname\": \"..\"}</code> instead of <code>{\"firstname\": \"..\"}</code>.",
+      "translation": "如果您希望在文档中的字段名与实体中使用的字段名不同，可以在 `<code>@Field</code>` 注解上设置不同的名称。例如，如果您希望保持文档的体积较小，可以将 `firstname` 字段设置为 `<code>@Field(\"fname\")</code>`。在 JSON 文档中，您将看到 `<code>{\"fname\": \"..\"}</code>` 而不是 `<code>{\"firstname\": \"..\"}</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Writes to Couchbase-Server buckets can optionally be assigned durability requirements; which instruct Couchbase Server to update the specified document on multiple nodes in memory and/or disk locations across the cluster; before considering the write to be committed.\nDefault durability requirements can also be configured through the <code>@Document</code> or <code>@Durability</code> annotations.\nFor example: <code>@Document(durabilityLevel = DurabilityLevel.MAJORITY)</code> will force mutations to be replicated to a majority of the Data Service nodes. Both of the annotations support expression based durability level assignment via <code>durabilityExpression</code> attribute (Note SPEL is not supported).",
+      "translation": "写入 Couchbase Server 桶时，可以可选地指定持久性要求；该要求指示 Couchbase Server 在将写入视为已提交之前，先在集群中多个节点的内存和/或磁盘位置更新指定的文档。  \n默认持久性要求也可以通过 `<code>@Document</code>` 或 `<code>@Durability</code>` 注解进行配置。  \n例如：`<code>@Document(durabilityLevel = DurabilityLevel.MAJORITY)</code>` 会强制将变更复制到多数数据服务节点。这两个注解均支持通过 `durabilityExpression` 属性基于表达式分配持久性级别（注意不支持 SPEL）。",
+      "count": 1
+    },
+    {
+      "source": "To configure auditing, first you need to have an auditor aware bean in the context.\nSaid bean must be of type <code>AuditorAware&lt;T&gt;</code> (allowing to produce a value that can be stored in the xxxBy fields of type <code>T</code> we saw earlier).\nSecondly, you must activate auditing in your <code>@Configuration</code> class by using the <code>@EnableCouchbaseAuditing</code> annotation.",
+      "translation": "要配置审计功能，首先需要在上下文中引入一个 AuditorAware 类型的 Bean。该 Bean 的类型必须是 <code>AuditorAware&lt;T&gt;</code>（允许生成可存储到之前提到的类型为 <code>T</code> 的 xxxBy 字段中的值）。其次，您必须在 <code>@Configuration</code> 类中使用 <code>@EnableCouchbaseAuditing</code> 注解来启用审计功能。",
+      "count": 1
+    },
+    {
+      "source": "Most of the time, you also need to store a temporal value like a <code>Date</code>.\nSince it can’t be stored directly in JSON, a conversion needs to happen.\nThe library implements default converters for <code>Date</code>, <code>Calendar</code> and JodaTime types (if on the classpath).\nAll of those are represented by default in the document as a unix timestamp (number).\nYou can always override the default behavior with custom converters as shown later.\nHere is an example:",
+      "translation": "通常情况下，您还需要存储一个时间值，例如 <code>Date</code>。  \n由于无法直接在 JSON 中存储该类型，因此需要进行转换。  \n该库为 <code>Date</code>、<code>Calendar</code> 以及 JodaTime 类型（如果位于类路径中）实现了默认转换器。  \n在文档中，这些类型默认均以 Unix 时间戳（数字）形式表示。  \n您始终可以通过自定义转换器覆盖默认行为，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "If the property is immutable but exposes a <code>with…</code> method (see below), we use the <code>with…</code> method to create a new entity instance with the new property value.",
+      "translation": "如果该属性是不可变的，但暴露了 `with…` 方法（见下文），我们使用 `with…` 方法来创建一个具有新属性值的新实体实例。",
+      "count": 1
+    },
+    {
+      "source": "<em>Use factory methods instead of overloaded constructors to avoid <code>@PersistenceCreator</code></em> — With an all-argument constructor needed for optimal performance, we usually want to expose more application use case specific constructors that omit things like auto-generated identifiers etc.\nIt’s an established pattern to rather use static factory methods to expose these variants of the all-args constructor.",
+      "translation": "<em>使用工厂方法而非重载构造函数，以避免使用 <code>@PersistenceCreator</code></em>——由于全参构造函数对于最佳性能是必需的，我们通常希望暴露更多针对特定应用程序用例的构造函数，这些构造函数会省略诸如自动生成的标识符等内容。  \n采用静态工厂方法来暴露全参构造函数的各种变体，是一种成熟的模式。",
+      "count": 1
+    },
+    {
+      "source": "<em>For identifiers to be generated, still use a final field in combination with an all-arguments persistence constructor (preferred) or a <code>with…</code> method</em> —",
+      "translation": "<em>若要生成标识符，仍需使用最终字段结合全参数持久化构造函数（首选）或 <code>with…</code> 方法</em> —",
+      "count": 1
+    },
+    {
+      "source": "<em>Use Lombok to avoid boilerplate code</em> — As persistence operations usually require a constructor taking all arguments, their declaration becomes a tedious repetition of boilerplate parameter to field assignments that can best be avoided by using Lombok’s <code>@AllArgsConstructor</code>.",
+      "translation": "<em>使用 Lombok 避免样板代码</em>——由于持久化操作通常需要包含所有参数的构造函数，其声明往往沦为繁琐的样板式参数到字段赋值重复工作，而使用 Lombok 的 <code>@AllArgsConstructor</code> 可最佳地避免此类问题。",
+      "count": 1
+    },
+    {
+      "source": "Consider the following <code>data</code> class <code>Person</code>:",
+      "translation": "考虑以下 `data` 类 `Person`：",
+      "count": 1
+    },
+    {
+      "source": "Kotlin supports parameter optionality by allowing default values to be used if a parameter is not provided.\nWhen Spring Data detects a constructor with parameter defaulting, then it leaves these parameters absent if the data store does not provide a value (or simply returns <code>null</code>) so Kotlin can apply parameter defaulting. Consider the following class that applies parameter defaulting for <code>name</code>",
+      "translation": "Kotlin 支持通过为参数提供默认值来实现参数的可选性。当 Spring Data 检测到具有参数默认值的构造函数时，如果数据存储未提供相应值（或简单地返回 `<code>null</code>`），它会将这些参数留空，以便 Kotlin 应用参数默认值机制。考虑以下对 `<code>name</code>` 应用参数默认值的类：",
+      "count": 1
+    },
+    {
+      "source": "In Kotlin, all classes are immutable by default and require explicit property declarations to define mutable properties.\nConsider the following <code>data</code> class <code>Person</code>:",
+      "translation": "在 Kotlin 中，所有类默认都是不可变的，若要定义可变属性，则需显式声明。\n考虑以下 <code>data</code> 类 <code>Person</code>：",
+      "count": 1
+    },
+    {
+      "source": "There is also a special <code>@Id</code> annotation which needs to be always in place. Best practice is to also name the property\n<code>id</code>.",
+      "translation": "此外，还有一个特殊的 `<code>@Id</code>` 注解必须始终存在。最佳实践是将该属性命名为`id`。",
+      "count": 1
+    },
+    {
+      "source": "Since JSON supports objects (\"maps\") and lists, <code>Map</code> and <code>List</code> types can be converted naturally.\nIf they only contain primitive field types from the last paragraph, you don’t need to add special handling too.\nHere is an example:",
+      "translation": "由于 JSON 支持对象（\"映射\"）和列表，因此<code>Map</code>和<code>List</code>类型可以自然地转换。如果它们仅包含上一段中提到的基本字段类型，则无需添加特殊处理。示例如下：",
+      "count": 1
+    },
+    {
+      "source": "You don’t need to break everything down to primitive types and Lists/Maps all the time.\nOf course, you can also compose other objects out of those primitive values.\nLet’s modify the last example so that we want to store a <code>List</code> of <code>Children</code>:",
+      "translation": "您不必总是将所有内容分解为基本类型和 List/Map。  \n当然，您也可以从这些基本值中组合出其他对象。  \n让我们修改最后一个示例，使其存储一个 <code>List</code> 类型的 <code>Children</code>：",
+      "count": 1
+    },
+    {
+      "source": "Optionally, Date can be converted to and from ISO-8601 compliant strings by setting system property <code>org.springframework.data.couchbase.useISOStringConverterForDate</code> to true.\nIf you want to override a converter or implement your own one, this is also possible.\nThe library implements the general Spring Converter pattern.\nYou can plug in custom converters on bean creation time in your configuration.\nHere’s how you can configure it (in your overridden <code>AbstractCouchbaseConfiguration</code>):",
+      "translation": "可选地，通过将系统属性 `<code>org.springframework.data.couchbase.useISOStringConverterForDate</code>` 设置为 true，可以将 Date 转换为符合 ISO-8601 标准的字符串，或从此类字符串转换回 Date。  \n如果您希望覆盖转换器或实现自己的转换器，这也是可行的。  \n该库实现了通用的 Spring Converter 模式。  \n您可以在配置中的 Bean 创建时插入自定义转换器。  \n以下是如何在您重写的 `<code>AbstractCouchbaseConfiguration</code>` 中进行配置的方法：",
+      "count": 1
+    },
+    {
+      "source": "To make it unambiguous, always use the <code>@WritingConverter</code> and <code>@ReadingConverter</code> annotations on your converters.\nEspecially if you are dealing with primitive type conversions, this will help to reduce possible wrong conversions.",
+      "translation": "为消除歧义，请始终在转换器上使用<code>@WritingConverter</code>和<code>@ReadingConverter</code>注解。特别是在处理基本类型转换时，这将有助于减少可能的错误转换。",
+      "count": 1
+    },
+    {
+      "source": "If you implement a writing converter, make sure to decode into primitive types, maps and lists only.\nIf you need more complex object types, use the <code>CouchbaseDocument</code> and <code>CouchbaseList</code> types, which are also understood by the underlying translation engine.\nYour best bet is to stick with as simple as possible conversions.",
+      "translation": "如果您实现了写入转换器，请确保仅解码为基本类型、映射和列表。  \n如果需要更复杂的对象类型，请使用 <code>CouchbaseDocument</code> 和 <code>CouchbaseList</code> 类型，这些类型也能被底层的转换引擎识别。  \n最好的做法是尽可能保持转换简单。",
+      "count": 1
+    },
+    {
+      "source": "For dates, reading converters should be able to read from any <code>Number</code> (not just <code>Long</code>).\nThis is required for N1QL support.",
+      "translation": "对于日期，读取转换器应能够读取任何 `<code>Number</code>`（而不仅仅是 `<code>Long</code>`）。  \n这是为了支持 N1QL。",
+      "count": 1
+    },
+    {
+      "source": "Now you can annotate your fields with JSR303 annotations.\nIf a validation on <code>save()</code> fails, a <code>ConstraintViolationException</code> is thrown.",
+      "translation": "现在您可以使用 JSR 303 注解来标注字段。  \n如果在 `<code>save()</code>` 上的验证失败，将抛出 `<code>ConstraintViolationException`。",
+      "count": 1
+    },
+    {
+      "source": "The value resolution assumes constructor/factory method argument names to match the property names of the entity, i.e. the resolution will be performed as if the property was to be populated, including all customizations in mapping (different datastore column or field name etc.).\nThis also requires either parameter names information available in the class file or an <code>@ConstructorProperties</code> annotation being present on the constructor.",
+      "translation": "值解析假设构造函数/工厂方法的参数名称与实体的属性名称相匹配，即解析过程将如同该属性正在被填充一样执行，包括所有映射自定义（如不同的数据存储列或字段名等）。此外，这还需要类文件中包含参数名称信息，或者在构造函数上存在 `<code>@ConstructorProperties</code>` 注解。",
+      "count": 1
+    },
+    {
+      "source": "The value resolution can be customized by using Spring Framework’s <code>@Value</code> value annotation using a store-specific SpEL expression.\nPlease consult the section on store specific mappings for further details.",
+      "translation": "可以通过使用 Spring Framework 的 `<code>@Value</code>` 注解配合特定于存储库的 SpEL 表达式来自定义值解析。有关更多详细信息，请参阅关于存储库特定映射的部分。",
+      "count": 1
+    },
+    {
+      "source": "If the property is immutable we’re using the constructor to be used by persistence operations (see <a href=\"#mapping.object-creation\">Object creation</a>) to create a copy of the instance.",
+      "translation": "如果属性是不可变的，我们将使用构造函数（参见<a href=\"#mapping.object-creation\">对象创建</a>）来为持久化操作创建该实例的副本。",
+      "count": 1
+    },
+    {
+      "source": "Similarly to our <a href=\"#mapping.object-creation.details\">optimizations in object construction</a> we also use Spring Data runtime generated accessor classes to interact with the entity instance.",
+      "translation": "与我们在<a href=\"#mapping.object-creation.details\">对象构建优化</a>中采用的方式类似，我们也使用 Spring Data 运行时生成的访问器类来与实体实例进行交互。",
+      "count": 1
+    },
+    {
+      "source": "Types must not reside in the default or under the <code>java</code> package.",
+      "translation": "类型不得位于默认包或<code>java</code>包下。",
+      "count": 1
+    },
+    {
+      "source": "Types and their constructors must be <code>public</code>",
+      "translation": "类型及其构造函数必须是<code>public</code>的。",
+      "count": 1
+    },
+    {
+      "source": "Types that are inner classes must be <code>static</code>.",
+      "translation": "作为内部类的类型，必须是<code>static</code>的。",
+      "count": 1
+    },
+    {
+      "source": "The used Java Runtime must allow for declaring classes in the originating <code>ClassLoader</code>. Java 9 and newer impose certain limitations.",
+      "translation": "所使用的 Java 运行时必须允许在源 <code>ClassLoader</code> 中声明类。Java 9 及更高版本施加了某些限制。",
+      "count": 1
+    },
+    {
+      "source": "<em>Try to stick to immutable objects</em> — Immutable objects are straightforward to create as materializing an object is then a matter of calling its constructor only.\nAlso, this avoids littering your domain objects with setter methods that allow client code to manipulate the object’s state.\nIf you need those, prefer to make them package protected so that they can only be invoked by a limited amount of co-located types.\nConstructor-only materialization is up to 30% faster than properties population.",
+      "translation": "<em>尽量使用不可变对象</em>——创建不可变对象非常简单，只需调用其构造函数即可完成对象的实例化。此外，这还能避免在领域对象中散布允许客户端代码修改对象状态的 setter 方法。如果确实需要这些方法，建议将其设为包级私有（package protected），以便仅由有限的同包类型调用。仅通过构造函数进行对象实例化的速度比通过属性赋值快高达 30%。",
+      "count": 1
+    },
+    {
+      "source": "<em>Provide an all-args constructor</em> — Even if you cannot or don’t want to model your entities as immutable values, there’s still value in providing a constructor that takes all properties of the entity as arguments, including the mutable ones, as this allows the object mapping to skip the property population for optimal performance.",
+      "translation": "<em>提供一个全参构造函数</em>——即使您无法或不愿将实体建模为不可变值，提供接受实体所有属性（包括可变属性）作为参数的构造函数仍然具有价值，因为这允许对象映射跳过属性填充过程，从而实现最佳性能。",
+      "count": 1
+    },
+    {
+      "source": "<em>Make sure you adhere to the constraints that allow the generated instantiator and property accessor classes to be used</em> —",
+      "translation": "确保遵守相关约束，以便生成的实例化器和属性访问器类能够被使用。",
+      "count": 1
+    },
+    {
+      "source": "Using <code>@AccessType(PROPERTY)</code> cannot be used as the super-property cannot be generally set without making any further assumptions of the setter implementation.",
+      "translation": "使用<code>@AccessType(PROPERTY)</code>不可行，因为无法在不对 setter 实现做出任何额外假设的情况下设置超属性。",
+      "count": 1
+    },
+    {
+      "source": "If there is a constructor that is annotated with <code>@PersistenceCreator</code>, it is used.",
+      "translation": "如果存在一个带有<code>@PersistenceCreator</code>注解的构造函数，则使用它。",
+      "count": 1
+    },
+    {
+      "source": "If the type is a <a href=\"#mapping.kotlin\">Kotlin data class</a> the primary constructor is used.",
+      "translation": "如果类型是<a href=\"#mapping.kotlin\">Kotlin 数据类</a>，则使用主构造函数。",
+      "count": 1
+    },
+    {
+      "source": "The class above compiles to a typical class with an explicit constructor. We can customize this class by adding another constructor and annotate it with <code>@PersistenceCreator</code> to indicate a constructor preference:",
+      "translation": "上述类编译为具有显式构造函数的典型类。我们可以通过添加另一个构造函数并用<code>@PersistenceCreator</code>注解它来指定构造函数偏好，从而自定义该类：",
+      "count": 1
+    },
+    {
+      "source": "This class is effectively immutable.\nIt allows creating new instances as Kotlin generates a <code>copy(…)</code> method that creates new object instances copying all property values from the existing object and applying property values provided as arguments to the method.",
+      "translation": "该类实际上是不可变的。它允许创建新实例，因为 Kotlin 会生成一个 `<code>copy(…)</code>` 方法，该方法通过复制现有对象的所有属性值，并将作为参数提供的属性值应用其中，来创建新的对象实例。",
+      "count": 1
+    },
+    {
+      "source": "Kotlin allows declaring <a href=\"https://kotlinlang.org/docs/inheritance.html#overriding-properties\">property overrides</a> to alter properties in subclasses.",
+      "translation": "Kotlin 允许声明<a href=\"https://kotlinlang.org/docs/inheritance.html#overriding-properties\">属性重写</a>，以在子类中修改属性。",
+      "count": 1
+    },
+    {
+      "source": "Such an arrangement renders two properties with the name <code>field</code>.\nKotlin generates property accessors (getters and setters) for each property in each class.\nEffectively, the code looks like as follows:",
+      "translation": "这种安排会导致两个名为 `field` 的属性。  \nKotlin 会为每个类中的每个属性生成访问器（getter 和 setter）。  \n实际上，代码看起来如下所示：",
+      "count": 1
+    },
+    {
+      "source": "Using <code>@AccessType(PROPERTY)</code> cannot be used as the super-property cannot be set.",
+      "translation": "使用<code>@AccessType(PROPERTY)</code>时，无法将其用作超属性，因为该属性不可设置。",
+      "count": 1
+    },
+    {
+      "source": "All entities should be annotated with the <code>@Document</code> annotation, but it is not a requirement.",
+      "translation": "所有实体都应使用<code>@Document</code>注解进行标注，但这并非强制要求。",
+      "count": 1
+    },
+    {
+      "source": "Also, every field in the entity should be annotated with the <code>@Field</code> annotation. While this is - strictly speaking -\noptional, it helps to reduce edge cases and clearly shows the intent and design of the entity. It can also be used to\nstore the field under a different name.",
+      "translation": "此外，实体中的每个字段都应使用 <code>@Field</code> 注解进行标注。虽然从严格意义上讲这是可选的，但它有助于减少边缘情况，并清晰地展示实体的意图和设计。同时，它还可用于以不同的名称存储字段。",
+      "count": 1
+    },
+    {
+      "source": "Here is a very simple <code>User</code> entity:",
+      "translation": "这是一个非常简单的 `<code>User</code>` 实体：",
+      "count": 1
+    },
+    {
+      "source": "The <code>@Id</code> annotation needs to be present because every document in Couchbase needs a unique key.\nThis key needs to be any string with a length of maximum 250 characters.\nFeel free to use whatever fits your use case, be it a UUID, an email address or anything else.",
+      "translation": "由于每个 Couchbase 文档都需要一个唯一键，因此必须包含 <code>@Id</code> 注解。  \n该键可以是任何字符串，最大长度为 250 个字符。  \n请根据您的具体用例自由选择，例如使用 UUID、电子邮件地址或其他内容。",
+      "count": 1
+    },
+    {
+      "source": "In other datastores, similar behavior can be achieved through an arbitrary version field with a incrementing counter.\nSince Couchbase supports this in a much better fashion, it is easy to implement.\nIf you want automatic optimistic locking support, all you need to do is add a <code>@Version</code> annotation on a long field like this:",
+      "translation": "在其他数据存储中，可以通过带有递增计数器的任意版本字段来实现类似的行为。由于 Couchbase 对此提供了更好的支持，因此实现起来非常简单。如果您需要自动的乐观锁支持，只需在长整型字段上添加 `<code>@Version</code>` 注解即可，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "If you load a document through the template or repository, the version field will be automatically populated with the current CAS value.\nIt is important to note that you shouldn’t access the field or even change it on your own.\nOnce you save the document back, it will either succeed or fail with a <code>OptimisticLockingFailureException</code>.\nIf you get such an exception, the further approach depends on what you want to achieve application wise.\nYou should either retry the complete load-update-write cycle or propagate the error to the upper layers for proper handling.",
+      "translation": "通过模板或存储库加载文档时，版本字段将自动填充为当前的 CAS 值。  \n需要注意的是，您不应直接访问该字段，更不应自行修改它。  \n保存文档后，操作要么成功，要么会抛出 <code>OptimisticLockingFailureException</code> 异常。  \n如果捕获到此类异常，后续处理方式取决于您的应用目标：您可以选择重试完整的加载 - 更新 - 写入循环，或将错误向上层传播以便进行适当处理。",
+      "count": 1
+    },
+    {
+      "source": "First, note that only entities that have a <code>@Version</code> annotated field can be audited for creation (otherwise the framework will interpret a creation as an update).",
+      "translation": "首先，请注意，只有具有<code>@Version</code>注解字段的实体才能进行创建审计（否则框架会将创建操作解释为更新）。",
+      "count": 1
+    },
+    {
+      "source": "This chapter describes how to model Entities and explains their counterpart representation in Couchbase Server itself.",
+      "translation": "本章介绍如何对实体进行建模，并解释其在 Couchbase Server 中的对应表示方式。",
+      "count": 1
+    },
+    {
+      "source": "This section covers the fundamentals of Spring Data object mapping, object creation, field and property access, mutability and immutability.\nNote, that this section only applies to Spring Data modules that do not use the object mapping of the underlying data store (like JPA).\nAlso be sure to consult the store-specific sections for store-specific object mapping, like indexes, customizing column or field names or the like.",
+      "translation": "本节涵盖 Spring Data 对象映射、对象创建、字段和属性访问以及可变性与不可变性的基础知识。请注意，本节仅适用于不使用底层数据存储（如 JPA）的对象映射的 Spring Data 模块。此外，请务必查阅针对特定存储器的章节，以了解特定于该存储器的对象映射内容，例如索引、自定义列或字段名称等。",
+      "count": 1
+    },
+    {
+      "source": "Core responsibility of the Spring Data object mapping is to create instances of domain objects and map the store-native data structures onto those.\nThis means we need two fundamental steps:",
+      "translation": "Spring Data 对象映射的核心职责是创建领域对象实例，并将存储原生的数据结构映射到这些对象上。\n这意味着我们需要两个基本步骤：",
+      "count": 1
+    },
+    {
+      "source": "Instance creation by using one of the constructors exposed.",
+      "translation": "通过暴露的构造函数之一创建实例。",
+      "count": 1
+    },
+    {
+      "source": "Instance population to materialize all exposed properties.",
+      "translation": "实例化以呈现所有暴露的属性。",
+      "count": 1
+    },
+    {
+      "source": "To avoid the overhead of reflection, Spring Data object creation uses a factory class generated at runtime by default, which will call the domain classes constructor directly.\nI.e. for this example type:",
+      "translation": "为避免反射带来的开销，Spring Data 默认使用在运行时生成的工厂类来创建对象，该工厂类将直接调用领域类的构造函数。\n即对于此示例类型：",
+      "count": 1
+    },
+    {
+      "source": "we will create a factory class semantically equivalent to this one at runtime:",
+      "translation": "我们将在运行时创建一个语义上与此工厂类等效的工厂类：",
+      "count": 1
+    },
+    {
+      "source": "This gives us a roundabout 10% performance boost over reflection.\nFor the domain class to be eligible for such optimization, it needs to adhere to a set of constraints:",
+      "translation": "这为我们带来了比反射间接高出约 10% 的性能提升。  \n要使领域类符合此类优化条件，它需要遵守一组约束：",
+      "count": 1
+    },
+    {
+      "source": "it must not be a private class",
+      "translation": "它不能是私有类。",
+      "count": 1
+    },
+    {
+      "source": "it must not be a non-static inner class",
+      "translation": "它不能是非静态内部类。",
+      "count": 1
+    },
+    {
+      "source": "it must not be a CGLib proxy class",
+      "translation": "它不能是 CGLib 代理类。",
+      "count": 1
+    },
+    {
+      "source": "the constructor to be used by Spring Data must not be private",
+      "translation": "Spring Data 所使用的构造函数不能是私有的。",
+      "count": 1
+    },
+    {
+      "source": "If any of these criteria match, Spring Data will fall back to entity instantiation via reflection.",
+      "translation": "如果这些标准中的任何一项匹配，Spring Data 将通过反射回退到实体实例化。",
+      "count": 1
+    },
+    {
+      "source": "Once an instance of the entity has been created, Spring Data populates all remaining persistent properties of that class.\nUnless already populated by the entity’s constructor (i.e. consumed through its constructor argument list), the identifier property will be populated first to allow the resolution of cyclic object references.\nAfter that, all non-transient properties that have not already been populated by the constructor are set on the entity instance.\nFor that we use the following algorithm:",
+      "translation": "一旦创建了该实体实例，Spring Data 将填充该类中所有剩余的持久化属性。  \n除非这些属性已通过实体的构造函数（即通过其构造函数参数列表）进行填充，否则标识符属性将被首先填充，以便解析循环对象引用。  \n随后，对于尚未由构造函数填充的所有非瞬态属性，将在实体实例上进行设置。  \n为此，我们采用以下算法：",
+      "count": 1
+    },
+    {
+      "source": "If property access (i.e. access through getters and setters) is defined, we’re invoking the setter method.",
+      "translation": "如果定义了属性访问（即通过 getter 和 setter 进行访问），我们将调用 setter 方法。",
+      "count": 1
+    },
+    {
+      "source": "If the property is mutable we set the field directly.",
+      "translation": "如果该属性是可变的，则直接设置该字段。",
+      "count": 1
+    },
+    {
+      "source": "By default, we set the field value directly.",
+      "translation": "默认情况下，我们直接设置字段值。",
+      "count": 1
+    },
+    {
+      "source": "This gives us a roundabout 25% performance boost over reflection.\nFor the domain class to be eligible for such optimization, it needs to adhere to a set of constraints:",
+      "translation": "这为我们带来了比反射间接提升约 25% 的性能。为了使领域类符合此类优化条件，它需要遵守一组约束：",
+      "count": 1
+    },
+    {
+      "source": "By default, Spring Data attempts to use generated property accessors and falls back to reflection-based ones if a limitation is detected.",
+      "translation": "默认情况下，Spring Data 尝试使用生成的属性访问器；如果检测到限制，则会回退到基于反射的访问器。",
+      "count": 1
+    },
+    {
+      "source": "Let’s have a look at the following entity:",
+      "translation": "让我们看看以下实体：",
+      "count": 1
+    },
+    {
+      "source": "Java allows a flexible design of domain classes where a subclass could define a property that is already declared with the same name in its superclass.\nConsider the following example:",
+      "translation": "Java 允许对领域类进行灵活设计，子类可以定义一个与其父类中已声明的同名属性。\n考虑以下示例：",
+      "count": 1
+    },
+    {
+      "source": "Spring Data adapts specifics of Kotlin to allow object creation and mutation.",
+      "translation": "Spring Data 适配了 Kotlin 的具体特性，以支持对象的创建和修改。",
+      "count": 1
+    },
+    {
+      "source": "Kotlin classes are supported to be instantiated, all classes are immutable by default and require explicit property declarations to define mutable properties.",
+      "translation": "支持实例化 Kotlin 类，所有类默认不可变，且需要显式声明属性以定义可变属性。",
+      "count": 1
+    },
+    {
+      "source": "Kotlin Value Classes are designed for a more expressive domain model to make underlying concepts explicit.\nSpring Data can read and write types that define properties using Value Classes.",
+      "translation": "Kotlin 值类旨在构建更具表现力的领域模型，使底层概念更加明确。  \nSpring Data 可以读取和写入使用值类定义属性的类型。",
+      "count": 1
+    },
+    {
+      "source": "Consider the following domain model:",
+      "translation": "考虑以下领域模型：",
+      "count": 1
+    },
+    {
+      "source": "The storage format of choice is JSON. It is great, but like many data representations it allows less datatypes than you could express in Java directly.\nTherefore, for all non-primitive types some form of conversion to and from supported types needs to happen.",
+      "translation": "首选的存储格式是 JSON。它非常优秀，但像许多数据表示形式一样，它所支持的数据类型少于在 Java 中直接表达的类型。因此，对于所有非基本类型，都需要进行某种形式的转换，以在支持的类型之间进行转换。",
+      "count": 1
+    },
+    {
+      "source": "For the following entity field types, you don’t need to add special handling:",
+      "translation": "对于以下实体字段类型，您无需添加特殊处理：",
+      "count": 1
+    },
+    {
+      "source": "Ignored on write",
+      "translation": "写入时忽略",
+      "count": 1
+    },
+    {
+      "source": "Storing a user with some sample data could look like this as a JSON representation:",
+      "translation": "存储带有部分示例数据的用户可能如下所示（以 JSON 格式表示）：",
+      "count": 1
+    },
+    {
+      "source": "There are a few things to keep in mind with custom conversions:",
+      "translation": "关于自定义转化，有几点需要注意：",
+      "count": 1
+    },
+    {
+      "source": "Always put more special converters before generic converters to avoid the case where the wrong converter gets executed.",
+      "translation": "始终将更特殊的转换器置于通用转换器之前，以避免执行错误的转换器。",
+      "count": 1
+    },
+    {
+      "source": "In certain situations you may want to ensure that you are not overwriting another users changes when you perform a mutation operation on a document. For this you have three choices: Transactions (since Couchbase 6.5), pessimistic concurrency (locking) or optimistic concurrency.",
+      "translation": "在某些情况下，您可能希望在文档上执行突变操作时，确保不会覆盖其他用户的更改。为此，您有三种选择：事务（自 Couchbase 6.5 起支持）、悲观并发控制（加锁）或乐观并发控制。",
+      "count": 1
+    },
+    {
+      "source": "Optimistic concurrency tends to provide better performance than pessimistic concurrency or transactions, because no actual locks are held on the data and no extra information is stored about the operation (no transaction log).",
+      "translation": "乐观并发控制通常比悲观并发控制或事务提供更好的性能，因为它不会在数据上持有实际的锁，也不会存储有关操作的额外信息（无需事务日志）。",
+      "count": 1
+    },
+    {
+      "source": "To implement optimistic locking, Couchbase uses a CAS (compare and swap) approach. When a document is mutated, the CAS value also changes.\nThe CAS is opaque to the client, the only thing you need to know is that it changes when the content or a meta information changes too.",
+      "translation": "为了实现乐观锁，Couchbase 采用了 CAS（比较并交换）机制。当文档发生变更时，其 CAS 值也会随之改变。CAS 对客户端是不透明的，您只需知道：只要内容或元数据发生变化，CAS 值就会更新。",
+      "count": 1
+    },
+    {
+      "source": "The library supports JSR 303 validation, which is based on annotations directly in your entities.\nOf course you can add all kinds of validation in your service layer, but this way its nicely coupled to your actual entities.",
+      "translation": "该库支持基于实体中直接注解的 JSR 303 验证。当然，您可以在服务层添加各种类型的验证，但这种方式与您的实际实体紧密耦合。",
+      "count": 1
+    },
+    {
+      "source": "To make it work, you need to include two additional dependencies.\nJSR 303 and a library that implements it, like the one supported by hibernate:",
+      "translation": "要使该功能正常工作，您需要包含两个额外的依赖项：JSR 303 以及一个实现该规范的库（例如 Hibernate 所支持的库）：",
+      "count": 1
+    },
+    {
+      "source": "Now you need to add two beans to your configuration:",
+      "translation": "现在需要在配置中添加两个 Bean：",
+      "count": 1
+    },
+    {
+      "source": "Entities can be automatically audited (tracing which user created the object, updated the object, and at what times) through Spring Data auditing mechanisms.",
+      "translation": "实体可以通过 Spring Data 审计机制进行自动审计（追踪创建实体的用户、更新实体的用户以及更新时间）。",
+      "count": 1
+    },
+    {
+      "source": "Here is an example:",
+      "translation": "这是一个示例：",
+      "count": 1
+    },
+    {
+      "source": "To tie all that together, we use the java configuration both to declare an AuditorAware bean and to activate auditing:",
+      "translation": "将所有这些内容整合起来，我们使用 Java 配置既声明一个 AuditorAware Bean，又激活审计功能：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Couchbase</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            6.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Couchbase</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            6.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-couchbase/src/main/antora/modules/ROOT/pages/couchbase/entity.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-couchbase\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-couchbase/src/main/antora/modules/ROOT/pages/couchbase/entity.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-couchbase\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Couchbase</a></li>\n      <li><a href=\"../couchbase.html\">Couchbase Support</a></li>\n      <li><a href=\"entity.html\">Modeling Entities</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Couchbase</a></li>\n      <li><a href=\"../couchbase.html\">Couchbase 支持</a></li>\n      <li><a href=\"entity.html\">实体建模</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Object creation internals",
+      "translation": "对象创建的内部机制",
+      "count": 1
+    },
+    {
+      "source": "Property population internals",
+      "translation": "属性人口内部结构",
+      "count": 1
+    },
+    {
+      "source": "A generated Property Accessor",
+      "translation": "生成的属性访问器",
+      "count": 1
+    },
+    {
+      "source": "A sample entity",
+      "translation": "示例实体",
+      "count": 1
+    },
+    {
+      "source": "Example 1. A simple Document with Fields",
+      "translation": "示例 1. 包含字段的简单文档",
+      "count": 1
+    },
+    {
+      "source": "Example 2. A Document with Map and List",
+      "translation": "示例 2：包含地图和列表的文档",
+      "count": 1
+    },
+    {
+      "source": "Example 3. A Document with Map and List - JSON",
+      "translation": "示例 3：包含地图和列表的文档 - JSON",
+      "count": 1
+    },
+    {
+      "source": "Example 4. A Document with composed objects",
+      "translation": "示例 4：由组合对象构成的文档",
+      "count": 1
+    },
+    {
+      "source": "Example 5. A Document with composed objects - JSON",
+      "translation": "示例 5：由组合对象构成的文档——JSON",
+      "count": 1
+    },
+    {
+      "source": "Example 6. A Document with Date and Calendar",
+      "translation": "示例 6：带有日期和日历的文档",
+      "count": 1
+    },
+    {
+      "source": "Example 7. A Document with Date and Calendar - JSON",
+      "translation": "示例 7。带有日期和日历的文档 - JSON",
+      "count": 1
+    },
+    {
+      "source": "Example 8. Custom Converters",
+      "translation": "示例 8：自定义转换器",
+      "count": 1
+    },
+    {
+      "source": "Example 9. A Document with optimistic locking.",
+      "translation": "示例 9：具有乐观锁的文档。",
+      "count": 1
+    },
+    {
+      "source": "Example 10. Validation dependencies",
+      "translation": "示例 10：验证依赖项",
+      "count": 1
+    },
+    {
+      "source": "Example 11. Validation beans",
+      "translation": "示例 11：验证 Bean",
+      "count": 1
+    },
+    {
+      "source": "Example 12. Sample Validation Annotation",
+      "translation": "示例 12。样本验证注解",
+      "count": 1
+    },
+    {
+      "source": "Example 13. Sample Auditing Entity",
+      "translation": "示例 13。样本审计主体",
+      "count": 1
+    },
+    {
+      "source": "Example 14. Sample AuditorAware implementation",
+      "translation": "示例 14：SampleAuditorAware 实现示例",
+      "count": 1
+    },
+    {
+      "source": "Example 15. Sample Auditing Configuration",
+      "translation": "示例 15。样本审计配置",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/migrating.html\">Migrating from Spring Data Couchbase 3.x to 4.x</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../couchbase.html\">Couchbase Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">Installation &amp; Configuration</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"entity.html\">Modeling Entities</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"autokeygeneration.html\">Auto generating keys</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">Template &amp; direct operations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"transactions.html\">Couchbase Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"collections.html\">Collection Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"fieldlevelencryption.html\">Couchbase Field Level Encrytpion</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"ansijoins.html\">ANSI Joins</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"caching.html\">Caching</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repository.html\">Couchbase repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactiverepository.html\">Reactive Couchbase repository</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概述</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/migrating.html\">从 Spring Data Couchbase 3.x 迁移到 4.x</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../couchbase.html\">Couchbase 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"configuration.html\">安装与配置</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"entity.html\">实体建模</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"autokeygeneration.html\">自动生成键</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">模板与直接操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"transactions.html\">Couchbase 事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"collections.html\">集合支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"fieldlevelencryption.html\">Couchbase 字段级加密</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"ansijoins.html\">ANSI 连接</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"caching.html\">缓存</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">仓储</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repository.html\">Couchbase 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactiverepository.html\">响应式 Couchbase 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The identifier property is final but set to <code>null</code> in the constructor.\nThe class exposes a <code>withId(…)</code> method that’s used to set the identifier, e.g. when an instance is inserted into the datastore and an identifier has been generated.\nThe original <code>Person</code> instance stays unchanged as a new one is created.\nThe same pattern is usually applied for other properties that are store managed but might have to be changed for persistence operations.\nThe wither method is optional as the persistence constructor (see 6) is effectively a copy constructor and setting the property will be translated into creating a fresh instance with the new identifier value applied.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The <code>firstname</code> and <code>lastname</code> properties are ordinary immutable properties potentially exposed through getters.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The <code>age</code> property is an immutable but derived one from the <code>birthday</code> property.\nWith the design shown, the database value will trump the defaulting as Spring Data uses the only declared constructor.\nEven if the intent is that the calculation should be preferred, it’s important that this constructor also takes <code>age</code> as parameter (to potentially ignore it) as otherwise the property population step will attempt to set the age field and fail due to it being immutable and no <code>with…</code> method being present.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>The <code>comment</code> property is mutable and is populated by setting its field directly.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>The <code>remarks</code> property is mutable and is populated by invoking the setter method.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"6\"></i><b>6</b></td>\n<td>The <code>summary</code> property transient and will not be persisted as it is annotated with <code>@Transient</code>.\nSpring Data doesn’t use Java’s <code>transient</code> keyword to exclude properties from being persisted as <code>transient</code> is part of the Java Serialization Framework.\nNote that this property can be used with a persistence constructor, but its value will default to <code>null</code> (or the respective primitive initial value if the property type was a primitive one).</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"7\"></i><b>7</b></td>\n<td>The class exposes a factory method and a constructor for object creation.\nThe core idea here is to use factory methods instead of additional constructors to avoid the need for constructor disambiguation through <code>@PersistenceCreator</code>.\nInstead, defaulting of properties is handled within the factory method.\nIf you want Spring Data to use the factory method for object instantiation, annotate it with <code>@PersistenceCreator</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>标识符属性为 final 类型，但在构造函数中被设置为 <code>null</code>。该类提供了一个 <code>withId(…)</code> 方法用于设置标识符，例如当实例被插入数据存储且已生成标识符时。原始的 <code>Person</code> 实例保持不变，因为会创建一个新的实例。通常会对其他需要持久化操作但可能发生变更的存储管理属性应用相同的模式。<code>wither</code> 方法是可选的，因为持久化构造函数（见第 6 点）本质上是一个拷贝构造函数，设置该属性将被转换为创建一个新实例并将新的标识符值应用其中。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>firstname</code> 和 <code>lastname</code> 属性是普通的不可变属性，可能通过 getter 方法暴露。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>age</code> 属性是不可变的，但它是从 <code>birthday</code> 属性派生而来的。按照所示的设计，数据库值将优于默认值，因为 Spring Data 仅使用声明的构造函数。即使意图是优先采用计算结果，也重要的是该构造函数必须包含 <code>age</code> 作为参数（以便可能忽略它），否则属性填充步骤将尝试设置 age 字段，但由于其不可变且不存在 <code>with…</code> 方法而失败。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td><code>comment</code> 属性是可变的，通过直接设置其字段进行填充。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td><code>remarks</code> 属性是可变的，通过调用 setter 方法进行填充。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"6\"></i><b>6</b></td>\n<td><code>summary</code> 属性是瞬态的，不会被持久化，因为它被标注为 <code>@Transient</code>。Spring Data 不使用 Java 的 <code>transient</code> 关键字来排除属性的持久化，因为 <code>transient</code> 是 Java 序列化框架的一部分。请注意，该属性可以与持久化构造函数一起使用，但其值将默认为 <code>null</code>（如果属性类型是基本类型，则为其相应的基本类型初始值）。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"7\"></i><b>7</b></td>\n<td>该类提供了一个工厂方法和一个用于对象创建的构造函数。这里的核心理念是使用工厂方法而不是额外的构造函数，以避免通过 <code>@PersistenceCreator</code> 进行构造函数消歧的需要。相反，属性的默认值处理在工厂方法内部完成。如果您希望 Spring Data 使用工厂方法进行对象实例化，请将其标注为 <code>@PersistenceCreator</code>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>PropertyAccessor’s hold a mutable instance of the underlying object. This is, to enable mutations of otherwise immutable properties.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>By default, Spring Data uses field-access to read and write property values. As per visibility rules of <code>private</code> fields, <code>MethodHandles</code> are used to interact with fields.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The class exposes a <code>withId(…)</code> method that’s used to set the identifier, e.g. when an instance is inserted into the datastore and an identifier has been generated. Calling <code>withId(…)</code> creates a new <code>Person</code> object. All subsequent mutations will take place in the new instance leaving the previous untouched.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Using property-access allows direct method invocations without using <code>MethodHandles</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>PropertyAccessor 持有底层对象的可变实例，以便能够修改原本不可变的属性。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>默认情况下，Spring Data 使用属性访问方式来读写属性值。根据 <code>private</code> 字段的可见性规则，使用 <code>MethodHandles</code> 与字段进行交互。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>该类提供了一个 <code>withId(…)</code> 方法，用于设置标识符，例如当实例被插入数据存储且已生成标识符时。调用 <code>withId(…)</code> 会创建一个新的 <code>Person</code> 对象。随后的所有修改都将在新实例中进行，而不会改变之前的实例。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>使用属性访问允许直接调用方法，而无需使用 <code>MethodHandles</code>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>A simple value class with a non-nullable value type.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Data class defining a property using the <code>EmailAddress</code> value class.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>一个具有非空值类型的简单值类。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>使用 <code>EmailAddress</code> 值类定义属性的数据类。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nDelegated properties are not supported with Spring Data. The mapping metadata filters delegated properties for Kotlin Data classes.\nIn all other cases you can exclude synthetic fields for delegated properties by annotating the property with <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1/api/java/org/springframework/data/annotation/Transient.html\"><code>@Transient</code></a>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nSpring Data 不支持委派属性。对于 Kotlin 数据类，映射元数据会过滤掉委派属性。\n在其他所有情况下，您可以通过使用 <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1/api/java/org/springframework/data/annotation/Transient.html\"><code>@Transient</code></a> 注解来排除委派属性的合成字段。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nNon-nullable properties using non-primitive value types are flattened in the compiled class to the value type.\nNullable primitive value types or nullable value-in-value types are represented with their wrapper type and that affects how value types are represented in the database.\n</td>\n</tr>\n</tbody>",
+      "translation": "<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n使用非原始值类型的不可空属性在编译后的类中会被扁平化为值类型。\n可空的原始值类型或可空的值 - 值类型将以其包装类型表示，这会影响值类型在数据库中的表示方式。\n</td>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">Java Type</th>\n<th class=\"tableblock halign-left valign-top\">JSON Representation</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">Java 类型</th>\n<th class=\"tableblock halign-left valign-top\">JSON 表示形式</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.fundamentals\"></a>Object Mapping Fundamentals",
+      "translation": "<a class=\"anchor\" href=\"#mapping.fundamentals\"></a>对象映射基础",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.object-creation\"></a>Object creation",
+      "translation": "<a class=\"anchor\" href=\"#mapping.object-creation\"></a>对象创建",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.property-population\"></a>Property population",
+      "translation": "<a class=\"anchor\" href=\"#mapping.property-population\"></a>属性人口",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.general-recommendations\"></a>General recommendations",
+      "translation": "<a class=\"anchor\" href=\"#mapping.general-recommendations\"></a>一般建议",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.general-recommendations.override.properties\"></a>Overriding Properties",
+      "translation": "<a class=\"anchor\" href=\"#mapping.general-recommendations.override.properties\"></a>覆盖属性",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin\"></a>Kotlin support",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin\"></a>Kotlin 支持",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin.creation\"></a>Kotlin object creation",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin.creation\"></a>Kotlin 对象创建",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#property-population-of-kotlin-data-classes\"></a>Property population of Kotlin data classes",
+      "translation": "<a class=\"anchor\" href=\"#property-population-of-kotlin-data-classes\"></a>Kotlin 数据类的属性填充",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin.override.properties\"></a>Kotlin Overriding Properties",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin.override.properties\"></a>Kotlin 属性重写",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin.value.classes\"></a>Kotlin Value Classes",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin.value.classes\"></a>Kotlin 值类",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#basics\"></a>Documents and Fields",
+      "translation": "<a class=\"anchor\" href=\"#basics\"></a>文档与字段",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#datatypes\"></a>Datatypes and Converters",
+      "translation": "<a class=\"anchor\" href=\"#datatypes\"></a>数据类型与转换器",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#version\"></a>Optimistic Locking",
+      "translation": "<a class=\"anchor\" href=\"#version\"></a>乐观锁",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Couchbase",
+      "translation": "Spring Data Couchbase",
+      "count": 1
+    },
+    {
+      "source": "Modeling Entities",
+      "translation": "实体建模",
+      "count": 1
+    },
+    {
+      "source": "Table 1. Primitive Types",
+      "translation": "表 1。基本类型",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

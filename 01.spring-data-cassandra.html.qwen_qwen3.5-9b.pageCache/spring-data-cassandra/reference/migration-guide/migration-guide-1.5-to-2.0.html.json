@@ -1,0 +1,401 @@
+{
+  "created_at": "2026-06-16 07:24:04",
+  "updated_at": "2026-06-17 06:56:50",
+  "stats": {
+    "total_entries": 77,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 154,
+    "entries_with_hits": 77,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0,
+    "usage_percentage": 0.0077
+  },
+  "items": [
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 2
+    },
+    {
+      "source": "Asynchronous methods are re-implemented on <code>AsyncCqlTemplate</code> and <code>AsyncCassandraTemplate</code> by using <code>ListenableFuture</code>.\nWe removed <code>Cancellable</code> and the various async callback listeners. <code>ListenableFuture</code> is a flexible approach and allows transition into a <code>CompletableFuture</code>.",
+      "translation": "异步方法在 `AsyncCqlTemplate` 和 `AsyncCassandraTemplate` 中通过使用 `ListenableFuture` 重新实现。我们移除了 `Cancellable` 以及各种异步回调监听器。`ListenableFuture` 是一种灵活的方法，并允许过渡到 `CompletableFuture`。",
+      "count": 2
+    },
+    {
+      "source": "<code>CassandraTemplate</code> is no longer a <code>CqlTemplate</code> but uses an instance that allows reuse and fine-grained control over fetch size, consistency levels, and retry policies.\nYou can obtain the <code>CqlOperations</code> through\n<code>CassandraTemplate.getCqlOperations()</code>.\nBecause of the change, dependency injection of <code>CqlTemplate</code> requires additional bean setup.",
+      "translation": "<CassandraTemplate> 不再是一个 <CqlTemplate>，而是使用一个实例，该实例允许重用并对获取大小、一致性级别和重试策略进行细粒度控制。  \n您可以通过 <CassandraTemplate.getCqlOperations()> 获取 <CqlOperations>。  \n由于这一变更，对 <CqlTemplate> 的依赖注入需要额外的 Bean 配置。",
+      "count": 2
+    },
+    {
+      "source": "<code>QueryOptions</code> and <code>WriteOptions</code> are now immutable and can be created through builders.\nMethods accepting\n<code>QueryOptions</code> enforce non-null objects, which are available from static <code>empty()</code> factory methods.\nThe following example shows how to use <code>QueryOptions.builder()</code>:",
+      "translation": "`QueryOptions` 和 `WriteOptions` 现已不可变，可通过构建器创建。  \n接受 `QueryOptions` 的方法强制要求非空对象，这些对象可通过静态的 `empty()` 工厂方法获取。  \n以下示例展示了如何使用 `QueryOptions.builder()`：",
+      "count": 2
+    },
+    {
+      "source": "Removed SD Cassandra <code>ConsistencyLevel</code> and <code>RetryPolicy</code> types in favor of DataStax <code>ConsistencyLevel</code> and <code>RetryPolicy</code> types.",
+      "translation": "已移除 SD 的 `ConsistencyLevel` 和 `RetryPolicy` 类型，改用 DataStax 的 `ConsistencyLevel` 和 `RetryPolicy` 类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>CqlTemplate</code> now reflects basic CQL operations instead of mixing high-level and low-level API calls (such as <code>count(…)</code>\nversus <code>execute(…)</code>) and the reduced method set is aligned with Spring Frameworks’s <code>JdbcTemplate</code> with its convenient callback interfaces.",
+      "translation": "<CqlTemplate>现已反映基本的 CQL 操作，不再混合使用高级和低级 API 调用（例如<count(…)>与<execute(…)>），其精简的方法集已与 Spring Frameworks 的<JdbcTemplate>及其便捷的回调接口保持一致。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated <code>CqlIdentifier.cqlId(…)</code> and <code>KeyspaceIdentifier.ksId(…)</code> in favor of the <code>.of(…)</code> methods.",
+      "translation": "已弃用 <code>CqlIdentifier.cqlId(…)</code> 和 <code>KeyspaceIdentifier.ksId(…)</code>，转而推荐使用 <code>.of(…)</code> 方法。",
+      "count": 2
+    },
+    {
+      "source": "Spring CQL and Spring Data Cassandra are now merged into a single module.\nThe standalone <code>spring-cql</code> module is no longer available.\nYou can find all types merged into <code>spring-data-cassandra</code>.\nThe following listing shows how to include <code>spring-data-cassandra</code> in your maven dependencies:",
+      "translation": "Spring CQL 和 Spring Data Cassandra 现已合并为一个模块。\n独立的 `<code>spring-cql</code>` 模块不再可用。\n所有类型现已合并到 `<code>spring-data-cassandra</code>` 中。\n以下示例展示了如何在 Maven 依赖中包含 `<code>spring-data-cassandra</code>`：",
+      "count": 2
+    },
+    {
+      "source": "As much as possible, CQL specification types are now value types (such as <code>FieldSpecification</code>, <code>AlterColumnSpecification</code>), and objects are constructed by static factory methods.\nThis allows immutability for simple value objects.\nConfigurator objects (such as <code>AlterTableSpecification</code>) that operate on mandatory properties (such as a table name or keyspace name) are initially constructed through a a static factory method and allow further configuration until the desired state is created.",
+      "translation": "CQL 规范类型现在尽可能采用值类型（例如 `<code>FieldSpecification</code>`、`<code>AlterColumnSpecification</code>`），并通过静态工厂方法构建对象。这使得简单的值对象能够实现不可变性。配置器对象（例如 `<code>AlterTableSpecification</code>`）用于操作必需属性（如表名或键空间名称），它们最初通过静态工厂方法构建，并允许进一步配置，直到达到所需的状态。",
+      "count": 2
+    },
+    {
+      "source": "<code>CassandraPersistentProperty</code> allowed previously multiple column names to be bound for composite primary key use.\nColumns of a <code>CassandraPersistentProperty</code> are now reduced to a single column.\nResolved composite primary keys map to a class through <code>MappingContext.getRequiredPersistentEntity(…)</code>.",
+      "translation": "之前，<code>CassandraPersistentProperty</code> 允许为复合主键绑定多个列名。现在，<code>CassandraPersistentProperty</code> 的列已缩减为单个列。解析后的复合主键通过 <code>MappingContext.getRequiredPersistentEntity(…)</code> 映射到类。",
+      "count": 2
+    },
+    {
+      "source": "Merged the <code>spring-cql</code> and <code>spring-data-cassandra</code> modules into a single module.",
+      "translation": "将 `<code>spring-cql</code>` 和 `<code>spring-data-cassandra</code>` 模块合并为一个模块。",
+      "count": 2
+    },
+    {
+      "source": "Separated asynchronous and synchronous operations in <code>CqlOperations</code> and <code>CassandraOperations</code>\ninto dedicated interfaces and templates.",
+      "translation": "将异步和同步操作从 `<code>CqlOperations</code>` 和 `<code>CassandraOperations</code>` 中分离出来，并划分为专用的接口和模板。",
+      "count": 2
+    },
+    {
+      "source": "Revised the <code>CqlTemplate</code> API to align with <code>JdbcTemplate</code>.",
+      "translation": "修订了<code>CqlTemplate</code>API，使其与<code>JdbcTemplate</code>保持一致。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated <code>QueryOptionsBuilder.readTimeout(long, TimeUnit)</code> in favor of <code>QueryOptionsBuilder.readTimeout(Duration)</code>.",
+      "translation": "已弃用 <code>QueryOptionsBuilder.readTimeout(long, TimeUnit)</code>，推荐使用 <code>QueryOptionsBuilder.readTimeout(Duration)</code>。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated <code>CustomConversions</code> in favor of <code>CassandraCustomConversions</code>.",
+      "translation": "已弃用 <code>CustomConversions</code>，改用 <code>CassandraCustomConversions</code>。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated <code>BasicCassandraMappingContext</code> in favor of <code>CassandraMappingContext</code>.",
+      "translation": "已弃用 <code>BasicCassandraMappingContext</code>，推荐使用 <code>CassandraMappingContext</code>。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated <code>o.s.d.c.core.cql.CachedPreparedStatementCreator</code> in favor of <code>o.s.d.c.core.cql.support.CachedPreparedStatementCreator</code>.",
+      "translation": "已弃用 <code>o.s.d.c.core.cql.CachedPreparedStatementCreator</code>，推荐使用 <code>o.s.d.c.core.cql.support.CachedPreparedStatementCreator</code>。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated <code>CqlTemplate.getSession()</code> in favor of <code>getSessionFactory()</code>.",
+      "translation": "已弃用 <code>CqlTemplate.getSession()</code>，推荐使用 <code>getSessionFactory()</code>。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated <code>TypedIdCassandraRepository</code> in favor of <code>CassandraRepository</code>",
+      "translation": "已弃用 <code>TypedIdCassandraRepository</code>，推荐使用 <code>CassandraRepository</code>",
+      "count": 2
+    },
+    {
+      "source": "Merged <code>o.s.d.cql</code> with <code>o.s.d.cassandra.config</code> and flattened the XML and Java subpackages.",
+      "translation": "合并了<code>o.s.d.cql</code>与<code>o.s.d.cassandra.config</code>，并扁平化了 XML 和 Java 子包。",
+      "count": 2
+    },
+    {
+      "source": "Moved Cassandra exceptions <code>o.s.d.c.support.exception</code> to <code>o.s.d.cassandra</code>.",
+      "translation": "将 Cassandra 异常 `o.s.d.c.support.exception` 移至 `o.s.d.cassandra`。",
+      "count": 2
+    },
+    {
+      "source": "Moved <code>o.s.d.c.convert</code> to <code>o.s.d.c.core.convert</code> (affects converters).",
+      "translation": "已将<code>o.s.d.c.convert</code>移至<code>o.s.d.c.core.convert</code>（影响转换器）。",
+      "count": 2
+    },
+    {
+      "source": "Moved <code>o.s.d.c.mapping</code> to <code>o.s.d.c.core.mapping</code> (affects mapping annotations).",
+      "translation": "已将 `<code>o.s.d.c.mapping</code>` 移至 `<code>o.s.d.c.core.mapping</code>`（影响映射注解）。",
+      "count": 2
+    },
+    {
+      "source": "We split <code>CqlTemplate</code> and <code>CassandraTemplate</code> in three ways:",
+      "translation": "我们将 `<code>CqlTemplate</code>` 和 `<code>CassandraTemplate</code>` 从三个方面进行了拆分：",
+      "count": 2
+    },
+    {
+      "source": "We renamed <code>CassandraRepository</code> and <code>TypedIdCassandraRepository</code> to align Spring Data Cassandra naming with other Spring Data modules:",
+      "translation": "我们将<code>CassandraRepository</code>和<code>TypedIdCassandraRepository</code>重命名，以使Spring Data Cassandra的命名与其他Spring Data模块保持一致：",
+      "count": 2
+    },
+    {
+      "source": "Introduced <code>TypedIdCassandraRepository</code>, extending <code>CassandraRepository</code> as a deprecated type to ease migration",
+      "translation": "引入 <code>TypedIdCassandraRepository</code>，将其作为已弃用类型扩展自 <code>CassandraRepository</code>，以简化迁移工作。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data Cassandra <code>ConsistencyLevel</code> and <code>RetryPolicy</code> have been removed.\nPlease use the types provided by the DataStax driver.",
+      "translation": "Spring Data Cassandra 中的<code>ConsistencyLevel</code>和<code>RetryPolicy</code>已被移除。请使用 DataStax 驱动程序提供的类型。",
+      "count": 2
+    },
+    {
+      "source": "Removed the <code>CassandraOperations.selectBySimpleIds</code> method.",
+      "translation": "已移除 `<code>CassandraOperations.selectBySimpleIds</code>` 方法。",
+      "count": 2
+    },
+    {
+      "source": "Used better names for <code>CassandraRepository</code>.",
+      "translation": "为 `<code>CassandraRepository</code>` 使用了更合适的名称。",
+      "count": 2
+    },
+    {
+      "source": "Refactored <code>QueryOptions</code> to be immutable objects.",
+      "translation": "重构了<code>QueryOptions</code>，使其成为不可变对象。",
+      "count": 2
+    },
+    {
+      "source": "Refactored <code>CassandraPersistentProperty</code> to single-column.",
+      "translation": "重构了单列的 <code>CassandraPersistentProperty</code>。",
+      "count": 2
+    },
+    {
+      "source": "Deprecated constructors of <code>QueryOptions</code> in favor of their builders.",
+      "translation": "已弃用 `QueryOptions` 的构造函数，建议使用其构建器。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data for Apache Cassandra 2.0 introduces a set of breaking changes when upgrading from earlier versions:",
+      "translation": "Spring Data for Apache Cassandra 2.0 在从早期版本升级时引入了一系列破坏性变更：",
+      "count": 2
+    },
+    {
+      "source": "Refactored CQL specifications to value objects and configurators.",
+      "translation": "将 CQL 规范重构为值对象和配置器。",
+      "count": 2
+    },
+    {
+      "source": "With the merge, we merged all CQL packages into Spring Data Cassandra:",
+      "translation": "随着此次合并，我们将所有 CQL 包合并到了 Spring Data Cassandra 中：",
+      "count": 2
+    },
+    {
+      "source": "The method was removed because it did not support complex IDs.\nThe newly introduced query DSL allows mapped and complex id’s for single column Id’s, as the following example shows:",
+      "translation": "该方法已被移除，因为它不支持复杂的 ID。  \n新引入的查询 DSL 允许为单列 ID 使用映射和复杂 ID，如下例所示：",
+      "count": 2
+    },
+    {
+      "source": "The Spring Data Cassandra types restricted usage of available features provided in and allowed by the Cassandra native driver.\nAs a result, the Spring Data Cassandra’s types required an update each time newer functionality was introduced by the driver.",
+      "translation": "Spring Data Cassandra 的类型限制了 Cassandra 原生驱动所提供的可用功能的使用。  \n因此，每当驱动引入新功能时，Spring Data Cassandra 的类型都需要进行更新。",
+      "count": 2
+    },
+    {
+      "source": "This change affects You only if you operate directly on the mapping model.",
+      "translation": "此更改仅影响直接操作映射模型的用户。",
+      "count": 2
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 2
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Cassandra</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Cassandra</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            5.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 2
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Cassandra</a></li>\n      <li><a href=\"../index.html\">Overview</a></li>\n      <li><a href=\"../migration-guides.html\">Migration Guides</a></li>\n      <li><a href=\"migration-guide-1.5-to-2.0.html\">Migration Guide from 1.x to 2.x</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Cassandra</a></li>\n      <li><a href=\"../index.html\">概述</a></li>\n      <li><a href=\"../migration-guides.html\">迁移指南</a></li>\n      <li><a href=\"migration-guide-1.5-to-2.0.html\">从 1.x 到 2.x 的迁移指南</a></li>\n    </ul>\n  </nav>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-cassandra/src/main/antora/modules/ROOT/pages/migration-guide/migration-guide-1.5-to-2.0.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-cassandra\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-cassandra/src/main/antora/modules/ROOT/pages/migration-guide/migration-guide-1.5-to-2.0.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-cassandra\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring 团队学院</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在所有的 Spring 文档中搜索</a>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/repositories.html\">Cassandra Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/query-methods.html\">Cassandra-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/aot.html\">Ahead of Time Optimizations</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">存储库</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义存储库接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/repositories.html\">Cassandra 存储库</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建存储库实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/query-methods.html\">Cassandra 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义存储库实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">存储库方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">存储库查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">存储库查询返回类型</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/repositories/aot.html\">提前优化</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../cassandra.html\">Cassandra Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/configuration.html\">Connecting to Cassandra with Spring</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/schema-management.html\">Schema Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/cql-template.html\">CQL Template API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/reactive-cassandra.html\">Reactive Infrastructure</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/template.html\">Persisting Entities</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/prepared-statements.html\">Prepared Statements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/converters.html\">Type-based Converter</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/property-converters.html\">Property-based Converters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/auditing.html\">Auditing Configuration for Cassandra</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../cassandra.html\">Cassandra 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/getting-started.html\">入门指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/configuration.html\">使用 Spring 连接 Cassandra</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/schema-management.html\">模式管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/cql-template.html\">CQL 模板 API</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/reactive-cassandra.html\">响应式基础设施</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/template.html\">实体持久化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/prepared-statements.html\">预编译语句</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/converters.html\">基于类型的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/property-converters.html\">基于属性的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/auditing.html\">Cassandra 审计配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../cassandra/value-expressions.html\">值表达式基础</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item is-current-page\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-1.5-to-2.0.html\">Migration Guide from 1.x to 2.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-2.2-to-3.0.html\">Migration Guide from 2.x to 3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-3.0-to-4.0.html\">Migration Guide from 3.x to 4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-4.0-to-4.3.html\">Migration Guide from 4.x to 4.3</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item is-current-page\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-1.5-to-2.0.html\">从 1.x 到 2.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-2.2-to-3.0.html\">从 2.x 到 3.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-3.0-to-4.0.html\">从 3.x 到 4.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"migration-guide-4.0-to-4.3.html\">从 4.x 到 4.3 的迁移指南</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">Object Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#removed-sd-cassandra-consistencylevel-and-retrypolicy-types-in-favor-of-datastax-consistencylevel-and-retrypolicy-types\"></a>Removed SD Cassandra <code>ConsistencyLevel</code> and <code>RetryPolicy</code> types in favor of DataStax <code>ConsistencyLevel</code> and <code>RetryPolicy</code> types",
+      "translation": "<a class=\"anchor\" href=\"#removed-sd-cassandra-consistencylevel-and-retrypolicy-types-in-favor-of-datastax-consistencylevel-and-retrypolicy-types\"></a>已移除 SD Cassandra 的 <code>ConsistencyLevel</code> 和 <code>RetryPolicy</code> 类型，转而使用 DataStax 的 <code>ConsistencyLevel</code> 和 <code>RetryPolicy</code> 类型",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#better-names-for-cassandrarepository\"></a>Better names for <code>CassandraRepository</code>",
+      "translation": "<a class=\"anchor\" href=\"#better-names-for-cassandrarepository\"></a><code>CassandraRepository</code> 的更佳命名",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#refactored-queryoptions-to-be-immutable-objects\"></a>Refactored <code>QueryOptions</code> to be Immutable Objects",
+      "translation": "<a class=\"anchor\" href=\"#refactored-queryoptions-to-be-immutable-objects\"></a>重构了<code>QueryOptions</code>，使其成为不可变对象",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#refactored-cassandrapersistentproperty-to-single-column\"></a>Refactored <code>CassandraPersistentProperty</code> to Single-column",
+      "translation": "<a class=\"anchor\" href=\"#refactored-cassandrapersistentproperty-to-single-column\"></a>重构了<code>CassandraPersistentProperty</code>为单列",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#merged-spring-cql-and-spring-data-cassandra-modules\"></a>Merged Spring CQL and Spring Data Cassandra Modules",
+      "translation": "<a class=\"anchor\" href=\"#merged-spring-cql-and-spring-data-cassandra-modules\"></a>合并了 Spring CQL 和 Spring Data Cassandra 模块",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#refactored-cql-specifications-to-value-objects-and-configurators\"></a>Refactored CQL Specifications to Value Objects and Configurators",
+      "translation": "<a class=\"anchor\" href=\"#refactored-cql-specifications-to-value-objects-and-configurators\"></a>重构 CQL 规范为值对象和配置器",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 2
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 2
+    },
+    {
+      "source": "Spring Data Cassandra",
+      "translation": "Spring Data Cassandra",
+      "count": 2
+    },
+    {
+      "source": "Migration Guide from 1.x to 2.x",
+      "translation": "从 1.x 到 2.x 的迁移指南",
+      "count": 2
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 2
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 2
+    }
+  ]
+}

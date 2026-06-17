@@ -1,0 +1,471 @@
+{
+  "created_at": "2026-06-16 17:33:28",
+  "updated_at": "2026-06-16 17:33:28",
+  "stats": {
+    "total_entries": 91,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 110,
+    "entries_with_hits": 91,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2087912087912087,
+    "usage_percentage": 0.0091
+  },
+  "items": [
+    {
+      "source": "The returned <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> is supposed to contain the original <code>RuntimeException</code> as root\ncause. However, client code may not generally rely on this due to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>s possibly being\ncaused by other resource APIs as well. That said, a <code>getRootCause() instanceof DataAccessException</code> check\n(and subsequent cast) is considered reliable when expecting Cassandra-based access to have happened.",
+      "translation": "返回的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>本应包含原始的<code>RuntimeException</code>作为根本原因。然而，客户端代码通常不能依赖这一点，因为<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>也可能由其他资源 API 引发。尽管如此，当预期已发生基于 Cassandra 的访问时，执行<code>getRootCause() instanceof DataAccessException</code>检查（并进行后续类型转换）被认为是可靠的。",
+      "count": 2
+    },
+    {
+      "source": "Translate the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> into a generic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.",
+      "translation": "将给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>转换为通用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the Cassandra <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
+      "translation": "返回此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create a <code>SimpleStatement</code> given <code>cql</code>.",
+      "translation": "根据 `cql` 创建一个 `<code>SimpleStatement</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a> for this template.",
+      "translation": "为此模板设置<a href=\"ExecutionProfileResolver.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>ExecutionProfileResolver</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Sets the Cassandra <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
+      "translation": "设置此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Ensures the Cassandra <code>CqlSession</code> and exception translator has been propertly set.",
+      "translation": "确保已正确设置 Cassandra 的 `<code>CqlSession</code>` 和异常转换器。",
+      "count": 2
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 2
+    },
+    {
+      "source": "Logger available to subclasses",
+      "translation": "子类可用的日志记录器",
+      "count": 2
+    },
+    {
+      "source": "Prepare the given CQL Statement applying statement settings such as page size and consistency level.",
+      "translation": "根据页面大小和一致性级别等语句设置，准备给定的 CQL 语句。",
+      "count": 2
+    },
+    {
+      "source": "Return the exception translator used by this template to translate Cassandra specific Exceptions into Spring DAO's\nException Hierarchy.",
+      "translation": "返回此模板用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器。",
+      "count": 2
+    },
+    {
+      "source": "Create a new RowMapper for reading columns as key-value pairs.",
+      "translation": "创建一个用于将列读取为键值对的新 RowMapper。",
+      "count": 2
+    },
+    {
+      "source": "Create a new RowMapper for reading result objects from a single column.",
+      "translation": "为从单列读取结果对象创建一个新的 RowMapper。",
+      "count": 2
+    },
+    {
+      "source": "Sets the exception translator used by this template to translate Cassandra specific Exceptions into Spring DAO's\nException Hierarchy.",
+      "translation": "将本模板中用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器设置为此值。",
+      "count": 2
+    },
+    {
+      "source": "Set the driver execution profile for this template.",
+      "translation": "为此模板设置驱动程序执行配置文件。",
+      "count": 2
+    },
+    {
+      "source": "Set the serial consistency level for this template.",
+      "translation": "为此模板设置串行一致性级别。",
+      "count": 2
+    },
+    {
+      "source": "Determine CQL from potential provider object.",
+      "translation": "从潜在提供者对象中确定 CQL。",
+      "count": 2
+    },
+    {
+      "source": "Translate the given",
+      "translation": "请提供需要翻译的文本内容。",
+      "count": 2
+    },
+    {
+      "source": "into a generic",
+      "translation": "转化为通用型",
+      "count": 2
+    },
+    {
+      "source": "Classes providing a higher abstraction level usually extend <a href=\"CassandraAccessor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraAccessor</code></a> to provide a richer set of\nfunctionality on top of a <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> using <code>CqlSession</code>.",
+      "translation": "提供更高抽象级别的类通常会扩展<a href=\"CassandraAccessor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraAccessor</code></a>，以便在基于<a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>的基础上，利用<code>CqlSession</code>提供更丰富的功能。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">从类 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"java.lang 中的类或接口\">Object</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"java.lang 中的类或接口\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"java.lang 中的类或接口\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"java.lang 中的类或接口\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"java.lang 中的类或接口\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"java.lang 中的类或接口\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"java.lang 中的类或接口\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"java.lang 中的类或接口\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"java.lang 中的类或接口\">wait</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">protected static</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a></span> <span class=\"element-name\">toCql</span><wbr/><span class=\"parameters\">(@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a> cqlProvider)</span>",
+      "translation": "<span class=\"modifiers\">protected static</span> <span class=\"return-type\">@Nullable String</span> <span class=\"element-name\">toCql</span><wbr/><span class=\"parameters\">(@Nullable Object cqlProvider)</span>",
+      "count": 1
+    },
+    {
+      "source": "Sets the Cassandra <code>CqlSession</code> used by this template to perform Cassandra data access operations. The\n<code>session</code> will replace the current <a href=\"#getSessionFactory()\"><code>getSessionFactory()</code></a> with <a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a>.",
+      "translation": "设置本模板用于执行 Cassandra 数据访问操作的 Cassandra <code>CqlSession</code>。<code>session</code> 将替换当前的 <a href=\"#getSessionFactory()\"><code>getSessionFactory()</code></a>，并替换为 <a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">CassandraAccessor</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></span>",
+      "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">CassandraAccessor</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setConsistencyLevel</span><wbr/><span class=\"parameters\">(@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel consistencyLevel)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setConsistencyLevel</span><wbr/><span class=\"parameters\">(@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel consistencyLevel)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setKeyspace</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlIdentifier keyspace)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setKeyspace</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlIdentifier keyspace)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setPageSize</span><wbr/><span class=\"parameters\">(int fetchSize)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setPageSize</span><wbr/><span class=\"parameters\">(int fetchSize)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setSerialConsistencyLevel</span><wbr/><span class=\"parameters\">(@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel consistencyLevel)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setSerialConsistencyLevel</span><wbr/><span class=\"parameters\">(@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel consistencyLevel)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setSession</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlSession session)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setSession</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlSession session)</span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">protected final</span> <span class=\"return-type\">org.apache.commons.logging.Log</span> <span class=\"element-name\">logger</span>",
+      "translation": "<span class=\"modifiers\">protected final</span> <span class=\"return-type\">org.apache.commons.logging.Log</span> <span class=\"element-name\">logger</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel</span> <span class=\"element-name\">getConsistencyLevel</span>()",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel</span> <span class=\"element-name\">getConsistencyLevel</span>()",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">@Nullable com.datastax.oss.driver.api.core.CqlIdentifier</span> <span class=\"element-name\">getKeyspace</span>()",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">@Nullable com.datastax.oss.driver.api.core.CqlIdentifier</span> <span class=\"element-name\">getKeyspace</span>()",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel</span> <span class=\"element-name\">getSerialConsistencyLevel</span>()",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">@Nullable com.datastax.oss.driver.api.core.ConsistencyLevel</span> <span class=\"element-name\">getSerialConsistencyLevel</span>()",
+      "count": 1
+    },
+    {
+      "source": "Set the <code>keyspace</code> to be applied on statement-level for this template. If not set, the default\n<code>CqlSession</code> keyspace will be used.",
+      "translation": "将本模板的 `keyspace` 设置为语句级别。如果未设置，则使用默认的 `CqlSession` 键空间。",
+      "count": 1
+    },
+    {
+      "source": "Create a new arg-based PreparedStatementSetter using the args passed in. By default, we'll create an\n<a href=\"ArgumentPreparedStatementBinder.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ArgumentPreparedStatementBinder</code></a>. This method allows for the creation to be overridden by subclasses.",
+      "translation": "使用传入的参数创建一个新的基于参数的 PreparedStatementSetter。默认情况下，我们将创建一个 <a href=\"ArgumentPreparedStatementBinder.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ArgumentPreparedStatementBinder</code></a>。此方法允许子类覆盖该创建过程。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Class CassandraAccessor\">Class CassandraAccessor</h1>",
+      "translation": "<h1 class=\"title\" title=\"类 CassandraAccessor\">类 CassandraAccessor</h1>",
+      "count": 1
+    },
+    {
+      "source": "Set the <code>keyspace</code> to be applied on statement-level for this template.",
+      "translation": "将此模板的<code>keyspace</code>设置为语句级别应用。",
+      "count": 1
+    },
+    {
+      "source": "Sets the Cassandra <code>CqlSession</code> used by this template to perform Cassandra data access operations.",
+      "translation": "设置此模板用于执行 Cassandra 数据访问操作的 Cassandra <code>CqlSession</code>。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Create a new arg-based PreparedStatementSetter using the args passed in.",
+      "translation": "使用传入的参数创建一个新的基于参数的 PreparedStatementSetter。",
+      "count": 1
+    },
+    {
+      "source": "Set the consistency level for this template.",
+      "translation": "为此模板设置一致性级别。",
+      "count": 1
+    },
+    {
+      "source": "Set the page size for this template.",
+      "translation": "设置此模板的页面大小。",
+      "count": 1
+    },
+    {
+      "source": "Set the consistency level for this template. Consistency level defines the number of nodes involved into query\nprocessing. Relaxed consistency level settings use fewer nodes but eventual consistency is more likely to occur\nwhile a higher consistency level involves more nodes to obtain results with a higher consistency guarantee.",
+      "translation": "为此模板设置一致性级别。一致性级别定义了参与查询处理的节点数量。放宽的一致性级别设置会使用较少的节点，但更有可能出现最终一致性；而较高的一致性级别则会涉及更多节点，以获得更高的一致性保证的结果。",
+      "count": 1
+    },
+    {
+      "source": "Set the page size for this template. This is important for processing large result sets: Setting this higher than\nthe default value will increase processing speed at the cost of memory consumption; setting this lower can avoid\ntransferring row data that will never be read by the application. Default is -1, indicating to use the CQL driver's\ndefault configuration (i.e. to not pass a specific page size setting on to the driver).",
+      "translation": "设置此模板的页面大小。这对于处理大型结果集非常重要：将此值设置为高于默认值可以提高处理速度，但会增加内存消耗；将其设置得较低可以避免传输应用程序永远不会读取的行数据。默认为 -1，表示使用 CQL 驱动程序的默认配置（即不向驱动程序传递特定的页面大小设置）。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#afterPropertiesSet()\" tabindex=\"0\">afterPropertiesSet()</a></li>\n<li><a href=\"#setConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\" tabindex=\"0\">setConsistencyLevel(ConsistencyLevel)</a></li>\n<li><a href=\"#getConsistencyLevel()\" tabindex=\"0\">getConsistencyLevel()</a></li>\n<li><a href=\"#setExceptionTranslator(org.springframework.data.cassandra.core.cql.CqlExceptionTranslator)\" tabindex=\"0\">setExceptionTranslator(CqlExceptionTranslator)</a></li>\n<li><a href=\"#getExceptionTranslator()\" tabindex=\"0\">getExceptionTranslator()</a></li>\n<li><a href=\"#setExecutionProfile(java.lang.String)\" tabindex=\"0\">setExecutionProfile(String)</a></li>\n<li><a href=\"#setExecutionProfileResolver(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\" tabindex=\"0\">setExecutionProfileResolver(ExecutionProfileResolver)</a></li>\n<li><a href=\"#getExecutionProfileResolver()\" tabindex=\"0\">getExecutionProfileResolver()</a></li>\n<li><a href=\"#setKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\" tabindex=\"0\">setKeyspace(CqlIdentifier)</a></li>\n<li><a href=\"#getKeyspace()\" tabindex=\"0\">getKeyspace()</a></li>\n<li><a href=\"#setPageSize(int)\" tabindex=\"0\">setPageSize(int)</a></li>\n<li><a href=\"#getPageSize()\" tabindex=\"0\">getPageSize()</a></li>\n<li><a href=\"#setSerialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\" tabindex=\"0\">setSerialConsistencyLevel(ConsistencyLevel)</a></li>\n<li><a href=\"#getSerialConsistencyLevel()\" tabindex=\"0\">getSerialConsistencyLevel()</a></li>\n<li><a href=\"#setSession(com.datastax.oss.driver.api.core.CqlSession)\" tabindex=\"0\">setSession(CqlSession)</a></li>\n<li><a href=\"#setSessionFactory(org.springframework.data.cassandra.SessionFactory)\" tabindex=\"0\">setSessionFactory(SessionFactory)</a></li>\n<li><a href=\"#getSessionFactory()\" tabindex=\"0\">getSessionFactory()</a></li>\n<li><a href=\"#newStatement(java.lang.String)\" tabindex=\"0\">newStatement(String)</a></li>\n<li><a href=\"#applyStatementSettings(com.datastax.oss.driver.api.core.cql.Statement)\" tabindex=\"0\">applyStatementSettings(Statement)</a></li>\n<li><a href=\"#translateExceptionIfPossible(java.lang.RuntimeException)\" tabindex=\"0\">translateExceptionIfPossible(RuntimeException)</a></li>\n<li><a href=\"#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\" tabindex=\"0\">translate(String, String, RuntimeException)</a></li>\n<li><a href=\"#newPreparedStatementBinder(java.lang.Object%5B%5D)\" tabindex=\"0\">newPreparedStatementBinder(Object[])</a></li>\n<li><a href=\"#newColumnMapRowMapper()\" tabindex=\"0\">newColumnMapRowMapper()</a></li>\n<li><a href=\"#newSingleColumnRowMapper(java.lang.Class)\" tabindex=\"0\">newSingleColumnRowMapper(Class)</a></li>\n<li><a href=\"#toCql(java.lang.Object)\" tabindex=\"0\">toCql(Object)</a></li>\n</ol>",
+      "translation": "<a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#afterPropertiesSet()\" tabindex=\"0\">afterPropertiesSet()</a></li>\n<li><a href=\"#setConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\" tabindex=\"0\">setConsistencyLevel(ConsistencyLevel)</a></li>\n<li><a href=\"#getConsistencyLevel()\" tabindex=\"0\">getConsistencyLevel()</a></li>\n<li><a href=\"#setExceptionTranslator(org.springframework.data.cassandra.core.cql.CqlExceptionTranslator)\" tabindex=\"0\">setExceptionTranslator(CqlExceptionTranslator)</a></li>\n<li><a href=\"#getExceptionTranslator()\" tabindex=\"0\">getExceptionTranslator()</a></li>\n<li><a href=\"#setExecutionProfile(java.lang.String)\" tabindex=\"0\">setExecutionProfile(String)</a></li>\n<li><a href=\"#setExecutionProfileResolver(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\" tabindex=\"0\">setExecutionProfileResolver(ExecutionProfileResolver)</a></li>\n<li><a href=\"#getExecutionProfileResolver()\" tabindex=\"0\">getExecutionProfileResolver()</a></li>\n<li><a href=\"#setKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\" tabindex=\"0\">setKeyspace(CqlIdentifier)</a></li>\n<li><a href=\"#getKeyspace()\" tabindex=\"0\">getKeyspace()</a></li>\n<li><a href=\"#setPageSize(int)\" tabindex=\"0\">setPageSize(int)</a></li>\n<li><a href=\"#getPageSize()\" tabindex=\"0\">getPageSize()</a></li>\n<li><a href=\"#setSerialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\" tabindex=\"0\">setSerialConsistencyLevel(ConsistencyLevel)</a></li>\n<li><a href=\"#getSerialConsistencyLevel()\" tabindex=\"0\">getSerialConsistencyLevel()</a></li>\n<li><a href=\"#setSession(com.datastax.oss.driver.api.core.CqlSession)\" tabindex=\"0\">setSession(CqlSession)</a></li>\n<li><a href=\"#setSessionFactory(org.springframework.data.cassandra.SessionFactory)\" tabindex=\"0\">setSessionFactory(SessionFactory)</a></li>\n<li><a href=\"#getSessionFactory()\" tabindex=\"0\">getSessionFactory()</a></li>\n<li><a href=\"#newStatement(java.lang.String)\" tabindex=\"0\">newStatement(String)</a></li>\n<li><a href=\"#applyStatementSettings(com.datastax.oss.driver.api.core.cql.Statement)\" tabindex=\"0\">applyStatementSettings(Statement)</a></li>\n<li><a href=\"#translateExceptionIfPossible(java.lang.RuntimeException)\" tabindex=\"0\">translateExceptionIfPossible(RuntimeException)</a></li>\n<li><a href=\"#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\" tabindex=\"0\">translate(String, String, RuntimeException)</a></li>\n<li><a href=\"#newPreparedStatementBinder(java.lang.Object%5B%5D)\" tabindex=\"0\">newPreparedStatementBinder(Object[])</a></li>\n<li><a href=\"#newColumnMapRowMapper()\" tabindex=\"0\">newColumnMapRowMapper()</a></li>\n<li><a href=\"#newSingleColumnRowMapper(java.lang.Class)\" tabindex=\"0\">newSingleColumnRowMapper(Class)</a></li>\n<li><a href=\"#toCql(java.lang.Object)\" tabindex=\"0\">toCql(Object)</a></li>\n</ol>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>statement</code> - the CQL Statement to prepare</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#setConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\"><code>setConsistencyLevel(ConsistencyLevel)</code></a></li>\n<li><a href=\"#setSerialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\"><code>setSerialConsistencyLevel(ConsistencyLevel)</code></a></li>\n<li><a href=\"#setPageSize(int)\"><code>setPageSize(int)</code></a></li>\n<li><a href=\"#setExecutionProfile(java.lang.String)\"><code>setExecutionProfile(String)</code></a></li>\n<li><a href=\"#setExecutionProfileResolver(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\"><code>setExecutionProfileResolver(ExecutionProfileResolver)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>statement</code> - 要准备的 CQL 语句</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#setConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\"><code>setConsistencyLevel(ConsistencyLevel)</code></a></li>\n<li><a href=\"#setSerialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\"><code>setSerialConsistencyLevel(ConsistencyLevel)</code></a></li>\n<li><a href=\"#setPageSize(int)\"><code>setPageSize(int)</code></a></li>\n<li><a href=\"#setExecutionProfile(java.lang.String)\"><code>setExecutionProfile(String)</code></a></li>\n<li><a href=\"#setExecutionProfileResolver(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\"><code>setExecutionProfileResolver(ExecutionProfileResolver)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>task</code> - readable text describing the task being attempted</dd>\n<dd><code>cql</code> - CQL query or update that caused the problem (may be null)</dd>\n<dd><code>ex</code> - the offending <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a></dd>\n<dt>Returns:</dt>\n<dd>the DataAccessException, wrapping the <code>RuntimeException</code></dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/NestedRuntimeException.html#getRootCause()\" title=\"class or interface in org.springframework.core\"><code>NestedRuntimeException.getRootCause()</code></a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">Consistent\n     exception hierarchy</a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>task</code> - 描述正在尝试执行的任务的可读文本</dd>\n<dd><code>cql</code> - 导致问题的 CQL 查询或更新语句（可能为 null）</dd>\n<dd><code>ex</code> - 引发异常的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a></dd>\n<dt>返回：</dt>\n<dd>一个包装了 <code>RuntimeException</code> 的 DataAccessException</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/NestedRuntimeException.html#getRootCause()\" title=\"class or interface in org.springframework.core\"><code>NestedRuntimeException.getRootCause()</code></a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">一致的异常层次结构</a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>ex</code> - the offending <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a></dd>\n<dt>Returns:</dt>\n<dd>the DataAccessException, wrapping the <code>RuntimeException</code></dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">Consistent\n     exception hierarchy</a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>ex</code> - 违规的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a></dd>\n<dt>返回：</dt>\n<dd>封装了 <code>RuntimeException</code> 的 DataAccessException</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">一致的异常层次结构</a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>cqlProvider</code> - object that's potentially a <a href=\"CqlProvider.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlProvider</code></a></dd>\n<dt>Returns:</dt>\n<dd>the CQL string, or null</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlProvider.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlProvider</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>cqlProvider</code> - 可能是一个 <a href=\"CqlProvider.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>CqlProvider</code></a> 的对象</dd>\n<dt>返回：</dt>\n<dd>CQL 字符串，或 null</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlProvider.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>CqlProvider</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>keyspace</code> - the keyspace to apply, must not be null.</dd>\n<dt>Since:</dt>\n<dd>3.1</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>SimpleStatement.setKeyspace(CqlIdentifier)</code></li>\n<li><code>BatchStatement.setKeyspace(CqlIdentifier)</code></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>keyspace</code> - 要应用的关键字空间，不能为 null。</dd>\n<dt>版本：</dt>\n<dd>3.1</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>SimpleStatement.setKeyspace(CqlIdentifier)</code></li>\n<li><code>BatchStatement.setKeyspace(CqlIdentifier)</code></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>session</code> - Cassandra <code>CqlSession</code> used by this template, must not benull.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><code>CqlSession</code></li>\n<li><a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>session</code> - 本模板使用的 Cassandra <code>CqlSession</code>，不能为 null。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><code>CqlSession</code></li>\n<li><a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the Cassandra <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template.</dd>\n<dt>Since:</dt>\n<dd>2.0</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>本模板使用的 Cassandra <a href=\"../../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\"><code>SessionFactory</code></a>。</dd>\n<dt>版本：</dt>\n<dd>2.0</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"../../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\"><code>SessionFactory</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>sessionFactory</code> - Cassandra <code>CqlSession</code> used by this template. Must not benull.</dd>\n<dt>Since:</dt>\n<dd>2.0</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><code>CqlSession</code></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>sessionFactory</code> - 本模板使用的 Cassandra <code>CqlSession</code>。不能为 null。</dd>\n<dt>版本：</dt>\n<dd>2.0</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><code>CqlSession</code></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>requiredType</code> - the type that each result object is expected to match</dd>\n<dt>Returns:</dt>\n<dd>the RowMapper to use</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"SingleColumnRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>SingleColumnRowMapper</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>requiredType</code> - 每个结果对象预期匹配的类型</dd>\n<dt>返回：</dt>\n<dd>要使用的 RowMapper</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"SingleColumnRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>SingleColumnRowMapper</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Author:</dt>\n<dd>David Webb, Mark Paluch, John Blum, Tomasz Lelek</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>InitializingBean</code></a></li>\n<li><code>CqlSession</code></li>\n</ul>\n</dd>",
+      "translation": "<dt>作者：</dt>\n<dd>David Webb, Mark Paluch, John Blum, Tomasz Lelek</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"org.springframework.beans.factory 中的类或接口\"><code>InitializingBean</code></a></li>\n<li><code>CqlSession</code></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>3.0</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>Statement.setExecutionProfileName(String)</code></li>\n<li><a href=\"ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>自：</dt>\n<dd>3.0</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>Statement.setExecutionProfileName(String)</code></li>\n<li><a href=\"ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>3.0</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><code>DriverExecutionProfile</code></li>\n<li><a href=\"ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>自：</dt>\n<dd>3.0</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><code>DriverExecutionProfile</code></li>\n<li><a href=\"ExecutionProfileResolver.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>ExecutionProfileResolver</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>exceptionTranslator</code> - exception translator to set; must not be null.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlExceptionTranslator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlExceptionTranslator</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>exceptionTranslator</code> - 要设置的异常转换器；不能为 null。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlExceptionTranslator.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>CqlExceptionTranslator</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>3.0</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>Statement.setSerialConsistencyLevel(ConsistencyLevel)</code></li>\n<li><code>ConsistencyLevel</code></li>\n</ul>\n</dd>",
+      "translation": "<dt>自：</dt>\n<dd>3.0</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>Statement.setSerialConsistencyLevel(ConsistencyLevel)</code></li>\n<li><code>ConsistencyLevel</code></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the Cassandra exception translator.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlExceptionTranslator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlExceptionTranslator</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>Cassandra 异常转换器。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"CqlExceptionTranslator.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>CqlExceptionTranslator</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>cql</code> - the CQL query.</dd>\n<dt>Returns:</dt>\n<dd>the <code>SimpleStatement</code> to use.</dd>\n<dt>Since:</dt>\n<dd>3.0</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>cql</code> - CQL 查询语句。</dd>\n<dt>返回：</dt>\n<dd>要使用的 <code>SimpleStatement</code> 对象。</dd>\n<dt>版本：</dt>\n<dd>3.0</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the RowMapper to use</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"ColumnMapRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ColumnMapRowMapper</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>要使用的 RowMapper</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"ColumnMapRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ColumnMapRowMapper</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>Statement.setConsistencyLevel(ConsistencyLevel)</code></li>\n<li><code>RetryPolicy</code></li>\n</ul>\n</dd>",
+      "translation": "<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>Statement.setConsistencyLevel(ConsistencyLevel)</code></li>\n<li><code>RetryPolicy</code></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>args</code> - object array with arguments</dd>\n<dt>Returns:</dt>\n<dd>the new <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> to use</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>args</code> - 包含参数的对象数组</dd>\n<dt>返回：</dt>\n<dd>用于使用的新的 <a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"org.springframework.beans.factory 中的类或接口\">afterPropertiesSet</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"org.springframework.beans.factory 中的类或接口\">InitializingBean</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the <a href=\"ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a> specified for this template.</dd>\n<dt>Since:</dt>\n<dd>3.0</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>为此模板指定的 <a href=\"ExecutionProfileResolver.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>ExecutionProfileResolver</code></a>。</dd>\n<dt>版本：</dt>\n<dd>3.0</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Direct Known Subclasses:</dt>\n<dd><code><a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\">AsyncCqlTemplate</a>, <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\">CqlTemplate</a></code></dd>",
+      "translation": "<dt>直接已知子类:</dt>\n<dd><code><a href=\"AsyncCqlTemplate.html\" title=\"org.springframework.data.cassandra.core.cql 中的类\">AsyncCqlTemplate</a>, <a href=\"CqlTemplate.html\" title=\"org.springframework.data.cassandra.core.cql 中的类\">CqlTemplate</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the <code>keyspace</code> to be applied on statement-level for this template.</dd>\n<dt>Since:</dt>\n<dd>3.1</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>在此模板中针对语句级别应用的<code>keyspace</code>。</dd>\n<dt>版本：</dt>\n<dd>3.1</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>StatementBuilder.setPageSize(int)</code></li>\n</ul>\n</dd>",
+      "translation": "<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><code>StatementBuilder.setPageSize(int)</code></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the serial <code>ConsistencyLevel</code> specified for this template.</dd>\n<dt>Since:</dt>\n<dd>3.0</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>为此模板指定的串行一致性级别。</dd>\n<dt>版本：</dt>\n<dd>3.0</dd>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#field-detail\" tabindex=\"0\">Field Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#logger\" tabindex=\"0\">logger</a></li>\n</ol>",
+      "translation": "<a href=\"#field-detail\" tabindex=\"0\">字段详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#logger\" tabindex=\"0\">logger</a></li>\n</ol>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#constructor-detail\" tabindex=\"0\">Constructor Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E()\" tabindex=\"0\">CassandraAccessor()</a></li>\n</ol>",
+      "translation": "<a href=\"#constructor-detail\" tabindex=\"0\">构造函数详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E()\" tabindex=\"0\">CassandraAccessor()</a></li>\n</ol>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Implemented Interfaces:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code></dd>",
+      "translation": "<dt>所有已实现的接口：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"org.springframework.beans.factory 中的类或接口\">InitializingBean</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the <code>ConsistencyLevel</code> specified for this template.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>为此模板指定的 <code>ConsistencyLevel</code>。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>the page size specified for this template.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>为该模板指定的页面大小。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#field-summary\" tabindex=\"0\">Field Summary</a>",
+      "translation": "<a href=\"#field-summary\" tabindex=\"0\">字段摘要</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#constructor-summary\" tabindex=\"0\">Constructor Summary</a>",
+      "translation": "<a href=\"#constructor-summary\" tabindex=\"0\">构造函数摘要</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#method-summary\" tabindex=\"0\">Method Summary</a>",
+      "translation": "<a href=\"#method-summary\" tabindex=\"0\">方法摘要</a>",
+      "count": 1
+    },
+    {
+      "source": "Field Summary",
+      "translation": "字段摘要",
+      "count": 1
+    },
+    {
+      "source": "Constructor Summary",
+      "translation": "构造函数摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Constructor Details",
+      "translation": "构造器详情",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "provides access to a Cassandra",
+      "translation": "提供对 Cassandra 的访问权限。",
+      "count": 1
+    },
+    {
+      "source": "and the",
+      "translation": "以及",
+      "count": 1
+    }
+  ]
+}

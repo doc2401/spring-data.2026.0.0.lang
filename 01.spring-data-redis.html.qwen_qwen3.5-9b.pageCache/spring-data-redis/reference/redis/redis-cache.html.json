@@ -1,0 +1,436 @@
+{
+  "created_at": "2026-06-17 11:01:21",
+  "updated_at": "2026-06-17 11:01:21",
+  "stats": {
+    "total_entries": 84,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 85,
+    "entries_with_hits": 84,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0119047619047619,
+    "usage_percentage": 0.0084
+  },
+  "items": [
+    {
+      "source": "Global fixed Duration TTL expiration timeout",
+      "translation": "全局固定持续时间 TTL 过期超时",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code> defaults to a lock-free <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheWriter.html\">RedisCacheWriter</a></code> for reading and writing binary values.\nLock-free caching improves throughput.\nThe lack of entry locking can lead to overlapping, non-atomic commands for the <code>Cache</code> <code>putIfAbsent</code> and <code>clean</code> operations, as those require multiple commands to be sent to Redis.\nThe locking counterpart prevents command overlap by setting an explicit lock key and checking against presence of this key, which leads to additional requests and potential command wait times.",
+      "translation": "<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code> 默认使用无锁的 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheWriter.html\">RedisCacheWriter</a></code> 来读写二进制值。\n无锁缓存能够提高吞吐量。\n由于缺乏条目锁定，<code>Cache</code> 的 <code>putIfAbsent</code> 和 <code>clean</code> 操作可能会导致重叠且非原子的命令，因为这些操作需要向 Redis 发送多个命令。\n带锁的实现通过设置显式的锁键并检查该键是否存在来防止命令重叠，但这会导致额外的请求以及潜在的命令等待时间。",
+      "count": 1
+    },
+    {
+      "source": "The cache implementation defaults to use <code>KEYS</code> and <code>DEL</code> to clear the cache. <code>KEYS</code> can cause performance issues with large keyspaces.\nTherefore, the default <code>RedisCacheWriter</code> can be created with a <code>BatchStrategy</code> to switch to a <code>SCAN</code>-based batch strategy.\nThe <code>SCAN</code> strategy requires a batch size to avoid excessive Redis command round trips:",
+      "translation": "缓存实现默认使用<code>KEYS</code>和<code>DEL</code>命令来清除缓存。<code>KEYS</code>在大型键空间中可能导致性能问题。因此，可以创建一个带有<code>BatchStrategy</code>的默认<code>RedisCacheWriter</code>，以切换到基于<code>SCAN</code>的批处理策略。<code>SCAN</code>策略需要指定一个批次大小，以避免过多的 Redis 命令往返：",
+      "count": 1
+    },
+    {
+      "source": "The behavior of <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCache.html\">RedisCache</a></code> created by <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code> is defined with <code>RedisCacheConfiguration</code>.\nThe configuration lets you set key expiration times, prefixes, and <code>RedisSerializer</code> implementations for converting to and from the binary storage format, as shown in the following example:",
+      "translation": "由 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code> 创建的 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCache.html\">RedisCache</a></code> 的行为由 <code>RedisCacheConfiguration</code> 定义。\n该配置允许您设置键的过期时间、前缀，以及用于在二进制存储格式之间进行转换的 <code>RedisSerializer</code> 实现，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "<code>RedisCacheManager</code> behavior can be configured with <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.RedisCacheManagerBuilder.html\">RedisCacheManager.RedisCacheManagerBuilder</a></code>, letting you set the default <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code>, transaction behavior, and predefined caches.",
+      "translation": "<code>RedisCacheManager</code> 的行为可以通过 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.RedisCacheManagerBuilder.html\">RedisCacheManager.RedisCacheManagerBuilder</a></code> 进行配置，从而允许您设置默认的 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code>、事务行为以及预定义的缓存。",
+      "count": 1
+    },
+    {
+      "source": "By default <code>RedisCache</code>, statistics are disabled.\nUse <code>RedisCacheManagerBuilder.enableStatistics()</code> to collect local <em>hits</em> and <em>misses</em> through  <code>RedisCache#getStatistics()</code>, returning a snapshot of the collected data.",
+      "translation": "默认情况下，<code>RedisCache</code> 的统计功能处于禁用状态。\n使用 <code>RedisCacheManagerBuilder.enableStatistics()</code> 可通过 <code>RedisCache#getStatistics()</code> 收集本地 <em>命中</em> 和 <em>未命中</em> 数据，并返回所收集数据的快照。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Redis’s <code>Cache</code> implementation supports <em>time-to-live</em> (TTL) expiration on cache entries.\nUsers can either configure the TTL expiration timeout with a fixed <code>Duration</code> or a dynamically computed <code>Duration</code> per cache entry by supplying an implementation of the new <code>RedisCacheWriter.TtlFunction</code> interface.",
+      "translation": "Spring Data Redis 的 `<code>`Cache`实现支持缓存条目的<em>生存时间</em>(TTL)过期。用户可以通过提供新的`<code>`RedisCacheWriter.TtlFunction`接口的实现，以固定`<code>`Duration`或为每个缓存条目动态计算`<code>`Duration`的方式配置 TTL 过期超时时间。",
+      "count": 1
+    },
+    {
+      "source": "The Redis <a href=\"https://redis.io/commands/getex\"><code>GETEX</code></a> command is only available in Redis version <code>6.2.0</code> and later.\nTherefore, if you are not using Redis <code>6.2.0</code> or later, then it is not possible to use Spring Data Redis’s TTI expiration.\nA command execution exception will be thrown if you enable TTI against an incompatible Redis (server) version.\nNo attempt is made to determine if the Redis server version is correct and supports the <code>GETEX</code> command.",
+      "translation": "Redis 的 <a href=\"https://redis.io/commands/getex\"><code>GETEX</code></a> 命令仅在 Redis 6.2.0 及更高版本中可用。因此，如果您未使用 Redis 6.2.0 或更高版本，则无法使用 Spring Data Redis 的 TTI 过期功能。如果在不兼容的 Redis（服务器）版本上启用 TTI，将抛出命令执行异常。系统不会尝试判断 Redis 服务器版本是否正确以及是否支持 <code>GETEX</code> 命令。",
+      "count": 1
+    },
+    {
+      "source": "In order to achieve true time-to-idle (TTI) expiration-like behavior in your Spring Data Redis application, then an entry must be consistently accessed with (TTL) expiration on every read or write operation.\nThere are no exceptions to this rule.\nIf you are mixing and matching different data access patterns across your Spring Data Redis application (for example: caching, invoking operations using <code>RedisTemplate</code> and possibly, or especially when using Spring Data Repository CRUD operations), then accessing an entry may not necessarily prevent the entry from expiring if TTL expiration was set.\nFor example, an entry maybe \"put\" in (written to) the cache during a <code>@Cacheable</code> service method invocation with a TTL expiration (i.e. <code>SET &lt;expiration options&gt;</code>) and later read using a Spring Data Redis Repository before the expiration timeout (using <code>GET</code> without expiration options).\nA simple <code>GET</code> without specifying expiration options will not reset the TTL expiration timeout on an entry.\nTherefore, the entry may expire before the next data access operation, even though it was just read.\nSince this cannot be enforced in the Redis server, then it is the responsibility of your application to consistently access an entry when time-to-idle expiration is configured, in and outside of caching, where appropriate.",
+      "translation": "要在 Spring Data Redis 应用程序中实现真正的空闲时间（TTI）过期行为，则必须在每次读取或写入操作时一致地对条目进行访问并设置（TTL）过期时间。此规则没有例外。\n\n如果您的 Spring Data Redis 应用程序混合使用了不同的数据访问模式（例如：缓存、使用 <code>RedisTemplate</code> 调用操作，以及可能尤其是使用 Spring Data Repository CRUD 操作），那么即使设置了 TTL 过期时间，访问某个条目也不一定能阻止该条目过期。\n\n例如，一个条目可能在带有 TTL 过期时间的 <code>@Cacheable</code> 服务方法调用期间被“放入”（写入）缓存（即执行 <code>SET &lt;expiration options&gt;</code>），随后在过期超时之前使用 Spring Data Redis Repository 进行读取（使用不带过期选项的 <code>GET</code>）。\n\n如果不指定过期选项而简单执行 <code>GET</code>，将不会重置条目的 TTL 过期时间。因此，即使刚刚读取了该条目，它仍可能在下次数据访问操作之前过期。\n\n由于 Redis 服务器无法强制执行此规则，因此当配置了空闲时间过期时，您的应用程序有责任在适当的情况下，无论是在缓存内还是缓存外，一致地访问条目。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Redis provides an implementation of Spring Framework’s <a href=\"https://docs.spring.io/spring-framework/reference/7.0/integration.html#cache\">Cache Abstraction</a> in the <code>org.springframework.data.redis.cache</code> package.\nTo use Redis as a backing implementation, add <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code> to your configuration, as follows:",
+      "translation": "Spring Data Redis 在 `org.springframework.data.redis.cache` 包中提供了 Spring Framework 的<a href=\"https://docs.spring.io/spring-framework/reference/7.0/integration.html#cache\">缓存抽象</a>的实现。  \n要将 Redis 用作底层实现，请在配置中添加<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCacheManager.html\">RedisCacheManager</a></code>，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "The <code>KEYS</code> batch strategy is fully supported using any driver and Redis operation mode (Standalone, Clustered).\n<code>SCAN</code> is fully supported when using the Lettuce driver.\nJedis supports <code>SCAN</code> only in non-clustered modes.",
+      "translation": "`KEYS` 批处理策略在使用任何驱动和 Redis 操作模式（独立模式、集群模式）时均得到完全支持。  \n使用 Lettuce 驱动时，`SCAN` 命令得到完全支持。  \nJedis 仅在非集群模式下支持 `SCAN` 命令。",
+      "count": 1
+    },
+    {
+      "source": "Under-the-hood, a fixed <code>Duration</code> TTL expiration is wrapped in a <code>TtlFunction</code> implementation returning the provided <code>Duration</code>.",
+      "translation": "在底层实现中，一个固定的 `<code>Duration</code>` 类型的 TTL 过期时间被封装在一个 `<code>TtlFunction</code>` 实现中，该实现返回所提供的 `<code>Duration</code>`。",
+      "count": 1
+    },
+    {
+      "source": "The configuration of TTI in Spring Data Redis’s Cache implementation must be explicitly enabled, that is, is opt-in.\nAdditionally, you must also provide TTL configuration using either a fixed <code>Duration</code> or a custom implementation of the <code>TtlFunction</code> interface as described above in <a href=\"#redis:support:cache-abstraction:expiration\">Redis Cache Expiration</a>.",
+      "translation": "Spring Data Redis 缓存实现中的 TTI 配置必须显式启用，即采用 opt-in 模式。此外，您还必须通过固定 `<code>Duration` 或上述 `<a href=\"#redis:support:cache-abstraction:expiration\">Redis Cache Expiration</a>` 中描述的自定义 `<code>TtlFunction</code>` 接口实现来提供 TTL 配置。",
+      "count": 1
+    },
+    {
+      "source": "Locking applies on the <strong>cache level</strong>, not per <strong>cache entry</strong>.",
+      "translation": "锁定是在<strong>缓存级别</strong>上应用的，而不是针对每个<strong>缓存条目</strong>。",
+      "count": 1
+    },
+    {
+      "source": "By default, any <code>key</code> for a cache entry gets prefixed with the actual cache name followed by two colons (<code>::</code>).\nThis behavior can be changed to a static as well as a computed prefix.",
+      "translation": "默认情况下，缓存条目的任何 `<code>key</code>` 都会以实际的缓存名称加上两个冒号（`<code>::</code>`）作为前缀。这种行为可以更改为静态前缀或计算前缀。",
+      "count": 1
+    },
+    {
+      "source": "<em>time-to-live</em> (TTL) <em>expiration</em> - TTL is only set and reset by a create or update data access operation.\nAs long as the entry is written before the TTL expiration timeout, including on creation, an entry’s timeout will reset to the configured duration of the TTL expiration timeout.\nFor example, if the TTL expiration timeout is set to 5 minutes, then the timeout will be set to 5 minutes on entry creation and reset to 5 minutes anytime the entry is updated thereafter and before the 5-minute interval expires.\nIf no update occurs within 5 minutes, even if the entry was read several times, or even just read once during the 5-minute interval, the entry will still expire.\nThe entry must be written to prevent the entry from expiring when declaring a TTL expiration policy.",
+      "translation": "<em>生存时间</em>（TTL）<em>过期</em> - TTL 仅在创建或更新数据访问操作时被设置和重置。  \n只要条目在 TTL 过期超时之前被写入（包括创建时），其超时时间就会重置为配置的 TTL 过期超时时长。  \n例如，如果 TTL 过期超时设置为 5 分钟，则在条目创建时将超时设为 5 分钟；此后在该 5 分钟间隔内任何一次更新操作都会将超时重置为 5 分钟。  \n如果在 5 分钟内未发生任何更新，即使在此期间读取了多次条目，甚至仅读取了一次，该条目仍会过期。  \n声明 TTL 过期策略时，必须写入条目以防止其过期。",
+      "count": 1
+    },
+    {
+      "source": "<em>time-to-idle</em> (TTI) <em>expiration</em> - TTI is reset anytime the entry is also read as well as for entry updates, and is effectively and extension to the TTL expiration policy.",
+      "translation": "<em>空闲超时时间</em>（TTI）<em>过期</em>——TTI 在条目被读取或更新时会被重置，这实际上是对 TTL 过期策略的扩展。",
+      "count": 1
+    },
+    {
+      "source": "The <code>RedisCacheWriter.TtlFunction</code> interface was introduced in Spring Data Redis <code>3.2.0</code>.",
+      "translation": "<code>RedisCacheWriter.TtlFunction</code> 接口是在 Spring Data Redis <code>3.2.0</code> 版本中引入的。",
+      "count": 1
+    },
+    {
+      "source": "Then, you can either configure the fixed <code>Duration</code> or the dynamic, per-cache entry <code>Duration</code> TTL expiration on a global basis using:",
+      "translation": "然后，您可以使用以下方法在全局范围内配置固定的 `<code>Duration</code>` 或动态的、针对每个缓存条目的 `<code>Duration</code>` TTL 过期时间：",
+      "count": 1
+    },
+    {
+      "source": "<code>RedisCache.get(key)</code> is implemented by calling the Redis <code>GETEX</code> command.",
+      "translation": "`RedisCache.get(key)` 通过调用 Redis 的 `GETEX` 命令实现。",
+      "count": 1
+    },
+    {
+      "source": "As shown in the preceding example, <code>RedisCacheManager</code> allows custom configuration on a per-cache basis.",
+      "translation": "如前例所示，<code>RedisCacheManager</code> 支持针对每个缓存进行自定义配置。",
+      "count": 1
+    },
+    {
+      "source": "The following table lists the default settings for <code>RedisCacheManager</code>:",
+      "translation": "下表列出了<code>RedisCacheManager</code>的默认设置：",
+      "count": 1
+    },
+    {
+      "source": "Non-locking, <code>KEYS</code> batch strategy",
+      "translation": "非锁定，<code>KEYS</code> 批量策略",
+      "count": 1
+    },
+    {
+      "source": "The following table lists the default settings for <code>RedisCacheConfiguration</code>:",
+      "translation": "下表列出了<code>RedisCacheConfiguration</code>的默认设置：",
+      "count": 1
+    },
+    {
+      "source": "<code>DefaultFormattingConversionService</code> with default cache key converters",
+      "translation": "使用默认缓存键转换器的 DefaultFormattingConversionService",
+      "count": 1
+    },
+    {
+      "source": "If all cache entries should expire after a set duration of time, then simply configure a TTL expiration timeout with a fixed <code>Duration</code>, as follows:",
+      "translation": "如果所有缓存条目都应在设定的时间后过期，只需配置一个带有固定 `<code>Duration` 的 TTL 过期超时，如下所示：",
+      "count": 1
+    },
+    {
+      "source": "However, if the TTL expiration timeout should vary by cache entry, then you must provide a custom implementation of the <code>RedisCacheWriter.TtlFunction</code> interface:",
+      "translation": "然而，如果需要根据缓存条目变化 TTL 过期超时时间，则必须提供自定义的<code>RedisCacheWriter.TtlFunction</code>接口实现：",
+      "count": 1
+    },
+    {
+      "source": "Because Redis servers do not implement a proper notion of TTI, then TTI can only be achieved with Redis commands accepting expiration options.\nIn Redis, the \"expiration\" is technically a time-to-live (TTL) policy.\nHowever, TTL expiration can be passed when reading the value of a key thereby effectively resetting the TTL expiration timeout, as is now the case in Spring Data Redis’s <code>Cache.get(key)</code> operation.",
+      "translation": "由于 Redis 服务器未实现真正的 TTI（Time To Idle）概念，因此只能通过支持过期选项的 Redis 命令来实现 TTI。  \n在 Redis 中，“过期”在技术上是一种时间到活（TTL）策略。  \n然而，可以在读取键的值时传递 TTL 过期时间，从而有效地重置 TTL 过期超时时间，正如 Spring Data Redis 中的 `<code>Cache.get(key)</code>` 操作当前所做的那样。",
+      "count": 1
+    },
+    {
+      "source": "It is possible to opt in to the locking behavior as follows:",
+      "translation": "可以按照以下方式选择启用锁定行为：",
+      "count": 1
+    },
+    {
+      "source": "The following example shows how to set a static prefix:",
+      "translation": "以下示例展示了如何设置静态前缀：",
+      "count": 1
+    },
+    {
+      "source": "Cache Writer",
+      "translation": "缓存写入器",
+      "count": 1
+    },
+    {
+      "source": "Cache Configuration",
+      "translation": "缓存配置",
+      "count": 1
+    },
+    {
+      "source": "Initial Caches",
+      "translation": "初始缓存",
+      "count": 1
+    },
+    {
+      "source": "Transaction Aware",
+      "translation": "事务感知",
+      "count": 1
+    },
+    {
+      "source": "Prefix Keys",
+      "translation": "前缀键",
+      "count": 1
+    },
+    {
+      "source": "Default Prefix",
+      "translation": "默认前缀",
+      "count": 1
+    },
+    {
+      "source": "The actual cache name",
+      "translation": "实际缓存名称",
+      "count": 1
+    },
+    {
+      "source": "Key Serializer",
+      "translation": "密钥序列化器",
+      "count": 1
+    },
+    {
+      "source": "Value Serializer",
+      "translation": "值序列化器",
+      "count": 1
+    },
+    {
+      "source": "Conversion Service",
+      "translation": "转换服务",
+      "count": 1
+    },
+    {
+      "source": "The implementation of time-to-idle (TTI) as well as time-to-live (TTL) varies in definition and behavior even across different data stores.",
+      "translation": "时间到空闲（TTI）和时间到生存（TTL）的实现，在不同数据存储中的定义和行为甚至存在差异。",
+      "count": 1
+    },
+    {
+      "source": "In general:",
+      "translation": "一般来说：",
+      "count": 1
+    },
+    {
+      "source": "Some data stores expire an entry when TTL is configured no matter what type of data access operation occurs on the entry (reads, writes, or otherwise).\nAfter the set, configured TTL expiration timeout, the entry is evicted from the data store regardless.\nEviction actions (for example: destroy, invalidate, overflow-to-disk (for persistent stores), etc.) are data store specific.",
+      "translation": "无论对条目执行何种类型的数据访问操作（读取、写入或其他），只要配置了 TTL，某些数据存储会在 TTL 到期时使该条目失效。  \n在设置并配置的 TTL 过期超时时间到达后，该条目将被无条件地从数据存储中驱逐。  \n驱逐操作（例如：销毁、使无效、持久化存储中的溢出到磁盘等）因数据存储而异。",
+      "count": 1
+    },
+    {
+      "source": "Of course, you can combine both global and per-cache configuration using:",
+      "translation": "当然，您可以使用以下方法同时结合全局和每缓存的配置：",
+      "count": 1
+    },
+    {
+      "source": "Redis itself does not support the concept of true, time-to-idle (TTI) expiration.\nStill, using Spring Data Redis’s Cache implementation, it is possible to achieve time-to-idle (TTI) expiration-like behavior.",
+      "translation": "Redis 本身并不支持真正的空闲时间（TTI）过期概念。  \n不过，使用 Spring Data Redis 的缓存实现，可以实现类似空闲时间过期的行为。",
+      "count": 1
+    },
+    {
+      "source": "For example:",
+      "translation": "例如：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Redis</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Redis</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-redis/src/main/antora/modules/ROOT/pages/redis/redis-cache.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-redis\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-redis/src/main/antora/modules/ROOT/pages/redis/redis-cache.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-redis\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Redis</a></li>\n      <li><a href=\"../redis.html\">Redis</a></li>\n      <li><a href=\"redis-cache.html\">Redis Cache</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Redis</a></li>\n      <li><a href=\"../redis.html\">Redis</a></li>\n      <li><a href=\"redis-cache.html\">Redis 缓存</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Global, dynamically computed per-cache entry Duration TTL expiration timeout",
+      "translation": "全局动态计算的每缓存条目持续时间 TTL 过期超时时间",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Redis Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/usage.html\">Usage</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/object-mapping.html\">Object Mapping Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/mapping.html\">Object-to-Hash Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/keyspaces.html\">Keyspaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/indexes.html\">Secondary Indexes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/expirations.html\">Time To Live</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/queries.html\">Redis-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/query-by-example.html\">Query by Example</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cluster.html\">Redis Repositories Running on a Cluster</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/anatomy.html\">Redis Repositories Anatomy</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories.html\">Redis 仓库</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓库接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓库实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/usage.html\">用法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/object-mapping.html\">对象映射基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/mapping.html\">对象到哈希的映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/keyspaces.html\">键空间</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/indexes.html\">二级索引</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/expirations.html\">生存时间 (TTL)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/queries.html\">Redis 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/query-by-example.html\">基于示例的查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cluster.html\">在集群上运行的 Redis 仓库</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/anatomy.html\">Redis 仓库结构</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓库实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓库方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓库查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓库查询返回类型</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../redis.html\">Redis</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"drivers.html\">Drivers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"connection-modes.html\">Connection Modes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">RedisTemplate</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-cache.html\">Redis Cache</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cluster.html\">Redis Cluster</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"hash-mappers.html\">Hash Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"pubsub.html\">Pub/Sub Messaging</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-sending.html\">Publishing (Sending a Message)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-receiving.html\">Subscribing (Receiving a Message)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-annotated.html\">Annotation-driven Listener Endpoints</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-streams.html\">Redis Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scripting.html\">Scripting</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"transactions.html\">Redis Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"pipelining.html\">Pipelining</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"support-classes.html\">Support Classes</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../redis.html\">Redis</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">入门指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"drivers.html\">驱动程序</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"connection-modes.html\">连接模式</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">RedisTemplate</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-cache.html\">Redis 缓存</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cluster.html\">Redis 集群</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"hash-mappers.html\">哈希映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"pubsub.html\">发布/订阅消息</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-sending.html\">发布（发送消息）</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-receiving.html\">订阅（接收消息）</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-annotated.html\">注解驱动的监听器端点</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-streams.html\">Redis Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scripting.html\">脚本</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"transactions.html\">Redis 事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"pipelining.html\">管道化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"support-classes.html\">支持类</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../upgrading.html\">Migration Guides</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../upgrading.html\">迁移指南</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">Key Expiration</th>\n<th class=\"tableblock halign-left valign-top\">None</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">密钥过期时间</th>\n<th class=\"tableblock halign-left valign-top\">无</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "Table 1. <code>RedisCacheManager</code> defaults",
+      "translation": "表 1。<code>RedisCacheManager</code> 默认值",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#redis:support:cache-abstraction:expiration\"></a>Redis Cache Expiration",
+      "translation": "<a class=\"anchor\" href=\"#redis:support:cache-abstraction:expiration\"></a>Redis 缓存过期",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Redis",
+      "translation": "Spring Data Redis",
+      "count": 1
+    },
+    {
+      "source": "Redis Cache",
+      "translation": "Redis 缓存",
+      "count": 1
+    },
+    {
+      "source": "Table 2. RedisCacheConfiguration defaults",
+      "translation": "表 2。RedisCacheConfiguration 默认值",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

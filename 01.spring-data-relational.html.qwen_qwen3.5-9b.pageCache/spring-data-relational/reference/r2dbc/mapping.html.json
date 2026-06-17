@@ -1,0 +1,651 @@
+{
+  "created_at": "2026-06-17 11:40:13",
+  "updated_at": "2026-06-17 11:40:13",
+  "stats": {
+    "total_entries": 127,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 131,
+    "entries_with_hits": 127,
+    "entries_without_hits": 0,
+    "hit_rate": 1.031496062992126,
+    "usage_percentage": 0.0127
+  },
+  "items": [
+    {
+      "source": "Can be customized using <a href=\"#mapping.explicit.converters\">Explicit Converters</a>.",
+      "translation": "可以使用<a href=\"#mapping.explicit.converters\">显式转换器</a>进行自定义。",
+      "count": 4
+    },
+    {
+      "source": "Conversion to Array type if supported by the configured <a class=\"xref page\" href=\"getting-started.html#requirements\">driver</a>, not supported otherwise.",
+      "translation": "如果配置的<a class=\"xref page\" href=\"getting-started.html#requirements\">驱动</a>支持，则转换为数组类型；否则不支持。",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "The short Java class name is mapped to the table name in the following manner.\nThe <code>com.bigbank.SavingsAccount</code> class maps to the <code>SAVINGS_ACCOUNT</code> table name.\nThe same name mapping is applied for mapping fields to column names.\nFor example, the <code>firstName</code> field maps to the <code>FIRST_NAME</code> column.\nYou can control this mapping by providing a custom <code>NamingStrategy</code>.\nSee <a href=\"#mapping.configuration\">Mapping Configuration</a> for more detail.\nTable and column names that are derived from property or class names are used in SQL statements with quotes by default.\nYou can control this behavior by setting <code>R2dbcMappingContext.setForceQuote(false)</code>, or use <code>R2dbcMappingContext.forPlainIdentifiers()</code> to create a context with plain (unquoted) identifiers.",
+      "translation": "短 Java 类名按以下方式映射到表名。  \n<code>com.bigbank.SavingsAccount</code> 类映射到 <code>SAVINGS_ACCOUNT</code> 表名。  \n相同的名称映射规则也应用于将字段映射到列名。  \n例如，<code>firstName</code> 字段映射到 <code>FIRST_NAME</code> 列。  \n您可以通过提供自定义的 <code>NamingStrategy</code> 来控制此映射。  \n有关更多详细信息，请参阅<a href=\"#mapping.configuration\">映射配置</a>。  \n默认情况下，从属性名或类名派生的表和列名在 SQL 语句中使用引号。  \n您可以通过设置 <code>R2dbcMappingContext.setForceQuote(false)</code> 来控制此行为，或使用 <code>R2dbcMappingContext.forPlainIdentifiers()</code> 创建一个具有普通（未加引号）标识符的上下文。",
+      "count": 1
+    },
+    {
+      "source": "By default, table and column names derived from classes and properties are used with database-specific quotes, meaning they are typically case-sensitive and reserved SQL words (such as <code>order</code>) can be used safely in names.\nTo disable quoting, override <code>r2dbcMappingContext(Optional&lt;NamingStrategy&gt;)</code> in <code>AbstractR2dbcConfiguration</code> and return <code>R2dbcMappingContext.forPlainIdentifiers(…)</code>, or call <code>context.setForceQuote(false)</code> on the context.\nWhen quoting is disabled, Spring Data converts identifier casing to the form used by the configured database without quoting.\nFor databases that adhere to the SQL standard, names are converted to upper case, so you can use unquoted names when creating tables as long as you do not use keywords or special characters.\nThe quoting character and the way names get capitalized is controlled by the used <code>R2dbcDialect</code>.\nSee <a class=\"xref page\" href=\"getting-started.html#r2dbc.dialects\">R2DBC Drivers</a> for how to configure custom dialects.",
+      "translation": "默认情况下，从类和属性派生的表和列名称会使用数据库特定的引号，这意味着它们通常是区分大小写的，并且可以安全地在名称中使用保留的 SQL 单词（例如 <code>order</code>）。\n若要禁用引号，请在 <code>AbstractR2dbcConfiguration</code> 中重写 <code>r2dbcMappingContext(Optional&lt;NamingStrategy&gt;)</code> 并返回 <code>R2dbcMappingContext.forPlainIdentifiers(…)</code>，或者在上下文中调用 <code>context.setForceQuote(false)</code>。\n当禁用引号时，Spring Data 会将标识符的大小写转换为配置数据库所使用的形式，而不使用引号。\n对于遵循 SQL 标准的数据库，名称会被转换为大写，因此只要不使用关键字或特殊字符，您就可以在创建表时使用未加引号的名称。\n引号字符和名称的大写方式由使用的 <code>R2dbcDialect</code> 控制。\n有关如何配置自定义方言，请参阅 <a class=\"xref page\" href=\"getting-started.html#r2dbc.dialects\">R2DBC 驱动程序</a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Embedded</code>: a property with this annotation will be mapped to the table of the parent entity, instead of a separate table.\nAllows to specify if the resulting columns should have a common prefix.\nIf all columns resulting from such an entity are <code>null</code> either the annotated entity will be <code>null</code> or <em>empty</em>, i.e. all of its properties will be <code>null</code>, depending on the value of <code>@Embedded.onEmpty()</code>\nMay be combined with <code>@Id</code> to form a composite id.",
+      "translation": "<code>@Embedded</code>：带有此注解的属性将被映射到父实体所在的表，而不是单独的表。  \n允许指定生成的列是否应具有公共前缀。  \n如果由该实体生成的所有列均为 <code>null</code>，则根据 <code>@Embedded.onEmpty()</code> 的值，该注解实体将变为 <code>null</code> 或<em>空</em>（即其所有属性均为 <code>null</code>）。  \n可与 <code>@Id</code> 组合使用以形成复合主键。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Version</code>: Applied at field level is used for optimistic locking and checked for modification on save operations.\nA value of <code>null</code> for wrapper types (or <code>zero</code> for primitive types) marks the entity as new.\nThe initially stored value is <code>zero</code> for wrapper types (<code>one</code> for primitive types).\nThe version gets incremented automatically on every update.\nSee <a class=\"xref page\" href=\"entity-persistence.html#r2dbc.entity-persistence.optimistic-locking\">Optimistic Locking</a> for further reference.",
+      "translation": "<code>@Version</code>：在字段级别应用，用于乐观锁，并在保存操作时检查修改。\n对于包装类型，值为 <code>null</code>（或对于基本类型为 <code>zero</code>）表示实体为新实体。\n初始存储的值对于包装类型为 <code>zero</code>（对于基本类型为 <code>one</code>）。\n每次更新时版本号会自动递增。\n有关更多信息，请参阅<a class=\"xref page\" href=\"entity-persistence.html#r2dbc.entity-persistence.optimistic-locking\">乐观锁</a>。",
+      "count": 1
+    },
+    {
+      "source": "By convention, Spring Data applies a <code>NamingStrategy</code> to determine table, column, and schema names defaulting to <a href=\"https://en.wikipedia.org/wiki/Snake_case\">snake case</a>.\nAn object property named <code>firstName</code> becomes <code>first_name</code>.\nYou can tweak that by providing a <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/relational/core/mapping/NamingStrategy.html\">NamingStrategy</a></code> in your application context.",
+      "translation": "按照约定，Spring Data 会应用一个 <code>NamingStrategy</code> 来确定表、列和模式名称，默认采用 <a href=\"https://en.wikipedia.org/wiki/Snake_case\">蛇形命名法</a>。  \n名为 <code>firstName</code> 的对象属性将变为 <code>first_name</code>。  \n您可以通过在应用程序上下文中提供一个 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/relational/core/mapping/NamingStrategy.html\">NamingStrategy</a></code> 来调整此行为。",
+      "count": 1
+    },
+    {
+      "source": "When the column naming strategy does not match your database column names, you can override the column name with the <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/relational/core/mapping/Column.html\">Column</a></code> annotation.\nThe element <code>value</code> of this annotation provides the custom column name.\nThe following example maps the <code>name</code> property of the <code>MyEntity</code> class to the <code>CUSTOM_COLUMN_NAME</code> column in the database:",
+      "translation": "当列命名策略与数据库列名不匹配时，您可以使用 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/relational/core/mapping/Column.html\">Column</a></code> 注解覆盖列名。  \n该注解的 <code>value</code> 元素提供自定义列名。  \n以下示例将 <code>MyEntity</code> 类的 <code>name</code> 属性映射到数据库中的 <code>CUSTOM_COLUMN_NAME</code> 列：",
+      "count": 1
+    },
+    {
+      "source": "<code>@MappedCollection</code>: Allows for configuration how a collection, or a single nested entity gets mapped. <code>idColumn</code> specifies the column used for referencing the parent entities primary key. <code>keyColumn</code> specifies the column used to store the index of a <code>List</code> or the key of a <code>Map</code>.",
+      "translation": "<MappedCollection>：允许配置集合或单个嵌套实体的映射方式。<code>idColumn</code> 指定用于引用父实体主键的列。<code>keyColumn</code> 指定用于存储 <code>List</code> 索引或 <code>Map</code> 键的列。",
+      "count": 1
+    },
+    {
+      "source": "When the table naming strategy does not match your database table names, you can override the table name with the <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/relational/core/mapping/Table.html\">Table</a></code> annotation.\nThe element <code>value</code> of this annotation provides the custom table name.\nThe following example maps the <code>MyEntity</code> class to the <code>CUSTOM_TABLE_NAME</code> table in the database:",
+      "translation": "当表命名策略与您的数据库表名不匹配时，您可以使用 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/relational/core/mapping/Table.html\">Table</a></code> 注解来覆盖表名。  \n该注解的 <code>value</code> 元素提供自定义表名。  \n以下示例将 <code>MyEntity</code> 类映射到数据库中的 <code>CUSTOM_TABLE_NAME</code> 表：",
+      "count": 1
+    },
+    {
+      "source": "Some databases, such as <a href=\"https://github.com/pgjdbc/r2dbc-postgresql#postgres-enum-types\">Postgres</a>, can natively write enum values using their database-specific enumerated column type.\nSpring Data converts <code>Enum</code> values by default to <code>String</code> values for maximum portability.\nTo retain the actual enum value, register a <code>@WritingConverter</code> whose source and target types use the actual enum type to avoid using <code>Enum.name()</code> conversion.\nAdditionally, you need to configure the enum type on the driver level so that the driver is aware how to represent the enum type.",
+      "translation": "某些数据库（例如<a href=\"https://github.com/pgjdbc/r2dbc-postgresql#postgres-enum-types\">Postgres</a>）可以原生使用其特定的枚举列类型来写入枚举值。  \nSpring Data 默认将<code>Enum</code>值转换为<code>String</code>值，以确保最大兼容性。  \n若要保留实际的枚举值，请注册一个<code>@WritingConverter</code>，使其源类型和目标类型均使用实际的枚举类型，从而避免使用<code>Enum.name()</code>进行转换。  \n此外，您还需要在驱动层面配置枚举类型，以便驱动程序了解如何表示该枚举类型。",
+      "count": 1
+    },
+    {
+      "source": "Rich mapping support is provided by the <code>MappingR2dbcConverter</code>. <code>MappingR2dbcConverter</code> has a rich metadata model that allows mapping domain objects to a data row.\nThe mapping metadata model is populated by using annotations on your domain objects.\nHowever, the infrastructure is not limited to using annotations as the only source of metadata information.\nThe <code>MappingR2dbcConverter</code> also lets you map objects to rows without providing any additional metadata, by following a set of conventions.",
+      "translation": "<code>MappingR2dbcConverter</code> 提供了丰富的映射支持。<code>MappingR2dbcConverter</code> 拥有完善的元数据模型，能够将领域对象映射到数据行。该映射元数据模型通过您在领域对象上使用的注解进行填充。然而，基础设施并不局限于仅使用注解作为元数据的唯一来源。<code>MappingR2dbcConverter</code> 还允许您遵循一系列约定，在不提供任何额外元数据的情况下将对象映射到行。",
+      "count": 1
+    },
+    {
+      "source": "By default, (unless explicitly configured) an instance of <code>MappingR2dbcConverter</code> is created when you create a <code>DatabaseClient</code>.\nYou can create your own instance of the <code>MappingR2dbcConverter</code>.\nBy creating your own instance, you can register Spring converters to map specific classes to and from the database.",
+      "translation": "默认情况下（除非显式配置），在创建<code>DatabaseClient</code>时会创建一个<code>MappingR2dbcConverter</code>实例。\n您可以自行创建<code>MappingR2dbcConverter</code>的实例。\n通过创建自己的实例，您可以注册 Spring 转换器，以将特定类映射到数据库或从数据库映射出来。",
+      "count": 1
+    },
+    {
+      "source": "You can configure the <code>MappingR2dbcConverter</code> as well as <code>DatabaseClient</code> and <code>ConnectionFactory</code> by using Java-based metadata.\nThe following example uses Spring’s Java-based configuration:",
+      "translation": "您可以使用基于 Java 的元数据来配置<code>MappingR2dbcConverter</code>以及<code>DatabaseClient</code>和<code>ConnectionFactory</code>。  \n以下示例展示了如何使用 Spring 的基于 Java 的配置：",
+      "count": 1
+    },
+    {
+      "source": "<code>@Value</code>: This annotation is part of the Spring Framework.\nWithin the mapping framework it can be applied to constructor arguments.\nThis lets you use a Spring Expression Language statement to transform a key’s value retrieved in the database before it is used to construct a domain object.\nIn order to reference a column of a given row one has to use expressions like: <code>@Value(\"#root.myProperty\")</code> where root refers to the root of the given <code>Row</code>.",
+      "translation": "<code>@Value</code>：此注解属于 Spring 框架。在映射框架中，它可以应用于构造函数参数。这使得您能够在使用检索到的数据库键值构建领域对象之前，使用 Spring 表达式语言语句对其进行转换。若要引用给定行中的某一列，需使用类似 <code>@Value(\"#root.myProperty\")</code> 的表达式，其中 root 指代给定 <code>Row</code> 的根节点。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Column</code>: Applied at the field level to describe the name of the column as it is represented in the row, letting the name be different from the field name of the class.\nNames specified with a <code>@Column</code> annotation are quoted when <code>forceQuote</code> is enabled (default).\nFor most databases, quoting means that these names are case-sensitive.\nIt also means that you can use special characters in these names.\nHowever, this is not recommended, since it may cause problems with other tools.",
+      "translation": "@Column：应用于字段级别，用于描述行中列的名称，使其可以与类的字段名不同。  \n当启用 <code>forceQuote</code>（默认情况下）时，使用 <code>@Column</code> 注解指定的名称会被加引号。  \n对于大多数数据库而言，加引号意味着这些名称是区分大小写的。  \n这也意味着您可以在这些名称中使用特殊字符。  \n然而，这不推荐，因为这可能会与其他工具产生问题。",
+      "count": 1
+    },
+    {
+      "source": "If the Java type has a property whose name matches the given field of the input row, then its property information is used to select the appropriate constructor parameter to which to pass the input field value.\nThis works only if the parameter name information is present in the Java <code>.class</code> files, which you can achieve by compiling the source with debug information or using the <code>-parameters</code> command-line switch for <code>javac</code> in Java 8.",
+      "translation": "如果 Java 类型具有与输入行给定字段名称匹配的属性，则使用其属性信息来选择要传递输入字段值的适当构造函数参数。  \n此功能仅在 Java `<code>.class</code>` 文件中存在参数名信息时才能生效，您可以通过在编译源代码时包含调试信息，或在 Java 8 中使用 `javac` 的 `<code>-parameters</code>` 命令行开关来实现这一点。",
+      "count": 1
+    },
+    {
+      "source": "When storing and querying your objects, it is often convenient to have a <code>R2dbcConverter</code> instance to handle the mapping of all Java types to <code>OutboundRow</code> instances.\nHowever, you may sometimes want the <code>R2dbcConverter</code> instances to do most of the work but let you selectively handle the conversion for a particular type — perhaps to optimize performance.",
+      "translation": "在存储和查询对象时，拥有一个用于将所有 Java 类型映射到<code>OutboundRow</code>实例的<code>R2dbcConverter</code>实例通常非常方便。然而，有时您可能希望<code>R2dbcConverter</code>实例承担大部分工作，而让您针对特定类型选择性地进行转换——例如为了优化性能。",
+      "count": 1
+    },
+    {
+      "source": "You can use the <code>getCustomConverters</code> method in <code>AbstractR2dbcConfiguration</code> to configure converters.\nThe examples <a href=\"#mapping.configuration\">at the beginning of this chapter</a> show how to perform the configuration with Java.",
+      "translation": "您可以使用 `AbstractR2dbcConfiguration` 中的 `getCustomConverters` 方法来配置转换器。本章开头的<a href=\"#mapping.configuration\">示例</a>展示了如何使用 Java 进行配置。",
+      "count": 1
+    },
+    {
+      "source": "Arbitrarily nested objects are not supported by convention.\nUse <code>@Embedded</code> for value objects that map to columns in the same table — see <a href=\"#entity-persistence.embedded-entities\">[entity-persistence.embedded-entities]</a>.",
+      "translation": "按惯例不支持任意嵌套的对象。  \n对于映射到同一表中列的值对象，请使用 `<code>@Embedded</code>` —— 参见 <a href=\"#entity-persistence.embedded-entities\">[entity-persistence.embedded-entities]</a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>AbstractR2dbcConfiguration</code> requires you to implement a method that defines a <code>ConnectionFactory</code>.",
+      "translation": "`AbstractR2dbcConfiguration` 要求您实现一个用于定义 `ConnectionFactory` 的方法。",
+      "count": 1
+    },
+    {
+      "source": "You can configure a custom <code>NamingStrategy</code> by registering it as a bean.\nThe <code>NamingStrategy</code> controls how the names of classes and properties get converted to the names of tables and columns.",
+      "translation": "您可以通过将其注册为 Bean 来配置自定义的 `<code>NamingStrategy`。  \n该 `<code>NamingStrategy` 控制如何将类和属性的名称转换为表和列的名称。",
+      "count": 1
+    },
+    {
+      "source": "Array of wrapper type (e.g. <code>int[]</code> → <code>Integer[]</code>)",
+      "translation": "包装类型的数组（例如 <code>int[]</code> → <code>Integer[]</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>@Id</code>: Applied at the field level to mark the primary key.\nIt may be combined with <code>@Embedded</code> to form a composite id.",
+      "translation": "<code>@Id</code>：应用于字段级别，用于标记主键。  \n它可以与 <code>@Embedded</code> 结合使用以形成复合主键。",
+      "count": 1
+    },
+    {
+      "source": "The identifier property can be annotated with <code>@Embedded</code> allowing to use composite ids.\nThe full embedded entity is considered the id, and therefore the check for determining if an aggregate is considered a new aggregate requiring an insert or an existing one, asking for an update is based on that entity, not its elements.\nMost use cases will require a custom <code>BeforeConvertCallback</code> to set the id for new aggregate.",
+      "translation": "标识符属性可以标注为 `<code>@Embedded</code>` 以支持复合主键。完整的嵌入实体被视为标识符，因此用于判断聚合根是新聚合（需要插入）还是已存在聚合（需要更新）的检查基于该实体本身，而非其元素。大多数使用场景都需要自定义一个 `<code>BeforeConvertCallback</code>` 来为新聚合设置标识符。",
+      "count": 1
+    },
+    {
+      "source": "To selectively handle the conversion yourself, register one or more <code>org.springframework.core.convert.converter.Converter</code> instances with the <code>R2dbcConverter</code>.",
+      "translation": "若要自行选择性地处理转换，请将一个或多个 <code>org.springframework.core.convert.converter.Converter</code> 实例注册到 <code>R2dbcConverter</code>。",
+      "count": 1
+    },
+    {
+      "source": "The following example of a Spring Converter implementation converts from a <code>Row</code> to a <code>Person</code> POJO:",
+      "translation": "以下是一个 Spring 转换器实现的示例，它将 `<code>Row</code>` 转换为 `<code>Person</code>` POJO：",
+      "count": 1
+    },
+    {
+      "source": "Please note that converters get applied on singular properties.\nCollection properties (e.g. <code>Collection&lt;Person&gt;</code>) are iterated and converted element-wise.\nCollection converters (e.g. <code>Converter&lt;List&lt;Person&gt;&gt;, OutboundRow</code>) are not supported.",
+      "translation": "请注意，转换器仅应用于单个属性。  \n集合属性（例如 `<code>Collection&lt;Person&gt;</code>`）会进行迭代并逐个元素转换。  \n不支持集合转换器（例如 `<code>Converter&lt;List&lt;Person&gt;&gt;, OutboundRow</code>`）。",
+      "count": 1
+    },
+    {
+      "source": "The following example converts from a <code>Person</code> to a <code>OutboundRow</code>:",
+      "translation": "以下示例展示了如何将 `<code>Person</code>` 转换为 `<code>OutboundRow</code>`：",
+      "count": 1
+    },
+    {
+      "source": "This section describes the features of the <code>MappingR2dbcConverter</code>, including how to use conventions for mapping objects to rows and how to override those conventions with annotation-based mapping metadata.",
+      "translation": "本节描述了<code>MappingR2dbcConverter</code>的功能，包括如何使用约定将对象映射为行，以及如何使用基于注解的映射元数据覆盖这些约定。",
+      "count": 1
+    },
+    {
+      "source": "Read on the basics about <a class=\"xref page\" href=\"../object-mapping.html\">Object Mapping Fundamentals</a> before continuing with this chapter.",
+      "translation": "继续阅读<a class=\"xref page\" href=\"../object-mapping.html\">对象映射基础</a>，然后再继续本章内容。",
+      "count": 1
+    },
+    {
+      "source": "<code>MappingR2dbcConverter</code> has a few conventions for mapping objects to rows when no additional mapping metadata is provided.\nThe conventions are:",
+      "translation": "<code>MappingR2dbcConverter</code> 在未提供额外映射元数据时，遵循若干将对象映射为行的约定。这些约定包括：",
+      "count": 1
+    },
+    {
+      "source": "The converter uses any Spring Converters registered with <code>CustomConversions</code> to override the default mapping of object properties to row columns and values.",
+      "translation": "转换器使用通过<code>CustomConversions</code>注册的任意 Spring 转换器，以覆盖对象属性到行列和值的默认映射。",
+      "count": 1
+    },
+    {
+      "source": "The fields of an object are used to convert to and from columns in the row.\nPublic <code>JavaBean</code> properties are not used.",
+      "translation": "对象的字段用于在行中的列之间进行转换。  \n不使用公共的 `<code>JavaBean</code>` 属性。",
+      "count": 1
+    },
+    {
+      "source": "If you have a single non-zero-argument constructor whose constructor argument names match top-level column names of the row, that constructor is used.\nOtherwise, the zero-argument constructor is used.\nIf there is more than one non-zero-argument constructor, an exception is thrown.\nRefer to <a class=\"xref page\" href=\"../object-mapping.html#mapping.object-creation\">Object Creation</a> for further details.",
+      "translation": "如果存在一个具有单个非零参数的构造函数，且该构造函数的参数名称与行的顶级列名匹配，则使用该构造函数。否则，使用无参构造函数。如果存在多个具有非零参数的构造函数，将抛出异常。有关更多详细信息，请参阅<a class=\"xref page\" href=\"../object-mapping.html#mapping.object-creation\">对象创建</a>。",
+      "count": 1
+    },
+    {
+      "source": "You can add additional converters to the converter by overriding the <code>getCustomConverters</code> method.",
+      "translation": "您可以通过重写 `getCustomConverters` 方法来为转换器添加额外的转换器。",
+      "count": 1
+    },
+    {
+      "source": "To take full advantage of the object mapping functionality inside the Spring Data R2DBC support, you should annotate your mapped objects with the <code>@Table</code> annotation.\nAlthough it is not necessary for the mapping framework to have this annotation (your POJOs are mapped correctly, even without any annotations), it lets the classpath scanner find and pre-process your domain objects to extract the necessary metadata.\nIf you do not use this annotation, your application takes a slight performance hit the first time you store a domain object, because the mapping framework needs to build up its internal metadata model so that it knows about the properties of your domain object and how to persist them.\nThe following example shows a domain object:",
+      "translation": "要充分利用 Spring Data R2DBC 支持中的对象映射功能，您应该使用 <code>@Table</code> 注解来标记您的映射对象。  \n虽然映射框架并不需要此注解（即使没有任何注解，您的 POJO 也能正确映射），但该注解允许类路径扫描器发现并预处理您的领域对象，以提取必要的元数据。  \n如果您不使用此注解，在首次存储领域对象时，应用程序的性能会略有下降，因为映射框架需要构建其内部元数据模型，以便了解您领域对象的属性以及如何持久化它们。  \n以下示例展示了一个领域对象：",
+      "count": 1
+    },
+    {
+      "source": "Can be customized by registering <a href=\"#mapping.explicit.converters\">Explicit Converters</a>.",
+      "translation": "可通过注册<a href=\"#mapping.explicit.converters\">显式转换器</a>进行自定义。",
+      "count": 1
+    },
+    {
+      "source": "Array of <code>T</code>",
+      "translation": "<T> 数组",
+      "count": 1
+    },
+    {
+      "source": "Arrays of primitive types, wrapper types and <code>String</code>",
+      "translation": "基本类型、包装类型和<code>String</code>的数组",
+      "count": 1
+    },
+    {
+      "source": "Contributed as a simple type by the used <code>R2dbcDialect</code>.",
+      "translation": "由使用的 `<code>R2dbcDialect</code>` 贡献为简单类型。",
+      "count": 1
+    },
+    {
+      "source": "Target type depends on registered <code>Converter</code>.",
+      "translation": "目标类型取决于已注册的 <code>Converter</code>。",
+      "count": 1
+    },
+    {
+      "source": "Requires a <a href=\"#mapping.explicit.converters\">Explicit Converters</a>, not supported otherwise.",
+      "translation": "需要<a href=\"#mapping.explicit.converters\">显式转换器</a>，否则不支持。",
+      "count": 1
+    },
+    {
+      "source": "The <code>RelationalConverter</code> can use metadata to drive the mapping of objects to rows.\nThe following annotations are available:",
+      "translation": "<code>RelationalConverter</code> 可以使用元数据来驱动对象到行的映射。\n以下注解可用：",
+      "count": 1
+    },
+    {
+      "source": "<code>@InsertOnlyProperty</code>: Marks a property as only to be written during insert.\nSuch a property on an aggregate root will only be written once and never updated.\nNote that on a nested entity, all save operations result in an insert therefore this annotation has no effect on properties of nested entities.",
+      "translation": "<code>@InsertOnlyProperty</code>：标记该属性仅在插入时写入。在聚合根上的此类属性将仅被写入一次，且永远不会被更新。请注意，对于嵌套实体，所有保存操作均被视为插入，因此该注解对嵌套实体的属性无效。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Sequence</code>: specify a database sequence for generating values for the annotated property.",
+      "translation": "<code>@Sequence</code>：指定用于为已注解属性生成值的数据库序列。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Table</code>: Applied at the class level to indicate this class is a candidate for mapping to the database.\nYou can specify the name of the table where the database is stored.",
+      "translation": "@Table：在类级别应用，表示该类是数据库映射的候选者。您可以指定存储该表的数据库名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Transient</code>: By default, all fields are mapped to the row.\nThis annotation excludes the field where it is applied from being stored in the database.\nTransient properties cannot be used within a persistence constructor as the converter cannot materialize a value for the constructor argument.",
+      "translation": "<code>@Transient</code>：默认情况下，所有字段都会映射到行中。此注解会排除应用该注解的字段不被存储到数据库中。瞬态属性不能在持久化构造函数中使用，因为转换器无法为构造函数参数生成值。",
+      "count": 1
+    },
+    {
+      "source": "<code>@PersistenceCreator</code>: Marks a given constructor or static factory method — even a package protected one — to use when instantiating the object from the database.\nConstructor arguments are mapped by name to the values in the retrieved row.",
+      "translation": "@PersistenceCreator：标记一个给定的构造函数或静态工厂方法（即使是包级私有的），用于从数据库实例化对象。  \n构造函数的参数通过名称映射到检索到的行中的值。",
+      "count": 1
+    },
+    {
+      "source": "The mapping metadata infrastructure is defined in the separate <code>spring-data-commons</code> project that is technology-agnostic.\nSpecific subclasses are used in the R2DBC support to support annotation based metadata.\nOther strategies can also be put in place (if there is demand).",
+      "translation": "映射元数据基础设施定义在独立的、与具体技术无关的 <code>spring-data-commons</code> 项目中。R2DBC 支持中使用了特定的子类来支持基于注解的元数据。如果存在需求，也可以部署其他策略。",
+      "count": 1
+    },
+    {
+      "source": "You may use <a class=\"xref page\" href=\"../value-expressions.html\">Spring Data’s SpEL support</a> to dynamically create the table name.\nOnce generated the table name will be cached, so it is dynamic per mapping context only.",
+      "translation": "您可以使用<a class=\"xref page\" href=\"../value-expressions.html\">Spring Data 的 SpEL 支持</a>来动态创建表名。生成后的表名会被缓存，因此仅在映射上下文中是动态的。",
+      "count": 1
+    },
+    {
+      "source": "You may use <a class=\"xref page\" href=\"../value-expressions.html\">Spring Data’s SpEL support</a> to dynamically create column names.\nOnce generated the names will be cached, so it is dynamic per mapping context only.",
+      "translation": "您可以使用<a class=\"xref page\" href=\"../value-expressions.html\">Spring Data 的 SpEL 支持</a>来动态创建列名。生成的名称会被缓存，因此仅在映射上下文中是动态的。",
+      "count": 1
+    },
+    {
+      "source": "Attributes annotated with <code>@ReadOnlyProperty</code> will not be written to the database by Spring Data, but they will be read when an entity gets loaded.",
+      "translation": "使用 <code>@ReadOnlyProperty</code> 注解的属性不会被 Spring Data 写入数据库，但在加载实体时会被读取。",
+      "count": 1
+    },
+    {
+      "source": "Attributes annotated with <code>@InsertOnlyProperty</code> will only be written to the database by Spring Data during insert operations.\nFor updates these properties will be ignored.",
+      "translation": "使用 <code>@InsertOnlyProperty</code> 注解的属性，Spring Data 仅在插入操作时将其写入数据库。对于更新操作，这些属性将被忽略。",
+      "count": 1
+    },
+    {
+      "source": "<code>@InsertOnlyProperty</code> is only supported for the aggregate root.",
+      "translation": "<code>@InsertOnlyProperty</code> 仅支持聚合根。",
+      "count": 1
+    },
+    {
+      "source": "The mapping subsystem allows the customization of the object construction by annotating a constructor with the <code>@PersistenceConstructor</code> annotation.\nThe values to be used for the constructor parameters are resolved in the following way:",
+      "translation": "映射子系统允许通过用<code>@PersistenceConstructor</code>注解构造函数来自定义对象构建。\n用于解析构造函数参数的值的方式如下：",
+      "count": 1
+    },
+    {
+      "source": "If a parameter is annotated with the <code>@Value</code> annotation, the given expression is evaluated, and the result is used as the parameter value.",
+      "translation": "如果参数被标注了 `<code>@Value</code>` 注解，则会评估给定的表达式，并将结果用作该参数的值。",
+      "count": 1
+    },
+    {
+      "source": "Otherwise, a <code>MappingException</code> is thrown to indicate that the given constructor parameter could not be bound.",
+      "translation": "否则，将抛出<code>MappingException</code>以指示无法绑定给定的构造函数参数。",
+      "count": 1
+    },
+    {
+      "source": "The following example shows the involved components to read and write <code>Color</code> enum values natively:",
+      "translation": "以下示例展示了用于原生读写<code>Color</code>枚举值的涉及组件：",
+      "count": 1
+    },
+    {
+      "source": "The following table explains how property types of an entity affect mapping:",
+      "translation": "下表说明了实体的属性类型如何影响映射：",
+      "count": 1
+    },
+    {
+      "source": "Primitive types and wrapper types",
+      "translation": "基本类型与包装类型",
+      "count": 1
+    },
+    {
+      "source": "JSR-310 Date/Time types",
+      "translation": "JSR-310 日期/时间类型",
+      "count": 1
+    },
+    {
+      "source": "Considered a binary payload.",
+      "translation": "被视为二进制载荷。",
+      "count": 1
+    },
+    {
+      "source": "Driver-specific types",
+      "translation": "特定于驱动程序的类型",
+      "count": 1
+    },
+    {
+      "source": "Complex objects",
+      "translation": "复杂对象",
+      "count": 1
+    },
+    {
+      "source": "Details of table creation depend on the used database.",
+      "translation": "表创建的具体细节取决于所使用的数据库。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data will not automatically reload an entity after writing it.\nTherefore, you have to reload it explicitly if you want to see data that was generated in the database for such columns.",
+      "translation": "Spring Data 在写入实体后不会自动重新加载该实体。因此，如果您希望查看数据库中为这些列生成的数据，必须显式地重新加载该实体。",
+      "count": 1
+    },
+    {
+      "source": "If the annotated attribute is an entity or collection of entities, it is represented by one or more separate rows in separate tables.\nSpring Data will not perform any insert, delete or update for these rows.",
+      "translation": "如果注释的属性是实体或实体集合，则它由不同表中的一个或多个独立行表示。  \nSpring Data 不会对这些行执行任何插入、删除或更新操作。",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 公司及其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的提及。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Relational</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Relational</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-relational/src/main/antora/modules/ROOT/pages/r2dbc/mapping.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-relational\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-relational/src/main/antora/modules/ROOT/pages/r2dbc/mapping.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-relational\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Relational</a></li>\n      <li><a href=\"../r2dbc.html\">R2DBC</a></li>\n      <li><a href=\"mapping.html\">Mapping</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Relational</a></li>\n      <li><a href=\"../r2dbc.html\">R2DBC</a></li>\n      <li><a href=\"mapping.html\">映射</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "@Configuration class to configure R2DBC mapping support",
+      "translation": "用于配置 R2DBC 映射支持的功能类。",
+      "count": 1
+    },
+    {
+      "source": "Example domain object",
+      "translation": "示例领域对象",
+      "count": 1
+    },
+    {
+      "source": "Simple entity with composite id",
+      "translation": "具有复合主键的简单实体",
+      "count": 1
+    },
+    {
+      "source": "Matching table for simple entity with composite id",
+      "translation": "简单实体与复合主键的匹配表",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories/introduction.html\">Introduction</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">Object Mapping Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/custom-conversions.html\">Custom Conversions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../query-by-example.html\">Query by Example</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/entity-callbacks.html\">Entity Callbacks</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories/introduction.html\">简介</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">对象映射基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/custom-conversions.html\">自定义转换</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-extensions.html\">Spring Data 扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../value-expressions.html\">值表达式基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../query-by-example.html\">基于示例的查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/entity-callbacks.html\">实体回调</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../jdbc.html\">JDBC</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/why.html\">Why Spring Data JDBC?</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/domain-driven-design.html\">Domain Driven Design and Relational Databases</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/entity-persistence.html\">Persisting Entities</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/sequences.html\">Sequence Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/mapping.html\">Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/query-methods.html\">Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/mybatis.html\">MyBatis Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/auditing.html\">Auditing</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/transactions.html\">Transactionality</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/schema-support.html\">Schema Creation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/aot.html\">Ahead of Time Optimizations</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../jdbc.html\">JDBC</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/why.html\">为什么使用 Spring Data JDBC？</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/domain-driven-design.html\">领域驱动设计与关系型数据库</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/getting-started.html\">快速入门</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/entity-persistence.html\">实体持久化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/sequences.html\">序列支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/mapping.html\">映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/query-methods.html\">查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/mybatis.html\">MyBatis 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/auditing.html\">审计</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/transactions.html\">事务性</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/schema-support.html\">模式创建</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../jdbc/aot.html\">提前优化</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../r2dbc.html\">R2DBC</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"entity-persistence.html\">Persisting Entities</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sequences.html\">Sequence Support</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mapping.html\">Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories.html\">R2DBC Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods.html\">Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"entity-callbacks.html\">EntityCallbacks</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">Auditing</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"kotlin.html\">Kotlin</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"migration-guide.html\">Migration Guide</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../r2dbc.html\">R2DBC</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">入门指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"entity-persistence.html\">实体持久化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"sequences.html\">序列支持</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"mapping.html\">映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"repositories.html\">R2DBC 仓库</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"query-methods.html\">查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"entity-callbacks.html\">实体回调</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"auditing.html\">审计</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"kotlin.html\">Kotlin</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"migration-guide.html\">迁移指南</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>Entities may be represented as records without any special consideration.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>pk</code> is marked as id and embedded</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The two columns from the embedded <code>Name</code> entity make up the primary key in the database.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>实体可以表示为记录，无需特殊考虑。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>pk</code> 被标记为 id 并嵌入其中。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>来自嵌入式 <code>Name</code> 实体的两列构成了数据库中的主键。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">Object Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/requirements.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/null-safety.html\">空值安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/object-mapping.html\">对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/extensions.html\">扩展函数</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nCustom top-level entity conversion requires asymmetric types for conversion.\nInbound data is extracted from R2DBC’s <code>Row</code>.\nOutbound data (to be used with <code>INSERT</code>/<code>UPDATE</code> statements) is represented as <code>OutboundRow</code> and later assembled to a statement.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n自定义顶层实体转换需要不对称的类型。入站数据从 R2DBC 的 <code>Row</code> 中提取。出站数据（用于与 <code>INSERT</code>/<code>UPDATE</code> 语句配合使用）表示为 <code>OutboundRow</code>，随后被组装成语句。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>AbstractR2dbcConfiguration</code> creates a <code>DatabaseClient</code> instance and registers it with the container under the name of <code>databaseClient</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>AbstractR2dbcConfiguration</code> 会创建一个 <code>DatabaseClient</code> 实例，并将其注册到容器中，名称为 <code>databaseClient</code>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nR2DBC uses boxed primitives (<code>Integer.class</code> instead of <code>int.class</code>) to return primitive values.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nR2DBC 使用装箱后的基本类型（例如使用 <code>Integer.class</code> 而非 <code>int.class</code>）来返回基本类型的值。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nThe <code>@Id</code> annotation tells the mapper which property you want to use as the primary key.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\n<code>@Id</code> 注解告诉映射器您希望用作主键的属性。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe native data type for a column depends on the R2DBC driver type mapping.\nDrivers can contribute additional simple types such as Geometry types.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n列的原生数据类型取决于 R2DBC 驱动程序的类型映射。\n驱动程序可以贡献额外的简单类型，例如 Geometry 类型。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">Source Type</th>\n<th class=\"tableblock halign-left valign-top\">Target Type</th>\n<th class=\"tableblock halign-left valign-top\">Remarks</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">源类型</th>\n<th class=\"tableblock halign-left valign-top\">目标类型</th>\n<th class=\"tableblock halign-left valign-top\">备注</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.conventions\"></a>Convention-based Mapping",
+      "translation": "<a class=\"anchor\" href=\"#mapping.conventions\"></a>基于约定的映射",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.configuration\"></a>Mapping Configuration",
+      "translation": "<a class=\"anchor\" href=\"#mapping.configuration\"></a>映射配置",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.usage\"></a>Metadata-based Mapping",
+      "translation": "<a class=\"anchor\" href=\"#mapping.usage\"></a>基于元数据的映射",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.types\"></a>Default Type Mapping",
+      "translation": "<a class=\"anchor\" href=\"#mapping.types\"></a>默认类型映射",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.usage.annotations\"></a>Mapping Annotation Overview",
+      "translation": "<a class=\"anchor\" href=\"#mapping.usage.annotations\"></a>映射注解概述",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-persistence.naming-strategy\"></a>Naming Strategy",
+      "translation": "<a class=\"anchor\" href=\"#entity-persistence.naming-strategy\"></a>命名策略",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-persistence.custom-table-name\"></a>Override table names",
+      "translation": "<a class=\"anchor\" href=\"#entity-persistence.custom-table-name\"></a>覆盖表名",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-persistence.custom-column-name\"></a>Override column names",
+      "translation": "<a class=\"anchor\" href=\"#entity-persistence.custom-column-name\"></a>覆盖列名",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-persistence.embedded-ids\"></a>Embedded Ids",
+      "translation": "<a class=\"anchor\" href=\"#entity-persistence.embedded-ids\"></a>嵌入 ID",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-persistence.read-only-properties\"></a>Read Only Properties",
+      "translation": "<a class=\"anchor\" href=\"#entity-persistence.read-only-properties\"></a>只读属性",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#entity-persistence.insert-only-properties\"></a>Insert Only Properties",
+      "translation": "<a class=\"anchor\" href=\"#entity-persistence.insert-only-properties\"></a>仅插入属性",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.custom.object.construction\"></a>Customized Object Construction",
+      "translation": "<a class=\"anchor\" href=\"#mapping.custom.object.construction\"></a>自定义对象构建",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.explicit.converters\"></a>Overriding Mapping with Explicit Converters",
+      "translation": "<a class=\"anchor\" href=\"#mapping.explicit.converters\"></a>使用显式转换器覆盖映射",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.explicit.enum.converters\"></a>Overriding Enum Mapping with Explicit Converters",
+      "translation": "<a class=\"anchor\" href=\"#mapping.explicit.enum.converters\"></a>使用显式转换器覆盖枚举映射",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Relational",
+      "translation": "Spring Data 关系型数据库",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

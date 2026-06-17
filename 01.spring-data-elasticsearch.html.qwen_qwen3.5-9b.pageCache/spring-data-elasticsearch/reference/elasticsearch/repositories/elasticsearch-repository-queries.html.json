@@ -1,0 +1,416 @@
+{
+  "created_at": "2026-06-17 08:08:14",
+  "updated_at": "2026-06-17 08:08:14",
+  "stats": {
+    "total_entries": 80,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 80,
+    "entries_with_hits": 80,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.008
+  },
+  "items": [
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/7.0/core/expressions/language-ref/bean-references.html\">Bean property</a> is also supported to access.\nGiven that there is a bean named <code>queryParameter</code> of type <code>QueryParameter</code>, we can access the bean with symbol <code>@</code> rather than <code>#</code>, and there is no need to declare a parameter of type <code>QueryParameter</code> in the query method:",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/7.0/core/expressions/language-ref/bean-references.html\">Bean 属性</a>也支持访问。  \n由于存在一个名为 <code>queryParameter</code>、类型为 <code>QueryParameter</code> 的 Bean，我们可以使用符号 <code>@</code>（而非 <code>#</code>）来访问该 Bean，并且无需在查询方法中声明类型为 <code>QueryParameter</code> 的参数：",
+      "count": 1
+    },
+    {
+      "source": "The arguments passed to the method can be inserted into placeholders in the query string.\nThe placeholders are of the form <code>?0</code>, <code>?1</code>, <code>?2</code> etc. for the first, second, third parameter and so on.",
+      "translation": "传递给该方法的参数可以插入到查询字符串中的占位符中。  \n占位符的形式为 `<code>?0</code>`、`<code>?1</code>`、`<code>?2</code>` 等，分别对应第一个、第二个、第三个参数，依此类推。",
+      "count": 1
+    },
+    {
+      "source": "would make an <a href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-ids-query.html\">IDs query</a> to return all the matching documents.\nSo calling the method with a <code>List</code> of <code>[\"id1\", \"id2\", \"id3\"]</code> would produce the query body",
+      "translation": "这将生成一个<a href=\"https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-ids-query.html\">IDs 查询</a>以返回所有匹配的文档。因此，调用该方法并传入包含 `[\"id1\", \"id2\", \"id3\"]` 的 `<code>List</code>` 将生成相应的查询体。",
+      "count": 1
+    },
+    {
+      "source": "It’s easy to access the parameter by <code>#</code> symbol, then reference the property <code>value</code> with a simple <code>.</code>:",
+      "translation": "可以通过 `<code>#</code>` 符号轻松访问参数，然后使用简单的 `<code>.</code>` 引用属性 `<code>value</code>`：",
+      "count": 1
+    },
+    {
+      "source": "<code>Collection</code> parameter is also supported and is as easy to use as normal <code>String</code>, such as the following <code>terms</code> query:",
+      "translation": "`Collection` 参数也得到支持，其使用方式与普通的 `String` 一样简单，例如以下 `terms` 查询：",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/7.0/core/expressions/language-ref/collection-projection.html\">SpEL Collection Projection</a> is convenient to use when values in the <code>Collection</code> parameter is not plain <code>String</code>:",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/7.0/core/expressions/language-ref/collection-projection.html\">SpEL 集合投影</a>在<code>Collection</code>参数中的值不是普通<code>String</code>时非常方便使用：",
+      "count": 1
+    },
+    {
+      "source": "This will extract all the <code>value</code> property values as a new <code>Collection</code> from <code>QueryParameter</code> collection, thus takes the same effect as above.",
+      "translation": "这将提取所有 `<code>value</code>` 属性值，作为新的 `<code>Collection</code>` 从 `<code>QueryParameter</code>` 集合中获取，从而产生与上述相同的效果。",
+      "count": 1
+    },
+    {
+      "source": "Deriving the query from the method name is not always sufficient and/or may result in unreadable method names.\nIn this case one might make use of the <code>@Query</code> annotation (see <a href=\"#elasticsearch.query-methods.at-query\">Using the @Query Annotation</a> ).",
+      "translation": "从方法名推导查询并不总是足够，并且/或者可能导致方法名难以阅读。  \n在这种情况下，可以使用 `@Query` 注解（参见<a href=\"#elasticsearch.query-methods.at-query\">使用 @Query 注解</a>）。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/7.0/core/expressions.html\">SpEL expression</a> is also supported when defining query in <code>@Query</code>.",
+      "translation": "在定义 <code>@Query</code> 中的查询时，也支持<a href=\"https://docs.spring.io/spring-framework/reference/7.0/core/expressions.html\">SpEL 表达式</a>。",
+      "count": 1
+    },
+    {
+      "source": "A collection of <code>names</code> like <code>List.of(\"name1\", \"name2\")</code> will produce the following terms query:",
+      "translation": "一个包含类似 `List.of(\"name1\", \"name2\")` 的 `<code>names</code>` 集合将生成以下术语查询：",
+      "count": 1
+    },
+    {
+      "source": "When using Elasticsearch search templates - (see <a class=\"xref page\" href=\"../misc.html#elasticsearch.misc.searchtemplates \">Search Template support</a>) it is possible to specify that a repository method should use a template by adding the <code>@SearchTemplateQuery</code> annotation to that method.",
+      "translation": "在使用 Elasticsearch 搜索模板时（参见<a class=\"xref page\" href=\"../misc.html#elasticsearch.misc.searchtemplates \">搜索模板支持</a>），可以通过向该方法添加<code>@SearchTemplateQuery</code>注解来指定某个存储库方法应使用模板。",
+      "count": 1
+    },
+    {
+      "source": "Another possibility is the use of a search-template, (see <a href=\"#elasticsearch.query-methods.at-searchtemplate-query\">Using the @SearchTemplateQuery Annotation</a> ).",
+      "translation": "另一种可能性是使用搜索模板（参见<a href=\"#elasticsearch.query-methods.at-searchtemplate-query\">@SearchTemplateQuery 注解的使用</a>）。",
+      "count": 1
+    },
+    {
+      "source": "Generally the query creation mechanism for Elasticsearch works as described in <a class=\"xref page\" href=\"../../repositories/query-methods-details.html\">Defining Query Methods</a>.\nHere’s a short example of what a Elasticsearch query method translates into:",
+      "translation": "通常，Elasticsearch 的查询创建机制如<a class=\"xref page\" href=\"../../repositories/query-methods-details.html\">定义查询方法</a>中所描述的那样工作。  \n下面是一个简短示例，展示 Elasticsearch 查询方法转换后的结果：",
+      "count": 1
+    },
+    {
+      "source": "<code>In</code> (when annotated as FieldType.Keyword)",
+      "translation": "<code>In</code>（当被注解为 FieldType.Keyword 时）",
+      "count": 1
+    },
+    {
+      "source": "<code>NotIn</code>  (when annotated as FieldType.Keyword)",
+      "translation": "<code>NotIn</code>（当注解为 FieldType.Keyword 时）",
+      "count": 1
+    },
+    {
+      "source": "The String that is set as the annotation argument must be a valid Elasticsearch JSON query.\nIt will be sent to Easticsearch as value of the query element; if for example the function is called with the parameter <em>John</em>, it would produce the following query body:",
+      "translation": "作为注解参数设置的字符串必须是有效的 Elasticsearch JSON 查询。它将被作为 query 元素的值发送到 Elasticsearch；例如，如果该函数以参数 <em>John</em> 调用，它将生成以下查询体：",
+      "count": 1
+    },
+    {
+      "source": "If for example the function is called with the parameter <em>John</em>, it would produce the following query body:",
+      "translation": "例如，如果该函数以参数<em>John</em>调用，它将生成以下查询主体：",
+      "count": 1
+    },
+    {
+      "source": "We can pass <code>new QueryParameter(\"John\")</code> as the parameter now, and it will produce the same query string as above.",
+      "translation": "现在我们可以传递 `<code>new QueryParameter(\"John\")</code>` 作为参数，它将生成与上述相同的查询字符串。",
+      "count": 1
+    },
+    {
+      "source": "When accessing the parameter by SpEL, it’s also useful to alter the parameter name to another one by <code>@Param</code> annotation in Sping Data:",
+      "translation": "通过 SpEL 访问参数时，在 Spring Data 中使用 `<code>@Param</code>` 注解将参数名更改为另一个名称也很有用：",
+      "count": 1
+    },
+    {
+      "source": "The Elasticsearch module supports all basic query building feature as string queries, native search queries, criteria based queries or have it being derived from the method name.",
+      "translation": "Elasticsearch 模块支持所有基本的查询构建功能，包括字符串查询、原生搜索查询、基于条件的查询，或从方法名派生的查询。",
+      "count": 1
+    },
+    {
+      "source": "The method name above will be translated into the following Elasticsearch json query",
+      "translation": "上述方法名将转换为以下 Elasticsearch JSON 查询：",
+      "count": 1
+    },
+    {
+      "source": "A list of supported keywords for Elasticsearch is shown below.",
+      "translation": "以下是 Elasticsearch 支持的关键词列表。",
+      "count": 1
+    },
+    {
+      "source": "Repository methods can be defined to have the following return types for returning multiple Elements:",
+      "translation": "仓库方法可以定义为具有以下返回类型，以返回多个元素：",
+      "count": 1
+    },
+    {
+      "source": "A repository method such as",
+      "translation": "例如存储库方法",
+      "count": 1
+    },
+    {
+      "source": "Supposing that we have the following class as query parameter type:",
+      "translation": "假设我们有一个如下所示的类作为查询参数类型：",
+      "count": 1
+    },
+    {
+      "source": "Let’s assume that there is a search template stored with the name \"book-by-title\" and this template need a parameter named \"title\", then a repository method using that search template can be defined like this:",
+      "translation": "假设存在一个名为 \"book-by-title\" 的搜索模板，且该模板需要一个名为 \"title\" 的参数，那么可以使用该搜索模板定义仓储方法如下：",
+      "count": 1
+    },
+    {
+      "source": "The parameters of the repository method are sent to the seacrh template as key/value pairs where the key is the parameter name and the value is taken from the actual value when the method is invoked.",
+      "translation": "存储库方法的参数以键值对的形式发送到搜索模板，其中键为参数名称，值为方法调用时实际获取的值。",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 及其附属公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其附属公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../../index.html\">Spring Data Elasticsearch</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../../index.html\">\n                            6.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../../index.html\">Spring Data Elasticsearch</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../../index.html\">\n                            6.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-elasticsearch/src/main/antora/modules/ROOT/pages/elasticsearch/repositories/elasticsearch-repository-queries.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-elasticsearch\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-elasticsearch/src/main/antora/modules/ROOT/pages/elasticsearch/repositories/elasticsearch-repository-queries.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-elasticsearch\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../../index.html\">Spring Data Elasticsearch</a></li>\n      <li><a href=\"../../repositories.html\">Repositories</a></li>\n      <li><a href=\"elasticsearch-repository-queries.html\">Query methods</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../../index.html\">Spring Data Elasticsearch</a></li>\n      <li><a href=\"../../repositories.html\">仓储</a></li>\n      <li><a href=\"elasticsearch-repository-queries.html\">查询方法</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "Example 2. Declare query on the method using the <code>@Query</code> annotation.",
+      "translation": "示例 2：使用 `<code>@Query</code>` 注解在方法上声明查询。",
+      "count": 1
+    },
+    {
+      "source": "Example 3. <code>@Query</code> annotation on a method taking a Collection argument",
+      "translation": "示例 3。在接收集合参数的方法上使用<code>@Query</code>注解",
+      "count": 1
+    },
+    {
+      "source": "Example 4. Declare query on the method using the <code>@Query</code> annotation with SpEL expression.",
+      "translation": "示例 4：使用带有 SpEL 表达式的 `<code>@Query</code>` 注解在方法上声明查询。",
+      "count": 1
+    },
+    {
+      "source": "Example 7. SpEL and <code>Collection</code> param.",
+      "translation": "示例 7。SpEL 和 `<code>Collection` 参数。",
+      "count": 1
+    },
+    {
+      "source": "Example 8. access property in the <code>Collection</code> param.",
+      "translation": "示例 8：在 `<code>Collection</code>` 参数中访问属性。",
+      "count": 1
+    },
+    {
+      "source": "Example 9. alter parameter name by using <code>@Param</code>",
+      "translation": "示例 9：使用 `<code>@Param</code>` 修改参数名称",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Example 1. Query creation from method names",
+      "translation": "示例 1：从方法名创建查询",
+      "count": 1
+    },
+    {
+      "source": "Example 5. accessing parameter property.",
+      "translation": "示例 5：访问参数属性。",
+      "count": 1
+    },
+    {
+      "source": "Example 6. accessing bean property.",
+      "translation": "示例 6：访问 Bean 属性。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-3.2-4.0.html\">Upgrading from 3.2.x to 4.0.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.0-4.1.html\">Upgrading from 4.0.x to 4.1.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.1-4.2.html\">Upgrading from 4.1.x to 4.2.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.2-4.3.html\">Upgrading from 4.2.x to 4.3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.3-4.4.html\">Upgrading from 4.3.x to 4.4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.4-5.0.html\">Upgrading from 4.4.x to 5.0.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.0-5.1.html\">Upgrading from 5.0.x to 5.1.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.1-5.2.html\">Upgrading from 5.1.x to 5.2.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.2-5.3.html\">Upgrading from 5.2.x to 5.3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.3-5.4.html\">Upgrading from 5.3.x to 5.4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.4-5.5.html\">Upgrading from 5.4.x to 5.5.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.5-6.0.html\">Upgrading from 5.5.x to 6.0.x</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-3.2-4.0.html\">从 3.2.x 升级到 4.0.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.0-4.1.html\">从 4.0.x 升级到 4.1.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.1-4.2.html\">从 4.1.x 升级到 4.2.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.2-4.3.html\">从 4.2.x 升级到 4.3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.3-4.4.html\">从 4.3.x 升级到 4.4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-4.4-5.0.html\">从 4.4.x 升级到 5.0.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.0-5.1.html\">从 5.0.x 升级到 5.1.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.1-5.2.html\">从 5.1.x 升级到 5.2.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.2-5.3.html\">从 5.2.x 升级到 5.3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.3-5.4.html\">从 5.3.x 升级到 5.4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.4-5.5.html\">从 5.4.x 升级到 5.5.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guides/migration-guide-5.5-6.0.html\">从 5.5.x 升级到 6.0.x</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"elasticsearch-repositories.html\">Elasticsearch Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactive-elasticsearch-repositories.html\">Reactive Elasticsearch Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"elasticsearch-repository-queries.html\">Query methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../../repositories.html\">仓储</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"elasticsearch-repositories.html\">Elasticsearch 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"reactive-elasticsearch-repositories.html\">响应式 Elasticsearch 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"elasticsearch-repository-queries.html\">查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-keywords-reference.html\">仓储查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-return-types-reference.html\">仓储查询返回类型</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../elasticsearch.html\">Elasticsearch Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../clients.html\">Elasticsearch Clients</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">Elasticsearch Object Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../template.html\">Elasticsearch Operations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../reactive-template.html\">Reactive Elasticsearch Operations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../entity-callbacks.html\">Entity Callbacks</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../auditing.html\">Elasticsearch Auditing</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../join-types.html\">Join-Type implementation</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../routing.html\">Routing values</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../misc.html\">Miscellaneous Elasticsearch Operation Support</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../scripted-and-runtime-fields.html\">Scripted and runtime fields</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../../elasticsearch.html\">Elasticsearch 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../clients.html\">Elasticsearch 客户端</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../object-mapping.html\">Elasticsearch 对象映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../template.html\">Elasticsearch 操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../reactive-template.html\">响应式 Elasticsearch 操作</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../entity-callbacks.html\">实体回调</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../auditing.html\">Elasticsearch 审计</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../join-types.html\">Join-Type 实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../routing.html\">路由值</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../misc.html\">其他 Elasticsearch 操作支持</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../scripted-and-runtime-fields.html\">脚本字段和运行时字段</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nMethods names to build Geo-shape queries taking <code>GeoJson</code> parameters are not supported.\nUse <code>ElasticsearchOperations</code> with <code>CriteriaQuery</code> in a custom repository implementation if you need to have such a function in a repository.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n不支持使用 <code>GeoJson</code> 参数构建 Geo-shape 查询的方法名称。\n如果需要在存储库中实现此类功能，请使用自定义存储库实现中的 <code>ElasticsearchOperations</code> 配合 <code>CriteriaQuery</code>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\ncollection values should not be quoted when declaring the elasticsearch json query.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n声明 Elasticsearch JSON 查询时，集合值不应加引号。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">Keyword</th>\n<th class=\"tableblock halign-left valign-top\">Sample</th>\n<th class=\"tableblock halign-left valign-top\">Elasticsearch Query String</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">关键字</th>\n<th class=\"tableblock halign-left valign-top\">示例</th>\n<th class=\"tableblock halign-left valign-top\">Elasticsearch 查询字符串</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.finders\"></a>Query lookup strategies",
+      "translation": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.finders\"></a>查询查找策略",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.finders.declared\"></a>Declared queries",
+      "translation": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.finders.declared\"></a>声明查询",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.criterions\"></a>Query creation",
+      "translation": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.criterions\"></a>查询创建",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.return-types\"></a>Method return types",
+      "translation": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.return-types\"></a>方法返回类型",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.at-query\"></a>Using the @Query Annotation",
+      "translation": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.at-query\"></a>使用@Query 注解",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.at-query.spel\"></a>Using SpEL Expressions",
+      "translation": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.at-query.spel\"></a>使用 SpEL 表达式",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.at-searchtemplate-query\"></a>Using the @SearchTemplateQuery Annotation",
+      "translation": "<a class=\"anchor\" href=\"#elasticsearch.query-methods.at-searchtemplate-query\"></a>使用@SearchTemplateQuery 注解",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Elasticsearch",
+      "translation": "Spring Data Elasticsearch",
+      "count": 1
+    },
+    {
+      "source": "Query methods",
+      "translation": "查询方法",
+      "count": 1
+    },
+    {
+      "source": "Table 1. Supported keywords inside method names",
+      "translation": "表 1。方法名中支持的关键词",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

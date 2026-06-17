@@ -1,0 +1,426 @@
+{
+  "created_at": "2026-06-17 11:03:43",
+  "updated_at": "2026-06-17 11:03:43",
+  "stats": {
+    "total_entries": 82,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 90,
+    "entries_with_hits": 82,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0975609756097562,
+    "usage_percentage": 0.0082
+  },
+  "items": [
+    {
+      "source": "<em>Key Type Operations</em>",
+      "translation": "<em>键类型操作</em>",
+      "count": 2
+    },
+    {
+      "source": "Redis hash operations",
+      "translation": "Redis 哈希操作",
+      "count": 2
+    },
+    {
+      "source": "Redis list operations",
+      "translation": "Redis 列表操作",
+      "count": 2
+    },
+    {
+      "source": "Redis set operations",
+      "translation": "Redis 集合操作",
+      "count": 2
+    },
+    {
+      "source": "Redis string (or value) operations",
+      "translation": "Redis 字符串（或值）操作",
+      "count": 2
+    },
+    {
+      "source": "Redis zset (or sorted set) operations",
+      "translation": "Redis 有序集合（zset）操作",
+      "count": 2
+    },
+    {
+      "source": "Java Imperative",
+      "translation": "Java 命令式",
+      "count": 2
+    },
+    {
+      "source": "Java Reactive",
+      "translation": "Java 响应式",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "The <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code> class implements the <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisOperations.html\">RedisOperations</a></code>  interface and its reactive variant <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/ReactiveRedisTemplate.html\">ReactiveRedisTemplate</a></code> implements <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/ReactiveRedisOperations.html\">ReactiveRedisOperations</a></code>.",
+      "translation": "`<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code>` 类实现了 `<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisOperations.html\">RedisOperations</a></code>` 接口，而其响应式变体 `<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/ReactiveRedisTemplate.html\">ReactiveRedisTemplate</a></code>` 则实现了 `<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/ReactiveRedisOperations.html\">ReactiveRedisOperations</a></code>`。",
+      "count": 1
+    },
+    {
+      "source": "Since it is quite common for the keys and values stored in Redis to be <code>java.lang.String</code>, the Redis modules provides two extensions to <code>RedisConnection</code> and <code>RedisTemplate</code>, respectively the <code>StringRedisConnection</code> (and its <code>DefaultStringRedisConnection</code> implementation) and <code>StringRedisTemplate</code> as a convenient one-stop solution for intensive String operations.\nIn addition to being bound to <code>String</code> keys, the template and the connection use the <code>StringRedisSerializer</code> underneath, which means the stored keys and values are human-readable (assuming the same encoding is used both in Redis and your code).\nThe following listings show an example:",
+      "translation": "由于存储在 Redis 中的键和值通常是<code>java.lang.String</code>类型，Redis 模块为此提供了两个扩展：分别针对<code>RedisConnection</code>和<code>RedisTemplate</code>的<code>StringRedisConnection</code>（及其默认实现类<code>DefaultStringRedisConnection</code>）以及<code>StringRedisTemplate</code>，作为执行密集字符串操作的一站式便捷解决方案。\n除了键被绑定为<code>String</code>类型外，模板和连接在底层均使用<code>StringRedisSerializer</code>进行序列化，这意味着存储的键和值是可读的（前提是 Redis 端与代码端使用了相同的编码）。\n以下示例展示了具体用法：",
+      "count": 1
+    },
+    {
+      "source": "Most users are likely to use <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code> and its corresponding package, <code>org.springframework.data.redis.core</code> or its reactive variant <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/ReactiveRedisTemplate.html\">ReactiveRedisTemplate</a></code>.\nThe template is, in fact, the central class of the Redis module, due to its rich feature set.\nThe template offers a high-level abstraction for Redis interactions.\nWhile <code>[Reactive]RedisConnection</code> offers low-level methods that accept and return binary values (<code>byte</code> arrays), the template takes care of serialization and connection management, freeing the user from dealing with such details.",
+      "translation": "大多数用户很可能会使用<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code>及其对应的包<code>org.springframework.data.redis.core</code>，或者其响应式变体<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/ReactiveRedisTemplate.html\">ReactiveRedisTemplate</a></code>。\n模板实际上是 Redis 模块的核心类，这得益于其丰富的功能集。\n模板为 Redis 交互提供了高级抽象。\n虽然<code>[Reactive]RedisConnection</code>提供接受并返回二进制值（<code>byte</code>数组）的低级方法，但模板负责处理序列化和连接管理，使用户无需处理这些细节。",
+      "count": 1
+    },
+    {
+      "source": "As with the other Spring templates, <code>RedisTemplate</code> and <code>StringRedisTemplate</code> let you talk directly to Redis through the <code>RedisCallback</code> interface.\nThis feature gives complete control to you, as it talks directly to the <code>RedisConnection</code>.\nNote that the callback receives an instance of <code>StringRedisConnection</code> when a <code>StringRedisTemplate</code> is used.\nThe following example shows how to use the <code>RedisCallback</code> interface:",
+      "translation": "与其他 Spring 模板类似，<code>RedisTemplate</code> 和 <code>StringRedisTemplate</code> 允许您通过 <code>RedisCallback</code> 接口直接与 Redis 通信。  \n此功能为您提供完全的控制权，因为它直接访问 <code>RedisConnection</code>。  \n请注意，当使用 <code>StringRedisTemplate</code> 时，回调接收到的实例是 <code>StringRedisConnection</code>。  \n以下示例展示了如何使用 <code>RedisCallback</code> 接口：",
+      "count": 1
+    },
+    {
+      "source": "However, one can use <code>OxmSerializer</code> for Object/XML mapping through Spring <a href=\"https://docs.spring.io/spring-framework/reference/7.0/data-access.html#oxm\">OXM</a> support or <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/JacksonJsonRedisSerializer.html\">JacksonJsonRedisSerializer</a></code> or <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/GenericJacksonJsonRedisSerializer.html\">GenericJacksonJsonRedisSerializer</a></code> for storing data in <a href=\"https://en.wikipedia.org/wiki/JSON\">JSON</a> format.",
+      "translation": "不过，可以使用 `<code>OxmSerializer</code>` 通过 Spring 的 <a href=\"https://docs.spring.io/spring-framework/reference/7.0/data-access.html#oxm\">OXM</a> 支持进行对象/XML 映射，或使用 `<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/JacksonJsonRedisSerializer.html\">JacksonJsonRedisSerializer</a></code>` 或 `<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/GenericJacksonJsonRedisSerializer.html\">GenericJacksonJsonRedisSerializer</a></code>` 以 <a href=\"https://en.wikipedia.org/wiki/JSON\">JSON</a> 格式存储数据。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/JdkSerializationRedisSerializer.html\">JdkSerializationRedisSerializer</a></code>, which is used by default for <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCache.html\">RedisCache</a></code> and <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code>.",
+      "translation": "<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/JdkSerializationRedisSerializer.html\">JdkSerializationRedisSerializer</a></code>，默认用于 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCache.html\">RedisCache</a></code> 和 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code>。",
+      "count": 1
+    },
+    {
+      "source": "You can change the serialization mechanism on the template, and the Redis module offers several implementations, which are available in the <code>org.springframework.data.redis.serializer</code> package.\nSee <a href=\"#redis:serializer\">Serializers</a> for more information.\nYou can also set any of the serializers to null and use RedisTemplate with raw byte arrays by setting the <code>enableDefaultSerializer</code> property to <code>false</code>.\nNote that the template requires all keys to be non-null.\nHowever, values can be null as long as the underlying serializer accepts them.\nRead the Javadoc of each serializer for more information.",
+      "translation": "您可以在模板中更改序列化机制，Redis 模块提供了多种实现方式，这些实现位于 <code>org.springframework.data.redis.serializer</code> 包中。有关更多信息，请参阅<a href=\"#redis:serializer\">序列化器</a>。  \n您也可以将任意序列化器设置为 null，并通过将 <code>enableDefaultSerializer</code> 属性设置为 <code>false</code> 来使用 RedisTemplate 处理原始字节数组。  \n请注意，模板要求所有键均不能为 null。然而，只要底层序列化器支持，值可以为 null。有关更多信息，请阅读每个序列化器的 Javadoc。",
+      "count": 1
+    },
+    {
+      "source": "By default, <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCache.html\">RedisCache</a></code> and <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code> are configured to use Java native serialization.\nJava native serialization is known for allowing the running of remote code caused by payloads that exploit vulnerable libraries and classes injecting unverified bytecode.\nManipulated input could lead to unwanted code being run in the application during the deserialization step.\nAs a consequence, do not use serialization in untrusted environments.\nIn general, we strongly recommend any other message format (such as JSON) instead.",
+      "translation": "默认情况下，<code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/cache/RedisCache.html\">RedisCache</a></code> 和 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/core/RedisTemplate.html\">RedisTemplate</a></code> 被配置为使用 Java 原生序列化。\nJava 原生序列化因允许执行由利用易受攻击的库和类的有效载荷引发的远程代码而臭名昭著，这些有效载荷会注入未经验证的字节码。\n经过操纵的输入可能导致在反序列化步骤期间在应用程序中运行不需要的代码。\n因此，请勿在不信任的环境中使用时序化。\n一般来说，我们强烈建议改用其他消息格式（如 JSON）。",
+      "count": 1
+    },
+    {
+      "source": "The main difference between these variants is that <code>RedisSerializer</code> primarily serializes to <code>byte[]</code> while readers and writers use <code>ByteBuffer</code>.",
+      "translation": "这些变体之间的主要区别在于，<code>RedisSerializer</code> 主要序列化为 <code>byte[]</code>，而读写器则使用 <code>ByteBuffer</code>。",
+      "count": 1
+    },
+    {
+      "source": "Moreover, the template provides operations views (following the grouping from the Redis command <a href=\"https://redis.io/commands\">reference</a>) that offer rich, generified interfaces for working against a certain type or certain key (through the <code>KeyBound</code> interfaces) as described in the following table:",
+      "translation": "此外，该模板提供了操作视图（遵循 Redis 命令<a href=\"https://redis.io/commands\">参考</a>中的分组），通过如下的表格中描述的<code>KeyBound</code>接口，为针对特定类型或特定键的操作提供丰富且泛化的接口：",
+      "count": 1
+    },
+    {
+      "source": "Redis geospatial operations, such as <code>GEOADD</code>, <code>GEORADIUS</code>,…​",
+      "translation": "Redis 的地理空间操作，例如 `<code>GEOADD</code>`、`<code>GEORADIUS</code>`……",
+      "count": 1
+    },
+    {
+      "source": "Redis HyperLogLog operations, such as <code>PFADD</code>, <code>PFCOUNT</code>,…​",
+      "translation": "Redis HyperLogLog 操作，例如 <code>PFADD</code>、<code>PFCOUNT</code>……",
+      "count": 1
+    },
+    {
+      "source": "Redis geospatial operations such as <code>GEOADD</code>, <code>GEORADIUS</code>, and others)",
+      "translation": "Redis 的地理空间操作（如 <code>GEOADD</code>、<code>GEORADIUS</code> 等）",
+      "count": 1
+    },
+    {
+      "source": "Redis HyperLogLog operations such as (<code>PFADD</code>, <code>PFCOUNT</code>, and others)",
+      "translation": "Redis 的 HyperLogLog 操作（如 `<code>PFADD`、`PFCOUNT` 等）",
+      "count": 1
+    },
+    {
+      "source": "Two-way serializers based on <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/RedisSerializer.html\">RedisSerializer</a></code>.",
+      "translation": "基于 <code><a class=\"xref attachment apiref\" href=\"../api/java/org/springframework/data/redis/serializer/RedisSerializer.html\">RedisSerializer</a></code> 的双向序列化器。",
+      "count": 1
+    },
+    {
+      "source": "Element readers and writers that use <code>RedisElementReader</code> and <code>RedisElementWriter</code>.",
+      "translation": "使用 `<code>RedisElementReader</code>` 和 `<code>RedisElementWriter</code>` 的 Element 读取器和写入器。",
+      "count": 1
+    },
+    {
+      "source": "<em>Key Bound Operations</em>",
+      "translation": "<em>关键绑定操作</em>",
+      "count": 1
+    },
+    {
+      "source": "<code>RedisTemplate</code> uses a Java-based serializer for most of its operations.\nThis means that any object written or read by the template is serialized and deserialized through Java.",
+      "translation": "<code>RedisTemplate</code> 在其大多数操作中采用基于 Java 的序列化器。这意味着模板写入或读取的任何对象都通过 Java 进行序列化和反序列化。",
+      "count": 1
+    },
+    {
+      "source": "For cases where you need a certain template view, declare the view as a dependency and inject the template.\nThe container automatically performs the conversion, eliminating the <code>opsFor[X]</code> calls, as shown in the following example:",
+      "translation": "对于需要特定模板视图的情况，请将视图声明为依赖项并注入该模板。容器会自动执行转换，从而消除 `<code>opsFor[X]</code>` 调用，如下例所示：",
+      "count": 1
+    },
+    {
+      "source": "In Spring Data, the conversion between the user (custom) types and raw data (and vice-versa) is handled by Spring Data Redis in the <code>org.springframework.data.redis.serializer</code> package.",
+      "translation": "在 Spring Data 中，用户（自定义）类型与原始数据之间的转换（反之亦然）由 Spring Data Redis 在 `<code>org.springframework.data.redis.serializer</code>` 包中处理。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.oracle.com/en/java/javase/17/core/serialization-filtering1.html\">Filter Incoming Serialization Data</a>.",
+      "translation": "<a href=\"https://docs.oracle.com/en/java/javase/17/core/serialization-filtering1.html\">过滤传入的序列化数据</a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://openjdk.org/jeps/290\">JEP 290</a>.",
+      "translation": "<a href=\"https://openjdk.org/jeps/290\">JEP 290</a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data\">OWASP: Deserialization of untrusted data</a>.",
+      "translation": "<a href=\"https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data\">OWASP：不可信数据的反序列化漏洞</a>。",
+      "count": 1
+    },
+    {
+      "source": "Redis key bound geospatial operations",
+      "translation": "Redis 中基于地理位置的键绑定操作",
+      "count": 1
+    },
+    {
+      "source": "Redis hash key bound operations",
+      "translation": "Redis 哈希键绑定操作",
+      "count": 1
+    },
+    {
+      "source": "Redis key bound operations",
+      "translation": "Redis 键绑定操作",
+      "count": 1
+    },
+    {
+      "source": "Redis list key bound operations",
+      "translation": "Redis 列表键绑定操作",
+      "count": 1
+    },
+    {
+      "source": "Redis set key bound operations",
+      "translation": "Redis 集合键的绑定操作",
+      "count": 1
+    },
+    {
+      "source": "Redis string (or value) key bound operations",
+      "translation": "Redis 字符串（或值）键绑定操作",
+      "count": 1
+    },
+    {
+      "source": "Redis zset (or sorted set) key bound operations",
+      "translation": "Redis 有序集合（zset）键的边界操作",
+      "count": 1
+    },
+    {
+      "source": "Once configured, the template is thread-safe and can be reused across multiple instances.",
+      "translation": "配置完成后，该模板是线程安全的，可在多个实例中重复使用。",
+      "count": 1
+    },
+    {
+      "source": "From the framework perspective, the data stored in Redis is only bytes.\nWhile Redis itself supports various types, for the most part, these refer to the way the data is stored rather than what it represents.\nIt is up to the user to decide whether the information gets translated into strings or any other objects.",
+      "translation": "从架构角度来看，Redis 中存储的数据本质上只是字节。虽然 Redis 本身支持多种数据类型，但大多数情况下，这些类型指的是数据的存储方式，而非其代表的含义。是否将信息转换为字符串或其他对象，由用户自行决定。",
+      "count": 1
+    },
+    {
+      "source": "This package contains two types of serializers that, as the name implies, take care of the serialization process:",
+      "translation": "该包包含两种类型的序列化器，顾名思义，它们负责处理序列化过程：",
+      "count": 1
+    },
+    {
+      "source": "Multiple implementations are available (including two that have been already mentioned in this documentation):",
+      "translation": "有多种实现方式可供选择（包括本文档中已提到的两种）：",
+      "count": 1
+    },
+    {
+      "source": "Do note that the storage format is not limited only to values.\nIt can be used for keys, values, or hashes without any restrictions.",
+      "translation": "请注意，存储格式不仅限于值。它可以用于键、值或哈希，没有任何限制。",
+      "count": 1
+    },
+    {
+      "source": "If you are concerned about security vulnerabilities due to Java serialization, consider the general-purpose serialization filter mechanism at the core JVM level:",
+      "translation": "如果您担心因 Java 序列化导致的安全漏洞，请考虑在核心 JVM 层面使用通用序列化过滤机制：",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。\"AWS\"和\"Amazon Web Services\"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Redis</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">current</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "translation": "<ul class=\"nav-versions\">\n                    <li class=\"component\">\n                      <a class=\"title\" href=\"../data-commons/index.html\">Spring Data Commons</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-latest\">\n                          <a href=\"../data-commons/index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                    <li class=\"component is-current\">\n                      <a class=\"title\" href=\"../index.html\">Spring Data Redis</a>\n                      <ul class=\"versions\">\n                        <li class=\"version is-current is-latest\">\n                          <a href=\"../index.html\">\n                            4.1.0<span class=\"current\">当前版本</span>\n                          </a>\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-redis/src/main/antora/modules/ROOT/pages/redis/template.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-redis\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-redis/src/main/antora/modules/ROOT/pages/redis/template.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-redis\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Redis</a></li>\n      <li><a href=\"../redis.html\">Redis</a></li>\n      <li><a href=\"template.html\">RedisTemplate</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../index.html\">Spring Data Redis</a></li>\n      <li><a href=\"../redis.html\">Redis</a></li>\n      <li><a href=\"template.html\">RedisTemplate</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "Pushing an item to a List using <code>[Reactive]RedisTemplate</code>",
+      "translation": "使用 `<code>[Reactive]RedisTemplate</code>` 将项推送到列表中",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../search.html\">在 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Configuring Template API",
+      "translation": "配置模板 API",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../repositories.html\">Redis Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/usage.html\">Usage</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/object-mapping.html\">Object Mapping Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/mapping.html\">Object-to-Hash Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/keyspaces.html\">Keyspaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/indexes.html\">Secondary Indexes</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/expirations.html\">Time To Live</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/queries.html\">Redis-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/query-by-example.html\">Query by Example</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cluster.html\">Redis Repositories Running on a Cluster</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/anatomy.html\">Redis Repositories Anatomy</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../repositories.html\">Redis 仓库</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/definition.html\">定义仓库接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/create-instances.html\">创建仓库实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/usage.html\">用法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/object-mapping.html\">对象映射基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/mapping.html\">对象到哈希的映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/keyspaces.html\">键空间</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/indexes.html\">二级索引</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/expirations.html\">生存时间 (TTL)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/queries.html\">Redis 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/query-by-example.html\">基于示例的查询</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cluster.html\">在集群上运行的 Redis 仓库</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/anatomy.html\">Redis 仓库结构</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/projections.html\">投影</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/custom-implementations.html\">自定义仓库实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/null-handling.html\">仓库方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-keywords-reference.html\">仓库查询关键字</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-return-types-reference.html\">仓库查询返回类型</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../redis.html\">Redis</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"drivers.html\">Drivers</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"connection-modes.html\">Connection Modes</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">RedisTemplate</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-cache.html\">Redis Cache</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cluster.html\">Redis Cluster</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"hash-mappers.html\">Hash Mapping</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"pubsub.html\">Pub/Sub Messaging</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-sending.html\">Publishing (Sending a Message)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-receiving.html\">Subscribing (Receiving a Message)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-annotated.html\">Annotation-driven Listener Endpoints</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-streams.html\">Redis Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scripting.html\">Scripting</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"transactions.html\">Redis Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"pipelining.html\">Pipelining</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"support-classes.html\">Support Classes</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../redis.html\">Redis</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"getting-started.html\">入门指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"drivers.html\">驱动程序</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"connection-modes.html\">连接模式</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"template.html\">RedisTemplate</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-cache.html\">Redis 缓存</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"cluster.html\">Redis 集群</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"hash-mappers.html\">哈希映射</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"pubsub.html\">发布/订阅消息</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-sending.html\">发布（发送消息）</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-receiving.html\">订阅（接收消息）</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"pubsub-annotated.html\">注解驱动的监听器端点</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"redis-streams.html\">Redis Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"scripting.html\">脚本</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"transactions.html\">Redis 事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"pipelining.html\">管道化</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"support-classes.html\">支持类</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../upgrading.html\">Migration Guides</a>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n<a class=\"nav-link\" href=\"../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../upgrading.html\">迁移指南</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe preferred way to reference operations on a <code>[Reactive]RedisTemplate</code> instance is through the\n<code>[Reactive]RedisOperations</code> interface.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n引用 <code>[Reactive]RedisTemplate</code> 实例上操作的推荐方式是通过 <code>[Reactive]RedisOperations</code> 接口。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "Working with Objects through <code>RedisTemplate</code>",
+      "translation": "通过 <code>RedisTemplate</code> 操作对象",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#redis:string\"></a>String-focused Convenience Classes",
+      "translation": "<a class=\"anchor\" href=\"#redis:string\"></a>专注于字符串的便捷类",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data Redis",
+      "translation": "Spring Data Redis",
+      "count": 1
+    },
+    {
+      "source": "Operational views",
+      "translation": "操作视图",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

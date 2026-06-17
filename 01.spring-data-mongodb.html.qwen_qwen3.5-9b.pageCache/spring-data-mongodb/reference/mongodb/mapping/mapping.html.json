@@ -1,0 +1,1161 @@
+{
+  "created_at": "2026-06-17 10:06:42",
+  "updated_at": "2026-06-17 10:06:42",
+  "stats": {
+    "total_entries": 229,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 240,
+    "entries_with_hits": 229,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0480349344978166,
+    "usage_percentage": 0.0229
+  },
+  "items": [
+    {
+      "source": "<code>Instant</code><br/>\n(Java 8)",
+      "translation": "<code>即时</code><br/>\n（Java 8）",
+      "count": 2
+    },
+    {
+      "source": "If there is a single static factory method annotated with <code>@PersistenceCreator</code> then it is used.",
+      "translation": "如果存在一个带有<code>@PersistenceCreator</code>注解的单个静态工厂方法，则使用该方法。",
+      "count": 2
+    },
+    {
+      "source": "If there are multiple constructors and exactly one is annotated with <code>@PersistenceCreator</code>, it is used.",
+      "translation": "如果存在多个构造函数且其中恰好有一个被标注为<code>@PersistenceCreator</code>，则使用该构造函数。",
+      "count": 2
+    },
+    {
+      "source": "If the type is a Java <code>Record</code> the canonical constructor is used.",
+      "translation": "如果类型是 Java 的 `<code>Record</code>`，则使用规范构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Which property should be persisted (default to all declared properties)?\nYou can exclude properties by annotating these with <code>@Transient</code>.",
+      "translation": "应持久化哪些属性（默认为所有声明的属性）？  \n您可以通过使用 <code>@Transient</code> 注解来排除某些属性。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data automatically tries to detect a persistent entity’s constructor to be used to materialize objects of that type.\nThe resolution algorithm works as follows:",
+      "translation": "Spring Data 会自动尝试检测持久化实体中用于实例化该类型对象的构造函数。  \n解析算法的工作方式如下：",
+      "count": 2
+    },
+    {
+      "source": "If there is a single constructor, it is used.",
+      "translation": "如果只有一个构造函数，则使用它。",
+      "count": 2
+    },
+    {
+      "source": "If there’s a no-argument constructor, it is used.\nOther constructors will be ignored.",
+      "translation": "如果有无参构造函数，则使用它。  \n其他构造函数将被忽略。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data modules generally support overridden properties holding different values.\nFrom a programming model perspective there are a few things to consider:",
+      "translation": "Spring Data 模块通常支持覆盖属性以持有不同的值。从编程模型的角度来看，有几点需要考虑：",
+      "count": 2
+    },
+    {
+      "source": "How to represent properties in your data store?\nUsing the same field/column name for different values typically leads to corrupt data so you should annotate least one of the properties using an explicit field/column name.",
+      "translation": "如何在数据存储中表示属性？  \n为不同的值使用相同的字段/列名通常会导致数据损坏，因此您应该至少使用一个显式的字段/列名来标注这些属性。",
+      "count": 2
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The mapping layer takes care of translating the property name <code>value</code> into the actual field name.\nIt is absolutely valid to use the target field name here as well.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>映射层负责将属性名 <code>value</code> 转换为实际的字段名。在这里使用目标字段名也是完全有效的。</td>\n</tr>\n</tbody>",
+      "count": 2
+    },
+    {
+      "source": "Copyright © 2005 - <script>var d = new Date();\n        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term \"Broadcom\" refers to Broadcom Inc. and/or its subsidiaries.<br/><a href=\"https://www.vmware.com/help/legal.html\">Terms of Use</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">Privacy</a> • <a href=\"https://spring.io/trademarks\">Trademark Guidelines</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">Thank you</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">Your California Privacy Rights</a> • <a class=\"ot-sdk-show-settings\">Cookie Settings</a> <span id=\"teconsent\"></span>",
+      "translation": "版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href=\"https://www.vmware.com/help/legal.html\">使用条款</a> • <a href=\"https://www.vmware.com/help/privacy.html\" rel=\"noopener noreferrer\">隐私政策</a> • <a href=\"https://spring.io/trademarks\">商标指南</a> <span id=\"thank-you-mobile\">• <a href=\"https://spring.io/thank-you\">致谢</a></span> • <a href=\"https://www.vmware.com/help/privacy/california-privacy-rights.html\">您的加州隐私权利</a> • <a class=\"ot-sdk-show-settings\">Cookie 设置</a> <span id=\"teconsent\"></span>",
+      "count": 1
+    },
+    {
+      "source": "Both classes define a <code>field</code> using assignable types. <code>SubType</code> however shadows <code>SuperType.field</code>.\nDepending on the class design, using the constructor could be the only default approach to set <code>SuperType.field</code>.\nAlternatively, calling <code>super.setField(…)</code> in the setter could set the <code>field</code> in <code>SuperType</code>.\nAll these mechanisms create conflicts to some degree because the properties share the same name yet might represent two distinct values.\nSpring Data skips super-type properties if types are not assignable.\nThat is, the type of the overridden property must be assignable to its super-type property type to be registered as override, otherwise the super-type property is considered transient.\nWe generally recommend using distinct property names.",
+      "translation": "两个类都使用可赋值类型定义了 `<code>field</code>`。然而，`<code>SubType</code>` 会遮蔽 `<code>SuperType.field</code>`。  \n根据类的设计，使用构造函数可能是设置 `<code>SuperType.field</code>` 的唯一默认方法。  \n或者，在 setter 中调用 `<code>super.setField(…)</code>` 也可以设置 `<code>SuperType</code>` 中的 `<code>field</code>`。  \n所有这些机制在某种程度上都会产生冲突，因为属性名称相同，但可能代表两个不同的值。  \n如果类型不可赋值，Spring Data 会跳过父类型的属性。也就是说，被覆盖属性的类型必须可赋值于其父类型属性类型才能注册为覆盖属性；否则，父类型属性将被视为瞬态。  \n我们通常建议使用不同的属性名称。",
+      "count": 1
+    },
+    {
+      "source": "Getters and setters on <code>SubType</code> set only <code>SubType.field</code> and not <code>SuperType.field</code>.\nIn such an arrangement, using the constructor is the only default approach to set <code>SuperType.field</code>.\nAdding a method to <code>SubType</code> to set <code>SuperType.field</code> via <code>this.SuperType.field = …</code> is possible but falls outside of supported conventions.\nProperty overrides create conflicts to some degree because the properties share the same name yet might represent two distinct values.\nWe generally recommend using distinct property names.",
+      "translation": "<code>SubType</code> 上的 getter 和 setter 仅设置 <code>SubType.field</code>，而不会设置 <code>SuperType.field</code>。  \n在这种安排下，使用构造函数是设置 <code>SuperType.field</code> 的唯一默认方法。  \n虽然在 <code>SubType</code> 中添加一个通过 <code>this.SuperType.field = …</code> 来设置 <code>SuperType.field</code> 的方法是可行的，但这不符合支持的标准约定。  \n属性重写会在一定程度上产生冲突，因为这些属性具有相同的名称，但可能代表两个不同的值。  \n我们通常建议使用不同的属性名称。",
+      "count": 1
+    },
+    {
+      "source": "A field annotated with <code>@Id</code> (<code>org.springframework.data.annotation.Id</code>) will be mapped to the <code>_id</code> field.<br/>\nAdditionally, the name of the document field can be customized via the <code>@Field</code> annotation, in which case the document will not contain a field <code>_id</code>.",
+      "translation": "使用 <code>@Id</code>（<code>org.springframework.data.annotation.Id</code>）注解的字段将映射到 <code>_id</code> 字段。<br/>此外，可以通过 <code>@Field</code> 注解自定义文档字段的名称，在这种情况下，文档中将不包含 <code>_id</code> 字段。",
+      "count": 1
+    },
+    {
+      "source": "With the release of MongoDB 5.0 this restriction on <code>Document</code> field names containing special characters was lifted.\nWe highly recommend reading more about limitations on using dots in field names in the <a href=\"https://www.mongodb.com/docs/manual/core/dot-dollar-considerations/\">MongoDB Reference</a>.<br/>\nTo allow dots in <code>Map</code> structures please set <code>preserveMapKeys</code> on the <code>MappingMongoConverter</code>.",
+      "translation": "随着 MongoDB 5.0 的发布，对包含特殊字符的 `<code>Document` 字段名的限制已被解除。我们强烈建议阅读更多关于在字段名中使用点号的限制的详细信息，请参阅 <a href=\"https://www.mongodb.com/docs/manual/core/dot-dollar-considerations/\">MongoDB 参考文档</a>。<br/>\n若要在 `<code>Map` 结构中包含点号，请在 `<code>MappingMongoConverter` 上设置 `<code>preserveMapKeys`。",
+      "count": 1
+    },
+    {
+      "source": "If a field named <code>id</code> is declared as a String or BigInteger in the Java class it will be converted to and stored as an ObjectId if possible.\nObjectId as a field type is also valid.\nIf you specify a value for <code>id</code> in your application, the conversion to an ObjectId is done by the MongoDB driver.\nIf the specified <code>id</code> value cannot be converted to an ObjectId, then the value will be stored as is in the document’s <code>_id</code> field.\nThis also applies if the field is annotated with <code>@Id</code>.",
+      "translation": "如果 Java 类中声明的字段名为<code>id</code>，且其类型为 String 或 BigInteger，则只要可能，该值将被转换为 ObjectId 并存储。ObjectId 作为字段类型也是有效的。如果在应用程序中为<code>id</code>指定了值，MongoDB 驱动程序会负责将其转换为 ObjectId。如果指定的<code>id</code>值无法转换为 ObjectId，则该值将原样存储在文档的<code>_id</code>字段中。此规则同样适用于使用<code>@Id</code>注解标记的字段。",
+      "count": 1
+    },
+    {
+      "source": "<code>AbstractMongoClientConfiguration</code> requires you to implement methods that define a <code>com.mongodb.client.MongoClient</code> as well as provide a database name.\n<code>AbstractMongoClientConfiguration</code> also has a method named  <code>getMappingBasePackage(…)</code> that you can override to tell the converter where to scan for classes annotated with the <code>@Document</code> annotation.",
+      "translation": "`AbstractMongoClientConfiguration` 要求您实现用于定义 `com.mongodb.client.MongoClient` 并提供数据库名称的方法。  \n`AbstractMongoClientConfiguration` 还提供了一个名为 `getMappingBasePackage(…)` 的方法，您可以重写该方法以告知转换器扫描带有 `@Document` 注解的类的位置。",
+      "count": 1
+    },
+    {
+      "source": "You can add additional converters to the converter by overriding the <code>customConversionsConfiguration</code> method.\nMongoDB’s native JSR-310 support can be enabled through <code>MongoConverterConfigurationAdapter.useNativeDriverJavaTimeCodecs()</code>.\nAlso shown in the preceding example is a <code>LoggingEventListener</code>, which logs <code>MongoMappingEvent</code> instances that are posted onto Spring’s <code>ApplicationContextEvent</code> infrastructure.",
+      "translation": "您可以通过重写 `customConversionsConfiguration` 方法向转换器添加额外的转换器。  \n可以通过调用 `MongoConverterConfigurationAdapter.useNativeDriverJavaTimeCodecs()` 启用 MongoDB 原生的 JSR-310 支持。  \n前述示例中还展示了一个 `LoggingEventListener`，它会记录发布到 Spring 的 `ApplicationContextEvent` 基础设施上的 `MongoMappingEvent` 实例。",
+      "count": 1
+    },
+    {
+      "source": "Every time the <code>name</code> parameter is either not part of the result or its value is <code>null</code>, then the <code>name</code> defaults to <code>unknown</code>.",
+      "translation": "每次 `<code>name</code>` 参数不在结果中或其值为 `<code>null</code>` 时，`<code>name</code>` 将默认为 `<code>unknown</code>`。",
+      "count": 1
+    },
+    {
+      "source": "MongoDB requires that you have an <code>_id</code> field for all documents.If you don’t provide one the driver will assign a ObjectId with a generated value.The <code>_id</code> field can be of any type, other than arrays, so long as it is unique.The driver naturally supports all primitive types and Dates.When using the <code>MappingMongoConverter</code> there are certain rules that govern how properties from the Java class are mapped to the <code>_id</code> field.",
+      "translation": "MongoDB 要求所有文档都必须包含一个 `<code>_id</code>` 字段。如果您未提供该字段，驱动程序将分配一个具有生成值的 ObjectId。<code>_id</code> 字段的类型可以是除数组以外的任何类型，只要其值是唯一的即可。驱动程序天然支持所有基本类型和日期。在使用 `<code>MappingMongoConverter</code>` 时，有一些规则决定了如何将 Java 类的属性映射到 `<code>_id</code>` 字段。",
+      "count": 1
+    },
+    {
+      "source": "If a field is annotated with <code>@MongoId</code> in the Java class it will be converted to and stored as using its actual type.\nNo further conversion happens unless <code>@MongoId</code> declares a desired field type.\nIf no value is provided for the <code>id</code> field, a new <code>ObjectId</code> will be created and converted to the properties type.",
+      "translation": "如果 Java 类中的字段使用 <code>@MongoId</code> 注解，该字段将以其实际类型进行转换并存储。\n除非 <code>@MongoId</code> 声明了期望的字段类型，否则不会进行进一步的转换。\n如果未为 <code>id</code> 字段提供值，将创建一个新的 <code>ObjectId</code> 并将其转换为属性类型。",
+      "count": 1
+    },
+    {
+      "source": "If a field is annotated with <code>@MongoId(FieldType.…)</code> in the Java class it will be attempted to convert the value to the declared <code>FieldType</code>.\nIf no value is provided for the <code>id</code> field, a new <code>ObjectId</code> will be created and converted to the declared type.",
+      "translation": "如果 Java 类中的字段使用 <code>@MongoId(FieldType.…)</code> 进行注解，系统将尝试将该字段的值转换为声明的 <code>FieldType</code>。  \n如果未为 <code>id</code> 字段提供值，将创建一个新的 <code>ObjectId</code> 并将其转换为声明的类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Field(targetType=…​)</code> can come in handy when the native MongoDB type inferred by the mapping infrastructure does not match the expected one.\nLike for <code>BigDecimal</code>, which is represented as <code>String</code> instead of <code>Decimal128</code>, just because earlier versions of MongoDB Server did not have support for it.",
+      "translation": "<code>@Field(targetType=…​)</code> 在映射基础设施推断出的原生 MongoDB 类型与预期类型不匹配时非常有用。例如，对于 <code>BigDecimal</code>，由于早期版本的 MongoDB Server 不支持该类型，它被表示为 <code>String</code> 而非 <code>Decimal128</code>。",
+      "count": 1
+    },
+    {
+      "source": "Therefore, up until MongoDB 5.0 field names must not contain dots (<code>.</code>).<br/>\nUsing a <code>MappingMongoConverter#setMapKeyDotReplacement</code> allowed circumvent some of the limitations when storing <code>Map</code> structures by substituting dots on write with another character.",
+      "translation": "因此，在 MongoDB 5.0 之前，字段名称不能包含点号（<code>.</code>）。  \n通过使用 <code>MappingMongoConverter#setMapKeyDotReplacement</code>，可以在写入时将点号替换为其他字符，从而规避存储 <code>Map</code> 结构时的一些限制。",
+      "count": 1
+    },
+    {
+      "source": "<code>_id</code> (<code>@Field(name)</code> is ignored, <code>@Id</code> takes precedence)",
+      "translation": "_id（忽略 @Field(name)，@Id 优先）",
+      "count": 1
+    },
+    {
+      "source": "When querying and updating <code>MongoTemplate</code> will use the converter to handle conversions of the <code>Query</code> and <code>Update</code> objects that correspond to the above rules for saving documents so field names and types used in your queries will be able to match what is in your domain classes.",
+      "translation": "当查询和更新时，<code>MongoTemplate</code> 会使用转换器来处理与上述保存文档规则相对应的 <code>Query</code> 和 <code>Update</code> 对象的转换，因此您在查询中使用的字段名称和类型将能够与您的领域类中的内容相匹配。",
+      "count": 1
+    },
+    {
+      "source": "<code>AtomicInteger</code><br/>\ncalling <code>get()</code> before the actual conversion",
+      "translation": "<code>AtomicInteger</code><br/>\n在真正转换之前调用 <code>get()</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>AtomicLong</code><br/>\ncalling <code>get()</code> before the actual conversion",
+      "translation": "<code>AtomicLong</code><br/>\n在真正转换之前调用 <code>get()</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>LocalDateTime</code>, <code>LocalTime</code><br/>\n(Java 8)",
+      "translation": "<code>LocalDateTime</code>、<code>LocalTime</code><br/>\n（Java 8）",
+      "count": 1
+    },
+    {
+      "source": "If a document contains a field to be mapped, but the field holds a <code>null</code> value (like: <code>{ 'list' : null }</code>), the property value is set to <code>null</code>.",
+      "translation": "如果文档中包含一个需要映射的字段，但该字段的值为<code>null</code>（例如：<code>{ 'list' : null }</code>），则属性值将被设置为<code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "If a document contains a field to be mapped to a collection which is <strong>not</strong> <code>null</code> (like: <code>{ 'list' : [ …​ ] }</code>), the collection is populated with the mapped values.",
+      "translation": "如果文档中包含一个映射到集合的字段，且该集合<strong>不为</strong><code>null</code>（例如：<code>{ 'list' : [ … ] }</code>），则该集合将被填充为映射后的值。",
+      "count": 1
+    },
+    {
+      "source": "Unless explicitly configured, an instance of <code>MappingMongoConverter</code> is created by default when you create a <code>MongoTemplate</code>.\nYou can create your own instance of the <code>MappingMongoConverter</code>.\nDoing so lets you dictate where in the classpath your domain classes can be found, so that Spring Data MongoDB can extract metadata and construct indexes.\nAlso, by creating your own instance, you can register Spring converters to map specific classes to and from the database.",
+      "translation": "除非显式配置，否则在创建 <code>MongoTemplate</code> 时默认会生成一个 <code>MappingMongoConverter</code> 实例。  \n您可以自行创建 <code>MappingMongoConverter</code> 的实例。这样做可以让您指定 Spring Data MongoDB 在类路径中查找领域类的位置，从而提取元数据并构建索引。此外，通过创建自己的实例，您还可以注册 Spring 转换器，以将特定类映射到数据库或从数据库映射出来。",
+      "count": 1
+    },
+    {
+      "source": "We recommend using MongoDB’s native JSR-310 support via <code>MongoConverterConfigurationAdapter.useNativeDriverJavaTimeCodecs()</code> as described above as it is using an <code>UTC</code> based approach.\nThe default JSR-310 support for <code>java.time</code> types inherited from Spring Data Commons uses the local machine timezone as reference and should only be used for backwards compatibility.",
+      "translation": "我们建议使用上述通过 `<code>MongoConverterConfigurationAdapter.useNativeDriverJavaTimeCodecs()</code>` 启用 MongoDB 原生 JSR-310 支持，因为它采用基于 `UTC` 的方法。  \n继承自 Spring Data Commons 的 `<code>java.time</code>` 类型的默认 JSR-310 支持以本地机器时区为参考，仅应向后兼容使用。",
+      "count": 1
+    },
+    {
+      "source": "If you want to rely on <a href=\"https://spring.io/projects/spring-boot\">Spring Boot</a> to bootstrap Data MongoDB, but still want to override certain aspects of the configuration, you may want to expose beans of that type.\nFor custom conversions you may eg. choose to register a bean of type <code>MongoCustomConversions</code> that will be picked up the by the Boot infrastructure.\nTo learn more about this please make sure to read the Spring Boot <a href=\"https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data.nosql.mongodb\">Reference Documentation</a>.",
+      "translation": "如果您希望依赖 <a href=\"https://spring.io/projects/spring-boot\">Spring Boot</a> 来引导 MongoDB 数据访问，但仍需覆盖某些配置方面，您可能需要暴露相应类型的 Bean。  \n对于自定义转换，您可以选择注册一个类型为 <code>MongoCustomConversions</code> 的 Bean，该 Bean 将被 Spring Boot 基础设施自动拾取。  \n如需了解更多相关信息，请务必阅读 Spring Boot <a href=\"https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data.nosql.mongodb\">参考文档</a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>@DocumentReference</code>: Applied at the field to indicate it is to be stored as a pointer to another document.\nThis can be a single value (the <em>id</em> by default), or a <code>Document</code> provided via a converter.",
+      "translation": "<code>@DocumentReference</code>：应用于字段，表示该字段应存储为指向另一个文档的指针。  \n这可以是一个单值（默认为 <em>id</em>），或者通过转换器提供的 <code>Document</code> 对象。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Value</code>: This annotation is part of the Spring Framework . Within the mapping framework it can be applied to constructor arguments.\nThis lets you use a Spring Expression Language statement to transform a key’s value retrieved in the database before it is used to construct a domain object.\nIn order to reference a property of a given document one has to use expressions like: <code>@Value(\"#root.myProperty\")</code> where <code>root</code> refers to the root of the given document.",
+      "translation": "<code>@Value</code>：此注解属于 Spring 框架。在映射框架中，它可以应用于构造函数参数。\n这使得您能够使用 Spring 表达式语言语句，在利用从数据库检索到的键值构建领域对象之前对其进行转换。\n若要引用给定文档的某个属性，则需使用类似 <code>@Value(\"#root.myProperty\")</code> 的表达式，其中 <code>root</code> 指代该给定文档的根节点。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Version</code>: Applied at field level is used for optimistic locking and checked for modification on save operations.\nThe initial value is <code>zero</code> (<code>one</code> for primitive types) which is bumped automatically on every update.",
+      "translation": "<code>@Version</code>：在字段级别应用，用于乐观锁，并在保存操作时检查修改。初始值为零（基本类型为 1），每次更新时自动递增。",
+      "count": 1
+    },
+    {
+      "source": "Due to the special nature of the dot character in both MongoDB query and update statements field names containing dots cannot be targeted directly and therefore are excluded from being used in derived query methods.\nConsider the following <code>Item</code> having a <code>categoryId</code> property that is mapped to the field named <code>cat.id</code>.",
+      "translation": "由于 MongoDB 查询和更新语句中点字符的特殊性，包含点的字段名无法被直接定位，因此被排除在派生查询方法的使用范围之外。  \n考虑以下具有<code>categoryId</code>属性的<code>Item</code>，该属性映射到名为<code>cat.id</code>的字段。",
+      "count": 1
+    },
+    {
+      "source": "Rich mapping support is provided by the <code>MappingMongoConverter</code>.\nThe converter holds a metadata model that provides a full feature set to map domain objects to MongoDB documents.\nThe mapping metadata model is populated by using annotations on your domain objects.\nHowever, the infrastructure is not limited to using annotations as the only source of metadata information.\nThe <code>MappingMongoConverter</code> also lets you map objects to documents without providing any additional metadata, by following a set of conventions.",
+      "translation": "<code>MappingMongoConverter</code> 提供了丰富的映射支持。该转换器持有一个元数据模型，用于提供将领域对象映射到 MongoDB 文档的完整功能集。映射元数据模型是通过在领域对象上使用注解来填充的。然而，基础设施并不局限于仅使用注解作为元数据的唯一来源。<code>MappingMongoConverter</code> 还允许您通过遵循一系列约定，在不提供任何额外元数据的情况下将对象映射为文档。",
+      "count": 1
+    },
+    {
+      "source": "If the property is immutable but exposes a <code>with…</code> method (see below), we use the <code>with…</code> method to create a new entity instance with the new property value.",
+      "translation": "如果该属性是不可变的，但暴露了 `with…` 方法（见下文），我们使用 `with…` 方法来创建一个具有新属性值的新实体实例。",
+      "count": 1
+    },
+    {
+      "source": "<em>Use factory methods instead of overloaded constructors to avoid <code>@PersistenceCreator</code></em> — With an all-argument constructor needed for optimal performance, we usually want to expose more application use case specific constructors that omit things like auto-generated identifiers etc.\nIt’s an established pattern to rather use static factory methods to expose these variants of the all-args constructor.",
+      "translation": "<em>使用工厂方法而非重载构造函数，以避免使用 <code>@PersistenceCreator</code></em>——由于全参构造函数对于最佳性能是必需的，我们通常希望暴露更多针对特定应用场景的构造函数，这些构造函数会省略诸如自动生成的标识符等内容。  \n采用静态工厂方法来暴露全参构造函数的各种变体，是一种成熟的模式。",
+      "count": 1
+    },
+    {
+      "source": "<em>For identifiers to be generated, still use a final field in combination with an all-arguments persistence constructor (preferred) or a <code>with…</code> method</em> —",
+      "translation": "<em>若要生成标识符，仍需使用最终字段配合全参数持久化构造函数（首选）或 <code>with…</code> 方法</em> —",
+      "count": 1
+    },
+    {
+      "source": "<em>Use Lombok to avoid boilerplate code</em> — As persistence operations usually require a constructor taking all arguments, their declaration becomes a tedious repetition of boilerplate parameter to field assignments that can best be avoided by using Lombok’s <code>@AllArgsConstructor</code>.",
+      "translation": "<em>使用 Lombok 避免样板代码</em>——由于持久化操作通常需要包含所有参数的构造函数，其声明往往变成对样板式参数到字段赋值语句的繁琐重复，而使用 Lombok 的 <code>@AllArgsConstructor</code> 可以最好地避免这种情况。",
+      "count": 1
+    },
+    {
+      "source": "Consider the following <code>data</code> class <code>Person</code>:",
+      "translation": "考虑以下 `data` 类 `Person`：",
+      "count": 1
+    },
+    {
+      "source": "Kotlin supports parameter optionality by allowing default values to be used if a parameter is not provided.\nWhen Spring Data detects a constructor with parameter defaulting, then it leaves these parameters absent if the data store does not provide a value (or simply returns <code>null</code>) so Kotlin can apply parameter defaulting. Consider the following class that applies parameter defaulting for <code>name</code>",
+      "translation": "Kotlin 支持通过为参数提供默认值来实现参数的可选性。当 Spring Data 检测到具有参数默认值的构造函数时，如果数据存储未提供相应值（或简单地返回 <code>null</code>），它会将这些参数留空，以便 Kotlin 应用参数默认值机制。考虑以下对 <code>name</code> 参数应用默认值的类：",
+      "count": 1
+    },
+    {
+      "source": "In Kotlin, all classes are immutable by default and require explicit property declarations to define mutable properties.\nConsider the following <code>data</code> class <code>Person</code>:",
+      "translation": "在 Kotlin 中，所有类默认都是不可变的，若要定义可变属性，则需显式声明。\n考虑以下 <code>data</code> 类 <code>Person</code>：",
+      "count": 1
+    },
+    {
+      "source": "The short Java class name is mapped to the collection name in the following manner.\nThe class <code>com.bigbank.SavingsAccount</code> maps to the <code>savingsAccount</code> collection name.",
+      "translation": "短类名与集合名的映射方式如下。\n类<code>com.bigbank.SavingsAccount</code>映射到集合名<code>savingsAccount</code>。",
+      "count": 1
+    },
+    {
+      "source": "A field without an annotation but named <code>id</code> will be mapped to the <code>_id</code> field.",
+      "translation": "没有注解但命名为<code>id</code>的字段将被映射到<code>_id</code>字段。",
+      "count": 1
+    },
+    {
+      "source": "If a field named <code>id</code> is not declared as a String, BigInteger, or ObjectID in the Java class then you should assign it a value in your application so it can be stored 'as-is' in the document’s <code>_id</code> field.",
+      "translation": "如果 Java 类中的字段未声明为 String、BigInteger 或 ObjectID，则应在应用程序中为其赋值，以便将其“原样”存储到文档的 `<code>_id</code>` 字段中。",
+      "count": 1
+    },
+    {
+      "source": "If no field named <code>id</code> is present in the Java class then an implicit <code>_id</code> file will be generated by the driver but not mapped to a property or field of the Java class.",
+      "translation": "如果 Java 类中没有名为 <code>id</code> 的字段，则驱动程序会生成一个隐式的 <code>_id</code> 文件，但该文件不会映射到 Java 类的任何属性或字段。",
+      "count": 1
+    },
+    {
+      "source": "<code>LocalDate</code><br/>\n(Java 8)",
+      "translation": "<code>LocalDate</code><br/>\n（Java 8）",
+      "count": 1
+    },
+    {
+      "source": "converter / native (Java 8)<sup class=\"footnote\">[<a class=\"footnote\" href=\"#_footnotedef_1\" id=\"_footnoteref_1\" title=\"View footnote.\">1</a>]</sup>",
+      "translation": "转换器/原生（Java 8）<sup class=\"footnote\">[<a class=\"footnote\" href=\"#_footnotedef_1\" id=\"_footnoteref_1\" title=\"查看脚注。\">1</a>]</sup>",
+      "count": 1
+    },
+    {
+      "source": "converter / native (Java 8)<sup class=\"footnote\">[<a class=\"footnote\" href=\"#_footnotedef_2\" id=\"_footnoteref_2\" title=\"View footnote.\">2</a>]</sup>",
+      "translation": "转换器/原生（Java 8）<sup class=\"footnote\">[<a class=\"footnote\" href=\"#_footnotedef_2\" id=\"_footnoteref_2\" title=\"查看脚注。\">2</a>]</sup>",
+      "count": 1
+    },
+    {
+      "source": "If a document does <strong>not</strong> contain a field mapped to a collection, the mapping will not update the property.\nWhich means the value will remain <code>null</code>, a java default or any value set during object creation.",
+      "translation": "如果文档中不包含映射到集合的字段，则映射不会更新该属性。这意味着该值将保持为<code>null</code>、Java 默认值或在对象创建期间设置的任何值。",
+      "count": 1
+    },
+    {
+      "source": "You can configure the <code>MappingMongoConverter</code> as well as <code>com.mongodb.client.MongoClient</code> and MongoTemplate by using either Java-based or XML-based metadata.\nThe following example shows the configuration:",
+      "translation": "您可以使用基于 Java 或基于 XML 的元数据来配置<code>MappingMongoConverter</code>以及<code>com.mongodb.client.MongoClient</code>和 MongoTemplate。  \n以下示例展示了该配置：",
+      "count": 1
+    },
+    {
+      "source": "The <code>base-package</code> property tells it where to scan for classes annotated with the <code>@org.springframework.data.mongodb.core.mapping.Document</code> annotation.",
+      "translation": "`base-package` 属性指示其扫描带有 `@org.springframework.data.mongodb.core.mapping.Document` 注解的类的位置。",
+      "count": 1
+    },
+    {
+      "source": "<code>@MongoId</code>: Applied at the field level to mark the field used for identity purpose.\nAccepts an optional <code>FieldType</code> to customize id conversion.",
+      "translation": "<code>@MongoId</code>：在字段级别应用，用于标记用于身份识别的字段。  \n接受可选的 <code>FieldType</code> 以自定义 ID 转换。",
+      "count": 1
+    },
+    {
+      "source": "<code>@PersistenceCreator</code>: Marks a given constructor or a <code>static</code> factory method - even a package protected one - to use when instantiating the object from the database.\nConstructor arguments are mapped by name to the key values in the retrieved Document.",
+      "translation": "<code>@PersistenceCreator</code>：标记一个构造函数或静态工厂方法（即使是包级私有的），以便在从数据库实例化对象时使用该方法。构造函数的参数将按名称映射到检索到的文档中的键值。",
+      "count": 1
+    },
+    {
+      "source": "Generally speaking MongoDB uses the dot (<code>.</code>) character as a path separator for nested documents or arrays.\nThis means that in a query (or update statement) a key like <code>a.b.c</code> targets an object structure as outlined below:",
+      "translation": "一般来说，MongoDB 使用点号（<code>.</code>）作为嵌套文档或数组的路径分隔符。这意味着在查询（或更新语句）中，类似 <code>a.b.c</code> 的键将指向如下所示的对象结构：",
+      "count": 1
+    },
+    {
+      "source": "<code>@Field(name = \"a.b\")</code>: The name is considered to be a path.\nOperations expect a structure of nested objects such as <code>{ a : { b : … } }</code>.",
+      "translation": "<code>@Field(name = \"a.b\")</code>：名称被视为路径。操作期望嵌套对象的结构，例如 <code>{ a : { b : … } }</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Field(name = \"a.b\", fieldNameType = KEY)</code>: The names is considered a name as-is.\nOperations expect a field with the given value as <code>{ 'a.b' : ….. }</code>",
+      "translation": "<code>@Field(name = \"a.b\", fieldNameType = KEY)</code>：名称被视为原样。操作期望一个具有给定值的字段，即 <code>{ 'a.b' : ….. }</code>。",
+      "count": 1
+    },
+    {
+      "source": "Since we cannot target the <code>cat.id</code> field directly (as this would be interpreted as a path) we need the help of the <a class=\"xref page\" href=\"../aggregation-framework.html#mongo.aggregation\">Aggregation Framework</a>.",
+      "translation": "由于无法直接针对<code>cat.id</code>字段进行查询（因为这会被解释为路径），我们需要借助<a class=\"xref page\" href=\"../aggregation-framework.html#mongo.aggregation\">聚合框架</a>的帮助。",
+      "count": 1
+    },
+    {
+      "source": "If the Java type has a property whose name matches the given field of the input document, then it’s property information is used to select the appropriate constructor parameter to pass the input field value to.\nThis works only if the parameter name information is present in the java <code>.class</code> files which can be achieved by compiling the source with debug information or using the new <code>-parameters</code> command-line switch for javac in Java 8.",
+      "translation": "如果 Java 类型中存在一个属性，其名称与输入文档中的给定字段匹配，则使用该属性的信息来选择适当的构造函数参数，以便将输入字段的值传递给它。  \n此方法仅在 java <code>.class</code> 文件中包含参数名信息时才有效，这可以通过使用调试信息编译源代码，或在 Java 8 中使用新的 <code>-parameters</code> 命令行开关来实现。",
+      "count": 1
+    },
+    {
+      "source": "Additional examples for using the <code>@PersistenceCreator</code> annotation can be found in the <a href=\"https://github.com/spring-projects/spring-data-mongodb/blob/master/spring-data-mongodb/src/test/java/org/springframework/data/mongodb/core/convert/MappingMongoConverterUnitTests.java\">MappingMongoConverterUnitTests</a> test suite.",
+      "translation": "使用 <code>@PersistenceCreator</code> 注解的更多示例可以在 <a href=\"https://github.com/spring-projects/spring-data-mongodb/blob/master/spring-data-mongodb/src/test/java/org/springframework/data/mongodb/core/convert/MappingMongoConverterUnitTests.java\">MappingMongoConverterUnitTests</a> 测试套件中找到。",
+      "count": 1
+    },
+    {
+      "source": "This section describes the features of the <code>MappingMongoConverter</code>, including fundamentals, how to use conventions for mapping objects to documents and how to override those conventions with annotation-based mapping metadata.",
+      "translation": "本节介绍了<code>MappingMongoConverter</code>的功能，包括其基础内容、如何使用约定将对象映射为文档，以及如何通过基于注解的映射元数据覆盖这些约定。",
+      "count": 1
+    },
+    {
+      "source": "The value resolution assumes constructor/factory method argument names to match the property names of the entity, i.e. the resolution will be performed as if the property was to be populated, including all customizations in mapping (different datastore column or field name etc.).\nThis also requires either parameter names information available in the class file or an <code>@ConstructorProperties</code> annotation being present on the constructor.",
+      "translation": "值解析假定构造函数/工厂方法的参数名称与实体属性名称相匹配，即解析过程将如同该属性正在被填充一样执行，包括所有映射自定义（如不同的数据存储列或字段名等）。  \n此外，还要求类文件中提供参数名称信息，或者在构造函数上存在 `<code>@ConstructorProperties</code>` 注解。",
+      "count": 1
+    },
+    {
+      "source": "The value resolution can be customized by using Spring Framework’s <code>@Value</code> value annotation using a store-specific SpEL expression.\nPlease consult the section on store specific mappings for further details.",
+      "translation": "可以通过使用 Spring Framework 的 `<code>@Value</code>` 注解及特定于存储库的 SpEL 表达式来自定义值解析。有关更多详细信息，请参阅关于存储库特定映射的章节。",
+      "count": 1
+    },
+    {
+      "source": "If the property is immutable we’re using the constructor to be used by persistence operations (see <a href=\"#mapping.object-creation\">Object creation</a>) to create a copy of the instance.",
+      "translation": "如果属性是不可变的，我们将使用构造函数（参见<a href=\"#mapping.object-creation\">对象创建</a>）由持久化操作来创建该实例的副本。",
+      "count": 1
+    },
+    {
+      "source": "Similarly to our <a href=\"#mapping.object-creation.details\">optimizations in object construction</a> we also use Spring Data runtime generated accessor classes to interact with the entity instance.",
+      "translation": "与我们在<a href=\"#mapping.object-creation.details\">对象构建中的优化</a>类似，我们也使用 Spring Data 运行时生成的访问器类来与实体实例进行交互。",
+      "count": 1
+    },
+    {
+      "source": "Types must not reside in the default or under the <code>java</code> package.",
+      "translation": "类型不得位于默认包或<code>java</code>包下。",
+      "count": 1
+    },
+    {
+      "source": "Types and their constructors must be <code>public</code>",
+      "translation": "类型及其构造函数必须是<code>public</code>的",
+      "count": 1
+    },
+    {
+      "source": "Types that are inner classes must be <code>static</code>.",
+      "translation": "作为内部类的类型，必须是<code>static</code>的。",
+      "count": 1
+    },
+    {
+      "source": "The used Java Runtime must allow for declaring classes in the originating <code>ClassLoader</code>. Java 9 and newer impose certain limitations.",
+      "translation": "所使用的 Java 运行时必须允许在源 `<code>ClassLoader</code>` 中声明类。Java 9 及更高版本施加了某些限制。",
+      "count": 1
+    },
+    {
+      "source": "<em>Try to stick to immutable objects</em> — Immutable objects are straightforward to create as materializing an object is then a matter of calling its constructor only.\nAlso, this avoids littering your domain objects with setter methods that allow client code to manipulate the object’s state.\nIf you need those, prefer to make them package protected so that they can only be invoked by a limited amount of co-located types.\nConstructor-only materialization is up to 30% faster than properties population.",
+      "translation": "<em>尽量使用不可变对象</em>——创建不可变对象非常简单，只需调用其构造函数即可完成对象的实例化。此外，这还能避免在领域对象中散布允许客户端代码操纵对象状态的 setter 方法。如果确实需要这些方法，建议将其设为包级私有（package protected），以便仅由有限的同包类型调用。仅通过构造函数进行对象实例化的速度比属性填充快高达 30%。",
+      "count": 1
+    },
+    {
+      "source": "<em>Provide an all-args constructor</em> — Even if you cannot or don’t want to model your entities as immutable values, there’s still value in providing a constructor that takes all properties of the entity as arguments, including the mutable ones, as this allows the object mapping to skip the property population for optimal performance.",
+      "translation": "<em>提供一个全参构造函数</em>——即使您无法或不愿将实体建模为不可变值，提供接受实体所有属性（包括可变属性）作为参数的构造函数仍有价值，因为这允许对象映射跳过属性填充，从而实现最佳性能。",
+      "count": 1
+    },
+    {
+      "source": "<em>Make sure you adhere to the constraints that allow the generated instantiator and property accessor classes to be used</em> —",
+      "translation": "确保遵守相关约束，以便生成的实例化器和属性访问器类能够被使用。",
+      "count": 1
+    },
+    {
+      "source": "Using <code>@AccessType(PROPERTY)</code> cannot be used as the super-property cannot be generally set without making any further assumptions of the setter implementation.",
+      "translation": "使用<code>@AccessType(PROPERTY)</code>不可行，因为无法在不对 setter 实现做出任何额外假设的情况下设置超属性。",
+      "count": 1
+    },
+    {
+      "source": "If there is a constructor that is annotated with <code>@PersistenceCreator</code>, it is used.",
+      "translation": "如果存在一个带有<code>@PersistenceCreator</code>注解的构造函数，则使用该构造函数。",
+      "count": 1
+    },
+    {
+      "source": "If the type is a <a href=\"#mapping.kotlin\">Kotlin data class</a> the primary constructor is used.",
+      "translation": "如果类型是<a href=\"#mapping.kotlin\">Kotlin 数据类</a>，则使用主构造函数。",
+      "count": 1
+    },
+    {
+      "source": "The class above compiles to a typical class with an explicit constructor. We can customize this class by adding another constructor and annotate it with <code>@PersistenceCreator</code> to indicate a constructor preference:",
+      "translation": "上述类编译为具有显式构造函数的典型类。我们可以通过添加另一个构造函数并用 `<code>@PersistenceCreator</code>` 注解它来指定构造函数偏好，从而自定义该类：",
+      "count": 1
+    },
+    {
+      "source": "This class is effectively immutable.\nIt allows creating new instances as Kotlin generates a <code>copy(…)</code> method that creates new object instances copying all property values from the existing object and applying property values provided as arguments to the method.",
+      "translation": "该类实际上是不可变的。它允许创建新实例，因为 Kotlin 会生成一个 `<code>copy(…)</code>` 方法，该方法通过复制现有对象的所有属性值，并将作为参数提供的属性值应用过来，从而创建新的对象实例。",
+      "count": 1
+    },
+    {
+      "source": "Kotlin allows declaring <a href=\"https://kotlinlang.org/docs/inheritance.html#overriding-properties\">property overrides</a> to alter properties in subclasses.",
+      "translation": "Kotlin 允许声明<a href=\"https://kotlinlang.org/docs/inheritance.html#overriding-properties\">属性重写</a>，以在子类中修改属性。",
+      "count": 1
+    },
+    {
+      "source": "Such an arrangement renders two properties with the name <code>field</code>.\nKotlin generates property accessors (getters and setters) for each property in each class.\nEffectively, the code looks like as follows:",
+      "translation": "这样的安排会导致两个名为 `field` 的属性。\nKotlin 会为每个类中的每个属性生成访问器（getter 和 setter）。\n实际上，代码看起来如下所示：",
+      "count": 1
+    },
+    {
+      "source": "Using <code>@AccessType(PROPERTY)</code> cannot be used as the super-property cannot be set.",
+      "translation": "使用<code>@AccessType(PROPERTY)</code>时，由于无法设置父属性，因此不能使用。",
+      "count": 1
+    },
+    {
+      "source": "<code>MappingMongoConverter</code> has a few conventions for mapping objects to documents when no additional mapping metadata is provided.\nThe conventions are:",
+      "translation": "当未提供额外的映射元数据时，<code>MappingMongoConverter</code> 在将对象映射为文档时遵循一些约定。这些约定包括：",
+      "count": 1
+    },
+    {
+      "source": "All nested objects are stored as nested objects in the document and <strong>not</strong> as DBRefs.",
+      "translation": "所有嵌套对象均以嵌套对象的形式存储在文档中，<strong>而非</strong>以 DBRef 形式存储。",
+      "count": 1
+    },
+    {
+      "source": "The fields of an object are used to convert to and from fields in the document.\nPublic <code>JavaBean</code> properties are not used.",
+      "translation": "对象的字段用于与文档中的字段进行转换。  \n不使用公共的 `<code>JavaBean</code>` 属性。",
+      "count": 1
+    },
+    {
+      "source": "The following outlines what field will be mapped to the <code>_id</code> document field:",
+      "translation": "以下字段将被映射到文档的 `<code>_id</code>` 字段：",
+      "count": 1
+    },
+    {
+      "source": "Spring Data MongoDB supports all types that can be represented as BSON, MongoDB’s internal document format.\nIn addition to these types, Spring Data MongoDB provides a set of built-in converters to map additional types.\nYou can provide your own converters to adjust type conversion.\nSee <a class=\"xref page\" href=\"custom-conversions.html\">Custom Conversions - Overriding Default Mapping</a> for further details.",
+      "translation": "Spring Data MongoDB 支持所有可以表示为 BSON（MongoDB 的内部文档格式）的类型。  \n除了这些类型之外，Spring Data MongoDB 还提供了一组内置转换器，用于映射其他类型。  \n您可以提供自己的转换器以调整类型转换行为。  \n有关更多详细信息，请参阅<a class=\"xref page\" href=\"custom-conversions.html\">自定义转换 - 覆盖默认映射</a>。",
+      "count": 1
+    },
+    {
+      "source": "native<br/>\n32-bit integer",
+      "translation": "原生<br/>\n32 位整数",
+      "count": 1
+    },
+    {
+      "source": "native<br/>\n64-bit integer",
+      "translation": "原生<br/>\n64 位整数",
+      "count": 1
+    },
+    {
+      "source": "<code>java.util.UUID</code> (According to UuidRepresentation)",
+      "translation": "<code>java.util.UUID</code>（根据 UuidRepresentation）",
+      "count": 1
+    },
+    {
+      "source": "converter<br/>\n32-bit integer",
+      "translation": "转换器<br/>\n32 位整数",
+      "count": 1
+    },
+    {
+      "source": "converter<br/>\n64-bit integer",
+      "translation": "转换器<br/>\n64 位整数",
+      "count": 1
+    },
+    {
+      "source": "<code>ZoneId</code> (Java 8)",
+      "translation": "<code>ZoneId</code>（Java 8）",
+      "count": 1
+    },
+    {
+      "source": "To take full advantage of the object mapping functionality inside the Spring Data MongoDB support, you should annotate your mapped objects with the <code>@Document</code> annotation.\nAlthough it is not necessary for the mapping framework to have this annotation (your POJOs are mapped correctly, even without any annotations), it lets the classpath scanner find and pre-process your domain objects to extract the necessary metadata.\nIf you do not use this annotation, your application takes a slight performance hit the first time you store a domain object, because the mapping framework needs to build up its internal metadata model so that it knows about the properties of your domain object and how to persist them.\nThe following example shows a domain object:",
+      "translation": "要充分利用 Spring Data MongoDB 支持中的对象映射功能，您应该使用 <code>@Document</code> 注解来标注您的映射对象。  \n虽然映射框架并不强制需要此注解（即使没有任何注解，您的 POJO 也能正确映射），但该注解允许类路径扫描器发现并预处理您的领域对象，以提取必要的元数据。  \n如果您不使用此注解，在首次存储领域对象时，应用程序的性能会略有下降，因为映射框架需要构建其内部元数据模型，以便了解您领域对象的属性以及如何持久化它们。  \n以下示例展示了一个领域对象：",
+      "count": 1
+    },
+    {
+      "source": "<code>@Id</code>: Applied at the field level to mark the field used for identity purpose.",
+      "translation": "<code>@Id</code>：应用于字段级别，用于标记用于标识目的的字段。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Document</code>: Applied at the class level to indicate this class is a candidate for mapping to the database.\nYou can specify the name of the collection where the data will be stored.",
+      "translation": "<code>@Document</code>：在类级别应用，表示该类是数据库映射的候选者。  \n您可以指定存储数据的集合名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>@DBRef</code>: Applied at the field to indicate it is to be stored using a com.mongodb.DBRef.",
+      "translation": "<code>@DBRef</code>：应用于字段，指示该字段将使用 com.mongodb.DBRef 进行存储。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Indexed</code>: Applied at the field level to describe how to index the field.",
+      "translation": "<code>@Indexed</code>：应用于字段级别，用于描述如何对该字段进行索引。",
+      "count": 1
+    },
+    {
+      "source": "<code>@CompoundIndex</code> (repeatable): Applied at the type level to declare Compound Indexes.",
+      "translation": "<code>@CompoundIndex</code>（可重复）：在类型级别应用，用于声明复合索引。",
+      "count": 1
+    },
+    {
+      "source": "<code>@GeoSpatialIndexed</code>: Applied at the field level to describe how to geoindex the field.",
+      "translation": "<code>@GeoSpatialIndexed</code>：在字段级别应用，用于描述如何对该字段进行地理空间索引。",
+      "count": 1
+    },
+    {
+      "source": "<code>@TextIndexed</code>: Applied at the field level to mark the field to be included in the text index.",
+      "translation": "<code>@TextIndexed</code>：应用于字段级别，用于标记该字段应包含在文本索引中。",
+      "count": 1
+    },
+    {
+      "source": "<code>@HashIndexed</code>: Applied at the field level for usage within a hashed index to partition data across a sharded cluster.",
+      "translation": "<code>@HashIndexed</code>：在字段级别应用，用于哈希索引中，以便在分片集群中划分数据。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Language</code>: Applied at the field level to set the language override property for text index.",
+      "translation": "<code>@Language</code>：应用于字段级别，用于设置文本索引的语言覆盖属性。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Transient</code>: By default, all fields are mapped to the document.\nThis annotation excludes the field where it is applied from being stored in the database.\nTransient properties cannot be used within a persistence constructor as the converter cannot materialize a value for the constructor argument.",
+      "translation": "<code>@Transient</code>：默认情况下，所有字段都会映射到文档中。此注解会排除应用该注解的字段，使其不被存储到数据库中。瞬态属性不能在持久化构造函数中使用，因为转换器无法为构造函数参数生成值。",
+      "count": 1
+    },
+    {
+      "source": "<code>@Field</code>: Applied at the field level it allows to describe the name and type of the field as it will be represented in the MongoDB BSON document thus allowing the name and type to be different than the fieldname of the class as well as the property type.",
+      "translation": "<code>@Field</code>：应用于字段级别，它允许描述该字段在 MongoDB BSON 文档中的名称和类型，从而使字段的名称和类型可以与类的字段名以及属性类型不同。",
+      "count": 1
+    },
+    {
+      "source": "Using <code>@Field</code> allows customizing the field name to consider dots in two ways.",
+      "translation": "使用<code>@Field</code>允许以两种方式自定义字段名以考虑点号。",
+      "count": 1
+    },
+    {
+      "source": "The mapping subsystem allows the customization of the object construction by annotating a constructor with the <code>@PersistenceCreator</code> annotation.\nThe values to be used for the constructor parameters are resolved in the following way:",
+      "translation": "映射子系统允许通过用<code>@PersistenceCreator</code>注解构造函数来自定义对象构建。\n用于解析构造函数参数的值的方式如下：",
+      "count": 1
+    },
+    {
+      "source": "If a parameter is annotated with the <code>@Value</code> annotation, the given expression is evaluated and the result is used as the parameter value.",
+      "translation": "如果参数被标注了 `<code>@Value</code>` 注解，则会对给定的表达式进行求值，并将结果用作该参数的值。",
+      "count": 1
+    },
+    {
+      "source": "Otherwise, a <code>MappingException</code> will be thrown indicating that the given constructor parameter could not be bound.",
+      "translation": "否则，将抛出 `<code>MappingException` 异常，表示无法绑定给定的构造函数参数。",
+      "count": 1
+    },
+    {
+      "source": "Events are fired throughout the lifecycle of the mapping process.\nThis is described in the <a class=\"xref page\" href=\"../lifecycle-events.html\">Lifecycle Events</a> section.",
+      "translation": "在整个映射过程的生命周期中，会触发各种事件。\n有关这些事件的描述，请参阅<a class=\"xref page\" href=\"../lifecycle-events.html\">生命周期事件</a>部分。",
+      "count": 1
+    },
+    {
+      "source": "This section covers the fundamentals of Spring Data object mapping, object creation, field and property access, mutability and immutability.\nNote, that this section only applies to Spring Data modules that do not use the object mapping of the underlying data store (like JPA).\nAlso be sure to consult the store-specific sections for store-specific object mapping, like indexes, customizing column or field names or the like.",
+      "translation": "本节涵盖 Spring Data 对象映射、对象创建、字段和属性访问以及可变性与不可变性的基础知识。请注意，本节仅适用于不使用底层数据存储（如 JPA）的对象映射的 Spring Data 模块。此外，请务必查阅针对特定存储的章节，以了解特定于该存储的对象映射内容，例如索引、自定义列或字段名称等。",
+      "count": 1
+    },
+    {
+      "source": "Core responsibility of the Spring Data object mapping is to create instances of domain objects and map the store-native data structures onto those.\nThis means we need two fundamental steps:",
+      "translation": "Spring Data 对象映射的核心职责是创建领域对象实例，并将存储原生的数据结构映射到这些对象上。\n这意味着我们需要两个基本步骤：",
+      "count": 1
+    },
+    {
+      "source": "Instance creation by using one of the constructors exposed.",
+      "translation": "通过暴露的构造函数之一创建实例。",
+      "count": 1
+    },
+    {
+      "source": "Instance population to materialize all exposed properties.",
+      "translation": "实例化以体现所有暴露的属性。",
+      "count": 1
+    },
+    {
+      "source": "To avoid the overhead of reflection, Spring Data object creation uses a factory class generated at runtime by default, which will call the domain classes constructor directly.\nI.e. for this example type:",
+      "translation": "为避免反射带来的开销，Spring Data 默认使用在运行时生成的工厂类来创建对象，该工厂类将直接调用领域类的构造函数。\n即对于此示例类型：",
+      "count": 1
+    },
+    {
+      "source": "we will create a factory class semantically equivalent to this one at runtime:",
+      "translation": "我们将在运行时创建一个语义上与此工厂类等效的工厂类：",
+      "count": 1
+    },
+    {
+      "source": "This gives us a roundabout 10% performance boost over reflection.\nFor the domain class to be eligible for such optimization, it needs to adhere to a set of constraints:",
+      "translation": "这为我们带来了比反射大约 10% 的性能提升。\n要使领域类符合此类优化的条件，它需要遵守一组约束：",
+      "count": 1
+    },
+    {
+      "source": "it must not be a private class",
+      "translation": "它不能是私有类。",
+      "count": 1
+    },
+    {
+      "source": "it must not be a non-static inner class",
+      "translation": "它不能是非静态内部类。",
+      "count": 1
+    },
+    {
+      "source": "it must not be a CGLib proxy class",
+      "translation": "它不能是 CGLib 代理类。",
+      "count": 1
+    },
+    {
+      "source": "the constructor to be used by Spring Data must not be private",
+      "translation": "Spring Data 所使用的构造函数不能是私有的。",
+      "count": 1
+    },
+    {
+      "source": "If any of these criteria match, Spring Data will fall back to entity instantiation via reflection.",
+      "translation": "如果满足上述任一条件，Spring Data 将通过反射回退到实体实例化。",
+      "count": 1
+    },
+    {
+      "source": "Once an instance of the entity has been created, Spring Data populates all remaining persistent properties of that class.\nUnless already populated by the entity’s constructor (i.e. consumed through its constructor argument list), the identifier property will be populated first to allow the resolution of cyclic object references.\nAfter that, all non-transient properties that have not already been populated by the constructor are set on the entity instance.\nFor that we use the following algorithm:",
+      "translation": "一旦创建了该实体的实例，Spring Data 会填充该类中所有剩余的持久化属性。  \n除非这些属性已通过实体构造函数（即通过构造函数参数列表）进行填充，否则标识符属性将被首先填充，以便解析循环对象引用。  \n随后，所有未被构造函数填充的非瞬态属性将被设置到实体实例上。  \n为此，我们采用以下算法：",
+      "count": 1
+    },
+    {
+      "source": "If property access (i.e. access through getters and setters) is defined, we’re invoking the setter method.",
+      "translation": "如果定义了属性访问（即通过 getter 和 setter 进行访问），我们将调用 setter 方法。",
+      "count": 1
+    },
+    {
+      "source": "If the property is mutable we set the field directly.",
+      "translation": "如果该属性是可变的，则直接设置该字段。",
+      "count": 1
+    },
+    {
+      "source": "By default, we set the field value directly.",
+      "translation": "默认情况下，我们直接设置字段值。",
+      "count": 1
+    },
+    {
+      "source": "This gives us a roundabout 25% performance boost over reflection.\nFor the domain class to be eligible for such optimization, it needs to adhere to a set of constraints:",
+      "translation": "这为我们带来了比反射间接提升约 25% 的性能。\n要使领域类符合此类优化的条件，它需要遵守一组约束：",
+      "count": 1
+    },
+    {
+      "source": "By default, Spring Data attempts to use generated property accessors and falls back to reflection-based ones if a limitation is detected.",
+      "translation": "默认情况下，Spring Data 会尝试使用生成的属性访问器；如果检测到限制，则回退到基于反射的访问器。",
+      "count": 1
+    },
+    {
+      "source": "Let’s have a look at the following entity:",
+      "translation": "让我们看看以下实体：",
+      "count": 1
+    },
+    {
+      "source": "Java allows a flexible design of domain classes where a subclass could define a property that is already declared with the same name in its superclass.\nConsider the following example:",
+      "translation": "Java 允许对领域类进行灵活设计，子类可以定义一个与其父类中已声明的同名属性。  \n考虑以下示例：",
+      "count": 1
+    },
+    {
+      "source": "Spring Data adapts specifics of Kotlin to allow object creation and mutation.",
+      "translation": "Spring Data 适配了 Kotlin 的具体特性，以支持对象的创建和修改。",
+      "count": 1
+    },
+    {
+      "source": "Kotlin classes are supported to be instantiated, all classes are immutable by default and require explicit property declarations to define mutable properties.",
+      "translation": "支持实例化 Kotlin 类，所有类默认不可变，且需要显式声明属性以定义可变属性。",
+      "count": 1
+    },
+    {
+      "source": "Kotlin Value Classes are designed for a more expressive domain model to make underlying concepts explicit.\nSpring Data can read and write types that define properties using Value Classes.",
+      "translation": "Kotlin 值类旨在构建更具表现力的领域模型，使底层概念更加明确。  \nSpring Data 可以读取和写入使用值类定义属性的类型。",
+      "count": 1
+    },
+    {
+      "source": "Consider the following domain model:",
+      "translation": "考虑以下领域模型：",
+      "count": 1
+    },
+    {
+      "source": "The converter uses any Spring Converters registered with it to override the default mapping of object properties to document fields and values.",
+      "translation": "转换器使用与其注册的任何 Spring 转换器来覆盖对象属性到文档字段和值的默认映射。",
+      "count": 1
+    },
+    {
+      "source": "If you have a single non-zero-argument constructor whose constructor argument names match top-level field names of document, that constructor is used.Otherwise, the zero-argument constructor is used.If there is more than one non-zero-argument constructor, an exception will be thrown.",
+      "translation": "如果存在一个具有单个非零参数的构造函数，且该构造函数的参数名称与文档的顶层字段名称匹配，则使用该构造函数；否则，使用无参构造函数。如果存在多个具有非零参数的构造函数，将抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "The following outlines what type conversion, if any, will be done on the property mapped to the _id document field.",
+      "translation": "以下说明了将映射到 `_id` 文档字段的属性所执行的类型转换（如有）。",
+      "count": 1
+    },
+    {
+      "source": "Collection handling depends on the actual values returned by MongoDB.",
+      "translation": "集合的处理取决于 MongoDB 返回的实际值。",
+      "count": 1
+    },
+    {
+      "source": "Generally, if you use constructor creation, then you can get hold of the value to be set.\nProperty population can make use of default initialization values if a property value is not being provided by a query response.",
+      "translation": "通常，如果使用构造函数创建，则可以获取要设置的值。如果查询响应未提供属性值，则属性填充可以使用默认初始化值。",
+      "count": 1
+    },
+    {
+      "source": "The MappingMongoConverter can use metadata to drive the mapping of objects to documents.\nThe following annotations are available:",
+      "translation": "MappingMongoConverter 可以使用元数据来驱动对象到文档的映射。\n可用的注解如下：",
+      "count": 1
+    },
+    {
+      "source": "The mapping metadata infrastructure is defined in a separate spring-data-commons project that is technology agnostic.\nSpecific subclasses are using in the MongoDB support to support annotation based metadata.\nOther strategies are also possible to put in place if there is demand.",
+      "translation": "映射元数据基础设施定义在一个独立的、与具体技术无关的 spring-data-commons 项目中。  \nMongoDB 支持模块使用了特定的子类来实现基于注解的元数据功能。  \n如果存在需求，也可以实施其他策略。",
+      "count": 1
+    },
+    {
+      "source": "You may even consider your own, custom annotation.",
+      "translation": "您甚至可以考虑使用自己的自定义注释。",
+      "count": 1
+    },
+    {
+      "source": "Its raw representation will look like",
+      "translation": "其原始表现形式将如下所示",
+      "count": 1
+    },
+    {
+      "source": "The above shows a simple example where the special field is present on the top document level.\nIncreased levels of nesting increase the complexity of the aggregation expression required to interact with the field.",
+      "translation": "上图展示了一个简单示例，其中特殊字段位于顶层文档。嵌套层级的增加会提高与字段交互所需的聚合表达式的复杂度。",
+      "count": 1
+    },
+    {
+      "source": "Declaring these beans in your Spring ApplicationContext causes them to be invoked whenever the event is dispatched.",
+      "translation": "在 Spring 应用程序上下文中声明这些 Bean，会导致它们在事件分发时每次都被调用。",
+      "count": 1
+    },
+    {
+      "source": "Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra™, and Apache Geode™ are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java™, Java™ SE, Java™ EE, and OpenJDK™ are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.",
+      "translation": "Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS\"和“Amazon Web Services”是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归其各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">View all projects</a>\n            <li class=\"navbar-item navbar-item-special-3\">DEVELOPMENT TOOLS</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/projects\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-boot\">Spring Boot</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-framework\">Spring Framework</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud\">Spring Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-cloud-dataflow\">Spring Cloud Data Flow</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-data\">Spring Data</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-integration\">Spring Integration</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-batch\">Spring Batch</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/projects/spring-security\">Spring Security</a>\n            <a class=\"navbar-item navbar-item-special\" href=\"https://spring.io/projects\">查看所有项目</a>\n            <li class=\"navbar-item navbar-item-special-3\">开发工具</li>\n            <a class=\"navbar-item\" href=\"https://spring.io/tools\">Spring Tools 4</a>\n            <a class=\"navbar-item navbar-item-special-2\" href=\"https://start.spring.io\">Spring Initializr\n              <svg id=\"svg-stash-f15b5668\"></svg></a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">Microservices</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">Reactive</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">Event\n              Driven</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">Cloud</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web\n              Applications</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">Serverless</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">Batch</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/why-spring\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/microservices\">微服务</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/reactive\">响应式</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/event-driven\">事件驱动</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/cloud\">云</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/web-applications\">Web 应用</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/serverless\">无服务器</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/batch\">批处理</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/mapping/mapping.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          Edit this Page\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub Project\n        </a>",
+      "translation": "<a href=\"file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/mapping/mapping.adoc\">\n          <svg id=\"svg-stash-05b5c46b\"></svg>\n          编辑此页面\n        </a>\n        <a href=\"https://github.com/spring-projects/spring-data-mongodb\" title=\"GitHub\">\n          <svg id=\"svg-stash-28d888b7\"></svg>\n          GitHub 项目\n        </a>",
+      "count": 1
+    },
+    {
+      "source": "<nav aria-label=\"breadcrumbs\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../../mongodb.html\">MongoDB Support</a></li>\n      <li><a href=\"mapping.html\">Object Mapping</a></li>\n    </ul>\n  </nav>",
+      "translation": "<nav aria-label=\"面包屑\" class=\"breadcrumbs\">\n    <ul>\n      <li><a href=\"../../index.html\">Spring Data MongoDB</a></li>\n      <li><a href=\"../../mongodb.html\">MongoDB 支持</a></li>\n      <li><a href=\"mapping.html\">对象映射</a></li>\n    </ul>\n  </nav>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">Overview</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring Runtime</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring Consulting</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy For Teams</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">Security Advisories</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.io/solutions\">概览</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/support\">Spring 运行时</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/consulting\">Spring 咨询</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/teams\">Spring Academy 团队培训</a>\n            <a class=\"navbar-item\" href=\"https://spring.io/security\">安全公告</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">Courses</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">Get Certified</a>",
+      "translation": "<a class=\"navbar-item\" href=\"https://spring.academy/courses\">课程</a>\n            <a class=\"navbar-item\" href=\"https://spring.academy/learning-path\">获取认证</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#_footnoteref_1\">1</a>. Uses UTC zone offset. Configure via <a href=\"#mapping-configuration\">MongoConverterConfigurationAdapter</a>",
+      "translation": "<a href=\"#_footnoteref_1\">1</a>。使用 UTC 时区偏移量。可通过 <a href=\"#mapping-configuration\">MongoConverterConfigurationAdapter</a> 进行配置。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#_footnoteref_2\">2</a>. Uses UTC zone offset. Configure via <a href=\"#mapping-configuration\">MongoConverterConfigurationAdapter</a>",
+      "translation": "<a href=\"#_footnoteref_2\">2</a>。使用 UTC 时区偏移量。可通过 <a href=\"#mapping-configuration\">MongoConverterConfigurationAdapter</a> 进行配置。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../../data-commons/index.html\">Spring Data Commons</a>",
+      "translation": "<a class=\"title\" href=\"../../data-commons/index.html\">Spring Data 公共模块</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"title\" href=\"../../index.html\">Spring Data MongoDB</a>",
+      "translation": "<a class=\"title\" href=\"../../index.html\">Spring Data MongoDB</a>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"search-link\" href=\"../../search.html\">Search in all Spring Docs</a>",
+      "translation": "<a class=\"search-link\" href=\"../../search.html\">在全部 Spring 文档中搜索</a>",
+      "count": 1
+    },
+    {
+      "source": "Object creation internals",
+      "translation": "对象创建的内部机制",
+      "count": 1
+    },
+    {
+      "source": "Property population internals",
+      "translation": "属性人口内部结构",
+      "count": 1
+    },
+    {
+      "source": "A generated Property Accessor",
+      "translation": "生成的属性访问器",
+      "count": 1
+    },
+    {
+      "source": "A sample entity",
+      "translation": "示例实体",
+      "count": 1
+    },
+    {
+      "source": "Collection Handling",
+      "translation": "藏品管理",
+      "count": 1
+    },
+    {
+      "source": "Java Time Types",
+      "translation": "Java 时间类型",
+      "count": 1
+    },
+    {
+      "source": "Example 1. Example domain object",
+      "translation": "示例 1。示例领域对象",
+      "count": 1
+    },
+    {
+      "source": "Query fields with a dot in its name",
+      "translation": "查询名称中包含点的字段",
+      "count": 1
+    },
+    {
+      "source": "Update fields with a dot in its name",
+      "translation": "更新名称中包含点的字段",
+      "count": 1
+    },
+    {
+      "source": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../preface.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../getting-started.html\">Getting Started</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../configuration.html\">Connecting to MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../template-api.html\">Template API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-config.html\">Configuration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-collection-management.html\">Index and Collection Management</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-crud-operations.html\">Saving, Updating, and Removing Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-query-operations.html\">Querying Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">Property Paths</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-document-count.html\">Counting Documents</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../aggregation-framework.html\">Aggregation Framework Support</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../template-gridfs.html\">GridFS Support</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping.html\">Object Mapping</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"custom-conversions.html\">Type based Converter</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-converters.html\">Property Converters</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"unwrapping-entities.html\">Unwrapping Types</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"document-references.html\">Object References</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping-index-management.html\">Index Creation</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../value-expressions.html\">Value Expressions Fundamentals</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../lifecycle-events.html\">Lifecycle Events</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../auditing.html\">Auditing</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../client-session-transactions.html\">Sessions &amp; Transactions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../change-streams.html\">Change Streams</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../tailable-cursors.html\">Tailable Cursors</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../sharding.html\">Sharding</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../mongo-search-indexes.html\">MongoDB Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../mongo-encryption.html\">Encryption</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../aot.html\">Ahead of Time Optimizations</a>\n  </li>",
+      "translation": "<li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../preface.html\">需求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../getting-started.html\">快速入门</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../configuration.html\">连接 MongoDB</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../template-api.html\">模板 API</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-config.html\">配置</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-collection-management.html\">索引和集合管理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-crud-operations.html\">保存、更新和删除文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-query-operations.html\">查询文档</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../property-paths.html\">属性路径</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../template-document-count.html\">统计文档数量</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../aggregation-framework.html\">聚合框架支持</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../template-gridfs.html\">GridFS 支持</a>\n  </li>\n  <li class=\"nav-item is-current-page\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"mapping.html\">对象映射</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping-schema.html\">JSON Schema</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"custom-conversions.html\">基于类型的转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"property-converters.html\">属性转换器</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"unwrapping-entities.html\">类型解包</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"document-references.html\">对象引用</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"mapping-index-management.html\">索引创建</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../value-expressions.html\">值表达式基础</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../lifecycle-events.html\">生命周期事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../auditing.html\">审计</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../client-session-transactions.html\">会话与事务</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../change-streams.html\">变更流</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../tailable-cursors.html\">可锁定游标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../sharding.html\">分片</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../mongo-search-indexes.html\">MongoDB 搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../mongo-encryption.html\">加密</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../aot.html\">提前优化</a>\n  </li>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The identifier property is final but set to <code>null</code> in the constructor.\nThe class exposes a <code>withId(…)</code> method that’s used to set the identifier, e.g. when an instance is inserted into the datastore and an identifier has been generated.\nThe original <code>Person</code> instance stays unchanged as a new one is created.\nThe same pattern is usually applied for other properties that are store managed but might have to be changed for persistence operations.\nThe wither method is optional as the persistence constructor (see 6) is effectively a copy constructor and setting the property will be translated into creating a fresh instance with the new identifier value applied.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>The <code>firstname</code> and <code>lastname</code> properties are ordinary immutable properties potentially exposed through getters.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The <code>age</code> property is an immutable but derived one from the <code>birthday</code> property.\nWith the design shown, the database value will trump the defaulting as Spring Data uses the only declared constructor.\nEven if the intent is that the calculation should be preferred, it’s important that this constructor also takes <code>age</code> as parameter (to potentially ignore it) as otherwise the property population step will attempt to set the age field and fail due to it being immutable and no <code>with…</code> method being present.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>The <code>comment</code> property is mutable and is populated by setting its field directly.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td>The <code>remarks</code> property is mutable and is populated by invoking the setter method.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"6\"></i><b>6</b></td>\n<td>The <code>summary</code> property transient and will not be persisted as it is annotated with <code>@Transient</code>.\nSpring Data doesn’t use Java’s <code>transient</code> keyword to exclude properties from being persisted as <code>transient</code> is part of the Java Serialization Framework.\nNote that this property can be used with a persistence constructor, but its value will default to <code>null</code> (or the respective primitive initial value if the property type was a primitive one).</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"7\"></i><b>7</b></td>\n<td>The class exposes a factory method and a constructor for object creation.\nThe core idea here is to use factory methods instead of additional constructors to avoid the need for constructor disambiguation through <code>@PersistenceCreator</code>.\nInstead, defaulting of properties is handled within the factory method.\nIf you want Spring Data to use the factory method for object instantiation, annotate it with <code>@PersistenceCreator</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>标识符属性为 final 类型，但在构造函数中被设置为 <code>null</code>。该类提供了一个 <code>withId(…)</code> 方法用于设置标识符，例如当实例被插入数据存储且已生成标识符时。原始的 <code>Person</code> 实例保持不变，因为会创建一个新的实例。通常会对其他需要存储管理但可能需要更改以进行持久化操作的属性应用相同的模式。<code>wither</code> 方法是可选的，因为持久化构造函数（见第 6 点）本质上是一个拷贝构造函数，设置该属性将被转换为创建一个新实例，并将新的标识符值应用其中。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td><code>firstname</code> 和 <code>lastname</code> 属性是普通的不可变属性，可能通过 getter 方法暴露。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td><code>age</code> 属性是不可变的，但它是从 <code>birthday</code> 属性派生而来的。按照所示的设计，数据库值将优于默认值，因为 Spring Data 仅使用声明的构造函数。即使意图是优先采用计算结果，也重要的是该构造函数也应接受 <code>age</code> 作为参数（以便可能忽略它），否则属性填充步骤将尝试设置 age 字段，但由于其不可变且不存在 <code>with…</code> 方法而失败。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td><code>comment</code> 属性是可变的，通过直接设置其字段进行填充。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"5\"></i><b>5</b></td>\n<td><code>remarks</code> 属性是可变的，通过调用 setter 方法进行填充。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"6\"></i><b>6</b></td>\n<td><code>summary</code> 属性是瞬态的，不会被持久化，因为它被标注为 <code>@Transient</code>。Spring Data 不使用 Java 的 <code>transient</code> 关键字来排除属性不被持久化，因为 <code>transient</code> 是 Java 序列化框架的一部分。请注意，该属性可以与持久化构造函数一起使用，但其值将默认为 <code>null</code>（如果属性类型是基本类型，则为其相应的基本类型初始值）。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"7\"></i><b>7</b></td>\n<td>该类提供了一个工厂方法和一个构造函数用于对象创建。这里的核心理念是使用工厂方法而不是额外的构造函数，以避免通过 <code>@PersistenceCreator</code> 进行构造函数消歧的需要。相反，属性的默认值处理在工厂方法内部完成。如果您希望 Spring Data 使用工厂方法进行对象实例化，请将其标注为 <code>@PersistenceCreator</code>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../repositories.html\">Repositories</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-concepts.html\">Core concepts</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/definition.html\">Defining Repository Interfaces</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/repositories.html\">MongoDB Repositories</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-extensions.html\">Spring Data Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/create-instances.html\">Creating Repository Instances</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-methods-details.html\">Defining Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods.html\">MongoDB-specific Query Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/vector-search.html\">Vector Search</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/modifying-methods.html\">MongoDB-specific Data Manipulation Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/projections.html\">Projections</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/custom-implementations.html\">Custom Repository Implementations</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-domain-events.html\">Publishing Events from Aggregate Roots</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/null-handling.html\">Null Handling of Repository Methods</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/cdi-integration.html\">CDI Integration</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-keywords-reference.html\">Repository query keywords</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-return-types-reference.html\">Repository query return types</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../repositories.html\">仓储 (Repositories)</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-concepts.html\">核心概念</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/definition.html\">定义仓储接口</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/repositories.html\">MongoDB 仓储</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-extensions.html\">Spring Data 扩展功能</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/create-instances.html\">创建仓储实例</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-methods-details.html\">定义查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/query-methods.html\">MongoDB 专用查询方法</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/vector-search.html\">向量搜索</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/modifying-methods.html\">MongoDB 专用数据操作方法的定义</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/projections.html\">投影 (Projections)</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/custom-implementations.html\">自定义仓储实现</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/core-domain-events.html\">从聚合根发布事件</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/null-handling.html\">仓储方法的空值处理</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../repositories/cdi-integration.html\">CDI 集成</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-keywords-reference.html\">仓储查询关键字参考</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../repositories/query-return-types-reference.html\">仓储查询返回类型参考</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Cloud\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-build/reference/\">\n  Spring Cloud Build\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-bus/reference/\">\n  Spring Cloud Bus\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-circuitbreaker/reference/\">\n  Spring Cloud Circuit Breaker\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-commons/reference/\">\n  Spring Cloud Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-config/reference/\">\n  Spring Cloud Config\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-consul/reference/\">\n  Spring Cloud Consul\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-contract/reference/\">\n  Spring Cloud Contract\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-function/reference/\">\n  Spring Cloud Function\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-gateway/reference/\">\n  Spring Cloud Gateway\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-kubernetes/reference/\">\n  Spring Cloud Kubernetes\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-netflix/reference/\">\n  Spring Cloud Netflix\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-openfeign/reference/\">\n  Spring Cloud OpenFeign\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-stream/reference/\">\n  Spring Cloud Stream\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-task/reference/\">\n  Spring Cloud Task\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-vault/reference/\">\n  Spring Cloud Vault\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-cloud-zookeeper/reference/\">\n  Spring Cloud Zookeeper\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../observability/observability.html\">Observability</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../observability/conventions.html\">Conventions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../observability/metrics.html\">Metrics</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../observability/spans.html\">Spans</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../kotlin.html\">Kotlin Support</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/requirements.html\">Requirements</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/null-safety.html\">Null Safety</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/extensions.html\">Extensions</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/coroutines.html\">Coroutines</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "translation": "<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../observability/observability.html\">可观测性</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../observability/conventions.html\">约定</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../observability/metrics.html\">指标</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../observability/spans.html\">跨度</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../kotlin.html\">Kotlin 支持</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/requirements.html\">要求</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/null-safety.html\">空值安全</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/extensions.html\">扩展</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../kotlin/coroutines.html\">协程</a>\n  </li>\n</ul>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link attachment link-external\" href=\"../../api/java/index.html\" target=\"_blank\">Javadoc</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"1\">\n    <a class=\"nav-link link-external\" href=\"https://github.com/spring-projects/spring-data-commons/wiki\" target=\"_blank\">Wiki</a>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>PropertyAccessor’s hold a mutable instance of the underlying object. This is, to enable mutations of otherwise immutable properties.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>By default, Spring Data uses field-access to read and write property values. As per visibility rules of <code>private</code> fields, <code>MethodHandles</code> are used to interact with fields.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>The class exposes a <code>withId(…)</code> method that’s used to set the identifier, e.g. when an instance is inserted into the datastore and an identifier has been generated. Calling <code>withId(…)</code> creates a new <code>Person</code> object. All subsequent mutations will take place in the new instance leaving the previous untouched.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>Using property-access allows direct method invocations without using <code>MethodHandles</code>.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>PropertyAccessor 持有底层对象的可变实例，以便能够修改原本不可变的属性。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>默认情况下，Spring Data 使用属性访问方式来读写属性值。根据 <code>private</code> 字段的可见性规则，使用 <code>MethodHandles</code> 与字段进行交互。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"3\"></i><b>3</b></td>\n<td>该类提供了一个 <code>withId(…)</code> 方法，用于设置标识符，例如当实例被插入数据存储且已生成标识符时。调用 <code>withId(…)</code> 会创建一个新的 <code>Person</code> 对象。随后的所有修改都将在新实例中进行，而不会改变之前的实例。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"4\"></i><b>4</b></td>\n<td>使用属性访问允许直接调用方法，而无需使用 <code>MethodHandles</code>。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n  Spring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\nSpring Data\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/cassandra/reference/\">\n  Spring Data Cassandra\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/commons/reference/\">\n  Spring Data Commons\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/couchbase/reference/\">\n  Spring Data Couchbase\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/elasticsearch/reference/\">\n  Spring Data Elasticsearch\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/jpa/reference/\">\n  Spring Data JPA\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/keyvalue/reference/\">\n  Spring Data KeyValue\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/ldap/reference/\">\n  Spring Data LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/mongodb/reference/\">\n  Spring Data MongoDB\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/neo4j/reference/\">\n  Spring Data Neo4j\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/redis/reference/\">\n  Spring Data Redis\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/relational/reference/\">\n  Spring Data JDBC &amp; R2DBC\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-data/rest/reference/\">\n  Spring Data REST\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../index.html\">Overview</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../commons/upgrade.html\">Upgrading Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../migration-guides.html\">Migration Guides</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guide/migration-guide-2.x-to-3.x.html\">Migration Guide from 2.x to 3.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guide/migration-guide-3.x-to-4.x.html\">Migration Guide from 3.x to 4.x</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guide/migration-guide-4.x-to-5.x.html\">Migration Guide from 4.x to 5.x</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "translation": "<button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../index.html\">概览</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"2\">\n    <a class=\"nav-link\" href=\"../../commons/upgrade.html\">升级 Spring Data</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"2\">\n    <button class=\"nav-item-toggle\"></button>\n    <a class=\"nav-link\" href=\"../../migration-guides.html\">迁移指南</a>\n<ul class=\"nav-list\">\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guide/migration-guide-2.x-to-3.x.html\">从 2.x 到 3.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guide/migration-guide-3.x-to-4.x.html\">从 3.x 到 4.x 的迁移指南</a>\n  </li>\n  <li class=\"nav-item\" data-depth=\"3\">\n    <a class=\"nav-link\" href=\"../../migration-guide/migration-guide-4.x-to-5.x.html\">从 4.x 到 5.x 的迁移指南</a>\n  </li>\n</ul>\n  </li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "translation": "<a class=\"anchor\"><i aria-hidden=\"true\" class=\"fa fa-angle-right\"></i></a>\n<a href=\"https://docs.spring.io/spring-security/reference/\">\n  Spring Security\n</a>\n<ul>\n    <li>\n<a href=\"https://docs.spring.io/spring-authorization-server/reference/\">\n  Spring Authorization Server\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-ldap/reference/\">\n  Spring LDAP\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-security-kerberos/reference/\">\n  Spring Security Kerberos\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-session/reference/\">\n  Spring Session\n</a>\n</li>\n    <li>\n<a href=\"https://docs.spring.io/spring-vault/reference/\">\n  Spring Vault\n</a>\n</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>A simple value class with a non-nullable value type.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Data class defining a property using the <code>EmailAddress</code> value class.</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>一个具有非空值类型的简单值类。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>使用 <code>EmailAddress</code> 值类定义属性的数据类。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>The mapping base package defines the root path used to scan for entities used to pre initialize the <code>MappingContext</code>.\nBy default the configuration classes package is used.</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>Configure additional custom converters for specific domain types that replace the default mapping procedure for those types with your custom implementation.</td>\n</tr>\n</tbody>",
+      "translation": "<tr>\n<td><i class=\"conum\" data-value=\"1\"></i><b>1</b></td>\n<td>映射基础包定义了用于扫描实体以预初始化<code>MappingContext</code>的根路径。默认情况下，使用配置类所在的包。</td>\n</tr>\n<tr>\n<td><i class=\"conum\" data-value=\"2\"></i><b>2</b></td>\n<td>为特定领域类型配置额外的自定义转换器，用您的自定义实现替换这些类型的默认映射过程。</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\nThe <code>@Id</code> annotation tells the mapper which property you want to use for the MongoDB <code>_id</code> property, and the <code>@Indexed</code> annotation tells the mapping framework to call <code>createIndex(…)</code> on that property of your document, making searches faster.\nAutomatic index creation is only done for types annotated with <code>@Document</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<table><tr>\n<td class=\"icon\">\n<i class=\"fa icon-important\" title=\"Important\"></i>\n</td>\n<td class=\"content\">\n<code>@Id</code> 注解告诉 Mapper 您希望使用哪个属性作为 MongoDB 的 <code>_id</code> 属性，而 <code>@Indexed</code> 注解则指示映射框架在该文档的属性上调用 <code>createIndex(…)</code>，从而加快搜索速度。\n仅对带有 <code>@Document</code> 注解的类型执行自动索引创建。\n</td>\n</tr>\n</table>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>AbstractMongoClientConfiguration</code> creates a <code>MongoTemplate</code> instance and registers it with the container under the name <code>mongoTemplate</code>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n<code>AbstractMongoClientConfiguration</code> 会创建一个 <code>MongoTemplate</code> 实例，并将其注册到容器中，名称为 <code>mongoTemplate</code>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nThe SpEL expression in the <code>@Value</code> annotation of the <code>quantity</code> parameter falls back to the value <code>0</code> if the given property path cannot be resolved.\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n如果无法解析 <code>@Value</code> 注解中 <code>quantity</code> 参数的 SpEL 表达式指定的属性路径，则该表达式将回退到值 <code>0</code>。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nDelegated properties are not supported with Spring Data. The mapping metadata filters delegated properties for Kotlin Data classes.\nIn all other cases you can exclude synthetic fields for delegated properties by annotating the property with <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1/api/java/org/springframework/data/annotation/Transient.html\"><code>@Transient</code></a>.\n</td>\n</tr>\n</tbody>",
+      "translation": "<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nSpring Data 不支持委派属性。对于 Kotlin 数据类，映射元数据会过滤掉委派属性。\n在其他所有情况下，您可以通过使用 <a href=\"https://docs.spring.io/spring-data/commons/reference/4.1/api/java/org/springframework/data/annotation/Transient.html\"><code>@Transient</code></a> 注解标记该属性来排除委派属性的合成字段。\n</td>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\nAuto index creation is <strong>disabled</strong> by default and needs to be enabled through the configuration (see <a href=\"#mapping.index-creation\">Index Creation</a>).\n</td>\n</tr>\n</tbody>",
+      "translation": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-warning\" title=\"Warning\"></i>\n</td>\n<td class=\"content\">\n自动创建索引默认处于<strong>禁用</strong>状态，需要通过配置启用（参见 <a href=\"#mapping.index-creation\">索引创建</a>）。\n</td>\n</tr>\n</tbody>",
+      "count": 1
+    },
+    {
+      "source": "<tbody><tr>\n<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\nNon-nullable properties using non-primitive value types are flattened in the compiled class to the value type.\nNullable primitive value types or nullable value-in-value types are represented with their wrapper type and that affects how value types are represented in the database.\n</td>\n</tr>\n</tbody>",
+      "translation": "<td class=\"icon\">\n<i class=\"fa icon-note\" title=\"Note\"></i>\n</td>\n<td class=\"content\">\n使用非原始值类型的不可空属性在编译后的类中会被扁平化为值类型。\n可空原始值类型或可空的值 - 值类型将以其包装类型表示，这会影响值类型在数据库中的表示方式。\n</td>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">Type</th>\n<th class=\"tableblock halign-left valign-top\">Type conversion</th>\n<th class=\"tableblock halign-left valign-top\">Sample</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">类型</th>\n<th class=\"tableblock halign-left valign-top\">类型转换</th>\n<th class=\"tableblock halign-left valign-top\">示例</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<tr>\n<th class=\"tableblock halign-left valign-top\">Field definition</th>\n<th class=\"tableblock halign-left valign-top\">Resulting Id-Fieldname in MongoDB</th>\n</tr>",
+      "translation": "<tr>\n<th class=\"tableblock halign-left valign-top\">字段定义</th>\n<th class=\"tableblock halign-left valign-top\">MongoDB 中的结果 ID-字段名</th>\n</tr>",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.conventions.id-field\"></a>How the <code>_id</code> field is handled in the mapping layer.",
+      "translation": "<a class=\"anchor\" href=\"#mapping.conventions.id-field\"></a>映射层中如何处理 <code>_id</code> 字段。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.fundamentals\"></a>Object Mapping Fundamentals",
+      "translation": "<a class=\"anchor\" href=\"#mapping.fundamentals\"></a>对象映射基础",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.object-creation\"></a>Object creation",
+      "translation": "<a class=\"anchor\" href=\"#mapping.object-creation\"></a>对象创建",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.property-population\"></a>Property population",
+      "translation": "<a class=\"anchor\" href=\"#mapping.property-population\"></a>属性人口",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.general-recommendations\"></a>General recommendations",
+      "translation": "<a class=\"anchor\" href=\"#mapping.general-recommendations\"></a>一般建议",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.general-recommendations.override.properties\"></a>Overriding Properties",
+      "translation": "<a class=\"anchor\" href=\"#mapping.general-recommendations.override.properties\"></a>覆盖属性",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin\"></a>Kotlin support",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin\"></a>Kotlin 支持",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin.creation\"></a>Kotlin object creation",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin.creation\"></a>Kotlin 对象创建",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#property-population-of-kotlin-data-classes\"></a>Property population of Kotlin data classes",
+      "translation": "<a class=\"anchor\" href=\"#property-population-of-kotlin-data-classes\"></a>Kotlin 数据类的属性填充",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin.override.properties\"></a>Kotlin Overriding Properties",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin.override.properties\"></a>Kotlin 属性重写",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping.kotlin.value.classes\"></a>Kotlin Value Classes",
+      "translation": "<a class=\"anchor\" href=\"#mapping.kotlin.value.classes\"></a>Kotlin 值类",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping-conventions\"></a>Convention-based Mapping",
+      "translation": "<a class=\"anchor\" href=\"#mapping-conventions\"></a>基于约定的映射",
+      "count": 1
+    },
+    {
+      "source": "Table 1. Examples for the translation of <code>_id</code> field definitions",
+      "translation": "表 1. `<code>_id`</code>字段定义的翻译示例",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping-conversion\"></a>Data Mapping and Type Conversion",
+      "translation": "<a class=\"anchor\" href=\"#mapping-conversion\"></a>数据映射与类型转换",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping-configuration\"></a>Mapping Configuration",
+      "translation": "<a class=\"anchor\" href=\"#mapping-configuration\"></a>映射配置",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping-usage\"></a>Metadata-based Mapping",
+      "translation": "<a class=\"anchor\" href=\"#mapping-usage\"></a>基于元数据的映射",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping-usage-annotations\"></a>Mapping Annotation Overview",
+      "translation": "<a class=\"anchor\" href=\"#mapping-usage-annotations\"></a>映射注解概述",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#_special_field_names\"></a>Special Field Names",
+      "translation": "<a class=\"anchor\" href=\"#_special_field_names\"></a>特殊字段名称",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping-custom-object-construction\"></a>Customized Object Construction",
+      "translation": "<a class=\"anchor\" href=\"#mapping-custom-object-construction\"></a>自定义对象构建",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"anchor\" href=\"#mapping-usage-events\"></a>Mapping Framework Events",
+      "translation": "<a class=\"anchor\" href=\"#mapping-usage-events\"></a>映射框架事件",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-boot/\">\n  Spring Boot\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring Framework\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-framework/reference/\">\n  Spring 框架\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-integration/reference/\">\n  Spring Integration\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-batch/reference/\">\n  Spring Batch\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-ai/reference/\">\n  Spring AI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-amqp/reference/\">\n  Spring AMQP\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-cli/reference/\">\n  Spring CLI\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-graphql/reference/\">\n  Spring GraphQL\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-kafka/reference/\">\n  Spring for Apache Kafka\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-modulith/reference/\">\n  Spring Modulith\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-pulsar/reference/\">\n  Spring for Apache Pulsar\n</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "translation": "<a href=\"https://docs.spring.io/spring-shell/reference/\">\n  Spring Shell\n</a>",
+      "count": 1
+    },
+    {
+      "source": "Why Spring",
+      "translation": "为何是春天",
+      "count": 1
+    },
+    {
+      "source": "Spring Data MongoDB",
+      "translation": "Spring Data MongoDB",
+      "count": 1
+    },
+    {
+      "source": "MongoDB Support",
+      "translation": "MongoDB 支持",
+      "count": 1
+    },
+    {
+      "source": "Object Mapping",
+      "translation": "对象映射",
+      "count": 1
+    },
+    {
+      "source": "Built in Type conversions:",
+      "translation": "内置类型转换：",
+      "count": 1
+    },
+    {
+      "source": "Table 2. Type",
+      "translation": "表 2。类型",
+      "count": 1
+    },
+    {
+      "source": "Here is an example of a more complex mapping",
+      "translation": "这是一个更复杂映射的示例。",
+      "count": 1
+    },
+    {
+      "source": "All Docs...",
+      "translation": "所有文档...",
+      "count": 1
+    },
+    {
+      "source": "Related Spring Documentation",
+      "translation": "相关 Spring 文档",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "created_at": "2026-06-16 15:37:19",
+  "updated_at": "2026-06-16 15:37:19",
+  "stats": {
+    "total_entries": 53,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 65,
+    "entries_with_hits": 53,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2264150943396226,
+    "usage_percentage": 0.0053
+  },
+  "items": [
+    {
+      "source": "Executes the provided query.",
+      "translation": "执行提供的查询。",
+      "count": 4
+    },
+    {
+      "source": "This is a convenience method for <code>execute(new SimpleStatement(query, values))</code>.",
+      "translation": "这是一个用于 `execute(new SimpleStatement(query, values))` 的便捷方法。",
+      "count": 2
+    },
+    {
+      "source": "Initiates a shutdown of this session instance and blocks until that shutdown completes.",
+      "translation": "启动此会话实例的关闭，并阻塞直到该关闭操作完成。",
+      "count": 2
+    },
+    {
+      "source": "Executes the provided query using the provided values.",
+      "translation": "使用提供的值执行提供的查询。",
+      "count": 2
+    },
+    {
+      "source": "Executes the provided query using the provided named values.",
+      "translation": "使用提供的命名值执行所提供的查询。",
+      "count": 2
+    },
+    {
+      "source": "Returns a context that provides access to all the policies used by this driver instance.",
+      "translation": "返回一个上下文，该上下文提供对此驱动程序实例所使用的所有策略的访问权限。",
+      "count": 2
+    },
+    {
+      "source": "Returns a snapshot of the Cassandra cluster's topology and schema metadata.",
+      "translation": "返回 Cassandra 集群拓扑结构和模式元数据的快照。",
+      "count": 2
+    },
+    {
+      "source": "Whether this Session instance has been closed.",
+      "translation": "此 Session 实例是否已关闭。",
+      "count": 2
+    },
+    {
+      "source": "Prepares the provided query.",
+      "translation": "准备提供的查询。",
+      "count": 2
+    },
+    {
+      "source": "Prepares the provided query string.",
+      "translation": "准备提供的查询字符串。",
+      "count": 2
+    },
+    {
+      "source": "This method behaves like <a href=\"#prepare(java.lang.String)\"><code>prepare(String)</code></a>, but note that the resulting <code>PreparedStatement</code> will\ninherit the query properties set on <code>statement</code>. Concretely, this means that in the following code:",
+      "translation": "此方法的行为类似于<a href=\"#prepare(java.lang.String)\"><code>prepare(String)</code></a>，但请注意，由此生成的<code>PreparedStatement</code>将继承在<code>statement</code>上设置的查询属性。具体而言，在以下代码中：",
+      "count": 1
+    },
+    {
+      "source": "There are two ways that this can be set: before initializing the session (either with the <code>session-keyspace</code>\noption in the configuration, or with <code>SessionBuilder.withKeyspace(CqlIdentifier)</code>); or at runtime, if the\nclient issues a request that changes the keyspace (such as a CQL <code>USE</code> query). Note that this second method\nis inherently unsafe, since other requests expecting the old keyspace might be executing concurrently. Therefore it\nis highly discouraged, aside from trivial cases (such as a cqlsh-style program where requests are never\nconcurrent).",
+      "translation": "有两种方式可以设置此选项：在初始化会话之前（通过配置中的 <code>session-keyspace</code> 选项，或使用 <code>SessionBuilder.withKeyspace(CqlIdentifier)</code>）；或者在运行时，如果客户端发出更改键空间的请求（例如 CQL <code>USE</code> 查询）。请注意，第二种方法本质上是不安全的，因为其他期望旧键空间的请求可能正在并发执行。因此，除了微不足道的情况（例如类似 cqlsh 的程序，其中请求永远不会并发）外，强烈不建议使用这种方法。",
+      "count": 1
+    },
+    {
+      "source": "In order to provide atomic updates, this method returns an immutable object: the node list, token map, and schema\ncontained in a given instance will always be consistent with each other (but note that <code>Node</code> itself is not\nimmutable: some of its properties will be updated dynamically, in particular <code>Node.getState()</code>).",
+      "translation": "为了提供原子更新，此方法返回一个不可变对象：给定实例中包含的节点列表、令牌映射和模式将始终彼此一致（但请注意，<code>Node</code> 本身并非不可变：其某些属性将动态更新，特别是 <code>Node.getState()</code>）。",
+      "count": 1
+    },
+    {
+      "source": "Note that this method returns true as soon as the closing of this Session has started but it does not guarantee\nthat the closing is done. If you want to guarantee that the closing is done, you can call <code>close()</code> and wait\nuntil it returns (or call the get method on <code>closeAsync()</code> with a very short timeout and check this doesn't\ntimeout).",
+      "translation": "请注意，此方法在会话关闭开始时即返回 true，但并不保证关闭操作已完成。如果您希望确保关闭操作确实完成，可以调用<code>close()</code>并等待其返回（或调用<code>closeAsync()</code>的 get 方法并设置一个极短的超时时间，然后检查是否发生超时）。",
+      "count": 1
+    },
+    {
+      "source": "Please note that if the same CQL statement is prepared more than once, all calls to this method will return the\nsame <code>PreparedStatement</code> object but the method will still apply the properties of the prepared\n<code>Statement</code> to this object.",
+      "translation": "请注意，如果同一个 CQL 语句被多次准备，对该方法的所有调用都将返回相同的 <code>PreparedStatement</code> 对象，但该方法仍会将已准备的 <code>Statement</code> 的属性应用到该对象上。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "As a consequence of the above, you should call this method each time you need a fresh view of the metadata. <b>Do\nnot</b> call it once and store the result, because it is a frozen snapshot that will become stale over time.",
+      "translation": "因此，每次需要获取元数据的最新视图时，都应调用此方法。<b>切勿</b>仅调用一次并存储结果，因为它是一个冻结的快照，随着时间的推移会变得过时。",
+      "count": 1
+    },
+    {
+      "source": "This is a convenience method for <code>execute(new SimpleStatement(query))</code>.",
+      "translation": "这是一个用于 `execute(new SimpleStatement(query))` 的便捷方法。",
+      "count": 1
+    },
+    {
+      "source": "Each session maintains multiple connections to the cluster nodes, provides policies to choose which node to use for\neach query (round-robin on all nodes of the cluster by default), and handles retries for failed queries (when it\nmakes sense).",
+      "translation": "每个会话都会与集群节点保持多个连接，提供策略以决定每个查询使用哪个节点（默认情况下在集群的所有节点之间轮询），并在适当的情况下处理失败查询的重试。",
+      "count": 1
+    },
+    {
+      "source": "Session instances are thread-safe and usually a single instance is enough per application. As a given session can\nonly be \"logged\" into one keyspace at a time (where the \"logged\" keyspace is the one used by queries that don't\nexplicitly use a fully qualified table name), it can make sense to create one session per keyspace used. This is\nhowever not necessary when querying multiple keyspaces since it is always possible to use a single session with fully\nqualified table names in queries.",
+      "translation": "会话实例是线程安全的，通常每个应用程序只需一个实例即可。由于给定会话一次只能“登录”到一个 keyspace（其中“已登录”的 keyspace 是指那些未显式使用完全限定表名的查询所使用的 keyspace），因此为每个使用的 keyspace 创建一个会话可能是合理的。然而，当查询多个 keyspace 时，这并非必要，因为始终可以在查询中使用完全限定表名来使用单个会话。",
+      "count": 1
+    },
+    {
+      "source": "If a metadata refresh triggers events (such as node added/removed, or schema events), then the new version of the\nmetadata is guaranteed to be visible by the time you receive these events.",
+      "translation": "如果元数据刷新触发了事件（例如节点添加/删除或模式变更事件），则当您收到这些事件时，新版本的元数据保证已可见。",
+      "count": 1
+    },
+    {
+      "source": "This method blocks until at least some result has been received from the database. However, for SELECT queries, it\ndoes not guarantee that the result has been received in full. But it does guarantee that some response has been\nreceived from the database, and in particular guarantees that if the request is invalid, an exception will be\nthrown by this method.",
+      "translation": "该方法会阻塞，直到从数据库收到至少部分结果。然而，对于 SELECT 查询，它并不保证已完整接收所有结果。但它确实保证已从数据库收到某种响应，特别是如果请求无效，此方法将抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\">Mono</a>&lt;com.datastax.oss.driver.api.core.cql.PreparedStatement&gt;</span> <span class=\"element-name\">prepare</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.SimpleStatement statement)</span>",
+      "translation": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"类或接口 reactor.core.publisher\">Mono</a>&lt;com.datastax.oss.driver.api.core.cql.PreparedStatement&gt;</span> <span class=\"element-name\">prepare</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.SimpleStatement statement)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ReactiveSession</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a></span>",
+      "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ReactiveSession</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a></span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
+      "count": 1
+    },
+    {
+      "source": "The keyspace that this session is currently connected to, or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if this session is not\nconnected to any keyspace.",
+      "translation": "当前会话连接到的键空间，或者如果该会话未连接到任何键空间，则为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface ReactiveSession\">Interface ReactiveSession</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 ReactiveSession\">接口 ReactiveSession</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getMetadata()\" tabindex=\"0\">getMetadata()</a></li>\n<li><a href=\"#getKeyspace()\" tabindex=\"0\">getKeyspace()</a></li>\n<li><a href=\"#isClosed()\" tabindex=\"0\">isClosed()</a></li>\n<li><a href=\"#getContext()\" tabindex=\"0\">getContext()</a></li>\n<li><a href=\"#execute(java.lang.String)\" tabindex=\"0\">execute(String)</a></li>\n<li><a href=\"#execute(java.lang.String,java.lang.Object...)\" tabindex=\"0\">execute(String, Object...)</a></li>\n<li><a href=\"#execute(java.lang.String,java.util.Map)\" tabindex=\"0\">execute(String, Map)</a></li>\n<li><a href=\"#execute(com.datastax.oss.driver.api.core.cql.Statement)\" tabindex=\"0\">execute(Statement)</a></li>\n<li><a href=\"#prepare(java.lang.String)\" tabindex=\"0\">prepare(String)</a></li>\n<li><a href=\"#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\" tabindex=\"0\">prepare(SimpleStatement)</a></li>\n<li><a href=\"#close()\" tabindex=\"0\">close()</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getMetadata()\" tabindex=\"0\">getMetadata()</a></li>\n<li><a href=\"#getKeyspace()\" tabindex=\"0\">getKeyspace()</a></li>\n<li><a href=\"#isClosed()\" tabindex=\"0\">isClosed()</a></li>\n<li><a href=\"#getContext()\" tabindex=\"0\">getContext()</a></li>\n<li><a href=\"#execute(java.lang.String)\" tabindex=\"0\">execute(String)</a></li>\n<li><a href=\"#execute(java.lang.String,java.lang.Object...)\" tabindex=\"0\">execute(String, Object...)</a></li>\n<li><a href=\"#execute(java.lang.String,java.util.Map)\" tabindex=\"0\">execute(String, Map)</a></li>\n<li><a href=\"#execute(com.datastax.oss.driver.api.core.cql.Statement)\" tabindex=\"0\">execute(Statement)</a></li>\n<li><a href=\"#prepare(java.lang.String)\" tabindex=\"0\">prepare(String)</a></li>\n<li><a href=\"#prepare(com.datastax.oss.driver.api.core.cql.SimpleStatement)\" tabindex=\"0\">prepare(SimpleStatement)</a></li>\n<li><a href=\"#close()\" tabindex=\"0\">close()</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>2.0</dd>\n<dt>Author:</dt>\n<dd>Mark Paluch</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\"><code>Publisher</code></a></li>\n<li><a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a></li>\n<li><a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>版本:</dt>\n<dd>2.0</dd>\n<dt>作者:</dt>\n<dd>Mark Paluch</dd>\n<dt>参见:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html\" title=\"org.reactivestreams 中的类或接口\"><code>Publisher</code></a></li>\n<li><a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"reactor.core.publisher 中的类或接口\"><code>Mono</code></a></li>\n<li><a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>statement</code> - the statement to prepare</dd>\n<dt>Returns:</dt>\n<dd>the prepared statement corresponding to <code>statement</code>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <code>statement.getValues() != null</code> (values for executing a prepared\n          statement should be provided after preparation though the <code>PreparedStatement.bind(Object...)</code> method or\n          through a corresponding <code>BoundStatement</code>).</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>statement</code> - 要准备的语句</dd>\n<dt>返回：</dt>\n<dd>与 <code>statement</code> 对应的已准备语句。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <code>statement.getValues() != null</code>（执行已准备语句的值应在准备之后通过 <code>PreparedStatement.bind(Object...)</code> 方法或通过相应的 <code>BoundStatement</code> 提供）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code></dd>\n<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"class or interface in java.io\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a></code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"java.lang 中的类或接口\">close</a></code>，位于接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"java.lang 中的类或接口\">AutoCloseable</a></code></dd>\n<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html#close()\" title=\"java.io 中的类或接口\">close</a></code>，位于接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"java.io 中的类或接口\">Closeable</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>query</code> - the CQL query to execute.</dd>\n<dd><code>values</code> - values required for the execution of <code>query</code>. See\n         <code>SimpleStatement.newInstance(String, Object...)</code> for more details.</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>query</code> - 要执行的 CQL 查询。</dd>\n<dd><code>values</code> - 执行 <code>query</code> 所需的值。有关更多详细信息，请参阅 <code>SimpleStatement.newInstance(String, Object...)</code>。</dd>\n<dt>返回：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均为空）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>query</code> - the CQL query to execute.</dd>\n<dd><code>values</code> - values required for the execution of <code>query</code>. See\n         <code>SimpleStatement.newInstance(String, Map)</code> for more details.</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>query</code> - 要执行的 CQL 查询。</dd>\n<dd><code>values</code> - 执行 <code>query</code> 所需的值。有关更多详细信息，请参阅 <code>SimpleStatement.newInstance(String, Map)</code>。</dd>\n<dt>返回：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均会如此）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>statement</code> - the CQL query to execute (that can be any <code>Statement</code>).</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>statement</code> - 要执行的 CQL 查询（可以是任何 <code>Statement</code>）。</dd>\n<dt>返回值：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均如此）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>query</code> - the CQL query string to prepare</dd>\n<dt>Returns:</dt>\n<dd>the prepared statement corresponding to <code>query</code>.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>query</code> - 要准备的 CQL 查询字符串</dd>\n<dt>返回值：</dt>\n<dd>与 <code>query</code> 对应的已准备语句。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Superinterfaces:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"class or interface in java.io\">Closeable</a></code></dd>",
+      "translation": "<dt>所有超级接口：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"java.lang 中的类或接口\">AutoCloseable</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Closeable.html\" title=\"java.io 中的类或接口\">Closeable</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Known Implementing Classes:</dt>\n<dd><code><a href=\"core/cql/session/DefaultBridgedReactiveSession.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\">DefaultBridgedReactiveSession</a>, <a href=\"observability/ObservableReactiveSession.html\" title=\"class in org.springframework.data.cassandra.observability\">ObservableReactiveSession</a></code></dd>",
+      "translation": "<dt>所有已知实现类：</dt>\n<dd><code><a href=\"core/cql/session/DefaultBridgedReactiveSession.html\" title=\"org.springframework.data.cassandra.core.cql.session 中的类\">DefaultBridgedReactiveSession</a>, <a href=\"observability/ObservableReactiveSession.html\" title=\"org.springframework.data.cassandra.observability 中的类\">ObservableReactiveSession</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>never <code>null</code>, but may be empty if metadata has been disabled in the configuration.</dd>\n<dt>Since:</dt>\n<dd>3.2.2</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>永远不会为 <code>null</code>，但如果配置中禁用了元数据，则可能为空。</dd>\n<dt>版本：</dt>\n<dd>3.2.2</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>query</code> - the CQL query to execute.</dd>\n<dt>Returns:</dt>\n<dd>the result of the query. That result will never be null but can be empty (and will be for any non SELECT\n        query).</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>query</code> - 要执行的 CQL 查询。</dd>\n<dt>返回：</dt>\n<dd>查询的结果。该结果永远不会为 null，但可能为空（对于任何非 SELECT 查询均会如此）。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd><code>true</code> if this Session instance has been closed, <code>false</code> otherwise.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>如果此 Session 实例已关闭，则返回 <code>true</code>；否则返回 <code>false</code>。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>a context that provides access to all the policies used by this driver instance.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>一个上下文，用于访问此驱动程序实例使用的所有策略。</dd>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "A session holds connections to a Cassandra cluster, allowing it to be queried.",
+      "translation": "会话与 Cassandra 集群建立连接，使其能够被查询。",
+      "count": 1
+    },
+    {
+      "source": "executes\nqueries and prepares statements in a reactive style returning results wrapped in",
+      "translation": "以响应式风格执行查询并准备语句，返回封装在...中的结果。",
+      "count": 1
+    },
+    {
+      "source": "The keyspace that this session is currently connected to, or",
+      "translation": "当前会话连接到的密钥空间，或",
+      "count": 1
+    },
+    {
+      "source": "if this session is not\nconnected to any keyspace.",
+      "translation": "如果此会话未连接到任何键空间。",
+      "count": 1
+    },
+    {
+      "source": "the final execution will be performed with Quorum consistency.",
+      "translation": "最终执行将采用一致性级别为Quorum。",
+      "count": 1
+    }
+  ]
+}

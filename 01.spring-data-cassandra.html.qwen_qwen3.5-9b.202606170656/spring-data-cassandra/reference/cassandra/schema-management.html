@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>架构管理 :: Spring Data Cassandra</title>
+    <link href="https://docs.spring.io/spring-data-cassandra/reference/cassandra/schema-management.html" rel="canonical"/>
+    <meta content="Antora 3.2.0-alpha.6" name="generator"/>
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link href="../_/css/site.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/page-search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/asciidoctor-tabs.css" rel="stylesheet"/>
+
+    <meta content="v0.4.16" name="antora-ui-version"/> 
+    <meta content="5.1.0" name="version"/>
+    <meta content="data-cassandra" name="component"/>
+    <meta content="false" name="latest-version"/>
+    <link href="../_/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img alt="Spring" class="block" id="springlogo" src="../_/img/spring-logo.svg"/>
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-menu" id="topbar-nav">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">为何是春天</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.io/why-spring">概览</a>
+<a class="navbar-item" href="https://spring.io/microservices">微服务</a>
+<a class="navbar-item" href="https://spring.io/reactive">响应式</a>
+<a class="navbar-item" href="https://spring.io/event-driven">事件驱动</a>
+<a class="navbar-item" href="https://spring.io/cloud">云</a>
+<a class="navbar-item" href="https://spring.io/web-applications">Web 应用</a>
+<a class="navbar-item" href="https://spring.io/serverless">无服务器</a>
+<a class="navbar-item" href="https://spring.io/batch">批处理</a></div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px"><a class="navbar-item" href="https://spring.io/projects">概览</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+<a class="navbar-item navbar-item-special" href="https://spring.io/projects">查看所有项目</a>
+<li class="navbar-item navbar-item-special-3">开发工具</li>
+<a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+<a class="navbar-item navbar-item-special-2" href="https://start.spring.io">Spring Initializr
+              <svg class="external-link-icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="15 10.94 15 15 1 15 1 1 5.06 1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><polyline fill="none" points="8.93 1 15 1 15 7.07" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><line fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" x1="15" x2="8" y1="1" y2="8"></line></svg></a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.academy/courses">课程</a>
+<a class="navbar-item" href="https://spring.academy/learning-path">获取认证</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg"><a class="navbar-item" href="https://spring.io/solutions">概览</a>
+<a class="navbar-item" href="https://spring.io/support">Spring 运行时</a>
+<a class="navbar-item" href="https://spring.io/consulting">Spring 咨询</a>
+<a class="navbar-item" href="https://spring.academy/teams">Spring 团队学院</a>
+<a class="navbar-item" href="https://spring.io/security">安全公告</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input id="switch-theme-checkbox" name="switch-theme-checkbox" type="checkbox"/>
+      <span class="icon"><svg aria-hidden="true" class="svg-inline--fa fa-moon moon" data-icon="moon" data-prefix="fas" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" fill="currentColor"></path>
+</svg>
+        <svg aria-hidden="true" class="svg-inline--fa fa-sun sun" data-icon="sun" data-prefix="fas" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" fill="currentColor"></path>
+</svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-cassandra" data-version="5.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Cassandra</span>
+  <span class="version">5.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg height="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="24px" xml:space="preserve"><g><path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"></path><path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"></path><path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewbox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+</svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../index.html">概览</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../commons/upgrade.html">升级 Spring Data</a>
+</li>
+<li class="nav-item" data-depth="2">
+<button class="nav-item-toggle"></button>
+<a class="nav-link" href="../migration-guides.html">迁移指南</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guide/migration-guide-1.5-to-2.0.html">从 1.x 到 2.x 的迁移指南</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guide/migration-guide-2.2-to-3.0.html">从 2.x 到 3.x 的迁移指南</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guide/migration-guide-3.0-to-4.0.html">从 3.x 到 4.x 的迁移指南</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guide/migration-guide-4.0-to-4.3.html">从 4.x 到 4.3 的迁移指南</a>
+</li>
+</ul>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../cassandra.html">Cassandra 支持</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="getting-started.html">入门指南</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="configuration.html">使用 Spring 连接 Cassandra</a>
+</li>
+<li class="nav-item is-current-page" data-depth="2">
+<a class="nav-link" href="schema-management.html">模式管理</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="cql-template.html">CQL 模板 API</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="reactive-cassandra.html">响应式基础设施</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="template.html">持久化实体</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="prepared-statements.html">预编译语句</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../object-mapping.html">对象映射</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../property-paths.html">属性路径</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="converters.html">基于类型的转换器</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="property-converters.html">基于属性的转换器</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="events.html">生命周期事件</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="auditing.html">Cassandra 审计配置</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="value-expressions.html">值表达式基础</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../repositories.html">仓储</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-concepts.html">核心概念</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/definition.html">定义仓储接口</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/repositories.html">Cassandra 仓储</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/create-instances.html">创建仓储实例</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-methods-details.html">定义查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/query-methods.html">Cassandra 专用查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/vector-search.html">向量搜索</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/projections.html">投影</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/custom-implementations.html">自定义仓储实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-domain-events.html">从聚合根发布事件</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/null-handling.html">仓储方法的空值处理</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/cdi-integration.html">CDI 集成</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-keywords-reference.html">仓储查询关键字</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-return-types-reference.html">仓储查询返回类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="repositories/aot.html">提前优化</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../observability.html">Observability</a>
+  </li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../kotlin.html">Kotlin 支持</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/requirements.html">需求</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/null-safety.html">空安全</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/object-mapping.html">对象映射</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/extensions.html">扩展函数</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../kotlin/coroutines.html">协程</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external" href="../api/java/index.html" target="_blank">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external" href="https://github.com/spring-projects/spring-data-commons/wiki" target="_blank">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button class="nav-toggle" id="nav-toggle-2"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle" id="nav-toggle-1"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg id="svg-stash-de15fb15"></svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="toc" data-levels="2" data-title="Schema Management">
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links"><a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-cassandra/src/main/antora/modules/ROOT/pages/cassandra/schema-management.adoc">
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          编辑此页面
+        </a>
+<a href="https://github.com/spring-projects/spring-data-cassandra" title="GitHub">
+<svg height="512px" id="Layer_1" version="1.1" viewbox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg"><style type="text/css">
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} </style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          GitHub 项目
+        </a></div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container"><nav aria-label="面包屑" class="breadcrumbs">
+<ul>
+<li><a href="../index.html">Spring Data Cassandra</a></li>
+<li><a href="../cassandra.html">Cassandra 支持</a></li>
+<li><a href="schema-management.html">模式管理</a></li>
+</ul>
+</nav></div><h1 class="page" id="page-title">架构管理</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Apache Cassandra 是一个需要在任何数据交互之前定义模式的存储系统。  
+Spring Data for Apache Cassandra 可以协助您创建模式。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cql-specifications"><a class="anchor" href="#cql-specifications"></a>CQL 规范</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>CQL 规范是一种抽象表示，用于描述 CQL DDL 操作，例如创建表或删除键空间。  
+以下 CQL 对象类型提供相应的规范：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Keyspace</p>
+</li>
+<li>
+<p>Table</p>
+</li>
+<li>
+<p>Index</p>
+</li>
+<li>
+<p>用户定义类型</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Cassandra 的变体可以支持物化视图、用户定义函数、角色以及更多对象类型。
+Spring Data for Apache Cassandra 仅提供上述类型的规范。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>这些可以通过流式接口用于创建、修改和删除 CQL 对象。<code>SpecificationBuilder</code> 是构建此类规范类的入口点。  
+您可以在稍后使用 <code>CqlGenerator.toCql(…)</code> 轻松从规范类生成 CQL。</p>
+</div>
+<div class="paragraph">
+<p>请参照以下示例，创建键空间（keyspace）、表（table）和索引（index）的创建规范。</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 1：指定 Cassandra 键空间</div>
+<div class="content">
+<div class="listingblock">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-source hljs" data-lang="source">CqlSpecification createKeyspace = SpecificationBuilder.createKeyspace("my_keyspace")
+		.with(KeyspaceOption.REPLICATION, KeyspaceAttributes.newSimpleReplication())
+		.with(KeyspaceOption.DURABLE_WRITES, true);
+
+// results in CREATE KEYSPACE my_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'} AND durable_writes = true
+String cql = CqlGenerator.toCql(createKeyspace);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">示例 2：指定 Cassandra 表</div>
+<div class="content">
+<div class="listingblock">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-source hljs" data-lang="source">CreateTableSpecification createTable = CreateTableSpecification.createTable("my_table")
+		.partitionKeyColumn("last_name", DataTypes.TEXT)
+		.partitionKeyColumn("first_name", DataTypes.TEXT)
+		.column("age", DataTypes.INT);
+
+// results in CREATE TABLE my_table (last_name text, first_name text, age int, PRIMARY KEY(last_name, first_name))
+String cql = CqlGenerator.toCql(createTable);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">示例 3：指定 Cassandra 索引</div>
+<div class="content">
+<div class="listingblock">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-source hljs" data-lang="source">CreateIndexSpecification spec = SpecificationBuilder.createIndex()
+		.tableName("mytable").keys().columnName("column");
+
+// results in CREATE INDEX ON mytable (KEYS(column))
+String cql = CqlGenerator.toCql(createTable);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>您可以结合规范与配置 API 来定义键空间创建和模式操作。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="keyspaces-and-lifecycle-scripts"><a class="anchor" href="#keyspaces-and-lifecycle-scripts"></a>命名空间与生命周期脚本</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>首先，需要创建一个 Cassandra 键空间（keyspace）。  
+键空间是共享相同复制因子和复制策略的表的逻辑分组。  
+键空间管理位于 `<code>CqlSession</code>` 配置中，包含 `<code>KeyspaceSpecification</code>` 以及启动和关闭 CQL 脚本的执行功能。</p>
+</div>
+<div class="paragraph">
+<p>声明带有规格说明的键空间，可以创建和删除该键空间。  
+它从规格说明中派生 CQL，因此您无需手动编写 CQL。  
+以下示例使用 XML 指定一个 Cassandra 键空间：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 4：指定 Cassandra 键空间</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class CreateKeyspaceConfiguration extends AbstractCassandraConfiguration implements BeanClassLoaderAware {
+
+	@Override
+	protected List&lt;CreateKeyspaceSpecification&gt; getKeyspaceCreations() {
+
+		CreateKeyspaceSpecification specification = SpecificationBuilder.createKeyspace("my_keyspace")
+				.with(KeyspaceOption.DURABLE_WRITES, true)
+				.withNetworkReplication(DataCenterReplication.of("foo", 1), DataCenterReplication.of("bar", 2));
+
+		return Arrays.asList(specification);
+	}
+
+	@Override
+	protected List&lt;DropKeyspaceSpecification&gt; getKeyspaceDrops() {
+		return Arrays.asList(DropKeyspaceSpecification.dropKeyspace("my_keyspace"));
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:cassandra="http://www.springframework.org/schema/data/cassandra"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/data/cassandra
+    https://www.springframework.org/schema/data/cassandra/spring-cassandra.xsd
+    http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+    &lt;cassandra:session&gt;
+
+        &lt;cassandra:keyspace action="CREATE_DROP" durable-writes="true" name="my_keyspace"&gt;
+            &lt;cassandra:replication class="NETWORK_TOPOLOGY_STRATEGY"&gt;
+              &lt;cassandra:data-center name="foo" replication-factor="1" /&gt;
+              &lt;cassandra:data-center name="bar" replication-factor="2" /&gt;
+            &lt;/cassandra:replication&gt;
+      &lt;/cassandra:keyspace&gt;
+
+    &lt;/cassandra:session&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+创建键空间可实现快速引导，无需外部键空间管理。这在某些场景下非常有用，但需谨慎使用。在应用程序关闭时删除键空间会移除该键空间及其表中所有数据。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cassandra.schema-management.initializing"><a class="anchor" href="#cassandra.schema-management.initializing"></a>初始化 <code>SessionFactory</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>org.springframework.data.cassandra.core.cql.session.init</code> 包提供了初始化现有 <code>SessionFactory</code> 的支持。
+您可能有时需要初始化运行在某个服务器上的键空间。</p>
+</div>
+<div class="sect2">
+<h3 id="cassandra.schema-management.initializing.config"><a class="anchor" href="#cassandra.schema-management.initializing.config"></a>初始化键空间</h3>
+<div class="paragraph">
+<p>您可以在配置的键空间中，在 `<code>CqlSession</code>` 初始化及关闭时执行任意 CQL，如下面的 Java 配置示例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class KeyspacePopulatorConfiguration extends AbstractCassandraConfiguration {
+
+	@Nullable
+	@Override
+	protected KeyspacePopulator keyspacePopulator() {
+		return new ResourceKeyspacePopulator(new ClassPathResource("com/foo/cql/db-schema.cql"),
+				new ClassPathResource("com/foo/cql/db-test-data.cql"));
+	}
+
+	@Nullable
+	@Override
+	protected KeyspacePopulator keyspaceCleaner() {
+		return new ResourceKeyspacePopulator(scriptOf("DROP TABLE my_table;"));
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cassandra:initialize-keyspace session-factory-ref="cassandraSessionFactory"&gt;
+    &lt;cassandra:script location="classpath:com/foo/cql/db-schema.cql"/&gt;
+    &lt;cassandra:script location="classpath:com/foo/cql/db-test-data.cql"/&gt;
+&lt;/cassandra:initialize-keyspace&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>前面的示例针对键空间运行了两个指定的脚本。第一个脚本创建模式，第二个脚本用测试数据集填充表。脚本位置也可以是带有通配符的模式，采用 Spring 中用于资源的常规 Ant 风格（例如 <code>classpath*:/com/foo/**/cql/*-data.cql</code>）。如果使用模式，则按 URL 或文件名的字典顺序运行这些脚本。</p>
+</div>
+<div class="paragraph">
+<p>Keyspace 初始化器的默认行为是无条件地运行所提供的脚本。这并不总是您想要的——例如，如果您在已包含测试数据的键空间中运行这些脚本。遵循常见的模式（如前所示）先创建表再插入数据，可以降低意外删除数据的可能性。如果表已存在，第一步将会失败。</p>
+</div>
+<div class="paragraph">
+<p>然而，为了更灵活地控制现有数据的创建与删除，XML 命名空间提供了一些额外的选项。  
+第一个选项是一个用于开启或关闭初始化的标志。  
+您可以根据环境设置此标志（例如从系统属性或环境 Bean 中读取布尔值）。  
+以下示例展示了如何从系统属性中获取该值：</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cassandra:initialize-keyspace session-factory-ref="cassandraSessionFactory"
+    enabled="#{systemProperties.INITIALIZE_KEYSPACE}"&gt;    <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cassandra:script location="..."/&gt;
+&lt;/cassandra:initialize-database&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>从名为<code>INITIALIZE_KEYSPACE</code>的系统属性中获取<code>enabled</code>的值。</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>控制现有数据处理方式的第二种选项是更加容忍错误。为此，您可以控制初始化器忽略从脚本中执行的 CQL 语句时某些错误的能力，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class KeyspacePopulatorFailureConfiguration extends AbstractCassandraConfiguration {
+
+	@Nullable
+	@Override
+	protected KeyspacePopulator keyspacePopulator() {
+
+		ResourceKeyspacePopulator populator = new ResourceKeyspacePopulator(
+				new ClassPathResource("com/foo/cql/db-schema.cql"));
+
+		populator.setIgnoreFailedDrops(true);
+
+		return populator;
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cassandra:initialize-keyspace session-factory-ref="cassandraSessionFactory" ignore-failures="DROPS"&gt;
+    &lt;cassandra:script location="..."/&gt;
+&lt;/cassandra:initialize-database&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>在前面的示例中，我们表示预期有时脚本会在空的键空间中运行，而脚本中包含一些 `<code>DROP</code>` 语句，因此这些语句将会失败。  
+所以失败的 CQL `<code>DROP</code>` 语句将被忽略，但其他类型的失败将引发异常。  
+如果您不想使用支持 `<code>DROP … IF EXISTS</code>`（或类似语法）的功能，但又希望在重新创建数据之前无条件地删除所有测试数据，这种情况就非常有用。  
+在这种情况下，第一个脚本通常是一组 `<code>DROP</code>` 语句，随后跟着一组 `<code>CREATE</code>` 语句。</p>
+</div>
+<div class="paragraph">
+<p>`ignore-failures` 选项可设置为 `NONE`（默认值）、`DROPS`（忽略失败的投递）或 `ALL`（忽略所有失败）。</p>
+</div>
+<div class="paragraph">
+<p>每个语句之间应使用<code>;</code>分隔；如果脚本中完全没有<code>;</code>字符，则使用换行符分隔。您可以全局控制此设置，或针对每个脚本单独控制，如下例所示：</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class SessionFactoryInitializerConfiguration extends AbstractCassandraConfiguration {
+
+	@Bean
+	SessionFactoryInitializer sessionFactoryInitializer(SessionFactory sessionFactory) {
+
+		SessionFactoryInitializer initializer = new SessionFactoryInitializer();
+		initializer.setSessionFactory(sessionFactory);
+
+		ResourceKeyspacePopulator populator1 = new ResourceKeyspacePopulator();
+		populator1.setSeparator(";");
+		populator1.setScripts(new ClassPathResource("com/myapp/cql/db-schema.cql"));
+
+		ResourceKeyspacePopulator populator2 = new ResourceKeyspacePopulator();
+		populator2.setSeparator("@@");
+		populator2.setScripts(new ClassPathResource("classpath:com/myapp/cql/db-test-data-1.cql"), //
+				new ClassPathResource("classpath:com/myapp/cql/db-test-data-2.cql"));
+
+		initializer.setKeyspacePopulator(new CompositeKeyspacePopulator(populator1, populator2));
+
+		return initializer;
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cassandra:initialize-keyspace session-factory-ref="cassandraSessionFactory" separator="@@"&gt;
+    &lt;cassandra:script location="classpath:com/myapp/cql/db-schema.cql" separator=";"/&gt;
+    &lt;cassandra:script location="classpath:com/myapp/cql/db-test-data-1.cql"/&gt;
+    &lt;cassandra:script location="classpath:com/myapp/cql/db-test-data-2.cql"/&gt;
+&lt;/cassandra:initialize-keyspace&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>在此示例中，两个 `<code>test-data</code>` 脚本使用 `<code>@@</code>` 作为语句分隔符，而只有 `<code>db-schema.cql</code>` 使用 `<code>;</code>`。此配置指定默认分隔符为 `<code>@@</code>`，并针对 `<code>db-schema</code>` 脚本覆盖该默认设置。</p>
+</div>
+<div class="paragraph">
+<p>如果您需要比 XML 命名空间提供的更多控制，您可以直接使用<code>SessionFactoryInitializer</code>，并将其作为组件定义在您的应用程序中。</p>
+</div>
+<div class="sect3">
+<h4 id="cassandra.schema-management.initializing.component"><a class="anchor" href="#cassandra.schema-management.initializing.component"></a>初始化依赖于键空间的其他组件</h4>
+<div class="paragraph">
+<p>大多数应用程序（那些在 Spring 上下文启动之后才使用数据库的应用）可以无需额外配置即可使用数据库初始化器。  
+如果您的应用程序不属于此类，您可能需要阅读本节的其余部分。</p>
+</div>
+<div class="paragraph">
+<p>数据库初始化器依赖于一个 <code>SessionFactory</code> 实例，并执行其初始化回调中提供的脚本（类似于 XML  bean 定义中的<code>init-method</code>、组件中的<code>@PostConstruct</code>方法，或实现了<code>InitializingBean</code>接口的组件中的<code>afterPropertiesSet()</code>方法）。  
+如果其他 bean 也依赖于相同的数据源并在初始化回调中使用会话工厂，则可能会出现问题，因为此时数据尚未初始化。  
+一个常见的例子是缓存：它在启动时急切初始化，并从数据库加载数据。</p>
+</div>
+<div class="paragraph">
+<p>为了解决此问题，您有两个选择：将缓存初始化策略推迟到更晚的阶段执行，或确保键空间初始化器首先被初始化。</p>
+</div>
+<div class="paragraph">
+<p>如果您的应用程序由您自行控制，则更改缓存初始化策略可能较为简单；否则则不然。  
+以下是一些关于如何实现此目标的建议：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>使缓存在使用时进行惰性初始化，从而提升应用程序的启动速度。</p>
+</li>
+<li>
+<p>您的缓存或负责初始化缓存的独立组件是否实现了 `<code>Lifecycle</code>` 或 `<code>SmartLifecycle</code>` 接口。当应用程序上下文启动时，您可以通过设置其 `<code>autoStartup</code>` 标志来自动启动一个 `<code>SmartLifecycle</code>` 组件，也可以通过在外部上下文中调用 `<code>ConfigurableApplicationContext.start()</code>` 来手动启动一个 `<code>Lifecycle</code>` 组件。</p>
+</li>
+<li>
+<p>使用 Spring 的 `<code>ApplicationEvent</code>` 或类似的自定义观察者机制来触发缓存初始化。当上下文准备就绪（即所有 Bean 初始化完成后），上下文总是会发布 `<code>ContextRefreshedEvent</code>`，因此这通常是一个非常有用的钩子（`<code>SmartLifecycle</code>` 默认就是如此工作的）。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>确保键空间初始化器首先被初始化也可以很简单。  
+以下是一些关于如何实现此功能的建议：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>依赖 Spring `<code>BeanFactory` 的默认行为，即按注册顺序初始化 Bean。您可以通过采用在 XML 配置中使用一组 `<code>&lt;import/&gt;</code>` 元素的常见做法来轻松实现这一点，该做法用于编排您的应用程序模块，并确保将数据库和数据库初始化部分列在最前面。</code></p>
+</li>
+<li>
+<p>将使用 `<code>SessionFactory</code>` 的业务组件与其分离，并通过将它们置于不同的 `<code>ApplicationContext`》实例中来控制启动顺序（例如，父上下文包含 `<code>SessionFactory</code>`，子上下文包含业务组件）。这种结构在 Spring Web 应用程序中很常见，但也可以更广泛地应用。</code></p>
+</li>
+<li>
+<p>使用<a href="#cassandra.schema-management.tables">表和自定义类型</a>中的模式管理功能，利用 Spring Data Cassandra 内置的模式生成器初始化键空间。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cassandra.schema-management.tables"><a class="anchor" href="#cassandra.schema-management.tables"></a>表和自定义类型</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data for Apache Cassandra 采用与您的数据模型相匹配的映射实体类来处理数据访问。您可以使用这些实体类来创建 Cassandra 表规格和用户类型定义。</p>
+</div>
+<div class="paragraph">
+<p>Schema 的创建与通过 <code>SchemaAction</code> 初始化 <code>CqlSession</code> 相关联。
+支持以下操作：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SchemaAction.NONE</code>：不创建或删除任何表或类型。  
+这是默认设置。</p>
+</li>
+<li>
+<p><code>SchemaAction.CREATE</code>：从带有 <code>@Table</code> 注解的实体和带有 <code>@UserDefinedType</code> 注解的类型创建表、索引和用户定义类型。如果尝试创建该类型时已存在表或类型，则会引发错误。</p>
+</li>
+<li>
+<p><code>SchemaAction.CREATE_IF_NOT_EXISTS</code>：类似于<code>SchemaAction.CREATE</code>，但应用了<code>IF NOT EXISTS</code>。现有的表或类型不会引发任何错误，但可能会保持陈旧状态。</p>
+</li>
+<li>
+<p><code>SchemaAction.RECREATE</code>：删除并重新创建已知正在使用的表和类型。  
+未在应用程序中配置的表和类型不会被删除。</p>
+</li>
+<li>
+<p><code>SchemaAction.RECREATE_DROP_UNUSED</code>：删除所有表和类型，仅重新创建已知的表和类型。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>SchemaAction.RECREATE</code> 和 <code>SchemaAction.RECREATE_DROP_UNUSED</code> 会删除您的表并丢失所有数据。
+<code>RECREATE_DROP_UNUSED</code> 还会删除应用程序未知的表和类型。
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="enabling-tables-and-user-defined-types-for-schema-management"><a class="anchor" href="#enabling-tables-and-user-defined-types-for-schema-management"></a>启用表和用户定义类型以进行架构管理</h3>
+<div class="paragraph">
+<p><a class="xref page" href="../object-mapping.html#mapping.usage">基于元数据的映射</a> 介绍了使用约定和注解进行对象映射的方法。为了防止不需要的类被创建为表或类型，模式管理仅对标注了 <code>@Table</code> 的实体以及标注了 <code>@UserDefinedType</code> 的用户定义类型生效。
+实体是通过扫描类路径发现的。
+实体扫描需要一个或多个基础包。
+使用 <code>TupleValue</code> 的元组类型列不提供任何类型详细信息。
+因此，您必须用 <code>@CassandraType(type = TUPLE, typeArguments = …)</code> 注解此类列属性，以指定所需的列类型。</p>
+</div>
+<div class="paragraph">
+<p>以下示例展示了如何在 XML 配置中指定实体基础包：</p>
+</div>
+<div class="exampleblock">
+<div class="title">示例 5：指定实体基础包</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class EntityBasePackagesConfiguration extends AbstractCassandraConfiguration {
+
+	@Override
+	public String[] getEntityBasePackages() {
+		return new String[] { "com.foo", "com.bar" };
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:cassandra="http://www.springframework.org/schema/data/cassandra"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/data/cassandra
+    https://www.springframework.org/schema/data/cassandra/spring-cassandra.xsd
+    http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+    &lt;cassandra:mapping entity-base-packages="com.foo,com.bar"/&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-versions">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-versions-content">
+              <button class="modal-versions-close" data-micromodal-close="">
+                <svg height="28px" viewbox="0 0 32 32" width="28px" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title></title><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"></line><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"></line></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left"><ul class="nav-versions">
+<li class="component is-current">
+<a class="title" href="../index.html">Spring Data Cassandra</a>
+<ul class="versions">
+<li class="version is-current is-latest">
+<a href="../index.html">
+                            5.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="component">
+<a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+<ul class="versions">
+<li class="version is-latest">
+<a href="../data-commons/index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+</ul></div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>相关 Spring 文档<ul class="projects-list">
+        <li><a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a></li>
+        <li><a href="https://docs.spring.io/spring-framework/reference/">
+  Spring 框架
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Cloud
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Data
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a></li>
+        <li><a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a></li>
+        <li><a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a></li>
+        <li><a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a></li>
+        <li><a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a></li>
+        <li><a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a></li>
+        <li><a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a></li>
+    </ul>
+  </li><a href="../spring-projects.html">所有文档...</a>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img alt="Spring" id="springlogo" src="../_/img/spring-logo.svg"/>
+        <p class="smallest antialiased">版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href="https://www.vmware.com/help/legal.html">使用条款</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">隐私政策</a> • <a href="https://spring.io/trademarks">商标指南</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">致谢</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">您的加州隐私权利</a> • <a class="ot-sdk-show-settings">Cookie 设置</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他/或某些国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他/或某些国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。"AWS"和"Amazon Web Services"是 Amazon.com Inc. 或其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。</p>
+    </div>
+    <div class="flex jc-between" id="social-icons">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" data-name="Twitter" id="Twitter-2"></path></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async="" src="../_/js/vendor/highlight.js"></script>
+<script async="" data-sync-storage-key="docs:preferred-tab" src="../_/js/vendor/asciidoctor-tabs.js"></script>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box"><a class="search-link" href="../search.html">在所有的 Spring 文档中搜索</a></div>
+                <div class="search-by">
+                    <a aria-label="Search by Algolia" href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
+                        <img class="light" src="../_/img/algolia-light.svg" width="140"/>
+                        <img class="dark" src="../_/img/algolia-dark.svg" width="140"/>
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js"></script>
+<script async="" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-app-id="WB1FQYI187" data-index-name="springdocs" data-page-component="data-cassandra" data-page-version="5.1.0" data-stylesheet="../_/css/vendor/search.css" id="search-script" src="../_/js/vendor/search.js"></script>
+  
+
+</body></html>

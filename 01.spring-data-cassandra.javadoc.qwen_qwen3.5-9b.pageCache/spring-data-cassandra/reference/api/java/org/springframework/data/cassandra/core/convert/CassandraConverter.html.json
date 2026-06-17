@@ -1,0 +1,211 @@
+{
+  "created_at": "2026-06-16 17:05:42",
+  "updated_at": "2026-06-16 17:05:42",
+  "stats": {
+    "total_entries": 39,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 49,
+    "entries_with_hits": 39,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2564102564102564,
+    "usage_percentage": 0.0039
+  },
+  "items": [
+    {
+      "source": "Converts the given object into a value Cassandra will be able to store natively in a column.",
+      "translation": "将给定对象转换为 Cassandra 能够原样存储在列中的值。",
+      "count": 6
+    },
+    {
+      "source": "Returns the <a href=\"ColumnTypeResolver.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>ColumnTypeResolver</code></a> to resolve <a href=\"ColumnType.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>ColumnType</code></a> for properties, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/core/TypeInformation.html\" title=\"class or interface in org.springframework.data.core\"><code>TypeInformation</code></a>, and\n<code>values</code>.",
+      "translation": "返回一个 <a href=\"ColumnTypeResolver.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>ColumnTypeResolver</code></a> 用于解析属性、<a href=\"ColumnType.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>ColumnType</code></a>、<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/core/TypeInformation.html\" title=\"class or interface in org.springframework.data.core\"><code>TypeInformation</code></a> 以及 <code>values</code> 的 <code>ColumnType</code>。",
+      "count": 2
+    },
+    {
+      "source": "Converts and writes a <code>source</code> object into a <code>sink</code> using the given <a href=\"../mapping/CassandraPersistentEntity.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>CassandraPersistentEntity</code></a>.",
+      "translation": "使用给定的<a href=\"../mapping/CassandraPersistentEntity.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>CassandraPersistentEntity</code></a>将<code>source</code>对象转换为并写入到<code>sink</code>中。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <code>CodecRegistry</code> registered in the <a href=\"CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a>.",
+      "translation": "返回在<a href=\"CassandraConverter.html\" title=\"org.springframework.data.cassandra.core.convert 中的接口\"><code>CassandraConverter</code></a>中注册的<code>CodecRegistry</code>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions</code></a> for this converter.",
+      "translation": "返回此转换器对应的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/projection/ProjectionFactory.html\" title=\"class or interface in org.springframework.data.projection\"><code>ProjectionFactory</code></a> for this converter.",
+      "translation": "返回此转换器对应的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/projection/ProjectionFactory.html\" title=\"class or interface in org.springframework.data.projection\"><code>ProjectionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Returns the Id for an entity. It can return:\n<ul>\n<li>A singular value if for a simple <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Id.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Id</code></a> or\n<a href=\"../mapping/PrimaryKey.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKey</code></a> Id</li>\n<li>A <a href=\"../mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> for composite <a href=\"../mapping/PrimaryKeyColumn.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKeyColumn</code></a>\nId's</li>\n<li>A the composite primary key for <a href=\"../mapping/PrimaryKey.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKey</code></a> using a\n<a href=\"../mapping/PrimaryKeyClass.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKeyClass</code></a></li>\n</ul>",
+      "translation": "返回实体的 Id。它可以返回：\n<ul>\n<li>对于简单的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Id.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Id</code></a> 或 <a href=\"../mapping/PrimaryKey.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKey</code></a> Id，返回单个值；</li>\n<li>对于复合的 <a href=\"../mapping/PrimaryKeyColumn.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKeyColumn</code></a> Id，返回一个 <a href=\"../mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>；</li>\n<li>对于使用 <a href=\"../mapping/PrimaryKeyClass.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKeyClass</code></a> 的 <a href=\"../mapping/PrimaryKey.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>PrimaryKey</code></a>，返回复合主键。</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CassandraConverter</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/CassandraPersistentEntity.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/CassandraPersistentProperty.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>",
+      "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CassandraConverter</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/CassandraPersistentEntity.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/CassandraPersistentProperty.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"type-parameters\">&lt;R&gt;</span> <span class=\"return-type\">R</span> <span class=\"element-name\">project</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/projection/EntityProjection.html\" title=\"class or interface in org.springframework.data.projection\">EntityProjection</a>&lt;R,<wbr/>?&gt; descriptor,\n com.datastax.oss.driver.api.core.cql.Row row)</span>",
+      "translation": "<span class=\"type-parameters\">&lt;R&gt;</span> <span class=\"return-type\">R</span> <span class=\"element-name\">project</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/projection/EntityProjection.html\" title=\"class or interface in org.springframework.data.projection\">EntityProjection</a>&lt;R,<wbr/>?&gt; descriptor,\n com.datastax.oss.driver.api.core.cql.Row row)</span>",
+      "count": 1
+    },
+    {
+      "source": "Apply a projection to <code>Row</code> and return the projection return type <code>R</code>.\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/projection/EntityProjection.html#isProjection()\" title=\"class or interface in org.springframework.data.projection\"><code>Non-projecting</code></a> descriptors fall back to <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#read(java.lang.Class,S)\" title=\"class or interface in org.springframework.data.convert\"><code>regular\nobject materialization</code></a>.",
+      "translation": "向 <code>Row</code> 应用投影并返回投影的返回类型 <code>R</code>。\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/projection/EntityProjection.html#isProjection()\" title=\"class or interface in org.springframework.data.projection\"><code>非投影</code></a> 描述符会回退到 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#read(java.lang.Class,S)\" title=\"class or interface in org.springframework.data.convert\"><code>常规对象实例化</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Default Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">默认方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.convert.EntityConverter\">Methods inherited from interface <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#method-summary\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getConversionService()\" title=\"class or interface in org.springframework.data.convert\">getConversionService</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-org.springframework.data.convert.EntityConverter\">从接口 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#method-summary\" title=\"org.springframework.data.convert 中的类或接口\">EntityConverter</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getConversionService()\" title=\"org.springframework.data.convert 中的类或接口\">getConversionService</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.convert.EntityReader\">Methods inherited from interface <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#method-summary\" title=\"class or interface in org.springframework.data.convert\">EntityReader</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#read(java.lang.Class,S)\" title=\"class or interface in org.springframework.data.convert\">read</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-org.springframework.data.convert.EntityReader\">从接口 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#method-summary\" title=\"org.springframework.data.convert 中的类或接口\">EntityReader</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#read(java.lang.Class,S)\" title=\"org.springframework.data.convert 中的类或接口\">read</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.convert.EntityWriter\">Methods inherited from interface <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html#method-summary\" title=\"class or interface in org.springframework.data.convert\">EntityWriter</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html#write(T,S)\" title=\"class or interface in org.springframework.data.convert\">write</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-org.springframework.data.convert.EntityWriter\">从接口 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html#method-summary\" title=\"org.springframework.data.convert 中的类或接口\">EntityWriter</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html#write(T,S)\" title=\"org.springframework.data.convert 中的类或接口\">write</a></code>",
+      "count": 1
+    },
+    {
+      "source": "Apply a projection to <code>Row</code> and return the projection return type <code>R</code>.",
+      "translation": "将投影应用于<code>Row</code>并返回投影的返回类型<code>R</code>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Interface CassandraConverter\">Interface CassandraConverter</h1>",
+      "translation": "<h1 class=\"title\" title=\"接口 CassandraConverter\">接口 CassandraConverter</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Central Cassandra specific converter interface from Object to Row.",
+      "translation": "中央 Cassandra 专用的从对象到行的转换器接口。",
+      "count": 1
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 1
+    },
+    {
+      "source": "Returns the Id for an entity.",
+      "translation": "返回实体的 ID。",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getProjectionFactory()\" tabindex=\"0\">getProjectionFactory()</a></li>\n<li><a href=\"#getCustomConversions()\" tabindex=\"0\">getCustomConversions()</a></li>\n<li><a href=\"#getCodecRegistry()\" tabindex=\"0\">getCodecRegistry()</a></li>\n<li><a href=\"#getMappingContext()\" tabindex=\"0\">getMappingContext()</a></li>\n<li><a href=\"#getColumnTypeResolver()\" tabindex=\"0\">getColumnTypeResolver()</a></li>\n<li><a href=\"#project(org.springframework.data.projection.EntityProjection,com.datastax.oss.driver.api.core.cql.Row)\" tabindex=\"0\">project(EntityProjection, Row)</a></li>\n<li><a href=\"#getId(java.lang.Object,org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity)\" tabindex=\"0\">getId(Object, CassandraPersistentEntity)</a></li>\n<li><a href=\"#convertToColumnType(java.lang.Object)\" tabindex=\"0\">convertToColumnType(Object)</a></li>\n<li><a href=\"#convertToColumnType(java.lang.Object,org.springframework.data.core.TypeInformation)\" tabindex=\"0\">convertToColumnType(Object, TypeInformation)</a></li>\n<li><a href=\"#convertToColumnType(java.lang.Object,org.springframework.data.cassandra.core.convert.ColumnType)\" tabindex=\"0\">convertToColumnType(Object, ColumnType)</a></li>\n<li><a href=\"#write(java.lang.Object,java.lang.Object,org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity)\" tabindex=\"0\">write(Object, Object, CassandraPersistentEntity)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#getProjectionFactory()\" tabindex=\"0\">getProjectionFactory()</a></li>\n<li><a href=\"#getCustomConversions()\" tabindex=\"0\">getCustomConversions()</a></li>\n<li><a href=\"#getCodecRegistry()\" tabindex=\"0\">getCodecRegistry()</a></li>\n<li><a href=\"#getMappingContext()\" tabindex=\"0\">getMappingContext()</a></li>\n<li><a href=\"#getColumnTypeResolver()\" tabindex=\"0\">getColumnTypeResolver()</a></li>\n<li><a href=\"#project(org.springframework.data.projection.EntityProjection,com.datastax.oss.driver.api.core.cql.Row)\" tabindex=\"0\">project(EntityProjection, Row)</a></li>\n<li><a href=\"#getId(java.lang.Object,org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity)\" tabindex=\"0\">getId(Object, CassandraPersistentEntity)</a></li>\n<li><a href=\"#convertToColumnType(java.lang.Object)\" tabindex=\"0\">convertToColumnType(Object)</a></li>\n<li><a href=\"#convertToColumnType(java.lang.Object,org.springframework.data.core.TypeInformation)\" tabindex=\"0\">convertToColumnType(Object, TypeInformation)</a></li>\n<li><a href=\"#convertToColumnType(java.lang.Object,org.springframework.data.cassandra.core.convert.ColumnType)\" tabindex=\"0\">convertToColumnType(Object, ColumnType)</a></li>\n<li><a href=\"#write(java.lang.Object,java.lang.Object,org.springframework.data.cassandra.core.mapping.CassandraPersistentEntity)\" tabindex=\"0\">write(Object, Object, CassandraPersistentEntity)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Superinterfaces:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/CassandraPersistentEntity.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/CassandraPersistentProperty.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html\" title=\"class or interface in org.springframework.data.convert\">EntityReader</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html\" title=\"class or interface in org.springframework.data.convert\">EntityWriter</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code></dd>",
+      "translation": "<dt>所有超级接口：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/CassandraPersistentEntity.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/CassandraPersistentProperty.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html\" title=\"class or interface in org.springframework.data.convert\">EntityReader</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html\" title=\"class or interface in org.springframework.data.convert\">EntityWriter</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"project(org.springframework.data.projection.EntityProjection,com.datastax.oss.driver.api.core.cql.Row)-type-param-R\"><code>R</code> - </span></dd>\n<dt>Parameters:</dt>\n<dd><code>descriptor</code> - the projection descriptor, must not be null.</dd>\n<dd><code>row</code> - must not be null.</dd>\n<dt>Returns:</dt>\n<dd>a new instance of the projection return type <code>R</code>.</dd>\n<dt>Since:</dt>\n<dd>3.4</dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"project(org.springframework.data.projection.EntityProjection,com.datastax.oss.driver.api.core.cql.Row)-type-param-R\"><code>R</code> - </span></dd>\n<dt>参数：</dt>\n<dd><code>descriptor</code> - 投影描述符，不能为 null。</dd>\n<dd><code>row</code> - 不能为 null。</dd>\n<dt>返回：</dt>\n<dd>投影返回类型 <code>R</code> 的新实例。</dd>\n<dt>版本：</dt>\n<dd>3.4</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>value</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> to convert; must not be null.</dd>\n<dd><code>typeInformation</code> - <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/core/TypeInformation.html\" title=\"class or interface in org.springframework.data.core\"><code>TypeInformation</code></a> used to describe the object type; must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the result of the conversion.</dd>\n<dt>Since:</dt>\n<dd>1.5</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>value</code> - 要转换的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\"><code>Object</code></a>；不能为 null。</dd>\n<dd><code>typeInformation</code> - 用于描述对象类型的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/core/TypeInformation.html\" title=\"org.springframework.data.core 中的类或接口\"><code>TypeInformation</code></a>；不能为 null。</dd>\n<dt>返回：</dt>\n<dd>转换的结果。</dd>\n<dt>版本：</dt>\n<dd>1.5</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>value</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> to convert; must not be null.</dd>\n<dd><code>typeDescriptor</code> - <a href=\"ColumnType.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>ColumnType</code></a> used to describe the object type; must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the result of the conversion.</dd>\n<dt>Since:</dt>\n<dd>3.0</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>value</code> - 要转换的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\"><code>Object</code></a>；不能为 null。</dd>\n<dd><code>typeDescriptor</code> - 用于描述对象类型的 <a href=\"ColumnType.html\" title=\"org.springframework.data.cassandra.core.convert 中的接口\"><code>ColumnType</code></a>；不能为 null。</dd>\n<dt>返回：</dt>\n<dd>转换后的结果。</dd>\n<dt>版本：</dt>\n<dd>3.0</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getMappingContext()\" title=\"class or interface in org.springframework.data.convert\">getMappingContext</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/CassandraPersistentEntity.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/CassandraPersistentProperty.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\">CassandraPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code></dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getMappingContext()\" title=\"org.springframework.data.convert 中的类或接口\">getMappingContext</a></code>，位于接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"org.springframework.data.convert 中的类或接口\">EntityConverter</a>&lt;<a href=\"../mapping/CassandraPersistentEntity.html\" title=\"org.springframework.data.cassandra.core.mapping 中的接口\">CassandraPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/CassandraPersistentProperty.html\" title=\"org.springframework.data.cassandra.core.mapping 中的接口\">CassandraPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a>&gt;</code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>value</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> to convert; must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the result of the conversion.</dd>\n<dt>Since:</dt>\n<dd>2.0</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>value</code> - 要转换的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\"><code>Object</code></a>；不能为 null。</dd>\n<dt>返回：</dt>\n<dd>转换的结果。</dd>\n<dt>版本：</dt>\n<dd>2.0</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>object</code> - must not be null.</dd>\n<dd><code>entity</code> - must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the id value or null, if the id is not set.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>object</code> - 不能为 null。</dd>\n<dd><code>entity</code> - 不能为 null。</dd>\n<dt>返回：</dt>\n<dd>ID 值，如果 ID 未设置则返回 null。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>source</code> - the source, must not be null.</dd>\n<dd><code>sink</code> - must not be null.</dd>\n<dd><code>entity</code> - must not be null.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>source</code> - 源对象，不能为 null。</dd>\n<dd><code>sink</code> - 不能为 null。</dd>\n<dd><code>entity</code> - 不能为 null。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Known Implementing Classes:</dt>\n<dd><code><a href=\"AbstractCassandraConverter.html\" title=\"class in org.springframework.data.cassandra.core.convert\">AbstractCassandraConverter</a>, <a href=\"MappingCassandraConverter.html\" title=\"class in org.springframework.data.cassandra.core.convert\">MappingCassandraConverter</a></code></dd>",
+      "translation": "<dt>所有已知实现类：</dt>\n<dd><code><a href=\"AbstractCassandraConverter.html\" title=\"org.springframework.data.cassandra.core.convert 中的类\">AbstractCassandraConverter</a>, <a href=\"MappingCassandraConverter.html\" title=\"org.springframework.data.cassandra.core.convert 中的类\">MappingCassandraConverter</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>will never be null.</dd>\n<dt>Since:</dt>\n<dd>3.4</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>永远不会为 null。</dd>\n<dt>版本：</dt>\n<dd>3.4</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Author:</dt>\n<dd>Alex Shvid, Matthew T. Adams, Mark Paluch</dd>",
+      "translation": "<dt>作者：</dt>\n<dd>Alex Shvid, Matthew T. Adams, Mark Paluch</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Returns:</dt>\n<dd>will never be null.</dd>",
+      "translation": "<dt>返回：</dt>\n<dd>永远不会为 null。</dd>",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>自定义查询 :: Spring Data Neo4j</title>
+    <link href="https://docs.spring.io/spring-data/neo4j/reference/appendix/custom-queries.html" rel="canonical"/>
+    <meta content="Antora 3.2.0-alpha.6" name="generator"/>
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link href="../_/css/site.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/page-search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/asciidoctor-tabs.css" rel="stylesheet"/>
+
+    <meta content="v0.4.16" name="antora-ui-version"/> 
+    <meta content="8.1.0" name="version"/>
+    <meta content="data-neo4j" name="component"/>
+    <meta content="false" name="latest-version"/>
+    <link href="../_/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img alt="Spring" class="block" id="springlogo" src="../_/img/spring-logo.svg"/>
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-menu" id="topbar-nav">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">为何是春天</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.io/why-spring">概览</a>
+<a class="navbar-item" href="https://spring.io/microservices">微服务</a>
+<a class="navbar-item" href="https://spring.io/reactive">响应式</a>
+<a class="navbar-item" href="https://spring.io/event-driven">事件驱动</a>
+<a class="navbar-item" href="https://spring.io/cloud">云</a>
+<a class="navbar-item" href="https://spring.io/web-applications">Web 应用</a>
+<a class="navbar-item" href="https://spring.io/serverless">无服务器</a>
+<a class="navbar-item" href="https://spring.io/batch">批处理</a></div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px"><a class="navbar-item" href="https://spring.io/projects">概览</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+<a class="navbar-item navbar-item-special" href="https://spring.io/projects">查看所有项目</a>
+<li class="navbar-item navbar-item-special-3">开发工具</li>
+<a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+<a class="navbar-item navbar-item-special-2" href="https://start.spring.io">Spring Initializr
+              <svg class="external-link-icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="15 10.94 15 15 1 15 1 1 5.06 1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><polyline fill="none" points="8.93 1 15 1 15 7.07" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><line fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" x1="15" x2="8" y1="1" y2="8"></line></svg></a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.academy/courses">课程</a>
+<a class="navbar-item" href="https://spring.academy/learning-path">获取认证</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg"><a class="navbar-item" href="https://spring.io/solutions">概览</a>
+<a class="navbar-item" href="https://spring.io/support">Spring 运行时</a>
+<a class="navbar-item" href="https://spring.io/consulting">Spring 咨询</a>
+<a class="navbar-item" href="https://spring.academy/teams">Spring Academy 团队培训</a>
+<a class="navbar-item" href="https://spring.io/security">安全公告</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input id="switch-theme-checkbox" name="switch-theme-checkbox" type="checkbox"/>
+      <span class="icon"><svg aria-hidden="true" class="svg-inline--fa fa-moon moon" data-icon="moon" data-prefix="fas" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" fill="currentColor"></path>
+</svg>
+        <svg aria-hidden="true" class="svg-inline--fa fa-sun sun" data-icon="sun" data-prefix="fas" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" fill="currentColor"></path>
+</svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-neo4j" data-version="8.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Neo4j</span>
+  <span class="version">8.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg height="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="24px" xml:space="preserve"><g><path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"></path><path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"></path><path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewbox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+</svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../introduction-and-preface/index.html">前言</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/preface-neo4j.html">介绍 Neo4j</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/preface-sd.html">介绍 Spring Data</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/preface-sdn.html">介绍 Spring Data Neo4j</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/building-blocks.html">Spring Data Neo4j 的构建模块</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/new-and-noteworthy.html">新特性与亮点</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../dependencies.html">依赖项</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../getting-started.html">入门指南</a></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../object-mapping.html">对象映射</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../object-mapping/metadata-based-mapping.html">基于元数据的映射</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../object-mapping/mapping-ids.html">唯一 ID 的处理与配置</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../object-mapping/sdc-object-mapping.html">Spring Data 对象映射基础</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../repositories.html">存储库</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-concepts.html">核心概念</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-methods.html">查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/definition.html">定义存储库接口</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-methods-details.html">定义查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/create-instances.html">创建存储库实例</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/custom-implementations.html">自定义存储库实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-domain-events.html">从聚合根发布事件</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/core-extensions.html">Spring Data 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../query-by-example.html">按示例查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/scrolling.html">滚动</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/sdn-extension.html">Spring Data Neo4j 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-keywords-reference.html">存储库查询关键字</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/query-return-types-reference.html">存储库查询返回类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../repositories/vector-search.html">Neo4j 向量搜索</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../repositories/projections.html">投影</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../projections/sdn-projections.html">Spring Data Neo4j 投影</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../testing.html">测试</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../testing/testing-without-spring-boot.html">不使用 Spring Boot</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../testing/testing-with-spring-boot.html">使用 Spring Boot 和 <code>@DataNeo4jTest</code></a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="index.html">附录</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="conversions.html">类型转换</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="neo4j-client.html">Neo4jClient</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="logging.html">日志记录</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-creation.html">查询创建</a>
+</li>
+<li class="nav-item is-current-page" data-depth="2">
+<a class="nav-link" href="custom-queries.html">自定义查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="spatial-types.html">空间类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="migrating.html">从 SDN+OGM 迁移到 SDN</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="build.html">构建 Spring Data Neo4j</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external" href="../api/java/index.html" target="_blank">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external" href="https://github.com/spring-projects/spring-data-commons/wiki" target="_blank">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button class="nav-toggle" id="nav-toggle-2"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle" id="nav-toggle-1"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg id="svg-stash-de15fb15"></svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="toc" data-levels="2" data-title="Custom queries">
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links"><a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/appendix/custom-queries.adoc">
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          编辑此页面
+        </a>
+<a href="https://github.com/spring-projects/spring-data-neo4j" title="GitHub">
+<svg height="512px" id="Layer_1" version="1.1" viewbox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg"><style type="text/css">
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} </style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          GitHub 项目
+        </a></div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container"><nav aria-label="面包屑" class="breadcrumbs">
+<ul>
+<li><a href="../index.html">Spring Data Neo4j</a></li>
+<li><a href="index.html">附录</a></li>
+<li><a href="custom-queries.html">自定义查询</a></li>
+</ul>
+</nav></div><h1 class="page" id="page-title">自定义查询</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>与所有其他 Spring Data 模块一样，Spring Data Neo4j 允许您在仓库中指定自定义查询。当无法通过派生查询函数表达查找逻辑时，这些自定义查询非常有用。</p>
+</div>
+<div class="paragraph">
+<p>由于 Spring Data Neo4j 在底层主要采用面向记录的方式工作，因此需要牢记这一点，避免为同一个“根节点”构建包含多条记录的結果集。</p>
+</div>
+<div class="admonitionblock tip">
+<table><td class="icon">
+<i class="fa icon-tip" title="提示"></i>
+</td>
+<td class="content">
+请同时查看常见问题解答，以了解从仓库使用自定义查询的替代形式，特别是如何使用自定义查询配合自定义映射：<a class="xref page" href="../faq.html#faq.custom-queries-and-custom-mappings">自定义查询与自定义映射</a>。
+</td>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-queries.for-relationships"><a class="anchor" href="#custom-queries.for-relationships"></a>包含关系的查询</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="custom-queries.for-relationships.cartesian-product"><a class="anchor" href="#custom-queries.for-relationships.cartesian-product"></a>小心笛卡尔积</h3>
+<div class="paragraph">
+<p>假设您有一个查询，例如 `<code>MATCH (m:Movie{title: 'The Matrix'})←[r:ACTED_IN]-(p:Person) return m,r,p</code>`，其结果如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">多条记录（简化版）</div>
+<div class="content">
+<pre>+------------------------------------------------------------------------------------------+
+| m        | r                                    | p                                      |
++------------------------------------------------------------------------------------------+
+| (:Movie) | [:ACTED_IN {roles: ["Emil"]}]        | (:Person {name: "Emil Eifrem"})        |
+| (:Movie) | [:ACTED_IN {roles: ["Agent Smith"]}] | (:Person {name: "Hugo Weaving})        |
+| (:Movie) | [:ACTED_IN {roles: ["Morpheus"]}]    | (:Person {name: "Laurence Fishburne"}) |
+| (:Movie) | [:ACTED_IN {roles: ["Trinity"]}]     | (:Person {name: "Carrie-Anne Moss"})   |
+| (:Movie) | [:ACTED_IN {roles: ["Neo"]}]         | (:Person {name: "Keanu Reeves"})       |
++------------------------------------------------------------------------------------------+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>映射后的结果很可能无法使用。如果将其映射为列表，该列表中会出现多个<code>Movie</code>的重复项，但该电影实际上只有一个关联关系。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-queries.for-relationships.one.record"><a class="anchor" href="#custom-queries.for-relationships.one.record"></a>为每个根节点获取一条记录</h3>
+<div class="paragraph">
+<p>要获取正确的对象，需要在查询中<em>收集</em>关系和相关节点：<code>MATCH (m:Movie{title: 'The Matrix'})←[r:ACTED_IN]-(p:Person) return m,collect(r),collect(p)</code></p>
+</div>
+<div class="listingblock">
+<div class="title">单条记录（简化版）</div>
+<div class="content">
+<pre>+------------------------------------------------------------------------+
+| m        | collect(r)                     | collect(p)                 |
++------------------------------------------------------------------------+
+| (:Movie) | [[:ACTED_IN], [:ACTED_IN], ...]| [(:Person), (:Person),...] |
++------------------------------------------------------------------------+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>有了这一结果作为单条记录，Spring Data Neo4j 即可将所有相关节点正确添加到根节点。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-queries.for-relationships.long-paths"><a class="anchor" href="#custom-queries.for-relationships.long-paths"></a>深入探索图结构</h3>
+<div class="paragraph">
+<p>上述示例假设您仅需获取第一级关联节点。  
+有时这还不够，图中可能存在更深层的节点也应包含在映射实例中。  
+实现这一目标有两种方式：数据库端缩减或客户端缩减。</p>
+</div>
+<div class="paragraph">
+<p>为此，上面的示例还应包含在初始返回的<code>Movie</code>中带有<code>Movies</code>的<code>Persons</code>。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="image$movie graph deep" src="../_images/movie-graph-deep.png"/>
+</div>
+<div class="title">图 1。“黑客帝国”与“基努·里维斯”的示例</div>
+</div>
+<div class="sect3">
+<h4 id="custom-queries.for-relationships.long-paths.database"><a class="anchor" href="#custom-queries.for-relationships.long-paths.database"></a>数据库端缩减</h4>
+<div class="paragraph">
+<p>鉴于 Spring Data Neo4j 仅能正确处理基于记录的数据，单个实体实例的结果必须位于一条记录中。利用<a href="https://neo4j.com/docs/cypher-manual/current/syntax/patterns/#cypher-pattern-path-variables">Cypher 的路径</a>功能来获取图中所有分支是一个有效的选项。</p>
+</div>
+<div class="listingblock">
+<div class="title">朴素的路径方法</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+RETURN p;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这将导致生成多条未合并到同一条记录中的路径。  
+可以调用 `<code>collect(p)</code>`，但 Spring Data Neo4j 在映射过程中并不理解“路径”这一概念。  
+因此，需要提取节点和关系以获取结果。</p>
+</div>
+<div class="listingblock">
+<div class="title">提取节点和关系</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+RETURN m, nodes(p), relationships(p);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>由于从《黑客帝国》到另一部电影存在多条路径，结果仍然不会是单条记录。
+这时就需要用到<a href="https://neo4j.com/docs/cypher-manual/current/functions/list/#functions-reduce">Cypher 的 reduce 函数</a>了。</p>
+</div>
+<div class="listingblock">
+<div class="title">减少节点和关系</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+WITH collect(p) as paths, m
+WITH m,
+reduce(a=[], node in reduce(b=[], c in [aa in paths | nodes(aa)] | b + c) | case when node in a then a else a + node end) as nodes,
+reduce(d=[], relationship in reduce(e=[], f in [dd in paths | relationships(dd)] | e + f) | case when relationship in d then d else d + relationship end) as relationships
+RETURN m, relationships, nodes;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>`reduce` 函数允许我们扁平化来自各种路径的节点和关系。因此，我们将得到一个与<a href="#custom-queries.for-relationships.one.record">为每个根节点获取一条记录</a>类似的元组，但其集合中混合了不同类型的关系或节点。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-queries.for-relationships.long-paths.client"><a class="anchor" href="#custom-queries.for-relationships.long-paths.client"></a>客户端端缩减</h4>
+<div class="paragraph">
+<p>如果需要在客户端执行缩减操作，Spring Data Neo4j 允许您映射关系或节点的列表的列表。不过，返回的记录仍需包含所有必要信息，以便正确填充生成的实体实例。</p>
+</div>
+<div class="listingblock">
+<div class="title">从路径中收集节点和关系</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+RETURN m, collect(nodes(p)), collect(relationships(p));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>额外的 `<code>collect` 语句会创建如下格式的列表：</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[[rel1, rel2], [rel3, rel4]]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这些列表将在映射过程中被转换为一个扁平列表。</p>
+</div>
+<div class="admonitionblock note">
+<table><td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+选择使用客户端还是数据库端进行归约，取决于将生成的数据量。
+当使用 <code>reduce</code> 函数时，所有路径都需要先在数据库内存中创建。
+另一方面，需要在客户端合并的大量数据会导致该处的内存使用量更高。
+</td>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-query.paths"><a class="anchor" href="#custom-query.paths"></a>使用路径来填充并返回实体列表</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>给定一个如下所示的图：</p>
+</div>
+<div class="imageblock" id="custom-query.paths.g">
+<div class="content">
+<img alt="image$custom query.paths" src="../_images/custom-query.paths.png"/>
+</div>
+<div class="title">图 2. 具有出向关系的图表</div>
+</div>
+<div class="paragraph">
+<p>以及一个如<a href="#custom-query.paths.dm">映射</a>所示的领域模型（为简洁起见，已省略构造函数和访问器）：</p>
+</div>
+<div class="listingblock" id="custom-query.paths.dm">
+<div class="title">带有出向关系的图的<a href="#custom-query.paths.g">域模型</a>。</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node
+public class SomeEntity {
+
+    @Id
+    private final Long number;
+
+    private String name;
+
+    @Relationship(type = "SOME_RELATION_TO", direction = Relationship.Direction.OUTGOING)
+    private Set&lt;SomeRelation&gt; someRelationsOut = new HashSet&lt;&gt;();
+
+
+}
+
+@RelationshipProperties
+public class SomeRelation {
+
+    @RelationshipId
+    private Long id;
+
+    private String someData;
+
+    @TargetNode
+    private SomeEntity targetPerson;
+
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如您所见，这些关系仅为单向关联。生成的查找方法（包括 `<code>findById</code>`）将始终尝试匹配一个根节点以进行映射。从该根节点开始，所有相关对象都将被映射。对于仅返回单个对象的查询，将返回该根对象；而对于返回多个对象的查询，则返回所有匹配的对象。这些已返回对象的出向和入向关联关系自然也会被填充。</p>
+</div>
+<div class="paragraph">
+<p>假设以下 Cypher 查询：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p = (leaf:SomeEntity {number: $a})-[:SOME_RELATION_TO*]-(:SomeEntity)
+RETURN leaf, collect(nodes(p)), collect(relationships(p))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这遵循了<a href="#custom-queries.for-relationships.one.record">为根节点获取单条记录</a>中的建议，并且对于您希望在此处匹配的叶节点效果极佳。然而：这种情况仅适用于返回 0 或 1 个映射对象的所有场景。虽然该查询会像之前一样填充所有关系，但它不会返回全部 4 个对象。</p>
+</div>
+<div class="paragraph">
+<p>可以通过返回完整路径来修改此行为：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p = (leaf:SomeEntity {number: $a})-[:SOME_RELATION_TO*]-(:SomeEntity)
+RETURN p</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这里我们确实希望利用路径<code>p</code>实际上返回包含到所有 4 个节点路径的 3 行这一事实。这 4 个节点都将被填充、相互链接并返回。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-queries.parameters"><a class="anchor" href="#custom-queries.parameters"></a>自定义查询中的参数</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您执行此操作的方式与在 Neo4j Browser 或 Cypher-Shell 中发出标准 Cypher 查询时完全相同，使用 `$` 语法（从 Neo4j 4.0 开始，旧版用于 Cypher 参数的 `${foo}` 语法已从数据库中移除）。</p>
+</div>
+<div class="listingblock">
+<div class="title">ARepository.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface ARepository extends Neo4jRepository&lt;AnAggregateRoot, String&gt; {
+
+	@Query("MATCH (a:AnAggregateRoot {name: $name}) RETURN a") <i class="conum" data-value="1"></i><b>(1)</b>
+	Optional&lt;AnAggregateRoot&gt; findByCustomQuery(String name);
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>这里我们使用参数名称来引用它。
+你也可以使用 <code>$0</code> 等替代。</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+您需要使用 <code>-parameters</code> 选项编译 Java 8+ 项目，以便无需额外注解即可使用命名参数。Spring Boot Maven 和 Gradle 插件会自动为您完成此操作。如果因任何原因无法实现这一点，您可以选择添加 <code>@Param</code> 并显式指定名称，或者使用参数索引。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>作为参数传递给带有自定义查询注解的函数时，所有映射实体（即包含 `<code>@Node</code>` 的内容）将被转换为嵌套 Map。以下示例展示了其作为 Neo4j 参数的结构。</p>
+</div>
+<div class="paragraph">
+<p>给定如下所示的<a href="#movie-model">电影模型</a>中注释的<code>Movie</code>、<code>Vertex</code>和<code>Actor</code>类：</p>
+</div>
+<div class="listingblock" id="movie-model">
+<div class="title">“标准”电影模型</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node
+public final class Movie {
+
+    @Id
+    private final String title;
+
+    @Property("tagline")
+    private final String description;
+
+    @Relationship(value = "ACTED_IN", direction = Direction.INCOMING)
+    private final List&lt;Actor&gt; actors;
+
+    @Relationship(value = "DIRECTED", direction = Direction.INCOMING)
+    private final List&lt;Person&gt; directors;
+}
+
+@Node
+public final class Person {
+
+    @Id @GeneratedValue
+    private final Long id;
+
+    private final String name;
+
+    private Integer born;
+
+    @Relationship("REVIEWED")
+    private List&lt;Movie&gt; reviewed = new ArrayList&lt;&gt;();
+}
+
+@RelationshipProperties
+public final class Actor {
+
+	@RelationshipId
+	private final Long id;
+
+    @TargetNode
+    private final Person person;
+
+    private final List&lt;String&gt; roles;
+}
+
+interface MovieRepository extends Neo4jRepository&lt;Movie, String&gt; {
+
+    @Query("MATCH (m:Movie {title: $movie.__id__})\n"
+           + "MATCH (m) &lt;- [r:DIRECTED|REVIEWED|ACTED_IN] - (p:Person)\n"
+           + "return m, collect(r), collect(p)")
+    Movie findByMovie(@Param("movie") Movie movie);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>向上述存储库方法传递一个 `<code>Movie</code>` 实例，将生成以下 Neo4j 映射参数：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "movie": {
+    "__labels__": [
+      "Movie"
+    ],
+    "__id__": "The Da Vinci Code",
+    "__properties__": {
+      "ACTED_IN": [
+        {
+          "__properties__": {
+            "roles": [
+              "Sophie Neveu"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 402,
+            "__properties__": {
+              "name": "Audrey Tautou",
+              "born": 1976
+            }
+          }
+        },
+        {
+          "__properties__": {
+            "roles": [
+              "Sir Leight Teabing"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 401,
+            "__properties__": {
+              "name": "Ian McKellen",
+              "born": 1939
+            }
+          }
+        },
+        {
+          "__properties__": {
+            "roles": [
+              "Dr. Robert Langdon"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 360,
+            "__properties__": {
+              "name": "Tom Hanks",
+              "born": 1956
+            }
+          }
+        },
+        {
+          "__properties__": {
+            "roles": [
+              "Silas"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 403,
+            "__properties__": {
+              "name": "Paul Bettany",
+              "born": 1971
+            }
+          }
+        }
+      ],
+      "DIRECTED": [
+        {
+          "__labels__": [
+            "Person"
+          ],
+          "__id__": 404,
+          "__properties__": {
+            "name": "Ron Howard",
+            "born": 1954
+          }
+        }
+      ],
+      "tagline": "Break The Codes",
+      "released": 2006
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>节点由一个映射表示。该映射始终包含 `<code>__id__</code>`，即映射的 id 属性。  
+在 `<code>__labels__</code>` 下，所有标签（静态和动态）均可访问。  
+所有属性以及关系类型均出现在这些映射中，其形式与实体由 SDN 写入图时呈现的形式一致。  
+值将具有正确的 Cypher 类型，无需进一步转换。</p>
+</div>
+<div class="admonitionblock tip">
+<table><tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+所有关系都是映射列表。动态关系将据此解析。一对一的关系也将被序列化为单例列表。因此，要访问两个人之间的一对一映射，您需要这样编写：<code>$person.__properties__.BEST_FRIEND[0].__target__.__id__</code>。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>如果某个实体与不同类型的其他节点具有相同类型的关系，它们将全部出现在同一个列表中。  
+如果您需要这样的映射，并且还需要处理这些自定义参数，则必须对其进行相应的展开。  
+实现此目标的一种方法是使用相关子查询（需要 Neo4j 4.1 或更高版本）。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-queries.expressions"><a class="anchor" href="#custom-queries.expressions"></a>自定义查询中的值表达式</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="custom-queries.spel"><a class="anchor" href="#custom-queries.spel"></a>自定义查询中的 Spring 表达式语言</h3>
+<div class="paragraph">
+<p><a href="https://docs.spring.io/spring-framework/reference/7.0/core/expressions.html">Spring 表达式语言 (SpEL)</a> 可用于 <code>:#{}</code> 内部的自定义查询中。此处的冒号表示参数，因此此类表达式应仅在参数有意义的地方使用。然而，在使用我们的<a href="#literal-extension">字面量扩展</a>时，您可以在标准 Cypher 不允许使用参数的位置（例如用于标签或关系类型）使用 SpEL 表达式。这是 Spring Data 定义查询中需经过 SpEL 评估的文本块的标准方式。</p>
+</div>
+<div class="paragraph">
+<p>下面的示例基本上定义了与上述相同的查询，但使用了一个 <code>WHERE</code> 子句来避免更多的花括号：</p>
+</div>
+<div class="listingblock" id="custom-queries-with-spel-parameter-example">
+<div class="title">ARepository.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface ARepository extends Neo4jRepository&lt;AnAggregateRoot, String&gt; {
+
+	@Query("MATCH (a:AnAggregateRoot) WHERE a.name = :#{#pt1 + #pt2} RETURN a")
+	Optional&lt;AnAggregateRoot&gt; findByCustomQueryWithSpEL(String pt1, String pt2);
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>SpEL 阻塞以<code>:#{</code>开头，然后通过名称引用给定的<string>参数（例如<code>#pt1</code>）。  
+请勿将其与上述 Cypher 语法混淆！  
+SpEL 表达式将两个参数拼接为一个单一值，该值最终传递给<a class="xref page" href="neo4j-client.html#neo4j-client">附录/neo4j-client.adoc#neo4j-client</a>。  
+SpEL 块以<code>}</code>结束。</string></p>
+</div>
+<div class="paragraph">
+<p>SpEL 还解决了两个额外的问题。我们提供了两个扩展，允许将 `<code>Sort</code>` 对象传入自定义查询中。  
+还记得关于<a class="xref page" href="../faq.html#custom-queries-with-page-and-slice-examples">faq.adoc#custom-queries-with-page-and-slice-examples</a>的<a class="xref page" href="../faq.html#faq.custom-queries-with-page-and-slice">自定义查询</a>吗？  
+通过 `<code>orderBy</code>` 扩展，您可以将一个带有动态排序的 `<code>Pageable</code>` 对象传入自定义查询：</p>
+</div>
+<div class="listingblock" id="custom-queries.spel.source">
+<div class="title">orderBy-Extension</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.data.neo4j.repository.query.Query;
+
+</span><span class="fold-block">public interface MyPersonRepository extends Neo4jRepository&lt;Person, Long&gt; {
+
+    @Query(""
+        + "MATCH (n:Person) WHERE n.name = $name RETURN n "
+        + ":#{orderBy(#pageable)} SKIP $skip LIMIT $limit" <i class="conum" data-value="1"></i><b>(1)</b>
+    )
+    Slice&lt;Person&gt; findSliceByName(String name, Pageable pageable);
+
+    @Query(""
+        + "MATCH (n:Person) WHERE n.name = $name RETURN n :#{orderBy(#sort)}" <i class="conum" data-value="2"></i><b>(2)</b>
+    )
+    List&lt;Person&gt; findAllByName(String name, Sort sort);
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>Pageable</code> 在 SpEL 上下文中始终具有名称 <code>pageable</code>。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>Sort</code> 在 SpEL 上下文中始终具有名称 <code>sort</code>。</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="spel-extensions"><a class="anchor" href="#spel-extensions"></a>Spring 表达式语言扩展</h3>
+<div class="sect3">
+<h4 id="literal-extension"><a class="anchor" href="#literal-extension"></a>字面量扩展</h4>
+<div class="paragraph">
+<p>`literal` 扩展可用于在自定义查询中使标签或关系类型等元素呈现“动态”特性。由于 Cypher 无法对标签或关系类型进行参数化，因此必须将其作为字面量提供。</p>
+</div>
+<div class="listingblock">
+<div class="title">literal-Extension</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface BaseClassRepository extends Neo4jRepository&lt;Inheritance.BaseClass, Long&gt; {
+
+    @Query("MATCH (n:`:#{literal(#label)}`) RETURN n") <i class="conum" data-value="1"></i><b>(1)</b>
+    List&lt;Inheritance.BaseClass&gt; findByLabel(String label);
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>literal</code>扩展将被替换为已评估参数的字面值。</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>此处，<code>literal</code> 值已用于在 Label 上进行动态匹配。  
+如果将 <code>SomeLabel</code> 作为参数传递给该方法，则会生成 <code>MATCH (n:<code>SomeLabel</code>) RETURN n</code>。已添加转义符以正确转义值。SDN 不会自动执行此操作，因为在所有情况下这可能都不是您想要的行为。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list-extensions"><a class="anchor" href="#list-extensions"></a>列出扩展</h4>
+<div class="paragraph">
+<p>对于多个值，存在 `<code>allOf</code>` 和 `<code>anyOf</code>`，它们会分别渲染为所有值的 `<code>&amp;</code>`（与）或 `<code>|</code>`（或）连接的列表。</p>
+</div>
+<div class="listingblock">
+<div class="title">列出扩展</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface BaseClassRepository extends Neo4jRepository&lt;Inheritance.BaseClass, Long&gt; {
+
+    @Query("MATCH (n:`:#{allOf(#label)}`) RETURN n")
+    List&lt;Inheritance.BaseClass&gt; findByLabels(List&lt;String&gt; labels);
+
+    @Query("MATCH (n:`:#{anyOf(#label)}`) RETURN n")
+    List&lt;Inheritance.BaseClass&gt; findByLabels(List&lt;String&gt; labels);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_referring_to_labels"><a class="anchor" href="#_referring_to_labels"></a>引用标签</h3>
+<div class="paragraph">
+<p>您已经知道如何将 Node 映射到领域对象：</p>
+</div>
+<div class="listingblock">
+<div class="title">带有多个标签的节点</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node(primaryLabel = "Bike", labels = {"Gravel", "Easy Trail"})
+public class BikeNode {
+    @Id String id;
+
+    String name;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>该节点具有多个标签，如果在自定义查询中每次都重复这些标签会非常容易导致错误：你可能会遗漏某个标签或拼写错误。为此，我们提供以下表达式来避免这种情况：<code>#{#staticLabels}</code>。请注意，此表达式不以冒号开头！你可以在带有 <code>@Query</code> 注解的仓库方法中使用它：</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>#{#staticLabels}</code> 在实战中的应用</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BikeRepository extends Neo4jRepository&lt;Bike, String&gt; {
+
+    @Query("MATCH (n:#{#staticLabels}) WHERE n.id = $nameOrId OR n.name = $nameOrId RETURN n")
+    Optional&lt;Bike&gt; findByNameOrId(@Param("nameOrId") String nameOrId);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>该查询将解析为</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (n:`Bike`:`Gravel`:`Easy Trail`) WHERE n.id = $nameOrId OR n.name = $nameOrId RETURN n</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>请注意我们如何使用标准参数作为 `<code>nameOrId</code>`：在大多数情况下，无需在此处通过添加 SpEL 表达式来使事情复杂化。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-queries.propertyplaceholder"><a class="anchor" href="#custom-queries.propertyplaceholder"></a>自定义查询中的属性占位符解析</h3>
+<div class="paragraph">
+<p>在自定义查询中，可以在<code>${}</code>内使用 Spring 的属性占位符。</p>
+</div>
+<div class="listingblock" id="custom-queries-with-property-placeholder-example">
+<div class="title">ARepository.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Query("MATCH (a:AnAggregateRoot) WHERE a.name = :${foo} RETURN a")
+Optional&lt;AnAggregateRoot&gt; findByCustomQueryWithPropertyPlaceholder();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在上面的示例中，如果属性<code>foo</code>被设置为<code>bar</code>，那么<code>${foo}</code>块将被解析为<code>bar</code>。</p>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-versions">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-versions-content">
+              <button class="modal-versions-close" data-micromodal-close="">
+                <svg height="28px" viewbox="0 0 32 32" width="28px" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title></title><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"></line><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"></line></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left"><ul class="nav-versions">
+<li class="component">
+<a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+<ul class="versions">
+<li class="version is-latest">
+<a href="../data-commons/index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="component is-current">
+<a class="title" href="../index.html">Spring Data Neo4j</a>
+<ul class="versions">
+<li class="version is-current is-latest">
+<a href="../index.html">
+                            8.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+</ul></div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>相关 Spring 文档<ul class="projects-list">
+        <li><a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a></li>
+        <li><a href="https://docs.spring.io/spring-framework/reference/">
+  Spring 框架
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Cloud
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Data
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a></li>
+        <li><a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a></li>
+        <li><a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a></li>
+        <li><a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a></li>
+        <li><a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a></li>
+        <li><a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a></li>
+        <li><a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a></li>
+    </ul>
+  </li><a href="../spring-projects.html">所有文档...</a>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img alt="Spring" id="springlogo" src="../_/img/spring-logo.svg"/>
+        <p class="smallest antialiased">版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href="https://www.vmware.com/help/legal.html">使用条款</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">隐私政策</a> • <a href="https://spring.io/trademarks">商标指南</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">致谢</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">您的加州隐私权利</a> • <a class="ot-sdk-show-settings">Cookie 设置</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS”和“Amazon Web Services"是 Amazon.com Inc. 及其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。</p>
+    </div>
+    <div class="flex jc-between" id="social-icons">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" data-name="Twitter" id="Twitter-2"></path></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async="" src="../_/js/vendor/highlight.js"></script>
+<script async="" data-sync-storage-key="docs:preferred-tab" src="../_/js/vendor/asciidoctor-tabs.js"></script>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box"><a class="search-link" href="../search.html">在全部 Spring 文档中搜索</a></div>
+                <div class="search-by">
+                    <a aria-label="Search by Algolia" href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
+                        <img class="light" src="../_/img/algolia-light.svg" width="140"/>
+                        <img class="dark" src="../_/img/algolia-dark.svg" width="140"/>
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js"></script>
+<script async="" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-app-id="WB1FQYI187" data-index-name="springdocs" data-page-component="data-neo4j" data-page-version="8.1.0" data-stylesheet="../_/css/vendor/search.css" id="search-script" src="../_/js/vendor/search.js"></script>
+  
+
+</body></html>

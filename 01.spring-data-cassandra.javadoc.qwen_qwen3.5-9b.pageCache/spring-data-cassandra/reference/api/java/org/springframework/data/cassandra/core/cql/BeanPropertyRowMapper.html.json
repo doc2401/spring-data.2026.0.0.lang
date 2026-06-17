@@ -1,0 +1,446 @@
+{
+  "created_at": "2026-06-16 17:32:25",
+  "updated_at": "2026-06-16 17:32:25",
+  "stats": {
+    "total_entries": 86,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 107,
+    "entries_with_hits": 86,
+    "entries_without_hits": 0,
+    "hit_rate": 1.244186046511628,
+    "usage_percentage": 0.0086
+  },
+  "items": [
+    {
+      "source": "Static factory method to create a new <code>BeanPropertyRowMapper</code>.",
+      "translation": "静态工厂方法，用于创建新的<code>BeanPropertyRowMapper</code>。",
+      "count": 4
+    },
+    {
+      "source": "Retrieve a Cassandra object value for the specified column.",
+      "translation": "获取指定列的 Cassandra 对象值。",
+      "count": 4
+    },
+    {
+      "source": "Return a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a> for binding Cassandra values to bean properties, or null if none.",
+      "translation": "返回一个<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>用于将 Cassandra 值绑定到 Bean 属性，若无则返回 null。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>BeanPropertyRowMapper</code> for bean-style configuration.",
+      "translation": "为基于 Bean 的配置创建一个新的<code>BeanPropertyRowMapper</code>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>BeanPropertyRowMapper</code>, accepting unpopulated properties in the target bean.",
+      "translation": "创建一个新的<code>BeanPropertyRowMapper</code>，使其能够接受目标 Bean 中未填充的属性。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>BeanPropertyRowMapper</code>.",
+      "translation": "创建一个新的<code>BeanPropertyRowMapper</code>。",
+      "count": 2
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
+      "count": 2
+    },
+    {
+      "source": "Logger available to subclasses.",
+      "translation": "子类可用的 Logger。",
+      "count": 2
+    },
+    {
+      "source": "Construct an instance of the mapped class for the current row.",
+      "translation": "为当前行构建映射类的实例。",
+      "count": 2
+    },
+    {
+      "source": "Get the class that we are mapping to.",
+      "translation": "获取我们正在映射到的类。",
+      "count": 2
+    },
+    {
+      "source": "Initialize the mapping meta-data for the given class.",
+      "translation": "为给定类初始化映射元数据。",
+      "count": 2
+    },
+    {
+      "source": "Return whether we're strictly validating that all bean properties have been mapped from corresponding database\nfields.",
+      "translation": "返回是否严格验证所有 Bean 属性是否已从对应的数据库字段中映射。",
+      "count": 2
+    },
+    {
+      "source": "Return whether we're defaulting Java primitives in the case of mapping a null value from corresponding database\nfields.",
+      "translation": "返回在将来自对应数据库字段的 null 值映射时，我们是否默认使用了 Java 基本类型。",
+      "count": 2
+    },
+    {
+      "source": "Extract the values for all columns in the current row.",
+      "translation": "提取当前行所有列的值。",
+      "count": 2
+    },
+    {
+      "source": "Set whether we're strictly validating that all bean properties have been mapped from corresponding database fields.",
+      "translation": "设置是否严格验证所有 Bean 属性是否已从对应的数据库字段映射。",
+      "count": 2
+    },
+    {
+      "source": "Set the class that each row should be mapped to.",
+      "translation": "设置每行应映射到的类。",
+      "count": 2
+    },
+    {
+      "source": "Set whether we're defaulting Java primitives in the case of mapping a null value from corresponding database\nfields.",
+      "translation": "设置是否在将来自对应数据库字段的 null 值映射为 Java 基本类型时采用默认值。",
+      "count": 2
+    },
+    {
+      "source": "For 'null' values read from the database, we will attempt to call the setter, but in the case of Java primitives,\nthis causes a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/TypeMismatchException.html\" title=\"class or interface in org.springframework.beans\"><code>TypeMismatchException</code></a>. This class can be configured (using the\n<code>primitivesDefaultedForNullValue</code> property) to trap this exception and use the primitives default value. Be\naware that if you use the values from the generated bean to update the database the primitive value will have been\nset to the primitive's default value instead of null.",
+      "translation": "对于从数据库读取的 'null' 值，我们将尝试调用 setter；但在 Java 基本类型的情况下，这会引发 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/TypeMismatchException.html\" title=\"class or interface in org.springframework.beans\"><code>TypeMismatchException</code></a>。该类可以通过配置（使用 <code>primitivesDefaultedForNullValue</code> 属性）来捕获此异常并使用基本类型的默认值。请注意，如果您使用生成的 Bean 中的值来更新数据库，基本类型的值将被设置为该基本类型的默认值，而不是 null。",
+      "count": 1
+    },
+    {
+      "source": "Default is a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/support/DefaultConversionService.html\" title=\"class or interface in org.springframework.core.convert.support\"><code>DefaultConversionService</code></a>. This provides support for <code>java.time</code> conversion and other\nspecial types.",
+      "translation": "默认值为<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/support/DefaultConversionService.html\" title=\"class or interface in org.springframework.core.convert.support\"><code>DefaultConversionService</code></a>。它支持<code>java.time</code>转换以及其他特殊类型。",
+      "count": 1
+    },
+    {
+      "source": "Please note that this class is designed to provide convenience rather than high performance. For best performance,\nconsider using a custom <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> implementation.",
+      "translation": "请注意，此类的目的是提供便利性而非高性能。若要获得最佳性能，请考虑使用自定义的<a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowMapper</code></a>实现。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation applies the configured <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>, if any. Can be overridden in\nsubclasses.",
+      "translation": "默认实现会应用配置的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>（如果有的话）。可以在子类中重写此行为。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation calls <code>GettableByIndex.get(int, Class)</code>. Subclasses may override this to check specific value\ntypes upfront, or to post-process values return from <code>get</code>.",
+      "translation": "默认实现会调用<code>GettableByIndex.get(int, Class)</code>。子类可以重写此方法，以便提前检查特定的值类型，或对从<code>get</code>返回的值进行后处理。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Mapping is provided for fields in the target class for many common types, e.g.: String, boolean, Boolean, byte, Byte,\nshort, Short, int, Integer, long, Long, float, Float, double, Double, BigDecimal, <code>java.util.Date</code>, etc.",
+      "translation": "为许多常见类型（例如：String、boolean、Boolean、byte、Byte、short、Short、int、Integer、long、Long、float、Float、double、Double、BigDecimal、<code>java.util.Date</code> 等）的目标类字段提供了映射。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation delegates to <code>GettableByIndex.get(int, Class)</code>.",
+      "translation": "默认实现会委托给<code>GettableByIndex.get(int, Class)</code>。",
+      "count": 1
+    },
+    {
+      "source": "Column values are mapped based on matching the column name as obtained from result set meta-data to public setters\nfor the corresponding properties. The names are matched either directly or by transforming a name separating the\nparts with underscores to the same name using \"camel\" case.",
+      "translation": "列值将根据结果集元数据中获取的列名与对应属性的公共 setter 进行映射。名称匹配方式有两种：直接匹配，或将使用下划线分隔各部分名称转换为\"驼峰”式命名后匹配。",
+      "count": 1
+    },
+    {
+      "source": "To facilitate mapping between columns and fields that don't have matching names, try using column aliases in the CQL\nstatement like \"select fname as first_name from customer\".",
+      "translation": "为便于映射名称不匹配的列和字段，请在 CQL 语句中使用列别名，例如：\"select fname as first_name from customer\"。",
+      "count": 1
+    },
+    {
+      "source": "Default is false, accepting unpopulated properties in the target bean.",
+      "translation": "默认值为 false，允许目标 Bean 中存在未填充的属性。",
+      "count": 1
+    },
+    {
+      "source": "Default is false, throwing an exception when nulls are mapped to Java primitives.",
+      "translation": "默认值为 false，当将空值映射到 Java 基本类型时会抛出异常。",
+      "count": 1
+    },
+    {
+      "source": "Utilizes public setters and result set meta-data.",
+      "translation": "使用公共设置器和结果集元数据。",
+      "count": 1
+    },
+    {
+      "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
+      "translation": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">从类 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"java.lang 中的类或接口\">Object</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"java.lang 中的类或接口\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"java.lang 中的类或接口\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"java.lang 中的类或接口\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"java.lang 中的类或接口\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"java.lang 中的类或接口\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"java.lang 中的类或接口\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"java.lang 中的类或接口\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"java.lang 中的类或接口\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"java.lang 中的类或接口\">wait</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"type-parameters\">&lt;T&gt;</span> <span class=\"return-type\"><a href=\"BeanPropertyRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\">BeanPropertyRowMapper</a>&lt;T&gt;</span> <span class=\"element-name\">newInstance</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;T&gt; mappedClass,\n @Nullable <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\">ConversionService</a> conversionService)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"type-parameters\">&lt;T&gt;</span> <span class=\"return-type\"><a href=\"BeanPropertyRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\">BeanPropertyRowMapper</a>&lt;T&gt;</span> <span class=\"element-name\">newInstance</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;T&gt; mappedClass,\n @Nullable <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\">ConversionService</a> conversionService)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public static</span> <span class=\"type-parameters\">&lt;T&gt;</span> <span class=\"return-type\"><a href=\"BeanPropertyRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\">BeanPropertyRowMapper</a>&lt;T&gt;</span> <span class=\"element-name\">newInstance</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;T&gt; mappedClass)</span>",
+      "translation": "<span class=\"modifiers\">public static</span> <span class=\"type-parameters\">&lt;T&gt;</span> <span class=\"return-type\"><a href=\"BeanPropertyRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\">BeanPropertyRowMapper</a>&lt;T&gt;</span> <span class=\"element-name\">newInstance</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;T&gt; mappedClass)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">protected</span> <span class=\"return-type\"><a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a></span> <span class=\"element-name\">constructMappedInstance</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/TypeConverter.html\" title=\"class or interface in org.springframework.beans\">TypeConverter</a> tc)</span>",
+      "translation": "<span class=\"modifiers\">protected</span> <span class=\"return-type\"><a href=\"#type-param-T\" title=\"类 BeanPropertyRowMapper 中的类型参数\">T</a></span> <span class=\"element-name\">constructMappedInstance</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/TypeConverter.html\" title=\"org.springframework.beans 中的类或接口\">TypeConverter</a> tc)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">protected</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span> <span class=\"element-name\">getColumnValue</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n int index,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyDescriptor.html\" title=\"class or interface in java.beans\">PropertyDescriptor</a> pd)</span>",
+      "translation": "<span class=\"modifiers\">protected</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span> <span class=\"element-name\">getColumnValue</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n int index,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/beans/PropertyDescriptor.html\" title=\"class or interface in java.beans\">PropertyDescriptor</a> pd)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">protected</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span> <span class=\"element-name\">getColumnValue</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n int index,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;?&gt; paramType)</span>",
+      "translation": "<span class=\"modifiers\">protected</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span> <span class=\"element-name\">getColumnValue</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n int index,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;?&gt; paramType)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"element-name\">BeanPropertyRowMapper</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a>&gt; mappedClass,\n boolean checkFullyPopulated)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"element-name\">BeanPropertyRowMapper</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a>&gt; mappedClass,\n boolean checkFullyPopulated)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\"><a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a></span> <span class=\"element-name\">mapRow</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n int rowNumber)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\"><a href=\"#type-param-T\" title=\"BeanPropertyRowMapper 中的类型参数\">T</a></span> <span class=\"element-name\">mapRow</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.Row row,\n int rowNumber)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">BeanPropertyRowMapper&lt;T&gt;</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;T&gt;</span>",
+      "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">BeanPropertyRowMapper&lt;T&gt;</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;T&gt;</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public final</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\">Class</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a>&gt;</span> <span class=\"element-name\">getMappedClass</span>()",
+      "translation": "<span class=\"modifiers\">public final</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\">Class</a>&lt;<a href=\"#type-param-T\" title=\"BeanPropertyRowMapper 中的类型参数\">T</a>&gt;</span> <span class=\"element-name\">getMappedClass</span>()",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setCheckFullyPopulated</span><wbr/><span class=\"parameters\">(boolean checkFullyPopulated)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setCheckFullyPopulated</span><wbr/><span class=\"parameters\">(boolean checkFullyPopulated)</span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setPrimitivesDefaultedForNullValue</span><wbr/><span class=\"parameters\">(boolean primitivesDefaultedForNullValue)</span>",
+      "translation": "<span class=\"modifiers\">public</span> <span class=\"return-type\">void</span> <span class=\"element-name\">setPrimitivesDefaultedForNullValue</span><wbr/><span class=\"parameters\">(boolean primitivesDefaultedForNullValue)</span>",
+      "count": 1
+    },
+    {
+      "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
+      "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"modifiers\">protected final</span> <span class=\"return-type\">org.apache.commons.logging.Log</span> <span class=\"element-name\">logger</span>",
+      "translation": "<span class=\"modifiers\">protected final</span> <span class=\"return-type\">org.apache.commons.logging.Log</span> <span class=\"element-name\">logger</span>",
+      "count": 1
+    },
+    {
+      "source": "Initialize the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/BeanWrapper.html\" title=\"class or interface in org.springframework.beans\"><code>BeanWrapper</code></a> to be used for row mapping.",
+      "translation": "初始化给定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/BeanWrapper.html\" title=\"class or interface in org.springframework.beans\"><code>BeanWrapper</code></a>，以便用于行映射。",
+      "count": 1
+    },
+    {
+      "source": "Set a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a> for binding Cassandra values to bean properties, or null for none.",
+      "translation": "设置一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a> 用于将 Cassandra 值绑定到 Bean 属性，或者设置为 null 表示无转换。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
+      "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
+      "count": 1
+    },
+    {
+      "source": "<h1 class=\"title\" title=\"Class BeanPropertyRowMapper\">Class BeanPropertyRowMapper&lt;T&gt;</h1>",
+      "translation": "<h1 class=\"title\" title=\"类 BeanPropertyRowMapper\">类 BeanPropertyRowMapper&lt;T&gt;</h1>",
+      "count": 1
+    },
+    {
+      "source": "Spring Data for Apache Cassandra Core",
+      "translation": "Apache Cassandra Spring Data 核心",
+      "count": 1
+    },
+    {
+      "source": "Convert the given name to lower case.",
+      "translation": "将给定名称转换为小写。",
+      "count": 1
+    },
+    {
+      "source": "Convert a name in camelCase to an underscored name in lower case.",
+      "translation": "将驼峰式命名的名称转换为下划线命名的小写形式。",
+      "count": 1
+    },
+    {
+      "source": "Convert a name in camelCase to an underscored name in lower case. Any upper case letters are converted to lower\ncase with a preceding underscore.",
+      "translation": "将驼峰式命名的名称转换为下划线命名且为小写。任何大写字母均转换为小写，并在其前添加一个下划线。",
+      "count": 1
+    },
+    {
+      "source": "Convert the given name to lower case. By default, conversions will happen within the US locale.",
+      "translation": "将给定名称转换为小写。默认情况下，转换将在美国区域设置中进行。",
+      "count": 1
+    },
+    {
+      "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#field-summary\" tabindex=\"0\">Field Summary</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">Constructor Summary</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#field-detail\" tabindex=\"0\">Field Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#logger\" tabindex=\"0\">logger</a></li>\n</ol>\n</li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">Constructor Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E()\" tabindex=\"0\">BeanPropertyRowMapper()</a></li>\n<li><a href=\"#%3Cinit%3E(java.lang.Class)\" tabindex=\"0\">BeanPropertyRowMapper(Class)</a></li>\n<li><a href=\"#%3Cinit%3E(java.lang.Class,boolean)\" tabindex=\"0\">BeanPropertyRowMapper(Class, boolean)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#setMappedClass(java.lang.Class)\" tabindex=\"0\">setMappedClass(Class)</a></li>\n<li><a href=\"#getMappedClass()\" tabindex=\"0\">getMappedClass()</a></li>\n<li><a href=\"#setCheckFullyPopulated(boolean)\" tabindex=\"0\">setCheckFullyPopulated(boolean)</a></li>\n<li><a href=\"#isCheckFullyPopulated()\" tabindex=\"0\">isCheckFullyPopulated()</a></li>\n<li><a href=\"#setPrimitivesDefaultedForNullValue(boolean)\" tabindex=\"0\">setPrimitivesDefaultedForNullValue(boolean)</a></li>\n<li><a href=\"#isPrimitivesDefaultedForNullValue()\" tabindex=\"0\">isPrimitivesDefaultedForNullValue()</a></li>\n<li><a href=\"#setConversionService(org.springframework.core.convert.ConversionService)\" tabindex=\"0\">setConversionService(ConversionService)</a></li>\n<li><a href=\"#getConversionService()\" tabindex=\"0\">getConversionService()</a></li>\n<li><a href=\"#initialize(java.lang.Class)\" tabindex=\"0\">initialize(Class)</a></li>\n<li><a href=\"#underscoreName(java.lang.String)\" tabindex=\"0\">underscoreName(String)</a></li>\n<li><a href=\"#lowerCaseName(java.lang.String)\" tabindex=\"0\">lowerCaseName(String)</a></li>\n<li><a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\" tabindex=\"0\">mapRow(Row, int)</a></li>\n<li><a href=\"#constructMappedInstance(com.datastax.oss.driver.api.core.cql.Row,org.springframework.beans.TypeConverter)\" tabindex=\"0\">constructMappedInstance(Row, TypeConverter)</a></li>\n<li><a href=\"#initBeanWrapper(org.springframework.beans.BeanWrapper)\" tabindex=\"0\">initBeanWrapper(BeanWrapper)</a></li>\n<li><a href=\"#getColumnValue(com.datastax.oss.driver.api.core.cql.Row,int,java.beans.PropertyDescriptor)\" tabindex=\"0\">getColumnValue(Row, int, PropertyDescriptor)</a></li>\n<li><a href=\"#getColumnValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\" tabindex=\"0\">getColumnValue(Row, int, Class)</a></li>\n<li><a href=\"#newInstance(java.lang.Class)\" tabindex=\"0\">newInstance(Class)</a></li>\n<li><a href=\"#newInstance(java.lang.Class,org.springframework.core.convert.ConversionService)\" tabindex=\"0\">newInstance(Class, ConversionService)</a></li>\n</ol>\n</li>",
+      "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#field-summary\" tabindex=\"0\">字段摘要</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">构造函数摘要</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#field-detail\" tabindex=\"0\">字段详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#logger\" tabindex=\"0\">logger</a></li>\n</ol>\n</li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">构造函数详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E()\" tabindex=\"0\">BeanPropertyRowMapper()</a></li>\n<li><a href=\"#%3Cinit%3E(java.lang.Class)\" tabindex=\"0\">BeanPropertyRowMapper(Class)</a></li>\n<li><a href=\"#%3Cinit%3E(java.lang.Class,boolean)\" tabindex=\"0\">BeanPropertyRowMapper(Class, boolean)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#setMappedClass(java.lang.Class)\" tabindex=\"0\">setMappedClass(Class)</a></li>\n<li><a href=\"#getMappedClass()\" tabindex=\"0\">getMappedClass()</a></li>\n<li><a href=\"#setCheckFullyPopulated(boolean)\" tabindex=\"0\">setCheckFullyPopulated(boolean)</a></li>\n<li><a href=\"#isCheckFullyPopulated()\" tabindex=\"0\">isCheckFullyPopulated()</a></li>\n<li><a href=\"#setPrimitivesDefaultedForNullValue(boolean)\" tabindex=\"0\">setPrimitivesDefaultedForNullValue(boolean)</a></li>\n<li><a href=\"#isPrimitivesDefaultedForNullValue()\" tabindex=\"0\">isPrimitivesDefaultedForNullValue()</a></li>\n<li><a href=\"#setConversionService(org.springframework.core.convert.ConversionService)\" tabindex=\"0\">setConversionService(ConversionService)</a></li>\n<li><a href=\"#getConversionService()\" tabindex=\"0\">getConversionService()</a></li>\n<li><a href=\"#initialize(java.lang.Class)\" tabindex=\"0\">initialize(Class)</a></li>\n<li><a href=\"#underscoreName(java.lang.String)\" tabindex=\"0\">underscoreName(String)</a></li>\n<li><a href=\"#lowerCaseName(java.lang.String)\" tabindex=\"0\">lowerCaseName(String)</a></li>\n<li><a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\" tabindex=\"0\">mapRow(Row, int)</a></li>\n<li><a href=\"#constructMappedInstance(com.datastax.oss.driver.api.core.cql.Row,org.springframework.beans.TypeConverter)\" tabindex=\"0\">constructMappedInstance(Row, TypeConverter)</a></li>\n<li><a href=\"#initBeanWrapper(org.springframework.beans.BeanWrapper)\" tabindex=\"0\">initBeanWrapper(BeanWrapper)</a></li>\n<li><a href=\"#getColumnValue(com.datastax.oss.driver.api.core.cql.Row,int,java.beans.PropertyDescriptor)\" tabindex=\"0\">getColumnValue(Row, int, PropertyDescriptor)</a></li>\n<li><a href=\"#getColumnValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\" tabindex=\"0\">getColumnValue(Row, int, Class)</a></li>\n<li><a href=\"#newInstance(java.lang.Class)\" tabindex=\"0\">newInstance(Class)</a></li>\n<li><a href=\"#newInstance(java.lang.Class,org.springframework.core.convert.ConversionService)\" tabindex=\"0\">newInstance(Class, ConversionService)</a></li>\n</ol>\n</li>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>mappedClass</code> - the class that each row should be mapped to.</dd>\n<dd><code>conversionService</code> - the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a> for binding Cassandra values to bean properties, or\n         null for none.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#newInstance(java.lang.Class)\"><code>newInstance(Class)</code></a></li>\n<li><a href=\"#setConversionService(org.springframework.core.convert.ConversionService)\"><code>setConversionService(ConversionService)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>mappedClass</code> - 每一行应映射到的类。</dd>\n<dd><code>conversionService</code> - 用于将 Cassandra 值绑定到 Bean 属性的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>，或者为无转换时设为 null。</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#newInstance(java.lang.Class)\"><code>newInstance(Class)</code></a></li>\n<li><a href=\"#setConversionService(org.springframework.core.convert.ConversionService)\"><code>setConversionService(ConversionService)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Specified by:</dt>\n<dd><code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">mapRow</a></code> in interface <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in BeanPropertyRowMapper\">T</a>&gt;</code></dd>\n<dt>Parameters:</dt>\n<dd><code>row</code> - the <code>Row</code> to map, must not be null.</dd>\n<dd><code>rowNumber</code> - the number of the current row.</dd>\n<dt>Returns:</dt>\n<dd>the result object for the current row.</dd>",
+      "translation": "<dt>指定于：</dt>\n<dd><code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">mapRow</a></code> 接口 <code><a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"BeanPropertyRowMapper 中的类型参数\">T</a>&gt;</code> 中的方法</dd>\n<dt>参数：</dt>\n<dd><code>row</code> - 要映射的 <code>Row</code>，不能为 null。</dd>\n<dd><code>rowNumber</code> - 当前行的行号。</dd>\n<dt>返回：</dt>\n<dd>当前行的结果对象。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>row</code> - is the row holding the data</dd>\n<dd><code>index</code> - is the column index</dd>\n<dd><code>pd</code> - the bean property that each result object is expected to match</dd>\n<dt>Returns:</dt>\n<dd>the Object value</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getColumnValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\"><code>getColumnValue(Row, int, Class)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>row</code> - 包含数据的行</dd>\n<dd><code>index</code> - 列索引</dd>\n<dd><code>pd</code> - 每个结果对象预期匹配的 Bean 属性</dd>\n<dt>返回：</dt>\n<dd>Object 值</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getColumnValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\"><code>getColumnValue(Row, int, Class)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>bw</code> - the BeanWrapper to initialize</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getConversionService()\"><code>getConversionService()</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/ConfigurablePropertyAccessor.html#setConversionService(org.springframework.core.convert.ConversionService)\" title=\"class or interface in org.springframework.beans\"><code>ConfigurablePropertyAccessor.setConversionService(ConversionService)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>bw</code> - 要初始化的 BeanWrapper</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#getConversionService()\"><code>getConversionService()</code></a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/ConfigurablePropertyAccessor.html#setConversionService(org.springframework.core.convert.ConversionService)\" title=\"org.springframework.beans 中的类或接口\"><code>ConfigurablePropertyAccessor.setConversionService(ConversionService)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>name</code> - the original name</dd>\n<dt>Returns:</dt>\n<dd>the converted name</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"#lowerCaseName(java.lang.String)\"><code>lowerCaseName(String)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>name</code> - 原始名称</dd>\n<dt>返回：</dt>\n<dd>转换后的名称</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"#lowerCaseName(java.lang.String)\"><code>lowerCaseName(String)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#setMappedClass(java.lang.Class)\"><code>setMappedClass(Class)</code></a></li>\n<li><a href=\"#setCheckFullyPopulated(boolean)\"><code>setCheckFullyPopulated(boolean)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#setMappedClass(java.lang.Class)\"><code>setMappedClass(Class)</code></a></li>\n<li><a href=\"#setCheckFullyPopulated(boolean)\"><code>setCheckFullyPopulated(boolean)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>row</code> - is the row holding the data.</dd>\n<dd><code>index</code> - is the column index.</dd>\n<dd><code>paramType</code> - the target parameter type.</dd>\n<dt>Returns:</dt>\n<dd>the Object value.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>row</code> - 包含数据的行。</dd>\n<dd><code>index</code> - 列索引。</dd>\n<dd><code>paramType</code> - 目标参数类型。</dd>\n<dt>返回：</dt>\n<dd>Object 类型的值。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>mappedClass</code> - the class that each row should be mapped to.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#newInstance(java.lang.Class,org.springframework.core.convert.ConversionService)\"><code>newInstance(Class, ConversionService)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>mappedClass</code> - 每一行应映射到的类。</dd>\n<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list-long\">\n<li><a href=\"#newInstance(java.lang.Class,org.springframework.core.convert.ConversionService)\"><code>newInstance(Class, ConversionService)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>row</code> - the row to map (pre-initialized for the current row)</dd>\n<dd><code>tc</code> - a TypeConverter with this RowMapper's conversion service</dd>\n<dt>Returns:</dt>\n<dd>a corresponding instance of the mapped class</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>row</code> - 要映射的行（已针对当前行预初始化）</dd>\n<dd><code>tc</code> - 一个带有此 RowMapper 转换服务的 TypeConverter</dd>\n<dt>返回：</dt>\n<dd>对应映射类的实例</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"#initBeanWrapper(org.springframework.beans.BeanWrapper)\"><code>initBeanWrapper(BeanWrapper)</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>另见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"#initBeanWrapper(org.springframework.beans.BeanWrapper)\"><code>initBeanWrapper(BeanWrapper)</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>mappedClass</code> - the class that each row should be mapped to</dd>\n<dd><code>checkFullyPopulated</code> - whether we're strictly validating that all bean properties have been mapped from\n         corresponding database fields</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>mappedClass</code> - 每一行应映射到的类</dd>\n<dd><code>checkFullyPopulated</code> - 是否严格验证所有 Bean 属性是否已从对应的数据库字段中映射</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>name</code> - the original name</dd>\n<dt>Returns:</dt>\n<dd>the converted name</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>name</code> - 原始名称</dd>\n<dt>返回值：</dt>\n<dd>转换后的名称</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Type Parameters:</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - the result type</span></dd>",
+      "translation": "<dt>类型参数：</dt>\n<dd><span id=\"type-param-T\"><code>T</code> - 结果类型</span></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>All Implemented Interfaces:</dt>\n<dd><code><a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;T&gt;</code></dd>",
+      "translation": "<dt>所有已实现的接口：</dt>\n<dd><code><a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\">RowMapper</a>&lt;T&gt;</code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Direct Known Subclasses:</dt>\n<dd><code><a href=\"DataClassRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\">DataClassRowMapper</a></code></dd>",
+      "translation": "<dt>直接已知子类：</dt>\n<dd><code><a href=\"DataClassRowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的类\">DataClassRowMapper</a></code></dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Since:</dt>\n<dd>3.1</dd>\n<dt>Author:</dt>\n<dd>Mark Paluch</dd>",
+      "translation": "<dt>版本：</dt>\n<dd>3.1</dd>\n<dt>作者：</dt>\n<dd>Mark Paluch</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>mappedClass</code> - the class that each row should be mapped to</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>mappedClass</code> - 每一行应映射到的类</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>mappedClass</code> - the mapped class</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>mappedClass</code> - 映射的类</dd>",
+      "count": 1
+    },
+    {
+      "source": "<span>Hide sidebar </span><img alt=\"Hide sidebar\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "translation": "<span>隐藏侧边栏</span><img alt=\"隐藏侧边栏\" src=\"../../../../../../resource-files/left.svg\"/>",
+      "count": 1
+    },
+    {
+      "source": "<img alt=\"Show sidebar\" src=\"../../../../../../resource-files/right.svg\"/><span> Show sidebar</span>",
+      "translation": "<img alt=\"显示侧边栏\" src=\"../../../../../../resource-files/right.svg\"/><span> 显示侧边栏</span>",
+      "count": 1
+    },
+    {
+      "source": "Field Summary",
+      "translation": "字段摘要",
+      "count": 1
+    },
+    {
+      "source": "Constructor Summary",
+      "translation": "构造函数摘要",
+      "count": 1
+    },
+    {
+      "source": "Method Summary",
+      "translation": "方法摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Constructor Details",
+      "translation": "构造器详情",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "implementation that converts a",
+      "translation": "实现将",
+      "count": 1
+    },
+    {
+      "source": "into a new instance of the specified mapped target\nclass. The mapped target class must be a top-level class and it must have a default or no-arg constructor.",
+      "translation": "转换为指定映射目标类的实例。该映射目标类必须为顶层类，且必须具备默认构造函数或无参构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Set a",
+      "translation": "设置 a",
+      "count": 1
+    },
+    {
+      "source": "for binding Cassandra values to bean properties, or null for none.",
+      "translation": "用于将 Cassandra 值绑定到 Bean 属性，或为无时设为 null。",
+      "count": 1
+    },
+    {
+      "source": "Initialize the given",
+      "translation": "初始化给定的",
+      "count": 1
+    },
+    {
+      "source": "to be used for row mapping. To be called for each row.",
+      "translation": "用于行映射。每行调用一次。",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>投影：Spring Data Elasticsearch</title>
+    <link href="https://docs.spring.io/spring-data-elasticsearch/reference/repositories/projections.html" rel="canonical"/>
+    <meta content="Antora 3.2.0-alpha.6" name="generator"/>
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link href="../_/css/site.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/page-search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/asciidoctor-tabs.css" rel="stylesheet"/>
+
+    <meta content="v0.4.16" name="antora-ui-version"/> 
+    <meta content="6.1.0" name="version"/>
+    <meta content="data-elasticsearch" name="component"/>
+    <meta content="false" name="latest-version"/>
+    <link href="../_/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img alt="Spring" class="block" id="springlogo" src="../_/img/spring-logo.svg"/>
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-menu" id="topbar-nav">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">为何是春天</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.io/why-spring">概览</a>
+<a class="navbar-item" href="https://spring.io/microservices">微服务</a>
+<a class="navbar-item" href="https://spring.io/reactive">响应式</a>
+<a class="navbar-item" href="https://spring.io/event-driven">事件驱动</a>
+<a class="navbar-item" href="https://spring.io/cloud">云</a>
+<a class="navbar-item" href="https://spring.io/web-applications">Web 应用</a>
+<a class="navbar-item" href="https://spring.io/serverless">无服务器</a>
+<a class="navbar-item" href="https://spring.io/batch">批处理</a></div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px"><a class="navbar-item" href="https://spring.io/projects">概览</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+<a class="navbar-item navbar-item-special" href="https://spring.io/projects">查看所有项目</a>
+<li class="navbar-item navbar-item-special-3">开发工具</li>
+<a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+<a class="navbar-item navbar-item-special-2" href="https://start.spring.io">Spring Initializr
+              <svg class="external-link-icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="15 10.94 15 15 1 15 1 1 5.06 1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><polyline fill="none" points="8.93 1 15 1 15 7.07" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><line fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" x1="15" x2="8" y1="1" y2="8"></line></svg></a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.academy/courses">课程</a>
+<a class="navbar-item" href="https://spring.academy/learning-path">获取认证</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg"><a class="navbar-item" href="https://spring.io/solutions">概览</a>
+<a class="navbar-item" href="https://spring.io/support">Spring 运行时</a>
+<a class="navbar-item" href="https://spring.io/consulting">Spring 咨询</a>
+<a class="navbar-item" href="https://spring.academy/teams">Spring Academy 团队培训</a>
+<a class="navbar-item" href="https://spring.io/security">安全公告</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input id="switch-theme-checkbox" name="switch-theme-checkbox" type="checkbox"/>
+      <span class="icon"><svg aria-hidden="true" class="svg-inline--fa fa-moon moon" data-icon="moon" data-prefix="fas" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" fill="currentColor"></path>
+</svg>
+        <svg aria-hidden="true" class="svg-inline--fa fa-sun sun" data-icon="sun" data-prefix="fas" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" fill="currentColor"></path>
+</svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-elasticsearch" data-version="6.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Elasticsearch</span>
+  <span class="version">6.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg height="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="24px" xml:space="preserve"><g><path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"></path><path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"></path><path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewbox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+</svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../index.html">概览</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../commons/upgrade.html">升级 Spring Data</a>
+</li>
+<li class="nav-item" data-depth="2">
+<button class="nav-item-toggle"></button>
+<a class="nav-link" href="../migration-guides.html">迁移指南</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-3.2-4.0.html">从 3.2.x 升级到 4.0.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-4.0-4.1.html">从 4.0.x 升级到 4.1.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-4.1-4.2.html">从 4.1.x 升级到 4.2.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-4.2-4.3.html">从 4.2.x 升级到 4.3.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-4.3-4.4.html">从 4.3.x 升级到 4.4.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-4.4-5.0.html">从 4.4.x 升级到 5.0.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-5.0-5.1.html">从 5.0.x 升级到 5.1.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-5.1-5.2.html">从 5.1.x 升级到 5.2.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-5.2-5.3.html">从 5.2.x 升级到 5.3.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-5.3-5.4.html">从 5.3.x 升级到 5.4.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-5.4-5.5.html">从 5.4.x 升级到 5.5.x</a>
+</li>
+<li class="nav-item" data-depth="3">
+<a class="nav-link" href="../migration-guides/migration-guide-5.5-6.0.html">从 5.5.x 升级到 6.0.x</a>
+</li>
+</ul>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../elasticsearch.html">Elasticsearch 支持</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/clients.html">Elasticsearch 客户端</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/object-mapping.html">Elasticsearch 对象映射</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/template.html">Elasticsearch 操作</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/reactive-template.html">响应式 Elasticsearch 操作</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/entity-callbacks.html">实体回调</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/auditing.html">Elasticsearch 审计</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/join-types.html">Join-Type 实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/routing.html">路由值</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/misc.html">其他 Elasticsearch 操作支持</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/scripted-and-runtime-fields.html">脚本字段和运行时字段</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../repositories.html">仓储</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="core-concepts.html">核心概念</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="definition.html">定义仓储接口</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/repositories/elasticsearch-repositories.html">Elasticsearch 仓储</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/repositories/reactive-elasticsearch-repositories.html">响应式 Elasticsearch 仓储</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="create-instances.html">创建仓储实例</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-methods-details.html">定义查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/repositories/elasticsearch-repository-queries.html">查询方法</a>
+</li>
+<li class="nav-item is-current-page" data-depth="2">
+<a class="nav-link" href="projections.html">投影</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="custom-implementations.html">自定义仓储实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="core-domain-events.html">从聚合根发布事件</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="null-handling.html">仓储方法的空值处理</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../elasticsearch/repositories/cdi-integration.html">CDI 集成</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-keywords-reference.html">仓储查询关键字</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-return-types-reference.html">仓储查询返回类型</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external" href="../api/java/index.html" target="_blank">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external" href="https://github.com/spring-projects/spring-data-commons/wiki" target="_blank">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button class="nav-toggle" id="nav-toggle-2"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle" id="nav-toggle-1"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg id="svg-stash-de15fb15"></svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="toc" data-levels="2" data-title="Projections">
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links"><a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-elasticsearch/src/main/antora/modules/ROOT/pages/repositories/projections.adoc">
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          编辑此页面
+        </a>
+<a href="https://github.com/spring-projects/spring-data-elasticsearch" title="GitHub">
+<svg height="512px" id="Layer_1" version="1.1" viewbox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg"><style type="text/css">
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} </style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          GitHub 项目
+        </a></div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container"><nav aria-label="面包屑" class="breadcrumbs">
+<ul>
+<li><a href="../index.html">Spring Data Elasticsearch</a></li>
+<li><a href="../repositories.html">仓储</a></li>
+<li><a href="projections.html">投影</a></li>
+</ul>
+</nav></div><h1 class="page" id="page-title">Projections</h1>
+<div class="sect1">
+<h2 id="elasticsearch.projections.limitations"><a class="anchor" href="#elasticsearch.projections.limitations"></a>Spring Data Elasticsearch 投影的局限性</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>本章内容源自 Spring Data Commons 文档，但不适用于 Spring Data Elasticsearch。</p>
+</div>
+<div class="admonitionblock important">
+<table><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Spring Data Elasticsearch 存储库查询方法不支持基于接口的投影。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>若要限制从 Elasticsearch 返回的字段，请在您的存储库方法上使用 <a class="xref page" href="../elasticsearch/repositories/elasticsearch-repositories.html#elasticsearch.repositories.annotations.sourcefilters"><code>@SourceFilters</code></a> 注解，而不是使用其他方式。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="projections"><a class="anchor" href="#projections"></a>Projections</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data 查询方法通常返回由仓储管理的聚合根的一个或多个实例。  
+然而，有时可能希望基于这些类型的某些属性创建投影。  
+Spring Data 允许建模专用的返回类型，以更选择性地检索受管聚合的部分视图。</p>
+</div>
+<div class="paragraph">
+<p>想象一个仓储和聚合根类型，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">示例聚合与仓储</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Person {
+
+  @Id UUID id;
+  String firstname, lastname;
+  Address address;
+
+  static class Address {
+    String zipCode, city, street;
+  }
+}
+
+interface PersonRepository extends Repository&lt;Person, UUID&gt; {
+
+  Collection&lt;Person&gt; findByLastname(String lastname);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>现在假设我们只想检索该人员的姓名属性。Spring Data 提供了哪些手段来实现这一点？本章的其余部分将回答这个问题。</p>
+</div>
+<div class="admonitionblock note">
+<table>投影类型是位于实体类型层次结构之外的类型。  
+实体所继承的超类和实现的接口均位于类型层次结构内部，因此返回一个超类型（或已实现的接口）时，将返回完全实例化的实体对象。</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="projections.interfaces"><a class="anchor" href="#projections.interfaces"></a>基于接口的投影</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>将查询结果限制为仅包含名称属性的最简单方法是声明一个接口，该接口提供用于读取所需属性的访问器方法，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">用于检索属性子集的投影接口</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface NamesOnly {
+
+  String getFirstname();
+  String getLastname();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>关键在于此处定义的属性必须与聚合根中的属性完全匹配。
+这样做可以添加如下查询方法：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用基于接口的投影和查询方法的存储库</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface PersonRepository extends Repository&lt;Person, UUID&gt; {
+
+  Collection&lt;NamesOnly&gt; findByLastname(String lastname);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>查询执行引擎会在运行时为返回的每个元素创建该接口的代理实例，并将调用转发到目标对象的公开方法。</p>
+</div>
+<div class="admonitionblock note">
+<table>在您的 `Repository` 中声明一个覆盖基类方法（例如在 `<code>CrudRepository</code>`、特定存储库接口或 `<code>Simple…Repository</code>` 中声明的方法）时，无论声明的返回类型如何，都会调用基类方法。请确保使用兼容的返回类型，因为基类方法不能用于投影。某些存储模块支持 `<code>@Query</code>` 注解，可将覆盖的基类方法转换为查询方法，从而能够返回投影结果。</table>
+</div>
+<div class="paragraph" id="projections.interfaces.nested">
+<p>投影可以递归使用。  
+如果您也想包含部分 `<code>Address</code>` 信息，请为此创建一个投影接口，并在 `<code>getAddress()</code>` 的声明中返回该接口，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">用于检索属性子集的投影接口</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface PersonSummary {
+
+  String getFirstname();
+  String getLastname();
+  AddressSummary getAddress();
+
+  interface AddressSummary {
+    String getCity();
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在方法调用时，获取目标实例的<code>address</code>属性，并将其包装为投影代理。</p>
+</div>
+<div class="sect2">
+<h3 id="projections.interfaces.closed"><a class="anchor" href="#projections.interfaces.closed"></a>封闭投影</h3>
+<div class="paragraph">
+<p>如果一个投影接口的所有访问器方法都匹配目标聚合的属性，则该投影被视为封闭投影。以下示例（我们在本章之前也使用过）就是一个封闭投影：</p>
+</div>
+<div class="listingblock">
+<div class="title">闭投影</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface NamesOnly {
+
+  String getFirstname();
+  String getLastname();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果使用封闭投影，Spring Data 可以优化查询执行，因为我们知道所有用于支持投影代理的属性。有关该主题的更多详细信息，请参阅参考文档中特定模块的部分。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="projections.interfaces.open"><a class="anchor" href="#projections.interfaces.open"></a>开放投影</h3>
+<div class="paragraph">
+<p>投影接口中的访问器方法也可以使用<code>@Value</code>注解来计算新值，如下例所示：</p>
+</div>
+<div class="listingblock" id="projections.interfaces.open.simple">
+<div class="title">开放式投影</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface NamesOnly {
+
+  @Value("#{target.firstname + ' ' + target.lastname}")
+  String getFullName();
+  …
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>支持该投影的聚合根在 `<code>target</code>` 变量中可用。  
+使用 `<code>@Value</code>` 的投影接口属于开放投影。  
+在这种情况下，Spring Data 无法应用查询执行优化，因为 SpEL 表达式可能使用聚合根的任意属性。</p>
+</div>
+<div class="paragraph">
+<p>`@Value` 注解中使用的表达式不应过于复杂——应避免在 `String` 变量中进行编程。  
+对于非常简单的表达式，一种选择是使用默认方法（Java 8 引入），如下例所示：</p>
+</div>
+<div class="listingblock" id="projections.interfaces.open.default">
+<div class="title">使用默认方法的自定义逻辑投影接口</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface NamesOnly {
+
+  String getFirstname();
+  String getLastname();
+
+  default String getFullName() {
+    return getFirstname().concat(" ").concat(getLastname());
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这种方法要求您能够仅基于投影接口上暴露的其他访问器方法来实现逻辑。  
+另一种更灵活的选项是在 Spring  Bean 中实现自定义逻辑，然后从 SpEL 表达式中调用该 Bean，如下例所示：</p>
+</div>
+<div class="listingblock" id="projections.interfaces.open.bean-reference">
+<div class="title">示例人员对象</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+class MyBean {
+
+  String getFullName(Person person) {
+    …
+  }
+}
+
+interface NamesOnly {
+
+  @Value("#{@myBean.getFullName(target)}")
+  String getFullName();
+  …
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>注意 SpEL 表达式如何引用 `<code>myBean</code>` 并调用 `<code>getFullName(…)</code>` 方法，同时将投影目标作为方法参数传递。  
+由 SpEL 表达式评估支持的方法也可以使用方法参数，这些参数随后可以在表达式中引用。  
+方法参数可通过一个名为 `<code>args</code>` 的 `<code>Object</code>` 数组访问。  
+以下示例展示了如何从 `<code>args</code>` 数组中获取方法参数：</p>
+</div>
+<div class="listingblock">
+<div class="title">示例人员对象</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface NamesOnly {
+
+  @Value("#{args[0] + ' ' + target.firstname + '!'}")
+  String getSalutation(String prefix);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>同样，对于更复杂的表达式，您应该使用 Spring Bean，并让表达式调用一个方法，如<a href="#projections.interfaces.open.bean-reference">前面所述</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="projections.interfaces.nullable-wrappers"><a class="anchor" href="#projections.interfaces.nullable-wrappers"></a>可空包装器</h3>
+<div class="paragraph">
+<p>投影接口中的 Getter 可以使用可空包装器来提升空值安全性。
+当前支持的包装器类型包括：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>java.util.Optional</code></p>
+</li>
+<li>
+<p><code>com.google.common.base.Optional</code></p>
+</li>
+<li>
+<p><code>scala.Option</code></p>
+</li>
+<li>
+<p><code>io.vavr.control.Option</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">使用可空包装器的投影接口</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface NamesOnly {
+
+  Optional&lt;String&gt; getFirstname();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果底层投影值不为<code>null</code>，则使用包装类型的当前表示形式返回该值。  
+若底层值为<code>null</code>，则 getter 方法将返回所用包装类型的空表示形式。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="projections.dtos"><a class="anchor" href="#projections.dtos"></a>基于类的投影（数据传递对象）</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>另一种定义投影的方法是使用值类型 DTO（数据传输对象），这些对象包含用于获取字段的属性。  
+这些 DTO 类型的使用方式与投影接口完全相同，唯一的区别是它们不会发生代理操作，且不能应用嵌套投影。</p>
+</div>
+<div class="paragraph">
+<p>如果商店通过限制加载的字段来优化查询执行，则待加载的字段将从所暴露构造函数的参数名称中确定。</p>
+</div>
+<div class="paragraph">
+<p>以下示例展示了一个投影 DTO：</p>
+</div>
+<div class="listingblock">
+<div class="title">投影数据转移对象</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">record NamesOnly(String firstname, String lastname) {
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Java 记录类型非常适合定义 DTO，因为它们遵循值语义：所有字段均为 <code>private final</code>，并且会自动生成 <code>equals(…)</code>、<code>hashCode()</code> 和 <code>toString()</code> 方法。  
+或者，您也可以使用任何定义了所需投影属性的类。</p>
+</div>
+<div class="sect2">
+<h3 id="projection.dynamic"><a class="anchor" href="#projection.dynamic"></a>动态投影</h3>
+<div class="paragraph">
+<p>到目前为止，我们一直使用投影类型作为集合的返回类型或元素类型。  
+然而，您可能希望在调用时选择要使用的类型（这使其具有动态性）。  
+若要应用动态投影，请使用如下示例所示的查询方法：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用动态投影参数的存储库</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface PersonRepository extends Repository&lt;Person, UUID&gt; {
+
+  &lt;T&gt; Collection&lt;T&gt; findByLastname(String lastname, Class&lt;T&gt; type);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这样，该方法可用于获取聚合结果（原样或应用投影），如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用具有动态投影的存储库</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void someMethod(PersonRepository people) {
+
+  Collection&lt;Person&gt; aggregates =
+    people.findByLastname("Matthews", Person.class);
+
+  Collection&lt;NamesOnly&gt; aggregates =
+    people.findByLastname("Matthews", NamesOnly.class);
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+类型为 <code>Class</code> 的查询参数会被检查以确定其是否符合动态投影参数的条件。如果查询的实际返回类型与 <code>Class</code> 参数的泛型参数类型相同，则匹配的 <code>Class</code> 参数不能在查询或 SpEL 表达式中使用。如果您希望将 <code>Class</code> 参数用作查询参数，请确保使用不同的泛型参数，例如 <code>Class&lt;?&gt;</code>。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>在使用基于类的投影（<a href="#projections.dtos">Class-based projection</a>）时，类型必须声明单个构造函数，以便 Spring Data 能够确定其输入属性。如果类定义了多个构造函数，则无法在不提供进一步提示的情况下使用该类型的 DTO 投影。在这种情况下，请按照以下说明使用 <code>@PersistenceCreator</code> 注解标记所需的构造函数，以便 Spring Data 能够确定要选择的属性：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class NamesOnly {
+
+  private final String firstname;
+  private final String lastname;
+
+  protected NamesOnly() { }
+
+  @PersistenceCreator
+  public NamesOnly(String firstname, String lastname) {
+      this.firstname = firstname;
+      this.lastname = lastname;
+  }
+
+  // ...
+}</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-versions">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-versions-content">
+              <button class="modal-versions-close" data-micromodal-close="">
+                <svg height="28px" viewbox="0 0 32 32" width="28px" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title></title><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"></line><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"></line></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left"><ul class="nav-versions">
+<li class="component">
+<a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+<ul class="versions">
+<li class="version is-latest">
+<a href="../data-commons/index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="component is-current">
+<a class="title" href="../index.html">Spring Data Elasticsearch</a>
+<ul class="versions">
+<li class="version is-current is-latest">
+<a href="../index.html">
+                            6.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+</ul></div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>相关 Spring 文档<ul class="projects-list">
+        <li><a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a></li>
+        <li><a href="https://docs.spring.io/spring-framework/reference/">
+  Spring 框架
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Cloud
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Data
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a></li>
+        <li><a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a></li>
+        <li><a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a></li>
+        <li><a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a></li>
+        <li><a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a></li>
+        <li><a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a></li>
+        <li><a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a></li>
+    </ul>
+  </li><a href="../spring-projects.html">所有文档...</a>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img alt="Spring" id="springlogo" src="../_/img/spring-logo.svg"/>
+        <p class="smallest antialiased">版权所有 © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”一词指 Broadcom Inc. 及其/或其子公司。<br/><a href="https://www.vmware.com/help/legal.html">使用条款</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">隐私政策</a> • <a href="https://spring.io/trademarks">商标指南</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">致谢</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">您的加州隐私权利</a> • <a class="ot-sdk-show-settings">Cookie 设置</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 及其附属公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。"AWS"和"Amazon Web Services"是 Amazon.com Inc. 或其附属公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。</p>
+    </div>
+    <div class="flex jc-between" id="social-icons">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" data-name="Twitter" id="Twitter-2"></path></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async="" src="../_/js/vendor/highlight.js"></script>
+<script async="" data-sync-storage-key="docs:preferred-tab" src="../_/js/vendor/asciidoctor-tabs.js"></script>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box"><a class="search-link" href="../search.html">在全部 Spring 文档中搜索</a></div>
+                <div class="search-by">
+                    <a aria-label="Search by Algolia" href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
+                        <img class="light" src="../_/img/algolia-light.svg" width="140"/>
+                        <img class="dark" src="../_/img/algolia-dark.svg" width="140"/>
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js"></script>
+<script async="" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-app-id="WB1FQYI187" data-index-name="springdocs" data-page-component="data-elasticsearch" data-page-version="6.1.0" data-stylesheet="../_/css/vendor/search.css" id="search-script" src="../_/js/vendor/search.js"></script>
+  
+
+</body></html>
