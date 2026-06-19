@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-06-19 02:29:19",
+  "updated_at": "2026-06-19 02:29:19",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 43,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 2.15,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"MongoJsonSchema.html\" title=\"interface in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema</code></a> merging properties from the given sources.",
+      "translation": "创建一个新<a href=\"MongoJsonSchema.html\" title=\"org.springframework.data.mongodb.core.schema 中的接口\"><code>MongoJsonSchema</code></a>，合并来自给定源头的属性。",
+      "count": 10
+    },
+    {
+      "source": "new instance of <a href=\"MongoJsonSchema.html\" title=\"interface in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema</code></a>.",
+      "translation": "<a href=\"MongoJsonSchema.html\" title=\"org.springframework.data.mongodb.core.schema 中的接口\"><code>MongoJsonSchema</code></a> 的新实例。",
+      "count": 7
+    },
+    {
+      "source": "<code>sources</code> - must not be null.",
+      "translation": "<code>sources</code> - 不能为 null。",
+      "count": 5
+    },
+    {
+      "source": "Create a new <a href=\"MongoJsonSchema.html\" title=\"interface in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema</code></a> for a given root <code>Document</code> containing the schema definition.",
+      "translation": "为给定的根 <code>Document</code> 创建一个包含模式定义的新的 <a href=\"MongoJsonSchema.html\" title=\"interface in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a new <a href=\"MongoJsonSchema.MongoJsonSchemaBuilder.html\" title=\"class in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema.MongoJsonSchemaBuilder</code></a> to fluently define the schema.",
+      "translation": "获取一个新的<a href=\"MongoJsonSchema.MongoJsonSchemaBuilder.html\" title=\"class in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema.MongoJsonSchemaBuilder</code></a>以流畅地定义模式。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"MongoJsonSchema.html\" title=\"interface in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema</code></a> for a given root object.",
+      "translation": "为给定的根对象创建一个新的<a href=\"MongoJsonSchema.html\" title=\"org.springframework.data.mongodb.core.schema 中的接口\"><code>MongoJsonSchema</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Create the <code>$jsonSchema</code> <code>Document</code> containing the specified <a href=\"#schemaDocument()\"><code>schemaDocument()</code></a>. <br/>\nProperty and field names need to be mapped to the domain type ones by running the <code>Document</code> through a\n<a href=\"../convert/JsonSchemaMapper.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>JsonSchemaMapper</code></a> to apply field name customization.",
+      "translation": "创建包含指定<a href=\"#schemaDocument()\"><code>schemaDocument()</code></a>的<code>$jsonSchema</code><code>Document</code>。<br/>\n需要通过运行<code>Document</code>并通过一个<a href=\"../convert/JsonSchemaMapper.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>JsonSchemaMapper</code></a>来将属性和字段名称映射到领域类型名称，以应用字段名称自定义。",
+      "count": 1
+    },
+    {
+      "source": "Create the <code>Document</code> defining the schema. <br/>\nProperty and field names need to be mapped to the domain type property by running the <code>Document</code> through a\n<a href=\"../convert/JsonSchemaMapper.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>JsonSchemaMapper</code></a> to apply field name customization.",
+      "translation": "创建定义模式的<code>Document</code>。<br/>\n需要通过运行<code>Document</code>并通过<a href=\"../convert/JsonSchemaMapper.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>JsonSchemaMapper</code></a>将属性和字段名称映射到域类型属性，以应用字段名称自定义。",
+      "count": 1
+    },
+    {
+      "source": "Interface defining MongoDB-specific JSON schema object. New objects can be built with <a href=\"#builder()\"><code>builder()</code></a>, for\n example:\n\n <pre class=\"code\"> MongoJsonSchema schema = MongoJsonSchema.builder().required(\"firstname\", \"lastname\")\n                .properties(string(\"firstname\").possibleValues(\"luke\", \"han\"),\n                                object(\"address\").properties(string(\"postCode\").minLength(4).maxLength(5))\n\n                ).build();\n </pre>\n\n resulting in the following schema:\n\n <pre>  {\n  \"type\": \"object\",\n  \"required\": [ \"firstname\", \"lastname\" ],\n  \"properties\": {\n    \"firstname\": {\n      \"type\": \"string\", \"enum\": [ \"luke\", \"han\" ],\n    },\n    \"address\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"postCode\": { \"type\": \"string\", \"minLength\": 4, \"maxLength\": 5 }\n      }\n    }\n  }\n}\n </pre>",
+      "translation": "定义 MongoDB 特定 JSON Schema 对象的接口。可以使用 <a href=\"#builder()\"><code>builder()</code></a> 构建新对象，例如：\n\n<pre class=\"code\">MongoJsonSchema schema = MongoJsonSchema.builder().required(\"firstname\", \"lastname\")\n                .properties(string(\"firstname\").possibleValues(\"luke\", \"han\"),\n                                object(\"address\").properties(string(\"postCode\").minLength(4).maxLength(5))\n                ).build();\n</pre>\n\n生成的 Schema 如下：\n\n<pre>\n{\n  \"type\": \"object\",\n  \"required\": [ \"firstname\", \"lastname\" ],\n  \"properties\": {\n    \"firstname\": {\n      \"type\": \"string\", \"enum\": [ \"luke\", \"han\" ],\n    },\n    \"address\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"postCode\": { \"type\": \"string\", \"minLength\": 4, \"maxLength\": 5 }\n      }\n    }\n  }\n}\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"MongoJsonSchema.MongoJsonSchemaBuilder.html\" title=\"class in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema.MongoJsonSchemaBuilder</code></a> provides a fluent API for defining a <a href=\"MongoJsonSchema.html\" title=\"interface in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema</code></a>.",
+      "translation": "<a href=\"MongoJsonSchema.MongoJsonSchemaBuilder.html\" title=\"class in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema.MongoJsonSchemaBuilder</code></a> 为定义 <a href=\"MongoJsonSchema.html\" title=\"interface in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema</code></a> 提供了流式 API。",
+      "count": 1
+    },
+    {
+      "source": "Create the <code>$jsonSchema</code> <code>Document</code> containing the specified <a href=\"#schemaDocument()\"><code>schemaDocument()</code></a>.",
+      "translation": "创建包含指定<a href=\"#schemaDocument()\"><code>schemaDocument()</code></a>的<code>$jsonSchema</code><code>Document</code>。",
+      "count": 1
+    },
+    {
+      "source": "Create the <code>Document</code> defining the schema.",
+      "translation": "创建定义模式的 `<code>Document`。",
+      "count": 1
+    },
+    {
+      "source": "A resolution function that is called on conflicting paths when trying to merge properties with different values\ninto a single value.",
+      "translation": "一个解析函数，在尝试将具有不同值的属性合并为单个值时，会在冲突路径上被调用。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"MongoJsonSchema.MongoJsonSchemaBuilder.html\" title=\"class in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema.MongoJsonSchemaBuilder</code></a>.",
+      "translation": "创建一个新的<a href=\"MongoJsonSchema.MongoJsonSchemaBuilder.html\" title=\"class in org.springframework.data.mongodb.core.schema\"><code>MongoJsonSchema.MongoJsonSchemaBuilder</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "<code>root</code> - must not be null.",
+      "translation": "<code>root</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>document</code> - must not be null.",
+      "translation": "<code>document</code> - 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

@@ -1,26 +1,36 @@
 {
   "created_at": "2026-06-16 16:07:37",
-  "updated_at": "2026-06-16 16:07:37",
+  "updated_at": "2026-06-18 07:40:18",
   "stats": {
-    "total_entries": 25,
+    "total_entries": 30,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 25,
-    "entries_with_hits": 25,
+    "total_hits": 35,
+    "entries_with_hits": 30,
     "entries_without_hits": 0,
-    "hit_rate": 1.0,
-    "usage_percentage": 0.0025
+    "hit_rate": 1.1666666666666667,
+    "usage_percentage": 0.003
   },
   "items": [
     {
+      "source": "Define the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>result target type</code></a> that the Cassandra Row fields should be mapped to.",
+      "translation": "定义 Cassandra 行字段应映射到的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>结果目标类型</code></a>。",
+      "count": 3
+    },
+    {
       "source": "Skip this step if you are anyway only interested in the original <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>domain type</code></a>.",
       "translation": "如果仅对原始<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>域类型</code></a>感兴趣，可跳过此步骤。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Result type override (optional).",
+      "translation": "结果类型覆盖（可选）。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.cassandra.core.ExecutableSelectOperation.TerminatingResults\">Methods inherited from interface <a href=\"ExecutableSelectOperation.TerminatingResults.html#method-summary\" title=\"interface in org.springframework.data.cassandra.core\">ExecutableSelectOperation.TerminatingResults</a></h3>\n<code><a href=\"ExecutableSelectOperation.TerminatingResults.html#all()\" title=\"all()\">all</a>, <a href=\"ExecutableSelectOperation.TerminatingResults.html#first()\" title=\"first()\">first</a>, <a href=\"ExecutableSelectOperation.TerminatingResults.html#firstValue()\" title=\"firstValue()\">firstValue</a>, <a href=\"ExecutableSelectOperation.TerminatingResults.html#map(org.springframework.data.cassandra.core.QueryResultConverter)\" title=\"map(QueryResultConverter)\">map</a>, <a href=\"ExecutableSelectOperation.TerminatingResults.html#one()\" title=\"one()\">one</a>, <a href=\"ExecutableSelectOperation.TerminatingResults.html#oneValue()\" title=\"oneValue()\">oneValue</a>, <a href=\"ExecutableSelectOperation.TerminatingResults.html#slice()\" title=\"slice()\">slice</a>, <a href=\"ExecutableSelectOperation.TerminatingResults.html#stream()\" title=\"stream()\">stream</a></code>",
@@ -53,11 +63,6 @@
       "count": 1
     },
     {
-      "source": "Define the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>result target type</code></a> that the Cassandra Row fields should be mapped to.",
-      "translation": "定义 Cassandra 行字段应映射到的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>结果目标类型</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
@@ -65,11 +70,6 @@
     {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Result type override (optional).",
-      "translation": "结果类型覆盖（可选）。",
       "count": 1
     },
     {
@@ -135,6 +135,31 @@
     {
       "source": "that the Cassandra Row fields should be mapped to.",
       "translation": "Cassandra 行字段应映射到的位置。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"as(java.lang.Class)-type-param-R\"><code>R</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the result.</span>",
+      "translation": "<span id=\"as(java.lang.Class)-type-param-R\"><code>R</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>类型</code></a>。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>resultType</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>resultType</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>resultType</code> - desired <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>target type</code></a> of the result; must not be null.",
+      "translation": "<code>resultType</code> - 期望的结果的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>目标类型</code></a>；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ExecutableSelectOperation.SelectWithQuery.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableSelectOperation.SelectWithQuery</code></a>.",
+      "translation": "创建<a href=\"ExecutableSelectOperation.SelectWithQuery.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableSelectOperation.SelectWithQuery</code></a>的新实例。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, John Blum",
+      "translation": "马克·帕卢赫，约翰·布鲁姆",
       "count": 1
     }
   ]

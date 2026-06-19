@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-06-18 17:47:50",
+  "updated_at": "2026-06-18 17:47:50",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.05,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "Name of the <code>@SqlResultSetMapping(name)</code> to apply for this query.",
+      "translation": "要应用于此查询的 `<code>@SqlResultSetMapping(name)</code>` 的名称。",
+      "count": 2
+    },
+    {
+      "source": "This annotation defines <code>sqlResultSetMapping</code> to apply JPA SQL ResultSet mapping for native queries. Make sure\nto use the corresponding return type as defined in <code>@SqlResultSetMapping</code>. When using named native queries,\ndefine SQL result set mapping through <code>@NamedNativeQuery(resultSetMapping=…)</code> as named queries do not accept\n<code>sqlResultSetMapping</code>.",
+      "translation": "此注解定义 `<code>sqlResultSetMapping</code>`，以应用 JPA SQL 结果集映射用于原生查询。请确保使用在 `<code>@SqlResultSetMapping</code>` 中定义的相应返回类型。在使用命名原生查询时，通过 `<code>@NamedNativeQuery(resultSetMapping=…)</code>` 定义 SQL 结果集映射，因为命名查询不接受 `<code>sqlResultSetMapping</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Specifically <code>@NativeQuery</code> is a <em>composed annotation</em> that acts as a shortcut for\n<code>@Query(nativeQuery = true)</code> for most attributes.",
+      "translation": "具体来说，`@NativeQuery` 是一个**组合注解**，它作为 `@Query(nativeQuery = true)` 的快捷方式，适用于大多数属性。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Defines the projection part of the count query that is generated for pagination. If neither <a href=\"#countQuery()\"><code>countQuery()</code></a>\nnor <code>countProjection()</code> is configured we will derive the count query from the original query. Alias for\n<a href=\"Query.html#countProjection()\"><code>Query.countProjection()</code></a>.",
+      "translation": "定义用于分页生成的计数查询的投影部分。如果未配置 <a href=\"#countQuery()\"><code>countQuery()</code></a> 或 <code>countProjection()</code>，则将从原始查询中推导计数查询。此为 <a href=\"Query.html#countProjection()\"><code>Query.countProjection()</code></a> 的别名。",
+      "count": 1
+    },
+    {
+      "source": "Defines a special count query that shall be used for pagination queries to look up the total number of elements for\na page. If none is configured we will derive the count query from the original query or <a href=\"#countProjection()\"><code>countProjection()</code></a>\nquery if any. Alias for <a href=\"Query.html#countQuery()\"><code>Query.countQuery()</code></a>.",
+      "translation": "定义一个用于分页查询的特殊计数查询，以查找页面的总元素数量。如果未配置任何内容，则将从原始查询或（如果有）<a href=\"#countProjection()\"><code>countProjection()</code></a> 查询中推导计数查询。这是 <a href=\"Query.html#countQuery()\"><code>Query.countQuery()</code></a> 的别名。",
+      "count": 1
+    },
+    {
+      "source": "The named query to be used. If not defined, a <code>NamedQuery</code> with name of\n<code>${domainClass}.${queryMethodName}</code> will be used. Alias for <a href=\"Query.html#name()\"><code>Query.name()</code></a>.",
+      "translation": "要使用的命名查询。如果未定义，将使用名称为<code>${domainClass}.${queryMethodName}</code>的<code>NamedQuery</code>。这是<a href=\"Query.html#name()\"><code>Query.name()</code></a>的别名。",
+      "count": 1
+    },
+    {
+      "source": "Returns the name of the <code>NamedQuery</code> to be used to execute count queries when pagination\nis used. Will default to the named query name configured suffixed by <code>.count</code>. Alias for\n<a href=\"Query.html#countName()\"><code>Query.countName()</code></a>.",
+      "translation": "返回用于在分页时执行计数查询的<code>NamedQuery</code>的名称。默认情况下，将使用配置的名称后附加<code>.count</code>后缀的命名查询名称。这是<a href=\"Query.html#countName()\"><code>Query.countName()</code></a>的别名。",
+      "count": 1
+    },
+    {
+      "source": "Define a <a href=\"QueryRewriter.html\" title=\"interface in org.springframework.data.jpa.repository\"><code>QueryRewriter</code></a> that should be applied to the query string after the query is fully assembled. Alias\nfor <a href=\"Query.html#queryRewriter()\"><code>Query.queryRewriter()</code></a>.",
+      "translation": "定义一个<a href=\"QueryRewriter.html\" title=\"org.springframework.data.jpa.repository 中的接口\"><code>QueryRewriter</code></a>，该接口应在查询完全组装后应用于查询字符串。这是<a href=\"Query.html#queryRewriter()\"><code>Query.queryRewriter()</code></a>的别名。",
+      "count": 1
+    },
+    {
+      "source": "Define a <a href=\"QueryRewriter.html\" title=\"interface in org.springframework.data.jpa.repository\"><code>QueryRewriter</code></a> that should be applied to the query string after the query is fully assembled.",
+      "translation": "定义一个<a href=\"QueryRewriter.html\" title=\"org.springframework.data.jpa.repository 中的接口\"><code>QueryRewriter</code></a>，该接口应在查询完全组装后应用于查询字符串。",
+      "count": 1
+    },
+    {
+      "source": "Defines the native query to be executed when the annotated method is called. Alias for <a href=\"Query.html#value()\"><code>Query.value()</code></a>.",
+      "translation": "定义在调用注解方法时要执行的本地查询。是<a href=\"Query.html#value()\"><code>Query.value()</code></a>的别名。",
+      "count": 1
+    },
+    {
+      "source": "Returns the name of the <code>NamedQuery</code> to be used to execute count queries when pagination\nis used.",
+      "translation": "返回在分页时用于执行计数查询的<code>NamedQuery</code>的名称。",
+      "count": 1
+    },
+    {
+      "source": "Defines the projection part of the count query that is generated for pagination.",
+      "translation": "定义用于分页生成的计数查询的投影部分。",
+      "count": 1
+    },
+    {
+      "source": "Defines a special count query that shall be used for pagination queries to look up the total number of elements for\na page.",
+      "translation": "定义一个特殊的计数查询，用于分页查询时查找页面的总元素数量。",
+      "count": 1
+    },
+    {
+      "source": "The named query to be used.",
+      "translation": "要使用的命名查询。",
+      "count": 1
+    },
+    {
+      "source": "Defines the native query to be executed when the annotated method is called.",
+      "translation": "定义当调用已注解的方法时要执行的本地查询。",
+      "count": 1
+    },
+    {
+      "source": "Danny van den Elshout, Mark Paluch",
+      "translation": "丹尼·范登埃尔肖特，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "Annotation to declare native queries directly on repository query methods.",
+      "translation": "用于直接在仓库查询方法上声明原生查询的注解。",
+      "count": 1
+    }
+  ]
+}

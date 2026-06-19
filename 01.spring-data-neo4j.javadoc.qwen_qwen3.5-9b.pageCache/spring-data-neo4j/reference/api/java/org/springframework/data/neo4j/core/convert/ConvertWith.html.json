@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-06-19 05:11:12",
+  "updated_at": "2026-06-19 05:11:12",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 19,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1875,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "The converter to instantiated for converting attributes to properties and vice\nversa.",
+      "translation": "用于将属性转换为属性并反之亦然的可实例化转换器。",
+      "count": 2
+    },
+    {
+      "source": "Allows to specify a factory for creating converters.",
+      "translation": "允许指定用于创建转换器的工厂。",
+      "count": 2
+    },
+    {
+      "source": "Reference to a Spring bean to be used as converter.",
+      "translation": "用于作为转换器的 Spring  Bean 引用。",
+      "count": 2
+    },
+    {
+      "source": "In case <a href=\"#converterRef()\"><code>converterRef()</code></a> is set to a non null and\nnon-empty value, the mapping context will try to lookup a bean under the given name of\ntype <a href=\"Neo4jPersistentPropertyConverter.html\" title=\"interface in org.springframework.data.neo4j.core.convert\"><code>Neo4jPersistentPropertyConverter</code></a> in the application context. If no such\nbean is found an exception will be thrown. This attribute has precedence over\n<a href=\"#converter()\"><code>converter()</code></a>.",
+      "translation": "如果 <a href=\"#converterRef()\"><code>converterRef()</code></a> 被设置为一个非空且非 null 的值，映射上下文将在应用程序上下文中尝试查找给定名称、类型为 <a href=\"Neo4jPersistentPropertyConverter.html\" title=\"interface in org.springframework.data.neo4j.core.convert\"><code>Neo4jPersistentPropertyConverter</code></a> 的 Bean。如果找不到这样的 Bean，将抛出异常。此属性的优先级高于 <a href=\"#converter()\"><code>converter()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2019–2026 <a href=\"https://neo4j.com\">Neo4j, Neo4j Sweden AB</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2019–2026 <a href=\"https://neo4j.com\">Neo4j、Neo4j Sweden AB</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Custom conversions are applied to both attributes of entities and parameters of\nrepository methods that map to those attributes (which does apply to all derived\nqueries and queries by example but not to string based queries).",
+      "translation": "自定义转换会同时应用于实体的属性以及映射到这些属性的存储库方法参数（此规则适用于所有派生查询和示例查询，但不适用于基于字符串的查询）。",
+      "count": 1
+    },
+    {
+      "source": "Converters that have a default constructor don't need a dedicated factory. A dedicated\nfactory will be provided with either this annotation and its values or with the meta\nannotated annotation, including all configuration available.",
+      "translation": "具有默认构造函数的转换器无需专用工厂。专用工厂将通过此注解及其值，或通过元注解的注解（包含所有可用配置）来提供。",
+      "count": 1
+    },
+    {
+      "source": "Indicates an unset converter.",
+      "translation": "表示未设置的转换器。",
+      "count": 1
+    },
+    {
+      "source": "An alternative to <a href=\"#converter()\"><code>converter()</code></a>, for all the scenarios in which\nconstructing a converter is more effort than a constructor call.",
+      "translation": "作为 `<a href=\"#converter()\"><code>converter()</code></a>` 的替代方案，适用于所有构建转换器的成本高于调用构造函数的场景。",
+      "count": 1
+    },
+    {
+      "source": "An optional reference to a bean to be used as converter, must implement\n<a href=\"Neo4jPersistentPropertyConverter.html\" title=\"interface in org.springframework.data.neo4j.core.convert\"><code>Neo4jPersistentPropertyConverter</code></a>.",
+      "translation": "可选的 Bean 引用，用于作为转换器，必须实现 <a href=\"Neo4jPersistentPropertyConverter.html\" title=\"interface in org.springframework.data.neo4j.core.convert\"><code>Neo4jPersistentPropertyConverter</code></a> 接口。",
+      "count": 1
+    },
+    {
+      "source": "Michael J. Simons",
+      "translation": "迈克尔·J·西蒙斯",
+      "count": 1
+    },
+    {
+      "source": "The converter to instantiated for converting attributes to properties and\nvice versa",
+      "translation": "用于将属性转换为属性并反之的转换器实例。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "This annotation can be used to define either custom conversions for single attributes\nby specifying a custom <a href=\"Neo4jPersistentPropertyConverter.html\" title=\"interface in org.springframework.data.neo4j.core.convert\"><code>Neo4jPersistentPropertyConverter</code></a> and if needed, a custom\nfactory to create that converter or the annotation can be used to build custom\nmeta-annotated annotations like\n<code>@org.springframework.data.neo4j.core.support.DateLong</code>.",
+      "translation": "此注解可用于为单个属性定义自定义转换，方法是指定一个自定义的<a href=\"Neo4jPersistentPropertyConverter.html\" title=\"interface in org.springframework.data.neo4j.core.convert\"><code>Neo4jPersistentPropertyConverter</code></a>接口，并在需要时指定一个用于创建该转换器工厂；或者，此注解也可用于构建自定义的元注解，例如<code>@org.springframework.data.neo4j.core.support.DateLong</code>。",
+      "count": 1
+    }
+  ]
+}

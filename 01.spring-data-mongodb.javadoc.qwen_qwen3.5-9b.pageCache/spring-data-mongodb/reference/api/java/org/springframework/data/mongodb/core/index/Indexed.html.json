@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-06-19 02:12:25",
+  "updated_at": "2026-06-19 02:12:25",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 38,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3103448275862069,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "false by default.",
+      "translation": "默认值为 false。",
+      "count": 4
+    },
+    {
+      "source": "empty by default.",
+      "translation": "默认情况下为空。",
+      "count": 3
+    },
+    {
+      "source": "since 4.4 - Please use <a href=\"#expireAfter()\"><code>expireAfter()</code></a> instead.",
+      "translation": "自 4.4 版本起，请使用<a href=\"#expireAfter()\"><code>expireAfter()</code></a>替代。",
+      "count": 2
+    },
+    {
+      "source": "since 5.0 for removal without replacement.",
+      "translation": "自 5.0 版本起，将移除且不替换。",
+      "count": 2
+    },
+    {
+      "source": "The index sort direction.",
+      "translation": "索引排序方向。",
+      "count": 2
+    },
+    {
+      "source": "If set to true reject all documents that contain a duplicate value for the indexed field.",
+      "translation": "如果设置为 true，将拒绝所有包含索引字段重复值的文档。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<strong>NOTE:</strong> Since MongoDB 4.2 the background flag is ignored by the server if set.",
+      "translation": "<strong>注意：</strong>自 MongoDB 4.2 起，如果设置了该标志，服务器将忽略它。",
+      "count": 1
+    },
+    {
+      "source": "Alternative for <a href=\"#expireAfterSeconds()\"><code>expireAfterSeconds()</code></a> to configure the timeout after which the document should expire.\nDefaults to an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> for no expiry. Accepts numeric values followed by their unit of measure:\n<ul>\n<li><b>d</b>: Days</li>\n<li><b>h</b>: Hours</li>\n<li><b>m</b>: Minutes</li>\n<li><b>s</b>: Seconds</li>\n<li>Alternatively: A Spring template expression. The expression can result in a\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>Duration</code></a> or a valid expiration <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> according to the already mentioned\nconventions.</li>\n</ul>\nSupports ISO-8601 style.\n\n<pre class=\"code\">@Indexed(expireAfter = \"10s\") String expireAfterTenSeconds;\n@Indexed(expireAfter = \"1d\") String expireAfterOneDay;\n@Indexed(expireAfter = \"P2D\") String expireAfterTwoDays;\n@Indexed(expireAfter = \"#{@mySpringBean.timeout}\") String expireAfterTimeoutObtainedFromSpringBean;\n</pre>",
+      "translation": "替代<a href=\"#expireAfterSeconds()\"><code>expireAfterSeconds()</code></a>的配置选项，用于设置文档过期的超时时间。默认值为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>，表示不过期。接受数值及其单位：\n<ul>\n<li><b>d</b>: 天</li>\n<li><b>h</b>: 小时</li>\n<li><b>m</b>: 分钟</li>\n<li><b>s</b>: 秒</li>\n<li>或者：一个 Spring 模板表达式。该表达式的结果可以是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>Duration</code></a>，或者是符合上述约定的有效过期<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。</li>\n</ul>\n支持 ISO-8601 格式。\n\n<pre class=\"code\">@Indexed(expireAfter = \"10s\") String expireAfterTenSeconds;\n@Indexed(expireAfter = \"1d\") String expireAfterOneDay;\n@Indexed(expireAfter = \"P2D\") String expireAfterTwoDays;\n@Indexed(expireAfter = \"#{@mySpringBean.timeout}\") String expireAfterTimeoutObtainedFromSpringBean;\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Index name either as plain value or as <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template\nexpression</code></a>. <br/>\n<br/>\nThe name will only be applied as is when defined on root level. For usage on nested or embedded structures the\nprovided name will be prefixed with the path leading to the entity. <br/>\n<br/>\nThe structure below\n\n<pre><code>\n@Document\nclass Root {\n  Hybrid hybrid;\n  Nested nested;\n}\n\n@Document\nclass Hybrid {\n  @Indexed(name=\"index\") String h1;\n  @Indexed(name=\"#{@myBean.indexName}\") String h2;\n}\n\nclass Nested {\n  @Indexed(name=\"index\") String n1;\n}\n</code>\n</pre>\n\nresolves in the following index structures\n\n<pre><code>\ndb.root.createIndex( { hybrid.h1: 1 } , { name: \"hybrid.index\" } )\ndb.root.createIndex( { nested.n1: 1 } , { name: \"nested.index\" } )\ndb.hybrid.createIndex( { h1: 1} , { name: \"index\" } )\ndb.hybrid.createIndex( { h2: 1} , { name: the value myBean.getIndexName() returned } )\n</code>\n</pre>",
+      "translation": "索引名称可以是纯值，也可以是 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>。<br/>\n<br/>\n当在根级别定义时，名称将原样应用。对于嵌套或嵌入结构的使用，提供的名称将加上指向该实体的路径作为前缀。<br/>\n<br/>\n以下结构\n\n<pre><code>\n@Document\nclass Root {\n  Hybrid hybrid;\n  Nested nested;\n}\n\n@Document\nclass Hybrid {\n  @Indexed(name=\"index\") String h1;\n  @Indexed(name=\"#{@myBean.indexName}\") String h2;\n}\n\nclass Nested {\n  @Indexed(name=\"index\") String n1;\n}\n</code>\n</pre>\n\n解析为以下索引结构\n\n<pre><code>\ndb.root.createIndex( { hybrid.h1: 1 } , { name: \"hybrid.index\" } )\ndb.root.createIndex( { nested.n1: 1 } , { name: \"nested.index\" } )\ndb.hybrid.createIndex( { h1: 1} , { name: \"index\" } )\ndb.hybrid.createIndex( { h2: 1} , { name: the value myBean.getIndexName() returned } )\n</code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Only index the documents in a collection that meet a specified <a href=\"IndexFilter.html\" title=\"interface in org.springframework.data.mongodb.core.index\"><code>filter expression</code></a>. <br/>\nMust not be used with <a href=\"#sparse()\"><code>sparse = true</code></a>.",
+      "translation": "仅对满足指定<a href=\"IndexFilter.html\" title=\"org.springframework.data.mongodb.core.index 中的接口\"><code>过滤表达式</code></a>的集合中的文档建立索引。<br/>\n不得与<a href=\"#sparse()\"><code>sparse = true</code></a>一起使用。",
+      "count": 1
+    },
+    {
+      "source": "The actual collation definition in JSON format or a\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a> resolving to either a JSON\nString or a <code>Document</code>.",
+      "translation": "实际的排序定义采用 JSON 格式，或是一个解析为 JSON 字符串或<code>Document</code>的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "If set to true index will skip over any document that is missing the indexed field. <br/>\nMust not be used with <a href=\"#partialFilter()\"><code>partialFilter()</code></a>.",
+      "translation": "如果设置为 true，索引将跳过缺少已索引字段的任何文档。<br/>\n不能与<a href=\"#partialFilter()\"><code>partialFilter()</code></a>一起使用。",
+      "count": 1
+    },
+    {
+      "source": "Alternative for <a href=\"#expireAfterSeconds()\"><code>expireAfterSeconds()</code></a> to configure the timeout after which the document should expire.",
+      "translation": "`expireAfterSeconds()` 的替代方案，用于配置文档应过期的超时时间。",
+      "count": 1
+    },
+    {
+      "source": "Index name either as plain value or as <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template\nexpression</code></a>.",
+      "translation": "索引名称可以是纯值，也可以是 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Only index the documents in a collection that meet a specified <a href=\"IndexFilter.html\" title=\"interface in org.springframework.data.mongodb.core.index\"><code>filter expression</code></a>.",
+      "translation": "仅对满足指定<a href=\"IndexFilter.html\" title=\"org.springframework.data.mongodb.core.index 中的接口\"><code>过滤表达式</code></a>的集合中的文档建立索引。",
+      "count": 1
+    },
+    {
+      "source": "Mark a field to be indexed using MongoDB's indexing feature.",
+      "translation": "使用 MongoDB 的索引功能标记字段以进行索引。",
+      "count": 1
+    },
+    {
+      "source": "If set to true index will skip over any document that is missing the indexed field.",
+      "translation": "如果设置为 true，索引将跳过缺少已索引字段的任何文档。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name. Defaults\nto false.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "Configures the number of seconds after which the collection should expire. Defaults to -1 for no expiry.",
+      "translation": "设置集合的过期时间（秒数）。默认值为 -1，表示永不过期。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"IndexDirection.html#ASCENDING\"><code>IndexDirection.ASCENDING</code></a> by default.",
+      "translation": "默认情况下为 <a href=\"IndexDirection.html#ASCENDING\"><code>IndexDirection.ASCENDING</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Jon Brisbin, Oliver Gierke, Philipp Schneider, Johno Crawford, Thomas Darimont, Christoph Strobl, Jordi Llach, Mark Paluch, Stefan Tirea",
+      "translation": "Jon Brisbin，Oliver Gierke，Philipp Schneider，Johno Crawford，Thomas Darimont，Christoph Strobl，Jordi Llach，Mark Paluch，Stefan Tirea",
+      "count": 1
+    },
+    {
+      "source": "empty String by default.",
+      "translation": "默认情况下为空字符串。",
+      "count": 1
+    },
+    {
+      "source": "-1 by default.",
+      "translation": "默认值为 -1。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "If true the index will be created in the background.",
+      "translation": "如果为真，索引将在后台创建。",
+      "count": 1
+    },
+    {
+      "source": "The actual collation definition in JSON format or a\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a> resolving to either a JSON\nString or a <code>Document</code>. The keys of the JSON document are configuration options for the collation\n(language-specific rules for string comparison) applied to the indexed based on the field value.",
+      "translation": "实际的排序定义采用 JSON 格式，或是一个解析为 JSON 字符串或 `Document` 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>。JSON 文档的键是应用于索引项（基于字段值）的排序配置选项（即针对字符串比较的语言特定规则）。",
+      "count": 1
+    }
+  ]
+}

@@ -1,26 +1,86 @@
 {
   "created_at": "2026-06-16 11:48:18",
-  "updated_at": "2026-06-16 11:48:18",
+  "updated_at": "2026-06-18 07:22:33",
   "stats": {
-    "total_entries": 37,
+    "total_entries": 46,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 38,
-    "entries_with_hits": 37,
+    "total_hits": 61,
+    "entries_with_hits": 46,
     "entries_without_hits": 0,
-    "hit_rate": 1.027027027027027,
-    "usage_percentage": 0.0036999999999999997
+    "hit_rate": 1.326086956521739,
+    "usage_percentage": 0.0046
   },
   "items": [
     {
       "source": "Returns whether the given method is a custom repository method.",
       "translation": "返回给定的方法是否为自定义存储库方法。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../core/RepositoryInformation.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryInformation</code></a> based on <a href=\"../core/RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a> collected at build time.",
+      "translation": "基于构建时收集的<a href=\"../core/RepositoryMetadata.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryMetadata</code></a>的<a href=\"../core/RepositoryInformation.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryInformation</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#isCustomMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#isCustomMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#isBaseClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#isBaseClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#getTargetClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#getTargetClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#getRepositoryComposition()\">RepositoryInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#getRepositoryComposition()\">RepositoryInformation</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a> for this repository.",
+      "translation": "返回此存储库的<a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the target class method that is backing the given method. This can be necessary if a repository interface\nredeclares a method of the core repository interface (e.g. for transaction behavior customization). Returns the\nmethod itself if the target class does not implement the given method. Implementations need to make sure the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> returned can be invoked via reflection, i.e. needs to be accessible.",
+      "translation": "返回给定方法所对应的目标类方法。如果存储库接口重新声明了核心存储库接口的某个方法（例如用于事务行为定制），则此操作可能是必要的。如果目标类未实现给定方法，则返回该方法本身。实现方需确保通过反射调用的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>是可访问的，即需要具有可访问性。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a> for this repository. This is used to determine the composition of the\nrepository and its fragments.",
+      "translation": "返回此存储库的<a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a>。该对象用于确定存储库及其片段的组成情况。",
+      "count": 2
+    },
+    {
+      "source": "Returns the target class method that is backing the given method.",
+      "translation": "返回给定方法所对应的目标类方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the given method is logically a base class method.",
+      "translation": "返回给定的方法在逻辑上是否为基类方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the given method is logically a base class method. This also includes methods (re)declared in the\nrepository interface that match the signatures of the base implementation.",
+      "translation": "返回给定的方法在逻辑上是否为基类方法。这还包括在存储库接口中（重新）声明且与基实现签名匹配的方法。",
+      "count": 2
+    },
+    {
+      "source": "<code>method</code> - must not be null.",
+      "translation": "<code>method</code> 不能为 null。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.repository.core.RepositoryInformationSupport\">Methods inherited from class <a href=\"../core/RepositoryInformationSupport.html#method-summary\" title=\"class in org.springframework.data.repository.core\">RepositoryInformationSupport</a></h3>\n<code><a href=\"../core/RepositoryInformationSupport.html#getAlternativeDomainTypes()\" title=\"getAlternativeDomainTypes()\">getAlternativeDomainTypes</a>, <a href=\"../core/RepositoryInformationSupport.html#getCrudMethods()\" title=\"getCrudMethods()\">getCrudMethods</a>, <a href=\"../core/RepositoryInformationSupport.html#getDomainType()\" title=\"getDomainType()\">getDomainType</a>, <a href=\"../core/RepositoryInformationSupport.html#getDomainTypeInformation()\" title=\"getDomainTypeInformation()\">getDomainTypeInformation</a>, <a href=\"../core/RepositoryInformationSupport.html#getIdType()\" title=\"getIdType()\">getIdType</a>, <a href=\"../core/RepositoryInformationSupport.html#getIdTypeInformation()\" title=\"getIdTypeInformation()\">getIdTypeInformation</a>, <a href=\"../core/RepositoryInformationSupport.html#getMetadata()\" title=\"getMetadata()\">getMetadata</a>, <a href=\"../core/RepositoryInformationSupport.html#getQueryMethods()\" title=\"getQueryMethods()\">getQueryMethods</a>, <a href=\"../core/RepositoryInformationSupport.html#getRepositoryBaseClass()\" title=\"getRepositoryBaseClass()\">getRepositoryBaseClass</a>, <a href=\"../core/RepositoryInformationSupport.html#getRepositoryInterface()\" title=\"getRepositoryInterface()\">getRepositoryInterface</a>, <a href=\"../core/RepositoryInformationSupport.html#getReturnedDomainClass(java.lang.reflect.Method)\" title=\"getReturnedDomainClass(Method)\">getReturnedDomainClass</a>, <a href=\"../core/RepositoryInformationSupport.html#getReturnedDomainTypeInformation(java.lang.reflect.Method)\" title=\"getReturnedDomainTypeInformation(Method)\">getReturnedDomainTypeInformation</a>, <a href=\"../core/RepositoryInformationSupport.html#getReturnType(java.lang.reflect.Method)\" title=\"getReturnType(Method)\">getReturnType</a>, <a href=\"../core/RepositoryInformationSupport.html#hasCustomMethod()\" title=\"hasCustomMethod()\">hasCustomMethod</a>, <a href=\"../core/RepositoryInformationSupport.html#hasQueryMethods()\" title=\"hasQueryMethods()\">hasQueryMethods</a>, <a href=\"../core/RepositoryInformationSupport.html#isGenericRepositoryInterface(java.lang.String)\" title=\"isGenericRepositoryInterface(String)\">isGenericRepositoryInterface</a>, <a href=\"../core/RepositoryInformationSupport.html#isPagingRepository()\" title=\"isPagingRepository()\">isPagingRepository</a>, <a href=\"../core/RepositoryInformationSupport.html#isQueryAnnotationPresentOn(java.lang.reflect.Method)\" title=\"isQueryAnnotationPresentOn(Method)\">isQueryAnnotationPresentOn</a>, <a href=\"../core/RepositoryInformationSupport.html#isQueryMethod(java.lang.reflect.Method)\" title=\"isQueryMethod(Method)\">isQueryMethod</a>, <a href=\"../core/RepositoryInformationSupport.html#isQueryMethodCandidate(java.lang.reflect.Method)\" title=\"isQueryMethodCandidate(Method)\">isQueryMethodCandidate</a>, <a href=\"../core/RepositoryInformationSupport.html#isReactiveRepository()\" title=\"isReactiveRepository()\">isReactiveRepository</a></code>",
@@ -48,48 +108,8 @@
       "count": 1
     },
     {
-      "source": "<a href=\"../core/RepositoryInformation.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryInformation</code></a> based on <a href=\"../core/RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a> collected at build time.",
-      "translation": "基于构建时收集的<a href=\"../core/RepositoryMetadata.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryMetadata</code></a>的<a href=\"../core/RepositoryInformation.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryInformation</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#isCustomMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#isCustomMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#isBaseClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#isBaseClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#getTargetClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#getTargetClassMethod(java.lang.reflect.Method)\">RepositoryInformation</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../core/RepositoryInformation.html#getRepositoryComposition()\">RepositoryInformation</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../core/RepositoryInformation.html#getRepositoryComposition()\">RepositoryInformation</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a> for this repository.",
-      "translation": "返回此存储库的<a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the target class method that is backing the given method. This can be necessary if a repository interface\nredeclares a method of the core repository interface (e.g. for transaction behavior customization). Returns the\nmethod itself if the target class does not implement the given method. Implementations need to make sure the\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> returned can be invoked via reflection, i.e. needs to be accessible.",
-      "translation": "返回给定方法所对应的目标类方法。如果存储库接口重新声明了核心存储库接口的某个方法（例如用于事务行为定制），则此操作可能是必要的。如果目标类未实现给定方法，则返回该方法本身。实现方需确保通过反射调用的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>是可访问的，即需要具有可访问性。",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a> for this repository. This is used to determine the composition of the\nrepository and its fragments.",
-      "translation": "返回此存储库的<a href=\"../core/support/RepositoryComposition.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition</code></a>。该对象用于确定存储库及其片段的组成情况。",
       "count": 1
     },
     {
@@ -110,21 +130,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Returns the target class method that is backing the given method.",
-      "translation": "返回给定方法所对应的目标类方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether the given method is logically a base class method.",
-      "translation": "返回给定的方法在逻辑上是否为基类方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether the given method is logically a base class method. This also includes methods (re)declared in the\nrepository interface that match the signatures of the base implementation.",
-      "translation": "返回给定的方法在逻辑上是否为基类方法。这还包括在存储库接口中（重新）声明且与基实现签名匹配的方法。",
       "count": 1
     },
     {
@@ -195,6 +200,46 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../core/RepositoryMetadata.html#getFragments()\">getFragments</a></code> in interface <code><a href=\"../core/RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\">RepositoryMetadata</a></code>",
+      "translation": "接口 <code><a href=\"../core/RepositoryMetadata.html\" title=\"org.springframework.data.repository.core 中的接口\">RepositoryMetadata</a></code> 中的方法 <code><a href=\"../core/RepositoryMetadata.html#getFragments()\">getFragments</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../core/RepositoryInformation.html#isCustomMethod(java.lang.reflect.Method)\">isCustomMethod</a></code> in interface <code><a href=\"../core/RepositoryInformation.html\" title=\"interface in org.springframework.data.repository.core\">RepositoryInformation</a></code>",
+      "translation": "接口 <code><a href=\"../core/RepositoryInformation.html\" title=\"org.springframework.data.repository.core 中的接口\">RepositoryInformation</a></code> 中的 <code><a href=\"../core/RepositoryInformation.html#isCustomMethod(java.lang.reflect.Method)\">isCustomMethod</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../core/RepositoryInformation.html#isBaseClassMethod(java.lang.reflect.Method)\">isBaseClassMethod</a></code> in interface <code><a href=\"../core/RepositoryInformation.html\" title=\"interface in org.springframework.data.repository.core\">RepositoryInformation</a></code>",
+      "translation": "接口 <code><a href=\"../core/RepositoryInformation.html\" title=\"org.springframework.data.repository.core 中的接口\">RepositoryInformation</a></code> 中的方法 <code><a href=\"../core/RepositoryInformation.html#isBaseClassMethod(java.lang.reflect.Method)\">isBaseClassMethod</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../core/RepositoryInformation.html#getTargetClassMethod(java.lang.reflect.Method)\">getTargetClassMethod</a></code> in interface <code><a href=\"../core/RepositoryInformation.html\" title=\"interface in org.springframework.data.repository.core\">RepositoryInformation</a></code>",
+      "translation": "接口 <code><a href=\"../core/RepositoryInformation.html\" title=\"org.springframework.data.repository.core 中的接口\">RepositoryInformation</a></code> 中的方法 <code><a href=\"../core/RepositoryInformation.html#getTargetClassMethod(java.lang.reflect.Method)\">getTargetClassMethod</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../core/RepositoryInformation.html#getRepositoryComposition()\">getRepositoryComposition</a></code> in interface <code><a href=\"../core/RepositoryInformation.html\" title=\"interface in org.springframework.data.repository.core\">RepositoryInformation</a></code>",
+      "translation": "接口 <code><a href=\"../core/RepositoryInformation.html\" title=\"org.springframework.data.repository.core 中的接口\">RepositoryInformation</a></code> 中的方法 <code><a href=\"../core/RepositoryInformation.html#getRepositoryComposition()\">getRepositoryComposition</a></code>",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "configured repository fragments.",
+      "translation": "已配置的仓库片段。",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
       "count": 1
     }
   ]

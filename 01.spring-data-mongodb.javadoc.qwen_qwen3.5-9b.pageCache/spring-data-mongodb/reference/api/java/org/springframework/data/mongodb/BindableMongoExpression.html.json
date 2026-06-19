@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-19 00:48:58",
+  "updated_at": "2026-06-19 00:48:58",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5294117647058822,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Create a new instance of <a href=\"BindableMongoExpression.html\" title=\"class in org.springframework.data.mongodb\"><code>BindableMongoExpression</code></a>.",
+      "translation": "创建一个新的<a href=\"BindableMongoExpression.html\" title=\"class in org.springframework.data.mongodb\"><code>BindableMongoExpression</code></a>实例。",
+      "count": 4
+    },
+    {
+      "source": "Obtain the native <code>Document</code> representation.",
+      "translation": "获取原生<code>Document</code>表示。",
+      "count": 2
+    },
+    {
+      "source": "Provide the <code>CodecRegistry</code> used to convert expressions.",
+      "translation": "提供用于转换表达式的<code>CodecRegistry</code>。",
+      "count": 2
+    },
+    {
+      "source": "Provide the arguments to bind to the placeholders via their index.",
+      "translation": "通过索引提供要绑定到占位符的参数。",
+      "count": 2
+    },
+    {
+      "source": "new instance of <a href=\"BindableMongoExpression.html\" title=\"class in org.springframework.data.mongodb\"><code>BindableMongoExpression</code></a>.",
+      "translation": "<code>BindableMongoExpression</code> 类的新实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>expression</code> - must not be null.",
+      "translation": "<code>expression</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>args</code> - must not be null but may contain null elements.",
+      "translation": "<code>args</code> 不能为 null，但可包含 null 元素。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> using the <a href=\"util/json/ParameterBindingDocumentCodec.html\" title=\"class in org.springframework.data.mongodb.util.json\"><code>ParameterBindingDocumentCodec</code></a> for parsing a raw (json)\nexpression. The expression will be wrapped within <code>{ ... }</code> if necessary. The actual parsing and parameter\nbinding of placeholders like <code>?0</code> is delayed upon first call on the target <code>Document</code> via\n<a href=\"#toDocument()\"><code>toDocument()</code></a>. <br/>\n\n<pre class=\"code\">$toUpper : $name                -&gt; { '$toUpper' : '$name' }\n\n{ '$toUpper' : '$name' }        -&gt; { '$toUpper' : '$name' }\n\n{ '$toUpper' : '?0' }, \"$name\"  -&gt; { '$toUpper' : '$name' }\n</pre>\n\nSome types might require a special <code>Codec</code>. If so, make sure to provide a <code>CodecRegistry</code>\ncontaining the required <code>codec</code> via <a href=\"#withCodecRegistry(org.bson.codecs.configuration.CodecRegistry)\"><code>withCodecRegistry(CodecRegistry)</code></a>.",
+      "translation": "使用 <a href=\"MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> 并通过 <a href=\"util/json/ParameterBindingDocumentCodec.html\" title=\"class in org.springframework.data.mongodb.util.json\"><code>ParameterBindingDocumentCodec</code></a> 解析原始（JSON）表达式。如有必要，该表达式将被包裹在 <code>{ ... }</code> 中。对占位符（如 <code>?0</code>）的实际解析和参数绑定会延迟到首次调用目标 <code>Document</code> 的 <a href=\"#toDocument()\"><code>toDocument()</code></a> 方法时进行。<br/>\n\n<pre class=\"code\">$toUpper : $name                -&gt; { '$toUpper' : '$name' }\n\n{ '$toUpper' : '$name' }        -&gt; { '$toUpper' : '$name' }\n\n{ '$toUpper' : '?0' }, \"$name\"  -&gt; { '$toUpper' : '$name' }\n</pre>\n\n某些类型可能需要特殊的 <code>Codec</code>。如果是这样，请确保通过 <a href=\"#withCodecRegistry(org.bson.codecs.configuration.CodecRegistry)\"><code>withCodecRegistry(CodecRegistry)</code></a> 提供一个包含所需 <code>codec</code> 的 <code>CodecRegistry</code>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"MongoExpression.html#toDocument()\">MongoExpression</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"MongoExpression.html#toDocument()\">MongoExpression</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"MongoExpression.html#toDocument()\">toDocument</a></code> in interface <code><a href=\"MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\">MongoExpression</a></code>",
+      "translation": "<code><a href=\"MongoExpression.html#toDocument()\">toDocument</a></code> 接口 <code><a href=\"MongoExpression.html\" title=\"org.springframework.data.mongodb 中的接口\">MongoExpression</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "类 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a></code> 中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code>codecRegistryProvider</code> - can be null.",
+      "translation": "<code>codecRegistryProvider</code> - 可为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>codecRegistry</code> - must not be null.",
+      "translation": "<code>codecRegistry</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - must not be null.",
+      "translation": "<code>args</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Giacomo Baso",
+      "translation": "克里斯托夫·施特罗布，贾科莫·巴索",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 1
+    }
+  ]
+}

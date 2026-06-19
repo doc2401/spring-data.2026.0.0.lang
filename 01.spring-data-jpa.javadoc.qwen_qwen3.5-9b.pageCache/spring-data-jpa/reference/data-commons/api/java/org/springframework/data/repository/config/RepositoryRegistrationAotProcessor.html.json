@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-06-18 16:56:20",
+  "updated_at": "2026-06-18 16:56:20",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 31,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.24,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "Customization hook to configure the <a href=\"../../util/TypeContributor.html\" title=\"class in org.springframework.data.util\"><code>TypeContributor</code></a> used to register the given type.",
+      "translation": "自定义钩子，用于配置用于注册给定类型的<a href=\"../../util/TypeContributor.html\" title=\"class in org.springframework.data.util\"><code>TypeContributor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Customization hook to configure <a href=\"../../util/TypeCollector.html\" title=\"class in org.springframework.data.util\"><code>TypeCollector</code></a>.",
+      "translation": "自定义钩子，用于配置<a href=\"../../util/TypeCollector.html\" title=\"class in org.springframework.data.util\"><code>TypeCollector</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Register type-specific hints and AOT artifacts for domain types, reachable types, projection interfaces derived\nfrom query method return types, and annotations from org.springframework.data packages.",
+      "translation": "为领域类型、可达类型、从查询方法返回类型派生的投影接口以及来自 org.springframework.data 包的注解注册特定类型的提示和 AOT 工件。",
+      "count": 2
+    },
+    {
+      "source": "This method allows for the creation to be overridden by subclasses.",
+      "translation": "此方法允许子类重写该创建过程。",
+      "count": 2
+    },
+    {
+      "source": "<code>repositoryContext</code> - the repository context.",
+      "translation": "<code>repositoryContext</code> - 仓库上下文。",
+      "count": 2
+    },
+    {
+      "source": "<code>generationContext</code> - the generation context.",
+      "translation": "<code>generationContext</code> - 生成上下文。",
+      "count": 2
+    },
+    {
+      "source": "With <a href=\"#registerRepositoryCompositionHints(org.springframework.data.repository.config.AotRepositoryContext,org.springframework.aot.generate.GenerationContext)\"><code>registerRepositoryCompositionHints(AotRepositoryContext, GenerationContext)</code></a> (specifically\n<a href=\"#configureTypeContribution(java.lang.Class,org.springframework.data.aot.AotContext)\"><code>configureTypeContribution(Class, AotContext)</code></a> and <a href=\"#contributeAotRepository(org.springframework.data.repository.config.AotRepositoryContext)\"><code>contributeAotRepository(AotRepositoryContext)</code></a>,\nstores can provide custom logic for contributing additional (e.g. reflection) configuration. By default, reflection\nconfiguration will be added for types reachable from the repository declaration and query methods as well as all used\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>annotations</code></a> from the org.springframework.data namespace.",
+      "translation": "通过<a href=\"#registerRepositoryCompositionHints(org.springframework.data.repository.config.AotRepositoryContext,org.springframework.aot.generate.GenerationContext)\"><code>registerRepositoryCompositionHints(AotRepositoryContext, GenerationContext)</code></a>（具体而言是<a href=\"#configureTypeContribution(java.lang.Class,org.springframework.data.aot.AotContext)\"><code>configureTypeContribution(Class, AotContext)</code></a>和<a href=\"#contributeAotRepository(org.springframework.data.repository.config.AotRepositoryContext)\"><code>contributeAotRepository(AotRepositoryContext)</code></a>），存储库可以提供自定义逻辑以贡献额外的（例如反射）配置。默认情况下，将为从存储库声明和查询方法可达的类型以及所有使用的来自 org.springframework.data 命名空间的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>注解</code></a>添加反射配置。",
+      "count": 1
+    },
+    {
+      "source": "Processes <a href=\"../core/support/RepositoryFactoryBeanSupport.html\" title=\"class in org.springframework.data.repository.core.support\"><code>repository factory beans</code></a> to provide generic type information to the\nAOT tooling to allow deriving target type from the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/RootBeanDefinition.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>bean definition</code></a>. If generic types do\nnot match due to customization of the factory bean by the user, at least the target repository type is provided via\nthe <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html#OBJECT_TYPE_ATTRIBUTE\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean.OBJECT_TYPE_ATTRIBUTE</code></a>.",
+      "translation": "处理 <a href=\"../core/support/RepositoryFactoryBeanSupport.html\" title=\"class in org.springframework.data.repository.core.support\"><code>仓库工厂 Bean</code></a>，以向 AOT 工具提供泛型类型信息，从而能够从 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/RootBeanDefinition.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>Bean 定义</code></a> 推导出目标类型。如果由于用户自定义工厂 Bean 而导致泛型类型不匹配，则至少通过 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html#OBJECT_TYPE_ATTRIBUTE\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean.OBJECT_TYPE_ATTRIBUTE</code></a> 提供目标仓库类型。",
+      "count": 1
+    },
+    {
+      "source": "The processor is typically configured via <a href=\"RepositoryConfigurationExtension.html#getRepositoryAotProcessor()\"><code>RepositoryConfigurationExtension.getRepositoryAotProcessor()</code></a> and\ngets added by the <a href=\"RepositoryConfigurationDelegate.html\" title=\"class in org.springframework.data.repository.config\"><code>RepositoryConfigurationDelegate</code></a>.",
+      "translation": "处理器通常通过<a href=\"RepositoryConfigurationExtension.html#getRepositoryAotProcessor()\"><code>RepositoryConfigurationExtension.getRepositoryAotProcessor()</code></a>进行配置，并由<a href=\"RepositoryConfigurationDelegate.html\" title=\"class in org.springframework.data.repository.config\"><code>RepositoryConfigurationDelegate</code></a>添加。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Setter for the config map. See <code>RepositoryConfigurationDelegate#registerAotComponents</code>.",
+      "translation": "配置映射的 Setter。参见<code>RepositoryConfigurationDelegate#registerAotComponents</code>。",
+      "count": 1
+    },
+    {
+      "source": "Contribute repository-specific hints, e.g. for repository proxy, base implementation, fragments.",
+      "translation": "贡献特定于仓库的提示，例如用于仓库代理、基础实现和片段。",
+      "count": 1
+    },
+    {
+      "source": "Setter for the config map.",
+      "translation": "ConfigMap 的 Setter。",
+      "count": 1
+    },
+    {
+      "source": "Contribute repository-specific hints, e.g. for repository proxy, base implementation, fragments. Customization hook\nfor subclasses that wish to customize repository hint contribution.",
+      "translation": "贡献特定于存储库的提示，例如用于存储库代理、基础实现和片段。这是供子类自定义存储库提示贡献的定制钩子。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\" title=\"class or interface in org.springframework.beans.factory\">setBeanFactory</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html\" title=\"class or interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\" title=\"class or interface in org.springframework.beans.factory\">setBeanFactory</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactoryAware.html\" title=\"class or interface in org.springframework.beans.factory\">BeanFactoryAware</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/EnvironmentAware.html#setEnvironment(org.springframework.core.env.Environment)\" title=\"class or interface in org.springframework.context\">setEnvironment</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/EnvironmentAware.html\" title=\"class or interface in org.springframework.context\">EnvironmentAware</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/EnvironmentAware.html#setEnvironment(org.springframework.core.env.Environment)\" title=\"org.springframework.context 中的类或接口\">setEnvironment</a></code> 是 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/EnvironmentAware.html\" title=\"org.springframework.context 中的类或接口\">EnvironmentAware</a></code> 接口中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/EnvironmentCapable.html#getEnvironment()\" title=\"class or interface in org.springframework.core.env\">getEnvironment</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/EnvironmentCapable.html\" title=\"class or interface in org.springframework.core.env\">EnvironmentCapable</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/EnvironmentCapable.html#getEnvironment()\" title=\"类或接口 org.springframework.core.env\">getEnvironment</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/EnvironmentCapable.html\" title=\"类或接口 org.springframework.core.env\">EnvironmentCapable</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\" title=\"class or interface in org.springframework.beans.factory.aot\">processAheadOfTime</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/BeanRegistrationAotProcessor.html\" title=\"class or interface in org.springframework.beans.factory.aot\">BeanRegistrationAotProcessor</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/BeanRegistrationAotProcessor.html#processAheadOfTime(org.springframework.beans.factory.support.RegisteredBean)\" title=\"org.springframework.beans.factory.aot 中的类或接口\">processAheadOfTime</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/BeanRegistrationAotProcessor.html\" title=\"org.springframework.beans.factory.aot 中的类或接口\">BeanRegistrationAotProcessor</a></code> 中的一个方法。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>Consumer</code></a> to customize the <a href=\"../../util/TypeCollector.html\" title=\"class in org.springframework.data.util\"><code>TypeCollector</code></a>, must not be null.",
+      "translation": "一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"java.util.function 中的类或接口\"><code>Consumer</code></a>用于自定义<a href=\"../../util/TypeCollector.html\" title=\"org.springframework.data.util 中的类\"><code>TypeCollector</code></a>，该参数不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "a <a href=\"../aot/generate/RepositoryContributor.html\" title=\"class in org.springframework.data.repository.aot.generate\"><code>RepositoryContributor</code></a> to contribute store-specific AOT artifacts or null to skip\n        store-specific AOT contributions.",
+      "translation": "一个 <a href=\"../aot/generate/RepositoryContributor.html\" title=\"class in org.springframework.data.repository.aot.generate\"><code>RepositoryContributor</code></a> 用于贡献特定存储库的 AOT 工件，或为 null 以跳过特定存储库的 AOT 贡献。",
+      "count": 1
+    },
+    {
+      "source": "<code>type</code> - the class to configure the contribution for.",
+      "translation": "<code>type</code> - 要为其配置贡献的类。",
+      "count": 1
+    },
+    {
+      "source": "<code>aotContext</code> - AOT context for type configuration.",
+      "translation": "<aotContext> - 用于类型配置的 AOT 上下文。",
+      "count": 1
+    },
+    {
+      "source": "<code>repositoryContext</code> - the context for the repository being processed.",
+      "translation": "<code>repositoryContext</code> - 正在处理的仓库的上下文。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, John Blum, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，约翰·布鲁姆，马克·帕卢奇",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/BeanRegistrationAotProcessor.html\" title=\"class or interface in org.springframework.beans.factory.aot\"><code>BeanRegistrationAotProcessor</code></a> responsible processing and providing AOT configuration for repositories.",
+      "translation": "<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/aot/BeanRegistrationAotProcessor.html\" title=\"类或接口 org.springframework.beans.factory.aot\"><code>BeanRegistrationAotProcessor</code></a> 负责处理并为仓库提供 AOT 配置。",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "created_at": "2026-06-19 13:15:45",
+  "updated_at": "2026-06-19 13:15:45",
+  "stats": {
+    "total_entries": 40,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 49,
+    "entries_with_hits": 40,
+    "entries_without_hits": 0,
+    "hit_rate": 1.225,
+    "usage_percentage": 0.004
+  },
+  "items": [
+    {
+      "source": "since 4.0 use <a href=\"#jdbcAggregateOperationsRef()\"><code>jdbcAggregateOperationsRef()</code></a> instead to ensure consistent configuration\n            repositories.",
+      "translation": "自 4.0 版本起，请使用<a href=\"#jdbcAggregateOperationsRef()\"><code>jdbcAggregateOperationsRef()</code></a>来确保配置的一致性。",
+      "count": 4
+    },
+    {
+      "source": "Configure the name of the <a href=\"../../core/JdbcAggregateOperations.html\" title=\"interface in org.springframework.data.jdbc.core\"><code>JdbcAggregateOperations</code></a> bean to be used to\ncreate repositories discovered through this annotation.",
+      "translation": "配置通过此注解发现的仓库所使用的<a href=\"../../core/JdbcAggregateOperations.html\" title=\"org.springframework.data.jdbc.core 中的接口\"><code>JdbcAggregateOperations</code></a>bean的名称。",
+      "count": 2
+    },
+    {
+      "source": "Configure a specific <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> to be used when creating the repository beans.",
+      "translation": "配置一个特定的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a>，以便在创建存储库 Bean 时使用。",
+      "count": 2
+    },
+    {
+      "source": "Base packages to scan for annotated components.",
+      "translation": "用于扫描已注解组件的基础包。",
+      "count": 2
+    },
+    {
+      "source": "Configures whether nested repository-interfaces (e.g. defined as inner classes) should be discovered by the\nrepositories infrastructure.",
+      "translation": "配置是否由仓库基础设施发现嵌套的仓库接口（例如定义为内部类的接口）。",
+      "count": 2
+    },
+    {
+      "source": "Specifies which types are not eligible for component scanning.",
+      "translation": "指定不适用于组件扫描的类型。",
+      "count": 2
+    },
+    {
+      "source": "Configure the repository base class to be used to create repository proxies for this particular configuration.",
+      "translation": "配置用于为当前特定配置创建存储库代理的存储库基类。",
+      "count": 2
+    },
+    {
+      "source": "Enabling JDBC repositories prefers a <a href=\"../../core/JdbcAggregateOperations.html\" title=\"interface in org.springframework.data.jdbc.core\"><code>JdbcAggregateOperations</code></a> bean and\nfalls back to creating a <a href=\"../../core/JdbcAggregateTemplate.html\" title=\"class in org.springframework.data.jdbc.core\"><code>JdbcAggregateTemplate</code></a> instance from configured or\ndiscovered <a href=\"../../../relational/core/dialect/Dialect.html\" title=\"interface in org.springframework.data.relational.core.dialect\"><code>Dialect</code></a>,\n<a href=\"../../core/convert/DataAccessStrategy.html\" title=\"interface in org.springframework.data.jdbc.core.convert\"><code>DataAccessStrategy</code></a>, and\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/jdbc/core/namedparam/NamedParameterJdbcOperations.html\" title=\"class or interface in org.springframework.jdbc.core.namedparam\"><code>NamedParameterJdbcOperations</code></a> beans.",
+      "translation": "启用 JDBC 存储库时，优先使用 <a href=\"../../core/JdbcAggregateOperations.html\" title=\"interface in org.springframework.data.jdbc.core\"><code>JdbcAggregateOperations</code></a> Bean，并回退到从配置的或发现的 <a href=\"../../../relational/core/dialect/Dialect.html\" title=\"interface in org.springframework.data.relational.core.dialect\"><code>Dialect</code></a>、<a href=\"../../core/convert/DataAccessStrategy.html\" title=\"interface in org.springframework.data.jdbc.core.convert\"><code>DataAccessStrategy</code></a> 以及 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/jdbc/core/namedparam/NamedParameterJdbcOperations.html\" title=\"class or interface in org.springframework.jdbc.core.namedparam\"><code>NamedParameterJdbcOperations</code></a> Bean 创建 <a href=\"../../core/JdbcAggregateTemplate.html\" title=\"class in org.springframework.data.jdbc.core\"><code>JdbcAggregateTemplate</code></a> 实例。",
+      "count": 1
+    },
+    {
+      "source": "Configuring <a href=\"#jdbcAggregateOperationsRef()\"><code>jdbcAggregateOperationsRef()</code></a> allows a consistent configuration using all\ninvolved components including reference lookups. <a href=\"#dataAccessStrategyRef()\"><code>dataAccessStrategyRef()</code></a> and <a href=\"#jdbcOperationsRef()\"><code>jdbcOperationsRef()</code></a>\nare deprecated since 4.0 and will be removed in a future version as not all required components can be configured\nproperly for a consistent repository configuration.",
+      "translation": "配置 `<a href=\"#jdbcAggregateOperationsRef()\"><code>jdbcAggregateOperationsRef()</code></a>` 允许使用所有相关组件（包括引用查找）进行一致的配置。`<a href=\"#dataAccessStrategyRef()\"><code>dataAccessStrategyRef()</code></a>` 和 `<a href=\"#jdbcOperationsRef()\"><code>jdbcOperationsRef()</code></a>` 自 4.0 版本起已被弃用，并将在未来版本中移除，因为无法为所有必需的组件正确配置以实现一致的仓库配置。",
+      "count": 1
+    },
+    {
+      "source": "Supports <code>${…}</code> placeholders which are resolved against the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/Environment.html\" title=\"class or interface in org.springframework.core.env\"><code>Environment</code></a> as well as Ant-style package patterns — for example, <code>\"org.example.**\"</code>.",
+      "translation": "支持 `<code>${…}</code>` 占位符，这些占位符会针对 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/Environment.html\" title=\"class or interface in org.springframework.core.env\"><code>Environment</code></a> 进行解析，同时也支持 Ant 风格的包模式——例如 `<code>\"org.example.**\"</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Multiple packages or patterns may be specified, either separately or within a single <code>String</code> — for\nexample, <code>{\"org.example.config\", \"org.example.service.**\"}</code> or\n<code>\"org.example.config, org.example.service.**\"</code>.",
+      "translation": "可以指定多个包或模式，既可以分别指定，也可以包含在单个 `<code>String</code>` 中——例如 `<code>{\"org.example.config\", \"org.example.service.**\"}</code>` 或 `<code>\"org.example.config, org.example.service.**\"</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2017–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2017–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#value()\"><code>value()</code></a> is an alias for (and mutually exclusive with) this attribute.",
+      "translation": "<a href=\"#value()\"><code>value()</code></a> 是该属性的别名，且二者互斥。",
+      "count": 1
+    },
+    {
+      "source": "Use <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> for a type-safe alternative to String-based package names.",
+      "translation": "使用<a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a>作为基于字符串的包名的类型安全替代方案。",
+      "count": 1
+    },
+    {
+      "source": "Alias for the <a href=\"#basePackages()\"><code>basePackages()</code></a> attribute. Allows for more concise annotation declarations e.g.:\n<code>@EnableJdbcRepositories(\"org.my.pkg\")</code> instead of\n<code>@EnableJdbcRepositories(basePackages=\"org.my.pkg\")</code>.",
+      "translation": "`basePackages()` 属性的别名。允许使用更简洁的注解声明，例如：\n<code>@EnableJdbcRepositories(\"org.my.pkg\")</code>，而不是\n<code>@EnableJdbcRepositories(basePackages=\"org.my.pkg\")</code>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the key of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> to be used for lookup queries for query methods. Defaults to\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.Key.html#CREATE_IF_NOT_FOUND\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy.Key.CREATE_IF_NOT_FOUND</code></a>.",
+      "translation": "返回用于查询方法查找查询的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> 的键。默认值为\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.Key.html#CREATE_IF_NOT_FOUND\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy.Key.CREATE_IF_NOT_FOUND</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> class to be used for each repository instance. Defaults to\n<a href=\"../support/JdbcRepositoryFactoryBean.html\" title=\"class in org.springframework.data.jdbc.repository.support\"><code>JdbcRepositoryFactoryBean</code></a>.",
+      "translation": "返回用于每个存储库实例的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"org.springframework.beans.factory 中的类或接口\"><code>FactoryBean</code></a> 类。默认值为\n<a href=\"../support/JdbcRepositoryFactoryBean.html\" title=\"org.springframework.data.jdbc.repository.support 中的类\"><code>JdbcRepositoryFactoryBean</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Configures the name of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/jdbc/core/namedparam/NamedParameterJdbcOperations.html\" title=\"class or interface in org.springframework.jdbc.core.namedparam\"><code>NamedParameterJdbcOperations</code></a> bean to be\nused to create repositories discovered through this annotation. Defaults to <code>namedParameterJdbcTemplate</code>.",
+      "translation": "配置通过此注解发现的仓库所使用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/jdbc/core/namedparam/NamedParameterJdbcOperations.html\" title=\"class or interface in org.springframework.jdbc.core.namedparam\"><code>NamedParameterJdbcOperations</code></a>bean的名称。默认值为<code>namedParameterJdbcTemplate</code>。",
+      "count": 1
+    },
+    {
+      "source": "Configures the name of the <a href=\"../../core/convert/DataAccessStrategy.html\" title=\"interface in org.springframework.data.jdbc.core.convert\"><code>DataAccessStrategy</code></a> bean to be used to\ncreate repositories discovered through this annotation. Defaults to <code>defaultDataAccessStrategy</code>.",
+      "translation": "配置通过此注解发现的仓库所使用的<a href=\"../../core/convert/DataAccessStrategy.html\" title=\"interface in org.springframework.data.jdbc.core.convert\"><code>DataAccessStrategy</code></a>bean的名称。默认值为<code>defaultDataAccessStrategy</code>。",
+      "count": 1
+    },
+    {
+      "source": "Configures the name of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> bean to be used to create repositories discovered\nthrough this annotation. Defaults to <code>transactionManager</code>.",
+      "translation": "配置通过此注解发现的仓库所使用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>bean的名称。默认值为<code>transactionManager</code>。",
+      "count": 1
+    },
+    {
+      "source": "Type-safe alternative to <a href=\"#basePackages()\"><code>basePackages()</code></a> for specifying the packages to scan for annotated components.",
+      "translation": "用于指定要扫描以查找带注解组件的包的安全类型替代方案，替代<a href=\"#basePackages()\"><code>basePackages()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the key of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> to be used for lookup queries for query methods.",
+      "translation": "返回用于查询方法查找查询的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> 的键。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> class to be used for each repository instance.",
+      "translation": "返回用于每个仓库实例的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"org.springframework.beans.factory 中的类或接口\"><code>FactoryBean</code></a> 类。",
+      "count": 1
+    },
+    {
+      "source": "Configures the name of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> bean to be used to create repositories discovered\nthrough this annotation.",
+      "translation": "配置通过此注解发现的仓库所使用的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>  Bean 的名称。",
+      "count": 1
+    },
+    {
+      "source": "Alias for the <a href=\"#basePackages()\"><code>basePackages()</code></a> attribute.",
+      "translation": "`<a href=\"#basePackages()\"><code>basePackages()</code></a>` 属性的别名。",
+      "count": 1
+    },
+    {
+      "source": "Type-safe alternative to <a href=\"#basePackages()\"><code>basePackages()</code></a> for specifying the packages to scan for annotated components. The\npackage of each class specified will be scanned. Consider creating a special no-op marker class or interface in\neach package that serves no purpose other than being referenced by this attribute.",
+      "translation": "`<a href=\"#basePackages()\"><code>basePackages()</code></a>` 的安全类型替代方案，用于指定要扫描以查找已注解组件的包。将扫描每个指定类所在的包。建议在每个包中创建一个特殊的无操作标记类或接口，其唯一用途是被此属性引用。",
+      "count": 1
+    },
+    {
+      "source": "Specifies which types are eligible for component scanning. Further narrows the set of candidate components from\neverything in <a href=\"#basePackages()\"><code>basePackages()</code></a> to everything in the base packages that matches the given filter or filters.",
+      "translation": "指定哪些类型有资格进行组件扫描。进一步缩小候选组件的范围，从 `<a href=\"#basePackages()\"><code>basePackages()</code></a>` 中所有内容筛选为与给定过滤器或过滤器匹配的基础包中的所有内容。",
+      "count": 1
+    },
+    {
+      "source": "Returns the postfix to be used when looking up custom repository implementations. Defaults to Impl. So\nfor a repository named <code>PersonRepository</code> the corresponding implementation class will be looked up scanning\nfor <code>PersonRepositoryImpl</code>.",
+      "translation": "返回用于查找自定义仓库实现的后缀，默认为\"Impl\"。因此，对于名为 `<code>PersonRepository</code>` 的仓库，系统将扫描以查找对应的实现类 `<code>PersonRepositoryImpl</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Configures the location of where to find the Spring Data named queries properties file. Will default to\n<code>META-INF/jdbc-named-queries.properties</code>.",
+      "translation": "配置查找 Spring Data 命名查询属性文件的位置。默认值为 `<code>META-INF/jdbc-named-queries.properties</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Configures whether to enable default transactions for Spring Data JDBC repositories.",
+      "translation": "配置是否启用 Spring Data JDBC 存储库的默认事务。",
+      "count": 1
+    },
+    {
+      "source": "Specifies which types are eligible for component scanning.",
+      "translation": "指定哪些类型符合组件扫描条件。",
+      "count": 1
+    },
+    {
+      "source": "Configures the location of where to find the Spring Data named queries properties file.",
+      "translation": "配置查找 Spring Data 命名查询属性文件的位置。",
+      "count": 1
+    },
+    {
+      "source": "Returns the postfix to be used when looking up custom repository implementations.",
+      "translation": "返回用于查找自定义仓库实现的后缀。",
+      "count": 1
+    },
+    {
+      "source": "Configures whether to enable default transactions for Spring Data JDBC repositories. Defaults to true.\nIf disabled, repositories must be used behind a facade that's configuring transactions (e.g. using Spring's\nannotation driven transaction facilities) or repository methods have to be used to demarcate transactions.",
+      "translation": "配置是否启用 Spring Data JDBC 存储库的默认事务。默认为 true。  \n如果禁用，则必须在配置了事务的代理（例如使用 Spring 的基于注解的事务设施）之后使用存储库，或者必须使用存储库方法来界定事务。",
+      "count": 1
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> to be used or the base <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> interface to indicate context default.",
+      "translation": "使用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"org.springframework.beans.factory.support 中的类或接口\"><code>BeanNameGenerator</code></a> 来指定要使用的生成器，或者使用基础的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"org.springframework.beans.factory.support 中的类或接口\"><code>BeanNameGenerator</code></a> 接口以指示上下文默认值。",
+      "count": 1
+    },
+    {
+      "source": "Jens Schauder, Greg Turnquist, Mark Paluch, Fei Dong, Antoine Sauray, Diego Krupitza, Christoph Strobl",
+      "translation": "Jens Schauder，Greg Turnquist，Mark Paluch，Fei Dong，Antoine Sauray，Diego Krupitza，Christoph Strobl",
+      "count": 1
+    },
+    {
+      "source": "whether to enable default transactions, defaults to true.",
+      "translation": "是否启用默认事务，默认为 true。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "Annotation to enable JDBC repositories. If no base package is configured through either * <a href=\"#value()\"><code>value()</code></a>,\n<a href=\"#basePackages()\"><code>basePackages()</code></a> or <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> it will trigger scanning of the package of annotated class.",
+      "translation": "启用 JDBC 存储库的注解。如果未通过 * <a href=\"#value()\"><code>value()</code></a>、<a href=\"#basePackages()\"><code>basePackages()</code></a> 或 <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> 配置基础包，则将对被注解类的包进行扫描。",
+      "count": 1
+    }
+  ]
+}

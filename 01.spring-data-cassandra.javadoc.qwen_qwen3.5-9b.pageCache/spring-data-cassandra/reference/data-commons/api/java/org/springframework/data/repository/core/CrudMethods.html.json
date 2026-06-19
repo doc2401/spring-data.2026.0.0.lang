@@ -1,46 +1,86 @@
 {
   "created_at": "2026-06-16 11:57:54",
-  "updated_at": "2026-06-16 11:57:54",
+  "updated_at": "2026-06-18 07:24:02",
   "stats": {
-    "total_entries": 31,
+    "total_entries": 36,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 35,
-    "entries_with_hits": 31,
+    "total_hits": 54,
+    "entries_with_hits": 36,
     "entries_without_hits": 0,
-    "hit_rate": 1.1290322580645162,
-    "usage_percentage": 0.0031000000000000003
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0036
   },
   "items": [
     {
       "source": "Returns whether the repository exposes a delete method.",
       "translation": "返回该仓库是否公开了删除方法。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the repository exposes a find all method at all.",
       "translation": "返回该仓库是否公开了查找所有的方法。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the repository exposes a find one method.",
       "translation": "返回该仓库是否暴露了查找单个实体的方法。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the repository exposes a save method at all.",
       "translation": "返回该仓库是否暴露了保存方法。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Returns the find all method of the repository. Implementations should prefer more detailed methods like\n<a href=\"../PagingAndSortingRepository.html\" title=\"interface in org.springframework.data.repository\"><code>PagingAndSortingRepository</code></a>'s taking a <a href=\"../../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> or <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> instance.",
       "translation": "返回存储库的查找所有方法。实现应更倾向于使用更详细的方法，例如<a href=\"../PagingAndSortingRepository.html\" title=\"interface in org.springframework.data.repository\"><code>PagingAndSortingRepository</code></a>中接受<a href=\"../../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a>或<a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>实例的方法。",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Returns the method to be used for saving entities. Usually signature compatible to\n<a href=\"../CrudRepository.html#save(S)\"><code>CrudRepository.save(Object)</code></a>.",
+      "translation": "返回用于保存实体的方法。通常与 <a href=\"../CrudRepository.html#save(S)\"><code>CrudRepository.save(Object)</code></a> 的签名兼容。",
+      "count": 2
+    },
+    {
+      "source": "Returns the find one method of the repository. Usually signature compatible to\n<a href=\"../CrudRepository.html#findById(ID)\"><code>CrudRepository.findById(Object)</code></a>",
+      "translation": "返回存储库的查找一个方法。通常与 <a href=\"../CrudRepository.html#findById(ID)\"><code>CrudRepository.findById(Object)</code></a> 的签名兼容。",
+      "count": 2
+    },
+    {
+      "source": "Meta-information about the CRUD methods of a repository.",
+      "translation": "存储库中 CRUD 方法的元信息。",
+      "count": 2
+    },
+    {
+      "source": "Returns the delete method of the repository.",
+      "translation": "返回存储库的删除方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns the find all method of the repository.",
+      "translation": "返回存储库的查找所有方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns the find one method of the repository.",
+      "translation": "返回仓储的查找单个实体方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns the method to be used for saving entities.",
+      "translation": "返回用于保存实体的方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns the delete method of the repository. Will prefer a delete-by-entity method over a delete-by-id method.",
+      "translation": "返回存储库的删除方法。将优先选择基于实体的删除方法，而不是基于 ID 的删除方法。",
+      "count": 2
     },
     {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
@@ -50,16 +90,6 @@
     {
       "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CrudMethods</span>",
       "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CrudMethods</span>",
-      "count": 1
-    },
-    {
-      "source": "Returns the method to be used for saving entities. Usually signature compatible to\n<a href=\"../CrudRepository.html#save(S)\"><code>CrudRepository.save(Object)</code></a>.",
-      "translation": "返回用于保存实体的方法。通常与 <a href=\"../CrudRepository.html#save(S)\"><code>CrudRepository.save(Object)</code></a> 的签名兼容。",
-      "count": 1
-    },
-    {
-      "source": "Returns the find one method of the repository. Usually signature compatible to\n<a href=\"../CrudRepository.html#findById(ID)\"><code>CrudRepository.findById(Object)</code></a>",
-      "translation": "返回存储库的查找一个方法。通常与 <a href=\"../CrudRepository.html#findById(ID)\"><code>CrudRepository.findById(Object)</code></a> 的签名兼容。",
       "count": 1
     },
     {
@@ -78,38 +108,8 @@
       "count": 1
     },
     {
-      "source": "Meta-information about the CRUD methods of a repository.",
-      "translation": "存储库中 CRUD 方法的元信息。",
-      "count": 1
-    },
-    {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Returns the delete method of the repository.",
-      "translation": "返回存储库的删除方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns the find all method of the repository.",
-      "translation": "返回存储库的查找所有方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns the find one method of the repository.",
-      "translation": "返回仓储的查找单个实体方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns the method to be used for saving entities.",
-      "translation": "返回用于保存实体的方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns the delete method of the repository. Will prefer a delete-by-entity method over a delete-by-id method.",
-      "translation": "返回存储库的删除方法。将优先选择基于实体的删除方法，而不是基于 ID 的删除方法。",
       "count": 1
     },
     {
@@ -165,6 +165,31 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "the method to save entities or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if none exposed.",
+      "translation": "保存实体的方法，或者如果没有暴露任何实体，则使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the find all method of the repository or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if not available.",
+      "translation": "仓库的 findAll 方法，或者如果不可用则使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the find one method of the repository or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if not available.",
+      "translation": "仓库中的 findOne 方法，或者如果不可用则使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"java.util 中的类或接口\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the delete method of the repository or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if not available.",
+      "translation": "仓库的删除方法，或者如果不可用则使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke",
+      "translation": "奥利弗·吉尔克",
       "count": 1
     }
   ]

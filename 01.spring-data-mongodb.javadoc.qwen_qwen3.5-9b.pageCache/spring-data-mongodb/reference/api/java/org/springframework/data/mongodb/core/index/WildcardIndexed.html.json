@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-19 02:14:41",
+  "updated_at": "2026-06-19 02:14:41",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 20,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1764705882352942,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "empty by default.",
+      "translation": "默认情况下为空。",
+      "count": 3
+    },
+    {
+      "source": "Defines the collation to apply.",
+      "translation": "定义要应用的排序规则。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Annotation for an entity or property that should be used as key for a\n<a href=\"https://docs.mongodb.com/manual/core/index-wildcard/\">Wildcard Index</a>. <br/>\nIf placed on a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE\" title=\"class or interface in java.lang.annotation\"><code>type</code></a> that is a root level domain entity (one having an\n<a href=\"../mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a> annotation) will advise the index creator to create a\nwildcard index for it.\n\n<pre class=\"code\">\n@Document\n@WildcardIndexed\npublic class Product {\n    ...\n}\n\ndb.product.createIndex({ \"$**\" : 1 } , {})\n</pre>\n\nwildcardProjection can be used to specify keys to in-/exclude in the index.\n\n<pre class=\"code\">\n@Document\n@WildcardIndexed(wildcardProjection = \"{ 'userMetadata.age' : 0 }\")\npublic class User {\n    private @Id String id;\n    private UserMetadata userMetadata;\n}\n\n\ndb.user.createIndex(\n  { \"$**\" : 1 },\n  { \"wildcardProjection\" :\n    { \"userMetadata.age\" : 0 }\n  }\n)\n</pre>\n\nWildcard indexes can also be expressed by adding the annotation directly to the field. Please note that\nwildcardProjection is not allowed on nested paths.\n\n<pre class=\"code\">@Document\npublic class User {\n\n    private @Id String id;\n\n    @WildcardIndexed\n    private UserMetadata userMetadata;\n}\n\n\ndb.user.createIndex({ \"userMetadata.$**\" : 1 }, {})\n</pre>",
+      "translation": "用于指定应作为<a href=\"https://docs.mongodb.com/manual/core/index-wildcard/\">通配符索引</a>键的实体或属性的注解。<br/>\n如果将其放置在具有<a href=\"../mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a> 注解的根级别域实体（即一个类型）上，将提示索引创建者为该实体创建通配符索引。\n\n<pre class=\"code\">\n@Document\n@WildcardIndexed\npublic class Product {\n    ...\n}\n\ndb.product.createIndex({ \"$**\" : 1 } , {})\n</pre>\n\n可以使用 wildcardProjection 来指定在索引中包含或排除的键。\n\n<pre class=\"code\">\n@Document\n@WildcardIndexed(wildcardProjection = \"{ 'userMetadata.age' : 0 }\")\npublic class User {\n    private @Id String id;\n    private UserMetadata userMetadata;\n}\n\n\ndb.user.createIndex(\n  { \"$**\" : 1 },\n  { \"wildcardProjection\" :\n    { \"userMetadata.age\" : 0 }\n  }\n)\n</pre>\n\n通配符索引也可以通过直接将注解添加到字段上来表示。请注意，不允许在嵌套路径上使用 wildcardProjection。\n\n<pre class=\"code\">@Document\npublic class User {\n\n    private @Id String id;\n\n    @WildcardIndexed\n    private UserMetadata userMetadata;\n}\n\n\ndb.user.createIndex({ \"userMetadata.$**\" : 1 }, {})\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Index name either as plain value or as <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template\nexpression</code></a>. <br/>\n<br/>\nThe name will only be applied as is when defined on root level. For usage on nested or embedded structures the\nprovided name will be prefixed with the path leading to the entity.",
+      "translation": "索引名称可以是纯值，也可以是<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>。<br/>\n<br/>\n当名称定义在根级别时，将原样应用该名称。对于嵌套或嵌入式结构中的使用，提供的名称将前缀上通往该实体的路径。",
+      "count": 1
+    },
+    {
+      "source": "Only index the documents in a collection that meet a specified <a href=\"IndexFilter.html\" title=\"interface in org.springframework.data.mongodb.core.index\"><code>filter expression</code></a>. <br/>",
+      "translation": "仅对满足指定<a href=\"IndexFilter.html\" title=\"org.springframework.data.mongodb.core.index 中的接口\"><code>过滤表达式</code></a>的集合中的文档建立索引。<br/>",
+      "count": 1
+    },
+    {
+      "source": "Explicitly specify sub fields to be in-/excluded as a <code>prasable</code> String.\n<br/>\n<strong>NOTE:</strong> Can only be applied on root level documents.",
+      "translation": "显式指定要包含或排除的子字段，格式为 `<code>prasable</code>` 字符串。\n<br/>\n<strong>注意：</strong> 仅可应用于根级别文档。",
+      "count": 1
+    },
+    {
+      "source": "Index name either as plain value or as <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template\nexpression</code></a>.",
+      "translation": "索引名称可以是纯值，也可以是 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Only index the documents in a collection that meet a specified <a href=\"IndexFilter.html\" title=\"interface in org.springframework.data.mongodb.core.index\"><code>filter expression</code></a>.",
+      "translation": "仅对满足指定<a href=\"IndexFilter.html\" title=\"org.springframework.data.mongodb.core.index 中的接口\"><code>过滤表达式</code></a>的集合中的文档建立索引。",
+      "count": 1
+    },
+    {
+      "source": "Explicitly specify sub fields to be in-/excluded as a <code>prasable</code> String.",
+      "translation": "明确指定要包含或排除的子字段，作为 `<code>prasable</code>` 类型的字符串。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name. Defaults\nto false.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> by default.",
+      "translation": "默认情况下为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "false by default.",
+      "translation": "默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

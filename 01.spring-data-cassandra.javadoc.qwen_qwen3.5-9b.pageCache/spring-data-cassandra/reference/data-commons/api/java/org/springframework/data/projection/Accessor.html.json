@@ -1,41 +1,46 @@
 {
   "created_at": "2026-06-16 10:46:20",
-  "updated_at": "2026-06-16 10:46:20",
+  "updated_at": "2026-06-18 07:14:58",
   "stats": {
-    "total_entries": 25,
+    "total_entries": 31,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 29,
-    "entries_with_hits": 25,
+    "total_hits": 41,
+    "entries_with_hits": 31,
     "entries_without_hits": 0,
-    "hit_rate": 1.16,
-    "usage_percentage": 0.0025
+    "hit_rate": 1.3225806451612903,
+    "usage_percentage": 0.0031000000000000003
   },
   "items": [
     {
       "source": "Creates an <a href=\"Accessor.html\" title=\"class in org.springframework.data.projection\"><code>Accessor</code></a> for the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>.",
       "translation": "为给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"类或接口在 java.lang.reflect\"><code>Method</code></a>创建一个<a href=\"Accessor.html\" title=\"org.springframework.data.projection 中的类\"><code>Accessor</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the name of the property this accessor handles.",
       "translation": "返回此访问器处理的属性名称。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the accessor is a getter.",
       "translation": "返回访问器是否为获取器。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the accessor is a setter.",
       "translation": "返回访问器是否为设置器。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Helper value to abstract an accessor.",
+      "translation": "辅助值用于抽象访问器。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -65,11 +70,6 @@
     {
       "source": "Spring Data Core",
       "translation": "Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Helper value to abstract an accessor.",
-      "translation": "辅助值用于抽象访问器。",
       "count": 1
     },
     {
@@ -135,6 +135,36 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - in case the given method is not an accessor method.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果给定的方法不是访问器方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - must not be null.",
+      "translation": "<code>method</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Christoph Strobl, Johannes Englmeier",
+      "translation": "奥利弗·吉尔克，克里斯托夫·施特罗布，约翰内斯·恩格勒迈尔",
+      "count": 1
+    },
+    {
+      "source": "true if the accessor is a getter; false otherwise.",
+      "translation": "如果访问器是获取器，则为 true；否则为 false。",
+      "count": 1
+    },
+    {
+      "source": "true if the accessor is a setter; false otherwise.",
+      "translation": "如果访问器是设置器，则为 true；否则为 false。",
+      "count": 1
+    },
+    {
+      "source": "will never be null.",
+      "translation": "永远不会为 null。",
       "count": 1
     }
   ]

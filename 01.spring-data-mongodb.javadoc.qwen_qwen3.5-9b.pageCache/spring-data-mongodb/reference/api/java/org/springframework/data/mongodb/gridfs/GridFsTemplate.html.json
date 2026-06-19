@@ -1,0 +1,331 @@
+{
+  "created_at": "2026-06-19 01:18:58",
+  "updated_at": "2026-06-19 01:18:58",
+  "stats": {
+    "total_entries": 63,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 83,
+    "entries_with_hits": 63,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3174603174603174,
+    "usage_percentage": 0.0063
+  },
+  "items": [
+    {
+      "source": "Creates a new <a href=\"GridFsTemplate.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsTemplate</code></a> using the given <a href=\"../MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a> and <a href=\"../core/convert/MongoConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>MongoConverter</code></a>.",
+      "translation": "使用给定的<a href=\"../MongoDatabaseFactory.html\" title=\"接口在 org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a>和<a href=\"../core/convert/MongoConverter.html\" title=\"接口在 org.springframework.data.mongodb.core.convert\"><code>MongoConverter</code></a>创建一个新的<a href=\"GridFsTemplate.html\" title=\"类在 org.springframework.data.mongodb.gridfs\"><code>GridFsTemplate</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "<code>converter</code> - must not be null.",
+      "translation": "<code>converter</code> 不能为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - must not be null.",
+      "translation": "<code>query</code> 不能为空。",
+      "count": 3
+    },
+    {
+      "source": "Note that the <code>GridFSBucket</code> is obtained only once from <a href=\"../MongoDatabaseFactory.html#getMongoDatabase()\"><code>MongoDatabase</code></a>. Use <a href=\"#%3Cinit%3E(org.springframework.data.mongodb.core.convert.MongoConverter,java.util.function.Supplier)\"><code>GridFsTemplate(MongoConverter, Supplier)</code></a> if you want to use different buckets from the\nsame Template instance.",
+      "translation": "请注意，<code>GridFSBucket</code> 仅从 <a href=\"../MongoDatabaseFactory.html#getMongoDatabase()\"><code>MongoDatabase</code></a> 获取一次。如果您希望使用相同的模板实例访问不同的存储桶，请使用 <a href=\"#%3Cinit%3E(org.springframework.data.mongodb.core.convert.MongoConverter,java.util.function.Supplier)\"><code>GridFsTemplate(MongoConverter, Supplier)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"GridFsTemplate.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsTemplate</code></a> using the given <a href=\"../core/convert/MongoConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>MongoConverter</code></a> and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a> providing the\nrequired <code>GridFSBucket</code>.",
+      "translation": "使用给定的<a href=\"../core/convert/MongoConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>MongoConverter</code></a>和提供所需<code>GridFSBucket</code>的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a>创建一个新的<a href=\"GridFsTemplate.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsTemplate</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"GridFsResource.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsResource</code></a> for a <code>GridFSFile</code>.",
+      "translation": "返回与<code>GridFSFile</code>对应的<a href=\"GridFsResource.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsResource</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Compute the <code>GridFSUploadOptions</code> to be used from the given contentType and metadata\n<code>Document</code>.",
+      "translation": "根据给定的 contentType 和元数据 <code>Document</code>，计算用于的 <code>GridFSUploadOptions</code>。",
+      "count": 2
+    },
+    {
+      "source": "Deletes all files matching the given <a href=\"../core/query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "删除所有与给定<a href=\"../core/query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>匹配的文件。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"GridFsResource.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsResource</code></a> with the given file name.",
+      "translation": "返回具有给定文件名的<a href=\"GridFsResource.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsResource</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns all <a href=\"GridFsResource.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsResource</code></a>s matching the given file name pattern.",
+      "translation": "返回所有与给定文件名模式匹配的<a href=\"GridFsResource.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsResource</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns a single <code>GridFSFile</code> matching the given query or null in\ncase no file matches.",
+      "translation": "返回与给定查询匹配的单个<code>GridFSFile</code>，如果没有匹配的文件则返回 null。",
+      "count": 2
+    },
+    {
+      "source": "Convert a given value into a <code>Document</code>.",
+      "translation": "将给定值转换为<code>Document</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>dbFactory</code> - must not be null.",
+      "translation": "<code>dbFactory</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>contentType</code> - can be null.",
+      "translation": "<code>contentType</code> - 可以为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>metadata</code> - can be null",
+      "translation": "<code>metadata</code> - 可为 null",
+      "count": 2
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Stores the given <a href=\"GridFsObject.html\" title=\"interface in org.springframework.data.mongodb.gridfs\"><code>GridFsObject</code></a>, likely a <a href=\"GridFsUpload.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsUpload</code></a>, into into a file with given\n<a href=\"GridFsObject.html#getFilename()\"><code>name</code></a>. If the <a href=\"GridFsObject.html#getFileId()\"><code>GridFsObject.getFileId()</code></a> is set, the file will be stored\nwith that id, otherwise the server auto creates a new id. <br/>",
+      "translation": "将给定的<a href=\"GridFsObject.html\" title=\"interface in org.springframework.data.mongodb.gridfs\"><code>GridFsObject</code></a>（可能为<a href=\"GridFsUpload.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsUpload</code></a>）存储到具有指定<a href=\"GridFsObject.html#getFilename()\"><code>name</code></a>的文件中。如果已设置<a href=\"GridFsObject.html#getFileId()\"><code>GridFsObject.getFileId()</code></a>，则文件将使用该 id 进行存储；否则，服务器会自动创建一个新的 id。<br/>",
+      "count": 1
+    },
+    {
+      "source": "Stores the given <a href=\"GridFsObject.html\" title=\"interface in org.springframework.data.mongodb.gridfs\"><code>GridFsObject</code></a>, likely a <a href=\"GridFsUpload.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsUpload</code></a>, into into a file with given\n<a href=\"GridFsObject.html#getFilename()\"><code>name</code></a>.",
+      "translation": "将给定的 <a href=\"GridFsObject.html\" title=\"interface in org.springframework.data.mongodb.gridfs\"><code>GridFsObject</code></a>（可能是 <a href=\"GridFsUpload.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsUpload</code></a>）存储到具有给定<a href=\"GridFsObject.html#getFilename()\"><code>name</code></a>的文件中。",
+      "count": 1
+    },
+    {
+      "source": "Returns all files matching the given query. Note, that currently <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> criterias defined at the\n<a href=\"../core/query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> will not be regarded as MongoDB does not support ordering for GridFS file access.",
+      "translation": "返回所有匹配给定查询的文件。请注意，目前 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> 中定义的、在 <a href=\"../core/query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 中的排序条件不会被考虑，因为 MongoDB 不支持对 GridFS 文件访问进行排序。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#store(java.io.InputStream,java.lang.String,java.lang.String,java.lang.Object)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#store(java.io.InputStream,java.lang.String,java.lang.String,java.lang.Object)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#store(org.springframework.data.mongodb.gridfs.GridFsObject)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#store(org.springframework.data.mongodb.gridfs.GridFsObject)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#find(org.springframework.data.mongodb.core.query.Query)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#find(org.springframework.data.mongodb.core.query.Query)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#findOne(org.springframework.data.mongodb.core.query.Query)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#findOne(org.springframework.data.mongodb.core.query.Query)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#delete(org.springframework.data.mongodb.core.query.Query)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#delete(org.springframework.data.mongodb.core.query.Query)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#getResource(java.lang.String)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#getResource(java.lang.String)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#getResource(com.mongodb.client.gridfs.model.GridFSFile)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#getResource(com.mongodb.client.gridfs.model.GridFSFile)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"GridFsOperations.html#getResources(java.lang.String)\">GridFsOperations</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"GridFsOperations.html#getResources(java.lang.String)\">GridFsOperations</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\"><code>GridFsOperations</code></a> implementation to store content into MongoDB GridFS.",
+      "translation": "实现 <a href=\"GridFsOperations.html\" title=\"org.springframework.data.mongodb.gridfs 中的接口\"><code>GridFsOperations</code></a> 以将内容存储到 MongoDB GridFS。",
+      "count": 1
+    },
+    {
+      "source": "Returns all files matching the given query.",
+      "translation": "返回所有匹配给定查询的文件。",
+      "count": 1
+    },
+    {
+      "source": "Stores the given content into a file with the given name and content type using the given metadata.",
+      "translation": "使用给定的元数据，将给定内容存储到具有指定名称和类型的内容文件中。",
+      "count": 1
+    },
+    {
+      "source": "Stores the given content into a file with the given name and content type using the given metadata. The metadata\nobject will be marshalled before writing.",
+      "translation": "使用给定的元数据将给定内容存储到具有指定名称和内容的文件中。在写入之前，该元数据对象将被序列化为二进制格式。",
+      "count": 1
+    },
+    {
+      "source": "<code>upload</code> - the <a href=\"GridFsObject.html\" title=\"interface in org.springframework.data.mongodb.gridfs\"><code>GridFsObject</code></a> (most likely a <a href=\"GridFsUpload.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsUpload</code></a>) to be stored.",
+      "translation": "<code>upload</code> - 要存储的 <a href=\"GridFsObject.html\" title=\"interface in org.springframework.data.mongodb.gridfs\"><code>GridFsObject</code></a>（很可能是 <a href=\"GridFsUpload.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsUpload</code></a>）。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#store(java.io.InputStream,java.lang.String,java.lang.String,java.lang.Object)\">store</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<code><a href=\"GridFsOperations.html#store(java.io.InputStream,java.lang.String,java.lang.String,java.lang.Object)\">store</a></code> 接口 <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#store(org.springframework.data.mongodb.gridfs.GridFsObject)\">store</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<code><a href=\"GridFsOperations.html#store(org.springframework.data.mongodb.gridfs.GridFsObject)\">store</a></code> 接口 <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#find(org.springframework.data.mongodb.core.query.Query)\">find</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<a href=\"GridFsOperations.html#find(org.springframework.data.mongodb.core.query.Query)\">find</a> 接口 <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#findOne(org.springframework.data.mongodb.core.query.Query)\">findOne</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<a href=\"GridFsOperations.html#findOne(org.springframework.data.mongodb.core.query.Query)\">findOne</a> 接口 <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#delete(org.springframework.data.mongodb.core.query.Query)\">delete</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<code><a href=\"GridFsOperations.html#delete(org.springframework.data.mongodb.core.query.Query)\">delete</a></code> 接口 <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html#getClassLoader()\" title=\"class or interface in org.springframework.core.io\">getClassLoader</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html\" title=\"class or interface in org.springframework.core.io\">ResourceLoader</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html#getClassLoader()\" title=\"org.springframework.core.io 中的类或接口\">getClassLoader</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html\" title=\"org.springframework.core.io 中的类或接口\">ResourceLoader</a></code> 中的一个方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#getResource(java.lang.String)\">getResource</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<code><a href=\"GridFsOperations.html#getResource(java.lang.String)\">getResource</a></code> 接口 <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html#getResource(java.lang.String)\" title=\"class or interface in org.springframework.core.io\">getResource</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html\" title=\"class or interface in org.springframework.core.io\">ResourceLoader</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html#getResource(java.lang.String)\" title=\"org.springframework.core.io 中的类或接口\">getResource</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/ResourceLoader.html\" title=\"org.springframework.core.io 中的类或接口\">ResourceLoader</a></code> 中的方法",
+      "count": 1
+    },
+    {
+      "source": "the resource. Use <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/Resource.html#exists()\" title=\"class or interface in org.springframework.core.io\"><code>Resource.exists()</code></a> to check if the returned\n        <a href=\"GridFsResource.html\" title=\"class in org.springframework.data.mongodb.gridfs\"><code>GridFsResource</code></a> is actually present.",
+      "translation": "资源。使用<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/Resource.html#exists()\" title=\"org.springframework.core.io 中的类或接口\"><code>Resource.exists()</code></a>检查返回的\n        <a href=\"GridFsResource.html\" title=\"org.springframework.data.mongodb.gridfs 中的类\"><code>GridFsResource</code></a>是否实际存在。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#getResource(com.mongodb.client.gridfs.model.GridFSFile)\">getResource</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<a href=\"GridFsOperations.html#getResource(com.mongodb.client.gridfs.model.GridFSFile)\">getResource</a> 接口 <code><a href=\"GridFsOperations.html\" title=\"org.springframework.data.mongodb.gridfs 中的接口\">GridFsOperations</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"GridFsOperations.html#getResources(java.lang.String)\">getResources</a></code> in interface <code><a href=\"GridFsOperations.html\" title=\"interface in org.springframework.data.mongodb.gridfs\">GridFsOperations</a></code>",
+      "translation": "<code><a href=\"GridFsOperations.html#getResources(java.lang.String)\">getResources</a></code> 接口 <code><a href=\"GridFsOperations.html\" title=\"org.springframework.data.mongodb.gridfs 中的接口\">GridFsOperations</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/support/ResourcePatternResolver.html#getResources(java.lang.String)\" title=\"class or interface in org.springframework.core.io.support\">getResources</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/support/ResourcePatternResolver.html\" title=\"class or interface in org.springframework.core.io.support\">ResourcePatternResolver</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/support/ResourcePatternResolver.html#getResources(java.lang.String)\" title=\"org.springframework.core.io.support 中的类或接口\">getResources</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/support/ResourcePatternResolver.html\" title=\"org.springframework.core.io.support 中的类或接口\">ResourcePatternResolver</a></code> 中的一个方法。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"store(org.springframework.data.mongodb.gridfs.GridFsObject)-type-param-T\"><code>T</code> - id type of the underlying <code>GridFSFile</code></span>",
+      "translation": "<span id=\"store(org.springframework.data.mongodb.gridfs.GridFsObject)-type-param-T\"><code>T</code> - 底层<code>GridFSFile</code>的 ID 类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>query</code> - pass the given query though a <a href=\"../core/convert/QueryMapper.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>QueryMapper</code></a> to apply type conversion.",
+      "translation": "<code>query</code> - 将给定的查询通过 <a href=\"../core/convert/QueryMapper.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>QueryMapper</code></a> 进行传递，以应用类型转换。",
+      "count": 1
+    },
+    {
+      "source": "the <code>ObjectId</code> of the <code>GridFSFile</code> just created.",
+      "translation": "新创建的<code>GridFSFile</code>的<code>ObjectId</code>。",
+      "count": 1
+    },
+    {
+      "source": "the id of the stored file. Either an auto created value or <a href=\"GridFsObject.html#getFileId()\"><code>GridFsObject.getFileId()</code></a>, but never\n        null.",
+      "translation": "存储文件的 ID。可以是自动生成的值，也可以是<a href=\"GridFsObject.html#getFileId()\"><code>GridFsObject.getFileId()</code></a>，但绝不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>GridFSFindIterable</code> to obtain results from. Eg. by calling\n        <code>MongoIterable.into(java.util.Collection)</code>.",
+      "translation": "从<code>GridFSFindIterable</code>获取结果。例如，通过调用<code>MongoIterable.into(java.util.Collection)</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>bucket</code> - can be null.",
+      "translation": "<code>bucket</code> - 可为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>gridFSBucket</code> - must not be null.",
+      "translation": "<code>gridFSBucket</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>content</code> - must not be null.",
+      "translation": "<code>content</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>filename</code> - must not be null or empty.",
+      "translation": "<code>filename</code> 不能为 null 或空。",
+      "count": 1
+    },
+    {
+      "source": "<code>location</code> - must not be null.",
+      "translation": "<location>- 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>file</code> - must not be null.",
+      "translation": "<code>file</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>locationPattern</code> - must not be null.",
+      "translation": "<code>locationPattern</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>value</code> - can be null.",
+      "translation": "<code>value</code> - 可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "an empty <code>Document</code> if the source value is null.",
+      "translation": "如果源值为 null，则返回一个空的<code>Document</code>。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Philipp Schneider, Thomas Darimont, Martin Baumgartner, Christoph Strobl, Mark Paluch, Hartmut Lang, Niklas Helge Hanft, Denis Zavedeev",
+      "translation": "Oliver Gierke，Philipp Schneider，Thomas Darimont，Martin Baumgartner，Christoph Strobl，Mark Paluch，Hartmut Lang，Niklas Helge Hanft，Denis Zavedeev",
+      "count": 1
+    },
+    {
+      "source": "can be null.",
+      "translation": "可以为空。",
+      "count": 1
+    },
+    {
+      "source": "the resource for the file.",
+      "translation": "该文件的资源。",
+      "count": 1
+    },
+    {
+      "source": "an empty array if none found.",
+      "translation": "若未找到任何内容，则返回一个空数组。",
+      "count": 1
+    }
+  ]
+}

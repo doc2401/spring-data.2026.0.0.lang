@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-06-19 01:22:07",
+  "updated_at": "2026-06-19 01:22:07",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 30,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1538461538461537,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "an empty String by default.",
+      "translation": "默认情况下为空字符串。",
+      "count": 3
+    },
+    {
+      "source": "Configuration whether to use\n<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#ANN\"><code>VectorSearchOperation.SearchType.ANN</code></a> or\n<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#ENN\"><code>VectorSearchOperation.SearchType.ENN</code></a> for the search.",
+      "translation": "配置是否使用\n<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#ANN\"><code>VectorSearchOperation.SearchType.ANN</code></a> 或\n<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#ENN\"><code>VectorSearchOperation.SearchType.ENN</code></a> 进行搜索。",
+      "count": 2
+    },
+    {
+      "source": "Takes a MongoDB JSON (MQL) string defining the pre-filter against indexed fields.",
+      "translation": "接受一个定义针对索引字段的前置过滤条件的 MongoDB JSON（MQL）字符串。",
+      "count": 2
+    },
+    {
+      "source": "When using pre-filters, you can either define <a href=\"#filter()\"><code>filter()</code></a> or use query derivation to define the pre-filter.\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Vector.html\" title=\"class or interface in org.springframework.data.domain\"><code>Vector</code></a> and distance parameters are considered once these are present. Vector\nsearch supports sorting and will consider <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> parameters.",
+      "translation": "在使用预过滤器时，您可以定义 <a href=\"#filter()\"><code>filter()</code></a> 或使用查询推导来定义预过滤器。当存在 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Vector.html\" title=\"class or interface in org.springframework.data.domain\"><code>Vector</code></a> 和距离参数时，这些参数将被考虑。向量搜索支持排序，并将考虑 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> 参数。",
+      "count": 1
+    },
+    {
+      "source": "This over-request pattern is the recommended way to trade off latency and recall in your ANN searches, and we\nrecommend tuning this parameter based on your specific dataset size and query requirements. Required if the query\nuses\n<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#ANN\"><code>VectorSearchOperation.SearchType.ANN</code></a>/<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#DEFAULT\"><code>VectorSearchOperation.SearchType.DEFAULT</code></a>.\nSupports Value Expressions.",
+      "translation": "这种过度请求模式是推荐用于在 ANN 搜索中平衡延迟和召回率的方法，我们建议根据您的具体数据集大小和查询需求对该参数进行调优。当查询使用<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#ANN\"><code>VectorSearchOperation.SearchType.ANN</code></a>/<a href=\"../core/aggregation/VectorSearchOperation.SearchType.html#DEFAULT\"><code>VectorSearchOperation.SearchType.DEFAULT</code></a>时，此参数为必填项。支持值表达式。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Vector search must define an index name using the <a href=\"#indexName()\"><code>indexName()</code></a> attribute. The index must be created in the\nMongoDB Atlas cluster before executing the query. Any misspelling of the index name will result in returning no\nresults.",
+      "translation": "向量搜索必须使用 <a href=\"#indexName()\"><code>indexName()</code></a> 属性定义索引名称。该索引必须在执行查询之前于 MongoDB Atlas 集群中创建。如果索引名称拼写错误，将导致返回空结果。",
+      "count": 1
+    },
+    {
+      "source": "Number of documents to return in the results. This value can't exceed the value of <a href=\"#numCandidates()\"><code>numCandidates()</code></a> if you\nspecify <a href=\"#numCandidates()\"><code>numCandidates()</code></a>. Limit accepts Value Expressions. A Vector Search method cannot define both,\n<code>limit()</code> and a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Limit.html\" title=\"class or interface in org.springframework.data.domain\"><code>Limit</code></a> parameter. Supports Value Expressions.",
+      "translation": "返回结果中的文档数量。如果您指定了 <a href=\"#numCandidates()\"><code>numCandidates()</code></a>，则该值不能超过 <a href=\"#numCandidates()\"><code>numCandidates()</code></a> 的值。Limit 支持值表达式。Vector Search 方法不能同时定义 <code>limit()</code> 和 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Limit.html\" title=\"class or interface in org.springframework.data.domain\"><code>Limit</code></a> 参数。支持值表达式。",
+      "count": 1
+    },
+    {
+      "source": "Takes a MongoDB JSON (MQL) string defining the pre-filter against indexed fields. Supports Value Expressions. Alias\nfor <a href=\"#filter()\"><code>filter()</code></a>.",
+      "translation": "接受一个定义针对索引字段的前过滤条件的 MongoDB JSON（MQL）字符串。支持值表达式。是<a href=\"#filter()\"><code>filter()</code></a>的别名。",
+      "count": 1
+    },
+    {
+      "source": "Takes a MongoDB JSON (MQL) string defining the pre-filter against indexed fields. Supports Value Expressions. Alias\nfor <a href=\"#value()\"><code>value()</code></a>.",
+      "translation": "接受一个定义针对索引字段的前置过滤条件的 MongoDB JSON（MQL）字符串。支持值表达式。是<a href=\"#value()\"><code>value()</code></a>的别名。",
+      "count": 1
+    },
+    {
+      "source": "Name of the Atlas Vector Search index to use.",
+      "translation": "要使用的 Atlas 向量搜索索引名称。",
+      "count": 1
+    },
+    {
+      "source": "Number of documents to return in the results.",
+      "translation": "返回结果中的文档数量。",
+      "count": 1
+    },
+    {
+      "source": "Number of nearest neighbors to use during the search.",
+      "translation": "搜索过程中使用的最近邻数量。",
+      "count": 1
+    },
+    {
+      "source": "Indexed vector type field to search.",
+      "translation": "用于搜索的已索引向量类型字段。",
+      "count": 1
+    },
+    {
+      "source": "Name of the Atlas Vector Search index to use. Atlas Vector Search doesn't return results if you misspell the index\nname or if the specified index doesn't already exist on the cluster.",
+      "translation": "要使用的 Atlas 向量搜索索引名称。如果拼写错误或缺少指定的索引，Atlas 向量搜索将不会返回结果。",
+      "count": 1
+    },
+    {
+      "source": "Indexed vector type field to search. This is defaulted from the domain model using the first Vector property found.",
+      "translation": "用于搜索的索引向量类型字段。此值默认从域模型中获取，即使用找到的第一个 Vector 属性。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the search type to use.",
+      "translation": "要使用的搜索类型。",
+      "count": 1
+    },
+    {
+      "source": "name of the Atlas Vector Search index to use.",
+      "translation": "要使用的 Atlas 向量搜索索引名称。",
+      "count": 1
+    },
+    {
+      "source": "number of documents to return in the results.",
+      "translation": "返回结果中的文档数量。",
+      "count": 1
+    },
+    {
+      "source": "number of nearest neighbors to use during the search.",
+      "translation": "搜索过程中使用的最近邻数量。",
+      "count": 1
+    },
+    {
+      "source": "Required Element Summary",
+      "translation": "所需元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "Annotation to declare Vector Search queries directly on repository methods. Vector Search queries are used to search\nfor similar documents based on vector embeddings typically returning\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/SearchResults.html\" title=\"class or interface in org.springframework.data.domain\"><code>SearchResults</code></a> and limited by either a\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Score.html\" title=\"class or interface in org.springframework.data.domain\"><code>Score</code></a> (within) or a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Range.html\" title=\"class or interface in org.springframework.data.domain\"><code>Range</code></a> of scores\n(between).",
+      "translation": "用于在仓储方法上直接声明向量搜索查询的注解。向量搜索查询用于基于向量嵌入搜索相似文档，通常返回<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/SearchResults.html\" title=\"class or interface in org.springframework.data.domain\"><code>SearchResults</code></a>，并通过分数限制（在某个<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Score.html\" title=\"class or interface in org.springframework.data.domain\"><code>Score</code></a>范围内或在某个<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Range.html\" title=\"class or interface in org.springframework.data.domain\"><code>Range</code></a>区间内）。",
+      "count": 1
+    },
+    {
+      "source": "Number of nearest neighbors to use during the search. Value must be less than or equal to (<code>&lt;=</code>)\n<code>10000</code>. You can't specify a number less than the <a href=\"#limit()\"><code>number of documents to return</code></a>. We\nrecommend that you specify a number at least <code>20</code> times higher than the <a href=\"#limit()\"><code>number of documents\nto return</code></a> to increase accuracy.",
+      "translation": "搜索期间使用的最近邻数量。该值必须小于或等于 (<code>&lt;=</code>) <code>10000</code>。您不能指定一个小于<a href=\"#limit()\"><code>要返回的文档数量</code></a>的数字。我们建议您将<a href=\"#limit()\"><code>要返回的文档数量</code></a>至少提高 <code>20</code> 倍，以提高准确性。",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-06-19 05:14:19",
+  "updated_at": "2026-06-19 05:14:19",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 9,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "To use internally generated ids, annotate an arbitrary attribute of type\n<code>java.lang.long</code> or <code>java.lang.Long</code> with <code>@Id</code> and\n<a href=\"GeneratedValue.html\" title=\"annotation interface in org.springframework.data.neo4j.core.schema\"><code>@GeneratedValue</code></a>.",
+      "translation": "若要使用内部生成的 ID，请将类型为<code>java.lang.long</code>或<code>java.lang.Long</code>的任意属性用<code>@Id</code>和<a href=\"GeneratedValue.html\" title=\"annotation interface in org.springframework.data.neo4j.core.schema\"><code>@GeneratedValue</code></a>进行注解。",
+      "count": 1
+    },
+    {
+      "source": "To use externally generated ids, annotate an arbitrary attribute with a type that your\ngenerated returns with <code>@Id</code> and <a href=\"GeneratedValue.html\" title=\"annotation interface in org.springframework.data.neo4j.core.schema\"><code>@GeneratedValue</code></a> and\nspecify the generator class.",
+      "translation": "若要使用外部生成的 ID，请使用 `<code>@Id</code>` 和 <a href=\"GeneratedValue.html\" title=\"annotation interface in org.springframework.data.neo4j.core.schema\"><code>@GeneratedValue</code></a> 注解任意属性类型（该类型由您的生成器返回），并指定生成器类。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2019–2026 <a href=\"https://neo4j.com\">Neo4j, Neo4j Sweden AB</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2019–2026 <a href=\"https://neo4j.com\">Neo4j、Neo4j Sweden AB</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "To use assigned ids, annotate an arbitrary attribute of your domain class with\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Id.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Id</code></a> or this annotation:",
+      "translation": "若要使用分配的 ID，请在您的领域类的任意属性上标注 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Id.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Id</code></a> 或此注解：",
+      "count": 1
+    },
+    {
+      "source": "Michael J. Simons",
+      "translation": "迈克尔·J·西蒙斯",
+      "count": 1
+    },
+    {
+      "source": "This annotation is included here for completeness. It marks an attribute as the primary\nid of a node entity. It can be used as an alternative to\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Id.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Id</code></a> and it may provide additional features\nin the future.",
+      "translation": "此处包含此注释是为了完整性。它标记一个属性为节点实体的主 id。它可以作为<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Id.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Id</code></a>的替代方案，并且未来可能会提供额外的功能。",
+      "count": 1
+    },
+    {
+      "source": "<pre>@Node\npublic class MyEntity {\n        @Id String theId;\n}\n</pre>\n\nYou can combine <code>@Id</code> with <code>@Property</code> with assigned ids to rename the node\nproperty in which the assigned id is stored.",
+      "translation": "<pre>@Node\npublic class MyEntity {\n        @Id String theId;\n}\n</pre>\n\n您可以将 <code>@Id</code> 与带有指定 ID 的 <code>@Property</code> 组合使用，以重命名存储该指定 ID 的节点属性。",
+      "count": 1
+    },
+    {
+      "source": "<pre>@Node\npublic class MyEntity {\n        @Id @GeneratedValue Long id;\n}\n</pre>\n\nIt does not need to be named <code>id</code>, but most people chose this as the attribute in\nthe class. As the attribute does not correspond to a node property, it cannot be\nrenamed via <code>@Property</code>.",
+      "translation": "<pre>@Node\npublic class MyEntity {\n        @Id @GeneratedValue Long id;\n}\n</pre>\n\n它不必命名为<code>id</code>，但大多数人会选择将其作为类中的属性。由于该属性不对应节点属性，因此无法通过<code>@Property</code>进行重命名。",
+      "count": 1
+    },
+    {
+      "source": "<pre>@Node\npublic class MyEntity {\n        @Id @GeneratedValue(UUIDStringGenerator.class) String theId;\n}\n</pre>\n\nExternally generated ids are indistinguishable to assigned ids from the database\nperspective and thus can be arbitrarily named via <code>@Property</code>.",
+      "translation": "<pre>@Node\npublic class MyEntity {\n        @Id @GeneratedValue(UUIDStringGenerator.class) String theId;\n}\n</pre>\n\n从数据库的角度来看，外部生成的 ID 与分配的 ID 无法区分，因此可以通过 <code>@Property</code> 任意命名。",
+      "count": 1
+    }
+  ]
+}

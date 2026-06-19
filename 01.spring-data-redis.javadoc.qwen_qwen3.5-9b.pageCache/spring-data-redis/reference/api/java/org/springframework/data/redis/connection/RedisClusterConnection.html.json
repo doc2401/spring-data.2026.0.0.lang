@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-06-19 08:41:15",
+  "updated_at": "2026-06-19 08:41:15",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 23,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2777777777777777,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "<code>node</code> - must not be null.",
+      "translation": "<code>node</code> 不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "Use a <a href=\"../core/Cursor.html\" title=\"interface in org.springframework.data.redis.core\"><code>Cursor</code></a> to iterate over keys.",
+      "translation": "使用<a href=\"../core/Cursor.html\" title=\"org.springframework.data.redis.core 中的接口\"><code>Cursor</code></a>遍历键。",
+      "count": 2
+    },
+    {
+      "source": "null when used in pipeline / transaction.",
+      "translation": "在管道或事务中使用 null 时。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"RedisClusterConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Redis connections</code></a>, unlike perhaps their underlying native connection are not\nThread-safe and should not be shared across multiple threads.",
+      "translation": "与底层的原生连接可能不同，<a href=\"RedisClusterConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Redis 连接</code></a>并非线程安全的，不应在多个线程之间共享。",
+      "count": 1
+    },
+    {
+      "source": "Execute the given command for the <code>key</code> provided potentially appending args. <br/>\nThis method, other than <a href=\"RedisCommands.html#execute(java.lang.String,byte%5B%5D...)\"><code>RedisCommands.execute(String, byte[]...)</code></a>, dispatches the command to the <code>key</code> serving\nmaster node.\n\n<pre><code>\n// SET foo bar EX 10 NX\nexecute(\"SET\", \"foo\".getBytes(), asBinaryList(\"bar\", \"EX\", 10, \"NX\"))\n</code>\n</pre>",
+      "translation": "执行给定命令，针对提供的 <code>key</code>，并可能附加参数。<br/>\n此方法（不同于 <a href=\"RedisCommands.html#execute(java.lang.String,byte%5B%5D...)\"><code>RedisCommands.execute(String, byte[]...)</code></a>）会将命令分发到为 <code>key</code> 服务的 master 节点。\n\n<pre><code>\n// SET foo bar EX 10 NX\nexecute(\"SET\", \"foo\".getBytes(), asBinaryList(\"bar\", \"EX\", 10, \"NX\"))\n</code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Execute the given command for the <code>key</code> provided potentially appending args.",
+      "translation": "为提供的<code>key</code>执行给定命令，并可能附加参数。",
+      "count": 1
+    },
+    {
+      "source": "<code>pattern</code> - must not be null.",
+      "translation": "<code>pattern</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - must not be null.",
+      "translation": "<code>options</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>command</code> - must not be null.",
+      "translation": "<code>command</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>key</code> - must not be null.",
+      "translation": "<code>key</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - must not be null.",
+      "translation": "<code>args</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 1
+    },
+    {
+      "source": "null when no keys stored at node or when used in pipeline / transaction.",
+      "translation": "当节点中未存储任何键，或在管道/事务中使用该值时返回 null。",
+      "count": 1
+    },
+    {
+      "source": "command result as delivered by the underlying Redis driver. Can be null.",
+      "translation": "底层 Redis 驱动程序返回的命令结果。可为 null。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"RedisClusterConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisClusterConnection</code></a> allows sending commands to dedicated nodes within the cluster. A\n<a href=\"RedisClusterNode.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisClusterNode</code></a> can be obtained from <a href=\"RedisClusterCommands.html#clusterGetNodes()\"><code>RedisClusterCommands.clusterGetNodes()</code></a> or it can be constructed using either\n<a href=\"RedisNode.html#getHost()\"><code>host</code></a> and <a href=\"RedisNode.html#getPort()\"><code>RedisNode.getPort()</code></a> or the <a href=\"RedisNode.html#getId()\"><code>node Id</code></a>.",
+      "translation": "<a href=\"RedisClusterConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisClusterConnection</code></a> 允许向集群中的专用节点发送命令。可以通过 <a href=\"RedisClusterCommands.html#clusterGetNodes()\"><code>RedisClusterCommands.clusterGetNodes()</code></a> 获取 <a href=\"RedisClusterNode.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisClusterNode</code></a>，或者使用 <a href=\"RedisNode.html#getHost()\"><code>host</code></a> 和 <a href=\"RedisNode.html#getPort()\"><code>RedisNode.getPort()</code></a> 或 <a href=\"RedisNode.html#getId()\"><code>node Id</code></a> 来构造它。",
+      "count": 1
+    }
+  ]
+}

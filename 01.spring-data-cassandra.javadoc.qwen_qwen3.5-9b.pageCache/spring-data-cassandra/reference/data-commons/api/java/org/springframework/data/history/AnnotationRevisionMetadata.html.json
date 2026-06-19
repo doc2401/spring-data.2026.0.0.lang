@@ -1,41 +1,111 @@
 {
   "created_at": "2026-06-16 10:33:05",
-  "updated_at": "2026-06-16 10:33:05",
+  "updated_at": "2026-06-18 07:13:22",
   "stats": {
-    "total_entries": 39,
+    "total_entries": 49,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 43,
-    "entries_with_hits": 39,
+    "total_hits": 73,
+    "entries_with_hits": 49,
     "entries_without_hits": 0,
-    "hit_rate": 1.1025641025641026,
-    "usage_percentage": 0.0039
+    "hit_rate": 1.489795918367347,
+    "usage_percentage": 0.0049
   },
   "items": [
     {
       "source": "Creates a new <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a> inspecting the given entity for the given annotations.",
       "translation": "创建一个用于检查给定实体中是否存在指定注解的新的<a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the underlying revision metadata which might provider more detailed implementation specific information.",
       "translation": "返回底层修订元数据，该元数据可能提供更详细的实现特定信息。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the timestamp of the revision.",
       "translation": "返回修订的时间戳。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the revision number of the revision.",
       "translation": "返回修订号的版本号。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "will never be null.",
+      "translation": "永远不会为 null。",
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "A <a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\"><code>RevisionMetadata</code></a> implementation that inspects the given object for fields with the configured annotations\nand returns the field's values on calls to <a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a>, <a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a> and\n<a href=\"#getRevisionNumber()\"><code>getRevisionNumber()</code></a>.",
+      "translation": "一个实现了 `<a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\"><code>RevisionMetadata</code></a>` 接口的类，它会检查给定对象中带有配置注解的字段，并在调用 `<a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a>`、`<a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a>` 和 `<a href=\"#getRevisionNumber()\"><code>getRevisionNumber()</code></a>` 时返回这些字段的值。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"RevisionMetadata.RevisionType.html\" title=\"enum class in org.springframework.data.history\"><code>RevisionMetadata.RevisionType</code></a> of this change. If the <a href=\"RevisionMetadata.RevisionType.html\" title=\"enum class in org.springframework.data.history\"><code>RevisionMetadata.RevisionType</code></a> cannot be determined, this method\nreturns <a href=\"RevisionMetadata.RevisionType.html#UNKNOWN\"><code>RevisionMetadata.RevisionType.UNKNOWN</code></a>.",
+      "translation": "返回此变更的<a href=\"RevisionMetadata.RevisionType.html\" title=\"org.springframework.data.history 中的枚举类\"><code>RevisionMetadata.RevisionType</code></a>。如果无法确定<a href=\"RevisionMetadata.RevisionType.html\" title=\"org.springframework.data.history 中的枚举类\"><code>RevisionMetadata.RevisionType</code></a>，则此方法返回<a href=\"RevisionMetadata.RevisionType.html#UNKNOWN\"><code>RevisionMetadata.RevisionType.UNKNOWN</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getRevisionNumber()\">RevisionMetadata</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getRevisionNumber()\">RevisionMetadata</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getRevisionInstant()\">RevisionMetadata</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getRevisionInstant()\">RevisionMetadata</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getRevisionType()\">RevisionMetadata</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getRevisionType()\">RevisionMetadata</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getDelegate()\">RevisionMetadata</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getDelegate()\">RevisionMetadata</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"RevisionMetadata.RevisionType.html\" title=\"enum class in org.springframework.data.history\"><code>RevisionMetadata.RevisionType</code></a> of this change.",
+      "translation": "返回此变更的<a href=\"RevisionMetadata.RevisionType.html\" title=\"org.springframework.data.history 中的枚举类\"><code>RevisionMetadata.RevisionType</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a> inspecting the given entity for the given annotations. If no\nannotations will be provided these values will not be looked up from the entity and return null. The\nrevisionType will be set to unknown",
+      "translation": "创建一个新的 <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a>，用于检查给定实体中的指定注解。如果未提供任何注解，则不会从实体中查找这些值并返回 null。revisionType 将被设置为 unknown。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a> inspecting the given entity for the given annotations. If no\nannotations will be provided these values will not be looked up from the entity and return null.",
+      "translation": "创建一个新的 <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a> 来检查给定实体中的指定注解。如果未提供任何注解，则不会从实体中查找这些值并返回 null。",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 2
+    },
+    {
+      "source": "<code>entity</code> - must not be null.",
+      "translation": "<code>entity</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>revisionNumberAnnotation</code> - must not be null.",
+      "translation": "<code>revisionNumberAnnotation</code> 不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>revisionTimeStampAnnotation</code> - must not be null.",
+      "translation": "<code>revisionTimeStampAnnotation</code> 不得为 null。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -43,18 +113,8 @@
       "count": 1
     },
     {
-      "source": "A <a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\"><code>RevisionMetadata</code></a> implementation that inspects the given object for fields with the configured annotations\nand returns the field's values on calls to <a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a>, <a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a> and\n<a href=\"#getRevisionNumber()\"><code>getRevisionNumber()</code></a>.",
-      "translation": "一个实现了 `<a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\"><code>RevisionMetadata</code></a>` 接口的类，它会检查给定对象中带有配置注解的字段，并在调用 `<a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a>`、`<a href=\"#getRevisionInstant()\"><code>getRevisionInstant()</code></a>` 和 `<a href=\"#getRevisionNumber()\"><code>getRevisionNumber()</code></a>` 时返回这些字段的值。",
-      "count": 1
-    },
-    {
       "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">AnnotationRevisionMetadata&lt;N extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;N&gt;&gt;</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;N&gt;</span>",
       "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">AnnotationRevisionMetadata&lt;N extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;N&gt;&gt;</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>\nimplements <a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;N&gt;</span>",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"RevisionMetadata.RevisionType.html\" title=\"enum class in org.springframework.data.history\"><code>RevisionMetadata.RevisionType</code></a> of this change. If the <a href=\"RevisionMetadata.RevisionType.html\" title=\"enum class in org.springframework.data.history\"><code>RevisionMetadata.RevisionType</code></a> cannot be determined, this method\nreturns <a href=\"RevisionMetadata.RevisionType.html#UNKNOWN\"><code>RevisionMetadata.RevisionType.UNKNOWN</code></a>.",
-      "translation": "返回此变更的<a href=\"RevisionMetadata.RevisionType.html\" title=\"org.springframework.data.history 中的枚举类\"><code>RevisionMetadata.RevisionType</code></a>。如果无法确定<a href=\"RevisionMetadata.RevisionType.html\" title=\"org.springframework.data.history 中的枚举类\"><code>RevisionMetadata.RevisionType</code></a>，则此方法返回<a href=\"RevisionMetadata.RevisionType.html#UNKNOWN\"><code>RevisionMetadata.RevisionType.UNKNOWN</code></a>。",
       "count": 1
     },
     {
@@ -75,41 +135,6 @@
     {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getRevisionNumber()\">RevisionMetadata</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getRevisionNumber()\">RevisionMetadata</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getRevisionInstant()\">RevisionMetadata</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getRevisionInstant()\">RevisionMetadata</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getRevisionType()\">RevisionMetadata</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getRevisionType()\">RevisionMetadata</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RevisionMetadata.html#getDelegate()\">RevisionMetadata</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RevisionMetadata.html#getDelegate()\">RevisionMetadata</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"RevisionMetadata.RevisionType.html\" title=\"enum class in org.springframework.data.history\"><code>RevisionMetadata.RevisionType</code></a> of this change.",
-      "translation": "返回此变更的<a href=\"RevisionMetadata.RevisionType.html\" title=\"org.springframework.data.history 中的枚举类\"><code>RevisionMetadata.RevisionType</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Creates a new <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a> inspecting the given entity for the given annotations. If no\nannotations will be provided these values will not be looked up from the entity and return null. The\nrevisionType will be set to unknown",
-      "translation": "创建一个新的 <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a>，用于检查给定实体中的指定注解。如果未提供任何注解，则不会从实体中查找这些值并返回 null。revisionType 将被设置为 unknown。",
-      "count": 1
-    },
-    {
-      "source": "Creates a new <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a> inspecting the given entity for the given annotations. If no\nannotations will be provided these values will not be looked up from the entity and return null.",
-      "translation": "创建一个新的 <a href=\"AnnotationRevisionMetadata.html\" title=\"class in org.springframework.data.history\"><code>AnnotationRevisionMetadata</code></a> 来检查给定实体中的指定注解。如果未提供任何注解，则不会从实体中查找这些值并返回 null。",
       "count": 1
     },
     {
@@ -183,11 +208,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Constructor Summary",
       "translation": "构造函数摘要",
       "count": 1
@@ -205,6 +225,36 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RevisionMetadata.html#getRevisionNumber()\">getRevisionNumber</a></code> in interface <code><a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"RevisionMetadata.html#getRevisionNumber()\">getRevisionNumber</a></code> 接口 <code><a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RevisionMetadata.html#getRevisionInstant()\">getRevisionInstant</a></code> in interface <code><a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"RevisionMetadata.html#getRevisionInstant()\">getRevisionInstant</a></code> 接口 <code><a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RevisionMetadata.html#getRevisionType()\">getRevisionType</a></code> in interface <code><a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"RevisionMetadata.html#getRevisionType()\">getRevisionType</a></code> 接口 <code><a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RevisionMetadata.html#getDelegate()\">getDelegate</a></code> in interface <code><a href=\"RevisionMetadata.html\" title=\"interface in org.springframework.data.history\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"class or interface in java.lang\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"class or interface in java.lang\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"type parameter in AnnotationRevisionMetadata\">N</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"RevisionMetadata.html#getDelegate()\">getDelegate</a></code> 接口 <code><a href=\"RevisionMetadata.html\" title=\"org.springframework.data.history 中的接口\">RevisionMetadata</a>&lt;<a href=\"#type-param-N\" title=\"AnnotationRevisionMetadata 中的类型参数\">N</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html\" title=\"java.lang 中的类或接口\">Number</a> &amp; <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html\" title=\"java.lang 中的类或接口\">Comparable</a>&lt;<a href=\"#type-param-N\" title=\"AnnotationRevisionMetadata 中的类型参数\">N</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>revisionType</code> - must not be null.",
+      "translation": "<code>revisionType</code> 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Jens Schauder, Mark Paluch, Johannes Englmeier",
+      "translation": "Oliver Gierke，Jens Schauder，Mark Paluch，Johannes Englmeier",
       "count": 1
     }
   ]

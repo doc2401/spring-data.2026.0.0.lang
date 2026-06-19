@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-06-19 08:42:09",
+  "updated_at": "2026-06-19 08:42:09",
+  "stats": {
+    "total_entries": 28,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 28,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1428571428571428,
+    "usage_percentage": 0.0028
+  },
+  "items": [
+    {
+      "source": "Closes or quits the connection.",
+      "translation": "关闭或退出连接。",
+      "count": 2
+    },
+    {
+      "source": "Returns the native connection (the underlying library/driver object).",
+      "translation": "返回原生连接（底层库/驱动对象）。",
+      "count": 2
+    },
+    {
+      "source": "Indicates whether the underlying connection is closed or not.",
+      "translation": "指示底层连接是否已关闭。",
+      "count": 2
+    },
+    {
+      "source": "Indicates whether the connection is currently pipelined or not.",
+      "translation": "指示当前连接是否已启用管道化。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"RedisConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnection</code></a> interface serves as a common abstraction across various Redis client libraries (or\ndrivers).",
+      "translation": "<a href=\"RedisConnection.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>RedisConnection</code></a> 接口作为各种 Redis 客户端库（或驱动程序）之间的通用抽象。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"RedisConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Redis connections</code></a>, unlike perhaps their underlying native connection are not Thread-safe and\nshould not be shared across multiple threads, concurrently or simultaneously.",
+      "translation": "与底层的原生连接不同，<a href=\"RedisConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Redis 连接</code></a>并非线程安全的，因此不应在多个线程（无论是并发还是同时）之间共享。",
+      "count": 1
+    },
+    {
+      "source": "Redis command methods are exempted from the default non-nullable return value assumption as nullness\ndepends not only on the command but also on the connection state. Methods invoked during a transaction or while\npipelining are required to return null at the time invoking a command as the response is not available\nuntil the transaction is executed or the pipeline is closed. To avoid excessive null checks in calling code and to\nnot express a faulty assumption of non-nullness, all command interfaces are annotated with <code>@NullUnmarked</code>.",
+      "translation": "Redis 命令方法免除了默认的非空返回值假设，因为是否为 null 不仅取决于命令本身，还取决于连接状态。在事务期间或管道模式下调用的方法必须在调用命令时返回 null，因为响应只有在事务执行完成或管道关闭后才可用。为了避免调用代码中出现过多的 null 检查，并避免表达错误的非空假设，所有命令接口均标注了 <code>@NullUnmarked</code>。",
+      "count": 1
+    },
+    {
+      "source": "Additionally, performs exception translation between the underlying Redis client library and Spring DAO exceptions.\nThe methods follow as much as possible the Redis names and conventions.",
+      "translation": "此外，执行底层 Redis 客户端库与 Spring DAO 异常之间的转换。  \n这些方法在最大程度上遵循 Redis 的命名和约定。",
+      "count": 1
+    },
+    {
+      "source": "Executes the commands in the pipeline and returns their result.",
+      "translation": "执行管道中的命令并返回其结果。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether the connection is in \"queue\"(or \"MULTI\") mode or not.",
+      "translation": "指示连接是否处于“队列”（或“MULTI\"）模式。",
+      "count": 1
+    },
+    {
+      "source": "Activates the pipeline mode for this connection.",
+      "translation": "为此连接激活管道模式。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether the connection is in \"queue\"(or \"MULTI\") mode or not. When queueing, all commands are postponed\nuntil EXEC or DISCARD commands are issued. Since in queueing no results are returned, the connection will return\nNULL on all operations that interact with the data.",
+      "translation": "指示连接是否处于\"队列\"(或\"MULTI\")模式。当启用队列时，所有命令将推迟执行，直到发出 EXEC 或 DISCARD 命令为止。由于在队列模式下不会返回任何结果，因此与数据交互的所有操作都将返回 NULL。",
+      "count": 1
+    },
+    {
+      "source": "Executes the commands in the pipeline and returns their result. If the connection is not pipelined, an empty\ncollection is returned.",
+      "translation": "执行管道中的命令并返回其结果。如果连接未使用管道，则返回空集合。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html#close()\" title=\"class or interface in java.lang\">close</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html\" title=\"class or interface in java.lang\">AutoCloseable</a></code>",
+      "translation": "`AutoCloseable` 接口中的 `close()` 方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></code> - if the <a href=\"RedisConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnection</code></a> could not be closed.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\">DataAccessException</a></code> - 如果无法关闭 <a href=\"RedisConnection.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>RedisConnection</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RedisPipelineException.html\" title=\"class in org.springframework.data.redis.connection\">RedisPipelineException</a></code> - if the pipeline contains any incorrect/invalid statements",
+      "translation": "<code><a href=\"RedisPipelineException.html\" title=\"class in org.springframework.data.redis.connection\">RedisPipelineException</a></code> - 如果管道中包含任何不正确或无效的语句。",
+      "count": 1
+    },
+    {
+      "source": "the <a href=\"RedisSentinelConnection.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisSentinelConnection</code></a> when using Redis Sentinel.",
+      "translation": "使用 Redis Sentinel 时，<a href=\"RedisSentinelConnection.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>RedisSentinelConnection</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Costin Leau, Christoph Strobl, Mark Paluch, James Howe, John Blum",
+      "translation": "Costin Leau, Christoph Strobl, Mark Paluch, James Howe, John Blum",
+      "count": 1
+    },
+    {
+      "source": "true if the connection is closed, false otherwise.",
+      "translation": "如果连接已关闭则为 true，否则为 false。",
+      "count": 1
+    },
+    {
+      "source": "underlying, native object",
+      "translation": "底层原生对象",
+      "count": 1
+    },
+    {
+      "source": "true if the connection is in queue/MULTI mode, false otherwise",
+      "translation": "如果连接处于队列/MULTI 模式，则返回 true；否则返回 false。",
+      "count": 1
+    },
+    {
+      "source": "true if the connection is pipelined, false otherwise",
+      "translation": "如果连接是管道化则返回 true，否则返回 false。",
+      "count": 1
+    },
+    {
+      "source": "the result of the executed commands.",
+      "translation": "已执行命令的结果。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "A connection to a Redis server.",
+      "translation": "与 Redis 服务器的连接。",
+      "count": 1
+    },
+    {
+      "source": "Activates the pipeline mode for this connection. When pipelined, all commands return null (the reply is read at the\nend through <a href=\"#closePipeline()\"><code>closePipeline()</code></a>. Calling this method when the connection is already pipelined has no effect.\nPipelining is used for issuing commands without requesting the response right away but rather at the end of the\nbatch. While somewhat similar to MULTI, pipelining does not guarantee atomicity - it only tries to improve\nperformance when issuing a lot of commands (such as in batching scenarios).",
+      "translation": "启用此连接的管道模式。当处于管道模式时，所有命令均返回 null（回复将在最后通过<a href=\"#closePipeline()\"><code>closePipeline()</code></a>读取）。如果连接已经处于管道模式，调用此方法将不会产生任何效果。管道模式用于在不立即请求响应而是等到批次结束时才请求响应的情况下发出命令。虽然与 MULTI 有些相似，但管道模式并不保证原子性——它仅在发出大量命令（例如在批量操作场景中）时尝试提高性能。",
+      "count": 1
+    },
+    {
+      "source": "Consider doing some performance testing before using this feature since in many cases the performance benefits are\nminimal yet the impact on usage are not.",
+      "translation": "在使用此功能之前，建议先进行性能测试，因为在许多情况下，其带来的性能提升微乎其微，但对使用体验的影响却不容忽视。",
+      "count": 1
+    }
+  ]
+}

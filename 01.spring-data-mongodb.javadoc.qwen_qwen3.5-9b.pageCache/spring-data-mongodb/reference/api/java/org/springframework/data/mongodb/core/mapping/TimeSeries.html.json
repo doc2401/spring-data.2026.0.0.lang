@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-06-19 02:19:12",
+  "updated_at": "2026-06-19 02:19:12",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 24,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0909090909090908,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "Select the <a href=\"../timeseries/Granularity.html\" title=\"enum class in org.springframework.data.mongodb.core.timeseries\"><code>granularity</code></a> parameter to define how data in the time series collection is organized.",
+      "translation": "选择<a href=\"../timeseries/Granularity.html\" title=\"org.springframework.data.mongodb.core.timeseries 中的枚举类\"><code>granularity</code></a>参数，以定义时间序列集合中数据的组织方式。",
+      "count": 2
+    },
+    {
+      "source": "Defines the collation to apply when executing a query or creating indexes.",
+      "translation": "定义在查询执行或创建索引时应用的排序规则。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Configure the timeout after which the document should expire.\nDefaults to an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> for no expiry. Accepts numeric values followed by their unit of measure:\n<ul>\n<li><b>d</b>: Days</li>\n<li><b>h</b>: Hours</li>\n<li><b>m</b>: Minutes</li>\n<li><b>s</b>: Seconds</li>\n<li>Alternatively: A Spring template expression. The expression can result in a\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>Duration</code></a> or a valid expiration <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> according to the already mentioned\nconventions.</li>\n</ul>\nSupports ISO-8601 style.\n\n<pre class=\"code\">@TimeSeries(expireAfter = \"10s\") String expireAfterTenSeconds;\n@TimeSeries(expireAfter = \"1d\") String expireAfterOneDay;\n@TimeSeries(expireAfter = \"P2D\") String expireAfterTwoDays;\n@TimeSeries(expireAfter = \"#{@mySpringBean.timeout}\") String expireAfterTimeoutObtainedFromSpringBean;\n@TimeSeries(expireAfter = \"${my.property.timeout}\") String expireAfterTimeoutObtainedFromProperty;\n</pre>",
+      "translation": "配置文档过期的超时时间。默认值为空 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>，表示不过期。接受数值及其单位：\n<ul>\n<li><b>d</b>：天</li>\n<li><b>h</b>：小时</li>\n<li><b>m</b>：分钟</li>\n<li><b>s</b>：秒</li>\n<li>或者：Spring 模板表达式。该表达式可生成 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>Duration</code></a>，或根据上述约定生成有效的过期 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。</li>\n</ul>\n支持 ISO-8601 格式。\n\n<pre class=\"code\">@TimeSeries(expireAfter = \"10s\") String expireAfterTenSeconds;\n@TimeSeries(expireAfter = \"1d\") String expireAfterOneDay;\n@TimeSeries(expireAfter = \"P2D\") String expireAfterTwoDays;\n@TimeSeries(expireAfter = \"#{@mySpringBean.timeout}\") String expireAfterTimeoutObtainedFromSpringBean;\n@TimeSeries(expireAfter = \"${my.property.timeout}\") String expireAfterTimeoutObtainedFromProperty;\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "The name of the field which contains metadata in each time series document. Should not be the id nor\n<a href=\"#timeField()\"><code>timeField()</code></a> nor point to an array or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>. <br/>\nTranslation of property names to <a href=\"Field.html#name()\"><code>annotated fieldnames</code></a> will be considered during the mapping\nprocess.",
+      "translation": "包含每个时间序列文档元数据的字段名称。不应为 id，也不应为<a href=\"#timeField()\"><code>timeField()</code></a>，且不能指向数组或<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>。<br/>\n在映射过程中，属性名称将被翻译为<a href=\"Field.html#name()\"><code>注释字段名</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Name of the property which contains the date in each time series document. <br/>\nTranslation of property names to <a href=\"Field.html#name()\"><code>annotated fieldnames</code></a> will be considered during the mapping\nprocess.",
+      "translation": "包含时间序列文档中每个日期的属性名称。<br/>\n在映射过程中，将考虑对属性名称的翻译为 <a href=\"Field.html#name()\"><code>注释字段名</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Identifies a domain object to be persisted to a MongoDB Time Series collection.",
+      "translation": "标识一个要持久化到 MongoDB 时间序列集合中的域对象。",
+      "count": 1
+    },
+    {
+      "source": "Name of the property which contains the date in each time series document.",
+      "translation": "包含时间序列文档中每个日期的属性名称。",
+      "count": 1
+    },
+    {
+      "source": "The collection the document representing the entity is supposed to be stored in.",
+      "translation": "实体所应存储其文档的集合。",
+      "count": 1
+    },
+    {
+      "source": "Configure the timeout after which the document should expire.",
+      "translation": "配置文档应过期的超时时间。",
+      "count": 1
+    },
+    {
+      "source": "The name of the field which contains metadata in each time series document.",
+      "translation": "包含每个时间序列文档元数据的字段名称。",
+      "count": 1
+    },
+    {
+      "source": "The collection the document representing the entity is supposed to be stored in. If not configured, a default\ncollection name will be derived from the type's name. The attribute supports SpEL expressions to dynamically\ncalculate the collection based on a per-operation basis.",
+      "translation": "实体所应存储的集合。若未配置，则默认从类型名称派生集合名称。该属性支持 SpEL 表达式，以便根据每个操作动态计算集合。",
+      "count": 1
+    },
+    {
+      "source": "empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> by default.",
+      "translation": "默认为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../timeseries/Granularity.html#DEFAULT\"><code>server default</code></a> by default.",
+      "translation": "默认情况下为 <a href=\"../timeseries/Granularity.html#DEFAULT\"><code>server default</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> by default.",
+      "translation": "默认情况下为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Ben Foster",
+      "translation": "克里斯托夫·施特罗布，本·福斯特",
+      "count": 1
+    },
+    {
+      "source": "the name of the collection to be used.",
+      "translation": "要使用的集合名称。",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 1
+    },
+    {
+      "source": "empty by default.",
+      "translation": "默认情况下为空。",
+      "count": 1
+    },
+    {
+      "source": "Required Element Summary",
+      "translation": "所需元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

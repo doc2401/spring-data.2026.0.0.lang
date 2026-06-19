@@ -1,0 +1,151 @@
+{
+  "created_at": "2026-06-19 08:36:50",
+  "updated_at": "2026-06-19 08:36:50",
+  "stats": {
+    "total_entries": 27,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 34,
+    "entries_with_hits": 27,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2592592592592593,
+    "usage_percentage": 0.0026999999999999997
+  },
+  "items": [
+    {
+      "source": "Creates a new <a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a> given a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>key</code></a> and <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>.",
+      "translation": "根据给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>key</code></a>和<a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>，创建一个新的<a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "since 4.0, prefer <a href=\"#stream(java.nio.ByteBuffer,org.springframework.data.redis.connection.RedisStreamCommands.XTrimOptions)\"><code>stream(ByteBuffer, XTrimOptions)</code></a> instead.",
+      "translation": "自 4.0 版本起，请优先使用<a href=\"#stream(java.nio.ByteBuffer,org.springframework.data.redis.connection.RedisStreamCommands.XTrimOptions)\"><code>stream(ByteBuffer, XTrimOptions)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Apply the given <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> to configure the XTRIM command.",
+      "translation": "将给定的<a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>应用于配置 XTRIM 命令。",
+      "count": 2
+    },
+    {
+      "source": "since 4.0: do not toggle the trim operator in isolation.",
+      "translation": "自 4.0 版本起：请勿单独切换修剪运算符。",
+      "count": 2
+    },
+    {
+      "source": "a new <a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a> for <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>key</code></a>.",
+      "translation": "新增了一个针对<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"类或接口在 java.nio\"><code>key</code></a>的<a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveStreamCommands.TrimCommand</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "a new <a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a> with approximateTrimming applied.",
+      "translation": "新增一个应用了近似修剪的<a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - must not be null.",
+      "translation": "<code>key</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "This method allows setting all XTRIM options at once, including trimming strategies\n(MAXLEN, MINID) and other parameters. Constructs a new command instance with all\npreviously configured properties except the options, which are replaced by the provided <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>.",
+      "translation": "此方法允许一次性设置所有 XTRIM 选项，包括修剪策略（MAXLEN、MINID）及其他参数。它会构建一个新的命令实例，包含所有先前配置的属性，但会用提供的 <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> 替换其中的选项。",
+      "count": 1
+    },
+    {
+      "source": "since 4.0: Inspect <a href=\"#getOptions()\"><code>getOptions()</code></a> -&gt; <a href=\"RedisStreamCommands.XTrimOptions.html#getTrimOptions()\"><code>RedisStreamCommands.XTrimOptions.getTrimOptions()</code></a> -&gt;\n<a href=\"RedisStreamCommands.TrimOptions.html#getTrimStrategy()\"><code>RedisStreamCommands.TrimOptions.getTrimStrategy()</code></a> and obtain the threshold from the concrete strategy instead. For example:\n<code>if (strategy instanceof MaxLenTrimStrategy m) { m.threshold(); }</code> or\n<code>if (strategy instanceof MinIdTrimStrategy i) { i.threshold(); }</code>.",
+      "translation": "自 4.0 版本起：检查 <a href=\"#getOptions()\"><code>getOptions()</code></a> -&gt; <a href=\"RedisStreamCommands.XTrimOptions.html#getTrimOptions()\"><code>RedisStreamCommands.XTrimOptions.getTrimOptions()</code></a> -&gt;\n<a href=\"RedisStreamCommands.TrimOptions.html#getTrimStrategy()\"><code>RedisStreamCommands.TrimOptions.getTrimStrategy()</code></a>，并从具体的策略中获取阈值。例如：\n<code>if (strategy instanceof MaxLenTrimStrategy m) { m.threshold(); }</code> 或\n<code>if (strategy instanceof MinIdTrimStrategy i) { i.threshold(); }</code>。",
+      "count": 1
+    },
+    {
+      "source": "since 4.0: Inspect <a href=\"#getOptions()\"><code>getOptions()</code></a> -&gt; <a href=\"RedisStreamCommands.XTrimOptions.html#getTrimOptions()\"><code>RedisStreamCommands.XTrimOptions.getTrimOptions()</code></a> -&gt;\n<a href=\"RedisStreamCommands.TrimOptions.html#getTrimStrategy()\"><code>RedisStreamCommands.TrimOptions.getTrimStrategy()</code></a> and obtain the threshold from the concrete strategy instead.",
+      "translation": "自 4.0 版本起：检查 <a href=\"#getOptions()\"><code>getOptions()</code></a> -&gt; <a href=\"RedisStreamCommands.XTrimOptions.html#getTrimOptions()\"><code>RedisStreamCommands.XTrimOptions.getTrimOptions()</code></a> -&gt;\n<a href=\"RedisStreamCommands.TrimOptions.html#getTrimStrategy()\"><code>RedisStreamCommands.TrimOptions.getTrimStrategy()</code></a>，并从具体的策略中获取阈值。",
+      "count": 1
+    },
+    {
+      "source": "since 4.0: specify a concrete trim strategy (MAXLEN or MINID) via <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>\nand <a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a> instead of using this method. Prefer\n<code>options(XTrimOptions.trim(TrimOptions.maxLen(threshold)))</code> or construct with\n<code>stream(key, XTrimOptions.trim(TrimOptions.maxLen(threshold)))</code>.",
+      "translation": "自 4.0 版本起：请通过 <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> 和 <a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a> 指定具体的修剪策略（MAXLEN 或 MINID），而不要使用此方法。推荐使用\n<code>options(XTrimOptions.trim(TrimOptions.maxLen(threshold)))</code>，或通过\n<code>stream(key, XTrimOptions.trim(TrimOptions.maxLen(threshold)))</code> 进行构造。",
+      "count": 1
+    },
+    {
+      "source": "since 4.0: do not toggle the trim operator in isolation. Specify a concrete trim\nstrategy (MAXLEN or MINID) and operator via <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> and <a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a>, e.g.\n<code>options(XTrimOptions.trim(TrimOptions.maxLen(n).approximate()))</code> or\n<code>options(XTrimOptions.trim(TrimOptions.minId(id).exact()))</code>.",
+      "translation": "自 4.0 版本起：请勿单独切换修剪运算符。请通过 <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> 和 <a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a> 指定具体的修剪策略（MAXLEN 或 MINID）及运算符，例如：\n<code>options(XTrimOptions.trim(TrimOptions.maxLen(n).approximate()))</code> 或\n<code>options(XTrimOptions.trim(TrimOptions.minId(id).exact()))</code>。",
+      "count": 1
+    },
+    {
+      "source": "since 4.0: do not toggle the trim operator in isolation. Specify a concrete trim\nstrategy (MAXLEN or MINID) and operator via <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> and <a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a>, e.g.\n<code>options(XTrimOptions.trim(TrimOptions.maxLen(n).approximate()))</code>.",
+      "translation": "自 4.0 版本起：请勿单独切换修剪运算符。请通过 <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> 和 <a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a> 指定具体的修剪策略（MAXLEN 或 MINID）及运算符，例如：\n<code>options(XTrimOptions.trim(TrimOptions.maxLen(n).approximate()))</code>。",
+      "count": 1
+    },
+    {
+      "source": "since 4.0: specify a concrete trim strategy (MAXLEN or MINID) via <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>\nand <a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a> instead of using this method.",
+      "translation": "自 4.0 版本起：请通过<a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>和<a href=\"RedisStreamCommands.TrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.TrimOptions</code></a>指定具体的修剪策略（MAXLEN 或 MINID），而不要使用此方法。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a> given a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>key</code></a>.",
+      "translation": "根据给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"类或接口在 java.nio 中\"><code>key</code></a>创建一个新的<a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveStreamCommands.TrimCommand</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>XTRIM</code> command parameters.",
+      "translation": "XTRIM 命令参数。",
+      "count": 1
+    },
+    {
+      "source": "Applies <code>approximateTrimming</code>. Constructs a new command instance with all previously configured properties.",
+      "translation": "应用 `approximateTrimming`。使用所有先前配置的属性构建一个新的命令实例。",
+      "count": 1
+    },
+    {
+      "source": "Applies the numeric threshold. Constructs a new command instance with all previously configured\nproperties.",
+      "translation": "应用数值阈值。使用所有先前配置的属性构建一个新的命令实例。",
+      "count": 1
+    },
+    {
+      "source": "Applies approximate trimming. Constructs a new command instance with all previously configured properties.",
+      "translation": "应用近似修剪。使用所有先前配置的属性构建一个新的命令实例。",
+      "count": 1
+    },
+    {
+      "source": "Returns the MAXLEN threshold if the active trim strategy is MAXLEN; otherwise null.",
+      "translation": "如果当前修剪策略为 MAXLEN，则返回该阈值；否则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - the <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a> to apply. Must not be null.",
+      "translation": "<code>options</code> - 要应用的 <a href=\"RedisStreamCommands.XTrimOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>RedisStreamCommands.XTrimOptions</code></a>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a> with threshold applied.",
+      "translation": "新增一个应用阈值的<a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveStreamCommands.TrimCommand</code></a> with the specified options applied.",
+      "translation": "带有指定选项的新的<a href=\"ReactiveStreamCommands.TrimCommand.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveStreamCommands.TrimCommand</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - must not be null.",
+      "translation": "<code>options</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl, Tugdual Grall, Dengliming, Mark John Moreno, jinkshower, Jeonggyu Choi",
+      "translation": "Mark Paluch，Christoph Strobl，Tugdual Grall，Dengliming，Mark John Moreno，jinkshower，Jeonggyu Choi",
+      "count": 1
+    },
+    {
+      "source": "can be null.",
+      "translation": "可以为空。",
+      "count": 1
+    }
+  ]
+}

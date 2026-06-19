@@ -1,0 +1,231 @@
+{
+  "created_at": "2026-06-19 04:03:04",
+  "updated_at": "2026-06-19 04:03:04",
+  "stats": {
+    "total_entries": 43,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 46,
+    "entries_with_hits": 43,
+    "entries_without_hits": 0,
+    "hit_rate": 1.069767441860465,
+    "usage_percentage": 0.0043
+  },
+  "items": [
+    {
+      "source": "Configures the <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> to be used as fallback in case no <a href=\"PageableDefault.html\" title=\"annotation interface in org.springframework.data.web\"><code>PageableDefault</code></a> can be found at the\nmethod parameter to be resolved.",
+      "translation": "配置 <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a>，以便在无法在待解析的方法参数中找到 <a href=\"PageableDefault.html\" title=\"annotation interface in org.springframework.data.web\"><code>PageableDefault</code></a> 时将其作为后备使用。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the given <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> is the fallback one.",
+      "translation": "返回给定的<a href=\"../domain/Pageable.html\" title=\"org.springframework.data.domain 中的接口\"><code>Pageable</code></a>是否为回退实例。",
+      "count": 2
+    },
+    {
+      "source": "the parameter name to be used, never null or empty.",
+      "translation": "要使用的参数名称，不能为 null 或空。",
+      "count": 2
+    },
+    {
+      "source": "If you set this to Pageable#unpaged(), be aware that your controller methods will get an <code>unpaged</code>\ninstance handed into them in case no <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> data can be found in the request.",
+      "translation": "如果您将此设置为 Pageable#unpaged()，请注意：如果请求中找不到 <a href=\"../domain/Pageable.html\" title=\"org.springframework.data.domain 中的接口\"><code>Pageable</code></a> 数据，您的控制器方法将收到一个 <code>unpaged</code> 实例。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Parameters can be <a href=\"#setPrefix(java.lang.String)\"><code>prefixed</code></a> to disambiguate from other parameters in the request if\nnecessary.",
+      "translation": "参数可以<a href=\"#setPrefix(java.lang.String)\"><code>prefixed</code></a>，以便在必要时将其与请求中的其他参数区分开来。",
+      "count": 1
+    },
+    {
+      "source": "Returns the name of the request parameter to find the <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> information in. Inspects the given\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/MethodParameter.html\" title=\"class or interface in org.springframework.core\"><code>MethodParameter</code></a> for <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html\" title=\"class or interface in org.springframework.beans.factory.annotation\"><code>Qualifier</code></a> present and prefixes the given source parameter name with it.",
+      "translation": "返回请求参数的名称，用于查找 <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> 信息。检查给定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/MethodParameter.html\" title=\"class or interface in org.springframework.core\"><code>MethodParameter</code></a> 中是否存在 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html\" title=\"class or interface in org.springframework.beans.factory.annotation\"><code>Qualifier</code></a>，如果存在则将其作为前缀添加到源参数名称之前。",
+      "count": 1
+    },
+    {
+      "source": "Configures the maximum page size to be accepted. This allows to put an upper boundary of the page size to prevent\npotential attacks trying to issue an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/OutOfMemoryError.html\" title=\"class or interface in java.lang\"><code>OutOfMemoryError</code></a>. Defaults to <code>DEFAULT_MAX_PAGE_SIZE</code>.",
+      "translation": "配置允许接受的最大页面大小。这可以设置页面大小的上限，以防止潜在的尝试抛出<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/OutOfMemoryError.html\" title=\"class or interface in java.lang\"><code>OutOfMemoryError</code></a>的攻击。默认值为<code>DEFAULT_MAX_PAGE_SIZE</code>。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves the maximum page size to be accepted. This allows to put an upper boundary of the page size to prevent\npotential attacks trying to issue an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/OutOfMemoryError.html\" title=\"class or interface in java.lang\"><code>OutOfMemoryError</code></a>. Defaults to <code>DEFAULT_MAX_PAGE_SIZE</code>.",
+      "translation": "获取允许接受的最大页面大小。这可以设置页面大小的上限，以防止潜在的尝试抛出<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/OutOfMemoryError.html\" title=\"class or interface in java.lang\"><code>OutOfMemoryError</code></a>的攻击。默认值为<code>DEFAULT_MAX_PAGE_SIZE</code>。",
+      "count": 1
+    },
+    {
+      "source": "The delimiter to be used between the qualifier and the actual page number and size properties. Defaults to\n<code>_</code>. So a qualifier of <code>foo</code> will result in a page number parameter of <code>foo_page</code>.",
+      "translation": "用于限定符与实际页码和尺寸属性之间的分隔符。默认为 `<code>_</code>`。因此，限定符为 `<code>foo</code>` 时，将生成页码参数 `<code>foo_page</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Returns the name of the request parameter to find the <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> information in.",
+      "translation": "返回请求参数的名称，用于查找 `<a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a>` 信息。",
+      "count": 1
+    },
+    {
+      "source": "Configures the parameter name to be used to find the page number in the request. Defaults to <code>page</code>.",
+      "translation": "配置用于在请求中查找页码的参数名称，默认为<code>page</code>。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves the parameter name to be used to find the page number in the request. Defaults to <code>page</code>.",
+      "translation": "获取用于在请求中查找页码的参数名称，默认为<code>page</code>。",
+      "count": 1
+    },
+    {
+      "source": "Configures the parameter name to be used to find the page size in the request. Defaults to <code>size</code>.",
+      "translation": "配置用于在请求中查找页面大小的参数名称，默认为<code>size</code>。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves the parameter name to be used to find the page size in the request. Defaults to <code>size</code>.",
+      "translation": "获取用于在请求中查找页面大小的参数名称，默认为<code>size</code>。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves the maximum page size to be accepted.",
+      "translation": "获取可接受的最大页面大小。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves the parameter name to be used to find the page number in the request.",
+      "translation": "获取用于在请求中查找页码的参数名称。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves the parameter name to be used to find the page size in the request.",
+      "translation": "获取用于在请求中查找页面大小的参数名称。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether to expose and assume 1-based page number indexes in the request parameters.",
+      "translation": "指示是否在请求参数中暴露并采用基于 1 的页码索引。",
+      "count": 1
+    },
+    {
+      "source": "Configures the maximum page size to be accepted.",
+      "translation": "配置允许接受的最大页面大小。",
+      "count": 1
+    },
+    {
+      "source": "Configures whether to expose and assume 1-based page number indexes in the request parameters.",
+      "translation": "配置是否在请求参数中暴露并采用基于 1 的页码索引。",
+      "count": 1
+    },
+    {
+      "source": "Configures the parameter name to be used to find the page number in the request.",
+      "translation": "配置用于在请求中查找页码的参数名称。",
+      "count": 1
+    },
+    {
+      "source": "Configures a general prefix to be prepended to the page number and page size parameters.",
+      "translation": "配置一个通用前缀，将其附加到页码和每页大小参数之前。",
+      "count": 1
+    },
+    {
+      "source": "The delimiter to be used between the qualifier and the actual page number and size properties.",
+      "translation": "用于限定符与实际页码和尺寸属性之间的分隔符。",
+      "count": 1
+    },
+    {
+      "source": "Configures the parameter name to be used to find the page size in the request.",
+      "translation": "配置用于在请求中查找页面大小的参数名称。",
+      "count": 1
+    },
+    {
+      "source": "Configures a general prefix to be prepended to the page number and page size parameters. Useful to namespace the\nproperty names used in case they are clashing with ones used by your application. By default, no prefix is used.",
+      "translation": "配置一个通用前缀，将其附加到页码和每页大小参数之前。此功能可用于命名空间化属性名称，以防与应用程序中使用的名称发生冲突。默认情况下不使用前缀。",
+      "count": 1
+    },
+    {
+      "source": "Configures whether to expose and assume 1-based page number indexes in the request parameters. Defaults to\nfalse, meaning a page number of 0 in the request equals the first page. If this is set to\ntrue, a page number of 1 in the request will be considered the first page.",
+      "translation": "配置是否在请求参数中暴露并采用基于 1 的页码索引。默认为 false，即请求中的页码 0 对应第一页。如果设置为 true，则请求中的页码 1 将被视为第一页。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether to expose and assume 1-based page number indexes in the request parameters. Defaults to\nfalse, meaning a page number of 0 in the request equals the first page. If this is set to\ntrue, a page number of 1 in the request will be considered the first page.",
+      "translation": "指示是否在请求参数中暴露并采用基于 1 的页码索引。默认为 false，表示请求中的页码 0 对应第一页。如果设置为 true，则请求中的页码 1 将被视为第一页。",
+      "count": 1
+    },
+    {
+      "source": "<code>fallbackPageable</code> - the <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> to be used as general fallback.",
+      "translation": "<code>fallbackPageable</code> - 用作通用回退的<a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a>接口。",
+      "count": 1
+    },
+    {
+      "source": "<code>parameter</code> - the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/MethodParameter.html\" title=\"class or interface in org.springframework.core\"><code>MethodParameter</code></a> potentially qualified.",
+      "translation": "<code>parameter</code> - 可能带有限定符的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/MethodParameter.html\" title=\"class or interface in org.springframework.core\"><code>MethodParameter</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>pageable</code> - can be null.",
+      "translation": "<code>pageable</code> - 可为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>maxPageSize</code> - the maxPageSize to set",
+      "translation": "<code>maxPageSize</code> - 要设置的 maxPageSize",
+      "count": 1
+    },
+    {
+      "source": "<code>pageParameterName</code> - the parameter name to be used, must not be null or empty.",
+      "translation": "<code>pageParameterName</code> - 要使用的参数名称，不能为 null 或空。",
+      "count": 1
+    },
+    {
+      "source": "<code>sizeParameterName</code> - the parameter name to be used, must not be null or empty.",
+      "translation": "<code>sizeParameterName</code> - 要使用的参数名称，不能为 null 或空。",
+      "count": 1
+    },
+    {
+      "source": "<code>prefix</code> - the prefix to be used or null to reset to the default.",
+      "translation": "<code>prefix</code> - 要使用的名称前缀，或为 null 以重置为默认值。",
+      "count": 1
+    },
+    {
+      "source": "<code>qualifierDelimiter</code> - the delimiter to be used or null to reset to the default.",
+      "translation": "<code>qualifierDelimiter</code> - 要使用的分隔符，或为 null 以重置为默认值。",
+      "count": 1
+    },
+    {
+      "source": "<code>oneIndexedParameters</code> - the oneIndexedParameters to set",
+      "translation": "<code>oneIndexedParameters</code> - 要设置的 oneIndexedParameters",
+      "count": 1
+    },
+    {
+      "source": "<code>source</code> - the basic parameter name.",
+      "translation": "<code>source</code> - 基本参数名称。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Vedran Pavic",
+      "translation": "马克·帕卢赫，韦德兰·帕维奇",
+      "count": 1
+    },
+    {
+      "source": "the maximum page size allowed.",
+      "translation": "允许的最大页面大小。",
+      "count": 1
+    },
+    {
+      "source": "whether to assume 1-based page number indexes in the request parameters.",
+      "translation": "是否假设请求参数中的页码索引为基于 1 的索引。",
+      "count": 1
+    },
+    {
+      "source": "the name of the request parameter.",
+      "translation": "请求参数的名称。",
+      "count": 1
+    },
+    {
+      "source": "Base class providing methods for handler method argument resolvers to create paging information from web requests and\nthus allows injecting <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> instances into controller methods. Request properties to be parsed can be\nconfigured defaulting to <code>page</code> for the page number and <code>size</code> for the page size.",
+      "translation": "提供用于从 Web 请求创建分页信息的方法的基类，从而允许将<a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a>实例注入到控制器方法中。可解析的请求属性可以配置，默认情况下，页码属性为<code>page</code>，每页大小属性为<code>size</code>。",
+      "count": 1
+    }
+  ]
+}

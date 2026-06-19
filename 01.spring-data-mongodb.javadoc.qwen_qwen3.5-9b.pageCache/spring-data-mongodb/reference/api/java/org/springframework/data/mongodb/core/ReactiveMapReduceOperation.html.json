@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-06-19 01:09:51",
+  "updated_at": "2026-06-19 01:09:51",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 17,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0625,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "Start creating a mapReduce operation for the given domainType.",
+      "translation": "为给定的 domainType 开始创建 MapReduce 操作。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ReactiveMapReduceOperation.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveMapReduceOperation</code></a> allows creation and execution of MongoDB mapReduce operations in a fluent API\nstyle. The starting domainType is used for mapping an optional <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> provided via <code>matching</code>\ninto the MongoDB specific representation. By default, the originating domainType is also used for mapping\nback the results from the <code>Document</code>. However, it is possible to define an different\nreturnType via <code>as</code> to mapping the result.<br/>\nThe collection to operate on is by default derived from the initial domainType and can be defined there\nvia <a href=\"mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a>. Using <code>inCollection</code> allows to override the\ncollection name for the execution.\n\n<pre>    <code>\n        mapReduce(Human.class)\n            .map(\"function() { emit(this.id, this.firstname) }\")\n            .reduce(\"function(id, name) { return sum(id, name); }\")\n            .inCollection(\"star-wars\")\n            .as(Jedi.class)\n            .matching(query(where(\"lastname\").is(\"skywalker\")))\n            .all();\n    </code>\n</pre>",
+      "translation": "<a href=\"ReactiveMapReduceOperation.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveMapReduceOperation</code></a> 支持以流畅 API 风格创建和执行 MongoDB 的 mapReduce 操作。起始的 domainType 用于将可选的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>（通过 <code>matching</code> 提供）映射到 MongoDB 特定的表示形式。默认情况下，起始的 domainType 也用于将结果从 <code>Document</code> 映射回来。但是，可以通过 <code>as</code> 定义不同的 returnType 来映射结果。<br/>\n要操作的集合默认由初始 domainType 推导得出，并可通过 <a href=\"mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a> 在该处定义。使用 <code>inCollection</code> 可以覆盖执行时的集合名称。\n\n<pre>    <code>\n        mapReduce(Human.class)\n            .map(\"function() { emit(this.id, this.firstname) }\")\n            .reduce(\"function(id, name) { return sum(id, name); }\")\n            .inCollection(\"star-wars\")\n            .as(Jedi.class)\n            .matching(query(where(\"lastname\").is(\"skywalker\")))\n            .all();\n    </code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ReactiveMapReduceOperation.ReactiveMapReduce.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveMapReduceOperation.ReactiveMapReduce</code></a> provides methods for constructing reactive mapReduce operations in a fluent way.",
+      "translation": "<a href=\"ReactiveMapReduceOperation.ReactiveMapReduce.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ReactiveMapReduceOperation.ReactiveMapReduce</code></a> 提供了以流畅方式构建响应式 mapReduce 操作的方法。",
+      "count": 1
+    },
+    {
+      "source": "Provide the Javascript <code>function()</code> used to map matching documents.",
+      "translation": "提供用于映射匹配文档的 JavaScript `function()`。",
+      "count": 1
+    },
+    {
+      "source": "Provide the Javascript <code>function()</code> used to reduce matching documents.",
+      "translation": "提供用于减少匹配文档的 JavaScript `function()`。",
+      "count": 1
+    },
+    {
+      "source": "Collection override (Optional).",
+      "translation": "集合覆盖（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Additional mapReduce options (Optional).",
+      "translation": "其他 mapReduce 选项（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Result type override (Optional).",
+      "translation": "结果类型覆盖（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Input document filter query (Optional).",
+      "translation": "输入文档筛选查询（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Trigger mapReduce execution by calling one of the terminating methods.",
+      "translation": "通过调用终止方法之一来触发 mapReduce 执行。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ExecutableFindOperation.ExecutableFind.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ExecutableFindOperation.ExecutableFind</code></a>.",
+      "translation": "创建了一个新的<a href=\"ExecutableFindOperation.ExecutableFind.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ExecutableFindOperation.ExecutableFind</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if domainType is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 domainType 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>domainType</code> - must not be null.",
+      "translation": "<code>domainType</code> 不能为空。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

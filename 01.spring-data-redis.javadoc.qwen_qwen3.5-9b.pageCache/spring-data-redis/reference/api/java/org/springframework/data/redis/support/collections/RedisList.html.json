@@ -1,0 +1,221 @@
+{
+  "created_at": "2026-06-19 09:21:48",
+  "updated_at": "2026-06-19 09:21:48",
+  "stats": {
+    "total_entries": 41,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 86,
+    "entries_with_hits": 41,
+    "entries_without_hits": 0,
+    "hit_rate": 2.097560975609756,
+    "usage_percentage": 0.0041
+  },
+  "items": [
+    {
+      "source": "This method is forward-compatible with Java 21 SequencedCollections.",
+      "translation": "该方法与 Java 21 中的 SequencedCollections 向前兼容。",
+      "count": 7
+    },
+    {
+      "source": "<code>destination</code> - must not be null.",
+      "translation": "<code>destination</code> 不能为 null。",
+      "count": 6
+    },
+    {
+      "source": "<code>destinationPosition</code> - must not be null.",
+      "translation": "<code>destinationPosition</code> 不得为 null。",
+      "count": 6
+    },
+    {
+      "source": "Atomically returns and removes the first element of the list stored at the bound key, and pushes the element at the\nfirst/last element (head/tail depending on the <a href=\"../../connection/RedisListCommands.Direction.html\" title=\"enum class in org.springframework.data.redis.connection\"><code>destinationPosition</code></a> argument) of the list stored\nat <a href=\"RedisList.html\" title=\"interface in org.springframework.data.redis.support.collections\"><code>destination</code></a>.",
+      "translation": "原子性地返回并移除绑定键处存储的列表中的第一个元素，并将该元素推送到存储在<a href=\"RedisList.html\" title=\"interface in org.springframework.data.redis.support.collections\"><code>destination</code></a>处的列表的开头/末尾（取决于<a href=\"../../connection/RedisListCommands.Direction.html\" title=\"enum class in org.springframework.data.redis.connection\"><code>destinationPosition</code></a>参数）。",
+      "count": 5
+    },
+    {
+      "source": "Atomically returns and removes the last element of the list stored at the bound key, and pushes the element at the\nfirst/last element (head/tail depending on the <a href=\"../../connection/RedisListCommands.Direction.html\" title=\"enum class in org.springframework.data.redis.connection\"><code>destinationPosition</code></a> argument) of the list stored\nat <a href=\"RedisList.html\" title=\"interface in org.springframework.data.redis.support.collections\"><code>destination</code></a>.",
+      "translation": "原子性地返回并移除绑定键处存储的列表中的最后一个元素，并将该元素推送到存储在<a href=\"RedisList.html\" title=\"interface in org.springframework.data.redis.support.collections\"><code>destination</code></a>处的列表的第一个/最后一个位置（取决于<a href=\"../../connection/RedisListCommands.Direction.html\" title=\"enum class in org.springframework.data.redis.connection\"><code>destinationPosition</code></a>参数）。",
+      "count": 5
+    },
+    {
+      "source": "<b>Blocks connection</b> until element available or <code>timeout</code> reached.",
+      "translation": "<b>阻塞连接</b>，直到元素可用或达到<code>timeout</code>。",
+      "count": 4
+    },
+    {
+      "source": "Trim list at the bound key to elements between <code>start</code> and <code>end</code>.",
+      "translation": "按边界键修剪列表，保留 `<code>start</code>` 和 `<code>end</code>` 之间的元素。",
+      "count": 4
+    },
+    {
+      "source": "Factory method used to construct a new <a href=\"RedisList.html\" title=\"interface in org.springframework.data.redis.support.collections\"><code>RedisList</code></a> from a Redis list reference by the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>key</code></a>.",
+      "translation": "工厂方法用于通过给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"类或接口在 java.lang 中\"><code>key</code></a>从 Redis 列表引用构建一个新的<a href=\"RedisList.html\" title=\"org.springframework.data.redis.support.collections 中的接口\"><code>RedisList</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "since 4.1 in favor of <a href=\"#moveFirstTo(org.springframework.data.redis.support.collections.RedisList,org.springframework.data.redis.connection.RedisListCommands.Direction,java.time.Duration)\"><code>moveFirstTo(RedisList, Direction, Duration)</code></a>.",
+      "translation": "自 4.1 版本起，改为使用 <a href=\"#moveFirstTo(org.springframework.data.redis.support.collections.RedisList,org.springframework.data.redis.connection.RedisListCommands.Direction,java.time.Duration)\"><code>moveFirstTo(RedisList, Direction, Duration)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "since 4.1 in favor of <a href=\"#moveLastTo(org.springframework.data.redis.support.collections.RedisList,org.springframework.data.redis.connection.RedisListCommands.Direction,java.time.Duration)\"><code>moveLastTo(RedisList, Direction, Duration)</code></a>.",
+      "translation": "自 4.1 版本起，改为使用 <a href=\"#moveLastTo(org.springframework.data.redis.support.collections.RedisList,org.springframework.data.redis.connection.RedisListCommands.Direction,java.time.Duration)\"><code>moveLastTo(RedisList, Direction, Duration)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Constructs a new, uncapped <a href=\"RedisList.html\" title=\"interface in org.springframework.data.redis.support.collections\"><code>RedisList</code></a> instance.",
+      "translation": "构建一个新的、无上限的<a href=\"RedisList.html\" title=\"org.springframework.data.redis.support.collections 中的接口\"><code>RedisList</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "Constructs a new, uncapped <a href=\"DefaultRedisList.html\" title=\"class in org.springframework.data.redis.support.collections\"><code>DefaultRedisList</code></a> instance.",
+      "translation": "构建一个新的、无上限的<a href=\"DefaultRedisList.html\" title=\"class in org.springframework.data.redis.support.collections\"><code>DefaultRedisList</code></a> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Constructs a new <a href=\"DefaultRedisList.html\" title=\"class in org.springframework.data.redis.support.collections\"><code>DefaultRedisList</code></a>.",
+      "translation": "构建一个新的<a href=\"DefaultRedisList.html\" title=\"org.springframework.data.redis.support.collections 中的类\"><code>DefaultRedisList</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get elements between <code>start</code> and <code>end</code> from list at the bound key.",
+      "translation": "从绑定键处的列表中获取 `<code>start</code>` 和 `<code>end</code>` 之间的元素。",
+      "count": 2
+    },
+    {
+      "source": "Returns a reverse-ordered view of this collection.",
+      "translation": "返回此集合的逆序视图。",
+      "count": 2
+    },
+    {
+      "source": "<code>operations</code> - <a href=\"../../core/RedisOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>RedisOperations</code></a> for the value type of this list.",
+      "translation": "<code>operations</code> - 用于此列表值类型的<a href=\"../../core/RedisOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>RedisOperations</code></a>接口。",
+      "count": 2
+    },
+    {
+      "source": "<code>boundOps</code> - <a href=\"../../core/BoundListOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>BoundListOperations</code></a> for the value type of this list.",
+      "translation": "<code>boundOps</code> - 此列表的值类型对应的<a href=\"../../core/BoundListOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>BoundListOperations</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "the head of this <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\"><code>Deque</code></a>.",
+      "translation": "此<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"java.util 中的类或接口\"><code>Deque</code></a>的头部。",
+      "count": 2
+    },
+    {
+      "source": "the tail of this <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\"><code>Deque</code></a>.",
+      "translation": "该`Deque`<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"java.util 中的类或接口\">尾</a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>key</code> - Redis key of this list.",
+      "translation": "<code>key</code> - 此列表的 Redis 键。",
+      "count": 2
+    },
+    {
+      "source": "<code>timeout</code> - must not be null or negative.",
+      "translation": "<code>timeout</code> 不得为 null 或负数。",
+      "count": 2
+    },
+    {
+      "source": "<code>unit</code> - must not be null.",
+      "translation": "<code>unit</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The encounter order of elements returned by the view is the inverse of the encounter order of the elements stored\nin this collection. The reverse ordering affects all order-sensitive operations, including any operations on\nfurther views of the returned view. If the collection implementation permits modifications to this view, the\nmodifications \"write-through\" to the underlying collection. Changes to the underlying collection might or might not\nbe visible in this reversed view, depending upon the implementation.",
+      "translation": "视图返回元素的相遇顺序与此集合中存储元素的相遇顺序相反。这种反向排序会影响所有对顺序敏感的操作，包括对返回视图的进一步视图上的任何操作。如果集合实现允许对此视图进行修改，则这些修改会“写透”到底层集合。底层集合的更改是否在此反向视图中可见，取决于具体实现。",
+      "count": 1
+    },
+    {
+      "source": "Redis extension for the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> contract. Supports <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Queue.html\" title=\"class or interface in java.util\"><code>Queue</code></a> and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\"><code>Deque</code></a> contracts as\nwell as their equivalent blocking siblings <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"class or interface in java.util.concurrent\"><code>BlockingDeque</code></a> and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"class or interface in java.util.concurrent\"><code>BlockingDeque</code></a>.",
+      "translation": "Redis 扩展支持 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 契约，同时支持 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Queue.html\" title=\"class or interface in java.util\"><code>Queue</code></a> 和 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\"><code>Deque</code></a> 契约，以及它们对应的阻塞版本 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"class or interface in java.util.concurrent\"><code>BlockingDeque</code></a> 和 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"class or interface in java.util.concurrent\"><code>BlockingDeque</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html#addFirst(E)\" title=\"class or interface in java.util.concurrent\">addFirst</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"class or interface in java.util.concurrent\">BlockingDeque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html#addFirst(E)\" title=\"类或接口 java.util.concurrent\">addFirst</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"类或接口 java.util.concurrent\">BlockingDeque</a>&lt;<a href=\"#type-param-E\" title=\"RedisList 中的类型参数\">E</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#addFirst(E)\" title=\"class or interface in java.util\">addFirst</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#addFirst(E)\" title=\"类或接口 java.util 中的\">addFirst</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"类或接口 java.util 中的\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"RedisList 中的类型参数\">E</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html#addLast(E)\" title=\"class or interface in java.util.concurrent\">addLast</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"class or interface in java.util.concurrent\">BlockingDeque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html#addLast(E)\" title=\"类或接口 java.util.concurrent\">addLast</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/BlockingDeque.html\" title=\"类或接口 java.util.concurrent\">BlockingDeque</a>&lt;<a href=\"#type-param-E\" title=\"RedisList 中的类型参数\">E</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#addLast(E)\" title=\"class or interface in java.util\">addLast</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#addLast(E)\" title=\"类或接口 java.util 中的类或接口\">addLast</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"类或接口 java.util 中的类或接口\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"RedisList 中的类型参数\">E</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#getFirst()\" title=\"class or interface in java.util\">getFirst</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#getFirst()\" title=\"class or interface in java.util\">getFirst</a></code> 接口中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"类型参数在 RedisList\">E</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#getLast()\" title=\"class or interface in java.util\">getLast</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#getLast()\" title=\"类或接口 java.util 中的\">getLast</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"类或接口 java.util 中的\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"RedisList 中的类型参数\">E</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#removeFirst()\" title=\"class or interface in java.util\">removeFirst</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#removeFirst()\" title=\"类或接口 java.util 中的类或接口\">removeFirst</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"类或接口 java.util 中的类或接口\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"RedisList 中的类型参数\">E</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#removeLast()\" title=\"class or interface in java.util\">removeLast</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"class or interface in java.util\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in RedisList\">E</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html#removeLast()\" title=\"类或接口 java.util 中的方法\">removeLast</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html\" title=\"类或接口 java.util 中的接口\">Deque</a>&lt;<a href=\"#type-param-E\" title=\"RedisList 中的类型参数\">E</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>maxSize</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a> used to constrain the size of the list.",
+      "translation": "<code>maxSize</code> - 用于限制列表大小的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>maxSize</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a> constraining the size of the list.",
+      "translation": "<code>maxSize</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html\" title=\"class or interface in java.lang\"><code>Integer</code></a>，用于限制列表的大小。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-E\"><code>E</code> - the type of elements in this collection.</span>",
+      "translation": "<span id=\"type-param-E\"><code>E</code> - 此集合中元素的类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>element</code> - element to be added to the head of the collection.",
+      "translation": "<code>element</code> - 要添加到集合头部的项目。",
+      "count": 1
+    },
+    {
+      "source": "<code>element</code> - element to be added to be added the end of the collection.",
+      "translation": "<code>element</code> - 要添加到集合末尾的元素。",
+      "count": 1
+    },
+    {
+      "source": "Costin Leau, Mark Paluch, John Blum",
+      "translation": "Costin Leau，Mark Paluch，John Blum",
+      "count": 1
+    },
+    {
+      "source": "null when used in pipeline / transaction.",
+      "translation": "在管道或事务中使用 null 时。",
+      "count": 1
+    },
+    {
+      "source": "a reverse-ordered view of this collection.",
+      "translation": "该集合的逆序视图。",
+      "count": 1
+    }
+  ]
+}

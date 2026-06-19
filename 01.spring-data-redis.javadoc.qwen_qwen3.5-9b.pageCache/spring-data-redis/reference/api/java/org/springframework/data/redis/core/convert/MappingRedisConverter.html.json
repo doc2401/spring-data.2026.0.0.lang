@@ -1,0 +1,151 @@
+{
+  "created_at": "2026-06-19 09:34:42",
+  "updated_at": "2026-06-19 09:34:42",
+  "stats": {
+    "total_entries": 27,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 36,
+    "entries_with_hits": 27,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3333333333333333,
+    "usage_percentage": 0.0026999999999999997
+  },
+  "items": [
+    {
+      "source": "Creates new <a href=\"MappingRedisConverter.html\" title=\"class in org.springframework.data.redis.core.convert\"><code>MappingRedisConverter</code></a> and defaults <a href=\"../mapping/RedisMappingContext.html\" title=\"class in org.springframework.data.redis.core.mapping\"><code>RedisMappingContext</code></a> when null.",
+      "translation": "创建新的<a href=\"MappingRedisConverter.html\" title=\"class in org.springframework.data.redis.core.convert\"><code>MappingRedisConverter</code></a>，并在为 null 时设置<a href=\"../mapping/RedisMappingContext.html\" title=\"class in org.springframework.data.redis.core.mapping\"><code>RedisMappingContext</code></a>的默认值。",
+      "count": 4
+    },
+    {
+      "source": "Creates new <a href=\"MappingRedisConverter.html\" title=\"class in org.springframework.data.redis.core.convert\"><code>MappingRedisConverter</code></a>.",
+      "translation": "创建新的<a href=\"MappingRedisConverter.html\" title=\"org.springframework.data.redis.core.convert 中的类\"><code>MappingRedisConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Convert given binary representation to desired target type using the underlying <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>.",
+      "translation": "使用底层的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>将给定的二进制表示转换为所需的目标类型。",
+      "count": 2
+    },
+    {
+      "source": "Set <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions</code></a> to be applied.",
+      "translation": "设置 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions</code></a> 以应用。",
+      "count": 2
+    },
+    {
+      "source": "Convert given source to binary representation using the underlying <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>.",
+      "translation": "使用底层<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>将给定源转换为二进制表示。",
+      "count": 2
+    },
+    {
+      "source": "<code>mappingContext</code> - can be null.",
+      "translation": "<code>mappingContext</code> - 可以为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>indexResolver</code> - can be null.",
+      "translation": "<code>indexResolver</code> - 可以为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"RedisConverter.html\" title=\"interface in org.springframework.data.redis.core.convert\"><code>RedisConverter</code></a> implementation creating flat binary map structure out of a given domain type. Considers\n<a href=\"../index/Indexed.html\" title=\"annotation interface in org.springframework.data.redis.core.index\"><code>Indexed</code></a> annotation for enabling helper structures for finder operations. <br/>\n<br/>\n<strong>NOTE</strong> <a href=\"MappingRedisConverter.html\" title=\"class in org.springframework.data.redis.core.convert\"><code>MappingRedisConverter</code></a> is an <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>InitializingBean</code></a> and requires\n<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> to be called.\n\n<pre><code>\n@RedisHash(\"persons\")\nclass Person {\n\n  @Id String id;\n  String firstname;\n\n  List&lt;String&gt; nicknames;\n  List&lt;Person&gt; coworkers;\n\n  Address address;\n  @Reference Country nationality;\n}\n</code>\n</pre>\n\nThe above is represented as:\n\n<pre><code>\n_class=org.example.Person\nid=1\nfirstname=rand\nlastname=al'thor\ncoworkers.[0].firstname=mat\ncoworkers.[0].nicknames.[0]=prince of the ravens\ncoworkers.[1].firstname=perrin\ncoworkers.[1].address.city=two rivers\nnationality=nationality:andora\n</code>\n</pre>",
+      "translation": "<a href=\"RedisConverter.html\" title=\"org.springframework.data.redis.core.convert 包中的接口\"><code>RedisConverter</code></a> 实现将给定的领域类型转换为扁平的二进制映射结构。该实现会考虑 <a href=\"../index/Indexed.html\" title=\"org.springframework.data.redis.core.index 包中的注解接口\"><code>Indexed</code></a> 注解，以启用查找操作的辅助结构。<br/>\n<br/>\n<strong>注意：</strong><a href=\"MappingRedisConverter.html\" title=\"org.springframework.data.redis.core.convert 包中的类\"><code>MappingRedisConverter</code></a> 是一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"org.springframework.beans.factory 包中的类或接口\"><code>InitializingBean</code></a>，需要调用其 <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> 方法。<br/>\n\n<pre><code>\n@RedisHash(\"persons\")\nclass Person {\n\n  @Id String id;\n  String firstname;\n\n  List&lt;String&gt; nicknames;\n  List&lt;Person&gt; coworkers;\n\n  Address address;\n  @Reference Country nationality;\n}\n</code>\n</pre>\n\n上述内容表示为：\n\n<pre><code>\n_class=org.example.Person\nid=1\nfirstname=rand\nlastname=al'thor\ncoworkers.[0].firstname=mat\ncoworkers.[0].nicknames.[0]=prince of the ravens\ncoworkers.[1].firstname=perrin\ncoworkers.[1].address.city=two rivers\nnationality=nationality:andora\n</code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Value object representing a binary Redis Hash/Object identifier composed from keyspace and object id in the form of\nkeyspace:id.",
+      "translation": "表示由键空间与对象 ID 组成的二进制 Redis 哈希/对象标识符的值对象，其格式为 keyspace:id。",
+      "count": 1
+    },
+    {
+      "source": "Value object representing a Redis Hash/Object identifier composed from keyspace and object id in the form of\nkeyspace:id.",
+      "translation": "表示由键空间和对象 ID 组成的 Redis Hash/对象标识符的值对象，其形式为 keyspace:id。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getMappingContext()\" title=\"class or interface in org.springframework.data.convert\">getMappingContext</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/RedisPersistentEntity.html\" title=\"interface in org.springframework.data.redis.core.mapping\">RedisPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/RedisPersistentProperty.html\" title=\"class in org.springframework.data.redis.core.mapping\">RedisPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a href=\"RedisData.html\" title=\"class in org.springframework.data.redis.core.convert\">RedisData</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getMappingContext()\" title=\"class or interface in org.springframework.data.convert\">getMappingContext</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/RedisPersistentEntity.html\" title=\"interface in org.springframework.data.redis.core.mapping\">RedisPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/RedisPersistentProperty.html\" title=\"class in org.springframework.data.redis.core.mapping\">RedisPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a href=\"RedisData.html\" title=\"class in org.springframework.data.redis.core.convert\">RedisData</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getConversionService()\" title=\"class or interface in org.springframework.data.convert\">getConversionService</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/RedisPersistentEntity.html\" title=\"interface in org.springframework.data.redis.core.mapping\">RedisPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/RedisPersistentProperty.html\" title=\"class in org.springframework.data.redis.core.mapping\">RedisPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a href=\"RedisData.html\" title=\"class in org.springframework.data.redis.core.convert\">RedisData</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html#getConversionService()\" title=\"类或接口 org.springframework.data.convert\">getConversionService</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"类或接口 org.springframework.data.convert\">EntityConverter</a>&lt;<a href=\"../mapping/RedisPersistentEntity.html\" title=\"接口 org.springframework.data.redis.core.mapping\">RedisPersistentEntity</a>&lt;?&gt;, <a href=\"../mapping/RedisPersistentProperty.html\" title=\"类 org.springframework.data.redis.core.mapping\">RedisPersistentProperty</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"类或接口 java.lang\">Object</a>, <a href=\"RedisData.html\" title=\"类 org.springframework.data.redis.core.convert\">RedisData</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#read(java.lang.Class,S)\" title=\"class or interface in org.springframework.data.convert\">read</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html\" title=\"class or interface in org.springframework.data.convert\">EntityReader</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a href=\"RedisData.html\" title=\"class in org.springframework.data.redis.core.convert\">RedisData</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html#read(java.lang.Class,S)\" title=\"类或接口 org.springframework.data.convert 中的类或接口\">read</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html\" title=\"类或接口 org.springframework.data.convert 中的类或接口\">EntityReader</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"类或接口 java.lang 中的类或接口\">Object</a>, <a href=\"RedisData.html\" title=\"类 org.springframework.data.redis.core.convert 中的类\">RedisData</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html#write(T,S)\" title=\"class or interface in org.springframework.data.convert\">write</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html\" title=\"class or interface in org.springframework.data.convert\">EntityWriter</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a href=\"RedisData.html\" title=\"class in org.springframework.data.redis.core.convert\">RedisData</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html#write(T,S)\" title=\"class or interface in org.springframework.data.convert\">write</a></code> 接口中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityWriter.html\" title=\"class or interface in org.springframework.data.convert\">EntityWriter</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>, <a href=\"RedisData.html\" title=\"class in org.springframework.data.redis.core.convert\">RedisData</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RedisConverter.html#getMappingContext()\">getMappingContext</a></code> in interface <code><a href=\"RedisConverter.html\" title=\"interface in org.springframework.data.redis.core.convert\">RedisConverter</a></code>",
+      "translation": "接口 <code><a href=\"RedisConverter.html\" title=\"org.springframework.data.redis.core.convert 中的接口\">RedisConverter</a></code> 中的方法 <code><a href=\"RedisConverter.html#getMappingContext()\">getMappingContext</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RedisConverter.html#getIndexResolver()\">getIndexResolver</a></code> in interface <code><a href=\"RedisConverter.html\" title=\"interface in org.springframework.data.redis.core.convert\">RedisConverter</a></code>",
+      "translation": "接口 <code><a href=\"RedisConverter.html\" title=\"org.springframework.data.redis.core.convert 中的接口\">RedisConverter</a></code> 中的方法 <code><a href=\"RedisConverter.html#getIndexResolver()\">getIndexResolver</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RedisConverter.html#getEntityInstantiators()\">getEntityInstantiators</a></code> in interface <code><a href=\"RedisConverter.html\" title=\"interface in org.springframework.data.redis.core.convert\">RedisConverter</a></code>",
+      "translation": "接口 <code><a href=\"RedisConverter.html\" title=\"org.springframework.data.redis.core.convert 中的接口\">RedisConverter</a></code> 中的 <code><a href=\"RedisConverter.html#getEntityInstantiators()\">getEntityInstantiators</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code>中的方法",
+      "count": 1
+    },
+    {
+      "source": "the configured <a href=\"IndexResolver.html\" title=\"interface in org.springframework.data.redis.core.convert\"><code>IndexResolver</code></a>, may be null.",
+      "translation": "配置的<a href=\"IndexResolver.html\" title=\"org.springframework.data.redis.core.convert 中的接口\"><code>IndexResolver</code></a>可能为 null。",
+      "count": 1
+    },
+    {
+      "source": "the configured <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/model/EntityInstantiators.html\" title=\"class or interface in org.springframework.data.mapping.model\"><code>EntityInstantiators</code></a>.",
+      "translation": "配置的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/model/EntityInstantiators.html\" title=\"class or interface in org.springframework.data.mapping.model\"><code>EntityInstantiators</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>context</code> - can be null.",
+      "translation": "<code>context</code> - 可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>referenceResolver</code> - can be not be null.",
+      "translation": "<code>referenceResolver</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>referenceResolver</code> - can be null.",
+      "translation": "<code>referenceResolver</code> - 可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>typeMapper</code> - can be null.",
+      "translation": "<code>typeMapper</code> - 可为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Greg Turnquist, Mark Paluch, Golam Mazid Sajib, Leehyoungwoo",
+      "translation": "Christoph Strobl，Greg Turnquist，Mark Paluch，Golam Mazid Sajib，Leehyungwoo",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

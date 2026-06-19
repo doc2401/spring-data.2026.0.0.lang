@@ -1,31 +1,46 @@
 {
   "created_at": "2026-06-16 13:13:28",
-  "updated_at": "2026-06-16 13:13:28",
+  "updated_at": "2026-06-18 07:33:47",
   "stats": {
-    "total_entries": 25,
+    "total_entries": 32,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 27,
-    "entries_with_hits": 25,
+    "total_hits": 41,
+    "entries_with_hits": 32,
     "entries_without_hits": 0,
-    "hit_rate": 1.08,
-    "usage_percentage": 0.0025
+    "hit_rate": 1.28125,
+    "usage_percentage": 0.0031999999999999997
   },
   "items": [
     {
       "source": "Returns a <a href=\"../PersistentPropertyAccessor.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentPropertyAccessor</code></a> for a given <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> and <code>bean</code>.",
       "translation": "返回一个针对给定<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>和<code>bean</code>的<a href=\"../PersistentPropertyAccessor.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentPropertyAccessor</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Checks whether an accessor class can be generated.",
       "translation": "检查是否可以生成访问器类。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "<code>entity</code> - must not be null.",
+      "translation": "<code>entity</code> 不能为 null。",
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "A factory that can generate byte code to speed-up dynamic property access. Uses the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>'s\n<a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> to discover the access to properties. Properties are accessed either using method handles\nto overcome Java visibility issues or directly using field access/getter/setter calls.",
+      "translation": "一个能够生成字节码以加速动态属性访问的工厂。它利用 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 中的 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 来发现属性的访问方式。属性访问要么通过方法句柄（MethodHandle）来解决 Java 可见性问题，要么直接使用字段访问或 getter/setter 调用。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PersistentPropertyAccessorFactory.html#getPropertyAccessor(org.springframework.data.mapping.PersistentEntity,T)\">PersistentPropertyAccessorFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PersistentPropertyAccessorFactory.html#getPropertyAccessor(org.springframework.data.mapping.PersistentEntity,T)\">PersistentPropertyAccessorFactory</a></code></span>",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -43,18 +58,8 @@
       "count": 1
     },
     {
-      "source": "A factory that can generate byte code to speed-up dynamic property access. Uses the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>'s\n<a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> to discover the access to properties. Properties are accessed either using method handles\nto overcome Java visibility issues or directly using field access/getter/setter calls.",
-      "translation": "一个能够生成字节码以加速动态属性访问的工厂。它利用 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 中的 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 来发现属性的访问方式。属性访问要么通过方法句柄（MethodHandle）来解决 Java 可见性问题，要么直接使用字段访问或 getter/setter 调用。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PersistentPropertyAccessorFactory.html#getPropertyAccessor(org.springframework.data.mapping.PersistentEntity,T)\">PersistentPropertyAccessorFactory</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PersistentPropertyAccessorFactory.html#getPropertyAccessor(org.springframework.data.mapping.PersistentEntity,T)\">PersistentPropertyAccessorFactory</a></code></span>",
       "count": 1
     },
     {
@@ -135,6 +140,36 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PersistentPropertyAccessorFactory.html#getPropertyAccessor(org.springframework.data.mapping.PersistentEntity,T)\">getPropertyAccessor</a></code> in interface <code><a href=\"PersistentPropertyAccessorFactory.html\" title=\"interface in org.springframework.data.mapping.model\">PersistentPropertyAccessorFactory</a></code>",
+      "translation": "接口 <code><a href=\"PersistentPropertyAccessorFactory.html\" title=\"org.springframework.data.mapping.model 中的接口\">PersistentPropertyAccessorFactory</a></code> 中的方法 <code><a href=\"PersistentPropertyAccessorFactory.html#getPropertyAccessor(org.springframework.data.mapping.PersistentEntity,T)\">getPropertyAccessor</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PersistentPropertyAccessorFactory.html#isSupported(org.springframework.data.mapping.PersistentEntity)\">isSupported</a></code> in interface <code><a href=\"PersistentPropertyAccessorFactory.html\" title=\"interface in org.springframework.data.mapping.model\">PersistentPropertyAccessorFactory</a></code>",
+      "translation": "<a href=\"PersistentPropertyAccessorFactory.html#isSupported(org.springframework.data.mapping.PersistentEntity)\">isSupported</a> 接口 <code><a href=\"PersistentPropertyAccessorFactory.html\" title=\"interface in org.springframework.data.mapping.model\">PersistentPropertyAccessorFactory</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>bean</code> - must not be null.",
+      "translation": "<code>bean</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Oliver Gierke, Christoph Strobl, Jens Schauder, Johannes Englmeier",
+      "translation": "Mark Paluch，Oliver Gierke，Christoph Strobl，Jens Schauder，Johannes Englmeier",
+      "count": 1
+    },
+    {
+      "source": "will never be null.",
+      "translation": "永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "true if the runtime is equal or greater to Java 1.7, we can access the ClassLoader, the property\n        name hash codes are unique and the type has a class loader we can use to re-inject types.",
+      "translation": "如果运行时版本等于或高于 Java 1.7，我们可以访问 ClassLoader，属性名称的哈希码是唯一的，并且该类型拥有一个可用于重新注入类型的类加载器。",
       "count": 1
     }
   ]

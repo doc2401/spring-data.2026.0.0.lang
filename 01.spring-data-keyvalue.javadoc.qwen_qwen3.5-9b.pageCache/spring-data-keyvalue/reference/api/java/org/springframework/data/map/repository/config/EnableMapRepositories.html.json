@@ -1,0 +1,196 @@
+{
+  "created_at": "2026-06-18 20:03:42",
+  "updated_at": "2026-06-18 20:03:42",
+  "stats": {
+    "total_entries": 36,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 44,
+    "entries_with_hits": 36,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2222222222222223,
+    "usage_percentage": 0.0036
+  },
+  "items": [
+    {
+      "source": "Configures the name to a <a href=\"../../KeySpaceStore.html\" title=\"interface in org.springframework.data.map\"><code>KeySpaceStore</code></a> bean to be used as database for all\nkeyspaces.",
+      "translation": "将名称配置为用作所有键空间数据库的 <a href=\"../../KeySpaceStore.html\" title=\"org.springframework.data.map 中的接口\"><code>KeySpaceStore</code></a> Bean。",
+      "count": 2
+    },
+    {
+      "source": "Configures the name of the <a href=\"../../../keyvalue/core/KeyValueOperations.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueOperations</code></a> bean to be used with the repositories detected.",
+      "translation": "配置与检测到的仓库一起使用的 `<a href=\"../../../keyvalue/core/KeyValueOperations.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueOperations</code></a>` Bean 的名称。",
+      "count": 2
+    },
+    {
+      "source": "Configure a specific <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> to be used when creating the repository beans.",
+      "translation": "配置一个特定的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a>，以便在创建存储库 Bean 时使用。",
+      "count": 2
+    },
+    {
+      "source": "Configures the <a href=\"../../../keyvalue/core/SortAccessor.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>accessor</code></a> for sorting results.",
+      "translation": "配置用于对结果进行排序的<a href=\"../../../keyvalue/core/SortAccessor.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>accessor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Configures whether nested repository-interfaces (e.g. defined as inner classes) should be discovered by the\nrepositories infrastructure.",
+      "translation": "配置是否由仓库基础设施发现嵌套的仓库接口（例如定义为内部类的接口）。",
+      "count": 2
+    },
+    {
+      "source": "Specifies which types are not eligible for component scanning.",
+      "translation": "指定不适用于组件扫描的类型。",
+      "count": 2
+    },
+    {
+      "source": "Configures the location of where to find the Spring Data named queries properties file.",
+      "translation": "配置查找 Spring Data 命名查询属性文件的位置。",
+      "count": 2
+    },
+    {
+      "source": "Configure the repository base class to be used to create repository proxies for this particular configuration.",
+      "translation": "配置用于为当前特定配置创建存储库代理的存储库基类。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Configures the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> structure used for data storage. Defaults to <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html\" title=\"class or interface in java.util.concurrent\"><code>ConcurrentHashMap</code></a>. Will be ignored\nin case an explicit bean for the <a href=\"../../../keyvalue/core/KeyValueTemplate.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>KeyValueTemplate</code></a> is available in the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContext.html\" title=\"class or interface in org.springframework.context\"><code>ApplicationContext</code></a> or\n<a href=\"#keySpaceStoreRef()\"><code>keySpaceStoreRef()</code></a> is configured.",
+      "translation": "配置用于数据存储的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 结构。默认值为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ConcurrentHashMap.html\" title=\"class or interface in java.util.concurrent\"><code>ConcurrentHashMap</code></a>。如果 <a href=\"../../../keyvalue/core/KeyValueTemplate.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>KeyValueTemplate</code></a> 的显式 Bean 存在于 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContext.html\" title=\"class or interface in org.springframework.context\"><code>ApplicationContext</code></a> 中，或者已配置了 <a href=\"#keySpaceStoreRef()\"><code>keySpaceStoreRef()</code></a>，则该设置将被忽略。",
+      "count": 1
+    },
+    {
+      "source": "Annotation to activate Map repositories. If no base package is configured through either <a href=\"#value()\"><code>value()</code></a>,\n<a href=\"#basePackages()\"><code>basePackages()</code></a> or <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> it will trigger scanning of the package of annotated class.",
+      "translation": "用于激活 Map 存储库的注解。如果未通过 <a href=\"#value()\"><code>value()</code></a>、<a href=\"#basePackages()\"><code>basePackages()</code></a> 或 <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> 配置基础包，它将触发对已注解类所在包的扫描。",
+      "count": 1
+    },
+    {
+      "source": "Alias for the <a href=\"#basePackages()\"><code>basePackages()</code></a> attribute. Allows for more concise annotation declarations e.g.:\n<code>@EnableJpaRepositories(\"org.my.pkg\")</code> instead of <code>@EnableJpaRepositories(basePackages=\"org.my.pkg\")</code>.",
+      "translation": "`<a href=\"#basePackages()\"><code>basePackages()</code></a>` 属性的别名。允许使用更简洁的注解声明，例如：使用 `<code>@EnableJpaRepositories(\"org.my.pkg\")</code>` 代替 `<code>@EnableJpaRepositories(basePackages=\"org.my.pkg\")</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Base packages to scan for annotated components. <a href=\"#value()\"><code>value()</code></a> is an alias for (and mutually exclusive with) this\nattribute. Use <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> for a type-safe alternative to String-based package names.",
+      "translation": "用于扫描已注解组件的基础包。<a href=\"#value()\"><code>value()</code></a> 是该属性的别名，且与其互斥。请使用 <a href=\"#basePackageClasses()\"><code>basePackageClasses()</code></a> 作为基于字符串的包名的类型安全替代方案。",
+      "count": 1
+    },
+    {
+      "source": "Returns the key of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> to be used for lookup queries for query methods. Defaults to\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.Key.html#CREATE_IF_NOT_FOUND\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy.Key.CREATE_IF_NOT_FOUND</code></a>.",
+      "translation": "返回用于查询方法查找查询的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> 的键。默认值为\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.Key.html#CREATE_IF_NOT_FOUND\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy.Key.CREATE_IF_NOT_FOUND</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> class to be used for each repository instance. Defaults to\n<a href=\"../../../keyvalue/repository/support/KeyValueRepositoryFactoryBean.html\" title=\"class in org.springframework.data.keyvalue.repository.support\"><code>KeyValueRepositoryFactoryBean</code></a>.",
+      "translation": "返回用于每个存储库实例的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"org.springframework.beans.factory 中的类或接口\"><code>FactoryBean</code></a> 类。默认值为\n<a href=\"../../../keyvalue/repository/support/KeyValueRepositoryFactoryBean.html\" title=\"org.springframework.data.keyvalue.repository.support 中的类\"><code>KeyValueRepositoryFactoryBean</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Type-safe alternative to <a href=\"#basePackages()\"><code>basePackages()</code></a> for specifying the packages to scan for annotated components.",
+      "translation": "用于指定要扫描以查找已注解组件的包的安全类型替代方案，替代<a href=\"#basePackages()\"><code>basePackages()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Configures the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> structure used for data storage.",
+      "translation": "配置用于数据存储的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 结构。",
+      "count": 1
+    },
+    {
+      "source": "Configures the <a href=\"../../../keyvalue/core/QueryEngineFactory.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>QueryEngineFactory</code></a> to create the QueryEngine.",
+      "translation": "配置 <a href=\"../../../keyvalue/core/QueryEngineFactory.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>QueryEngineFactory</code></a> 以创建 QueryEngine。",
+      "count": 1
+    },
+    {
+      "source": "Returns the key of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> to be used for lookup queries for query methods.",
+      "translation": "返回用于查询方法查找查询的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryLookupStrategy.html\" title=\"class or interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a>的键。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a> class to be used for each repository instance.",
+      "translation": "返回用于每个存储库实例的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"org.springframework.beans.factory 中的类或接口\"><code>FactoryBean</code></a> 类。",
+      "count": 1
+    },
+    {
+      "source": "Alias for the <a href=\"#basePackages()\"><code>basePackages()</code></a> attribute.",
+      "translation": "`<a href=\"#basePackages()\"><code>basePackages()</code></a>` 属性的别名。",
+      "count": 1
+    },
+    {
+      "source": "Type-safe alternative to <a href=\"#basePackages()\"><code>basePackages()</code></a> for specifying the packages to scan for annotated components. The\npackage of each class specified will be scanned. Consider creating a special no-op marker class or interface in\neach package that serves no purpose other than being referenced by this attribute.",
+      "translation": "这是指定用于扫描已注解组件的包的安全类型替代方案 <a href=\"#basePackages()\"><code>basePackages()</code></a>。将扫描每个指定类的包。建议为每个包创建一个特殊的无操作标记类或接口，其唯一用途是被此属性引用。",
+      "count": 1
+    },
+    {
+      "source": "Specifies which types are eligible for component scanning. Further narrows the set of candidate components from\neverything in <a href=\"#basePackages()\"><code>basePackages()</code></a> to everything in the base packages that matches the given filter or filters.",
+      "translation": "指定哪些类型有资格进行组件扫描。进一步缩小候选组件的范围，从 `<a href=\"#basePackages()\"><code>basePackages()</code></a>` 中所有内容筛选为与给定过滤器或过滤器匹配的基础包中的所有内容。",
+      "count": 1
+    },
+    {
+      "source": "Returns the postfix to be used when looking up custom repository implementations. Defaults to Impl. So\nfor a repository named <code>PersonRepository</code> the corresponding implementation class will be looked up scanning\nfor <code>PersonRepositoryImpl</code>.",
+      "translation": "返回用于查找自定义仓库实现的后缀，默认为\"Impl\"。因此，对于名为 `<code>PersonRepository</code>` 的仓库，系统将扫描以查找对应的实现类 `<code>PersonRepositoryImpl</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Configures the <a href=\"../../../keyvalue/core/QueryEngineFactory.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>QueryEngineFactory</code></a> to create the QueryEngine. When both, the query engine and sort accessors\nare configured, the query engine is instantiated using the configured sort accessor.",
+      "translation": "配置 <a href=\"../../../keyvalue/core/QueryEngineFactory.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>QueryEngineFactory</code></a> 以创建 QueryEngine。当同时配置了查询引擎和排序访问器时，将使用配置的排序访问器来实例化查询引擎。",
+      "count": 1
+    },
+    {
+      "source": "Configures the <code>QueryCreator</code> to create Part-Tree queries. The QueryCreator must create queries supported by\nthe underlying <code>QueryEngine</code>.",
+      "translation": "配置<code>QueryCreator</code>以创建部分树查询。该查询创建器必须生成底层<code>QueryEngine</code>所支持的查询。",
+      "count": 1
+    },
+    {
+      "source": "Configures the <code>QueryCreator</code> to create Part-Tree queries.",
+      "translation": "配置 `<code>QueryCreator</code>` 以生成部分树查询。",
+      "count": 1
+    },
+    {
+      "source": "Base packages to scan for annotated components.",
+      "translation": "用于扫描已注解组件的基础包。",
+      "count": 1
+    },
+    {
+      "source": "Specifies which types are eligible for component scanning.",
+      "translation": "指定哪些类型有资格进行组件扫描。",
+      "count": 1
+    },
+    {
+      "source": "Returns the postfix to be used when looking up custom repository implementations.",
+      "translation": "返回用于查找自定义仓库实现的后缀。",
+      "count": 1
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> to be used or the base <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"class or interface in org.springframework.beans.factory.support\"><code>BeanNameGenerator</code></a> interface to indicate context default.",
+      "translation": "使用<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"org.springframework.beans.factory.support 中的类或接口\"><code>BeanNameGenerator</code></a>，或使用基础的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html\" title=\"org.springframework.beans.factory.support 中的类或接口\"><code>BeanNameGenerator</code></a>接口以指示上下文默认值。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../../../keyvalue/core/QueryEngineFactory.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>QueryEngineFactory</code></a> to configure the QueryEngine.",
+      "translation": "通过 <a href=\"../../../keyvalue/core/QueryEngineFactory.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>QueryEngineFactory</code></a> 配置查询引擎。",
+      "count": 1
+    },
+    {
+      "source": "the configured <a href=\"../../../keyvalue/core/SortAccessor.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>SortAccessor</code></a>.",
+      "translation": "配置的<a href=\"../../../keyvalue/core/SortAccessor.html\" title=\"org.springframework.data.keyvalue.core 中的接口\"><code>SortAccessor</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Oliver Gierke, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，奥利弗·吉尔克，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

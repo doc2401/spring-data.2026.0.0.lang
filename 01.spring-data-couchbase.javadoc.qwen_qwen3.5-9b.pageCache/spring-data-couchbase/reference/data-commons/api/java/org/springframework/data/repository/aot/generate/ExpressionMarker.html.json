@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-06-18 11:52:51",
+  "updated_at": "2026-06-18 11:52:51",
+  "stats": {
+    "total_entries": 7,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 10,
+    "entries_with_hits": 7,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4285714285714286,
+    "usage_percentage": 0.0007
+  },
+  "items": [
+    {
+      "source": "Calling this method sets the <a href=\"ExpressionMarker.html\" title=\"class in org.springframework.data.repository.aot.generate\"><code>ExpressionMarker</code></a> as <a href=\"#isInUse()\"><code>in-use</code></a>.",
+      "translation": "调用此方法会将<a href=\"ExpressionMarker.html\" title=\"org.springframework.data.repository.aot.generate 中的类\"><code>ExpressionMarker</code></a>标记为<a href=\"#isInUse()\"><code>已使用</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "<a href=\"ExpressionMarker.html\" title=\"class in org.springframework.data.repository.aot.generate\"><code>ExpressionMarker</code></a> is intended to be used via <a href=\"AotQueryMethodGenerationContext.html\" title=\"class in org.springframework.data.repository.aot.generate\"><code>AotQueryMethodGenerationContext</code></a> to maintain usage info,\nmaking sure the code is only added (<a href=\"#isInUse()\"><code>isInUse()</code></a>) when <a href=\"#enclosingMethod()\"><code>enclosingMethod()</code></a> was called for generating\ncode.",
+      "translation": "<a href=\"ExpressionMarker.html\" title=\"class in org.springframework.data.repository.aot.generate\"><code>ExpressionMarker</code></a> 旨在通过 <a href=\"AotQueryMethodGenerationContext.html\" title=\"class in org.springframework.data.repository.aot.generate\"><code>AotQueryMethodGenerationContext</code></a> 使用，以维护使用情况信息，确保仅在调用 <a href=\"#enclosingMethod()\"><code>enclosingMethod()</code></a> 生成代码时才会添加该代码（<a href=\"#isInUse()\"><code>isInUse()</code></a>）。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "if the marker is in use.",
+      "translation": "如果标记正在使用中。",
+      "count": 1
+    },
+    {
+      "source": "ExpressionMarker is used to add a dedicated type to AOT generated methods that can be used to determine the current\nmethod by calling <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html#getEnclosingMethod()\" title=\"class or interface in java.lang\"><code>Class.getEnclosingMethod()</code></a> on it. This can be useful when working with expressions (eg.\nSpEL) that need to be evaluated in a given context.",
+      "translation": "ExpressionMarker 用于为 AOT 生成的方法添加专用类型，以便通过调用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html#getEnclosingMethod()\" title=\"java.lang 中的类或接口\"><code>Class.getEnclosingMethod()</code></a> 来确定当前方法。这在需要结合特定上下文进行求值的表达式（例如 SpEL）中非常有用。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">ExpressionMarker marker = context.getExpressionMarker();\nCodeBlock.builder().add(\"evaluate($L, $S, $L)\", marker.enclosingMethod(), queryString, parameters);\n</pre>",
+      "translation": "<pre class=\"code\">ExpressionMarker marker = context.getExpressionMarker();\nCodeBlock.builder().add(\"evaluate($L, $S, $L)\", marker.enclosingMethod(), queryString, parameters);\n</pre>",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-06-19 02:20:07",
+  "updated_at": "2026-06-19 02:20:07",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 1.368421052631579,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a> with options, passing <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>messages</code></a> to the given\n<a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a>.",
+      "translation": "创建一个带有选项的新 <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>，并将 <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>messages</code></a> 传递给指定的\n<a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a shiny new <a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest.ChangeStreamRequestBuilder</code></a> and start defining your <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a> in this\nfancy fluent way. Just don't forget to call <a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html#build()\"><code>build()</code></a> when done.",
+      "translation": "获取一个崭新的<a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest.ChangeStreamRequestBuilder</code></a>，并以这种优雅的链式方式开始定义您的<a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>。只需在完成时记得调用<a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html#build()\"><code>build()</code></a>即可。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a shiny new <a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest.ChangeStreamRequestBuilder</code></a> and start defining your <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a> in this\nfancy fluent way.",
+      "translation": "获取一个崭新的<a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest.ChangeStreamRequestBuilder</code></a>，并以这种优雅的链式方式开始定义您的<a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain the <a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a> to publish <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>messages</code></a> to.",
+      "translation": "获取<a href=\"MessageListener.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>MessageListener</code></a>，用于发布<a href=\"Message.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>messages</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get the <a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest.RequestOptions</code></a> specifying the requests behaviour.",
+      "translation": "获取指定请求行为的<a href=\"SubscriptionRequest.RequestOptions.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest.RequestOptions</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "new instance of <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>.",
+      "translation": "<code>ChangeStreamRequest</code> 类的新实例。",
+      "count": 2
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> implementation to be used for listening to\n<a href=\"https://docs.mongodb.com/manual/changeStreams/\">Change Streams</a> via a <a href=\"MessageListenerContainer.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListenerContainer</code></a>\nusing the synchronous MongoDB Java driver. <br/>\nThe most trivial use case is subscribing to all events of a specific <code>collection</code>\n\n<pre><code>\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(System.out::println, () -&gt; \"collection-name\");\n</code>\n</pre>\n\nor <code>MongoDatabase</code> which receives events from all <code>collections</code> in that database.\n\n<pre><code>\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(System.out::println, RequestOptions.justDatabase(\"test\"));\n</code>\n</pre>\n\nFor more advanced scenarios <a href=\"../ChangeStreamOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ChangeStreamOptions</code></a> offers abstractions for options like filtering, resuming,...\n\n<pre><code>\n    ChangeStreamOptions options = ChangeStreamOptions.builder()\n        .filter(newAggregation(match(where(\"age\").is(7))))\n        .returnFullDocumentOnUpdate()\n        .build();\n\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(System.out::println, new ChangeStreamRequestOptions(\"collection-name\", options));\n</code>\n</pre>\n\n<a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest.ChangeStreamRequestBuilder</code></a> offers a fluent API for creating <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a> with\n<a href=\"../ChangeStreamOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ChangeStreamOptions</code></a> in one go.\n\n<pre><code>\n    ChangeStreamRequest&lt;Document&gt; request = ChangeStreamRequest.builder()\n        .collection(\"collection-name\")\n        .publishTo(System.out::println)\n        .filter(newAggregation(match(where(\"age\").is(7))))\n        .fullDocumentLookup(UPDATE_LOOKUP)\n        .build();\n</code>\n</pre>\n\n<a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Messges</code></a> passed to the <a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a> contain the <code>ChangeStreamDocument</code> within their\n<a href=\"Message.html#getRaw()\"><code>raw value</code></a> while the <code>fullDocument</code> is extracted into the <a href=\"Message.html#getBody()\"><code>messages body</code></a>. Unless otherwise specified (via <a href=\"../ChangeStreamOptions.html#getFullDocumentLookup()\"><code>ChangeStreamOptions.getFullDocumentLookup()</code></a> the\n<a href=\"Message.html#getBody()\"><code>message body</code></a> for <code>update events</code> will be empty for a <code>Document</code> target type.\n<a href=\"Message.html#getBody()\"><code>Message.getBody()</code></a> Message bodies} that map to a different target type automatically enforce an\n<code>FullDocument.UPDATE_LOOKUP</code>.",
+      "translation": "用于通过同步 MongoDB Java 驱动，借助 <a href=\"MessageListenerContainer.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListenerContainer</code></a> 监听<a href=\"https://docs.mongodb.com/manual/changeStreams/\">Change Streams</a>的<a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a>实现。<br/>\n最简单的用例是订阅特定 <code>collection</code> 的所有事件：\n\n<pre><code>\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(System.out::println, () -&gt; \"collection-name\");\n</code>\n</pre>\n\n或者订阅某个 <code>MongoDatabase</code> 中所有 <code>collections</code> 的事件。\n\n<pre><code>\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(System.out::println, RequestOptions.justDatabase(\"test\"));\n</code>\n</pre>\n\n对于更高级的场景，<a href=\"../ChangeStreamOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ChangeStreamOptions</code></a> 提供了对过滤、恢复等选项的抽象封装。\n\n<pre><code>\n    ChangeStreamOptions options = ChangeStreamOptions.builder()\n        .filter(newAggregation(match(where(\"age\").is(7))))\n        .returnFullDocumentOnUpdate()\n        .build();\n\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(System.out::println, new ChangeStreamRequestOptions(\"collection-name\", options));\n</code>\n</pre>\n\n<a href=\"ChangeStreamRequest.ChangeStreamRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest.ChangeStreamRequestBuilder</code></a> 提供流式 API，可一次性创建包含 <a href=\"../ChangeStreamOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ChangeStreamOptions</code></a> 的 <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>。\n\n<pre><code>\n    ChangeStreamRequest&lt;Document&gt; request = ChangeStreamRequest.builder()\n        .collection(\"collection-name\")\n        .publishTo(System.out::println)\n        .filter(newAggregation(match(where(\"age\").is(7))))\n        .fullDocumentLookup(UPDATE_LOOKUP)\n        .build();\n</code>\n</pre>\n\n传递给 <a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a> 的 <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Message</code></a>（原文误写为 Messges，此处按上下文修正为 Message）在其 <a href=\"Message.html#getRaw()\"><code>raw value</code></a> 中包含 <code>ChangeStreamDocument</code>，而 <code>fullDocument</code> 则被提取到 <a href=\"Message.html#getBody()\"><code>message body</code></a>。除非另有指定（通过 <a href=\"../ChangeStreamOptions.html#getFullDocumentLookup()\"><code>ChangeStreamOptions.getFullDocumentLookup()</code></a>），否则对于 <code>Document</code> 目标类型，<code>update events</code> 的 <a href=\"Message.html#getBody()\"><code>message body</code></a> 将为空。映射到不同目标类型的 <a href=\"Message.html#getBody()\"><code>Message.getBody()</code></a> 消息体将自动强制使用 <code>FullDocument.UPDATE_LOOKUP</code>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest.RequestOptions</code></a> implementation specific to a <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>.",
+      "translation": "专用于<a href=\"ChangeStreamRequest.html\" title=\"类在 org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>的<a href=\"SubscriptionRequest.RequestOptions.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest.RequestOptions</code></a>实现。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"SubscriptionRequest.html#getMessageListener()\">SubscriptionRequest</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"SubscriptionRequest.html#getMessageListener()\">SubscriptionRequest</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"SubscriptionRequest.html#getRequestOptions()\">SubscriptionRequest</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"SubscriptionRequest.html#getRequestOptions()\">SubscriptionRequest</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Builder for creating <a href=\"ChangeStreamRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>ChangeStreamRequest</code></a>.",
+      "translation": "用于创建<a href=\"ChangeStreamRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的类\"><code>ChangeStreamRequest</code></a>的构建器。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SubscriptionRequest.html#getMessageListener()\">getMessageListener</a></code> in interface <code><a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest</a>&lt;com.mongodb.client.model.changestream.ChangeStreamDocument&lt;org.bson.Document&gt;, <a href=\"#type-param-T\" title=\"type parameter in ChangeStreamRequest\">T</a>, <a href=\"ChangeStreamRequest.ChangeStreamRequestOptions.html\" title=\"class in org.springframework.data.mongodb.core.messaging\">ChangeStreamRequest.ChangeStreamRequestOptions</a>&gt;</code>",
+      "translation": "<code><a href=\"SubscriptionRequest.html#getMessageListener()\">getMessageListener</a></code> 接口 <code><a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest</a>&lt;com.mongodb.client.model.changestream.ChangeStreamDocument&lt;org.bson.Document&gt;, <a href=\"#type-param-T\" title=\"类型参数 ChangeStreamRequest\">T</a>, <a href=\"ChangeStreamRequest.ChangeStreamRequestOptions.html\" title=\"类 org.springframework.data.mongodb.core.messaging\">ChangeStreamRequest.ChangeStreamRequestOptions</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SubscriptionRequest.html#getRequestOptions()\">getRequestOptions</a></code> in interface <code><a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest</a>&lt;com.mongodb.client.model.changestream.ChangeStreamDocument&lt;org.bson.Document&gt;, <a href=\"#type-param-T\" title=\"type parameter in ChangeStreamRequest\">T</a>, <a href=\"ChangeStreamRequest.ChangeStreamRequestOptions.html\" title=\"class in org.springframework.data.mongodb.core.messaging\">ChangeStreamRequest.ChangeStreamRequestOptions</a>&gt;</code>",
+      "translation": "<code><a href=\"SubscriptionRequest.html#getRequestOptions()\">getRequestOptions</a></code> 在接口 <code><a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest</a>&lt;com.mongodb.client.model.changestream.ChangeStreamDocument&lt;org.bson.Document&gt;, <a href=\"#type-param-T\" title=\"type parameter in ChangeStreamRequest\">T</a>, <a href=\"ChangeStreamRequest.ChangeStreamRequestOptions.html\" title=\"class in org.springframework.data.mongodb.core.messaging\">ChangeStreamRequest.ChangeStreamRequestOptions</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>messageListener</code> - must not be null.",
+      "translation": "<code>messageListener</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - must not be null.",
+      "translation": "<code>options</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch, Myroslav Kosinskyi, Kyuhong Han",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫，米罗斯拉夫·科辛斯基，金奎宏",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

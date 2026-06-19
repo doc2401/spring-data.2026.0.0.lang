@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-06-18 07:58:08",
+  "updated_at": "2026-06-18 07:58:08",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 45,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2857142857142858,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"SingleColumnRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>SingleColumnRowMapper</code></a> for bean-style configuration.",
+      "translation": "为基于 Bean 的配置方式创建一个新的<a href=\"SingleColumnRowMapper.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>SingleColumnRowMapper</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>SingleColumnRowMapper</code>.",
+      "translation": "创建一个新的<code>SingleColumnRowMapper</code>。",
+      "count": 2
+    },
+    {
+      "source": "Static factory method to create a new <code>SingleColumnRowMapper</code> (with the required type specified only once).",
+      "translation": "静态工厂方法用于创建新的<code>SingleColumnRowMapper</code>（只需指定一次所需的类型）。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve a CQL object value for the specified column.",
+      "translation": "检索指定列的 CQL 对象值。",
+      "count": 2
+    },
+    {
+      "source": "Extract a value for the single column in the current row.",
+      "translation": "提取当前行单列的值。",
+      "count": 2
+    },
+    {
+      "source": "Set the type that each result object is expected to match.",
+      "translation": "设置每个结果对象预期匹配的类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>row</code> - is the <code>Row</code> holding the data, must not be null.",
+      "translation": "<code>row</code> - 是包含数据的 <code>Row</code>，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>requiredType</code> - the type that each result object is expected to match",
+      "translation": "<code>requiredType</code> - 每个结果对象预期匹配的类型",
+      "count": 2
+    },
+    {
+      "source": "<code>index</code> - is the column index",
+      "translation": "<code>index</code> - 表示列索引",
+      "count": 2
+    },
+    {
+      "source": "the Object value.",
+      "translation": "对象值。",
+      "count": 2
+    },
+    {
+      "source": "The default implementation calls <a href=\"RowUtils.html#getRowValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\"><code>RowUtils.getRowValue(Row, int, Class)</code></a>. If no required type has been\nspecified, this method delegates to <code>getColumnValue(rs, index)</code>, which basically calls\n<code>GettableByIndex.getObject(int)</code> but applies some additional default conversion to appropriate value types.",
+      "translation": "默认实现会调用<a href=\"RowUtils.html#getRowValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\"><code>RowUtils.getRowValue(Row, int, Class)</code></a>。如果未指定所需的类型，此方法将委托给<code>getColumnValue(rs, index)</code>，该方法基本调用<code>GettableByIndex.getObject(int)</code>，但会应用一些额外的默认转换以适配适当的值类型。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation delegates to <a href=\"RowUtils.html#getRowValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\"><code>RowUtils.getRowValue(Row, int, Class)</code></a>, which uses the\n<code>GettableByIndex.getObject(int)</code> method.",
+      "translation": "默认实现会委托给 <a href=\"RowUtils.html#getRowValue(com.datastax.oss.driver.api.core.cql.Row,int,java.lang.Class)\"><code>RowUtils.getRowValue(Row, int, Class)</code></a>，该方法使用<code>GettableByIndex.getObject(int)</code>。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Consider using the <a href=\"#newInstance(java.lang.Class)\"><code>newInstance(Class)</code></a> factory method instead, which allows for specifying the required type once\nonly.",
+      "translation": "请改用<a href=\"#newInstance(java.lang.Class)\"><code>newInstance(Class)</code></a>工厂方法，该方法只需指定一次所需的类型。",
+      "count": 1
+    },
+    {
+      "source": "Validates that there is only one column selected, then delegates to <code>getColumnValue()</code> and also\n<code>convertValueToRequiredType</code>, if necessary.",
+      "translation": "验证仅有一列被选中，然后委托给 <code>getColumnValue()</code> 以及（如有必要）<code>convertValueToRequiredType</code>。",
+      "count": 1
+    },
+    {
+      "source": "The type of the result value for each row can be specified. The value for the single column will be extracted from a\n<code>Row</code> and converted into the specified target type.",
+      "translation": "每行结果值的类型可以指定。单列的值将从 <code>Row</code> 中提取并转换为指定的目标类型。",
+      "count": 1
+    },
+    {
+      "source": "If not specified, the column value will be exposed as returned by the <code>Row</code>.",
+      "translation": "如果未指定，列值将按 `<code>Row` 返回的方式暴露。",
+      "count": 1
+    },
+    {
+      "source": "If the required type is String, the value will simply get stringified via <code>toString()</code>. In case of a Number,\nthe value will be converted into a Number, either through number conversion or through String parsing (depending on\nthe value type).",
+      "translation": "如果所需类型为 String，值将通过 `<code>toString()</code>` 直接转换为字符串。如果是 Number 类型，则会根据值的类型，通过数值转换或字符串解析将其转换为 Number。",
+      "count": 1
+    },
+    {
+      "source": "Convert the given column value to the specified required type.",
+      "translation": "将给定的列值转换为指定的所需类型。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve a object value for the specified column, using the most appropriate value type.",
+      "translation": "使用最合适的值类型检索指定列的对象值。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">mapRow</a></code> in interface <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in SingleColumnRowMapper\">T</a> extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code>",
+      "translation": "<code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">mapRow</a></code> 接口 <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in SingleColumnRowMapper\">T</a> extends @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;</code> 中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code>com.datastax.oss.driver.api.core.DriverException</code> - if a <code>DriverException</code> is encountered getting column values (that is, there's no need\n          to catch <code>DriverException</code>)",
+      "translation": "<code>com.datastax.oss.driver.api.core.DriverException</code> - 如果在获取列值时遇到 <code>DriverException</code>（即无需捕获 <code>DriverException</code>）",
+      "count": 1
+    },
+    {
+      "source": "<code>row</code> - the <code>Row</code> to map, must not be null.",
+      "translation": "<code>row</code> - 要映射的 <code>Row</code>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>value</code> - the column value as extracted from <code>getColumnValue()</code> (never null)",
+      "translation": "<code>value</code> - 从 <code>getColumnValue()</code> 提取的列值（永远不会为 null）",
+      "count": 1
+    },
+    {
+      "source": "<code>rowNum</code> - the number of the current row.",
+      "translation": "<code>rowNum</code> - 当前行的行号。",
+      "count": 1
+    },
+    {
+      "source": "<code>requiredType</code> - the type that each result object is expected to match (or null if none specified).",
+      "translation": "<code>requiredType</code> - 每个结果对象预期匹配的类型（如果未指定则为 null）。",
+      "count": 1
+    },
+    {
+      "source": "<code>com.datastax.oss.driver.api.core.DriverException</code> - in case of extraction failure",
+      "translation": "<code>com.datastax.oss.driver.api.core.DriverException</code> - 在提取失败的情况下",
+      "count": 1
+    },
+    {
+      "source": "<code>com.datastax.oss.driver.api.core.DriverException</code> - in case of extraction failure.",
+      "translation": "<code>com.datastax.oss.driver.api.core.DriverException</code> - 在提取失败的情况下。",
+      "count": 1
+    },
+    {
+      "source": "<code>requiredType</code> - the type that each result object is expected to match (never null)",
+      "translation": "<code>requiredType</code> - 每个结果对象预期匹配的类型（绝不能为 null）",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the result object for the current row.",
+      "translation": "当前行的结果对象。",
+      "count": 1
+    },
+    {
+      "source": "the converted value",
+      "translation": "转换后的值",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> implementation that converts a single column into a single result value per row. Expects to operate\non a <code>Row</code> that just contains a single column.",
+      "translation": "<a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowMapper</code></a> 实现，用于将单列转换为每行对应的单个结果值。预期操作的对象是仅包含一列的 <code>Row</code>。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve a object value for the specified column, using the most appropriate value type. Called if no required type\nhas been specified.",
+      "translation": "使用最合适的值类型检索指定列的对象值。如果未指定必需的类型，则调用此方法。",
+      "count": 1
+    },
+    {
+      "source": "Convert the given column value to the specified required type. Only called if the extracted column value does not\nmatch already.",
+      "translation": "将给定的列值转换为指定的所需类型。仅当提取的列值不匹配时调用。",
+      "count": 1
+    }
+  ]
+}

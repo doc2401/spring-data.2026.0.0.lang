@@ -1,81 +1,106 @@
 {
   "created_at": "2026-06-16 15:36:47",
-  "updated_at": "2026-06-16 15:36:47",
+  "updated_at": "2026-06-18 07:35:25",
   "stats": {
-    "total_entries": 40,
+    "total_entries": 47,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 42,
-    "entries_with_hits": 40,
+    "total_hits": 70,
+    "entries_with_hits": 47,
     "entries_without_hits": 0,
-    "hit_rate": 1.05,
-    "usage_percentage": 0.004
+    "hit_rate": 1.4893617021276595,
+    "usage_percentage": 0.004699999999999999
   },
   "items": [
     {
       "source": "Returns the columns returned in this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
       "translation": "返回此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>中返回的列。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "If the query that produced this ResultSet was a conditional update, return whether it was successfully applied.",
       "translation": "如果产生此结果集的查询是条件更新，则返回其是否成功应用。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "Return the execution information for all queries made to retrieve this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "返回所有用于检索此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>的查询的执行信息。",
+      "count": 3
+    },
+    {
+      "source": "Returns information on the execution of the last query made for this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "返回有关为此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>执行的最后一个查询的信息。",
+      "count": 3
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> over the rows contained in this result set applying transparent paging.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 基于此结果集中的行数据，并应用透明分页。",
+      "count": 3
     },
     {
       "source": "Please note however that this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> paging is not available with the version 1 of the native\nprotocol (i.e. with Cassandra 1.2 or if version 1 has been explicitly requested). If the protocol version 1 is in\nuse, a <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> is always fetched in it's entirely and it's up to the client to make sure that no\nquery can yield <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> that won't hold in memory.",
       "translation": "然而请注意，使用原生协议版本 1（即 Cassandra 1.2 或显式请求版本 1）时，不可用此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>分页功能。如果使用的是协议版本 1，<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>将始终被完整获取，客户端需确保查询不会返回无法容纳在内存中的<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "The <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> will stream over all records that in this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> according to the reactive\ndemand and fetch next result chunks by issuing the underlying query with the current <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>paging state</code></a> applied.",
       "translation": "`Flux` 将根据反应式需求流式处理此 <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> 中的所有记录，并通过应用当前的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>paging state</code></a> 发出底层查询来获取下一批结果。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "For consistency, this method always returns <code>true</code> for non-conditional queries (although there is no reason\nto call the method in that case). This is also the case for conditional DDL statements\n(<code>CREATE KEYSPACE... IF NOT EXISTS</code>, <code>CREATE TABLE... IF NOT EXISTS</code>), for which Cassandra doesn't\nreturn an <code>[applied]</code> column.",
       "translation": "为保持一致性，此方法对于非条件查询始终返回 <code>true</code>（尽管在这种情况下无需调用该方法）。对于 Cassandra 不返回 <code>[applied]</code> 列的条件 DDL 语句（如 <code>CREATE KEYSPACE... IF NOT EXISTS</code>、<code>CREATE TABLE... IF NOT EXISTS</code>），情况也是如此。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "The retrieval of the rows of a <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> is generally paged (a first page of result is fetched and\nthe next one is only fetched once all the results of the first one has been consumed). The size of the pages can be\nconfigured either globally or per-statement with\n<code>Statement.setPageSize(int)</code>.",
       "translation": "对 <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> 的行进行检索通常是分页的（首先获取第一页结果，仅在第一页的所有结果被消费后才获取下一页）。页面大小可以通过 <code>Statement.setPageSize(int)</code> 在全局范围内或针对每个语句进行配置。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Note that in most cases, a result set is fetched with only one query, but large result sets can be paged and thus\nbe retrieved by multiple queries. In that case this method return the <code>ExecutionInfo</code> for the last query\nperformed. To retrieve the information for all queries, use <a href=\"#getAllExecutionInfo()\"><code>getAllExecutionInfo()</code></a>.",
       "translation": "请注意，在大多数情况下，结果集仅通过一次查询获取，但大型结果集可以分页，因此需要通过多次查询进行检索。在这种情况下，该方法将返回最后一次执行的查询的<code>ExecutionInfo</code>。若要获取所有查询的信息，请使用<a href=\"#getAllExecutionInfo()\"><code>getAllExecutionInfo()</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Note that, for versions of Cassandra strictly lower than 2.0.9 and 2.1.0-rc2, a server-side bug (CASSANDRA-7337)\ncauses this method to always return <code>true</code> for batches containing conditional queries.",
       "translation": "请注意，对于严格低于 2.0.9 和 2.1.0-rc2 版本的 Cassandra，一个服务器端错误（CASSANDRA-7337）会导致此方法对于包含条件查询的批处理始终返回 <code>true</code>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Unless the result set is large enough to get paged underneath, the returned list will be singleton. If paging has\nbeen used however, the returned list contains the <code>ExecutionInfo</code> objects for all the queries done to obtain\nthis result set (at the time of the call) in the order those queries were made.",
       "translation": "除非结果集足够大以至于需要分页，否则返回的列表将只包含单个元素。然而，如果使用了分页功能，则返回的列表将包含所有用于获取该结果集的查询（在调用时）所生成的 <code>ExecutionInfo</code> 对象，且这些对象按照查询执行的顺序排列。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Note that this class is not thread-safe.",
       "translation": "请注意，该类不是线程安全的。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "The returned object includes basic information such as the queried hosts, but also the Cassandra query trace if\ntracing was enabled for the query.",
       "translation": "返回的对象包含查询主机等基本信息，如果已为查询启用跟踪功能，还会包含 Cassandra 查询跟踪信息。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> over the rows contained in this result set chunk. This method does not apply transparent\npaging. Use <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>paging state</code></a> from <a href=\"#getExecutionInfo()\"><code>getExecutionInfo()</code></a> to issue subsequent queries\nto obtain the next result chunk.",
       "translation": "返回一个针对此结果集块中包含的行创建的<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>。此方法不应用透明分页。请使用来自<a href=\"#getExecutionInfo()\"><code>getExecutionInfo()</code></a>的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>paging state</code></a>来发出后续查询，以获取下一个结果块。",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> over the rows contained in this result set chunk.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 包含此结果集块中的行。",
+      "count": 2
+    },
+    {
+      "source": "The reactive result of a query.",
+      "translation": "查询的反应结果。",
+      "count": 2
     },
     {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
@@ -85,26 +110,6 @@
     {
       "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ReactiveResultSet</span>",
       "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ReactiveResultSet</span>",
-      "count": 1
-    },
-    {
-      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> over the rows contained in this result set chunk.",
-      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 包含此结果集块中的行。",
-      "count": 1
-    },
-    {
-      "source": "Return the execution information for all queries made to retrieve this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
-      "translation": "返回所有用于检索此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>的查询的执行信息。",
-      "count": 1
-    },
-    {
-      "source": "Returns information on the execution of the last query made for this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
-      "translation": "返回有关为此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>执行的最后一个查询的信息。",
-      "count": 1
-    },
-    {
-      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> over the rows contained in this result set applying transparent paging.",
-      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 基于此结果集中的行数据，并应用透明分页。",
       "count": 1
     },
     {
@@ -188,11 +193,6 @@
       "count": 1
     },
     {
-      "source": "The reactive result of a query.",
-      "translation": "查询的反应结果。",
-      "count": 1
-    },
-    {
       "source": "Returns a",
       "translation": "返回",
       "count": 1
@@ -210,6 +210,41 @@
     {
       "source": "Return the execution information for all queries made to retrieve this",
       "translation": "返回所有用于检索此内容的查询的执行信息。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> of rows that will stream over all <code>rows</code> in this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "一个包含行的<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 将流式传输此<a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>中的所有<code>rows</code>。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> of rows that will stream over all <code>rows</code> of the entire result.",
+      "translation": "一个 `<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>`，它将流式传输整个结果的所有 `<code>rows</code>` 行。",
+      "count": 1
+    },
+    {
+      "source": "the <code>ExecutionInfo</code> for the last query made for this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "<code>ExecutionInfo</code> 针对此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>执行的最后一个查询。",
+      "count": 1
+    },
+    {
+      "source": "a list of the <code>ExecutionInfo</code> for all the queries made for this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "所有针对此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>执行的查询的<code>ExecutionInfo</code>列表。",
+      "count": 1
+    },
+    {
+      "source": "the columns returned in this <a href=\"ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "此<a href=\"ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>中返回的列。",
+      "count": 1
+    },
+    {
+      "source": "if the query was a conditional update, whether it was applied. <code>true</code> for other types of queries.",
+      "translation": "如果查询是条件更新，则返回是否已应用该更新；对于其他类型的查询，返回<code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
       "count": 1
     }
   ]

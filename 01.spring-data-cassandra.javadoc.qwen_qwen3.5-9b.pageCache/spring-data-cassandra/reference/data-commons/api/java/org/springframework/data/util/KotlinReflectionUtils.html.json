@@ -1,46 +1,76 @@
 {
   "created_at": "2026-06-16 11:05:28",
-  "updated_at": "2026-06-16 11:05:28",
+  "updated_at": "2026-06-18 07:17:51",
   "stats": {
-    "total_entries": 38,
+    "total_entries": 50,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 43,
-    "entries_with_hits": 38,
+    "total_hits": 67,
+    "entries_with_hits": 50,
     "entries_without_hits": 0,
-    "hit_rate": 1.131578947368421,
-    "usage_percentage": 0.0038000000000000004
+    "hit_rate": 1.34,
+    "usage_percentage": 0.005
   },
   "items": [
     {
       "source": "Returns a <code>KFunction</code> instance corresponding to the given Java <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> instance, or <code>null</code> if\nthis method cannot be represented by a Kotlin function.",
       "translation": "返回一个与给定的 Java <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 实例相对应的 <code>KFunction</code> 实例，如果此方法无法表示为 Kotlin 函数，则返回 <code>null</code>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> is declared as suspend (Kotlin Coroutine).",
       "translation": "返回 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"java.lang.reflect 中的类或接口\"><code>Method</code></a> 是否声明为挂起（Kotlin 协程）。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the given <code>KType</code> is a <code>value</code> class.",
       "translation": "返回给定的 <code>KType</code> 是否为 <code>value</code> 类型类。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the given class makes uses Kotlin <code>value</code> classes.",
       "translation": "返回给定的类是否使用了 Kotlin 的 <code>value</code> 类。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Return true if the specified class is a Kotlin data class.",
       "translation": "如果指定的类是 Kotlin 数据类，则返回 true。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a> of a Kotlin <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>.",
+      "translation": "返回 Kotlin 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a> of a Kotlin <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>. Supports regular and suspended methods.",
+      "translation": "返回 Kotlin <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a>。支持普通方法和挂起方法。",
+      "count": 2
+    },
+    {
+      "source": "Reflection utility methods specific to Kotlin reflection. Requires Kotlin classes to be present to avoid linkage\nerrors - ensure to guard usage with <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/KotlinDetector.html#isKotlinPresent()\" title=\"class or interface in org.springframework.core\"><code>KotlinDetector.isKotlinPresent()</code></a>.",
+      "translation": "Kotlin 反射专用的反射实用方法。为避免链接错误，需要存在 Kotlin 类——请确保使用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/KotlinDetector.html#isKotlinPresent()\" title=\"class or interface in org.springframework.core\"><code>KotlinDetector.isKotlinPresent()</code></a> 进行保护。",
+      "count": 2
+    },
+    {
+      "source": "Return true if the specified class is a supported Kotlin class.",
+      "translation": "如果指定的类是受支持的 Kotlin 类，则返回 true。",
+      "count": 2
+    },
+    {
+      "source": "Return true if the specified class is a supported Kotlin class. Currently supported are only regular\nKotlin classes. Other class types (synthetic, SAM, lambdas) are not supported via reflection.",
+      "translation": "如果指定的类是受支持的 Kotlin 类，则返回 true。当前仅支持普通 Kotlin 类。其他类类型（合成类、SAM、lambda）无法通过反射支持。",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - the kotlin type to inspect.",
+      "translation": "<code>type</code> - 要检查的 Kotlin 类型。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -88,23 +118,8 @@
       "count": 1
     },
     {
-      "source": "Returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a> of a Kotlin <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>.",
-      "translation": "返回 Kotlin 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a> of a Kotlin <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>. Supports regular and suspended methods.",
-      "translation": "返回 Kotlin <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>return type</code></a>。支持普通方法和挂起方法。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "Reflection utility methods specific to Kotlin reflection. Requires Kotlin classes to be present to avoid linkage\nerrors - ensure to guard usage with <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/KotlinDetector.html#isKotlinPresent()\" title=\"class or interface in org.springframework.core\"><code>KotlinDetector.isKotlinPresent()</code></a>.",
-      "translation": "Kotlin 反射专用的反射实用方法。为避免链接错误，需要存在 Kotlin 类——请确保使用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/KotlinDetector.html#isKotlinPresent()\" title=\"class or interface in org.springframework.core\"><code>KotlinDetector.isKotlinPresent()</code></a> 进行保护。",
       "count": 1
     },
     {
@@ -125,16 +140,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Return true if the specified class is a supported Kotlin class.",
-      "translation": "如果指定的类是受支持的 Kotlin 类，则返回 true。",
-      "count": 1
-    },
-    {
-      "source": "Return true if the specified class is a supported Kotlin class. Currently supported are only regular\nKotlin classes. Other class types (synthetic, SAM, lambdas) are not supported via reflection.",
-      "translation": "如果指定的类是受支持的 Kotlin 类，则返回 true。当前仅支持普通 Kotlin 类。其他类类型（合成类、SAM、lambda）无法通过反射支持。",
       "count": 1
     },
     {
@@ -200,6 +205,61 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - the method to inspect, typically any synthetic JVM <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>.",
+      "translation": "<code>method</code> - 要检查的方法，通常是任何合成 JVM <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the <code>KFunction</code> or <code>null</code> if the method cannot be looked up.",
+      "translation": "如果无法查找该方法，则返回 <code>KFunction</code> 或 <code>null</code>。",
+      "count": 1
+    },
+    {
+      "source": "true if <code>type</code> is a supported Kotlin class.",
+      "translation": "如果 `<code>type</code>` 是受支持的 Kotlin 类，则返回 true。",
+      "count": 1
+    },
+    {
+      "source": "true if <code>type</code> is a Kotlin data class.",
+      "translation": "如果 `<code>type</code>` 是 Kotlin 数据类，则返回 true。",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - the method to look up.",
+      "translation": "<code>method</code> - 要查找的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - the method to inspect.",
+      "translation": "<code>method</code> - 要检查的方法。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl, Johannes Englmeier",
+      "translation": "Mark Paluch，Christoph Strobl，Johannes Englmeier",
+      "count": 1
+    },
+    {
+      "source": "true if the method is declared as suspend.",
+      "translation": "如果该方法声明为 suspend，则返回 true。",
+      "count": 1
+    },
+    {
+      "source": "return type of the method.",
+      "translation": "方法的返回类型。",
+      "count": 1
+    },
+    {
+      "source": "true the type is a value class.",
+      "translation": "true 的类型是一个值类型。",
+      "count": 1
+    },
+    {
+      "source": "true when at least one property uses Kotlin value classes.",
+      "translation": "当至少一个属性使用 Kotlin 值类时，该条件为 true。",
       "count": 1
     }
   ]

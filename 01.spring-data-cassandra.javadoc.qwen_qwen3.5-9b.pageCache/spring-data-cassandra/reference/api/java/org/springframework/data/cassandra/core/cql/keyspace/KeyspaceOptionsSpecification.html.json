@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-06-18 08:16:38",
+  "updated_at": "2026-06-18 08:16:38",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 1.105263157894737,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "Convenience method that calls <code>with(option, null)</code>.",
+      "translation": "调用 `with(option, null)` 的便捷方法。",
+      "count": 2
+    },
+    {
+      "source": "Adds the given option by name to this keyspaces's options.",
+      "translation": "通过名称向此键空间添加给定选项。",
+      "count": 2
+    },
+    {
+      "source": "It is important to note that although this class depends on <a href=\"KeyspaceOption.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.keyspace\"><code>KeyspaceOption</code></a> for convenient and typesafe use,\nit ultimately stores its options in a <code>Map&lt;String,Object&gt;</code> for flexibility. This means that\n<a href=\"#with(org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption)\"><code>with(KeyspaceOption)</code></a> and <a href=\"#with(org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption,java.lang.Object)\"><code>with(KeyspaceOption, Object)</code></a> delegate to\n<a href=\"#with(java.lang.String,java.lang.Object,boolean,boolean)\"><code>with(String, Object, boolean, boolean)</code></a>. This design allows the API to support new Cassandra options as they\nare introduced without having to update the code immediately.",
+      "translation": "值得注意的是，虽然该类依赖 <a href=\"KeyspaceOption.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.keyspace\"><code>KeyspaceOption</code></a> 以实现便捷且类型安全的用法，但其最终将选项存储在一个 <code>Map&lt;String,Object&gt;</code> 中以提供灵活性。这意味着\n<a href=\"#with(org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption)\"><code>with(KeyspaceOption)</code></a> 和 <a href=\"#with(org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption,java.lang.Object)\"><code>with(KeyspaceOption, Object)</code></a> 会委托给\n<a href=\"#with(java.lang.String,java.lang.Object,boolean,boolean)\"><code>with(String, Object, boolean, boolean)</code></a>。这种设计使得 API 能够在引入新的 Cassandra 选项时无需立即更新代码即可提供支持。",
+      "count": 1
+    },
+    {
+      "source": "Options that have null values are considered single string options where the name of the option is the\nstring to be used. Otherwise, the result of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\"><code>Object.toString()</code></a> is considered to be the value of the option\nwith the given name. The value, after conversion to string, may have embedded single quotes escaped according to\nparameter <code>escape</code> and may be single-quoted according to parameter <code>quote</code>.",
+      "translation": "具有空值的选项被视为单字符串选项，其中该选项的名称即为要使用的字符串。否则，<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\"><code>Object.toString()</code></a> 的结果被视为具有给定名称的选项的值。该值在转换为字符串后，可根据参数 <code>escape</code> 转义嵌入的单引号，并可根据参数 <code>quote</code> 被单引号包围。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Sets the given table option. This is a convenience method that calls\n<a href=\"#with(java.lang.String,java.lang.Object,boolean,boolean)\"><code>with(String, Object, boolean, boolean)</code></a> appropriately from the given <a href=\"KeyspaceOption.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.keyspace\"><code>KeyspaceOption</code></a> and value for\nthat option.",
+      "translation": "设置给定的表选项。这是一个便捷方法，会从给定的<a href=\"KeyspaceOption.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.keyspace\"><code>KeyspaceOption</code></a>和该选项的值中适当调用<a href=\"#with(java.lang.String,java.lang.Object,boolean,boolean)\"><code>with(String, Object, boolean, boolean)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Sets the given table option.",
+      "translation": "设置给定的表选项。",
+      "count": 1
+    },
+    {
+      "source": "<code>escape</code> - Whether to escape the value via <a href=\"CqlStringUtils.html#escapeSingle(java.lang.Object)\"><code>CqlStringUtils.escapeSingle(Object)</code></a>. Ignored if given value\n         is an instance of a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
+      "translation": "<code>escape</code> - 是否通过 <a href=\"CqlStringUtils.html#escapeSingle(java.lang.Object)\"><code>CqlStringUtils.escapeSingle(Object)</code></a> 转义该值。如果给定值是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 的实例，则此参数将被忽略。",
+      "count": 1
+    },
+    {
+      "source": "<code>quote</code> - Whether to quote the value via <a href=\"CqlStringUtils.html#singleQuote(java.lang.Object)\"><code>CqlStringUtils.singleQuote(Object)</code></a>. Ignored if given value is\n         an instance of a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
+      "translation": "<code>quote</code> - 是否通过 <a href=\"CqlStringUtils.html#singleQuote(java.lang.Object)\"><code>CqlStringUtils.singleQuote(Object)</code></a> 对值进行引用。如果给定值是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 的实例，则此参数将被忽略。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the subtype of the <a href=\"KeyspaceOptionsSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\"><code>KeyspaceOptionsSpecification</code></a>.</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - <a href=\"KeyspaceOptionsSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\"><code>KeyspaceOptionsSpecification</code></a> 的子类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"KeyspaceActionSpecification.html#equals(java.lang.Object)\">equals</a></code> in class <code><a href=\"KeyspaceActionSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\">KeyspaceActionSpecification</a></code>",
+      "translation": "<code><a href=\"KeyspaceActionSpecification.html#equals(java.lang.Object)\">equals</a></code> 类 <code><a href=\"KeyspaceActionSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\">KeyspaceActionSpecification</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"KeyspaceActionSpecification.html#hashCode()\">hashCode</a></code> in class <code><a href=\"KeyspaceActionSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\">KeyspaceActionSpecification</a></code>",
+      "translation": "<code><a href=\"KeyspaceActionSpecification.html#hashCode()\">hashCode</a></code> 类 <code><a href=\"KeyspaceActionSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\">KeyspaceActionSpecification</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code>value</code> - The value of the option. Must be type-compatible with the <a href=\"KeyspaceOption.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.keyspace\"><code>KeyspaceOption</code></a>.",
+      "translation": "<code>value</code> - 选项的值。其类型必须与<a href=\"KeyspaceOption.html\" title=\"org.springframework.data.cassandra.core.cql.keyspace 中的枚举类\"><code>KeyspaceOption</code></a>兼容。",
+      "count": 1
+    },
+    {
+      "source": "<code>value</code> - The value of the option. If null, the value is ignored and the option is considered to be\n         composed of only the name, otherwise the value's <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\"><code>Object.toString()</code></a> value is used.",
+      "translation": "<code>value</code> - 选项的值。如果为 null，则忽略该值并认为该选项仅由名称组成；否则，使用值的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\"><code>Object.toString()</code></a> 值。",
+      "count": 1
+    },
+    {
+      "source": "<code>option</code> - The option to set.",
+      "translation": "<code>option</code> - 要设置的选项。",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - The name of the option",
+      "translation": "<code>name</code> - 选项的名称",
+      "count": 1
+    },
+    {
+      "source": "John McPeek",
+      "translation": "约翰·麦克皮克",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Abstract builder class to support the construction of table specifications that have table options, that is, those\noptions normally specified by <code>WITH ... AND ...</code>.",
+      "translation": "抽象构建器类，用于支持具有表选项的表规范构造，即通常由 `<code>WITH ... AND ...</code>` 指定的那些选项。",
+      "count": 1
+    }
+  ]
+}

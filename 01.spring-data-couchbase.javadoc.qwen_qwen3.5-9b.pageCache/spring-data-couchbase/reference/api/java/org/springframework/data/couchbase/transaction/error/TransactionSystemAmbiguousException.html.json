@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-06-18 12:31:30",
+  "updated_at": "2026-06-18 12:31:30",
+  "stats": {
+    "total_entries": 3,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 3,
+    "entries_with_hits": 3,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.00030000000000000003
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The transaction expired at the point of trying to commit it.  It is ambiguous whether the transaction has committed\nor not.  Actors may be able to see the content of this transaction.\n\nThis error is the result of inevitable and unavoidable edge cases when working with unreliable networks.  For example,\nconsider an ordinary mutation being made over the network to any database.  The mutation could succeed on the\ndatabase-side, and then just before the result is returned to the client, the network connection drops.  The client\ncannot receive the success result and will timeout - it is ambiguous to it whether the mutation succeeded or not.\n\nThe transactions logic will work to resolve the ambiguity up until the transaction expires, but if unable to resolve\nit in that time, it is forced to raise this error.  The transaction may or may not have been successful, and\nerror-handling of this is highly application-dependent.\n\nAn asynchronous cleanup process will try to complete the transaction: roll it back if it didn't commit, roll it\nforwards if it did.",
+      "translation": "事务在尝试提交时已过期。此时事务是否已提交尚不明确，参与者可能仍能查看该事务的内容。\n\n此错误源于在不稳定网络环境中工作时不可避免的边界情况。例如，考虑通过网络向任何数据库执行一次普通的数据变更操作：该操作可能在数据库端成功完成，但在将结果返回给客户端之前，网络连接突然中断。客户端无法接收到成功结果并会超时，对其而言，该数据变更是否成功已无法确定。\n\n事务逻辑会尝试在事务过期前解决这种不确定性；若未能在此时间内解决，则被迫抛出此错误。事务可能已成功也可能未成功，对此类错误的处理高度依赖于具体应用程序。\n\n一个异步清理过程将尝试完成该事务：若事务未提交则回滚，若已提交则向前推进。",
+      "count": 1
+    },
+    {
+      "source": "Graham Pople",
+      "translation": "格雷厄姆·波普尔",
+      "count": 1
+    }
+  ]
+}

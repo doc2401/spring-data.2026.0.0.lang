@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-06-19 02:24:15",
+  "updated_at": "2026-06-19 02:24:15",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 63,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.8,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "<code>this</code> field projection instance.",
+      "translation": "此字段投影实例。",
+      "count": 11
+    },
+    {
+      "source": "Exclude one or more <code>fields</code> from being returned by the query operation.",
+      "translation": "从查询操作中排除一个或多个<code>fields</code>的返回。",
+      "count": 4
+    },
+    {
+      "source": "Include one or more <code>fields</code> to be returned by the query operation.",
+      "translation": "包含一个或多个 `<code>fields</code>` 以指定查询操作应返回的字段。",
+      "count": 4
+    },
+    {
+      "source": "Project a given <a href=\"../../MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> to a <a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>field</code></a> included in the\nresult.",
+      "translation": "将给定的<a href=\"../../MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a>投影到结果中包含的<a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>field</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Project a <code>$slice</code> of the array <code>field</code> using the first <code>size</code> elements starting at\n<code>offset</code>.",
+      "translation": "使用从 <code>offset</code> 开始的第一个 <code>size</code> 个元素，对数组 <code>field</code> 进行 <code>$slice</code> 投影。",
+      "count": 2
+    },
+    {
+      "source": "Project a <code>$slice</code> of the array <code>field</code> using the first <code>size</code> elements.",
+      "translation": "使用数组 <code>field</code> 的前 <code>size</code> 个元素来投影其 <code>$slice</code>。",
+      "count": 2
+    },
+    {
+      "source": "Exclude a single <code>field</code> from being returned by the query operation.",
+      "translation": "从查询操作中排除单个 `<code>field</code>` 的返回。",
+      "count": 2
+    },
+    {
+      "source": "Exclude one or more <code>properties</code> from being returned by the query operation.",
+      "translation": "从查询操作中排除一个或多个<code>properties</code>的返回。",
+      "count": 2
+    },
+    {
+      "source": "Include a single <code>field</code> to be returned by the query operation.",
+      "translation": "在查询操作中返回单个 `<code>field</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Include one or more <code>properties</code> to be returned by the query operation.",
+      "translation": "包含一个或多个<code>properties</code>，以便查询操作返回这些属性。",
+      "count": 2
+    },
+    {
+      "source": "<code>expression</code> - must not be null.",
+      "translation": "<code>expression</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>fields</code> - the document field names to be included.",
+      "translation": "<code>fields</code> - 要包含的文档字段名称。",
+      "count": 2
+    },
+    {
+      "source": "<code>fields</code> - the document field names to be excluded.",
+      "translation": "<code>fields</code> - 要排除的文档字段名称。",
+      "count": 2
+    },
+    {
+      "source": "<code>field</code> - the document field name to project, must be an array field.",
+      "translation": "<code>field</code> - 要投影的文档字段名，必须是数组字段。",
+      "count": 2
+    },
+    {
+      "source": "<code>size</code> - the number of elements to include.",
+      "translation": "<code>size</code> - 要包含的元素数量。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Project a given <a href=\"../../MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> to a <a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>field</code></a> included in the\nresult.\n\n<pre class=\"code\">\n// { 'name' : { '$toUpper' : '$name' } }\n\n// native MongoDB expression\n.project(MongoExpression.expressionFromString(\"'$toUpper' : '$name'\")).as(\"name\");\n\n// Aggregation Framework expression\n.project(StringOperators.valueOf(\"name\").toUpper()).as(\"name\");\n\n// Aggregation Framework SpEL expression\n.project(AggregationSpELExpression.expressionOf(\"toUpper(name)\")).as(\"name\");\n</pre>",
+      "translation": "将给定的 <a href=\"../../MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> 投影到结果中包含的 <a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>field</code></a>。\n\n<pre class=\"code\">\n// { 'name' : { '$toUpper' : '$name' } }\n\n// native MongoDB expression\n.project(MongoExpression.expressionFromString(\"'$toUpper' : '$name'\")).as(\"name\");\n\n// Aggregation Framework expression\n.project(StringOperators.valueOf(\"name\").toUpper()).as(\"name\");\n\n// Aggregation Framework SpEL expression\n.project(AggregationSpELExpression.expressionOf(\"toUpper(name)\")).as(\"name\");\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Project a given <a href=\"../../MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> to a <a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>field</code></a> included in the\nresult.\n\n<pre class=\"code\">\n// { 'name' : { '$toUpper' : '$name' } }\n\n// native MongoDB expression\n.projectAs(MongoExpression.expressionFromString(\"'$toUpper' : '$name'\"), \"name\");\n\n// Aggregation Framework expression\n.projectAs(StringOperators.valueOf(\"name\").toUpper(), \"name\");\n\n// Aggregation Framework SpEL expression\n.projectAs(AggregationSpELExpression.expressionOf(\"toUpper(name)\"), \"name\");\n</pre>",
+      "translation": "将给定的 <a href=\"../../MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> 投影到结果中包含的 <a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>field</code></a>。\n\n<pre class=\"code\">\n// { 'name' : { '$toUpper' : '$name' } }\n\n// native MongoDB expression\n.projectAs(MongoExpression.expressionFromString(\"'$toUpper' : '$name'\"), \"name\");\n\n// Aggregation Framework expression\n.projectAs(StringOperators.valueOf(\"name\").toUpper(), \"name\");\n\n// Aggregation Framework SpEL expression\n.projectAs(AggregationSpELExpression.expressionOf(\"toUpper(name)\"), \"name\");\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Intermediate builder part for projecting a <a href=\"../../MongoExpression.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoExpression</code></a> to a result field.",
+      "translation": "用于将<a href=\"../../MongoExpression.html\" title=\"org.springframework.data.mongodb 中的接口\"><code>MongoExpression</code></a>投影到结果字段的中间构建器部分。",
+      "count": 1
+    },
+    {
+      "source": "The array field must appear in the query. Only one positional <code>$</code> operator can appear in the projection and\nonly one array field can appear in the query.",
+      "translation": "数组字段必须出现在查询中。投影中只能出现一个位置操作符 `$`，且查询中只能包含一个数组字段。",
+      "count": 1
+    },
+    {
+      "source": "Field projection.",
+      "translation": "场投影。",
+      "count": 1
+    },
+    {
+      "source": "The array field must appear in the query.",
+      "translation": "查询中必须包含数组字段。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"Field.FieldProjectionExpression.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>Field.FieldProjectionExpression</code></a>. Define the target field name through\n        <a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>as(String)</code></a>.",
+      "translation": "创建一个新的<a href=\"Field.FieldProjectionExpression.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>Field.FieldProjectionExpression</code></a>实例。通过<a href=\"Field.FieldProjectionExpression.html#as(java.lang.String)\"><code>as(String)</code></a>定义目标字段名称。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`Object` 类中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "类 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a></code> 中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"java.lang 中的类或接口\">hashCode</a></code>",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"Field.FieldProjectionExpression.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>Field.FieldProjectionExpression</code></a>.",
+      "translation": "创建一个新的<a href=\"Field.FieldProjectionExpression.html\" title=\"org.springframework.data.mongodb.core.query 中的接口\"><code>Field.FieldProjectionExpression</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "<code>field</code> - the document field name to be included.",
+      "translation": "<code>field</code> - 要包含的文档字段名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>field</code> - the field name used in the result.",
+      "translation": "<code>field</code> - 结果中使用的字段名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>properties</code> - the document field names to be included.",
+      "translation": "<code>properties</code> - 要包含的文档字段名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>field</code> - the document field name to be excluded.",
+      "translation": "<code>field</code> - 要排除的文档字段名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>properties</code> - the document field names to be excluded.",
+      "translation": "<code>properties</code> - 要排除的文档字段名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>offset</code> - the offset to start at.",
+      "translation": "<code>offset</code> - 起始偏移量。",
+      "count": 1
+    },
+    {
+      "source": "<code>field</code> - query array field, must not be null or empty.",
+      "translation": "<code>field</code> - 查询数组字段，不能为空或 null。",
+      "count": 1
+    },
+    {
+      "source": "Thomas Risberg, Oliver Gierke, Patryk Wasik, Christoph Strobl, Mark Paluch, Owen Q, Kirill Egorov",
+      "translation": "Thomas Risberg，Oliver Gierke，Patryk Wasik，Christoph Strobl，Mark Paluch，Owen Q，Kirill Egorov",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

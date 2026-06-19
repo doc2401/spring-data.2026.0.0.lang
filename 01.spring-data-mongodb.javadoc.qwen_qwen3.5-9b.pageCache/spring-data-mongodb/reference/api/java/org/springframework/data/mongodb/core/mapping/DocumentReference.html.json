@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-19 02:16:48",
+  "updated_at": "2026-06-19 02:16:48",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 18,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0588235294117647,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "A specific sort.",
+      "translation": "特定排序。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"DocumentReference.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>DocumentReference</code></a> allows referencing entities in MongoDB using a flexible schema. While the goal is the\nsame as when using <a href=\"DBRef.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>DBRef</code></a>, the store representation is different. The reference can be anything, a single\nvalue, an entire <code>Document</code>, basically everything that can be stored in MongoDB. By default, the\nmapping layer will use the referenced entities id value for storage and retrieval.\n\n<pre class=\"code\">public class Account {\n  private String id;\n  private Float total;\n}\n\npublic class Person {\n  private String id;\n  @DocumentReference\n  private List&lt;Account&gt; accounts;\n}\n\nAccount account = ...\n\nmongoTemplate.insert(account);\n\ntemplate.update(Person.class)\n  .matching(where(\"id\").is(...))\n  .apply(new Update().push(\"accounts\").value(account))\n  .first();\n</pre>\n\n<a href=\"#lookup()\"><code>lookup()</code></a> allows defining a query filter that is independent from the _id field and in combination\nwith <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/WritingConverter.html\" title=\"class or interface in org.springframework.data.convert\"><code>writing converters</code></a> offers a flexible way of defining\nreferences between entities.\n\n<pre class=\"code\">public class Book {\n        private ObjectId id;\n        private String title;\n\n        @Field(\"publisher_ac\") @DocumentReference(lookup = \"{ 'acronym' : ?#{#target} }\") private Publisher publisher;\n}\n\npublic class Publisher {\n\n        private ObjectId id;\n        private String acronym;\n        private String name;\n\n        @DocumentReference(lazy = true) private List&lt;Book&gt; books;\n}\n\n@WritingConverter\npublic class PublisherReferenceConverter implements Converter&lt;Publisher, DocumentPointer&lt;String&gt;&gt; {\n\n        public DocumentPointer&lt;String&gt; convert(Publisher source) {\n                return () -&gt; source.getAcronym();\n        }\n}\n</pre>",
+      "translation": "<a href=\"DocumentReference.html\" title=\"org.springframework.data.mongodb.core.mapping 中的注解接口\"><code>DocumentReference</code></a> 允许使用灵活的 Schema 引用 MongoDB 中的实体。虽然其目标与使用 <a href=\"DBRef.html\" title=\"org.springframework.data.mongodb.core.mapping 中的注解接口\"><code>DBRef</code></a> 相同，但存储表示形式不同。引用内容可以是任意值、单个值、整个 <code>Document</code>，甚至是任何可存储在 MongoDB 中的数据。默认情况下，映射层将使用被引用实体的 id 值进行存储和检索。\n\n<pre class=\"code\">public class Account {\n  private String id;\n  private Float total;\n}\n\npublic class Person {\n  private String id;\n  @DocumentReference\n  private List&lt;Account&gt; accounts;\n}\n\nAccount account = ...\n\nmongoTemplate.insert(account);\n\ntemplate.update(Person.class)\n  .matching(where(\"id\").is(...))\n  .apply(new Update().push(\"accounts\").value(account))\n  .first();\n</pre>\n\n<a href=\"#lookup()\"><code>lookup()</code></a> 允许定义一个独立于 _id 字段的查询过滤器，并结合 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/WritingConverter.html\" title=\"org.springframework.data.convert 中的类或接口\"><code>writing converters</code></a>，提供了一种灵活定义实体间引用的方式。\n\n<pre class=\"code\">public class Book {\n        private ObjectId id;\n        private String title;\n\n        @Field(\"publisher_ac\") @DocumentReference(lookup = \"{ 'acronym' : ?#{#target} }\") private Publisher publisher;\n}\n\npublic class Publisher {\n\n        private ObjectId id;\n        private String acronym;\n        private String name;\n\n        @DocumentReference(lazy = true) private List&lt;Book&gt; books;\n}\n\n@WritingConverter\npublic class PublisherReferenceConverter implements Converter&lt;Publisher, DocumentPointer&lt;String&gt;&gt; {\n\n        public DocumentPointer&lt;String&gt; convert(Publisher source) {\n                return () -&gt; source.getAcronym();\n        }\n}\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "The single document lookup query. In case of an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a> or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> property the\nindividual lookups are combined via an <code>$or</code> operator. <code>target</code> points to the source value (or\ndocument) stored at the reference property. Properties of <code>target</code> can be used to define the reference query.",
+      "translation": "单文档查找查询。如果属性类型为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>或<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，则各个查找将通过<code>$or</code>操作符组合。<code>target</code>指向存储在引用属性中的源值（或文档）。可以使用<code>target</code>的属性来定义引用查询。",
+      "count": 1
+    },
+    {
+      "source": "The database the referenced entity resides in. Uses the default database provided by\n<a href=\"../../MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a> if empty.",
+      "translation": "实体所在数据库。如果为空，则使用 <a href=\"../../MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a> 提供的默认数据库。",
+      "count": 1
+    },
+    {
+      "source": "The collection the referenced entity resides in.",
+      "translation": "该引用实体所在的集合。",
+      "count": 1
+    },
+    {
+      "source": "The database the referenced entity resides in.",
+      "translation": "引用实体所在的数据库。",
+      "count": 1
+    },
+    {
+      "source": "Controls whether the referenced entity should be loaded lazily.",
+      "translation": "控制是否应延迟加载引用的实体。",
+      "count": 1
+    },
+    {
+      "source": "The single document lookup query.",
+      "translation": "单文档查找查询。",
+      "count": 1
+    },
+    {
+      "source": "The collection the referenced entity resides in. Defaults to the collection of the referenced entity type.",
+      "translation": "实体所在的集合。默认为引用实体类型的集合。",
+      "count": 1
+    },
+    {
+      "source": "Controls whether the referenced entity should be loaded lazily. This defaults to false.",
+      "translation": "控制是否延迟加载引用的实体。默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/manual/reference/database-references/#std-label-document-references\">MongoDB\n     Reference Documentation</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/manual/reference/database-references/#std-label-document-references\">MongoDB 参考文档</a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "an _id based lookup.",
+      "translation": "基于_id 的查找。",
+      "count": 1
+    },
+    {
+      "source": "false by default.",
+      "translation": "默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

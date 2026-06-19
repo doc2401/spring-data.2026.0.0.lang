@@ -1,0 +1,461 @@
+{
+  "created_at": "2026-06-19 09:03:58",
+  "updated_at": "2026-06-19 09:03:58",
+  "stats": {
+    "total_entries": 89,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 112,
+    "entries_with_hits": 89,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2584269662921348,
+    "usage_percentage": 0.0089
+  },
+  "items": [
+    {
+      "source": "<code>listener</code> - message listener.",
+      "translation": "<code>listener</code> - 消息监听器。",
+      "count": 5
+    },
+    {
+      "source": "This method is a potentially blocking method that blocks until a previous <a href=\"#start()\"><code>start()</code></a> is finished and until\nthe connection is closed if the container was listening.",
+      "translation": "此方法为潜在阻塞方法，会一直阻塞直到之前的<a href=\"#start()\"><code>start()</code></a>完成，并且如果容器处于监听状态，还会一直阻塞直到连接关闭。",
+      "count": 2
+    },
+    {
+      "source": "Multiple calls to this method are ignored if the container was already stopped. Concurrent calls to this method are\nsynchronized until the container is stopped.",
+      "translation": "如果容器已经停止，多次调用此方法将被忽略。在容器停止之前，对该方法的并发调用将得到同步处理。",
+      "count": 2
+    },
+    {
+      "source": "Specify the interval <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/backoff/BackOff.html\" title=\"class or interface in org.springframework.util.backoff\"><code>BackOff</code></a> recovery attempts.",
+      "translation": "指定 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/backoff/BackOff.html\" title=\"class or interface in org.springframework.util.backoff\"><code>BackOff</code></a> 恢复尝试的间隔。",
+      "count": 2
+    },
+    {
+      "source": "Startup the container and subscribe to topics if <a href=\"../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>listeners</code></a> were registered prior to\nstarting the container.",
+      "translation": "启动容器，如果已在启动容器之前注册了<a href=\"../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>listeners</code></a>，则订阅主题。",
+      "count": 2
+    },
+    {
+      "source": "Stop the message listener container and cancel any subscriptions if the container is <a href=\"#isListening()\"><code>listening</code></a>.",
+      "translation": "如果容器处于<a href=\"#isListening()\"><code>listening</code></a>状态，则停止消息监听器容器并取消任何订阅。",
+      "count": 2
+    },
+    {
+      "source": "The default recovery interval: 5000 ms = 5 seconds.",
+      "translation": "默认恢复间隔：5000 毫秒 = 5 秒。",
+      "count": 2
+    },
+    {
+      "source": "The default subscription wait time: 2000 ms = 2 seconds.",
+      "translation": "默认订阅等待时间：2000 毫秒 = 2 秒。",
+      "count": 2
+    },
+    {
+      "source": "Default thread name prefix: \"RedisMessageListenerContainer-\".",
+      "translation": "默认线程名前缀：\"RedisMessageListenerContainer-\"。",
+      "count": 2
+    },
+    {
+      "source": "Logger available to subclasses",
+      "translation": "子类可用的日志记录器",
+      "count": 2
+    },
+    {
+      "source": "Adds a message listener to the (potentially running) container.",
+      "translation": "向（可能正在运行的）容器添加消息监听器。",
+      "count": 2
+    },
+    {
+      "source": "Destroy the container and stop it.",
+      "translation": "销毁容器并停止它。",
+      "count": 2
+    },
+    {
+      "source": "Returns the connectionFactory.",
+      "translation": "返回 connectionFactory。",
+      "count": 2
+    },
+    {
+      "source": "Handle the given exception that arose during listener execution.",
+      "translation": "处理在监听器执行期间引发的异常。",
+      "count": 2
+    },
+    {
+      "source": "Return whether this container is currently active, that is, whether it has been set up but not shut down yet.",
+      "translation": "返回该容器当前是否处于活动状态，即是否已启动但尚未关闭。",
+      "count": 2
+    },
+    {
+      "source": "Process a message received from the provider.",
+      "translation": "处理来自提供商的消息。",
+      "count": 2
+    },
+    {
+      "source": "Attaches the given listeners (and their topics) to the container.",
+      "translation": "将给定的监听器（及其主题）附加到容器中。",
+      "count": 2
+    },
+    {
+      "source": "Adds a message listener to the (potentially running) container. If the container is running, the listener starts\nreceiving (matching) messages as soon as possible.",
+      "translation": "向（可能正在运行的）容器添加消息监听器。如果容器正在运行，该监听器将尽快开始接收（匹配）消息。",
+      "count": 2
+    },
+    {
+      "source": "<code>topic</code> - message topic.",
+      "translation": "<code>topic</code> - 消息主题。",
+      "count": 2
+    },
+    {
+      "source": "Stop the message listener container and cancel any subscriptions if the container is <a href=\"#isListening()\"><code>listening</code></a>. Stopping releases any allocated connections.",
+      "translation": "如果容器处于<a href=\"#isListening()\"><code>listening</code></a>状态，则停止消息监听器容器并取消任何订阅。停止操作将释放所有已分配的连接。",
+      "count": 2
+    },
+    {
+      "source": "This class can be used concurrently after initializing the container with <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> and\n<a href=\"#start()\"><code>start()</code></a> allowing concurrent calls to <a href=\"#addMessageListener(org.springframework.data.redis.connection.MessageListener,java.util.Collection)\"><code>addMessageListener(MessageListener, Collection)</code></a> and <a href=\"#removeMessageListener(org.springframework.data.redis.connection.MessageListener,java.util.Collection)\"><code>removeMessageListener(MessageListener, Collection)</code></a> without\nexternal synchronization.",
+      "translation": "在通过 `<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>` 和 `<a href=\"#start()\"><code>start()</code></a>` 初始化容器后，该类可被并发使用，允许在不进行外部同步的情况下并发调用 `<a href=\"#addMessageListener(org.springframework.data.redis.connection.MessageListener,java.util.Collection)\"><code>addMessageListener(MessageListener, Collection)</code></a>` 和 `<a href=\"#removeMessageListener(org.springframework.data.redis.connection.MessageListener,java.util.Collection)\"><code>removeMessageListener(MessageListener, Collection)</code></a>`。",
+      "count": 1
+    },
+    {
+      "source": "Subscriptions are retried gracefully using <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/backoff/BackOff.html\" title=\"class or interface in org.springframework.util.backoff\"><code>BackOff</code></a> that can be configured through\n<a href=\"#setRecoveryInterval(long)\"><code>setRecoveryInterval(long)</code></a> until reaching the maximum number of attempts. Listener errors are handled through\na <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/ErrorHandler.html\" title=\"class or interface in org.springframework.util\"><code>ErrorHandler</code></a> if configured.",
+      "translation": "订阅将使用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/backoff/BackOff.html\" title=\"class or interface in org.springframework.util.backoff\"><code>BackOff</code></a> 优雅地重试，该配置可通过 <a href=\"#setRecoveryInterval(long)\"><code>setRecoveryInterval(long)</code></a> 设置，直到达到最大尝试次数。如果已配置，监听器错误将通过 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/ErrorHandler.html\" title=\"class or interface in org.springframework.util\"><code>ErrorHandler</code></a> 进行处理。",
+      "count": 1
+    },
+    {
+      "source": "As opposed to the low-level Redis (one connection per subscription), the container uses only one connection that is\n'multiplexed' for all registered listeners, the message dispatch being done through the\n<a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>task executor</code></a>. It is recommended to configure the task executor (and subscription\nexecutor when using a blocking Redis connector) instead of using the default <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/task/SimpleAsyncTaskExecutor.html\" title=\"class or interface in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> for\nreuse of thread pools.",
+      "translation": "与低级别的 Redis（每个订阅一个连接）不同，容器仅使用一个连接，该连接通过<a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>任务执行器</code></a>为所有注册的监听器进行“多路复用”，消息分发由此完成。建议配置任务执行器（在使用阻塞式 Redis 连接器时还需配置订阅执行器），以复用线程池，而不是使用默认的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/task/SimpleAsyncTaskExecutor.html\" title=\"class or interface in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The container uses a single Redis connection in a lazy fashion (the connection is used only if at least one listener\nis configured). Listeners can be registered eagerly before <a href=\"#start()\"><code>starting</code></a> the container to subscribe to\nall registered topics upon startup. Listeners are guaranteed to be subscribed after the <a href=\"#start()\"><code>start()</code></a> method\nreturns.",
+      "translation": "容器以惰性方式使用单个 Redis 连接（仅当至少配置了一个监听器时才使用连接）。可以在调用<a href=\"#start()\"><code>starting</code></a>之前急切地注册监听器，以便在启动时订阅所有已注册的 topic。保证在<a href=\"#start()\"><code>start()</code></a>方法返回后，所有监听器均已订阅。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Listeners</code></a> that wish to receive subscription/unsubscription callbacks in response to\nsubscribe/unsubscribe commands can implement <a href=\"../connection/SubscriptionListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>SubscriptionListener</code></a>.",
+      "translation": "希望接收订阅/取消订阅命令响应的订阅/取消订阅回调的<a href=\"../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Listeners</code></a>可以实现<a href=\"../connection/SubscriptionListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>SubscriptionListener</code></a>接口。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The default implementation builds a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/task/SimpleAsyncTaskExecutor.html\" title=\"class or interface in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> with the\nspecified bean name (or the class name, if no bean name specified) as thread name prefix.",
+      "translation": "默认实现会构建一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/task/SimpleAsyncTaskExecutor.html\" title=\"class or interface in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a>，其线程名前缀为指定的 Bean 名称（若未指定 Bean 名称，则使用类名）。",
+      "count": 1
+    },
+    {
+      "source": "This method is a potentially blocking method that blocks until a previous <a href=\"#stop()\"><code>stop()</code></a> is finished and until all\npreviously registered listeners are successfully subscribed.",
+      "translation": "此方法为潜在阻塞方法，会一直阻塞，直到之前的<a href=\"#stop()\"><code>stop()</code></a>执行完毕，并且所有先前注册的监听器都成功订阅为止。",
+      "count": 1
+    },
+    {
+      "source": "Note: This implementation uses at most one long-running thread (depending on whether there are any listeners\nregistered or not) and up to two threads during the initial registration.",
+      "translation": "注意：此实现最多使用一个长运行线程（取决于是否注册了任何监听器），并在初始注册期间最多使用两个线程。",
+      "count": 1
+    },
+    {
+      "source": "Note: it's possible to call this method while the container is running forcing a reinitialization of the container.\nNote however that this might cause some messages to be lost (while the container reinitializes) - hence calling\nthis method at runtime is considered advanced usage.",
+      "translation": "注意：可以在容器运行时调用此方法，从而强制重新初始化容器。  \n但请注意，这可能会导致某些消息丢失（在容器重新初始化期间）——因此，在运行时调用此方法被视为高级用法。",
+      "count": 1
+    },
+    {
+      "source": "Multiple calls to this method are ignored if the container is already running. Concurrent calls to this method are\nsynchronized until the container is started up.",
+      "translation": "如果容器已经在运行，多次调用此方法将被忽略。在容器启动之前，对该方法的并发调用将得到同步处理。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation logs the exception at error level. This can be overridden in subclasses.",
+      "translation": "默认实现会在错误级别记录该异常。此行为可在子类中重写。",
+      "count": 1
+    },
+    {
+      "source": "Sets the serializer for converting the <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>Topic</code></a>s into low-level channels and patterns. By default,\n<a href=\"../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a> is used.",
+      "translation": "设置用于将 <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>Topic</code></a> 转换为低级通道和模式的序列化器。默认情况下，使用 <a href=\"../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Specify the max time to wait for subscription registrations, in <strong>milliseconds</strong> The default is\n<code>2000ms</code>, that is, 2 second.",
+      "translation": "指定等待订阅注册的超时时间，单位为<strong>毫秒</strong>。默认值为<code>2000ms</code>，即 2 秒。",
+      "count": 1
+    },
+    {
+      "source": "Sets the serializer for converting the <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>Topic</code></a>s into low-level channels and patterns.",
+      "translation": "设置用于将<a href=\"Topic.html\" title=\"org.springframework.data.redis.listener 中的接口\"><code>Topic</code></a>转换为低级通道和模式的序列化器。",
+      "count": 1
+    },
+    {
+      "source": "Sets the task executor used for running the message listeners when messages are received. If no task executor is\nset, an instance of <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/task/SimpleAsyncTaskExecutor.html\" title=\"class or interface in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> will be used by default. The task executor can be adjusted\ndepending on the work done by the listeners and the number of messages coming in.",
+      "translation": "设置用于在接收消息时运行消息监听器的任务执行器。如果未设置任务执行器，默认将使用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/task/SimpleAsyncTaskExecutor.html\" title=\"class or interface in org.springframework.core.task\"><code>SimpleAsyncTaskExecutor</code></a> 的实例。可以根据监听器执行的工作量以及传入消息的数量来调整该任务执行器。",
+      "count": 1
+    },
+    {
+      "source": "Specify the max time to wait for subscription registrations, in <strong>milliseconds</strong> The default is\n<code>2000ms</code>, that is, 2 second. The timeout applies for awaiting the subscription registration. Note that\nsubscriptions can be created asynchronously and an expired timeout does not cancel the timeout.",
+      "translation": "指定等待订阅注册的超时时间，单位为<strong>毫秒</strong>。默认值为<code>2000ms</code>，即 2 秒。该超时机制适用于等待订阅注册完成。请注意，订阅的创建是异步进行的，因此超时的过期并不会取消正在进行的订阅创建操作。",
+      "count": 1
+    },
+    {
+      "source": "Configure if this listener container should get started automatically at the time that the containing\n<code>ApplicationContext</code> gets refreshed. The default is <code>true</code>.",
+      "translation": "配置该监听器容器是否在包含它的 <code>ApplicationContext</code> 刷新时自动启动。默认值为 <code>true</code>。",
+      "count": 1
+    },
+    {
+      "source": "Configure if this listener container should get started automatically at the time that the containing\n<code>ApplicationContext</code> gets refreshed.",
+      "translation": "配置该监听器容器是否在包含它的 <code>ApplicationContext</code> 刷新时自动启动。",
+      "count": 1
+    },
+    {
+      "source": "Specify the interval between recovery attempts, in <b>milliseconds</b>.",
+      "translation": "指定恢复尝试之间的间隔，单位为<b>毫秒</b>。",
+      "count": 1
+    },
+    {
+      "source": "Set an ErrorHandler to be invoked in case of any uncaught exceptions thrown while processing a Message. By default,\nthere will be <b>no</b> ErrorHandler so that error-level logging is the only result.",
+      "translation": "设置一个 ErrorHandler，以便在处理 Message 时发生任何未捕获的异常时被调用。默认情况下，<b>没有</b> ErrorHandler，因此错误级别的日志记录将是唯一的结果。",
+      "count": 1
+    },
+    {
+      "source": "Specify the interval between recovery attempts, in <b>milliseconds</b>. The default is 5000 ms, that is, 5 seconds.",
+      "translation": "指定恢复尝试之间的间隔，单位为<b>毫秒</b>。默认值为 5000 毫秒，即 5 秒。",
+      "count": 1
+    },
+    {
+      "source": "Configure the lifecycle phase that this listener container is supposed to run in. The default is\n<code>Integer.MAX_VALUE</code>.",
+      "translation": "配置此监听器容器应运行的生命周期阶段。默认值为 `<code>Integer.MAX_VALUE</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Creates a default TaskExecutor.",
+      "translation": "创建默认的 TaskExecutor。",
+      "count": 1
+    },
+    {
+      "source": "Handle subscription task exception.",
+      "translation": "处理订阅任务异常。",
+      "count": 1
+    },
+    {
+      "source": "Invoke the registered ErrorHandler, if any.",
+      "translation": "如有注册，则调用注册的 ErrorHandler。",
+      "count": 1
+    },
+    {
+      "source": "Removes the given message listener from all topics.",
+      "translation": "从所有主题中移除给定的消息监听器。",
+      "count": 1
+    },
+    {
+      "source": "Removes a message listener from the given topics.",
+      "translation": "从指定主题中移除消息监听器。",
+      "count": 1
+    },
+    {
+      "source": "Removes a message listener from the given topic.",
+      "translation": "从指定主题中移除消息监听器。",
+      "count": 1
+    },
+    {
+      "source": "Set an ErrorHandler to be invoked in case of any uncaught exceptions thrown while processing a Message.",
+      "translation": "设置一个 ErrorHandler，以便在处理 Message 时发生任何未捕获的异常时被调用。",
+      "count": 1
+    },
+    {
+      "source": "Configure the lifecycle phase that this listener container is supposed to run in.",
+      "translation": "配置此监听器容器应运行的生命周期阶段。",
+      "count": 1
+    },
+    {
+      "source": "Sets the task execution used for subscribing to Redis channels.",
+      "translation": "设置用于订阅 Redis 通道的任务执行。",
+      "count": 1
+    },
+    {
+      "source": "Sets the task executor used for running the message listeners when messages are received.",
+      "translation": "设置用于在接收到消息时运行消息监听器的任务执行器。",
+      "count": 1
+    },
+    {
+      "source": "Removes a message listener from the given topics. If the container is running, the listener stops receiving\n(matching) messages as soon as possible.",
+      "translation": "从指定主题中移除消息监听器。如果容器正在运行，将尽快停止该监听器接收（匹配的）消息。",
+      "count": 1
+    },
+    {
+      "source": "Removes a message listener from the given topic. If the container is running, the listener stops receiving\n(matching) messages as soon as possible.",
+      "translation": "从指定主题中移除消息监听器。如果容器正在运行，将尽快停止该监听器接收（匹配的）消息。",
+      "count": 1
+    },
+    {
+      "source": "Removes the given message listener from all topics. If the container is running, the listener stops\nreceiving (matching) messages as soon as possible.",
+      "translation": "从所有主题中移除给定的消息监听器。如果容器正在运行，该监听器将尽快停止接收（匹配）消息。",
+      "count": 1
+    },
+    {
+      "source": "Invoke the registered ErrorHandler, if any. Log at error level otherwise.",
+      "translation": "如有注册的 ErrorHandler，则调用之；否则记录错误级别日志。",
+      "count": 1
+    },
+    {
+      "source": "Handle subscription task exception. Will attempt to restart the subscription if the Exception is a connection\nfailure (for example, Redis was restarted).",
+      "translation": "处理订阅任务异常。如果异常是连接失败（例如 Redis 已重启），将尝试重新启动订阅。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\" title=\"class or interface in org.springframework.beans.factory\">setBeanName</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanNameAware.html\" title=\"class or interface in org.springframework.beans.factory\">BeanNameAware</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanNameAware.html#setBeanName(java.lang.String)\" title=\"org.springframework.beans.factory 中的类或接口\">setBeanName</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanNameAware.html\" title=\"org.springframework.beans.factory 中的类或接口\">BeanNameAware</a></code> 中的一个方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code>中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html#destroy()\" title=\"class or interface in org.springframework.beans.factory\">destroy</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html\" title=\"class or interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html#destroy()\" title=\"class or interface in org.springframework.beans.factory\">destroy</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html\" title=\"class or interface in org.springframework.beans.factory\">DisposableBean</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\">start</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html\" title=\"class or interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html\" title=\"org.springframework.context 中的类或接口\">Lifecycle</a></code> 中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"org.springframework.context 中的类或接口\">start</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\">stop</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html\" title=\"class or interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\">stop</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html\" title=\"class or interface in org.springframework.context\">Lifecycle</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html#stop(java.lang.Runnable)\" title=\"class or interface in org.springframework.context\">stop</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html\" title=\"class or interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html#stop(java.lang.Runnable)\" title=\"class or interface in org.springframework.context\">stop</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html\" title=\"class or interface in org.springframework.context\">SmartLifecycle</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"class or interface in org.springframework.context\">isRunning</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html\" title=\"class or interface in org.springframework.context\">Lifecycle</a></code>",
+      "translation": "接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html\" title=\"org.springframework.context 中的类或接口\">Lifecycle</a></code> 中的方法 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"org.springframework.context 中的类或接口\">isRunning</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Phased.html#getPhase()\" title=\"class or interface in org.springframework.context\">getPhase</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Phased.html\" title=\"class or interface in org.springframework.context\">Phased</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Phased.html#getPhase()\" title=\"class or interface in org.springframework.context\">getPhase</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Phased.html\" title=\"class or interface in org.springframework.context\">Phased</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html#getPhase()\" title=\"class or interface in org.springframework.context\">getPhase</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html\" title=\"class or interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html#getPhase()\" title=\"class or interface in org.springframework.context\">getPhase</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html\" title=\"class or interface in org.springframework.context\">SmartLifecycle</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html#isAutoStartup()\" title=\"class or interface in org.springframework.context\">isAutoStartup</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html\" title=\"class or interface in org.springframework.context\">SmartLifecycle</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html#isAutoStartup()\" title=\"类或接口在 org.springframework.context\">isAutoStartup</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/SmartLifecycle.html\" title=\"类或接口在 org.springframework.context\">SmartLifecycle</a></code> 中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code>subscriptionExecutor</code> - the subscriptionExecutor to set.",
+      "translation": "<code>subscriptionExecutor</code> - 要设置的订阅执行器。",
+      "count": 1
+    },
+    {
+      "source": "<code>taskExecutor</code> - the taskExecutor to set.",
+      "translation": "<code>taskExecutor</code> - 要设置的 taskExecutor。",
+      "count": 1
+    },
+    {
+      "source": "<code>connectionFactory</code> - The connectionFactory to set.",
+      "translation": "<code>connectionFactory</code> - 要设置的连接工厂。",
+      "count": 1
+    },
+    {
+      "source": "<code>serializer</code> - The serializer to set.",
+      "translation": "<code>serializer</code> - 要设置的序列化器。",
+      "count": 1
+    },
+    {
+      "source": "<code>maxSubscriptionRegistrationWaitingTime</code> - the maximum subscription registration wait time",
+      "translation": "<code>maxSubscriptionRegistrationWaitingTime</code> - 最大订阅注册等待时间",
+      "count": 1
+    },
+    {
+      "source": "<code>listeners</code> - map of message listeners and their associated topics",
+      "translation": "<code>listeners</code> - 消息监听器及其关联主题的映射",
+      "count": 1
+    },
+    {
+      "source": "<code>callback</code> - callback to notify when the container actually stops.",
+      "translation": "`callback` - 回调函数，用于在容器实际停止时发出通知。",
+      "count": 1
+    },
+    {
+      "source": "<code>topics</code> - message listener topic.",
+      "translation": "<code>topics</code> - 消息监听器主题。",
+      "count": 1
+    },
+    {
+      "source": "<code>topics</code> - message topics to remove listener from or empty to remove the listener from all topics.",
+      "translation": "<code>topics</code> - 要移除监听器的消息主题，或为空以从所有主题中移除监听器。",
+      "count": 1
+    },
+    {
+      "source": "<code>listener</code> - the message listener to notify.",
+      "translation": "<code>listener</code> - 要通知的消息监听器。",
+      "count": 1
+    },
+    {
+      "source": "<code>message</code> - the received message.",
+      "translation": "<code>message</code> - 接收到的消息。",
+      "count": 1
+    },
+    {
+      "source": "<code>source</code> - the source, either the channel or pattern.",
+      "translation": "<code>source</code> - 源，即通道或模式。",
+      "count": 1
+    },
+    {
+      "source": "<code>cause</code> - the exception to handle",
+      "translation": "<code>cause</code> - 要处理的异常",
+      "count": 1
+    },
+    {
+      "source": "<code>cause</code> - the uncaught error that arose during message processing.",
+      "translation": "<code>cause</code> - 消息处理期间引发的未捕获错误。",
+      "count": 1
+    },
+    {
+      "source": "<code>cause</code> - Throwable exception",
+      "translation": "<code>cause</code> - 可抛出的异常",
+      "count": 1
+    },
+    {
+      "source": "Costin Leau, Jennifer Hickey, Way Joke, Thomas Darimont, Mark Paluch, John Blum, Seongjun Lee, Su Ko, Mingi Lee",
+      "translation": "Costin Leau，Jennifer Hickey，Way Joke，Thomas Darimont，Mark Paluch，John Blum，Seongjun Lee，Su Ko，Mingi Lee",
+      "count": 1
+    },
+    {
+      "source": "Returns the connectionFactory",
+      "translation": "返回 connectionFactory",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Container providing asynchronous behaviour for Redis message listeners. Handles the low-level details of listening,\nconverting and message dispatching.",
+      "translation": "为 Redis 消息监听器提供异步行为的容器。负责处理监听、转换和消息分发的底层细节。",
+      "count": 1
+    },
+    {
+      "source": "Sets the task execution used for subscribing to Redis channels. By default, if no executor is set, the\n<a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>setTaskExecutor(Executor)</code></a> will be used. In some cases, this might be undesired as the listening to the\nconnection is a long-running task.",
+      "translation": "设置用于订阅 Redis 通道的任务执行器。默认情况下，如果未设置执行器，将使用<a href=\"#setTaskExecutor(java.util.concurrent.Executor)\"><code>setTaskExecutor(Executor)</code></a>。在某些情况下，这可能并不理想，因为监听连接是一个长期运行的任务。",
+      "count": 1
+    },
+    {
+      "source": "Creates a default TaskExecutor. Called if no explicit TaskExecutor has been specified.",
+      "translation": "创建一个默认的 TaskExecutor。如果未显式指定 TaskExecutor，则调用此方法。",
+      "count": 1
+    }
+  ]
+}

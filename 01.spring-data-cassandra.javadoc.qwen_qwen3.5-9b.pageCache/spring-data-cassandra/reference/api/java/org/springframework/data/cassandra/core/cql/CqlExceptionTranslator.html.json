@@ -1,40 +1,40 @@
 {
   "created_at": "2026-06-16 17:35:09",
-  "updated_at": "2026-06-16 17:35:09",
+  "updated_at": "2026-06-18 07:52:55",
   "stats": {
-    "total_entries": 23,
+    "total_entries": 29,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 23,
-    "entries_with_hits": 23,
+    "total_hits": 34,
+    "entries_with_hits": 29,
     "entries_without_hits": 0,
-    "hit_rate": 1.0,
-    "usage_percentage": 0.0023
+    "hit_rate": 1.1724137931034482,
+    "usage_percentage": 0.0029
   },
   "items": [
     {
+      "source": "Translate the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> into a generic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.",
+      "translation": "将给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>转换为通用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>。",
+      "count": 3
+    },
+    {
       "source": "The returned <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> is supposed to contain the original <code>DriverException</code> as root cause.\nHowever, client code may not generally rely on this due to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>s possibly being caused by\nother resource APIs as well. That said, a <code>getRootCause() instanceof DataAccessException</code> check (and\nsubsequent cast) is considered reliable when expecting Cassandra-based access to have happened.",
       "translation": "返回的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 本应包含原始的 <code>DriverException</code> 作为根本原因。\n然而，客户端代码通常不能依赖这一点，因为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 也可能由其他资源 API 引起。尽管如此，当预期已发生基于 Cassandra 的访问时，执行 <code>getRootCause() instanceof DataAccessException</code> 检查（并进行后续类型转换）被认为是可靠的。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"class or interface in java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CqlExceptionTranslator</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"class or interface in org.springframework.dao.support\">PersistenceExceptionTranslator</a></span>",
-      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"java.lang 中的类或接口\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CqlExceptionTranslator</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"org.springframework.dao.support 中的类或接口\">PersistenceExceptionTranslator</a></span>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Strategy interface for translating between <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>driver exceptions</code></a> and Spring's data access\nstrategy-agnostic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> hierarchy.",
       "translation": "用于在<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>驱动程序异常</code></a>与 Spring 数据访问策略无关的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>层次结构之间进行转换的策略接口。",
-      "count": 1
+      "count": 2
     },
     {
-      "source": "Translate the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> into a generic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.",
-      "translation": "将给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>转换为通用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>。",
+      "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"class or interface in java.lang\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CqlExceptionTranslator</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"class or interface in org.springframework.dao.support\">PersistenceExceptionTranslator</a></span>",
+      "translation": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/FunctionalInterface.html\" title=\"java.lang 中的类或接口\">@FunctionalInterface</a>\n</span><span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">CqlExceptionTranslator</span><span class=\"extends-implements\">\nextends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"org.springframework.dao.support 中的类或接口\">PersistenceExceptionTranslator</a></span>",
       "count": 1
     },
     {
@@ -125,6 +125,36 @@
     {
       "source": "into a generic",
       "translation": "转化为通用型",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the offending <code>DriverException</code>.",
+      "translation": "<code>ex</code> - 引发异常的 <code>DriverException</code>。",
+      "count": 1
+    },
+    {
+      "source": "the DataAccessException, wrapping the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>.",
+      "translation": "DataAccessException，包装了<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - readable text describing the task being attempted.",
+      "translation": "<code>task</code> - 描述正在尝试执行的任务的可读文本。",
+      "count": 1
+    },
+    {
+      "source": "<code>cql</code> - CQL query or update that caused the problem (can be null).",
+      "translation": "<code>cql</code> - 导致问题的 CQL 查询或更新语句（可为 null）。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
       "count": 1
     }
   ]

@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-19 08:48:04",
+  "updated_at": "2026-06-19 08:48:04",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 18,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0588235294117647,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Factory Method to create <a href=\"ExpireChanges.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges</code></a> from raw sources.",
+      "translation": "工厂方法用于从原始源创建<a href=\"ExpireChanges.html\" title=\"org.springframework.data.redis.core 中的类\"><code>ExpireChanges</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Value Object linking a number of keys to their <a href=\"ExpireChanges.ExpiryChangeState.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges.ExpiryChangeState</code></a> retaining the order of the original source.\nDedicated higher level methods interpret raw values retrieved from a Redis Client.\n<ol>\n<li><a href=\"#ok()\"><code>ok()</code></a> returns keys for which the time to live has been set</li>\n<li><a href=\"#expired()\"><code>expired()</code></a> returns keys that have been expired</li>\n<li><a href=\"#missed()\"><code>missed()</code></a> returns keys for which the time to live could not be set because they do not exist</li>\n<li><a href=\"#skipped()\"><code>skipped()</code></a> returns keys for which the time to live has not been set because a precondition was not\nmet</li>\n</ol>",
+      "translation": "值对象将多个键与其 <a href=\"ExpireChanges.ExpiryChangeState.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges.ExpiryChangeState</code></a> 关联，并保留原始来源的顺序。  \n专用的更高层方法解释从 Redis 客户端检索到的原始值。\n<ol>\n<li><a href=\"#ok()\"><code>ok()</code></a> 返回已设置生存时间（TTL）的键</li>\n<li><a href=\"#expired()\"><code>expired()</code></a> 返回已过期的键</li>\n<li><a href=\"#missed()\"><code>missed()</code></a> 返回因不存在而无法设置生存时间的键</li>\n<li><a href=\"#skipped()\"><code>skipped()</code></a> 返回因未满足前置条件而未设置生存时间的键</li>\n</ol>",
+      "count": 1
+    },
+    {
+      "source": "true if all changes are either ok <a href=\"ExpireChanges.ExpiryChangeState.html#OK\"><code>ExpireChanges.ExpiryChangeState.OK</code></a> or\n        <a href=\"ExpireChanges.ExpiryChangeState.html#EXPIRED\"><code>ExpireChanges.ExpiryChangeState.EXPIRED</code></a>.",
+      "translation": "true 表示所有更改的状态均为 <a href=\"ExpireChanges.ExpiryChangeState.html#OK\"><code>ExpireChanges.ExpiryChangeState.OK</code></a> 或  \n<a href=\"ExpireChanges.ExpiryChangeState.html#EXPIRED\"><code>ExpireChanges.ExpiryChangeState.EXPIRED</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>fields</code> - the fields to associated with the raw values in states. Defines the actual order of entries within\n         <a href=\"ExpireChanges.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges</code></a>.",
+      "translation": "<code>fields</code> - 与状态中的原始值关联的字段。定义了 <a href=\"ExpireChanges.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges</code></a> 中条目的实际顺序。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"of(java.util.List,java.util.List)-type-param-K\"><code>K</code> - the key type used</span>",
+      "translation": "<span id=\"of(java.util.List,java.util.List)-type-param-K\"><code>K</code> - 使用的键类型</span>",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ExpireChanges.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges</code></a>.",
+      "translation": "创建<a href=\"ExpireChanges.html\" title=\"org.springframework.data.redis.core 中的类\"><code>ExpireChanges</code></a>的新实例。",
+      "count": 1
+    },
+    {
+      "source": "an ordered <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> of the status changes.",
+      "translation": "一个有序的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"java.util 中的类或接口\"><code>List</code></a>，用于记录状态变更。",
+      "count": 1
+    },
+    {
+      "source": "the status change for the given key, or null if <a href=\"ExpireChanges.ExpiryChangeState.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges.ExpiryChangeState</code></a> does not\n        contain an entry for it.",
+      "translation": "给定键的状态变更，或者如果<a href=\"ExpireChanges.ExpiryChangeState.html\" title=\"class in org.springframework.data.redis.core\"><code>ExpireChanges.ExpiryChangeState</code></a>中不包含该键的条目，则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "true if all changes are <a href=\"ExpireChanges.ExpiryChangeState.html#OK\"><code>ExpireChanges.ExpiryChangeState.OK</code></a>.",
+      "translation": "如果所有更改均为<a href=\"ExpireChanges.ExpiryChangeState.html#OK\"><code>ExpireChanges.ExpiryChangeState.OK</code></a>，则为 true。",
+      "count": 1
+    },
+    {
+      "source": "an ordered list of if all changes are <a href=\"ExpireChanges.ExpiryChangeState.html#OK\"><code>ExpireChanges.ExpiryChangeState.OK</code></a>.",
+      "translation": "一个有序列表，其中所有更改均为 <a href=\"ExpireChanges.ExpiryChangeState.html#OK\"><code>ExpireChanges.ExpiryChangeState.OK</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "an ordered list of if all changes are <a href=\"ExpireChanges.ExpiryChangeState.html#EXPIRED\"><code>ExpireChanges.ExpiryChangeState.EXPIRED</code></a>.",
+      "translation": "一个有序列表，其中所有更改均为<a href=\"ExpireChanges.ExpiryChangeState.html#EXPIRED\"><code>ExpireChanges.ExpiryChangeState.EXPIRED</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "an ordered list of if all changes are <a href=\"ExpireChanges.ExpiryChangeState.html#DOES_NOT_EXIST\"><code>ExpireChanges.ExpiryChangeState.DOES_NOT_EXIST</code></a>.",
+      "translation": "一个有序列表，其中所有更改均为<a href=\"ExpireChanges.ExpiryChangeState.html#DOES_NOT_EXIST\"><code>ExpireChanges.ExpiryChangeState.DOES_NOT_EXIST</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "an ordered list of if all changes are <a href=\"ExpireChanges.ExpiryChangeState.html#CONDITION_NOT_MET\"><code>ExpireChanges.ExpiryChangeState.CONDITION_NOT_MET</code></a>.",
+      "translation": "一个有序列表，其中所有更改均为 <a href=\"ExpireChanges.ExpiryChangeState.html#CONDITION_NOT_MET\"><code>ExpireChanges.ExpiryChangeState.CONDITION_NOT_MET</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>states</code> - the raw Redis state change values.",
+      "translation": "<code>states</code> - 原始 Redis 状态变更值。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

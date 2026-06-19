@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-06-19 00:49:36",
+  "updated_at": "2026-06-19 00:49:36",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 27,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "<code>factory</code> - the <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a> to get the <code>MongoDatabase</code> from.",
+      "translation": "<code>factory</code> - 用于从中获取 <code>MongoDatabase</code> 的 <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "the <code>MongoDatabase</code> that is potentially associated with a transactional <code>ClientSession</code>.",
+      "translation": "与事务性<code>ClientSession</code>可能关联的<code>MongoDatabase</code>。",
+      "count": 4
+    },
+    {
+      "source": "Check if the <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a> is actually bound to a <code>ClientSession</code> that has an active\ntransaction, or if a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html\" title=\"class or interface in org.springframework.transaction.support\"><code>TransactionSynchronization</code></a> has been registered for the <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>resource</code></a> and if the associated <code>ClientSession</code> has an <code>active\ntransaction</code>.",
+      "translation": "检查<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a>是否实际绑定到一个具有活动事务的<code>ClientSession</code>，或者是否已为<code>resource</code>注册了<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronization.html\" title=\"class or interface in org.springframework.transaction.support\"><code>TransactionSynchronization</code></a>，并且关联的<code>ClientSession</code>是否具有<code>active transaction</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>dbName</code> - the name of the <code>MongoDatabase</code> to get.",
+      "translation": "<code>dbName</code> - 要获取的 <code>MongoDatabase</code> 的名称。",
+      "count": 2
+    },
+    {
+      "source": "<code>sessionSynchronization</code> - the synchronization to use. Must not be null.",
+      "translation": "<code>sessionSynchronization</code> - 要使用的同步机制。不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Obtain the default <code>database</code> form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a> using\n<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>native session synchronization</code></a>. <br/>\nRegisters a <code>MongoDB specific transaction synchronization</code> within the current\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a> if <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>.",
+      "translation": "使用<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>获取默认的<code>database</code>，并采用<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>native session synchronization</code></a>。<br/>\n如果<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>，则在当前<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a>中注册一个<code>MongoDB specific transaction synchronization</code>。",
+      "count": 1
+    },
+    {
+      "source": "Obtain the <code>database</code> with given name form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a> using\n<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>native session synchronization</code></a>. <br/>\nRegisters a <code>MongoDB specific transaction synchronization</code> within the current\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a> if <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>.",
+      "translation": "使用<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>获取指定名称的<code>database</code>，并采用<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>native session synchronization</code></a>。<br/>\n如果<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>，则在当前<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a>中注册一个<code>MongoDB specific transaction synchronization</code>。",
+      "count": 1
+    },
+    {
+      "source": "Obtain the default <code>database</code> form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>. <br/>\nRegisters a <code>MongoDB specific transaction synchronization</code> within the current\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a> if <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>.",
+      "translation": "从给定的 <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a> 获取默认的 <code>database</code>。<br/>\n如果 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>，则在当前 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a> 中注册一个 <code>MongoDB specific transaction synchronization</code>。",
+      "count": 1
+    },
+    {
+      "source": "Obtain the <code>database</code> with given name form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>.\n<br/>\nRegisters a <code>MongoDB specific transaction synchronization</code> within the current\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a> if <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>.",
+      "translation": "从给定的<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>中获取指定名称的<code>database</code>。\n<br/>\n如果<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/support/TransactionSynchronizationManager.html#isSynchronizationActive()\" title=\"class or interface in org.springframework.transaction.support\"><code>synchronization is active</code></a>，则在当前\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a>中注册一个<code>MongoDB 特定的事务同步</code>。",
+      "count": 1
+    },
+    {
+      "source": "Helper class for managing a <code>MongoDatabase</code> instances via <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a>. Used for obtaining\n<code>session bound</code> resources, such as <code>MongoDatabase</code> and\n<code>MongoCollection</code> suitable for transactional usage. <br/>\n<strong>Note:</strong> Intended for internal usage only.",
+      "translation": "用于通过<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>MongoDatabaseFactory</code></a>管理<code>MongoDatabase</code>实例的辅助类。用于获取适合事务性使用的<code>session bound</code>资源，例如<code>MongoDatabase</code>和<code>MongoCollection</code>。<br/>\n<strong>注意：</strong> 仅用于内部用途。",
+      "count": 1
+    },
+    {
+      "source": "Obtain the <code>database</code> with given name form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a> using\n<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>native session synchronization</code></a>.",
+      "translation": "使用<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>原生会话同步</code></a>，从给定的<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>中获取指定名称的<code>database</code>。",
+      "count": 1
+    },
+    {
+      "source": "Obtain the default <code>database</code> form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a> using\n<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>native session synchronization</code></a>.",
+      "translation": "使用<a href=\"SessionSynchronization.html#ON_ACTUAL_TRANSACTION\"><code>原生会话同步</code></a>从给定的<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>获取默认的<code>database</code>。",
+      "count": 1
+    },
+    {
+      "source": "Obtain the <code>database</code> with given name form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>.",
+      "translation": "从给定的<a href=\"MongoDatabaseFactory.html\" title=\"org.springframework.data.mongodb 中的接口\"><code>factory</code></a>中获取指定名称的<code>database</code>。",
+      "count": 1
+    },
+    {
+      "source": "Obtain the default <code>database</code> form the given <a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>.",
+      "translation": "从给定的<a href=\"MongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>factory</code></a>获取默认的<code>database</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>dbFactory</code> - the resource to check transactions for. Must not be null.",
+      "translation": "<code>dbFactory</code> - 用于检查事务的资源，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "true if the factory has an ongoing transaction.",
+      "translation": "如果工厂正在进行交易，则返回 true。",
+      "count": 1
+    }
+  ]
+}

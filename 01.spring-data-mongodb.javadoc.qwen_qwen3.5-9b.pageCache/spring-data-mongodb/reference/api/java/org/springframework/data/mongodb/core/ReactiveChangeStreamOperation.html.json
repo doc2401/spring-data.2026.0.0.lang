@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-06-19 01:09:10",
+  "updated_at": "2026-06-19 01:09:10",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 15,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ReactiveChangeStreamOperation.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveChangeStreamOperation</code></a> allows creation and execution of reactive MongoDB\n<a href=\"https://docs.mongodb.com/manual/changeStreams/\">Change Stream</a> operations in a fluent API style. <br/>\nThe starting domainType is used for mapping a potentially given\n<a href=\"aggregation/TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a> used for filtering. By default, the\noriginating domainType is also used for mapping back the result from the <code>Document</code>.\nHowever, it is possible to define an different returnType via <code>as</code>.<br/>\nThe collection to operate on is optional in which case call collection with the actual database are watched, use\nwatchCollection to define a fixed collection.\n\n<pre>    <code>\n        changeStream(Jedi.class)\n            .watchCollection(\"star-wars\")\n            .filter(where(\"operationType\").is(\"insert\"))\n            .resumeAt(Instant.now())\n            .listen();\n    </code>\n</pre>",
+      "translation": "<a href=\"ReactiveChangeStreamOperation.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveChangeStreamOperation</code></a> 允许以流式 API 风格创建和执行反应式的 MongoDB <a href=\"https://docs.mongodb.com/manual/changeStreams/\">变更流 (Change Stream)</a> 操作。<br/>\n起始的 domainType 用于映射可能提供的、用于过滤的 <a href=\"aggregation/TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a>。默认情况下，起始的 domainType 也用于将结果从 <code>Document</code> 映射回来。然而，可以通过 <code>as</code> 定义不同的 returnType。<br/>\n要操作的目标集合是可选的；如果不指定，则调用 collection 以监听实际数据库，此时应使用 watchCollection 来定义固定的集合。\n\n<pre>    <code>\n        changeStream(Jedi.class)\n            .watchCollection(\"star-wars\")\n            .filter(where(\"operationType\").is(\"insert\"))\n            .resumeAt(Instant.now())\n            .listen();\n    </code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Start creating a change stream operation for the given domainType watching all collections within the\ndatabase. <br/>\nConsider limiting events be defining a <a href=\"ReactiveChangeStreamOperation.ChangeStreamWithCollection.html#watchCollection(java.lang.String)\"><code>collection</code></a> and/or\n<a href=\"ReactiveChangeStreamOperation.ChangeStreamWithFilterAndProjection.html#filter(org.springframework.data.mongodb.core.query.CriteriaDefinition)\"><code>filter</code></a>.",
+      "translation": "为给定的 domainType 启动一个变更流操作，以监听数据库中的所有集合。<br/>\n可以通过定义 <a href=\"ReactiveChangeStreamOperation.ChangeStreamWithCollection.html#watchCollection(java.lang.String)\"><code>collection</code></a> 和/或 <a href=\"ReactiveChangeStreamOperation.ChangeStreamWithFilterAndProjection.html#filter(org.springframework.data.mongodb.core.query.CriteriaDefinition)\"><code>filter</code></a> 来限制事件。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ReactiveChangeStreamOperation.ReactiveChangeStream.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveChangeStreamOperation.ReactiveChangeStream</code></a> provides methods for constructing change stream operations in a fluent way.",
+      "translation": "<a href=\"ReactiveChangeStreamOperation.ReactiveChangeStream.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ReactiveChangeStreamOperation.ReactiveChangeStream</code></a> 提供了以流畅方式构建变更流操作的方法。",
+      "count": 1
+    },
+    {
+      "source": "Collection override (optional).",
+      "translation": "集合覆盖（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Provide a filter for limiting results (optional).",
+      "translation": "提供用于限制结果的过滤器（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Provide some options.",
+      "translation": "请提供几个选项。",
+      "count": 1
+    },
+    {
+      "source": "Resume a change stream.",
+      "translation": "恢复变更流。",
+      "count": 1
+    },
+    {
+      "source": "Compose change stream execution by calling one of the terminating methods.",
+      "translation": "通过调用终止方法之一来执行变更流。",
+      "count": 1
+    },
+    {
+      "source": "Start creating a change stream operation for the given domainType watching all collections within the\ndatabase.",
+      "translation": "为给定的 domainType 启动变更流操作，以监控数据库中的所有集合。",
+      "count": 1
+    },
+    {
+      "source": "<code>domainType</code> - must not be null. Use <code>Document</code> to obtain raw elements.",
+      "translation": "<code>domainType</code> 不得为 null。请使用 <code>Document</code> 获取原始元素。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ReactiveChangeStreamOperation.ReactiveChangeStream.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveChangeStreamOperation.ReactiveChangeStream</code></a>. Never null.",
+      "translation": "<code>ReactiveChangeStreamOperation.ReactiveChangeStream</code> 接口的一个新实例。永不为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if domainType is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 domainType 为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-06-19 09:36:32",
+  "updated_at": "2026-06-19 09:36:32",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1818181818181819,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "Creates a new <a href=\"DefaultReactiveScriptExecutor.html\" title=\"class in org.springframework.data.redis.core.script\"><code>DefaultReactiveScriptExecutor</code></a> given <a href=\"../../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a> and\n<a href=\"../../serializer/RedisSerializationContext.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializationContext</code></a>.",
+      "translation": "根据 <a href=\"../../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a> 和 <a href=\"../../serializer/RedisSerializationContext.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializationContext</code></a> 创建一个全新的 <a href=\"DefaultReactiveScriptExecutor.html\" title=\"class in org.springframework.data.redis.core.script\"><code>DefaultReactiveScriptExecutor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a href=\"RedisScript.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>RedisScript</code></a>, using the provided <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>s to serialize the script\narguments and result.",
+      "translation": "执行给定的<a href=\"RedisScript.html\" title=\"org.springframework.data.redis.core.script 中的接口\"><code>RedisScript</code></a>，并使用提供的<a href=\"../../serializer/RedisSerializer.html\" title=\"org.springframework.data.redis.serializer 中的接口\"><code>RedisSerializer</code></a>对脚本参数和结果进行序列化。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a href=\"RedisScript.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>RedisScript</code></a>",
+      "translation": "执行给定的<a href=\"RedisScript.html\" title=\"org.springframework.data.redis.core.script 中的接口\"><code>RedisScript</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The return value of the script or <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a> if <a href=\"RedisScript.html#getResultType()\"><code>RedisScript.getResultType()</code></a> is\n        null, likely indicating a throw-away status reply (i.e. \"OK\")",
+      "translation": "脚本的返回值，或者如果<a href=\"RedisScript.html#getResultType()\"><code>RedisScript.getResultType()</code></a>为null（可能表示丢弃状态回复，即\"OK\"），则返回<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Default implementation of <a href=\"ReactiveScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>ReactiveScriptExecutor</code></a>. Optimizes performance by attempting to execute script first\nusing <code>EVALSHA</code>, then falling back to <code>EVAL</code> if Redis has not yet cached the script.",
+      "translation": "<a href=\"ReactiveScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>ReactiveScriptExecutor</code></a> 的默认实现。通过尝试首先使用 <code>EVALSHA</code> 执行脚本，并在 Redis 尚未缓存该脚本时回退到使用 <code>EVAL</code>，从而优化性能。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List)\">ReactiveScriptExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List)\">ReactiveScriptExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List,org.springframework.data.redis.serializer.RedisElementWriter,org.springframework.data.redis.serializer.RedisElementReader)\">ReactiveScriptExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述是从接口复制的：<code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List,org.springframework.data.redis.serializer.RedisElementWriter,org.springframework.data.redis.serializer.RedisElementReader)\">ReactiveScriptExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List)\">execute</a></code> in interface <code><a href=\"ReactiveScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ReactiveScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultReactiveScriptExecutor\">K</a>&gt;</code>",
+      "translation": "<code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List)\">execute</a></code> 接口 <code><a href=\"ReactiveScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ReactiveScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultReactiveScriptExecutor\">K</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List,org.springframework.data.redis.serializer.RedisElementWriter,org.springframework.data.redis.serializer.RedisElementReader)\">execute</a></code> in interface <code><a href=\"ReactiveScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ReactiveScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultReactiveScriptExecutor\">K</a>&gt;</code>",
+      "translation": "<code><a href=\"ReactiveScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.util.List,org.springframework.data.redis.serializer.RedisElementWriter,org.springframework.data.redis.serializer.RedisElementReader)\">execute</a></code> 接口 <code><a href=\"ReactiveScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ReactiveScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultReactiveScriptExecutor\">K</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>argsWriter</code> - The <a href=\"../../serializer/RedisElementWriter.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisElementWriter</code></a> to use for serializing args. Must not be null.",
+      "translation": "<code>argsWriter</code> - 用于序列化参数的 <a href=\"../../serializer/RedisElementWriter.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisElementWriter</code></a>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>resultReader</code> - The <a href=\"../../serializer/RedisElementReader.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisElementReader</code></a> to use for serializing the script return value. Must not be\n         null.",
+      "translation": "<code>resultReader</code> - 用于序列化脚本返回值所需的 <a href=\"../../serializer/RedisElementReader.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisElementReader</code></a>。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-K\"><code>K</code> - The type of keys that may be passed during script execution</span>",
+      "translation": "<span id=\"type-param-K\"><code>K</code> - 脚本执行期间可传入的键的类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>connectionFactory</code> - must not be null.",
+      "translation": "<code>connectionFactory</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>serializationContext</code> - must not be null.",
+      "translation": "<code>serializationContext</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>script</code> - The script to execute. Must not be null.",
+      "translation": "<code>script</code> - 要执行的脚本。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>keys</code> - any keys that need to be passed to the script. Must not be null.",
+      "translation": "<code>keys</code> - 需要传递给脚本的任何键。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - any args that need to be passed to the script. Can be empty.",
+      "translation": "<code>args</code> - 需要传递给脚本的任何参数。可以为空。",
+      "count": 1
+    },
+    {
+      "source": "<code>script</code> - The script to execute. must not be null.",
+      "translation": "<code>script</code> - 要执行的脚本。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>keys</code> - any keys that need to be passed to the script.",
+      "translation": "<code>keys</code> - 需要传递给脚本的任何键。",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - any args that need to be passed to the script.",
+      "translation": "<code>args</code> - 需要传递给脚本的任何参数。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl, John Blum",
+      "translation": "Mark Paluch，Christoph Strobl，John Blum",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "created_at": "2026-06-18 21:08:03",
+  "updated_at": "2026-06-18 21:08:03",
+  "stats": {
+    "total_entries": 33,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 33,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4242424242424243,
+    "usage_percentage": 0.0033000000000000004
+  },
+  "items": [
+    {
+      "source": "<code>predicate</code> - must not be null.",
+      "translation": "<predicate> - 不得为 null。",
+      "count": 5
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the required parameter is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果必需参数为 null。",
+      "count": 4
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> emitting the entity matching the given <code>Predicate</code> or <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a> if none was\nfound.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a>，该 Mono 发射与给定 <code>Predicate</code> 匹配的实体；若未找到匹配项，则返回 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> emitting the number of instances matching the given <code>Predicate</code>.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a>，该 Mono 发射与给定 <code>Predicate</code> 匹配的实例数量。",
+      "count": 2
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities ordered by the given <code>OrderSpecifier</code>s.",
+      "translation": "返回一个 `<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>`，该流按给定的 <code>OrderSpecifier</code>s 发出所有实体。",
+      "count": 2
+    },
+    {
+      "source": "Returns entities matching the given <code>Predicate</code> applying the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>queryFunction</code></a> that defines the\nquery and its result type.",
+      "translation": "返回与给定 <code>Predicate</code> 匹配的实体，该 <code>Predicate</code> 应用了定义查询及其结果类型的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>queryFunction</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Checks whether the data store contains elements that match the given <code>Predicate</code>.",
+      "translation": "检查数据存储是否包含与给定 <code>Predicate</code> 匹配的元素。",
+      "count": 2
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code> one by one.",
+      "translation": "一个<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，按顺序逐个发射所有匹配给定<code>Predicate</code>的实体。",
+      "count": 2
+    },
+    {
+      "source": "<code>orders</code> - the <code>OrderSpecifier</code>s to sort the results by.",
+      "translation": "<code>orders</code> - 用于排序结果的 <code>OrderSpecifier</code>。",
+      "count": 2
+    },
+    {
+      "source": "The query object used with <code>queryFunction</code> is only valid inside the <code>findBy(…)</code> method call. This\nrequires the query function to return a query result and not the <a href=\"../repository/query/FluentQuery.html\" title=\"interface in org.springframework.data.repository.query\"><code>FluentQuery</code></a> object itself to ensure the\nquery is executed inside the <code>findBy(…)</code> method.",
+      "translation": "与 `<code>queryFunction</code>` 一起使用的查询对象仅在 `<code>findBy(…)</code>` 方法调用内部有效。这要求查询函数返回查询结果，而不是 `<a href=\"../repository/query/FluentQuery.html\" title=\"interface in org.springframework.data.repository.query\"><code>FluentQuery</code></a>` 对象本身，以确保查询在 `<code>findBy(…)</code>` 方法内部执行。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Interface to issue queries using Querydsl <code>Predicate</code> instances. <br/>\nIntended for usage along with the <a href=\"../repository/reactive/ReactiveCrudRepository.html\" title=\"interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository</code></a>\ninterface to wire in <a href=\"https://http://www.querydsl.com\">Querydsl</a>support.\n\n<pre>    <code>\n\n public interface PersonRepository extends ReactiveCrudRepository&lt;Person, String&gt;, ReactiveQuerydslPredicateExecutor&lt;Person&gt; {\n\n }\n\n // ...\n\n personRepository.findOne(QPerson.person.email.eq(\"t-800@skynet.io\"))\n     .flatMap(t800 -&gt;\n     //....\n\n    </code>\n</pre>\n\n<strong>IMPORTANT:</strong> Please check the module specific documentation whether or not Querydsl is supported.",
+      "translation": "用于发出基于 Querydsl <code>Predicate</code> 实例的查询接口。<br/>\n旨在与 <a href=\"../repository/reactive/ReactiveCrudRepository.html\" title=\"interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository</code></a>\n接口配合使用，以集成 <a href=\"https://http://www.querydsl.com\">Querydsl</a>支持。\n\n<pre>    <code>\n\n public interface PersonRepository extends ReactiveCrudRepository&lt;Person, String&gt;, ReactiveQuerydslPredicateExecutor&lt;Person&gt; {\n\n }\n\n // ...\n\n personRepository.findOne(QPerson.person.email.eq(\"t-800@skynet.io\"))\n     .flatMap(t800 -&gt;\n     //....\n\n    </code>\n</pre>\n\n<strong>重要提示：</strong>请查阅特定模块的文档，以确认是否支持 Querydsl。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code> applying the given <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>.\nIn case no match could be found, <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emits no items.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该流会发射所有匹配给定 <code>Predicate</code> 的实体，并应用给定的 <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>。\n如果未找到任何匹配项，<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> 将不发射任何项目。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code> applying the given\n<code>OrderSpecifier</code>s. In case no match could be found, <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emits no items.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该流会发射所有匹配给定 <code>Predicate</code> 的实体，并应用给定的 <code>OrderSpecifier</code>s。如果未找到任何匹配项，<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> 将不发射任何项目。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code> applying the given <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 会发射所有匹配给定 <code>Predicate</code> 的实体，并应用给定的 <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code>. In case no match could be found,\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emits no items.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该流会发出所有匹配给定 <code>Predicate</code> 的实体。如果未找到任何匹配项，\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> 将不发出任何项目。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code> applying the given\n<code>OrderSpecifier</code>s.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 会发射所有匹配给定 <code>Predicate</code> 的实体，并应用给定的 <code>OrderSpecifier</code>s。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code>.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，该 Flux 会发出所有匹配给定 <code>Predicate</code> 的实体。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> emitting a single entity matching the given <code>Predicate</code> or <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a> if\n        none was found.",
+      "translation": "发射单个与给定 <code>Predicate</code> 匹配实体的<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a>，若未找到则发射<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>sort</code> - the <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> specification to sort the results by, may be <a href=\"../domain/Sort.html#unsorted()\"><code>Sort.unsorted()</code></a>, must not be\n         null.",
+      "translation": "<code>sort</code> - 用于对结果进行排序的 <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> 规范，可以是 <a href=\"../domain/Sort.html#unsorted()\"><code>Sort.unsorted()</code></a>，但绝不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities matching the given <code>Predicate</code> applying the given\n        <code>OrderSpecifier</code>s.",
+      "translation": "一个<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>，它发射所有匹配给定<code>Predicate</code>的实体，并应用给定的<code>OrderSpecifier</code>s。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> emitting the number of instances matching the <code>Predicate</code> or <code>0</code> if none found.",
+      "translation": "一个<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a>，用于发射匹配<code>Predicate</code>的实例数量；若未找到任何匹配项，则发射<code>0</code>。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting all entities ordered by the given <code>OrderSpecifier</code>s.",
+      "translation": "一个发出所有实体并按给定<code>OrderSpecifier</code>排序的<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - one of the <code>OrderSpecifiers</code> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 其中一个 <code>OrderSpecifiers</code> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> emitting true if the data store contains elements that match the given\n        <code>Predicate</code>, false otherwise.",
+      "translation": "一个<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a>，如果数据源包含与给定<code>Predicate</code>匹配的元素则发射 true，否则发射 false。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - if the predicate yields more than one\n          result.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - 如果谓词返回了多个结果。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if one of the required parameters is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果必需参数之一为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if one of the required parameter is null, or contains a null\n          value.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果必需的参数之一为 null，或包含 null 值。",
+      "count": 1
+    },
+    {
+      "source": "<code>predicate</code> - the <code>Predicate</code> to count instances for, must not be null.",
+      "translation": "<predicate> - 用于计数的 <code>Predicate</code>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>predicate</code> - the <code>Predicate</code> to use for the existence check, must not be null.",
+      "translation": "<predicate</p> - 用于存在性检查的<Predicate>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>queryFunction</code> - the query function defining projection, sorting, and the result type",
+      "translation": "<code>queryFunction</code> - 定义投影、排序和结果类型的查询函数",
+      "count": 1
+    },
+    {
+      "source": "all entities matching the given <code>Predicate</code>.",
+      "translation": "所有匹配给定 <code>Predicate</code> 的实体。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl",
+      "translation": "马克·帕卢赫，克里斯托夫·施特罗布",
+      "count": 1
+    }
+  ]
+}

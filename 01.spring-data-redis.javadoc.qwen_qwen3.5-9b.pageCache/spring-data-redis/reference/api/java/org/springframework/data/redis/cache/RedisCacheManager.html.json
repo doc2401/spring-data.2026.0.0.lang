@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-06-19 07:54:36",
+  "updated_at": "2026-06-19 07:54:36",
+  "stats": {
+    "total_entries": 47,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 81,
+    "entries_with_hits": 47,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7234042553191489,
+    "usage_percentage": 0.004699999999999999
+  },
+  "items": [
+    {
+      "source": "<code>cacheWriter</code> - <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> used to perform <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> operations by executing appropriate\n         Redis commands; must not be null.",
+      "translation": "<code>cacheWriter</code> - 用于通过执行适当的 Redis 命令来执行 <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> 操作的 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a>；不能为 null。",
+      "count": 6
+    },
+    {
+      "source": "<code>defaultCacheConfiguration</code> - <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> applied to new <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> by\n         default when no cache-specific <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> is provided; must not be null.",
+      "translation": "<code>defaultCacheConfiguration</code> - 当未提供特定缓存的<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>时，默认应用于新创建的<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a>；该值不得为 null。",
+      "count": 5
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if either the given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> or <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>\n          are null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 如果给定的 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> 或 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> 为 null。",
+      "count": 5
+    },
+    {
+      "source": "Allows <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>cache</code></a> creation at runtime.",
+      "translation": "支持在运行时创建<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>cache</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Additionally, an initial <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> will be created and configured using the associated\n<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> for each <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>named</code></a> <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> in the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
+      "translation": "此外，对于给定 Map 中的每个命名 RedisCache，将使用关联的 RedisCacheConfiguration 创建一个并配置初始 <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> initialized with the given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> and a default\n<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> along with an optional, initial set of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>cache names</code></a> used to create\n<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> on startup.",
+      "translation": "创建一个使用给定的 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> 和默认 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> 初始化的新 <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>，以及一个可选的初始 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>缓存名称</code></a> 集合，用于在启动时创建 <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis 缓存</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> initialized with the given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> and a default\n<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>, and whether to allow <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> creation at runtime.",
+      "translation": "创建一个使用给定的<a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a>和默认<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>初始化的新<a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>，以及是否允许在运行时创建<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html#unmodifiableMap(java.util.Map)\" title=\"class or interface in java.util\"><code>unmodifiable Map</code></a> containing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>caches name</code></a> mapped to\nthe <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>configuration</code></a>.",
+      "translation": "返回一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html#unmodifiableMap(java.util.Map)\" title=\"class or interface in java.util\"><code>不可变 Map</code></a>，其中包含对<caches name</code></a>的映射，该映射指向\n<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> 的 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>配置</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Gets a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>cache names</code></a> to <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> objects as the initial set of\n<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> to create on startup.",
+      "translation": "获取一个将 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 映射到 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> 对象的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>cache names</code></a>，作为启动时创建的初始 <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> 集合。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> initialized with the given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> and default\n<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>.",
+      "translation": "创建一个使用给定的 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> 和默认 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> 初始化的新 <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> initialized with the given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> and default\n<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> along with whether to allow cache creation at runtime.",
+      "translation": "创建一个使用给定的 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> 和默认 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> 初始化的新 <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>，以及是否允许在运行时创建缓存。",
+      "count": 2
+    },
+    {
+      "source": "Creates new <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> using given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> and default\n<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>.",
+      "translation": "使用给定的 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> 和默认的 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> 创建新的 <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> with given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>name</code></a> and <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>.",
+      "translation": "创建一个具有给定<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"类或接口在 java.lang\"><code>name</code></a>和<a href=\"RedisCacheConfiguration.html\" title=\"类在 org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>的新的<a href=\"RedisCache.html\" title=\"org.springframework.data.redis.cache 中的类\"><code>RedisCache</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Gets the default <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> applied to new <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> instances on creation when\ncustom, non-specific <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> was not provided.",
+      "translation": "在创建新的<a href=\"RedisCache.html\" title=\"类 org.springframework.data.redis.cache.RedisCache\"><code>RedisCache</code></a>实例时，获取默认应用的<a href=\"RedisCacheConfiguration.html\" title=\"类 org.springframework.data.redis.cache.RedisCacheConfiguration\"><code>RedisCacheConfiguration</code></a>，前提是未提供自定义的、非特定的<a href=\"RedisCacheConfiguration.html\" title=\"类 org.springframework.data.redis.cache.RedisCacheConfiguration\"><code>RedisCacheConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Factory method returning a Builder used to construct and configure a <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>\ninitialized with the given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a>.",
+      "translation": "返回一个构建器，用于构造和配置 <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>，该管理器已使用给定的 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> 进行初始化。",
+      "count": 2
+    },
+    {
+      "source": "Factory method returning a Builder used to construct and configure a <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>\ninitialized with the given <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a>.",
+      "translation": "工厂方法返回一个构建器，用于构建和配置 <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>，该管理器已使用给定的 <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> 进行初始化。",
+      "count": 2
+    },
+    {
+      "source": "Returns a reference to the configured <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> used to perform <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> operations, such\nas reading from and writing to the cache.",
+      "translation": "返回一个对配置的<a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a>的引用，该对象用于执行<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>操作，例如从缓存中读取和写入数据。",
+      "count": 2
+    },
+    {
+      "source": "Factory method returning a Builder used to construct and configure a <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>.",
+      "translation": "工厂方法返回一个构建器，用于构建和配置<a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Determines whether <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> are allowed to be created at runtime.",
+      "translation": "确定是否允许在运行时创建<a href=\"RedisCache.html\" title=\"org.springframework.data.redis.cache 中的类\"><code>RedisCaches</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>initialCacheNames</code> - optional set of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>cache names</code></a> used to create <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a>\n         on startup. The default <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> will be applied to each cache.",
+      "translation": "<code>initialCacheNames</code> - 可选的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>缓存名称</code></a>集合，用于在启动时创建<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis 缓存</code></a>。每个缓存将应用默认的<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>connectionFactory</code> - <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> used by the <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> to acquire\n         connections to Redis when performing <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> operations; must not be null.",
+      "translation": "<code>connectionFactory</code> - 由 <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> 使用的连接工厂，供 <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> 在执行 <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> 操作时获取与 Redis 的连接；该值不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the given <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果给定的 <a href=\"../connection/RedisConnectionFactory.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>RedisConnectionFactory</code></a> 为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>allowRuntimeCacheCreation</code> - boolean specifying whether to allow creation of undeclared caches at runtime;\n         true by default. Maybe just use <a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>RedisCacheConfiguration.defaultCacheConfig()</code></a>.",
+      "translation": "<code>allowRuntimeCacheCreation</code> - 布尔值，指定是否允许在运行时创建未声明的缓存；默认为 true。或许可以直接使用 <a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>RedisCacheConfiguration.defaultCacheConfig()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>Caches</code></a> requiring a different <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>cache configuration</code></a> than the\n<a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>default cache configuration</code></a> can be specified via\n<a href=\"RedisCacheManager.RedisCacheManagerBuilder.html#withInitialCacheConfigurations(java.util.Map)\"><code>RedisCacheManager.RedisCacheManagerBuilder.withInitialCacheConfigurations(Map)</code></a> or individually using\n<a href=\"RedisCacheManager.RedisCacheManagerBuilder.html#withCacheConfiguration(java.lang.String,org.springframework.data.redis.cache.RedisCacheConfiguration)\"><code>RedisCacheManager.RedisCacheManagerBuilder.withCacheConfiguration(String, RedisCacheConfiguration)</code></a>.",
+      "translation": "需要不同于<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>默认缓存配置</code></a>的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>Caches</code></a>，可以通过<a href=\"RedisCacheManager.RedisCacheManagerBuilder.html#withInitialCacheConfigurations(java.util.Map)\"><code>RedisCacheManager.RedisCacheManagerBuilder.withInitialCacheConfigurations(Map)</code></a>指定，或者使用<a href=\"RedisCacheManager.RedisCacheManagerBuilder.html#withCacheConfiguration(java.lang.String,org.springframework.data.redis.cache.RedisCacheConfiguration)\"><code>RedisCacheManager.RedisCacheManagerBuilder.withCacheConfiguration(String, RedisCacheConfiguration)</code></a>单独配置。",
+      "count": 1
+    },
+    {
+      "source": "This <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html\" title=\"class or interface in org.springframework.cache\"><code>CacheManager</code></a> creates <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>caches</code></a> on first write, by default. Empty <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>caches</code></a> are not\nvisible in Redis due to how Redis represents empty data structures.",
+      "translation": "默认情况下，<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html\" title=\"class or interface in org.springframework.cache\"><code>CacheManager</code></a> 会在首次写入时创建 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>caches</code></a>。由于 Redis 表示空数据结构的方式，空的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>caches</code></a> 在 Redis 中不可见。",
+      "count": 1
+    },
+    {
+      "source": "Additionally, the optional, initial set of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>cache names</code></a> will be used to create <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> on startup.",
+      "translation": "此外，可选的初始<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>缓存名称</code></a>将在启动时用于创建<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis 缓存</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Factory method used to construct a new <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> initialized with the given\n<a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> and using <a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>defaults</code></a> for caching.\n<dl>\n<dt>locking</dt>\n<dd>disabled</dd>\n<dt>batch strategy</dt>\n<dd><a href=\"BatchStrategies.html#keys()\"><code>BatchStrategies.keys()</code></a></dd>\n<dt>cache configuration</dt>\n<dd><a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>RedisCacheConfiguration.defaultCacheConfig()</code></a></dd>\n<dt>initial caches</dt>\n<dd>none</dd>\n<dt>transaction aware</dt>\n<dd>no</dd>\n<dt>in-flight cache creation</dt>\n<dd>enabled</dd>\n</dl>",
+      "translation": "工厂方法用于构建一个新的<a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>，该管理器使用给定的<a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a>进行初始化，并采用<a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>defaults</code></a>作为缓存配置。\n<dl>\n<dt>锁定</dt>\n<dd>已禁用</dd>\n<dt>批处理策略</dt>\n<dd><a href=\"BatchStrategies.html#keys()\"><code>BatchStrategies.keys()</code></a></dd>\n<dt>缓存配置</dt>\n<dd><a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>RedisCacheConfiguration.defaultCacheConfig()</code></a></dd>\n<dt>初始缓存</dt>\n<dd>无</dd>\n<dt>事务感知</dt>\n<dd>否</dd>\n<dt>飞行中缓存创建</dt>\n<dd>已启用</dd>\n</dl>",
+      "count": 1
+    },
+    {
+      "source": "Factory method used to construct a new <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a> initialized with the given\n<a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> and using <a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>defaults</code></a> for caching.",
+      "translation": "工厂方法用于构建一个新的<a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>，该管理器使用给定的<a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a>进行初始化，并采用<a href=\"RedisCacheConfiguration.html#defaultCacheConfig()\"><code>defaults</code></a>作为缓存配置。",
+      "count": 1
+    },
+    {
+      "source": "Builder for creating a <a href=\"RedisCacheManager.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheManager</code></a>.",
+      "translation": "用于创建<a href=\"RedisCacheManager.html\" title=\"org.springframework.data.redis.cache 中的类\"><code>RedisCacheManager</code></a>的构建器。",
+      "count": 1
+    },
+    {
+      "source": "<code>initialCacheConfigurations</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> of declared, known <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>cache names</code></a> along with associated\n         <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> used to create and configure <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Reds caches</code></a> on startup;\n         must not be null.",
+      "translation": "<code>initialCacheConfigurations</code> - 声明的已知<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，其中包含<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>缓存名称</code></a>及其关联的\n         <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>，该配置用于在启动时创建和配置<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis 缓存</code></a>；\n         不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>initialCacheConfigurations</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> of declared, known <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>cache names</code></a> along with the\n         associated <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> used to create and configure <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> on\n         startup; must not be null.",
+      "translation": "<code>initialCacheConfigurations</code> - 声明的已知<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，其中包含<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>缓存名称</code></a>及其在启动时用于创建和配置<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis 缓存</code></a>的关联<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>；该参数不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>cacheConfiguration</code> - <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a> used to configure the <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>; resolves to the\n         <a href=\"#getDefaultCacheConfiguration()\"><code>getDefaultCacheConfiguration()</code></a> if null.",
+      "translation": "<code>cacheConfiguration</code> - 用于配置 <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> 的 <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>；若为 null，则解析为\n         <a href=\"#getDefaultCacheConfiguration()\"><code>getDefaultCacheConfiguration()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>name</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>name</code></a> for the <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>; must not be null.",
+      "translation": "<code>name</code> - 对应于<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>name</code></a>的<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the given <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果给定的 <a href=\"RedisCacheWriter.html\" title=\"org.springframework.data.redis.cache 中的接口\"><code>RedisCacheWriter</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html#resetCaches()\" title=\"class or interface in org.springframework.cache\">resetCaches</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html\" title=\"class or interface in org.springframework.cache\">CacheManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html#resetCaches()\" title=\"类或接口 org.springframework.cache\">resetCaches</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html\" title=\"类或接口 org.springframework.cache\">CacheManager</a></code> 中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html#resetCaches()\" title=\"class or interface in org.springframework.cache.support\">resetCaches</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html\" title=\"class or interface in org.springframework.cache.support\">AbstractCacheManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html#resetCaches()\" title=\"类或接口 org.springframework.cache.support\">resetCaches</a></code> 位于类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html\" title=\"类或接口 org.springframework.cache.support\">AbstractCacheManager</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html#getMissingCache(java.lang.String)\" title=\"class or interface in org.springframework.cache.support\">getMissingCache</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html\" title=\"class or interface in org.springframework.cache.support\">AbstractCacheManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html#getMissingCache(java.lang.String)\" title=\"类或接口 org.springframework.cache.support\">getMissingCache</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html\" title=\"类或接口 org.springframework.cache.support\">AbstractCacheManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html#loadCaches()\" title=\"class or interface in org.springframework.cache.support\">loadCaches</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html\" title=\"class or interface in org.springframework.cache.support\">AbstractCacheManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html#loadCaches()\" title=\"类或接口 org.springframework.cache.support\">loadCaches</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/support/AbstractCacheManager.html\" title=\"类或接口 org.springframework.cache.support\">AbstractCacheManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "a boolean value indicating whether <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis caches</code></a> are allowed to be created at runtime.",
+      "translation": "一个布尔值，指示是否允许在运行时创建<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>Redis 缓存</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the default <a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>.",
+      "translation": "默认值为<a href=\"RedisCacheConfiguration.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCacheConfiguration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a reference to the configured <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a>.",
+      "translation": "对已配置的<a href=\"RedisCacheWriter.html\" title=\"org.springframework.data.redis.cache 中的接口\"><code>RedisCacheWriter</code></a>的引用。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> instance; never null.",
+      "translation": "一个新的<a href=\"RedisCache.html\" title=\"org.springframework.data.redis.cache 中的类\"><code>RedisCache</code></a>实例；绝不返回 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch, Yanming Zhou, John Blum",
+      "translation": "Christoph Strobl，Mark Paluch，Yanming Zhou，John Blum",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html\" title=\"class or interface in org.springframework.cache\"><code>CacheManager</code></a> implementation for Redis backed by <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>.",
+      "translation": "由 <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> 支持的、基于 Redis 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/CacheManager.html\" title=\"class or interface in org.springframework.cache\"><code>CacheManager</code></a>实现。",
+      "count": 1
+    }
+  ]
+}

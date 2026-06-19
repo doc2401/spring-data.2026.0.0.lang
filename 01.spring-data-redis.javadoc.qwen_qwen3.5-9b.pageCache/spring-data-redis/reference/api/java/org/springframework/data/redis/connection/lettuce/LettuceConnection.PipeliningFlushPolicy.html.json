@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-06-19 10:01:38",
+  "updated_at": "2026-06-19 10:01:38",
+  "stats": {
+    "total_entries": 10,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 13,
+    "entries_with_hits": 10,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3,
+    "usage_percentage": 0.001
+  },
+  "items": [
+    {
+      "source": "Return a policy to flush only if <a href=\"LettuceConnection.html#closePipeline()\"><code>LettuceConnection.closePipeline()</code></a> is called.",
+      "translation": "仅在调用<a href=\"LettuceConnection.html#closePipeline()\"><code>LettuceConnection.closePipeline()</code></a>时返回用于刷新的策略。",
+      "count": 2
+    },
+    {
+      "source": "Return a policy to flush after each command (default behavior).",
+      "translation": "返回在每条命令后执行刷新的策略（默认行为）。",
+      "count": 2
+    },
+    {
+      "source": "a policy to flush after each command.",
+      "translation": "每条命令后执行刷新的策略。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Return a policy to buffer commands and to flush once reaching the configured <code>bufferSize</code>. The buffer is\nrecurring so a buffer size of e.g. <code>2</code> will flush after 2, 4, 6, … commands.",
+      "translation": "返回一个用于缓冲命令的策略，并在达到配置的<code>bufferSize</code>时进行刷新。该缓冲区是循环的，因此例如将缓冲区大小设置为<code>2</code>后，将在第 2、4、6……个命令执行后进行刷新。",
+      "count": 1
+    },
+    {
+      "source": "Return a policy to buffer commands and to flush once reaching the configured <code>bufferSize</code>.",
+      "translation": "返回一个策略，用于缓冲命令并在达到配置的<code>bufferSize</code>时进行刷新。",
+      "count": 1
+    },
+    {
+      "source": "Strategy interface to control pipelining flush behavior. Lettuce writes (flushes) each command individually to the\nRedis connection. Flushing behavior can be customized to optimize for performance. Flushing can be either stateless\nor stateful. An example for stateful flushing is size-based (buffer) flushing to flush after a configured number of\ncommands.",
+      "translation": "用于控制流水线刷新行为的策略接口。Lettuce 会逐个将命令写入 Redis 连接并进行刷新。刷新行为可自定义以优化性能。刷新可以是无状态的，也可以是有状态的。有状态刷新的示例包括基于大小（缓冲区）的刷新，即在配置数量的命令后执行刷新。",
+      "count": 1
+    },
+    {
+      "source": "<code>bufferSize</code> - the number of commands to buffer before flushing. Must be greater than zero.",
+      "translation": "<code>bufferSize</code> - 在刷新之前要缓冲的命令数量。必须大于零。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "a policy to flush buffered commands to the Redis connection once the configured number of commands was\n        issued.",
+      "translation": "一项策略，用于在发出配置数量的命令后，将缓冲的命令刷新到 Redis 连接中。",
+      "count": 1
+    }
+  ]
+}

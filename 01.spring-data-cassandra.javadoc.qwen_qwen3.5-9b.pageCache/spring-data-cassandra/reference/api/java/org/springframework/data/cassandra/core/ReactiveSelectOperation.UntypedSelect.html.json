@@ -1,31 +1,51 @@
 {
   "created_at": "2026-06-16 16:21:45",
-  "updated_at": "2026-06-16 16:21:45",
+  "updated_at": "2026-06-18 07:41:52",
   "stats": {
-    "total_entries": 23,
+    "total_entries": 34,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 25,
-    "entries_with_hits": 23,
+    "total_hits": 44,
+    "entries_with_hits": 34,
     "entries_without_hits": 0,
-    "hit_rate": 1.0869565217391304,
-    "usage_percentage": 0.0023
+    "hit_rate": 1.2941176470588236,
+    "usage_percentage": 0.0034
   },
   "items": [
     {
       "source": "Define the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>result target type</code></a> that the Cassandra Row fields should be mapped to.",
       "translation": "定义 Cassandra 行字段应映射到的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>结果目标类型</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Configure a <a href=\"cql/RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> that maps the Cassandra Row to a result type.",
       "translation": "配置一个<a href=\"cql/RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowMapper</code></a>，用于将 Cassandra 行映射到结果类型。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "new instance of <a href=\"ReactiveSelectOperation.TerminatingResults.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveSelectOperation.TerminatingResults</code></a>.",
+      "translation": "创建 <a href=\"ReactiveSelectOperation.TerminatingResults.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveSelectOperation.TerminatingResults</code></a> 的新实例。",
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Configure a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>mapping function</code></a> that maps the Cassandra Row to a result type. This is a simplified\nvariant of <a href=\"#map(org.springframework.data.cassandra.core.cql.RowMapper)\"><code>map(RowMapper)</code></a>.",
+      "translation": "配置一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>映射函数</code></a>，将 Cassandra 行（Row）映射为结果类型。这是 <a href=\"#map(org.springframework.data.cassandra.core.cql.RowMapper)\"><code>map(RowMapper)</code></a> 的简化版本。",
+      "count": 2
+    },
+    {
+      "source": "Configure a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>mapping function</code></a> that maps the Cassandra Row to a result type.",
+      "translation": "配置一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>映射函数</code></a>，将 Cassandra 行映射为结果类型。",
+      "count": 2
+    },
+    {
+      "source": "Select query that is not yet associated with a result type.",
+      "translation": "尚未关联结果类型的查询。",
+      "count": 2
     },
     {
       "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/lang/Contract.html\" title=\"class or interface in org.springframework.lang\">@Contract</a>(\"_ -&gt; new\")\n</span><span class=\"modifiers\">default</span> <span class=\"type-parameters\">&lt;T&gt;</span>\n<span class=\"return-type\"><a href=\"ReactiveSelectOperation.TerminatingResults.html\" title=\"interface in org.springframework.data.cassandra.core\">ReactiveSelectOperation.TerminatingResults</a>&lt;T&gt;</span> <span class=\"element-name\">map</span><wbr/><span class=\"parameters\">(<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\">Function</a>&lt;com.datastax.oss.driver.api.core.cql.Row, ? extends T&gt; mapper)</span>",
@@ -38,18 +58,8 @@
       "count": 1
     },
     {
-      "source": "Configure a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>mapping function</code></a> that maps the Cassandra Row to a result type. This is a simplified\nvariant of <a href=\"#map(org.springframework.data.cassandra.core.cql.RowMapper)\"><code>map(RowMapper)</code></a>.",
-      "translation": "配置一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>映射函数</code></a>，将 Cassandra 行（Row）映射为结果类型。这是 <a href=\"#map(org.springframework.data.cassandra.core.cql.RowMapper)\"><code>map(RowMapper)</code></a> 的简化版本。",
-      "count": 1
-    },
-    {
       "source": "<span class=\"modifiers\">public static interface </span><span class=\"element-name type-name-label\">ReactiveSelectOperation.UntypedSelect</span>",
       "translation": "<span class=\"modifiers\">public static interface </span><span class=\"element-name type-name-label\">ReactiveSelectOperation.UntypedSelect</span>",
-      "count": 1
-    },
-    {
-      "source": "Configure a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>mapping function</code></a> that maps the Cassandra Row to a result type.",
-      "translation": "配置一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>映射函数</code></a>，将 Cassandra 行映射为结果类型。",
       "count": 1
     },
     {
@@ -65,11 +75,6 @@
     {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Select query that is not yet associated with a result type.",
-      "translation": "尚未关联结果类型的查询。",
       "count": 1
     },
     {
@@ -125,6 +130,56 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"as(java.lang.Class)-type-param-T\"><code>T</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the result.</span>",
+      "translation": "<span id=\"as(java.lang.Class)-type-param-T\"><code>T</code> - 结果的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>类型</code></a>。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>resultType</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>resultType</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"map(java.util.function.Function)-type-param-T\"><code>T</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the result.</span>",
+      "translation": "<span id=\"map(java.util.function.Function)-type-param-T\"><code>T</code> - 结果的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>类型</code></a>。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>mapper</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"java.util.function 中的类或接口\"><code>mapper</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"map(org.springframework.data.cassandra.core.cql.RowMapper)-type-param-T\"><code>T</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the result.</span>",
+      "translation": "<span id=\"map(org.springframework.data.cassandra.core.cql.RowMapper)-type-param-T\"><code>T</code> - 结果的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>类型</code></a>。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a href=\"cql/RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>mapper</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a href=\"cql/RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>mapper</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>resultType</code> - result type; must not be null.",
+      "translation": "<code>resultType</code> - 结果类型；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>mapper</code> - row mapping function; must not be null.",
+      "translation": "<code>mapper</code> - 行映射函数；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>mapper</code> - the row mapper; must not be null.",
+      "translation": "<code>mapper</code> - 行映射器；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, John Blum",
+      "translation": "马克·帕卢赫，约翰·布鲁姆",
       "count": 1
     }
   ]

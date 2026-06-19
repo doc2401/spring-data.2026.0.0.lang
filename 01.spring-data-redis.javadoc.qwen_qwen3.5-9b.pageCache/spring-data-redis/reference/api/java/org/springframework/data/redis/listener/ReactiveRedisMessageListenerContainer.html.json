@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-06-19 09:03:19",
+  "updated_at": "2026-06-19 09:03:19",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 61,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.7428571428571429,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "the message stream.",
+      "translation": "消息流。",
+      "count": 8
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>Topic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a>.",
+      "translation": "订阅一个或多个<a href=\"Topic.html\" title=\"org.springframework.data.redis.listener 中的接口\"><code>Topic</code></a>，即可接收<code>ReactiveSubscription.ChannelMessage</code><a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"org.springframework.data.redis.connection 中的类\"></a>流。",
+      "count": 4
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"class or interface in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - if <code>patternTopics</code> is empty.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"org.springframework.dao 中的类或接口\">InvalidDataAccessApiUsageException</a></code> - 如果 <code>patternTopics</code> 为空。",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"class or interface in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - if <code>topics</code> is empty.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"class or interface in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - 如果 <code>topics</code> 为空。",
+      "count": 3
+    },
+    {
+      "source": "The returned <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> completes once the connection has been subscribed to the given <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>topics</code></a>. Note\nthat cancelling the returned <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> can leave the connection in a subscribed state.",
+      "translation": "返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> 会在订阅给定的 <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>topics</code></a> 的连接完成后完成。请注意，取消返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> 可能会使连接处于已订阅状态。",
+      "count": 2
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>Topic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a>. The stream may contain\n<a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a> if subscribed to patterns. Messages, and channel names are serialized/deserialized using the\ngiven <code>channelSerializer</code> and <code>messageSerializer</code>. The message stream subscribes lazily to the Redis\nchannels and unsubscribes if the <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> is\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a>.",
+      "translation": "订阅一个或多个 <a href=\"Topic.html\" title=\"org.springframework.data.redis.listener 中的接口\"><code>Topic</code></a>，即可接收 <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveSubscription.ChannelMessage</code></a> 的流。如果订阅了模式（patterns），该流还可能包含 <a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveSubscription.PatternMessage</code></a>。消息和频道名称将使用给定的 <code>channelSerializer</code> 和 <code>messageSerializer</code> 进行序列化/反序列化。消息流会懒式地订阅 Redis 频道，并在 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"org.reactivestreams 中的类或接口\"><code>Subscription</code></a> 被\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"org.reactivestreams 中的类或接口\"><code>cancelled</code></a> 时取消订阅。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"ReactiveRedisMessageListenerContainer.html\" title=\"class in org.springframework.data.redis.listener\"><code>ReactiveRedisMessageListenerContainer</code></a> given <a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a>.",
+      "translation": "根据 <a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"接口在 org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a> 创建一个新的 <a href=\"ReactiveRedisMessageListenerContainer.html\" title=\"类在 org.springframework.data.redis.listener\"><code>ReactiveRedisMessageListenerContainer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return the currently active <a href=\"../connection/ReactiveSubscription.html\" title=\"interface in org.springframework.data.redis.connection\"><code>subscriptions</code></a>.",
+      "translation": "返回当前活动的<a href=\"../connection/ReactiveSubscription.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>subscriptions</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"class or interface in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - if <code>channelTopics</code> is empty.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"class or interface in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - 如果 <code>channelTopics</code> 为空。",
+      "count": 2
+    },
+    {
+      "source": "<code>channelTopics</code> - the channels to subscribe.",
+      "translation": "<code>channelTopics</code> - 要订阅的频道。",
+      "count": 2
+    },
+    {
+      "source": "<code>patternTopics</code> - the channels to subscribe.",
+      "translation": "<code>patternTopics</code> - 要订阅的频道。",
+      "count": 2
+    },
+    {
+      "source": "<code>topics</code> - the channels/patterns to subscribe.",
+      "translation": "<code>topics</code> - 要订阅的频道/模式。",
+      "count": 2
+    },
+    {
+      "source": "<code>subscriptionListener</code> - listener to receive subscription/unsubscription notifications.",
+      "translation": "<code>subscriptionListener</code> - 用于接收订阅/取消订阅通知的监听器。",
+      "count": 2
+    },
+    {
+      "source": "<code>topics</code> - the channels to subscribe.",
+      "translation": "<code>topics</code> - 要订阅的频道。",
+      "count": 2
+    },
+    {
+      "source": "<code>channelSerializer</code> - serialization pair to decode the channel/pattern name.",
+      "translation": "<code>channelSerializer</code> - 用于解码通道/模式名称的序列化对。",
+      "count": 2
+    },
+    {
+      "source": "<code>messageSerializer</code> - serialization pair to decode the message body.",
+      "translation": "<code>messageSerializer</code> - 用于解码消息体的序列化对。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Note the container allocates a single connection when it is created and releases the connection on\n<a href=\"#destroy()\"><code>destroy()</code></a>. Connections are allocated eagerly to not interfere with non-blocking use during application\noperations. Using reactive infrastructure allows usage of a single connection due to channel multiplexing.",
+      "translation": "容器在创建时分配单个连接，并在调用<a href=\"#destroy()\"><code>destroy()</code></a>时释放该连接。为避免干扰应用程序操作期间的非阻塞使用，连接采用急切分配策略。借助反应式基础设施的通道多路复用功能，仅需一个连接即可满足需求。",
+      "count": 1
+    },
+    {
+      "source": "This class is thread-safe and allows subscription by multiple concurrent threads.",
+      "translation": "该类是线程安全的，允许多个并发线程进行订阅。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>Topic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a>. The stream may contain\n<a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a> if subscribed to patterns. Messages, and channel names are serialized/deserialized using the\ngiven <code>channelSerializer</code> and <code>messageSerializer</code>. The message stream subscribes lazily to the Redis\nchannels and unsubscribes if the <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> is\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a>. <a href=\"../connection/SubscriptionListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>SubscriptionListener</code></a> is notified upon\nsubscription/unsubscription and can be used for synchronization.",
+      "translation": "订阅一个或多个<a href=\"Topic.html\" title=\"org.springframework.data.redis.listener 中的接口\"><code>Topic</code></a>，即可接收由<a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveSubscription.ChannelMessage</code></a>组成的消息流。如果订阅了模式（patterns），该流中还可能包含<a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveSubscription.PatternMessage</code></a>。消息和频道名称的序列化与反序列化由给定的<code>channelSerializer</code>和<code>messageSerializer</code>处理。消息流会懒式地订阅 Redis 频道，并在<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"org.reactivestreams 中的类或接口\"><code>Subscription</code></a>被<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"org.reactivestreams 中的类或接口\"><code>cancelled</code></a>时取消订阅。<a href=\"../connection/SubscriptionListener.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>SubscriptionListener</code></a>会在订阅/取消订阅时被通知，可用于同步操作。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a>. Messages and channel\nnames are treated as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>. The message stream subscribes lazily to the Redis channels and unsubscribes if\nthe <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> is <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a>.",
+      "translation": "订阅一个或多个 <a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>，即可接收 <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a> 的消息流。消息和频道名称均被视为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。该消息流会懒式订阅 Redis 频道，并在 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> 被 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a> 时取消订阅。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a>. Messages, pattern,\nand channel names are treated as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>. The message stream subscribes lazily to the Redis channels and\nunsubscribes if the <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> is <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a>.",
+      "translation": "订阅一个或多个<a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>，即可接收<code>ReactiveSubscription.PatternMessage</code>的消息流。消息、模式及频道名称均被视为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>类型。该消息流会懒式订阅 Redis 频道，并在<code>Subscription</code>被<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a>时取消订阅。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>Topic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a>. The returned <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a>\ncompletes once the connection has been subscribed to the given <a href=\"Topic.html\" title=\"interface in org.springframework.data.redis.listener\"><code>topics</code></a>. Note that cancelling the\nreturned <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> can leave the connection in a subscribed state.",
+      "translation": "订阅一个或多个 <a href=\"Topic.html\" title=\"org.springframework.data.redis.listener 中的接口\"><code>Topic</code></a>，并接收 <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"org.springframework.data.redis.connection 中的类\"><code>ReactiveSubscription.ChannelMessage</code></a> 流。返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"reactor.core.publisher 中的类或接口\"><code>Mono</code></a>\n将在已订阅给定的 <a href=\"Topic.html\" title=\"org.springframework.data.redis.listener 中的接口\"><code>topics</code></a> 的连接完成后完成。请注意，取消返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"reactor.core.publisher 中的类或接口\"><code>Mono</code></a> 可能会导致连接仍处于订阅状态。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a> once the returned\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> completes.",
+      "translation": "订阅一个或多个 <a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>，并在返回的\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> 完成后接收 <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a> 流。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a> once the returned\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> completes.",
+      "translation": "订阅一个或多个 <a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>，并在返回的\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> 完成后接收 <a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a> 流。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a>.",
+      "translation": "订阅一个或多个<a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>，并接收<code>ReactiveSubscription.ChannelMessage</code>的流。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a>.",
+      "translation": "订阅一个或多个<a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>，并接收<code>ReactiveSubscription.PatternMessage</code>的流。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html#destroy()\" title=\"class or interface in org.springframework.beans.factory\">destroy</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html\" title=\"class or interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html#destroy()\" title=\"class or interface in org.springframework.beans.factory\">destroy</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html\" title=\"class or interface in org.springframework.beans.factory\">DisposableBean</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html\" title=\"class or interface in java.util\"><code>Set</code></a> of active <a href=\"../connection/ReactiveSubscription.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveSubscription</code></a>",
+      "translation": "包含处于活动状态的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html\" title=\"class or interface in java.util\"><code>Set</code></a>的<a href=\"../connection/ReactiveSubscription.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveSubscription</code></a>",
+      "count": 1
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> signalling container termination.",
+      "translation": "发出容器终止信号的<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>connectionFactory</code> - must not be null.",
+      "translation": "<code>connectionFactory</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl",
+      "translation": "Mark Paluch，Christoph Strobl",
+      "count": 1
+    },
+    {
+      "source": "Container providing a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a> for messages received via Redis Pub/Sub listeners. The stream\nis infinite and registers Redis subscriptions. Handles the low level details of listening, converting and message\ndispatching.",
+      "translation": "提供通过 Redis Pub/Sub 监听器接收的消息的 <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a> 流。该流是无限的，并注册 Redis 订阅。它处理监听、转换和消息分发的底层细节。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a> once the returned\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> completes. Messages and channel names are treated as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>. The message stream subscribes\nlazily to the Redis channels and unsubscribes if the inner <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> is\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a>.",
+      "translation": "订阅一个或多个 <a href=\"ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>，并在返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> 完成后接收 <a href=\"../connection/ReactiveSubscription.ChannelMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.ChannelMessage</code></a> 的消息流。消息和频道名称均被视为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。该消息流会懒式订阅 Redis 频道，并在内部 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> 被 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a> 时取消订阅。",
+      "count": 1
+    },
+    {
+      "source": "Subscribe to one or more <a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>s and receive a stream of <a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a> once the returned\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> completes. Messages, pattern, and channel names are treated as <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>. The message stream\nsubscribes lazily to the Redis channels and unsubscribes if the inner <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> is\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a>.",
+      "translation": "订阅一个或多个 <a href=\"PatternTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>PatternTopic</code></a>，并在返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\"><code>Mono</code></a> 完成后接收 <a href=\"../connection/ReactiveSubscription.PatternMessage.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveSubscription.PatternMessage</code></a> 的消息流。消息、模式和通道名称均被视为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。该消息流会懒订阅 Redis 通道，并在内部 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> 被 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>cancelled</code></a> 时取消订阅。",
+      "count": 1
+    }
+  ]
+}

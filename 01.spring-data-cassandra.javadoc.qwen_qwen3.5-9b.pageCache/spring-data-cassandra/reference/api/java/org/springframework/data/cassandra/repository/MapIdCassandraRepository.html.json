@@ -1,31 +1,31 @@
 {
   "created_at": "2026-06-16 16:30:30",
-  "updated_at": "2026-06-16 16:30:30",
+  "updated_at": "2026-06-18 07:43:06",
   "stats": {
-    "total_entries": 19,
+    "total_entries": 27,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 19,
-    "entries_with_hits": 19,
+    "total_hits": 30,
+    "entries_with_hits": 27,
     "entries_without_hits": 0,
-    "hit_rate": 1.0,
-    "usage_percentage": 0.0019000000000000002
+    "hit_rate": 1.1111111111111112,
+    "usage_percentage": 0.0026999999999999997
   },
   "items": [
     {
       "source": "This interface uses <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> for the id type, allowing you to annotate entity fields or properties with\n<a href=\"../core/mapping/PrimaryKeyColumn.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>@PrimaryKeyColumn</code></a>. Use this interface if you do not require a composite primary key class\nand want to specify the Id with <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>.",
       "translation": "该接口使用<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>作为 ID 类型，允许您使用<a href=\"../core/mapping/PrimaryKeyColumn.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>@PrimaryKeyColumn</code></a>注解实体字段或属性。如果您不需要复合主键类，并希望使用<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>指定 ID，请使用此接口。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Steps to use this interface:",
       "translation": "使用此界面的步骤：",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.repository.CrudRepository\">Methods inherited from interface <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#method-summary\" title=\"class or interface in org.springframework.data.repository\">CrudRepository</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#count()\" title=\"class or interface in org.springframework.data.repository\">count</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#delete(T)\" title=\"class or interface in org.springframework.data.repository\">delete</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteAll()\" title=\"class or interface in org.springframework.data.repository\">deleteAll</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\">deleteAll</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteAllById(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\">deleteAllById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteById(ID)\" title=\"class or interface in org.springframework.data.repository\">deleteById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#existsById(ID)\" title=\"class or interface in org.springframework.data.repository\">existsById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById(ID)\" title=\"class or interface in org.springframework.data.repository\">findById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository\">save</a></code>",
@@ -105,6 +105,46 @@
     {
       "source": "to represent Ids.",
       "translation": "用于表示标识符。",
+      "count": 1
+    },
+    {
+      "source": "Whenever you need a <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>, you can use the static factory method <a href=\"../core/mapping/BasicMapId.html#id()\"><code>BasicMapId.id()</code></a> (which is\nconvenient if you import statically) and the builder method <a href=\"../core/mapping/MapId.html#with(java.lang.String,java.lang.Object)\"><code>MapId.with(String, Object)</code></a> to easily construct an\nid.",
+      "translation": "每当您需要一个<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>时，可以使用静态工厂方法<a href=\"../core/mapping/BasicMapId.html#id()\"><code>BasicMapId.id()</code></a>（如果您进行了静态导入则非常方便），以及构建器方法<a href=\"../core/mapping/MapId.html#with(java.lang.String,java.lang.Object)\"><code>MapId.with(String, Object)</code></a>来轻松构造一个 id。",
+      "count": 1
+    },
+    {
+      "source": "Define your repository interface to be a subinterface of this interface, which uses a provided id type,\n<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> (implemented by <a href=\"../core/mapping/BasicMapId.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>BasicMapId</code></a>).",
+      "translation": "将您的存储库接口定义为此接口的子接口，该接口使用提供的 id 类型（由 <a href=\"../core/mapping/BasicMapId.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>BasicMapId</code></a> 实现的<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>）。",
+      "count": 1
+    },
+    {
+      "source": "Annotate each partition &amp; cluster field or property with <a href=\"../core/mapping/PrimaryKeyColumn.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>@PrimaryKeyColumn</code></a>",
+      "translation": "为每个分区和集群字段或属性添加 <a href=\"../core/mapping/PrimaryKeyColumn.html\" title=\"org.springframework.data.cassandra.core.mapping 中的注解接口\"><code>@PrimaryKeyColumn</code></a> 注解。",
+      "count": 1
+    },
+    {
+      "source": "Optionally, entity class authors can have their entities implement <a href=\"../core/mapping/MapIdentifiable.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapIdentifiable</code></a>, to make it easier and\nquicker for entity clients to get the entity's identity.",
+      "translation": "可选地，实体类作者可以让其实装<a href=\"../core/mapping/MapIdentifiable.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapIdentifiable</code></a>接口，以便实体客户端能够更便捷、快速地获取实体的标识。",
+      "count": 1
+    },
+    {
+      "source": "Define your entity, including a field or property for each column, including those for partition and (optional)\ncluster columns.",
+      "translation": "定义您的实体，包括每个字段的属性，涵盖分区列以及（可选的）聚类列。",
+      "count": 1
+    },
+    {
+      "source": "Matthew T. Adams, Mark Paluch",
+      "translation": "马修·T·亚当斯，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Cassandra repository interface using <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> to represent Ids.",
+      "translation": "使用<a href=\"../core/mapping/MapId.html\" title=\"org.springframework.data.cassandra.core.mapping 中的接口\"><code>MapId</code></a>表示 ID 的 Cassandra 存储库接口。",
+      "count": 1
+    },
+    {
+      "source": "<ul>\n<li>定义您的实体，包括每个字段的属性，涵盖分区列以及（可选的）聚类列。</li>\n<li>为每个分区和集群字段或属性添加 <a href=\"../core/mapping/PrimaryKeyColumn.html\" title=\"org.springframework.data.cassandra.core.mapping 中的注解接口\"><code>@PrimaryKeyColumn</code></a> 注解。</li>\n<li>将您的存储库接口定义为此接口的子接口，该接口使用提供的 id 类型（由 <a href=\"../core/mapping/BasicMapId.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>BasicMapId</code></a> 实现的<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>）。</li>\n<li>每当您需要一个<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>时，可以使用静态工厂方法<a href=\"../core/mapping/BasicMapId.html#id()\"><code>BasicMapId.id()</code></a>（如果您进行了静态导入则非常方便），以及构建器方法<a href=\"../core/mapping/MapId.html#with(java.lang.String,java.lang.Object)\"><code>MapId.with(String, Object)</code></a>来轻松构造一个 id。</li>\n<li>可选地，实体类作者可以让其实装<a href=\"../core/mapping/MapIdentifiable.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapIdentifiable</code></a>接口，以便实体客户端能够更便捷、快速地获取实体的标识。</li>\n</ul>",
+      "translation": "<ul>\n<li>定义您的实体，包括每个字段的属性，涵盖分区列以及（可选的）聚类列。</li>\n<li>为每个分区和集群字段或属性添加 <a href=\"../core/mapping/PrimaryKeyColumn.html\" title=\"org.springframework.data.cassandra.core.mapping 中的注解接口\"><code>@PrimaryKeyColumn</code></a> 注解。</li>\n<li>将您的存储库接口定义为此接口的子接口，该接口使用提供的 id 类型（由 <a href=\"../core/mapping/BasicMapId.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>BasicMapId</code></a> 实现的<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>）。</li>\n<li>每当您需要一个<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>时，可以使用静态工厂方法<a href=\"../core/mapping/BasicMapId.html#id()\"><code>BasicMapId.id()</code></a>（如果您进行了静态导入则非常方便），以及构建器方法<a href=\"../core/mapping/MapId.html#with(java.lang.String,java.lang.Object)\"><code>MapId.with(String, Object)</code></a>来轻松构造一个 id。</li>\n<li>可选地，实体类作者可以让其实装<a href=\"../core/mapping/MapIdentifiable.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapIdentifiable</code></a>接口，以便实体客户端能够更便捷、快速地获取实体的标识。</li>\n</ul>",
       "count": 1
     }
   ]

@@ -1,0 +1,196 @@
+{
+  "created_at": "2026-06-18 08:20:10",
+  "updated_at": "2026-06-18 08:20:10",
+  "stats": {
+    "total_entries": 36,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 44,
+    "entries_with_hits": 36,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2222222222222223,
+    "usage_percentage": 0.0036
+  },
+  "items": [
+    {
+      "source": "The mapped value can either be a corresponding <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> instance or a data source name String (to be\nresolved via a <a href=\"#setSessionFactoryLookup(org.springframework.data.cassandra.core.cql.session.lookup.SessionFactoryLookup)\"><code>setSessionFactoryLookup(SessionFactoryLookup)</code></a>).",
+      "translation": "映射值可以是相应的<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>实例，或者是一个数据源名称字符串（将通过<a href=\"#setSessionFactoryLookup(org.springframework.data.cassandra.core.cql.session.lookup.SessionFactoryLookup)\"><code>setSessionFactoryLookup(SessionFactoryLookup)</code></a>进行解析）。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the given lookup key object, as specified in the <a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a> map, into the\nactual lookup key to be used for matching with the <a href=\"#determineCurrentLookupKey()\"><code>current lookup key</code></a>.",
+      "translation": "解析给定的查找键对象，该对象由<a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a> 地图中指定，将其转换为用于与<a href=\"#determineCurrentLookupKey()\"><code>当前查找键</code></a>进行匹配的实际查找键。",
+      "count": 2
+    },
+    {
+      "source": "Specify whether to apply a lenient fallback to the default <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> if no specific\n<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> could be found for the current lookup key.",
+      "translation": "指定是否在没有为当前查找键找到特定的 <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 时，对默认 <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 应用宽松的降级策略。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"SessionFactoryLookup.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.lookup\"><code>SessionFactoryLookup</code></a> implementation to use for resolving session factory name Strings in the\n<a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a> map.",
+      "translation": "将 <a href=\"SessionFactoryLookup.html\" title=\"org.springframework.data.cassandra.core.cql.session.lookup 中的接口\"><code>SessionFactoryLookup</code></a> 的实现设置为用于解析 <a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a> 映射中的会话工厂名称字符串。",
+      "count": 2
+    },
+    {
+      "source": "Attempts to establish a <code>CqlSession</code> with the connection infrastructure that this <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>\nobject represents.",
+      "translation": "尝试使用此<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>对象所代表的连接基础设施建立<code>CqlSession</code>。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the specified <code>sessionFactory</code> object into a <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> instance.",
+      "translation": "将指定的<code>sessionFactory</code>对象解析为<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "Specify the default target <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>, if any.",
+      "translation": "指定默认目标（如果有）<a href=\"../../../../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Specify the map of target session factories, with the lookup key as key.",
+      "translation": "指定目标会话工厂的映射，其中查找键为 key。",
+      "count": 2
+    },
+    {
+      "source": "This <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> will be used as target if none of the keyed <a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a>\nmatch the <a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a> current lookup key.",
+      "translation": "如果没有任何带键的<a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a>与<a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a>的当前查找键匹配，则将使用此<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>作为目标。",
+      "count": 1
+    },
+    {
+      "source": "The key can be of arbitrary type; this class implements the generic lookup process only. The concrete key\nrepresentation will be handled by <a href=\"#resolveSpecifiedLookupKey(java.lang.Object)\"><code>resolveSpecifiedLookupKey(Object)</code></a> and\n<a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a>.",
+      "translation": "键可以是任意类型；该类仅实现通用的查找过程。具体的键表示将由 <a href=\"#resolveSpecifiedLookupKey(java.lang.Object)\"><code>resolveSpecifiedLookupKey(Object)</code></a> 和 <a href=\"#determineCurrentLookupKey()\"><code>determineCurrentLookupKey()</code></a> 处理。",
+      "count": 1
+    },
+    {
+      "source": "Default is true, accepting lookup keys without a corresponding entry in the target\n<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> map - simply falling back to the default <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> in that case.",
+      "translation": "默认为 true，接受在目标<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>映射中找不到对应条目的查找键——在这种情况下，直接回退到默认的<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Switch this flag to false if you would prefer the fallback to only apply if the lookup key was\nnull. Lookup keys without a <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> entry will then lead to an\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>.",
+      "translation": "如果希望仅在查找键为 null 时才应用回退，请将此标志切换为 false。若查找键中缺少 <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 条目，则会导致 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Default is a <a href=\"MapSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>MapSessionFactoryLookup</code></a>, allowing a string keyed map of <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>session\nfactories</code></a>.",
+      "translation": "默认值为一个<a href=\"MapSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>MapSessionFactoryLookup</code></a>，它允许使用字符串键来映射<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>session factories</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation handles <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> instances and session factory names (to be resolved via a\n<a href=\"#setSessionFactoryLookup(org.springframework.data.cassandra.core.cql.session.lookup.SessionFactoryLookup)\"><code>setSessionFactoryLookup(SessionFactoryLookup)</code></a>).",
+      "translation": "默认实现处理 <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 实例和会话工厂名称（通过 <a href=\"#setSessionFactoryLookup(org.springframework.data.cassandra.core.cql.session.lookup.SessionFactoryLookup)\"><code>setSessionFactoryLookup(SessionFactoryLookup)</code></a> 解析）。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The default implementation simply returns the given key as-is.",
+      "translation": "默认实现直接返回给定的键。",
+      "count": 1
+    },
+    {
+      "source": "Allows for arbitrary keys.",
+      "translation": "支持任意键。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the current target <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>. Determines the <a href=\"#determineCurrentLookupKey()\"><code>current\nlookup key</code></a>, performs a lookup in the <a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a> map, falls back to the specified\n<a href=\"#setDefaultTargetSessionFactory(java.lang.Object)\"><code>default target SessionFactory</code></a> if necessary.",
+      "translation": "获取当前的目标 <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。确定 <a href=\"#determineCurrentLookupKey()\"><code>当前查找键</code></a>，在 <a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a> 映射中进行查找，必要时回退到指定的 <a href=\"#setDefaultTargetSessionFactory(java.lang.Object)\"><code>默认目标 SessionFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Abstract <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> implementation that routes <a href=\"#getSession()\"><code>getSession()</code></a> calls to one of various target\n<a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>factories</code></a> based on a lookup key. The latter is usually (but not necessarily) determined\nthrough some thread-bound transaction context.",
+      "translation": "实现了 <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 接口，该实现会根据查找键将 <a href=\"#getSession()\"><code>getSession()</code></a> 调用路由到多个目标 <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>factories</code></a> 之一。后者通常（但不一定）通过线程绑定的事务上下文确定。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../../../../SessionFactory.html#getSession()\">SessionFactory</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../../../../SessionFactory.html#getSession()\">SessionFactory</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Retrieve the current target <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
+      "translation": "获取当前的目标<a href=\"../../../../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Determine the current lookup key.",
+      "translation": "确定当前的查找键。",
+      "count": 1
+    },
+    {
+      "source": "<code>sessionFactoryLookup</code> - the <a href=\"SessionFactoryLookup.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.lookup\"><code>SessionFactoryLookup</code></a>. Defaults to <a href=\"MapSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>MapSessionFactoryLookup</code></a> if\n         null.",
+      "translation": "<code>sessionFactoryLookup</code> - <a href=\"SessionFactoryLookup.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.lookup\"><code>SessionFactoryLookup</code></a> 接口。如果为 null，则默认为 <a href=\"MapSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>MapSessionFactoryLookup</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../../../SessionFactory.html#getSession()\">getSession</a></code> in interface <code><a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a></code>",
+      "translation": "接口 <code><a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a></code> 中的 <code><a href=\"../../../../SessionFactory.html#getSession()\">getSession</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>sessionFactory</code> - the session factory value object as specified in the <a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a>\n         map",
+      "translation": "<code>sessionFactory</code> - 会话工厂值对象，如<a href=\"#setTargetSessionFactories(java.util.Map)\"><code>setTargetSessionFactories(Map)</code></a>中指定的映射所示。",
+      "count": 1
+    },
+    {
+      "source": "the resolved <a href=\"../../../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>",
+      "translation": "已解析的<a href=\"../../../../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - in case of an unsupported value type.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 在遇到不支持的值类型时。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SessionFactoryLookupFailureException.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\">SessionFactoryLookupFailureException</a></code> - if the lookup failed.",
+      "translation": "<code><a href=\"SessionFactoryLookupFailureException.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\">SessionFactoryLookupFailureException</a></code> - 如果查找失败。",
+      "count": 1
+    },
+    {
+      "source": "<code>lenientFallback</code> - true to accepting lookup keys without a corresponding entry in the target.",
+      "translation": "<code>lenientFallback</code> - 设为 true 时，允许接受在目标中无对应条目的查找键。",
+      "count": 1
+    },
+    {
+      "source": "a <code>CqlSession</code> to Apache Cassandra.",
+      "translation": "一个用于连接 Apache Cassandra 的 `CqlSession`。",
+      "count": 1
+    },
+    {
+      "source": "<code>lookupKey</code> - the lookup key object as specified by the user",
+      "translation": "<code>lookupKey</code> - 用户指定的查找键对象",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the lookup key as needed for matching",
+      "translation": "根据匹配需求所需的查找键",
+      "count": 1
+    },
+    {
+      "source": "the current lookup key. The returned key needs to match the stored lookup key type.",
+      "translation": "当前查找键。返回的键必须与存储的查找键类型匹配。",
+      "count": 1
+    },
+    {
+      "source": "Determine the current lookup key. This will typically be implemented to check a thread-bound context.",
+      "translation": "确定当前的查找键。这通常通过检查线程绑定的上下文来实现。",
+      "count": 1
+    }
+  ]
+}

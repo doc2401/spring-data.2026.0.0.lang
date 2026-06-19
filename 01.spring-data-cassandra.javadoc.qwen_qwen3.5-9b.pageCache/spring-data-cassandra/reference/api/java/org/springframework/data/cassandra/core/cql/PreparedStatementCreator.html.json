@@ -1,31 +1,41 @@
 {
   "created_at": "2026-06-16 17:48:26",
-  "updated_at": "2026-06-16 17:48:26",
+  "updated_at": "2026-06-18 07:54:17",
   "stats": {
-    "total_entries": 25,
+    "total_entries": 31,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 25,
-    "entries_with_hits": 25,
+    "total_hits": 36,
+    "entries_with_hits": 31,
     "entries_without_hits": 0,
-    "hit_rate": 1.0,
-    "usage_percentage": 0.0025
+    "hit_rate": 1.1612903225806452,
+    "usage_percentage": 0.0031000000000000003
   },
   "items": [
     {
       "source": "Implementations <i>do not</i> need to concern themselves with <code>DriverException</code>s that may be thrown from\noperations they attempt. The <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> class will catch and handle <code>DriverException</code>s appropriately.",
       "translation": "实现无需关心从它们尝试执行的操作中可能抛出的<code>DriverException</code>。 <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> 类将捕获并适当处理这些<code>DriverException</code>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Classes implementing this interface should also implement the <a href=\"CqlProvider.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlProvider</code></a> interface if it is able to provide\nthe CQL it uses for <code>PreparedStatement</code> creation. This allows for better contextual information in case of\nexceptions.",
       "translation": "实现此接口的类如果能够提供用于创建 `PreparedStatement` 的 CQL，则还应实现<a href=\"CqlProvider.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlProvider</code></a>接口。这样在发生异常时可以提供更丰富的上下文信息。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Create a statement in this session. Allows implementations to use <code>PreparedStatement</code>.",
+      "translation": "在当前会话中创建语句。允许实现使用 `<code>PreparedStatement</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Create a statement in this session.",
+      "translation": "请在本次会话中发表声明。",
+      "count": 2
     },
     {
       "source": "<span class=\"return-type\">com.datastax.oss.driver.api.core.cql.PreparedStatement</span> <span class=\"element-name\">createPreparedStatement</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlSession session)</span>\n                                                                        throws <span class=\"exceptions\">com.datastax.oss.driver.api.core.DriverException</span>",
@@ -53,11 +63,6 @@
       "count": 1
     },
     {
-      "source": "Create a statement in this session. Allows implementations to use <code>PreparedStatement</code>.",
-      "translation": "在当前会话中创建语句。允许实现使用 `<code>PreparedStatement</code>`。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
       "count": 1
@@ -65,11 +70,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Create a statement in this session.",
-      "translation": "请在本次会话中发表声明。",
       "count": 1
     },
     {
@@ -135,6 +135,36 @@
     {
       "source": "class. Implementations are responsible\nfor providing CQL and any necessary parameters.",
       "translation": "类。实现方负责提供 CQL 及任何必要的参数。",
+      "count": 1
+    },
+    {
+      "source": "<code>com.datastax.oss.driver.api.core.DriverException</code> - there is no need to catch <code>DriverException</code> that may be thrown in the implementation\n          of this method. The <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> class will handle them.",
+      "translation": "<code>com.datastax.oss.driver.api.core.DriverException</code> - 无需捕获此方法实现中可能抛出的 <code>DriverException</code>。<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> 类将负责处理这些异常。",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - <code>CqlSession</code> to use to create statement.",
+      "translation": "<code>session</code> - 用于创建语句的 <code>CqlSession</code>。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "David Webb, Mark Paluch",
+      "translation": "大卫·韦伯，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "a prepared statement.",
+      "translation": "预编译语句。",
+      "count": 1
+    },
+    {
+      "source": "One of the two central callback interfaces used by the <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> class. This interface creates a\n<code>PreparedStatement</code> given a session, provided by the <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> class. Implementations are responsible\nfor providing CQL and any necessary parameters.",
+      "translation": "这是由 `<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>` 类使用的两个核心回调接口之一。该接口会根据由 `<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>` 类提供的会话创建`PreparedStatement`。实现类负责提供 CQL 语句以及任何必要的参数。",
       "count": 1
     }
   ]

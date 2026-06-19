@@ -1,36 +1,46 @@
 {
   "created_at": "2026-06-16 12:42:08",
-  "updated_at": "2026-06-16 12:42:08",
+  "updated_at": "2026-06-18 07:29:13",
   "stats": {
-    "total_entries": 22,
+    "total_entries": 27,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 23,
-    "entries_with_hits": 22,
+    "total_hits": 34,
+    "entries_with_hits": 27,
     "entries_without_hits": 0,
-    "hit_rate": 1.0454545454545454,
-    "usage_percentage": 0.0022
+    "hit_rate": 1.2592592592592593,
+    "usage_percentage": 0.0026999999999999997
   },
   "items": [
     {
       "source": "Empty <code>RepositoryFragmentsContributor</code> that does not contribute any fragments.",
       "translation": "空<code>RepositoryFragmentsContributor</code>，不贡献任何片段。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Fragments contributors enhance repository functionality based on a repository declaration and activate additional\nfragments if a repository defines them, such as extending a built-in fragment interface (e.g.\n<code>QuerydslPredicateExecutor</code>, <code>QueryByExampleExecutor</code>).",
       "translation": "片段贡献者根据仓库声明增强仓库功能，并在仓库定义这些片段时激活额外的片段，例如扩展内置的片段接口（如<code>QuerydslPredicateExecutor</code>、<code>QueryByExampleExecutor</code>）。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "This interface is a base-interface serving as a contract for repository fragment introspection. The actual\nimplementation and methods to contribute fragments to be used within the repository instance are store-specific and\nrequire typically access to infrastructure such as a database connection hence those methods must be defined within\nthe particular store module.",
       "translation": "该接口是一个基础接口，作为仓库片段 introspection 的契约。实际实现以及向仓库实例贡献片段的方法因存储而异，通常需要访问数据库连接等基础设施，因此这些方法必须在特定的存储模块中定义。",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Describe fragments that are contributed by <a href=\"../RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a>.",
+      "translation": "描述由<a href=\"../RepositoryMetadata.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryMetadata</code></a>贡献的片段。",
+      "count": 2
+    },
+    {
+      "source": "Describe fragments that are contributed by <a href=\"../RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a>. Fragment description reports typically\nstructural fragments that are not suitable for invocation but can be used to introspect the repository structure.",
+      "translation": "描述由<a href=\"../RepositoryMetadata.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryMetadata</code></a>贡献的片段。片段描述通常报告不适合调用的结构片段，但可用于内省仓库结构。",
+      "count": 2
     },
     {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
@@ -40,16 +50,6 @@
     {
       "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">RepositoryFragmentsContributor</span>",
       "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">RepositoryFragmentsContributor</span>",
-      "count": 1
-    },
-    {
-      "source": "Describe fragments that are contributed by <a href=\"../RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a>.",
-      "translation": "描述由<a href=\"../RepositoryMetadata.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryMetadata</code></a>贡献的片段。",
-      "count": 1
-    },
-    {
-      "source": "Describe fragments that are contributed by <a href=\"../RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a>. Fragment description reports typically\nstructural fragments that are not suitable for invocation but can be used to introspect the repository structure.",
-      "translation": "描述由<a href=\"../RepositoryMetadata.html\" title=\"org.springframework.data.repository.core 中的接口\"><code>RepositoryMetadata</code></a>贡献的片段。片段描述通常报告不适合调用的结构片段，但可用于内省仓库结构。",
       "count": 1
     },
     {
@@ -120,6 +120,31 @@
     {
       "source": "based on",
       "translation": "基于",
+      "count": 1
+    },
+    {
+      "source": "empty <code>RepositoryFragmentsContributor</code> that does not contribute any fragments.",
+      "translation": "空<code>RepositoryFragmentsContributor</code>，不贡献任何片段。",
+      "count": 1
+    },
+    {
+      "source": "<code>metadata</code> - the repository metadata describing the repository interface.",
+      "translation": "<code>metadata</code> - 描述仓库接口的仓库元数据。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "fragments to be (structurally) contributed to the repository.",
+      "translation": "待（在结构上）贡献至仓库的片段。",
+      "count": 1
+    },
+    {
+      "source": "Strategy interface support allowing to contribute a <a href=\"RepositoryComposition.RepositoryFragments.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition.RepositoryFragments</code></a> based on <a href=\"../RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a>.",
+      "translation": "支持策略接口，允许基于<a href=\"../RepositoryMetadata.html\" title=\"interface in org.springframework.data.repository.core\"><code>RepositoryMetadata</code></a>贡献一个<a href=\"RepositoryComposition.RepositoryFragments.html\" title=\"class in org.springframework.data.repository.core.support\"><code>RepositoryComposition.RepositoryFragments</code></a>。",
       "count": 1
     }
   ]

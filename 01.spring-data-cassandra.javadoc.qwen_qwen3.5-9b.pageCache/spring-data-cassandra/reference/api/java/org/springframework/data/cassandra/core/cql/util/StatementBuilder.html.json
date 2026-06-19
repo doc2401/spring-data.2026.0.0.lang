@@ -1,0 +1,226 @@
+{
+  "created_at": "2026-06-18 08:18:27",
+  "updated_at": "2026-06-18 08:18:27",
+  "stats": {
+    "total_entries": 42,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 52,
+    "entries_with_hits": 42,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2380952380952381,
+    "usage_percentage": 0.0042
+  },
+  "items": [
+    {
+      "source": "the built <code>SimpleStatement</code>.",
+      "translation": "内置的<code>SimpleStatement</code>。",
+      "count": 3
+    },
+    {
+      "source": "Build a <code>statement</code> by applying builder and bind functions using the default\n<code>CodecRegistry</code> and <a href=\"StatementBuilder.ParameterHandling.html#BY_INDEX\"><code>StatementBuilder.ParameterHandling.BY_INDEX</code></a> parameter rendering.",
+      "translation": "使用默认<code>CodecRegistry</code>和<a href=\"StatementBuilder.ParameterHandling.html#BY_INDEX\"><code>StatementBuilder.ParameterHandling.BY_INDEX</code></a>参数渲染，通过应用 builder 和 bind 函数来构建一个<code>statement</code>。",
+      "count": 2
+    },
+    {
+      "source": "Build a <code>statement</code> by applying builder and bind functions using the given\n<code>CodecRegistry</code> and <a href=\"StatementBuilder.ParameterHandling.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder.ParameterHandling</code></a>.",
+      "translation": "使用给定的<code>CodecRegistry</code>和<a href=\"StatementBuilder.ParameterHandling.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder.ParameterHandling</code></a>，通过应用 builder 和 bind 函数来构建一个<code>statement</code>。",
+      "count": 2
+    },
+    {
+      "source": "Build a <code>statement</code> by applying builder and bind functions using the given\n<a href=\"StatementBuilder.ParameterHandling.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder.ParameterHandling</code></a>.",
+      "translation": "使用给定的<a href=\"StatementBuilder.ParameterHandling.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder.ParameterHandling</code></a>，通过应用 builder 和 bind 函数来构建一个<code>statement</code>。",
+      "count": 2
+    },
+    {
+      "source": "Factory method used to create a new <a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a> with the given <code>query stub</code>.",
+      "translation": "工厂方法用于创建一个新的<a href=\"StatementBuilder.html\" title=\"org.springframework.data.cassandra.core.cql.util 包中的类\"><code>StatementBuilder</code></a>，并传入给定的<code>查询模板</code>。",
+      "count": 2
+    },
+    {
+      "source": "a <a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a> for the given <code>query stub</code>.",
+      "translation": "一个用于给定<code>query stub</code>的<a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the <code>query stub</code> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <code>查询存根</code> 为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>parameterHandling</code> - <a href=\"StatementBuilder.ParameterHandling.html\" title=\"enum class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder.ParameterHandling</code></a> used to determine how to render parameters.",
+      "translation": "<code>parameterHandling</code> - 使用<a href=\"StatementBuilder.ParameterHandling.html\" title=\"org.springframework.data.cassandra.core.cql.util 中的枚举类\"><code>StatementBuilder.ParameterHandling</code></a>来确定如何渲染参数。",
+      "count": 2
+    },
+    {
+      "source": "<code>stub</code> - the <code>query stub</code> to use.",
+      "translation": "<code>stub</code> - 要使用的 <code>查询存根</code>。",
+      "count": 2
+    },
+    {
+      "source": "The builder can be used for structural evolution and value evolution of statements. Values are bound through\n<a href=\"StatementBuilder.BindFunction.html\" title=\"interface in org.springframework.data.cassandra.core.cql.util\"><code>binding functions</code></a> that accept the statement and a <a href=\"TermFactory.html\" title=\"interface in org.springframework.data.cassandra.core.cql.util\"><code>TermFactory</code></a>. Values can be bound\ninline or through bind markers when <a href=\"#build(org.springframework.data.cassandra.core.cql.util.StatementBuilder.ParameterHandling,com.datastax.oss.driver.api.core.type.codec.registry.CodecRegistry)\"><code>building</code></a> the statement. All\nfunctions remain in the order of their declaration.",
+      "translation": "构建器可用于语句的结构演化与值演化。值通过接受语句和<a href=\"StatementBuilder.BindFunction.html\" title=\"interface in org.springframework.data.cassandra.core.cql.util\"><code>绑定函数</code></a>的<a href=\"TermFactory.html\" title=\"interface in org.springframework.data.cassandra.core.cql.util\"><code>TermFactory</code></a>进行绑定。在<a href=\"#build(org.springframework.data.cassandra.core.cql.util.StatementBuilder.ParameterHandling,com.datastax.oss.driver.api.core.type.codec.registry.CodecRegistry)\"><code>构建</code></a>语句时，值可以内联绑定或通过绑定标记绑定。所有函数均保持其声明顺序。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"StatementBuilder.ParameterHandling.html#INLINE\"><code>Inline</code></a> rendering of parameters requires a <code>CodecRegistry</code>. A StatementBuilder\ncan be <a href=\"#of(S,com.datastax.oss.driver.api.core.type.codec.registry.CodecRegistry)\"><code>created</code></a> by providing a custom CodecRegistry.\nOtherwise, the registry falls back to <code>CodecRegistry.DEFAULT</code>.",
+      "translation": "参数的<a href=\"StatementBuilder.ParameterHandling.html#INLINE\"><code>Inline</code></a>渲染需要一个<code>CodecRegistry</code>。可以通过提供自定义的 CodecRegistry 来<a href=\"#of(S,com.datastax.oss.driver.api.core.type.codec.registry.CodecRegistry)\"><code>创建</code></a>一个 StatementBuilder。否则，该注册表将回退到<code>CodecRegistry.DEFAULT</code>。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "All methods returning <a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a> point to the same instance. This class is intended for internal use.",
+      "translation": "所有返回<a href=\"StatementBuilder.html\" title=\"org.springframework.data.cassandra.core.cql.util 中的类\"><code>StatementBuilder</code></a>的方法都指向同一个实例。该类仅供内部使用。",
+      "count": 1
+    },
+    {
+      "source": "Building a statement consists of three phases:",
+      "translation": "构建陈述包含三个阶段：",
+      "count": 1
+    },
+    {
+      "source": "Add behavior after the <code>SimpleStatement</code> has been built. The <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>UnaryOperator</code></a> gets invoked with a\n<code>SimpleStatement</code> allowing association of the final statement with additional settings. The\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>UnaryOperator</code></a> is applied on <a href=\"#build()\"><code>build()</code></a>.",
+      "translation": "在构建完<code>SimpleStatement</code>后添加行为。<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>UnaryOperator</code></a> 接收一个<code>SimpleStatement</code> 作为参数被调用，从而允许将最终语句与附加设置关联起来。该<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>UnaryOperator</code></a> 在调用<a href=\"#build()\"><code>build()</code></a> 时应用。",
+      "count": 1
+    },
+    {
+      "source": "Add behavior when the statement is built. The <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>Consumer</code></a> gets invoked with a <code>SimpleStatementBuilder</code>\nallowing association of the final statement with additional settings. The <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>Consumer</code></a> is applied on\n<a href=\"#build()\"><code>build()</code></a>.",
+      "translation": "在构建语句时添加行为。一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>Consumer</code></a> 会被传入一个 <code>SimpleStatementBuilder</code>，从而允许将最终语句与额外的设置进行关联。该 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>Consumer</code></a> 会在\n<a href=\"#build()\"><code>build()</code></a> 上应用。",
+      "count": 1
+    },
+    {
+      "source": "Factory method used to create a new <a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a> with the given <code>query stub</code>. The\nstub is used as base for the built query so each query inherits properties of this stub. This factory method\ninitializes StatementBuilder with the default <code>CodecRegistry</code>.",
+      "translation": "工厂方法用于创建一个新的<a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a>，并传入给定的<code>查询模板</code>。该模板用作构建查询的基础，因此每个生成的查询都会继承此模板的属性。此工厂方法会将<code>CodecRegistry</code>初始化为默认值。",
+      "count": 1
+    },
+    {
+      "source": "Apply a <a href=\"StatementBuilder.BindFunction.html\" title=\"interface in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder.BindFunction</code></a> to the statement. Bind functions are applied on <a href=\"#build()\"><code>build()</code></a>.",
+      "translation": "将<a href=\"StatementBuilder.BindFunction.html\" title=\"org.springframework.data.cassandra.core.cql.util 中的接口\"><code>StatementBuilder.BindFunction</code></a>应用于语句。绑定函数在<a href=\"#build()\"><code>build()</code></a>上应用。",
+      "count": 1
+    },
+    {
+      "source": "Apply a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>builder function</code></a> to the statement. Builder functions are applied on <a href=\"#build()\"><code>build()</code></a>.",
+      "translation": "应用一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"java.util.function 中的类或接口\"><code>构建器函数</code></a>到该语句。构建器函数应用于<a href=\"#build()\"><code>build()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Factory method used to create a new <a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a> with the given <code>query stub</code>. The\nstub is used as base for the built query so each query inherits properties of this stub.",
+      "translation": "工厂方法用于创建一个新的<a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a>，并传入给定的<code>查询占位符</code>。该占位符用作构建查询的基础，因此每个查询都会继承此占位符的属性。",
+      "count": 1
+    },
+    {
+      "source": "Apply a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>builder function</code></a> to the statement.",
+      "translation": "将该语句应用一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>构建器函数</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Apply a <a href=\"StatementBuilder.BindFunction.html\" title=\"interface in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder.BindFunction</code></a> to the statement.",
+      "translation": "将<a href=\"StatementBuilder.BindFunction.html\" title=\"org.springframework.data.cassandra.core.cql.util 中的接口\"><code>StatementBuilder.BindFunction</code></a>应用于该语句。",
+      "count": 1
+    },
+    {
+      "source": "Add behavior after the <code>SimpleStatement</code> has been built.",
+      "translation": "在构建完<code>SimpleStatement</code>后添加行为。",
+      "count": 1
+    },
+    {
+      "source": "Binding function.",
+      "translation": "绑定功能。",
+      "count": 1
+    },
+    {
+      "source": "Enumeration to represent how parameters are rendered.",
+      "translation": "用于表示参数渲染方式的枚举。",
+      "count": 1
+    },
+    {
+      "source": "Add behavior when the statement is built.",
+      "translation": "在构建语句时添加行为。",
+      "count": 1
+    },
+    {
+      "source": "Functional declaration applying <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>builder functions</code></a>, <a href=\"StatementBuilder.BindFunction.html\" title=\"interface in org.springframework.data.cassandra.core.cql.util\"><code>bind functions</code></a> and\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>on build signals</code></a>",
+      "translation": "功能声明应用了 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"java.util.function 中的类或接口\"><code>构建器函数</code></a>、<a href=\"StatementBuilder.BindFunction.html\" title=\"org.springframework.data.cassandra.core.cql.util 中的接口\"><code>绑定函数</code></a> 以及\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"java.util.function 中的类或接口\"><code>构建完成信号</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>Consumer</code></a> function that gets notified on <a href=\"#build()\"><code>build()</code></a>.",
+      "translation": "<code>action</code> - 一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"java.util.function 中的类或接口\"><code>Consumer</code></a> 函数，会在 <a href=\"#build()\"><code>build()</code></a> 时被通知。",
+      "count": 1
+    },
+    {
+      "source": "<code>mappingFunction</code> - the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>UnaryOperator</code></a> function that gets notified on <a href=\"#build()\"><code>build()</code></a>.",
+      "translation": "<code>mappingFunction</code> - 在调用<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>build()</code></a>时会被通知的<a href=\"#build()\"><code>UnaryOperator</code></a>函数。",
+      "count": 1
+    },
+    {
+      "source": "Creation of the <a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a> with a <code>query stub</code>",
+      "translation": "使用<code>查询模板</code>创建<a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a>类",
+      "count": 1
+    },
+    {
+      "source": "Building the statement using <a href=\"#build()\"><code>build()</code></a>",
+      "translation": "使用 `<a href=\"#build()\"><code>build()</code></a>` 构建语句。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-S\"><code>S</code> - Statement type</span>",
+      "translation": "<span id=\"type-param-S\"><code>S</code> - 语句类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"of(S)-type-param-S\"><code>S</code> - query type.</span>",
+      "translation": "<span id=\"of(S)-type-param-S\"><code>S</code> - 查询类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"of(S,com.datastax.oss.driver.api.core.type.codec.registry.CodecRegistry)-type-param-S\"><code>S</code> - query type.</span>",
+      "translation": "<span id=\"of(S,com.datastax.oss.driver.api.core.type.codec.registry.CodecRegistry)-type-param-S\"><code>S</code> - 查询类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>registry</code> - the default <code>CodecRegistry</code> to use for inline parameter rendering.",
+      "translation": "<code>registry</code> - 用于内联参数渲染的默认 <code>CodecRegistry</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - the bind function to be applied to the statement.",
+      "translation": "<code>action</code> - 要应用于该语句的绑定函数。",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - the builder function to be applied to the statement.",
+      "translation": "<code>action</code> - 要应用于该语句的构建器函数。",
+      "count": 1
+    },
+    {
+      "source": "<code>codecRegistry</code> - registry of Apache Cassandra codecs for converting to/from Java types and CQL types.",
+      "translation": "<code>codecRegistry</code> - 用于在 Java 类型和 CQL 类型之间进行转换的 Apache Cassandra 编解码器注册表。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Functional builder for Cassandra <code>statements</code>. Statements are built by applying\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>builder functions</code></a> that get applied when <a href=\"#build()\"><code>building</code></a> the actual\n<code>statement</code>. The <code>StatementBuilder</code> provides a mutable container for statement creation\nallowing a functional declaration of actions that are necessary to build a statement. This class helps with building\nCQL statements as a <code>BuildableQuery</code> classes are typically immutable and require return value tracking across\nmethods that want to apply modifications to a statement.",
+      "translation": "Cassandra 语句的函数式构建器。语句是通过应用<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"class or interface in java.util.function\"><code>builder functions</code></a>来构建的，这些函数在<a href=\"#build()\"><code>building</code></a>实际<code>statement</code>时被应用。<code>StatementBuilder</code>提供了一个用于语句创建的可变容器，允许以函数式方式声明构建语句所需的动作。该类有助于构建 CQL 语句，因为<code>BuildableQuery</code>类通常是不可变的，并且需要在希望对语句进行修改的方法之间跟踪返回值。",
+      "count": 1
+    },
+    {
+      "source": "<ol>\n<li>使用<code>查询模板</code>创建<a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a>类</li>\n<li>功能声明应用了 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"java.util.function 中的类或接口\"><code>构建器函数</code></a>、<a href=\"StatementBuilder.BindFunction.html\" title=\"org.springframework.data.cassandra.core.cql.util 中的接口\"><code>绑定函数</code></a> 以及\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"java.util.function 中的类或接口\"><code>构建完成信号</code></a>。</li>\n<li>使用 `<a href=\"#build()\"><code>build()</code></a>` 构建语句。</li>\n</ol>\nThe initial <code>query stub</code> is used as base object for all built queries. Builder functions are\napplied each time a statement is built allowing to build multiple statement instances while evolving the actual\nstatement.",
+      "translation": "<ol>\n<li>使用<code>查询模板</code>创建<a href=\"StatementBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql.util\"><code>StatementBuilder</code></a>类</li>\n<li>功能声明应用了 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/UnaryOperator.html\" title=\"java.util.function 中的类或接口\"><code>构建器函数</code></a>、<a href=\"StatementBuilder.BindFunction.html\" title=\"org.springframework.data.cassandra.core.cql.util 中的接口\"><code>绑定函数</code></a> 以及\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"java.util.function 中的类或接口\"><code>构建完成信号</code></a>。</li>\n<li>使用 `<a href=\"#build()\"><code>build()</code></a>` 构建语句。</li>\n</ol>\n初始的<code>查询占位符</code>用作所有已构建查询的基础对象。每次构建语句时都会应用构建器函数，从而允许在演进实际语句的同时构建多个语句实例。",
+      "count": 1
+    }
+  ]
+}

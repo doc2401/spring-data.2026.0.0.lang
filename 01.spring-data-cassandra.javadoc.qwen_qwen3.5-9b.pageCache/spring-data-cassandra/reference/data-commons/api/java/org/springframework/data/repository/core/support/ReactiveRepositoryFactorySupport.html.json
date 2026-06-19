@@ -1,26 +1,31 @@
 {
   "created_at": "2026-06-16 12:36:44",
-  "updated_at": "2026-06-16 12:36:44",
+  "updated_at": "2026-06-18 07:28:11",
   "stats": {
-    "total_entries": 22,
+    "total_entries": 28,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 23,
-    "entries_with_hits": 22,
+    "total_hits": 32,
+    "entries_with_hits": 28,
     "entries_without_hits": 0,
-    "hit_rate": 1.0454545454545454,
-    "usage_percentage": 0.0022
+    "hit_rate": 1.1428571428571428,
+    "usage_percentage": 0.0028
   },
   "items": [
     {
       "source": "Returns the <a href=\"../../query/QueryLookupStrategy.html\" title=\"interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> for the given <a href=\"../../query/QueryLookupStrategy.Key.html\" title=\"enum class in org.springframework.data.repository.query\"><code>QueryLookupStrategy.Key</code></a> and\n<a href=\"../../query/ValueExpressionDelegate.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionDelegate</code></a>.",
       "translation": "返回给定 <a href=\"../../query/QueryLookupStrategy.html\" title=\"interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> 的实例，该实例基于指定的 <a href=\"../../query/QueryLookupStrategy.Key.html\" title=\"enum class in org.springframework.data.repository.query\"><code>QueryLookupStrategy.Key</code></a> 和\n<a href=\"../../query/ValueExpressionDelegate.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionDelegate</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Base class for repository factories to use reactive support. Centralizes the validation of the classpath setup in\ncase a repository uses reactive types.",
+      "translation": "仓库工厂基类，用于支持响应式编程。集中验证类路径配置，以便在仓库使用响应式类型时进行处理。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.repository.core.support.RepositoryFactorySupport\">Methods inherited from class <a href=\"RepositoryFactorySupport.html#method-summary\" title=\"class in org.springframework.data.repository.core.support\">RepositoryFactorySupport</a></h3>\n<code><a href=\"RepositoryFactorySupport.html#addInvocationListener(org.springframework.data.repository.core.support.RepositoryMethodInvocationListener)\" title=\"addInvocationListener(RepositoryMethodInvocationListener)\">addInvocationListener</a>, <a href=\"RepositoryFactorySupport.html#addQueryCreationListener(org.springframework.data.repository.core.support.QueryCreationListener)\" title=\"addQueryCreationListener(QueryCreationListener)\">addQueryCreationListener</a>, <a href=\"RepositoryFactorySupport.html#addRepositoryProxyPostProcessor(org.springframework.data.repository.core.support.RepositoryProxyPostProcessor)\" title=\"addRepositoryProxyPostProcessor(RepositoryProxyPostProcessor)\">addRepositoryProxyPostProcessor</a>, <a href=\"RepositoryFactorySupport.html#getEntityInformation(java.lang.Class)\" title=\"getEntityInformation(Class)\">getEntityInformation</a>, <a href=\"RepositoryFactorySupport.html#getEntityInformation(org.springframework.data.repository.core.RepositoryMetadata)\" title=\"getEntityInformation(RepositoryMetadata)\">getEntityInformation</a>, <a href=\"RepositoryFactorySupport.html#getEnvironment()\" title=\"getEnvironment()\">getEnvironment</a>, <a href=\"RepositoryFactorySupport.html#getProjectionFactory()\" title=\"getProjectionFactory()\">getProjectionFactory</a>, <a href=\"RepositoryFactorySupport.html#getProjectionFactory(java.lang.ClassLoader,org.springframework.beans.factory.BeanFactory)\" title=\"getProjectionFactory(ClassLoader, BeanFactory)\">getProjectionFactory</a>, <a href=\"RepositoryFactorySupport.html#getQueryMethods()\" title=\"getQueryMethods()\">getQueryMethods</a>, <a href=\"RepositoryFactorySupport.html#getRepository(java.lang.Class)\" title=\"getRepository(Class)\">getRepository</a>, <a href=\"RepositoryFactorySupport.html#getRepository(java.lang.Class,java.lang.Object)\" title=\"getRepository(Class, Object)\">getRepository</a>, <a href=\"RepositoryFactorySupport.html#getRepository(java.lang.Class,org.springframework.data.repository.core.support.RepositoryComposition.RepositoryFragments)\" title=\"getRepository(Class, RepositoryComposition.RepositoryFragments)\">getRepository</a>, <a href=\"RepositoryFactorySupport.html#getRepositoryBaseClass(org.springframework.data.repository.core.RepositoryMetadata)\" title=\"getRepositoryBaseClass(RepositoryMetadata)\">getRepositoryBaseClass</a>, <a href=\"RepositoryFactorySupport.html#getRepositoryFragments(org.springframework.data.repository.core.RepositoryMetadata)\" title=\"getRepositoryFragments(RepositoryMetadata)\">getRepositoryFragments</a>, <a href=\"RepositoryFactorySupport.html#getRepositoryInformation(org.springframework.data.repository.core.RepositoryMetadata,org.springframework.data.repository.core.support.RepositoryComposition.RepositoryFragments)\" title=\"getRepositoryInformation(RepositoryMetadata, RepositoryComposition.RepositoryFragments)\">getRepositoryInformation</a>, <a href=\"RepositoryFactorySupport.html#getRepositoryMetadata(java.lang.Class)\" title=\"getRepositoryMetadata(Class)\">getRepositoryMetadata</a>, <a href=\"RepositoryFactorySupport.html#getTargetRepository(org.springframework.data.repository.core.RepositoryInformation)\" title=\"getTargetRepository(RepositoryInformation)\">getTargetRepository</a>, <a href=\"RepositoryFactorySupport.html#getTargetRepositoryViaReflection(org.springframework.data.repository.core.RepositoryInformation,java.lang.Object...)\" title=\"getTargetRepositoryViaReflection(RepositoryInformation, Object...)\">getTargetRepositoryViaReflection</a>, <a href=\"RepositoryFactorySupport.html#instantiateClass(java.lang.Class,java.lang.Object...)\" title=\"instantiateClass(Class, Object...)\">instantiateClass</a>, <a href=\"RepositoryFactorySupport.html#setBeanClassLoader(java.lang.ClassLoader)\" title=\"setBeanClassLoader(ClassLoader)\">setBeanClassLoader</a>, <a href=\"RepositoryFactorySupport.html#setBeanFactory(org.springframework.beans.factory.BeanFactory)\" title=\"setBeanFactory(BeanFactory)\">setBeanFactory</a>, <a href=\"RepositoryFactorySupport.html#setEnvironment(org.springframework.core.env.Environment)\" title=\"setEnvironment(Environment)\">setEnvironment</a>, <a href=\"RepositoryFactorySupport.html#setEvaluationContextProvider(org.springframework.data.spel.EvaluationContextProvider)\" title=\"setEvaluationContextProvider(EvaluationContextProvider)\">setEvaluationContextProvider</a>, <a href=\"RepositoryFactorySupport.html#setExposeMetadata(boolean)\" title=\"setExposeMetadata(boolean)\">setExposeMetadata</a>, <a href=\"RepositoryFactorySupport.html#setNamedQueries(org.springframework.data.repository.core.NamedQueries)\" title=\"setNamedQueries(NamedQueries)\">setNamedQueries</a>, <a href=\"RepositoryFactorySupport.html#setQueryLookupStrategyKey(org.springframework.data.repository.query.QueryLookupStrategy.Key)\" title=\"setQueryLookupStrategyKey(QueryLookupStrategy.Key)\">setQueryLookupStrategyKey</a>, <a href=\"RepositoryFactorySupport.html#setRepositoryBaseClass(java.lang.Class)\" title=\"setRepositoryBaseClass(Class)\">setRepositoryBaseClass</a></code>",
@@ -55,11 +60,6 @@
     {
       "source": "Spring Data Core",
       "translation": "Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Base class for repository factories to use reactive support. Centralizes the validation of the classpath setup in\ncase a repository uses reactive types.",
-      "translation": "仓库工厂基类，用于支持响应式编程。集中验证类路径配置，以便在仓库使用响应式类型时进行处理。",
       "count": 1
     },
     {
@@ -120,6 +120,36 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RepositoryFactorySupport.html#validate(org.springframework.data.repository.core.RepositoryMetadata)\">validate</a></code> in class <code><a href=\"RepositoryFactorySupport.html\" title=\"class in org.springframework.data.repository.core.support\">RepositoryFactorySupport</a></code>",
+      "translation": "<code><a href=\"RepositoryFactorySupport.html#validate(org.springframework.data.repository.core.RepositoryMetadata)\">validate</a></code> 类 <code><a href=\"RepositoryFactorySupport.html\" title=\"class in org.springframework.data.repository.core.support\">RepositoryFactorySupport</a></code> 中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RepositoryFactorySupport.html#getQueryLookupStrategy(org.springframework.data.repository.query.QueryLookupStrategy.Key,org.springframework.data.repository.query.ValueExpressionDelegate)\">getQueryLookupStrategy</a></code> in class <code><a href=\"RepositoryFactorySupport.html\" title=\"class in org.springframework.data.repository.core.support\">RepositoryFactorySupport</a></code>",
+      "translation": "<code><a href=\"RepositoryFactorySupport.html#getQueryLookupStrategy(org.springframework.data.repository.query.QueryLookupStrategy.Key,org.springframework.data.repository.query.ValueExpressionDelegate)\">getQueryLookupStrategy</a></code> 类 <code><a href=\"RepositoryFactorySupport.html\" title=\"class in org.springframework.data.repository.core.support\">RepositoryFactorySupport</a></code>",
+      "count": 1
+    },
+    {
+      "source": "the <a href=\"../../query/QueryLookupStrategy.html\" title=\"interface in org.springframework.data.repository.query\"><code>QueryLookupStrategy</code></a> to use or null if no queries should be looked up.",
+      "translation": "使用<a href=\"../../query/QueryLookupStrategy.html\" title=\"org.springframework.data.repository.query 中的接口\"><code>QueryLookupStrategy</code></a>，或者如果不应查找任何查询则为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>key</code> - can be null.",
+      "translation": "<code>key</code> - 可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>valueExpressionDelegate</code> - will never be null.",
+      "translation": "<code>valueExpressionDelegate</code> 永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Oliver Gierke, Johannes Englmeier",
+      "translation": "Mark Paluch，Oliver Gierke，Johannes Englmeier",
       "count": 1
     }
   ]

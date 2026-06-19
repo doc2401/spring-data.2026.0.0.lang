@@ -1,36 +1,51 @@
 {
   "created_at": "2026-06-16 17:33:49",
-  "updated_at": "2026-06-16 17:33:49",
+  "updated_at": "2026-06-18 07:52:48",
   "stats": {
-    "total_entries": 31,
+    "total_entries": 43,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 31,
-    "entries_with_hits": 31,
+    "total_hits": 52,
+    "entries_with_hits": 43,
     "entries_without_hits": 0,
-    "hit_rate": 1.0,
-    "usage_percentage": 0.0031000000000000003
+    "hit_rate": 1.2093023255813953,
+    "usage_percentage": 0.0043
   },
   "items": [
     {
+      "source": "Translate the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> into a generic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.",
+      "translation": "将给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>转换为通用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Build a message <code>String</code> for the given <code>DriverException</code>.",
+      "translation": "为给定的 `DriverException` 构建一个 `String` 消息。",
+      "count": 3
+    },
+    {
       "source": "Convert the given runtime exception to an appropriate exception from the <code>org.springframework.dao</code> hierarchy.\nPreserves exception if it's already a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> and ignores non <code>DriverException</code>s returning\nnull. Falls back to <a href=\"../../CassandraUncategorizedException.html\" title=\"class in org.springframework.data.cassandra\"><code>CassandraUncategorizedException</code></a> in case there's no mapping to a more detailed\nexception.",
       "translation": "将给定的运行时异常转换为 <code>org.springframework.dao</code> 层次结构中的适当异常。如果该异常已经是 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>，则保留该异常；如果不是 <code>DriverException</code> 类型的异常，则返回 null。如果无法映射到更详细的异常，则回退到 <a href=\"../../CassandraUncategorizedException.html\" title=\"class in org.springframework.data.cassandra\"><code>CassandraUncategorizedException</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "The returned <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> is supposed to contain the original <code>DriverException</code> as root cause.\nHowever, client code may not generally rely on this due to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>s possibly being caused by\nother resource APIs as well. That said, a <code>getRootCause() instanceof DataAccessException</code> check (and\nsubsequent cast) is considered reliable when expecting Cassandra-based access to have happened.",
       "translation": "返回的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 本应包含原始的 <code>DriverException</code> 作为根本原因。\n然而，客户端代码通常不能依赖这一点，因为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 也可能由其他资源 API 引起。尽管如此，当预期已发生基于 Cassandra 的访问时，执行 <code>getRootCause() instanceof DataAccessException</code> 检查（并进行后续类型转换）被认为是可靠的。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "To be called by translator subclasses when creating an instance of a generic\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> class.",
       "translation": "由翻译器子类在创建泛型 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> 类的实例时调用。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"CqlExceptionTranslator.html#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\">CqlExceptionTranslator</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"CqlExceptionTranslator.html#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\">CqlExceptionTranslator</a></code></span>",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -43,23 +58,8 @@
       "count": 1
     },
     {
-      "source": "Translate the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> into a generic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.",
-      "translation": "将给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>转换为通用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"CqlExceptionTranslator.html#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\">CqlExceptionTranslator</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"CqlExceptionTranslator.html#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\">CqlExceptionTranslator</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "Build a message <code>String</code> for the given <code>DriverException</code>.",
-      "translation": "为给定的 `DriverException` 构建一个 `String` 消息。",
       "count": 1
     },
     {
@@ -165,6 +165,66 @@
     {
       "source": "for the given",
       "translation": "对于给定的",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html#translateExceptionIfPossible(java.lang.RuntimeException)\" title=\"class or interface in org.springframework.dao.support\">translateExceptionIfPossible</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"class or interface in org.springframework.dao.support\">PersistenceExceptionTranslator</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html#translateExceptionIfPossible(java.lang.RuntimeException)\" title=\"org.springframework.dao.support 中的类或接口\">translateExceptionIfPossible</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"org.springframework.dao.support 中的类或接口\">PersistenceExceptionTranslator</a></code> 中的一个方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"CqlExceptionTranslator.html#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\">translate</a></code> in interface <code><a href=\"CqlExceptionTranslator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">CqlExceptionTranslator</a></code>",
+      "translation": "<a href=\"CqlExceptionTranslator.html#translate(java.lang.String,java.lang.String,java.lang.RuntimeException)\">translate</a> 接口 <code><a href=\"CqlExceptionTranslator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">CqlExceptionTranslator</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>exception</code> - the offending <code>DriverException</code>.",
+      "translation": "<code>exception</code> - 引发异常的 <code>DriverException</code>。",
+      "count": 1
+    },
+    {
+      "source": "the DataAccessException, wrapping the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>.",
+      "translation": "DataAccessException，包装了<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the offending <code>DriverException</code>",
+      "translation": "<code>ex</code> - 引发异常的 <code>DriverException</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - readable text describing the task being attempted.",
+      "translation": "<code>task</code> - 描述正在尝试执行的任务的可读文本。",
+      "count": 1
+    },
+    {
+      "source": "<code>cql</code> - CQL query or update that caused the problem (can be null).",
+      "translation": "<code>cql</code> - 导致问题的 CQL 查询或更新语句（可为 null）。",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - readable text describing the task being attempted",
+      "translation": "<code>task</code> - 描述正在尝试执行的任务的可读文本",
+      "count": 1
+    },
+    {
+      "source": "<code>cql</code> - the CQL statement that caused the problem (may be null)",
+      "translation": "<code>cql</code> - 导致问题的 CQL 语句（可能为 null）",
+      "count": 1
+    },
+    {
+      "source": "the message <code>String</code> to use",
+      "translation": "要使用的消息<code>String</code>",
+      "count": 1
+    },
+    {
+      "source": "Alex Shvid, Matthew T. Adams, Mark Paluch, Mikhail Polivakha",
+      "translation": "亚历克斯·什维德，马修·T·亚当斯，马克·帕卢赫，米哈伊尔·波利瓦卡",
+      "count": 1
+    },
+    {
+      "source": "Simple <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"class or interface in org.springframework.dao.support\"><code>PersistenceExceptionTranslator</code></a> for Cassandra.",
+      "translation": "简单的用于 Cassandra 的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/support/PersistenceExceptionTranslator.html\" title=\"class or interface in org.springframework.dao.support\"><code>PersistenceExceptionTranslator</code></a>。",
       "count": 1
     }
   ]

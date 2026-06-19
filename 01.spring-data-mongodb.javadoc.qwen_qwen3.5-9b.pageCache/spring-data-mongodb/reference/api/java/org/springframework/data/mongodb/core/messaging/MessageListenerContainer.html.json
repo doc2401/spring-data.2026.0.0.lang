@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-06-19 02:21:28",
+  "updated_at": "2026-06-19 02:21:28",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 29,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.45,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "<code>request</code> - must not be null.",
+      "translation": "<code>request</code> 不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "Register a new <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> in the container.",
+      "translation": "在容器中注册一个新的<a href=\"SubscriptionRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"MessageListenerContainer.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListenerContainer</code></a> given <a href=\"../MongoTemplate.html\" title=\"class in org.springframework.data.mongodb.core\"><code>MongoTemplate</code></a>.",
+      "translation": "根据 <a href=\"../MongoTemplate.html\" title=\"类在 org.springframework.data.mongodb.core 包中\"><code>MongoTemplate</code></a> 创建一个新的<a href=\"MessageListenerContainer.html\" title=\"org.springframework.data.mongodb.core.messaging 包中的接口\"><code>MessageListenerContainer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Lookup the given <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> within the container and return the associated <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> if\npresent.",
+      "translation": "在容器内查找给定的<a href=\"SubscriptionRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest</code></a>，如果存在则返回其关联的<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Register a new <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> in the container. If the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"class or interface in org.springframework.context\"><code>is\nalready running</code></a> the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> will be added and run immediately, otherwise it'll be scheduled and\nstarted once the container is actually <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>started</code></a>.\n\n<pre><code>\n    MessageListenerContainer container = ...\n\n    MessageListener&lt;ChangeStreamDocument&lt;Document&gt;, Document&gt; messageListener = (message) -&gt; message.getBody().toJson();\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(messageListener, () -&gt; \"collection-name\");\n\n    Subscription subscription = container.register(request, Document.class);\n</code>\n</pre>\n\nOn <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\"><code>Lifecycle.stop()</code></a> all <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>subscriptions</code></a> are cancelled prior to shutting\ndown the container itself.\n<br/>\nRegistering the very same <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> more than once simply returns the already existing\n<a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a>.\n<br/>\nUnless a <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> is <a href=\"#remove(org.springframework.data.mongodb.core.messaging.Subscription)\"><code>removed</code></a> form the container, the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a>\nis restarted once the container itself is restarted.\n<br/>\nErrors during <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Message</code></a> retrieval lead to <a href=\"Cancelable.html#cancel()\"><code>cannelation</code></a> of the underlying task.",
+      "translation": "在容器中注册一个新的<a href=\"SubscriptionRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest</code></a>。如果容器<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"org.springframework.context 中的类或接口\"><code>is already running</code></a>，则<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>将被添加并立即运行；否则，它将被调度，并在容器实际<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"org.springframework.context 中的类或接口\"><code>started</code></a>后启动。\n\n<pre><code>\n    MessageListenerContainer container = ...\n\n    MessageListener&lt;ChangeStreamDocument&lt;Document&gt;, Document&gt; messageListener = (message) -&gt; message.getBody().toJson();\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(messageListener, () -&gt; \"collection-name\");\n\n    Subscription subscription = container.register(request, Document.class);\n</code>\n</pre>\n\n在调用<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"org.springframework.context 中的类或接口\"><code>Lifecycle.stop()</code></a>时，会在容器本身关闭之前取消所有<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>subscriptions</code></a>。\n<br/>\n多次注册同一个<a href=\"SubscriptionRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest</code></a>将简单地返回已存在的<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>。\n<br/>\n除非从容器中<a href=\"#remove(org.springframework.data.mongodb.core.messaging.Subscription)\"><code>removed</code></a>某个<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>，否则当容器本身重启时，该<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>将重新启动。\n<br/>\n在检索<a href=\"Message.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Message</code></a>期间发生的错误会导致底层任务被<a href=\"Cancelable.html#cancel()\"><code>cannelation</code></a>（取消）。",
+      "count": 1
+    },
+    {
+      "source": "Register a new <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> in the container. If the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"class or interface in org.springframework.context\"><code>is\nalready running</code></a> the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> will be added and run immediately, otherwise it'll be scheduled and\nstarted once the container is actually <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>started</code></a>.\n\n<pre><code>\n    MessageListenerContainer container = ...\n\n    MessageListener&lt;ChangeStreamDocument&lt;Document&gt;, Document&gt; messageListener = (message) -&gt; message.getBody().toJson();\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(messageListener, () -&gt; \"collection-name\");\n\n    Subscription subscription = container.register(request, Document.class);\n</code>\n</pre>\n\nOn <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\"><code>Lifecycle.stop()</code></a> all <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>subscriptions</code></a> are cancelled prior to shutting\ndown the container itself.\n<br/>\nRegistering the very same <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> more than once simply returns the already existing\n<a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a>.\n<br/>\nUnless a <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> is <a href=\"#remove(org.springframework.data.mongodb.core.messaging.Subscription)\"><code>removed</code></a> form the container, the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a>\nis restarted once the container itself is restarted.\n<br/>\nErrors during <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Message</code></a> retrieval are delegated to the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/ErrorHandler.html\" title=\"class or interface in org.springframework.util\"><code>ErrorHandler</code></a>.",
+      "translation": "在容器中注册一个新的 <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a>。如果容器 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"class or interface in org.springframework.context\"><code>已经运行</code></a>，则 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> 将被添加并立即执行；否则，它将被调度，并在容器实际 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>启动</code></a> 后开始运行。\n\n<pre><code>\n    MessageListenerContainer container = ...\n\n    MessageListener&lt;ChangeStreamDocument&lt;Document&gt;, Document&gt; messageListener = (message) -&gt; message.getBody().toJson();\n    ChangeStreamRequest&lt;Document&gt; request = new ChangeStreamRequest&lt;&gt;(messageListener, () -&gt; \"collection-name\");\n\n    Subscription subscription = container.register(request, Document.class);\n</code>\n</pre>\n\n在调用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\"><code>Lifecycle.stop()</code></a> 时，会在容器本身关闭之前取消所有 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>subscriptions</code></a>。\n<br/>\n多次注册同一个 <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> 只会返回已存在的 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a>。\n<br/>\n除非从容器中 <a href=\"#remove(org.springframework.data.mongodb.core.messaging.Subscription)\"><code>移除</code></a> 某个 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a>，否则当容器本身重启时，该 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> 也会随之重启。\n<br/>\n在获取 <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Message</code></a> 期间发生的错误将委托给指定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/ErrorHandler.html\" title=\"class or interface in org.springframework.util\"><code>ErrorHandler</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Unregister a given <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> from the container. This prevents the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> to be restarted\nin a potential <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\"><code>stop</code></a>/<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>start</code></a> scenario.<br/>\nAn <a href=\"Subscription.html#isActive()\"><code>active</code></a> <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>subcription</code></a> is <a href=\"Cancelable.html#cancel()\"><code>cancelled</code></a> prior to removal.",
+      "translation": "从容器中注销给定的<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>。这将防止该<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>在潜在的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"org.springframework.context 中的类或接口\"><code>stop</code></a>/<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"org.springframework.context 中的类或接口\"><code>start</code></a>场景中重新启动。<br/>\n在移除之前，会先取消处于<a href=\"Subscription.html#isActive()\"><code>active</code></a>状态的<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>subscription</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Register a new <a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> in the container. If the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"class or interface in org.springframework.context\"><code>is\nalready running</code></a> the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> will be added and run immediately, otherwise it'll be scheduled and\nstarted once the container is actually <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>started</code></a>.\n\n<pre><code>\n    MessageListenerContainer container = ...\n\n    MessageListener&lt;ChangeStreamDocument&lt;Document&gt;, Object&gt; messageListener = (message) -&gt; message....\n    ChangeStreamRequest&lt;Object&gt; request = new ChangeStreamRequest&lt;&gt;(messageListener, () -&gt; \"collection-name\");\n\n    Subscription subscription = container.register(request);\n</code>\n</pre>\n\nErrors during <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Message</code></a> retrieval lead to <a href=\"Cancelable.html#cancel()\"><code>cannelation</code></a> of the underlying task.",
+      "translation": "在容器中注册一个新的<a href=\"SubscriptionRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest</code></a>。如果容器<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"org.springframework.context 中的类或接口\"><code>is already running</code></a>，则<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>将被添加并立即运行；否则，它将被调度，并在容器实际<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"org.springframework.context 中的类或接口\"><code>started</code></a>后启动。\n\n<pre><code>\n    MessageListenerContainer container = ...\n\n    MessageListener&lt;ChangeStreamDocument&lt;Document&gt;, Object&gt; messageListener = (message) -&gt; message....\n    ChangeStreamRequest&lt;Object&gt; request = new ChangeStreamRequest&lt;&gt;(messageListener, () -&gt; \"collection-name\");\n\n    Subscription subscription = container.register(request);\n</code>\n</pre>\n\n在检索<a href=\"Message.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Message</code></a>期间发生的错误将导致底层任务被<a href=\"Cancelable.html#cancel()\"><code>cannelation</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Unregister a given <a href=\"Subscription.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Subscription</code></a> from the container.",
+      "translation": "从容器中注销给定的<a href=\"Subscription.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Subscription</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Internal abstraction used by the framework representing a message listener container. <strong>Not</strong> meant to\nbe implemented externally.",
+      "translation": "框架内部用于表示消息监听器容器的抽象类。<strong>不</strong>供外部实现。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"MessageListenerContainer.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListenerContainer</code></a> using <a href=\"../MongoTemplate.html\" title=\"class in org.springframework.data.mongodb.core\"><code>MongoTemplate</code></a>.",
+      "translation": "使用<a href=\"../MongoTemplate.html\" title=\"类在org.springframework.data.mongodb.core\"><code>MongoTemplate</code></a>创建一个新的<a href=\"MessageListenerContainer.html\" title=\"接口在org.springframework.data.mongodb.core.messaging\"><code>MessageListenerContainer</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>bodyType</code> - the exact target or a more concrete type of the <a href=\"Message.html#getBody()\"><code>Message.getBody()</code></a>.",
+      "translation": "<code>bodyType</code> - 精确的目标类型或 <a href=\"Message.html#getBody()\"><code>Message.getBody()</code></a> 的更具体类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>bodyType</code> - the exact target or a more concrete type of the <a href=\"Message.html#getBody()\"><code>Message.getBody()</code></a>. Must not be null.",
+      "translation": "<code>bodyType</code> - 精确的目标类型或 <a href=\"Message.html#getBody()\"><code>Message.getBody()</code></a> 的更具体类型。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>errorHandler</code> - the callback to invoke when retrieving the <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>Message</code></a> from the data source fails for some\n         reason.",
+      "translation": "<code>errorHandler</code> - 当从数据源检索<a href=\"Message.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>Message</code></a>因某种原因失败时，将调用的回调。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if not set.",
+      "translation": "如果未设置，则为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>template</code> - must not be null.",
+      "translation": "<code>template</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>subscription</code> - must not be null.",
+      "translation": "<code>subscription</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    }
+  ]
+}

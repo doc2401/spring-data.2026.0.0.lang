@@ -1,0 +1,191 @@
+{
+  "created_at": "2026-06-19 00:52:09",
+  "updated_at": "2026-06-19 00:52:09",
+  "stats": {
+    "total_entries": 35,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 45,
+    "entries_with_hits": 35,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2857142857142858,
+    "usage_percentage": 0.0034999999999999996
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a> obtaining sessions from the given\n<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a> applying the given <code>options</code>, if present, when\nstarting a new transaction.",
+      "translation": "创建一个新的<a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a>，该管理器从给定的<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a>获取会话。如果在启动新事务时存在给定的<code>options</code>，则应用这些选项。",
+      "count": 4
+    },
+    {
+      "source": "<code>databaseFactory</code> - must not be null.",
+      "translation": "<code>databaseFactory</code> - 不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "Create a new <a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a> obtaining sessions from the given\n<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a>.",
+      "translation": "创建一个新的 <a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a>，从给定的\n<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a> 获取会话。",
+      "count": 2
+    },
+    {
+      "source": "Get the <a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a> that this instance manages transactions for.",
+      "translation": "获取此实例为其管理事务的<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"org.springframework.data.mongodb 中的接口\"><code>ReactiveMongoDatabaseFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a> that this instance should manage transactions for.",
+      "translation": "设置此实例应为其管理事务的<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set the <code>TransactionOptions</code> to be applied when starting transactions.",
+      "translation": "设置将在启动事务时应用的<code>TransactionOptions</code>。",
+      "count": 2
+    },
+    {
+      "source": "Application code is required to retrieve the <code>MongoDatabase</code> via\n<a href=\"ReactiveMongoDatabaseUtils.html#getDatabase(org.springframework.data.mongodb.ReactiveMongoDatabaseFactory)\"><code>ReactiveMongoDatabaseUtils.getDatabase(ReactiveMongoDatabaseFactory)</code></a> instead\nof a standard <a href=\"ReactiveMongoDatabaseFactory.html#getMongoDatabase()\"><code>ReactiveMongoDatabaseFactory.getMongoDatabase()</code></a> call. Spring\nclasses such as <a href=\"core/ReactiveMongoTemplate.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ReactiveMongoTemplate</code></a> use this strategy implicitly. By\ndefault, failure of a commit operation raises a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionSystemException.html\" title=\"class or interface in org.springframework.transaction\"><code>TransactionSystemException</code></a>. You can override\n<a href=\"#doCommit(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.data.mongodb.ReactiveMongoTransactionManager.ReactiveMongoTransactionObject)\"><code>doCommit(TransactionSynchronizationManager, ReactiveMongoTransactionObject)</code></a> to implement the\n<a href=\"https://docs.mongodb.com/manual/core/transactions/#retry-commit-operation\">Retry Commit Operation</a>\nbehavior as outlined in the MongoDB reference manual.",
+      "translation": "需要通过 <a href=\"ReactiveMongoDatabaseUtils.html#getDatabase(org.springframework.data.mongodb.ReactiveMongoDatabaseFactory)\"><code>ReactiveMongoDatabaseUtils.getDatabase(ReactiveMongoDatabaseFactory)</code></a> 获取 <code>MongoDatabase</code>，而不是使用标准的 <a href=\"ReactiveMongoDatabaseFactory.html#getMongoDatabase()\"><code>ReactiveMongoDatabaseFactory.getMongoDatabase()</code></a> 调用。Spring 类（例如 <a href=\"core/ReactiveMongoTemplate.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ReactiveMongoTemplate</code></a>）会隐式采用此策略。默认情况下，提交操作失败时会抛出 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionSystemException.html\" title=\"class or interface in org.springframework.transaction\"><code>TransactionSystemException</code></a>。您可以通过重写 <a href=\"#doCommit(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.data.mongodb.ReactiveMongoTransactionManager.ReactiveMongoTransactionObject)\"><code>doCommit(TransactionSynchronizationManager, ReactiveMongoTransactionObject)</code></a> 来实现 MongoDB 参考手册中概述的 <a href=\"https://docs.mongodb.com/manual/core/transactions/#retry-commit-operation\">重试提交操作</a> 行为。",
+      "count": 1
+    },
+    {
+      "source": "Binds a <code>ClientSession</code> from the specified\n<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a> to the subscriber\n<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/util/context/Context.html\" title=\"class or interface in reactor.util.context\"><code>Context</code></a>. <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionDefinition.html#isReadOnly()\" title=\"class or interface in org.springframework.transaction\"><code>Readonly</code></a> transactions operate on a <code>ClientSession</code> and enable causal consistency, and also\n<code>start</code>,\n<code>commit</code> or\n<code>abort</code> a transaction.",
+      "translation": "将来自指定<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a>的<code>ClientSession</code>绑定到订阅者<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/util/context/Context.html\" title=\"class or interface in reactor.util.context\"><code>Context</code></a>。<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/TransactionDefinition.html#isReadOnly()\" title=\"class or interface in org.springframework.transaction\"><code>Readonly</code></a>事务基于<code>ClientSession</code>运行，能够启用因果一致性，并且还可以\n<code>start</code>、\n<code>commit</code> 或\n<code>abort</code> 事务。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a> for bean-style usage. <br/>\n<strong>Note:</strong>The <a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>db factory</code></a> has to\nbe <a href=\"#setDatabaseFactory(org.springframework.data.mongodb.ReactiveMongoDatabaseFactory)\"><code>setDatabaseFactory(ReactiveMongoDatabaseFactory)</code></a> set} before using the instance. Use this constructor\nto prepare a <a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a> via a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"class or interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>.\n<br/>\nOptionally it is possible to set default <code>transaction options</code> defining\n<code>ReadConcern</code> and <code>WriteConcern</code>.",
+      "translation": "为基于 Bean 的使用方式创建一个新的<a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a>。<br/>\n<strong>注意：</strong>在使用该实例之前，必须通过<a href=\"#setDatabaseFactory(org.springframework.data.mongodb.ReactiveMongoDatabaseFactory)\"><code>setDatabaseFactory(ReactiveMongoDatabaseFactory)</code></a>设置<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>数据库工厂</code></a>。请使用此构造函数，通过一个<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"class or interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>来准备一个<a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a>。\n<br/>\n此外，还可以选择设置默认的<code>事务选项</code>，以定义<code>ReadConcern</code>和<code>WriteConcern</code>。",
+      "count": 1
+    },
+    {
+      "source": "Customization hook to perform an actual commit of the given transaction.<br/>\nIf a commit operation encounters an error, the MongoDB driver throws a <code>MongoException</code> holding\nerror labels. <br/>\nBy default those labels are ignored, nevertheless one might check for\n<code>transient commit errors labels</code> and retry the the\ncommit.",
+      "translation": "自定义钩子，用于执行给定事务的实际提交。<br/>\n如果提交操作遇到错误，MongoDB 驱动程序会抛出一个包含错误标签的 <code>MongoException</code>。<br/>\n默认情况下，这些标签会被忽略，但您可以检查是否存在<code>transient commit errors labels</code>，并据此重试提交。",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a> for bean-style usage.",
+      "translation": "为基于 Bean 的使用方式创建一个新的<a href=\"ReactiveMongoTransactionManager.html\" title=\"class in org.springframework.data.mongodb\"><code>ReactiveMongoTransactionManager</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Customization hook to perform an actual commit of the given transaction.<br/>\nIf a commit operation encounters an error, the MongoDB driver throws a <code>MongoException</code> holding\nerror labels.",
+      "translation": "用于执行给定事务实际提交的自定义钩子。<br/>\n如果提交操作遇到错误，MongoDB 驱动程序将抛出一个包含错误标签的 <code>MongoException</code>。",
+      "count": 1
+    },
+    {
+      "source": "MongoDB specific transaction object, representing a <code>MongoResourceHolder</code>.",
+      "translation": "代表 <code>MongoResourceHolder</code> 的 MongoDB 专用事务对象。",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://www.mongodb.com/transactions\">MongoDB Transaction Documentation</a></li>\n<li><a href=\"ReactiveMongoDatabaseUtils.html#getDatabase(org.springframework.data.mongodb.ReactiveMongoDatabaseFactory,org.springframework.data.mongodb.SessionSynchronization)\"><code>ReactiveMongoDatabaseUtils.getDatabase(ReactiveMongoDatabaseFactory, SessionSynchronization)</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.data.mongodb.ReactiveMongoTransactionManager\">Serialized Form</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://www.mongodb.com/transactions\">MongoDB 事务文档</a></li>\n<li><a href=\"ReactiveMongoDatabaseUtils.html#getDatabase(org.springframework.data.mongodb.ReactiveMongoDatabaseFactory,org.springframework.data.mongodb.SessionSynchronization)\"><code>ReactiveMongoDatabaseUtils.getDatabase(ReactiveMongoDatabaseFactory, SessionSynchronization)</code></a></li>\n<li><a href=\"../../../../serialized-form.html#org.springframework.data.mongodb.ReactiveMongoTransactionManager\">序列化形式</a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doGetTransaction(org.springframework.transaction.reactive.TransactionSynchronizationManager)\" title=\"class or interface in org.springframework.transaction.reactive\">doGetTransaction</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doGetTransaction(org.springframework.transaction.reactive.TransactionSynchronizationManager)\" title=\"类或接口 org.springframework.transaction.reactive\">doGetTransaction</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#isExistingTransaction(java.lang.Object)\" title=\"class or interface in org.springframework.transaction.reactive\">isExistingTransaction</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#isExistingTransaction(java.lang.Object)\" title=\"类或接口 org.springframework.transaction.reactive\">isExistingTransaction</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doBegin(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object,org.springframework.transaction.TransactionDefinition)\" title=\"class or interface in org.springframework.transaction.reactive\">doBegin</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doBegin(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object,org.springframework.transaction.TransactionDefinition)\" title=\"类或接口 org.springframework.transaction.reactive 中的\">doBegin</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive 中的\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doSuspend(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object)\" title=\"class or interface in org.springframework.transaction.reactive\">doSuspend</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doSuspend(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object)\" title=\"类或接口 org.springframework.transaction.reactive\">doSuspend</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doResume(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object,java.lang.Object)\" title=\"class or interface in org.springframework.transaction.reactive\">doResume</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doResume(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object,java.lang.Object)\" title=\"类或接口 org.springframework.transaction.reactive\">doResume</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doCommit(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.transaction.reactive.GenericReactiveTransaction)\" title=\"class or interface in org.springframework.transaction.reactive\">doCommit</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doCommit(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.transaction.reactive.GenericReactiveTransaction)\" title=\"类或接口 org.springframework.transaction.reactive\">doCommit</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doRollback(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.transaction.reactive.GenericReactiveTransaction)\" title=\"class or interface in org.springframework.transaction.reactive\">doRollback</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doRollback(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.transaction.reactive.GenericReactiveTransaction)\" title=\"类或接口 org.springframework.transaction.reactive\">doRollback</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doSetRollbackOnly(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.transaction.reactive.GenericReactiveTransaction)\" title=\"class or interface in org.springframework.transaction.reactive\">doSetRollbackOnly</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doSetRollbackOnly(org.springframework.transaction.reactive.TransactionSynchronizationManager,org.springframework.transaction.reactive.GenericReactiveTransaction)\" title=\"类或接口 org.springframework.transaction.reactive\">doSetRollbackOnly</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"类或接口 org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doCleanupAfterCompletion(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object)\" title=\"class or interface in org.springframework.transaction.reactive\">doCleanupAfterCompletion</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction.reactive\">AbstractReactiveTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html#doCleanupAfterCompletion(org.springframework.transaction.reactive.TransactionSynchronizationManager,java.lang.Object)\" title=\"org.springframework.transaction.reactive 中的类或接口\">doCleanupAfterCompletion</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/AbstractReactiveTransactionManager.html\" title=\"org.springframework.transaction.reactive 中的类或接口\">AbstractReactiveTransactionManager</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - can be null. Will default <a href=\"MongoTransactionOptions.html#NONE\"><code>MongoTransactionOptions.NONE</code></a> if null.",
+      "translation": "<code>options</code> - 可为 null。若为 null，则默认为 <a href=\"MongoTransactionOptions.html#NONE\"><code>MongoTransactionOptions.NONE</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>defaultTransactionOptions</code> - can be null. Will default <a href=\"MongoTransactionOptions.html#NONE\"><code>MongoTransactionOptions.NONE</code></a> if\n         null.",
+      "translation": "<code>defaultTransactionOptions</code> - 可以为 null。如果为 null，则默认为 <a href=\"MongoTransactionOptions.html#NONE\"><code>MongoTransactionOptions.NONE</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>transactionOptionsResolver</code> - must not be null.",
+      "translation": "<code>transactionOptionsResolver</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>synchronizationManager</code> - reactive synchronization manager.",
+      "translation": "<code>synchronizationManager</code> - 响应式同步管理器。",
+      "count": 1
+    },
+    {
+      "source": "<code>transactionObject</code> - never null.",
+      "translation": "<code>transactionObject</code> - 永远不为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - can be null.",
+      "translation": "<code>options</code> - 可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "can be null.",
+      "translation": "可以为空。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "A <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/ReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a> implementation that manages\n<code>ClientSession</code> based transactions for a single\n<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a>.",
+      "translation": "一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/ReactiveTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>ReactiveTransactionManager</code></a> 实现，用于管理单个\n<a href=\"ReactiveMongoDatabaseFactory.html\" title=\"interface in org.springframework.data.mongodb\"><code>ReactiveMongoDatabaseFactory</code></a> 的基于 <code>ClientSession</code> 的事务。",
+      "count": 1
+    }
+  ]
+}

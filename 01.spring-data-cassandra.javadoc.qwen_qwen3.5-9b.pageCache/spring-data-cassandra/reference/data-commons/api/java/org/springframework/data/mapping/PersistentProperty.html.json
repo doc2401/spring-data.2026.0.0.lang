@@ -1,180 +1,295 @@
 {
   "created_at": "2026-06-16 10:44:15",
-  "updated_at": "2026-06-16 10:44:15",
+  "updated_at": "2026-06-18 07:14:48",
   "stats": {
-    "total_entries": 98,
+    "total_entries": 134,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 126,
-    "entries_with_hits": 98,
+    "total_hits": 217,
+    "entries_with_hits": 134,
     "entries_without_hits": 0,
-    "hit_rate": 1.2857142857142858,
-    "usage_percentage": 0.0098
+    "hit_rate": 1.6194029850746268,
+    "usage_percentage": 0.0134
   },
   "items": [
     {
       "source": "Returns whether the current property is readable through <a href=\"PersistentPropertyAccessor.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentPropertyAccessor</code></a>, i.e. if it is not\n<a href=\"#isTransient()\"><code>isTransient()</code></a>, if the value can be set on the current instance or read to create a new instance as per\n<a href=\"#getWither()\"><code>getWither()</code></a> or via Kotlin Copy methods.",
       "translation": "返回当前属性是否可通过 <a href=\"PersistentPropertyAccessor.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentPropertyAccessor</code></a> 读取，即该属性并非 <a href=\"#isTransient()\"><code>isTransient()</code></a> 所定义的瞬态属性，且其值能够设置到当前实例上，或根据 <a href=\"#getWither()\"><code>getWither()</code></a> 或通过 Kotlin 的 Copy 方法读取以创建新实例。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the required <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> to set a property value on a new object instance or throw\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> if no wither method is available.",
       "translation": "返回必需的 <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 以在新对象实例上设置属性值，或者如果没有可用的 wither 方法则抛出\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Return the type the property refers to in case it's an association, i.e. <a href=\"#isAssociation()\"><code>isAssociation()</code></a> returns\ntrue. That means, that implementations <em>must</em> return a non-null value from this method\nin that case. We also recommend to return null for non-associations right away to establish symmetry\nbetween this method and <a href=\"#isAssociation()\"><code>isAssociation()</code></a>.",
       "translation": "如果该属性是关联关系，则返回其类型；即，当<a href=\"#isAssociation()\"><code>isAssociation()</code></a>返回true时，实现类必须从此方法返回一个非null值。此外，我们建议对于非关联关系直接返回null，以在<code>isAssociation()</code>与此方法之间建立对称性。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> owning the current <a href=\"PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>.",
       "translation": "返回当前<a href=\"PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>，该实体拥有当前的<a href=\"PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the required backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> or throw <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> if no backing field is available.",
       "translation": "返回所需的后备 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a>，或者在不可用时抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the property is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> or an array.",
       "translation": "返回该属性是否为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"java.util 中的类或接口\"><code>Collection</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"java.lang 中的类或接口\"><code>Iterable</code></a> 或数组。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the type of the <a href=\"PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> is actually to be regarded as <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>\nin turn.",
       "translation": "返回该<a href=\"PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>类型是否实际上应被视为<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the current property is immutable, i.e. if there is no setter or the backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> is\n<code>final</code>.",
       "translation": "返回当前属性是否为不可变，即是否存在 setter 或底层 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> 为<code>final</code>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Looks up the annotation of the given type on the <a href=\"PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>.",
       "translation": "查找给定类型在<a href=\"PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>上的注解。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns a <a href=\"PersistentPropertyAccessor.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentPropertyAccessor</code></a> for the current property's owning value.",
       "translation": "返回当前属性所属值的<a href=\"PersistentPropertyAccessor.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentPropertyAccessor</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the type of the values if the property is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
       "translation": "如果该属性是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"java.util 中的类或接口\"><code>Map</code></a>，则返回其值的类型。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Get the requires <a href=\"Association.html\" title=\"class in org.springframework.data.mapping\"><code>Association</code></a> of this property.",
       "translation": "获取此属性的所需<a href=\"Association.html\" title=\"org.springframework.data.mapping 中的类\"><code>Association</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the required getter method to access the property value or throw <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> if no getter\nmethod is available.",
       "translation": "返回用于访问属性值的必需 getter 方法；如果不可用，则抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the required setter method to set a property value or throw <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> if no setter\nmethod is available.",
       "translation": "返回用于设置属性值的必需 Setter 方法；如果不可用，则抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformation</code></a> of the property.",
       "translation": "返回该属性的<a href=\"../core/TypeInformation.html\" title=\"org.springframework.data.core 中的接口\"><code>TypeInformation</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the <a href=\"PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> has an annotation of the given type.",
       "translation": "返回指定的类型注解是否存在于<a href=\"PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>中。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the property is an <a href=\"Association.html\" title=\"class in org.springframework.data.mapping\"><code>Association</code></a>.",
       "translation": "返回该属性是否为<a href=\"Association.html\" title=\"org.springframework.data.mapping 中的类\"><code>Association</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the property is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
       "translation": "返回该属性是否为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"java.util 中的类或接口\"><code>Map</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Looks up the annotation of the given type on the <a href=\"PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>. Will inspect accessors and the\npotentially backing field and traverse accessor methods to potentially available super types.",
       "translation": "查找给定类型在<a href=\"PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>上的注解。将检查访问器以及潜在的底层字段，并遍历访问器方法以到达可能可用的父类型。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Return the type the property refers to in case it's an association, i.e.",
       "translation": "如果是关联，则返回该属性所引用的类型，即",
-      "count": 2
+      "count": 3
     },
     {
       "source": "The name of the property",
       "translation": "物业名称",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the raw type as it's pulled from from the reflected property.",
       "translation": "从反射属性中获取的原始类型。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "The type of the property",
       "translation": "属性类型",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the actual type of the property carries the given annotation.",
       "translation": "返回该属性的实际类型是否带有指定的注解。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the property is an array.",
       "translation": "返回该属性是否为数组。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the property is transient.",
       "translation": "返回该属性是否为瞬态。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the current property is writable, i.e. if the value held for it shall be written to the data store.",
       "translation": "返回当前属性是否可写，即其持有的值是否应写入数据存储。",
+      "count": 3
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 3
+    },
+    {
+      "source": "<code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a> are property-bound instance <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a> that accept a single\nargument of the property type creating a new object instance.",
+      "translation": "<code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a> 是属性绑定的实例 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a>，它们接受单个属性类型的参数以创建新的对象实例。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the property is a <em>potential</em> identifier property of the owning <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.\nThis method is mainly used by <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> implementation to discover id property candidates on\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> creation you should rather call <a href=\"PersistentEntity.html#isIdProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isIdProperty(PersistentProperty)</code></a>\nto determine whether the current property is the id property of that <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> under consideration.",
+      "translation": "返回该属性是否为所属<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>标识符属性。  \n此方法主要由<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实现类用于在创建<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>时发现标识符属性候选项；若要确定当前属性是否为该<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的标识符属性，您应调用<a href=\"PersistentEntity.html#isIdProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isIdProperty(PersistentProperty)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the current property is a <em>potential</em> version property of the owning\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>. This method is mainly used by <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> implementation to discover version\nproperty candidates on <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> creation you should rather call\n<a href=\"PersistentEntity.html#isVersionProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isVersionProperty(PersistentProperty)</code></a> to determine whether the current property is the\nversion property of that <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> under consideration.",
+      "translation": "返回当前属性是否为所属<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>版本属性。此方法主要由<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实现类使用，以在创建<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>时发现版本属性候选项；若要确定当前属性是否为所考虑的该<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的版本属性，您应调用<a href=\"PersistentEntity.html#isVersionProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isVersionProperty(PersistentProperty)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the detected <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformations</code></a> if the property references a\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>. Will return an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> in case it refers to a simple type. Will\nreturn the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>'s component types or the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>'s value type transparently.",
+      "translation": "如果属性引用了 <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformation</code></a>，则返回检测到的该对象；若引用的是 <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 接口，则同样返回对应的 <code>TypeInformation</code>。如果属性指向简单类型，则返回一个空的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a>。该方法会透明地返回 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a> 的组件类型或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 的值类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the detected <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformations</code></a> if the property references a\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
+      "translation": "如果属性引用了 <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>，则返回检测到的 <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformation</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the component type of the type if it is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>. Will return the type of the key if\nthe property is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
+      "translation": "如果该类型是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"java.util 中的类或接口\"><code>Collection</code></a>，则返回其组件类型；如果属性是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"java.util 中的类或接口\"><code>Map</code></a>，则返回键的类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> to set a property value on a new object instance.",
+      "translation": "返回一个 <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"java.lang.reflect 中的类或接口\"><code>Method</code></a>，用于在新对象实例上设置属性值。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the property is a <em>potential</em> identifier property of the owning <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
+      "translation": "返回该属性是否为所属<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>标识属性。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the current property is a <em>potential</em> version property of the owning\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
+      "translation": "返回当前属性是否为所属的 <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 的 <em>潜在</em> 版本属性。",
+      "count": 2
+    },
+    {
+      "source": "Returns the component type of the type if it is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>.",
+      "translation": "如果该类型是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"java.util 中的类或接口\"><code>Collection</code></a>，则返回其组件类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> if available.",
+      "translation": "如果可用，则返回后援 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"java.lang.reflect 中的类或接口\"><code>Field</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> if available. Might return null in case there is no backing field.",
+      "translation": "如果存在，则返回后援 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"java.lang.reflect 中的类或接口\"><code>Field</code></a>；否则可能返回 null。",
+      "count": 2
+    },
+    {
+      "source": "Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.",
+      "translation": "如果在该属性上找不到注解，则查找其所属类型上的注解。",
+      "count": 2
+    },
+    {
+      "source": "Returns the actual type of the property.",
+      "translation": "返回属性的实际类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the getter method to access the property value if available.",
+      "translation": "如果可用，则返回用于访问属性值的 getter 方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns the setter method to set a property value.",
+      "translation": "返回用于设置属性值的 Setter 方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether property access shall be used for reading the property value.",
+      "translation": "返回是否应使用属性访问来读取属性值。",
+      "count": 2
+    },
+    {
+      "source": "Returns the getter method to access the property value if available. Might return null in case there is\nno getter method with a return type assignable to the actual property's type.",
+      "translation": "如果可用，则返回用于访问属性值的 getter 方法。如果没有返回类型可赋值给实际属性类型的 getter 方法，则可能返回 null。",
+      "count": 2
+    },
+    {
+      "source": "Returns the setter method to set a property value. Might return null in case there is no setter\navailable.",
+      "translation": "返回用于设置属性值的 setter 方法。如果不可用，则可能返回 null。",
+      "count": 2
+    },
+    {
+      "source": "Returns the actual type of the property. This will be the original property type if no generics were used, the\ncomponent type for collection-like types and arrays as well as the value type for map properties.",
+      "translation": "返回属性的实际类型。如果未使用泛型，则返回原始属性类型；对于集合类型和数组，返回组件类型；对于映射属性，返回值类型。",
+      "count": 2
+    },
+    {
+      "source": "Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.\nUseful to lookup annotations that can be configured on the type but overridden on an individual property.",
+      "translation": "在给定类型上查找属性的注解，如果在该属性上找不到注解，则在其所属类型上查找。  \n适用于查找可在类型上配置但可被单个属性覆盖的注解。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether property access shall be used for reading the property value. This means it will use the getter\ninstead of field access.",
+      "translation": "返回是否应使用属性访问来读取属性值。这意味着将使用 getter 而不是字段访问。",
+      "count": 2
+    },
+    {
+      "source": "the type the property refers to in case it's an association, i.e. <a href=\"#isAssociation()\"><code>isAssociation()</code></a> returns\n        true.",
+      "translation": "如果是关联关系，则指该属性所引用的类型，即<a href=\"#isAssociation()\"><code>isAssociation()</code></a>返回true。",
+      "count": 2
+    },
+    {
+      "source": "<code>annotationType</code> - the annotation to look up, must not be null.",
+      "translation": "<code>annotationType</code> - 要查找的注解，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>annotationType</code> - must not be null.",
+      "translation": "<code>annotationType</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "the annotation of the given type. Can be null.",
+      "translation": "给定类型的注解。可为 null。",
       "count": 2
     },
     {
       "source": "Method Details",
       "translation": "方法详情",
-      "count": 2
-    },
-    {
-      "source": "<code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a> are property-bound instance <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a> that accept a single\nargument of the property type creating a new object instance.",
-      "translation": "<code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a> 是属性绑定的实例 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>methods</code></a>，它们接受单个属性类型的参数以创建新的对象实例。",
-      "count": 1
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
-    },
-    {
-      "source": "Returns whether the property is a <em>potential</em> identifier property of the owning <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.\nThis method is mainly used by <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> implementation to discover id property candidates on\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> creation you should rather call <a href=\"PersistentEntity.html#isIdProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isIdProperty(PersistentProperty)</code></a>\nto determine whether the current property is the id property of that <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> under consideration.",
-      "translation": "返回该属性是否为所属<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>标识符属性。  \n此方法主要由<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实现类用于在创建<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>时发现标识符属性候选项；若要确定当前属性是否为该<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的标识符属性，您应调用<a href=\"PersistentEntity.html#isIdProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isIdProperty(PersistentProperty)</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether the current property is a <em>potential</em> version property of the owning\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>. This method is mainly used by <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> implementation to discover version\nproperty candidates on <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> creation you should rather call\n<a href=\"PersistentEntity.html#isVersionProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isVersionProperty(PersistentProperty)</code></a> to determine whether the current property is the\nversion property of that <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> under consideration.",
-      "translation": "返回当前属性是否为所属<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>版本属性。此方法主要由<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实现类使用，以在创建<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>时发现版本属性候选项；若要确定当前属性是否为所考虑的该<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的版本属性，您应调用<a href=\"PersistentEntity.html#isVersionProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isVersionProperty(PersistentProperty)</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the detected <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformations</code></a> if the property references a\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>. Will return an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> in case it refers to a simple type. Will\nreturn the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>'s component types or the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>'s value type transparently.",
-      "translation": "如果属性引用了 <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformation</code></a>，则返回检测到的该对象；若引用的是 <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 接口，则同样返回对应的 <code>TypeInformation</code>。如果属性指向简单类型，则返回一个空的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a>。该方法会透明地返回 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a> 的组件类型或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 的值类型。",
       "count": 1
     },
     {
@@ -203,31 +318,6 @@
       "count": 1
     },
     {
-      "source": "Returns the detected <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformations</code></a> if the property references a\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
-      "translation": "如果属性引用了 <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>，则返回检测到的 <a href=\"../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformation</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the component type of the type if it is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>. Will return the type of the key if\nthe property is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
-      "translation": "如果该类型是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"java.util 中的类或接口\"><code>Collection</code></a>，则返回其组件类型；如果属性是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"java.util 中的类或接口\"><code>Map</code></a>，则返回键的类型。",
-      "count": 1
-    },
-    {
-      "source": "Returns the <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> to set a property value on a new object instance.",
-      "translation": "返回一个 <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"java.lang.reflect 中的类或接口\"><code>Method</code></a>，用于在新对象实例上设置属性值。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether the property is a <em>potential</em> identifier property of the owning <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
-      "translation": "返回该属性是否为所属<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>标识属性。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether the current property is a <em>potential</em> version property of the owning\n<a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
-      "translation": "返回当前属性是否为所属的 <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 的 <em>潜在</em> 版本属性。",
-      "count": 1
-    },
-    {
       "source": "<h1 class=\"title\" title=\"Interface PersistentProperty\">Interface PersistentProperty&lt;<span id=\"type-param-P\">P extends PersistentProperty&lt;P&gt;</span>&gt;</h1>",
       "translation": "<h1 class=\"title\" title=\"接口 PersistentProperty\">接口 PersistentProperty&lt;<span id=\"type-param-P\">P 扩展 PersistentProperty&lt;P&gt;</span>&gt;</h1>",
       "count": 1
@@ -235,21 +325,6 @@
     {
       "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">PersistentProperty&lt;P extends PersistentProperty&lt;P&gt;&gt;</span>",
       "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">PersistentProperty&lt;P extends PersistentProperty&lt;P&gt;&gt;</span>",
-      "count": 1
-    },
-    {
-      "source": "Returns the component type of the type if it is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>.",
-      "translation": "如果该类型是<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"java.util 中的类或接口\"><code>Collection</code></a>，则返回其组件类型。",
-      "count": 1
-    },
-    {
-      "source": "Returns the backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> if available.",
-      "translation": "如果可用，则返回后援 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"java.lang.reflect 中的类或接口\"><code>Field</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> if available. Might return null in case there is no backing field.",
-      "translation": "如果存在，则返回后援 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"java.lang.reflect 中的类或接口\"><code>Field</code></a>；否则可能返回 null。",
       "count": 1
     },
     {
@@ -265,56 +340,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.",
-      "translation": "如果在该属性上找不到注解，则查找其所属类型上的注解。",
-      "count": 1
-    },
-    {
-      "source": "Returns the actual type of the property.",
-      "translation": "返回属性的实际类型。",
-      "count": 1
-    },
-    {
-      "source": "Returns the getter method to access the property value if available.",
-      "translation": "如果可用，则返回用于访问属性值的 getter 方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns the setter method to set a property value.",
-      "translation": "返回用于设置属性值的 Setter 方法。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether property access shall be used for reading the property value.",
-      "translation": "返回是否应使用属性访问来读取属性值。",
-      "count": 1
-    },
-    {
-      "source": "Returns the getter method to access the property value if available. Might return null in case there is\nno getter method with a return type assignable to the actual property's type.",
-      "translation": "如果可用，则返回用于访问属性值的 getter 方法。如果没有返回类型可赋值给实际属性类型的 getter 方法，则可能返回 null。",
-      "count": 1
-    },
-    {
-      "source": "Returns the setter method to set a property value. Might return null in case there is no setter\navailable.",
-      "translation": "返回用于设置属性值的 setter 方法。如果不可用，则可能返回 null。",
-      "count": 1
-    },
-    {
-      "source": "Returns the actual type of the property. This will be the original property type if no generics were used, the\ncomponent type for collection-like types and arrays as well as the value type for map properties.",
-      "translation": "返回属性的实际类型。如果未使用泛型，则返回原始属性类型；对于集合类型和数组，返回组件类型；对于映射属性，返回值类型。",
-      "count": 1
-    },
-    {
-      "source": "Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.\nUseful to lookup annotations that can be configured on the type but overridden on an individual property.",
-      "translation": "在给定类型上查找属性的注解，如果在该属性上找不到注解，则在其所属类型上查找。  \n适用于查找可在类型上配置但可被单个属性覆盖的注解。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether property access shall be used for reading the property value. This means it will use the getter\ninstead of field access.",
-      "translation": "返回是否应使用属性访问来读取属性值。这意味着将使用 getter 而不是字段访问。",
       "count": 1
     },
     {
@@ -500,6 +525,161 @@
     {
       "source": "to set a property value on a new object instance. Might return\nnull in case there is no",
       "translation": "为新的对象实例设置属性值。如果不存在该属性，则可能返回 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no with <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> available.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果没有可用的 <code>with</code> <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"java.lang.reflect 中的类或接口\"><code>Method</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if not involved in an <a href=\"Association.html\" title=\"class in org.springframework.data.mapping\"><code>Association</code></a>.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果未参与 <a href=\"Association.html\" title=\"org.springframework.data.mapping 中的类\"><code>Association</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the component type, the map's key type or null if neither <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a> nor\n        <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>.",
+      "translation": "组件类型、映射的键类型，或者如果两者都不是 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a> 或\n        <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，则为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the required <code>annotationType</code> is not found.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果找不到必需的 <code>annotationType</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no getter method available.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果不可用 getter 方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no setter method available.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果不可用 setter 方法。",
+      "count": 1
+    },
+    {
+      "source": "the with <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> to set a property value on a new object instance if available, otherwise\n        null.",
+      "translation": "如果可用，则使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"java.lang.reflect 中的类或接口\"><code>Method</code></a> 在新对象实例上设置属性值；否则为 null。",
+      "count": 1
+    },
+    {
+      "source": "the with <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> to set a property value on and return a new object instance.",
+      "translation": "使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"java.lang.reflect 中的类或接口\"><code>Method</code></a> 来设置属性值并返回一个新的对象实例。",
+      "count": 1
+    },
+    {
+      "source": "the backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a> if available, otherwise null.",
+      "translation": "如果可用，则为 backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a>，否则为 null。",
+      "count": 1
+    },
+    {
+      "source": "the required backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"class or interface in java.lang.reflect\"><code>Field</code></a>.",
+      "translation": "所需的 backing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Field.html\" title=\"java.lang.reflect 中的类或接口\"><code>Field</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no backing field available.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果不可用底层字段。",
+      "count": 1
+    },
+    {
+      "source": "null if property is not part of an <a href=\"Association.html\" title=\"class in org.springframework.data.mapping\"><code>Association</code></a>.",
+      "translation": "如果该属性不属于<a href=\"Association.html\" title=\"org.springframework.data.mapping 中的类\"><code>Association</code></a>，则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "true a <a href=\"PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
+      "translation": "true 一个<a href=\"PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the map's value type or null if no <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>",
+      "translation": "map 的值类型，或者如果没有 Map<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>则为 null",
+      "count": 1
+    },
+    {
+      "source": "whether the <a href=\"PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> has an annotation of the given type.",
+      "translation": "判断<a href=\"PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>是否具有给定类型的注解。",
+      "count": 1
+    },
+    {
+      "source": "<code>annotationType</code> - the annotation to lookup, must not be null.",
+      "translation": "<code>annotationType</code> - 要查找的注解，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>owner</code> - must not be null.",
+      "translation": "<code>owner</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Graeme Rocher, Jon Brisbin, Oliver Gierke, Mark Paluch, Jens Schauder, Christoph Strobl, Johannes Englmeier",
+      "translation": "Graeme Rocher，Jon Brisbin，Oliver Gierke，Mark Paluch，Jens Schauder，Christoph Strobl，Johannes Englmeier",
+      "count": 1
+    },
+    {
+      "source": "The property name",
+      "translation": "属性名称",
+      "count": 1
+    },
+    {
+      "source": "The property type",
+      "translation": "物业类型",
+      "count": 1
+    },
+    {
+      "source": "the getter method to access the property value if available, otherwise null.",
+      "translation": "获取器方法用于在属性值可用时访问该值，否则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "the getter method to access the property value.",
+      "translation": "用于访问属性值的 getter 方法。",
+      "count": 1
+    },
+    {
+      "source": "the setter method to set a property value if available, otherwise null.",
+      "translation": "如果可用，则使用 setter 方法设置属性值；否则为 null。",
+      "count": 1
+    },
+    {
+      "source": "the setter method to set a property value.",
+      "translation": "用于设置属性值的 setter 方法。",
+      "count": 1
+    },
+    {
+      "source": "null if no expression defined.",
+      "translation": "未定义表达式时返回 null。",
+      "count": 1
+    },
+    {
+      "source": "true if the id property.",
+      "translation": "如果为 id 属性。",
+      "count": 1
+    },
+    {
+      "source": "the raw type of the property.",
+      "translation": "该属性的原始类型。",
+      "count": 1
+    },
+    {
+      "source": "the annotation of the given type.",
+      "translation": "给定类型的注解。",
+      "count": 1
+    },
+    {
+      "source": "will never be null.",
+      "translation": "永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <code>with</code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> to set a property value on a new object instance. Might return\nnull in case there is no <code>with</code> available.",
+      "translation": "返回一个 `<code>with</code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a>，用于在新对象实例上设置属性值。如果不存在可用的 `<code>with</code>`，则可能返回 null。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">class Person {\n        final String id;\n        final String name;\n\n        // …\n\n        Person withName(String name) {\n                return new Person(this.id, name);\n        }\n}\n</pre>",
+      "translation": "<pre class=\"code\">class Person {\n    final String id;\n    final String name;\n\n    // …\n\n    Person withName(String name) {\n        return new Person(this.id, name);\n    }\n}\n</pre>",
       "count": 1
     }
   ]

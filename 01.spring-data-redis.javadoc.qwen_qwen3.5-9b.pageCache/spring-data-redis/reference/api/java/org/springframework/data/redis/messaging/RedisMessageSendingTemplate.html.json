@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-06-19 09:04:27",
+  "updated_at": "2026-06-19 09:04:27",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 23,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.15,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "Configure the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolver.html\" title=\"class or interface in org.springframework.messaging.core\"><code>DestinationResolver</code></a> to use to resolve String destination names into actual destinations of\ntype <a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>.",
+      "translation": "配置<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolver.html\" title=\"class or interface in org.springframework.messaging.core\"><code>DestinationResolver</code></a>，用于将 String 类型的目的地名称解析为类型为<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>ChannelTopic</code></a>的实际目的地。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>RedisMessageSendingTemplate</code> for the given <a href=\"../core/RedisOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>RedisOperations</code></a>.",
+      "translation": "为给定的<a href=\"../core/RedisOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>RedisOperations</code></a>创建一个新的<code>RedisMessageSendingTemplate</code>。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured destination resolver.",
+      "translation": "返回配置的目的地解析器。",
+      "count": 2
+    },
+    {
+      "source": "This template bridges Spring Messaging's <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/Message.html\" title=\"class or interface in org.springframework.messaging\"><code>Message</code></a> abstraction to Redis Pub/Sub. <a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>Destinations</code></a> are resolved through a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolver.html\" title=\"class or interface in org.springframework.messaging.core\"><code>DestinationResolver</code></a> backed by a <a href=\"../listener/support/TopicResolver.html\" title=\"interface in org.springframework.data.redis.listener.support\"><code>TopicResolver</code></a>, and channel names\nare written by using a <a href=\"../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>String serializer</code></a>.",
+      "translation": "该模板将 Spring Messaging 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/Message.html\" title=\"class or interface in org.springframework.messaging\"><code>Message</code></a>抽象与 Redis Pub/Sub 桥接。<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\"><code>Destinations</code></a>通过由<a href=\"../listener/support/TopicResolver.html\" title=\"interface in org.springframework.data.redis.listener.support\"><code>TopicResolver</code></a>支持的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolver.html\" title=\"class or interface in org.springframework.messaging.core\"><code>DestinationResolver</code></a>进行解析，且通道名称是使用<a href=\"../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>String serializer</code></a>编写的。",
+      "count": 1
+    },
+    {
+      "source": "In contrast to <a href=\"../core/RedisOperations.html#convertAndSend(java.lang.String,java.lang.Object)\"><code>RedisOperations.convertAndSend(String, Object)</code></a>, which uses the configured value serializer of\nthe underlying <a href=\"../core/RedisOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>RedisOperations</code></a>, this template delegates payload conversion to a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>. The\ndefault converter is created through <a href=\"../serializer/RedisMessageConverters.html#createMessageConverter()\"><code>RedisMessageConverters.createMessageConverter()</code></a> and selects a suitable\nconversion strategy according to the payload type and, if present, the\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/MessageHeaders.html#CONTENT_TYPE\" title=\"class or interface in org.springframework.messaging\"><code>contentType</code></a> header.",
+      "translation": "与使用底层 <a href=\"../core/RedisOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>RedisOperations</code></a> 配置的序列化器的 <a href=\"../core/RedisOperations.html#convertAndSend(java.lang.String,java.lang.Object)\"><code>RedisOperations.convertAndSend(String, Object)</code></a> 不同，此模板将负载转换委托给 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>。默认转换器通过 <a href=\"../serializer/RedisMessageConverters.html#createMessageConverter()\"><code>RedisMessageConverters.createMessageConverter()</code></a> 创建，并根据负载类型以及（如果存在）<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/MessageHeaders.html#CONTENT_TYPE\" title=\"class or interface in org.springframework.messaging\"><code>contentType</code></a> 头选择适当的转换策略。",
+      "count": 1
+    },
+    {
+      "source": "Uses the configured string <a href=\"../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a> of <a href=\"../core/RedisTemplate.html\" title=\"class in org.springframework.data.redis.core\"><code>RedisTemplate</code></a>, if available, and otherwise falls back\nto <a href=\"../serializer/RedisSerializer.html#string()\"><code>RedisSerializer.string()</code></a> for channel serialization.",
+      "translation": "使用已配置的<a href=\"../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>（如果可用），否则回退到<a href=\"../serializer/RedisSerializer.html#string()\"><code>RedisSerializer.string()</code></a>进行通道序列化。",
+      "count": 1
+    },
+    {
+      "source": "Defaults to a <a href=\"TopicDestinationResolver.html\" title=\"class in org.springframework.data.redis.messaging\"><code>TopicDestinationResolver</code></a> backed by <a href=\"../listener/support/TopicResolver.html#channel()\"><code>TopicResolver.channel()</code></a>. Set this property to\nnull only if destination-name based operations are not used.",
+      "translation": "默认为一个由<a href=\"../listener/support/TopicResolver.html#channel()\"><code>TopicResolver.channel()</code></a>支持的<a href=\"TopicDestinationResolver.html\" title=\"class in org.springframework.data.redis.messaging\"><code>TopicDestinationResolver</code></a>。除非不使用基于目标名称的操作，否则请勿将此属性设置为 null。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Redis Pub/Sub transmits only the serialized message body. Message headers participate in conversion before\npublication and are not written to Redis.",
+      "translation": "Redis 发布/订阅模式仅传输序列化的消息体。消息头在发布前参与转换，并不写入 Redis。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#send(java.lang.String,org.springframework.messaging.Message)\" title=\"class or interface in org.springframework.messaging.core\">send</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"class or interface in org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#send(java.lang.String,org.springframework.messaging.Message)\" title=\"类或接口 org.springframework.messaging.core\">send</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"类或接口 org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"类 org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T)\" title=\"class or interface in org.springframework.messaging.core\">convertAndSend</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"class or interface in org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T)\" title=\"类或接口 org.springframework.messaging.core\">convertAndSend</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"类或接口 org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"org.springframework.data.redis.listener 中的类\">ChannelTopic</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T,java.util.Map)\" title=\"class or interface in org.springframework.messaging.core\">convertAndSend</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"class or interface in org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T,java.util.Map)\" title=\"类或接口 org.springframework.messaging.core\">convertAndSend</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"类或接口 org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"类 org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T,org.springframework.messaging.core.MessagePostProcessor)\" title=\"class or interface in org.springframework.messaging.core\">convertAndSend</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"class or interface in org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T,org.springframework.messaging.core.MessagePostProcessor)\" title=\"类或接口 org.springframework.messaging.core\">convertAndSend</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"类或接口 org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"类 org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T,java.util.Map,org.springframework.messaging.core.MessagePostProcessor)\" title=\"class or interface in org.springframework.messaging.core\">convertAndSend</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"class or interface in org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html#convertAndSend(java.lang.String,T,java.util.Map,org.springframework.messaging.core.MessagePostProcessor)\" title=\"类或接口 org.springframework.messaging.core\">convertAndSend</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/DestinationResolvingMessageSendingOperations.html\" title=\"类或接口 org.springframework.messaging.core\">DestinationResolvingMessageSendingOperations</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"类 org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/AbstractMessageSendingTemplate.html#doSend(D,org.springframework.messaging.Message)\" title=\"class or interface in org.springframework.messaging.core\">doSend</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/AbstractMessageSendingTemplate.html\" title=\"class or interface in org.springframework.messaging.core\">AbstractMessageSendingTemplate</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"class in org.springframework.data.redis.listener\">ChannelTopic</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/AbstractMessageSendingTemplate.html#doSend(D,org.springframework.messaging.Message)\" title=\"类或接口 org.springframework.messaging.core\">doSend</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/core/AbstractMessageSendingTemplate.html\" title=\"类或接口 org.springframework.messaging.core\">AbstractMessageSendingTemplate</a>&lt;<a href=\"../listener/ChannelTopic.html\" title=\"org.springframework.data.redis.listener 中的类\">ChannelTopic</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>redisOperations</code> - the Redis operations to use. Must not be null.",
+      "translation": "<code>redisOperations</code> - 要使用的 Redis 操作，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>destinationResolver</code> - the destination resolver to use.",
+      "translation": "<code>destinationResolver</code> - 要使用的目标解析器。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the configured destination resolver.",
+      "translation": "配置的目的地解析器。",
+      "count": 1
+    },
+    {
+      "source": "Message-oriented template for publishing to Redis Pub/Sub channels through <a href=\"../core/RedisOperations.html\" title=\"interface in org.springframework.data.redis.core\"><code>RedisOperations</code></a>.",
+      "translation": "面向消息的模板，用于通过<a href=\"../core/RedisOperations.html\" title=\"org.springframework.data.redis.core 中的接口\"><code>RedisOperations</code></a>发布到 Redis Pub/Sub 频道。",
+      "count": 1
+    }
+  ]
+}

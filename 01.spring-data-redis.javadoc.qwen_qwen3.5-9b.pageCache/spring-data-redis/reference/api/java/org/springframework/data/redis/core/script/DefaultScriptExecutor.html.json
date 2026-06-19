@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-19 09:36:50",
+  "updated_at": "2026-06-19 09:36:50",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 23,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3529411764705883,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Executes the given <a href=\"RedisScript.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>RedisScript</code></a>, using the provided <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>s to serialize the script\narguments and result.",
+      "translation": "执行给定的<a href=\"RedisScript.html\" title=\"org.springframework.data.redis.core.script 中的接口\"><code>RedisScript</code></a>，并使用提供的<a href=\"../../serializer/RedisSerializer.html\" title=\"org.springframework.data.redis.serializer 中的接口\"><code>RedisSerializer</code></a>对脚本参数和结果进行序列化。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a href=\"RedisScript.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>RedisScript</code></a>",
+      "translation": "执行给定的<a href=\"RedisScript.html\" title=\"org.springframework.data.redis.core.script 中的接口\"><code>RedisScript</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The return value of the script or null if <a href=\"RedisScript.html#getResultType()\"><code>RedisScript.getResultType()</code></a> is\n        null, likely indicating a throw-away status reply (i.e. \"OK\")",
+      "translation": "脚本的返回值，或者如果<a href=\"RedisScript.html#getResultType()\"><code>RedisScript.getResultType()</code></a>为null（这通常表示丢弃状态回复，即\"OK\"），则为null。",
+      "count": 2
+    },
+    {
+      "source": "<code>script</code> - the script to execute.",
+      "translation": "<code>script</code> - 要执行的脚本。",
+      "count": 2
+    },
+    {
+      "source": "<code>keys</code> - any keys that need to be passed to the script.",
+      "translation": "<code>keys</code> - 需要传递给脚本的任何键。",
+      "count": 2
+    },
+    {
+      "source": "<code>args</code> - any args that need to be passed to the script.",
+      "translation": "<code>args</code> - 需要传递给脚本的任何参数。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.lang.Object...)\">ScriptExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.lang.Object...)\">ScriptExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,org.springframework.data.redis.serializer.RedisSerializer,org.springframework.data.redis.serializer.RedisSerializer,java.util.List,java.lang.Object...)\">ScriptExecutor</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,org.springframework.data.redis.serializer.RedisSerializer,org.springframework.data.redis.serializer.RedisSerializer,java.util.List,java.lang.Object...)\">ScriptExecutor</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Default implementation of <a href=\"ScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>ScriptExecutor</code></a>. Optimizes performance by attempting to execute script first using\nevalsha, then falling back to eval if Redis has not yet cached the script. Evalsha is not attempted if the script is\nexecuted in a pipeline or transaction.",
+      "translation": "<a href=\"ScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\"><code>ScriptExecutor</code></a> 的默认实现。通过尝试首先使用 evalsha 执行脚本，并在 Redis 尚未缓存该脚本时回退到 eval，从而优化性能。如果脚本在管道或事务中执行，则不会尝试使用 evalsha。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.lang.Object...)\">execute</a></code> in interface <code><a href=\"ScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultScriptExecutor\">K</a>&gt;</code>",
+      "translation": "<a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,java.util.List,java.lang.Object...)\">execute</a> 接口 <code><a href=\"ScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultScriptExecutor\">K</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,org.springframework.data.redis.serializer.RedisSerializer,org.springframework.data.redis.serializer.RedisSerializer,java.util.List,java.lang.Object...)\">execute</a></code> in interface <code><a href=\"ScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultScriptExecutor\">K</a>&gt;</code>",
+      "translation": "<a href=\"ScriptExecutor.html#execute(org.springframework.data.redis.core.script.RedisScript,org.springframework.data.redis.serializer.RedisSerializer,org.springframework.data.redis.serializer.RedisSerializer,java.util.List,java.lang.Object...)\">execute</a> 接口 <code><a href=\"ScriptExecutor.html\" title=\"interface in org.springframework.data.redis.core.script\">ScriptExecutor</a>&lt;<a href=\"#type-param-K\" title=\"type parameter in DefaultScriptExecutor\">K</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>template</code> - The <a href=\"../RedisTemplate.html\" title=\"class in org.springframework.data.redis.core\"><code>RedisTemplate</code></a> to use",
+      "translation": "<code>template</code> - 要使用的<a href=\"../RedisTemplate.html\" title=\"class in org.springframework.data.redis.core\"><code>RedisTemplate</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<code>argsSerializer</code> - The <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a> to use for serializing args.",
+      "translation": "<code>argsSerializer</code> - 用于序列化参数的 <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>resultSerializer</code> - The <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a> to use for serializing the script return value.",
+      "translation": "<code>resultSerializer</code> - 用于序列化脚本返回值的 <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-K\"><code>K</code> - The type of keys that may be passed during script execution</span>",
+      "translation": "<span id=\"type-param-K\"><code>K</code> - 脚本执行期间可传入的键的类型</span>",
+      "count": 1
+    },
+    {
+      "source": "Jennifer Hickey, Christoph Strobl, Thomas Darimont, Mark Paluch",
+      "translation": "詹妮弗·希基，克里斯托夫·施特罗布，托马斯·达里蒙特，马克·帕卢赫",
+      "count": 1
+    }
+  ]
+}

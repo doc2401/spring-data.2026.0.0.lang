@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-06-19 07:55:58",
+  "updated_at": "2026-06-19 07:55:58",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 9,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Default reset strategy iterating through each registered <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> and calling <a href=\"RedisCache.html#clear()\"><code>RedisCache.clear()</code></a>.",
+      "translation": "默认的重置策略会遍历每个已注册的<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>，并调用其<a href=\"RedisCache.html#clear()\"><code>RedisCache.clear()</code></a>方法。",
+      "count": 1
+    },
+    {
+      "source": "Reset strategy iterating through each registered <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> and calling <a href=\"RedisCache.html#invalidate()\"><code>RedisCache.invalidate()</code></a>.",
+      "translation": "重置策略通过遍历每个已注册的<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>并调用其<a href=\"RedisCache.html#invalidate()\"><code>invalidate()</code></a>方法来实现。",
+      "count": 1
+    },
+    {
+      "source": "Default reset strategy iterating through each registered <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> and calling <a href=\"RedisCache.html#clear()\"><code>RedisCache.clear()</code></a>.\nActual clearing may be performed in an asynchronous or deferred fashion, with subsequent lookups possibly still\nseeing the entries.",
+      "translation": "默认的重置策略会遍历每个已注册的<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>并调用其<a href=\"RedisCache.html#clear()\"><code>clear()</code></a>方法。实际的清除操作可能是异步或延迟执行的，因此后续的查找仍可能看到这些条目。",
+      "count": 1
+    },
+    {
+      "source": "Reset strategy iterating through each registered <a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a> and calling <a href=\"RedisCache.html#invalidate()\"><code>RedisCache.invalidate()</code></a>.\nThis strategy expects all entries to be immediately invisible for subsequent lookups.",
+      "translation": "重置策略会遍历每个已注册的<a href=\"RedisCache.html\" title=\"class in org.springframework.data.redis.cache\"><code>RedisCache</code></a>并调用其<a href=\"RedisCache.html#invalidate()\"><code>invalidate()</code></a>方法。该策略期望所有条目在随后的查找中立即不可见。",
+      "count": 1
+    },
+    {
+      "source": "Flush the Redis database using the <code>FLUSHDB</code> command.",
+      "translation": "使用<code>FLUSHDB</code>命令清空 Redis 数据库。",
+      "count": 1
+    },
+    {
+      "source": "Flush the Redis database using the <code>FLUSHDB</code> command. This is the fastest way to reset all caches, but it\nwill also wipe all keys in the database, which may not be desirable if the database holds keys that are not used by\na cache or the database is shared with other applications keys. This strategy does not acquire or wait for any\nlocks to be released.",
+      "translation": "使用 <code>FLUSHDB</code> 命令刷新 Redis 数据库。这是重置所有缓存的最快方法，但它也会清除数据库中的所有键，如果数据库中包含非缓存使用的键，或者该数据库与其他应用程序的键共享，则此操作可能并不理想。此策略不会获取或等待任何锁的释放。",
+      "count": 1
+    },
+    {
+      "source": "Interface defining a strategy for resetting the cache.",
+      "translation": "定义缓存重置策略的接口。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    }
+  ]
+}

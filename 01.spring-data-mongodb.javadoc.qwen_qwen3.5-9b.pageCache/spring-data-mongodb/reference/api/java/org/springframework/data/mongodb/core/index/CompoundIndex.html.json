@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-06-19 02:11:25",
+  "updated_at": "2026-06-19 02:11:25",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 31,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1923076923076923,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "empty String by default.",
+      "translation": "默认情况下为空字符串。",
+      "count": 3
+    },
+    {
+      "source": "false by default.",
+      "translation": "默认值为 false。",
+      "count": 3
+    },
+    {
+      "source": "since 5.0 for removal without replacement.",
+      "translation": "自 5.0 版本起，将移除且不替换。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE: This annotation is repeatable according to Java 8 conventions using <a href=\"CompoundIndexes.html#value()\"><code>CompoundIndexes.value()</code></a> as\ncontainer.</b>",
+      "translation": "<b>注意：根据 Java 8 约定，此注解可重复使用，并使用<a href=\"CompoundIndexes.html#value()\"><code>CompoundIndexes.value()</code></a>作为容器。</b>",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<strong>NOTE:</strong> Since MongoDB 4.2 the background flag is ignored by the server if set.",
+      "translation": "<strong>注意：</strong>自 MongoDB 4.2 起，如果设置了该标志，服务器将忽略它。",
+      "count": 1
+    },
+    {
+      "source": "Index name of the index to be created either as plain value or as\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>. <br/>\n<br/>\nThe name will only be applied as is when defined on root level. For usage on nested or embedded structures the\nprovided name will be prefixed with the path leading to the entity. <br/>\n<br/>\nThe structure below\n\n<pre class=\"code\">@Document\nclass Root {\n        Hybrid hybrid;\n        Nested nested;\n}\n\n@Document\n@CompoundIndex(name = \"compound_index\", def = \"{'h1': 1, 'h2': 1}\")\nclass Hybrid {\n        String h1, h2;\n}\n\n@CompoundIndex(name = \"compound_index\", def = \"{'n1': 1, 'n2': 1}\")\nclass Nested {\n        String n1, n2;\n}\n</pre>\n\nresolves in the following index structures\n\n<pre class=\"code\">db.root.createIndex( { hybrid.h1: 1, hybrid.h2: 1 } , { name: \"hybrid.compound_index\" } )\ndb.root.createIndex( { nested.n1: 1, nested.n2: 1 } , { name: \"nested.compound_index\" } )\ndb.hybrid.createIndex( { h1: 1, h2: 1 } , { name: \"compound_index\" } )\n</pre>",
+      "translation": "要创建的索引的名称，可以是纯值或作为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>。 <br/>\n<br/>\n当在根级别定义时，名称将原样应用。对于嵌套或嵌入结构的使用，提供的名称将加上指向该实体的路径作为前缀。 <br/>\n<br/>\n以下结构\n\n<pre class=\"code\">@Document\nclass Root {\n        Hybrid hybrid;\n        Nested nested;\n}\n\n@Document\n@CompoundIndex(name = \"compound_index\", def = \"{'h1': 1, 'h2': 1}\")\nclass Hybrid {\n        String h1, h2;\n}\n\n@CompoundIndex(name = \"compound_index\", def = \"{'n1': 1, 'n2': 1}\")\nclass Nested {\n        String n1, n2;\n}\n</pre>\n\n解析为以下索引结构\n\n<pre class=\"code\">db.root.createIndex( { hybrid.h1: 1, hybrid.h2: 1 } , { name: \"hybrid.compound_index\" } )\ndb.root.createIndex( { nested.n1: 1, nested.n2: 1 } , { name: \"nested.compound_index\" } )\ndb.hybrid.createIndex( { h1: 1, h2: 1 } , { name: \"compound_index\" } )\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "The actual index definition in JSON format or a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a> resolving to either a JSON String or a <code>Document</code>. The keys of the JSON\ndocument are the fields to be indexed, the values define the index direction (1 for ascending, -1 for descending).\n<br/>\nIf left empty on nested document, the whole document will be indexed.\n\n<pre class=\"code\">@Document\n@CompoundIndex(def = \"{'h1': 1, 'h2': 1}\")\nclass JsonStringIndexDefinition {\n  String h1, h2;\n}\n\n@Document\n@CompoundIndex(def = \"#{T(org.bson.Document).parse(\"{ 'h1': 1, 'h2': 1 }\")}\")\nclass ExpressionIndexDefinition {\n  String h1, h2;\n}\n</pre>",
+      "translation": "实际索引定义为 JSON 格式或一个 `<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>`，该表达式解析为 JSON 字符串或 `<code>Document</code>`。JSON 文档的键是要索引的字段，值定义索引方向（1 表示升序，-1 表示降序）。\n<br/>\n如果嵌套文档中留空，则整个文档将被索引。\n\n<pre class=\"code\">@Document\n@CompoundIndex(def = \"{'h1': 1, 'h2': 1}\")\nclass JsonStringIndexDefinition {\n  String h1, h2;\n}\n\n@Document\n@CompoundIndex(def = \"#{T(org.bson.Document).parse(\"{ 'h1': 1, 'h2': 1 }\")}\")\nclass ExpressionIndexDefinition {\n  String h1, h2;\n}\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Only index the documents in a collection that meet a specified <a href=\"IndexFilter.html\" title=\"interface in org.springframework.data.mongodb.core.index\"><code>filter expression</code></a>. <br/>\nMust not be used with <a href=\"#sparse()\"><code>sparse = true</code></a>.",
+      "translation": "仅对满足指定<a href=\"IndexFilter.html\" title=\"org.springframework.data.mongodb.core.index 中的接口\"><code>过滤表达式</code></a>的集合中的文档建立索引。<br/>\n不得与<a href=\"#sparse()\"><code>sparse = true</code></a>一起使用。",
+      "count": 1
+    },
+    {
+      "source": "The actual collation definition in JSON format or a\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a> resolving to either a JSON\nString or a <code>Document</code>.",
+      "translation": "实际的排序定义采用 JSON 格式，或是一个解析为 JSON 字符串或<code>Document</code>的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The actual index definition in JSON format or a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a> resolving to either a JSON String or a <code>Document</code>.",
+      "translation": "实际的索引定义为 JSON 格式，或是一个 `<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>`，该表达式解析为 JSON 字符串或 `<code>Document</code>`。",
+      "count": 1
+    },
+    {
+      "source": "If set to true index will skip over any document that is missing the indexed field. <br/>\nMust not be used with <a href=\"#partialFilter()\"><code>partialFilter()</code></a>.",
+      "translation": "如果设置为 true，索引将跳过缺少已索引字段的任何文档。<br/>\n不能与<a href=\"#partialFilter()\"><code>partialFilter()</code></a>一起使用。",
+      "count": 1
+    },
+    {
+      "source": "Index name of the index to be created either as plain value or as\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>.",
+      "translation": "要创建的索引的名称，可以是纯值或作为<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Only index the documents in a collection that meet a specified <a href=\"IndexFilter.html\" title=\"interface in org.springframework.data.mongodb.core.index\"><code>filter expression</code></a>.",
+      "translation": "仅对满足指定<a href=\"IndexFilter.html\" title=\"org.springframework.data.mongodb.core.index 中的接口\"><code>过滤表达式</code></a>的集合中的文档建立索引。",
+      "count": 1
+    },
+    {
+      "source": "If set to true index will skip over any document that is missing the indexed field.",
+      "translation": "如果设置为 true，索引将跳过缺少已索引字段的任何文档。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name. Defaults\nto false.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "Jon Brisbin, Oliver Gierke, Philipp Schneider, Johno Crawford, Christoph Strobl, Dave Perryman, Stefan Tirea",
+      "translation": "Jon Brisbin，Oliver Gierke，Philipp Schneider，Johno Crawford，Christoph Strobl，Dave Perryman，Stefan Tirea",
+      "count": 1
+    },
+    {
+      "source": "false by default",
+      "translation": "默认值为 false",
+      "count": 1
+    },
+    {
+      "source": "empty by default.",
+      "translation": "默认情况下为空。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "Mark a class to use compound indexes. <br/>",
+      "translation": "标记一个类以使用复合索引。<br/>",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">@Document\n@CompoundIndex(def = \"{'firstname': 1, 'lastname': 1}\")\n@CompoundIndex(def = \"{'address.city': 1, 'address.street': 1}\")\nclass Person {\n        String firstname;\n        String lastname;\n\n        Address address;\n}\n</pre>",
+      "translation": "<pre class=\"code\">@Document\n@CompoundIndex(def = \"{'firstname': 1, 'lastname': 1}\")\n@CompoundIndex(def = \"{'address.city': 1, 'address.street': 1}\")\nclass Person {\n        String firstname;\n        String lastname;\n\n        Address address;\n}\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "If true the index will be created in the background.",
+      "translation": "如果为真，索引将在后台创建。",
+      "count": 1
+    },
+    {
+      "source": "The actual collation definition in JSON format or a\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a> resolving to either a JSON\nString or a <code>Document</code>. The keys of the JSON document are configuration options for the collation\n(language-specific rules for string comparison) to be applied on string properties being part of the index.",
+      "translation": "实际的排序定义采用 JSON 格式，或是一个解析为 JSON 字符串或 <code>Document</code> 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>模板表达式</code></a>。JSON 文档的键是应用于索引中字符串属性的排序配置选项（即针对字符串比较的语言特定规则）。",
+      "count": 1
+    }
+  ]
+}

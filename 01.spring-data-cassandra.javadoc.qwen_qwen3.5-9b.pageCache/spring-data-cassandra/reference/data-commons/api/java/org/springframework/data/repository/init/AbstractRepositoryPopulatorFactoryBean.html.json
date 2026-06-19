@@ -1,26 +1,31 @@
 {
   "created_at": "2026-06-16 12:01:52",
-  "updated_at": "2026-06-16 12:01:52",
+  "updated_at": "2026-06-18 07:24:39",
   "stats": {
-    "total_entries": 32,
+    "total_entries": 41,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 33,
-    "entries_with_hits": 32,
+    "total_hits": 45,
+    "entries_with_hits": 41,
     "entries_without_hits": 0,
-    "hit_rate": 1.03125,
-    "usage_percentage": 0.0031999999999999997
+    "hit_rate": 1.0975609756097562,
+    "usage_percentage": 0.0041
   },
   "items": [
     {
       "source": "Configures the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/Resource.html\" title=\"class or interface in org.springframework.core.io\"><code>Resource</code></a>s to be used to load objects from and initialize the repositories eventually.",
       "translation": "配置用于从资源加载对象并最终初始化存储库的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/io/Resource.html\" title=\"class or interface in org.springframework.core.io\"><code>Resource</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Base class for <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>s creating <a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\"><code>ResourceReaderRepositoryPopulator</code></a>s. Sub-classes have to provide\na <a href=\"ResourceReader.html\" title=\"interface in org.springframework.data.repository.init\"><code>ResourceReader</code></a> to hand into the <a href=\"RepositoryPopulator.html\" title=\"interface in org.springframework.data.repository.init\"><code>RepositoryPopulator</code></a> instance created.",
+      "translation": "创建<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>的基类，该<code>FactoryBean</code>用于创建<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\"><code>ResourceReaderRepositoryPopulator</code></a>。子类必须提供一个<a href=\"ResourceReader.html\" title=\"interface in org.springframework.data.repository.init\"><code>ResourceReader</code></a>，并将其传递给所创建的<a href=\"RepositoryPopulator.html\" title=\"interface in org.springframework.data.repository.init\"><code>RepositoryPopulator</code></a>实例。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -35,11 +40,6 @@
     {
       "source": "<span class=\"modifiers\">public abstract class </span><span class=\"element-name type-name-label\">AbstractRepositoryPopulatorFactoryBean</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;\nimplements <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationListener.html\" title=\"class or interface in org.springframework.context\">ApplicationListener</a>&lt;<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/event/ContextRefreshedEvent.html\" title=\"class or interface in org.springframework.context.event\">ContextRefreshedEvent</a>&gt;, <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContextAware.html\" title=\"class or interface in org.springframework.context\">ApplicationContextAware</a></span>",
       "translation": "<span class=\"modifiers\">public abstract class </span><span class=\"element-name type-name-label\">AbstractRepositoryPopulatorFactoryBean</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;\nimplements <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationListener.html\" title=\"class or interface in org.springframework.context\">ApplicationListener</a>&lt;<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/event/ContextRefreshedEvent.html\" title=\"class or interface in org.springframework.context.event\">ContextRefreshedEvent</a>&gt;, <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContextAware.html\" title=\"class or interface in org.springframework.context\">ApplicationContextAware</a></span>",
-      "count": 1
-    },
-    {
-      "source": "Base class for <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>s creating <a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\"><code>ResourceReaderRepositoryPopulator</code></a>s. Sub-classes have to provide\na <a href=\"ResourceReader.html\" title=\"interface in org.springframework.data.repository.init\"><code>ResourceReader</code></a> to hand into the <a href=\"RepositoryPopulator.html\" title=\"interface in org.springframework.data.repository.init\"><code>RepositoryPopulator</code></a> instance created.",
-      "translation": "创建<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>FactoryBean</code></a>的基类，该<code>FactoryBean</code>用于创建<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\"><code>ResourceReaderRepositoryPopulator</code></a>。子类必须提供一个<a href=\"ResourceReader.html\" title=\"interface in org.springframework.data.repository.init\"><code>ResourceReader</code></a>，并将其传递给所创建的<a href=\"RepositoryPopulator.html\" title=\"interface in org.springframework.data.repository.init\"><code>RepositoryPopulator</code></a>实例。",
       "count": 1
     },
     {
@@ -170,6 +170,51 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html#getObjectType()\" title=\"class or interface in org.springframework.beans.factory\">getObjectType</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html#getObjectType()\" title=\"class or interface in org.springframework.beans.factory\">getObjectType</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#getObjectType()\" title=\"class or interface in org.springframework.beans.factory.config\">getObjectType</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#getObjectType()\" title=\"类或接口在 org.springframework.beans.factory.config\">getObjectType</a></code> 方法位于类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"类或接口在 org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"org.springframework.data.repository.init 中的类\">ResourceReaderRepositoryPopulator</a>&gt;</code> 中。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#createInstance()\" title=\"class or interface in org.springframework.beans.factory.config\">createInstance</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#createInstance()\" title=\"类或接口位于 org.springframework.beans.factory.config\">createInstance</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"类或接口位于 org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"类位于 org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationListener.html#onApplicationEvent(E)\" title=\"class or interface in org.springframework.context\">onApplicationEvent</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationListener.html\" title=\"class or interface in org.springframework.context\">ApplicationListener</a>&lt;<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/event/ContextRefreshedEvent.html\" title=\"class or interface in org.springframework.context.event\">ContextRefreshedEvent</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationListener.html#onApplicationEvent(E)\" title=\"org.springframework.context 中的类或接口\">onApplicationEvent</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationListener.html\" title=\"org.springframework.context 中的类或接口\">ApplicationListener</a>&lt;<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/event/ContextRefreshedEvent.html\" title=\"org.springframework.context.event 中的类或接口\">ContextRefreshedEvent</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory.config\">afterPropertiesSet</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"class in org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#afterPropertiesSet()\" title=\"类或接口 org.springframework.beans.factory.config\">afterPropertiesSet</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"类或接口 org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"ResourceReaderRepositoryPopulator.html\" title=\"类 org.springframework.data.repository.init\">ResourceReaderRepositoryPopulator</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\" title=\"class or interface in org.springframework.context\">setApplicationContext</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContextAware.html\" title=\"class or interface in org.springframework.context\">ApplicationContextAware</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContextAware.html#setApplicationContext(org.springframework.context.ApplicationContext)\" title=\"类或接口在 org.springframework.context\">setApplicationContext</a></code> 是接口<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContextAware.html\" title=\"类或接口在 org.springframework.context\">ApplicationContextAware</a></code>中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>resources</code> - must not be null.",
+      "translation": "<code>resources</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Christoph Strobl, Johannes Englmeier",
+      "translation": "奥利弗·吉尔克，克里斯托夫·施特罗布，约翰内斯·恩格勒迈尔",
       "count": 1
     }
   ]

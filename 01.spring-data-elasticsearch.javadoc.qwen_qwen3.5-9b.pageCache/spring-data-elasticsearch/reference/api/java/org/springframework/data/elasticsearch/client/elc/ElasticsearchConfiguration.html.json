@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-18 15:35:15",
+  "updated_at": "2026-06-18 15:35:15",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 22,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2941176470588236,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Creates a <a href=\"../../core/ElasticsearchOperations.html\" title=\"interface in org.springframework.data.elasticsearch.core\"><code>ElasticsearchOperations</code></a> implementation using an\n<code>ElasticsearchClient</code>.",
+      "translation": "使用 <code>ElasticsearchClient</code> 创建 <a href=\"../../core/ElasticsearchOperations.html\" title=\"interface in org.springframework.data.elasticsearch.core\"><code>ElasticsearchOperations</code></a> 接口的实现。",
+      "count": 2
+    },
+    {
+      "source": "Must be implemented by deriving classes to provide the <a href=\"../ClientConfiguration.html\" title=\"interface in org.springframework.data.elasticsearch.client\"><code>ClientConfiguration</code></a>.",
+      "translation": "必须通过派生类来实现，以提供<a href=\"../ClientConfiguration.html\" title=\"org.springframework.data.elasticsearch.client 中的接口\"><code>ClientConfiguration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Provides the JsonpMapper bean that is used in the <a href=\"#elasticsearchTransport(co.elastic.clients.transport.rest5_client.low_level.Rest5Client,co.elastic.clients.json.JsonpMapper)\"><code>elasticsearchTransport(Rest5Client, JsonpMapper)</code></a> method.",
+      "translation": "提供用于<a href=\"#elasticsearchTransport(co.elastic.clients.transport.rest5_client.low_level.Rest5Client,co.elastic.clients.json.JsonpMapper)\"><code>elasticsearchTransport(Rest5Client, JsonpMapper)</code></a>方法的 JsonpMapper  Bean。",
+      "count": 2
+    },
+    {
+      "source": "Provides the <code>ElasticsearchClient</code> to be used.",
+      "translation": "提供用于使用的 `<code>ElasticsearchClient</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Provides the underlying low level Elasticsearch RestClient.",
+      "translation": "提供底层的低级 Elasticsearch 客户端。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Base class for a @<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/annotation/Configuration.html\" title=\"class or interface in org.springframework.context.annotation\"><code>Configuration</code></a> class to set up the Elasticsearch\nconnection using the Elasticsearch Client. This class exposes different parts of the setup as Spring beans. Deriving\nclasses must provide the <a href=\"../ClientConfiguration.html\" title=\"interface in org.springframework.data.elasticsearch.client\"><code>ClientConfiguration</code></a> to use. From Version 6.0 on, this class uses the new Rest5Client\nfrom Elasticsearch 9. The old implementation using the RestClient is still available under the name\n<a href=\"ElasticsearchLegacyRestClientConfiguration.html\" title=\"class in org.springframework.data.elasticsearch.client.elc\"><code>ElasticsearchLegacyRestClientConfiguration</code></a>.",
+      "translation": "这是用于配置 Elasticsearch 连接的 @<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/annotation/Configuration.html\" title=\"class or interface in org.springframework.context.annotation\"><code>Configuration</code></a> 类的基类，该连接使用 Elasticsearch Client 建立。此类将配置的不同部分作为 Spring Bean 暴露出来。派生类必须提供 <a href=\"../ClientConfiguration.html\" title=\"interface in org.springframework.data.elasticsearch.client\"><code>ClientConfiguration</code></a> 接口才能使用。从版本 6.0 开始，该类使用 Elasticsearch 9 中的新 Rest5Client；旧版基于 RestClient 的实现仍保留在名称 <a href=\"ElasticsearchLegacyRestClientConfiguration.html\" title=\"class in org.springframework.data.elasticsearch.client.elc\"><code>ElasticsearchLegacyRestClientConfiguration</code></a> 下。",
+      "count": 1
+    },
+    {
+      "source": "Provides the Elasticsearch transport to be used. The default implementation uses the <code>Rest5Client</code> bean and\nthe <code>JsonpMapper</code> bean provided in this class.",
+      "translation": "提供要使用的 Elasticsearch 传输层。默认实现使用本类中提供的<code>Rest5Client</code>bean和<code>JsonpMapper</code>bean。",
+      "count": 1
+    },
+    {
+      "source": "Provides the Elasticsearch transport to be used.",
+      "translation": "提供要使用的 Elasticsearch 传输层。",
+      "count": 1
+    },
+    {
+      "source": "<code>transport</code> - the <code>ElasticsearchTransport</code> to use",
+      "translation": "<code>transport</code> - 要使用的 <code>ElasticsearchTransport</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>clientConfiguration</code> - configuration for the client, must not be null",
+      "translation": "<code>clientConfiguration</code> - 客户端配置，不能为 null",
+      "count": 1
+    },
+    {
+      "source": "the <code>JsonpMapper</code> to use",
+      "translation": "应使用的<code>JsonpMapper</code>。",
+      "count": 1
+    },
+    {
+      "source": "Peter-Josef Meisch",
+      "translation": "彼得 - 约瑟夫·迈施",
+      "count": 1
+    },
+    {
+      "source": "configuration, must not be null",
+      "translation": "配置不能为空。",
+      "count": 1
+    },
+    {
+      "source": "ElasticsearchClient instance",
+      "translation": "ElasticsearchClient 实例",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 1
+    },
+    {
+      "source": "the options that should be added to every request. Must not be null",
+      "translation": "每个请求中应添加的选项。不得为 null。",
+      "count": 1
+    }
+  ]
+}

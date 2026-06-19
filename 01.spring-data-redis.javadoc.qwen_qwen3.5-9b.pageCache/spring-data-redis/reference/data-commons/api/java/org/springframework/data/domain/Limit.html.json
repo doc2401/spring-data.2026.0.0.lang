@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-06-19 05:59:23",
+  "updated_at": "2026-06-19 05:59:23",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 15,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0714285714285714,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a> from the given max value.",
+      "translation": "根据给定的最大值创建一个新的<a href=\"Limit.html\" title=\"org.springframework.data.domain 中的接口\"><code>Limit</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "A <a href=\"#isUnlimited()\"><code>isUnlimited()</code></a> is used to indicate that there is no <a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a> defined, which should be favored\nover using null or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> to indicate the absence of an actual <a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a>.",
+      "translation": "<a href=\"#isUnlimited()\"><code>isUnlimited()</code></a> 用于表示未定义任何 <a href=\"Limit.html\" title=\"org.springframework.data.domain 中的接口\"><code>Limit</code></a>，应优先采用此方式，而不是使用 null 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"java.util 中的类或接口\"><code>Optional.empty()</code></a> 来表示实际 <a href=\"Limit.html\" title=\"org.springframework.data.domain 中的接口\"><code>Limit</code></a> 的缺失。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Note that using a zero Limit with repository query methods returning <a href=\"Page.html\" title=\"interface in org.springframework.data.domain\"><code>Page</code></a> is rejected because of a zero-page\nsize.",
+      "translation": "请注意，使用零值作为 `Limit` 参数调用返回 `<a href=\"Page.html\" title=\"org.springframework.data.domain 中的接口\"><code>Page</code></a>` 的仓储查询方法会被拒绝，因为页面大小为零。",
+      "count": 1
+    },
+    {
+      "source": "a <a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a> instance that does not define <a href=\"#max()\"><code>max()</code></a> and answers <a href=\"#isUnlimited()\"><code>isUnlimited()</code></a> with\n        true.",
+      "translation": "一个<a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a>实例，该实例未定义<a href=\"#max()\"><code>max()</code></a>方法，且对<a href=\"#isUnlimited()\"><code>isUnlimited()</code></a>的回答为true。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a>.",
+      "translation": "<code>Limit</code> 接口的<a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\">新实例</a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>max</code> - the maximum value.",
+      "translation": "<code>max</code> - 最大值。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Oliver Drotbohm",
+      "translation": "克里斯托夫·施特罗布，奥利弗·德罗特博姆",
+      "count": 1
+    },
+    {
+      "source": "the max number of potential results.",
+      "translation": "潜在结果的最大数量。",
+      "count": 1
+    },
+    {
+      "source": "true if limiting (maximum value) should be applied.",
+      "translation": "如果应应用限制（最大值），则为 true。",
+      "count": 1
+    },
+    {
+      "source": "true if no limiting (maximum value) should be applied.",
+      "translation": "如果不应应用限制（最大值），则为 true。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a> represents the maximum value up to which an operation should continue processing. It may be used for\ndefining the <a href=\"#max()\"><code>maximum</code></a> number of results within a repository finder method or if applicable a template\noperation.",
+      "translation": "<a href=\"Limit.html\" title=\"org.springframework.data.domain 中的接口\"><code>Limit</code></a> 表示操作应继续处理的最大值。它可用于定义仓库查找方法或（如适用）模板操作中的 <a href=\"#max()\"><code>maximum</code></a> 结果数量。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"Limit.html\" title=\"interface in org.springframework.data.domain\"><code>Limit</code></a> itself does not make assumptions about the actual <a href=\"#max()\"><code>max()</code></a> value sign. This means that a negative\nvalue may be valid within a defined context. A zero limit can be useful in cases where the result is not needed but\nthe underlying activity to compute results might be required.",
+      "translation": "<a href=\"Limit.html\" title=\"org.springframework.data.domain 中的接口\"><code>Limit</code></a> 本身不对 <a href=\"#max()\"><code>max()</code></a> 值的实际符号做出任何假设。这意味着在特定上下文中，负值可能是有效的。零限制在某些情况下非常有用，例如当不需要结果但需要执行底层计算活动以获取结果时。",
+      "count": 1
+    }
+  ]
+}

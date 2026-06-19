@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-06-19 12:58:23",
+  "updated_at": "2026-06-19 12:58:23",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 9,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "By default, Spring Data converts enum values by to <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html#name()\" title=\"class or interface in java.lang\"><code>String</code></a> for maximum portability. Registering a\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/WritingConverter.html\" title=\"class or interface in org.springframework.data.convert\"><code>WritingConverter</code></a> allows retaining the enum type so that actual enum values get passed thru to the driver.",
+      "translation": "默认情况下，Spring Data 将枚举值转换为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html#name()\" title=\"class or interface in java.lang\"><code>String</code></a> 以实现最大兼容性。注册一个\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/WritingConverter.html\" title=\"class or interface in org.springframework.data.convert\"><code>WritingConverter</code></a> 可以保留枚举类型，从而使实际的枚举值能够传递给驱动程序。",
+      "count": 1
+    },
+    {
+      "source": "Enum types that should be written using their actual enum value to the database should require a converter for type\npinning. Extend this class as the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions</code></a> support inspects\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>Converter</code></a> generics to identify conversion rules.",
+      "translation": "需要使用其实际枚举值写入数据库的枚举类型，应要求使用类型固定转换器。扩展此类以支持<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/CustomConversions.html\" title=\"class or interface in org.springframework.data.convert\"><code>CustomConversions</code></a>，该支持会检查<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\"><code>Converter</code></a>泛型以识别转换规则。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2017–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2017–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "For example:",
+      "translation": "例如：",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html#convert(S)\" title=\"class or interface in org.springframework.core.convert.converter\">convert</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"class or interface in org.springframework.core.convert.converter\">Converter</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in EnumWriteSupport\">E</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html\" title=\"class or interface in java.lang\">Enum</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in EnumWriteSupport\">E</a>&gt;, <a href=\"#type-param-E\" title=\"type parameter in EnumWriteSupport\">E</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html\" title=\"class or interface in java.lang\">Enum</a>&lt;<a href=\"#type-param-E\" title=\"type parameter in EnumWriteSupport\">E</a>&gt;&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html#convert(S)\" title=\"类或接口 org.springframework.core.convert.converter\">convert</a></code> 在接口<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/converter/Converter.html\" title=\"类或接口 org.springframework.core.convert.converter\">Converter</a>&lt;<a href=\"#type-param-E\" title=\"EnumWriteSupport 中的类型参数\">E</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html\" title=\"类或接口 java.lang\">Enum</a>&lt;<a href=\"#type-param-E\" title=\"EnumWriteSupport 中的类型参数\">E</a>&gt;, <a href=\"#type-param-E\" title=\"EnumWriteSupport 中的类型参数\">E</a> extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html\" title=\"类或接口 java.lang\">Enum</a>&lt;<a href=\"#type-param-E\" title=\"EnumWriteSupport 中的类型参数\">E</a>&gt;&gt;</code>中",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-E\"><code>E</code> - the enum type that should be written using the actual value.</span>",
+      "translation": "<span id=\"type-param-E\"><code>E</code> - 应使用实际值写入的枚举类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Support class to natively write <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html\" title=\"class or interface in java.lang\"><code>Enum</code></a> values to the database.",
+      "translation": "支持类，可原生将 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html\" title=\"class or interface in java.lang\"><code>Enum</code></a> 值写入数据库。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">enum Color {\n        Grey, Blue\n}\n\nclass ColorConverter extends EnumWriteSupport&lt;Color&gt; {\n\n}\n</pre>",
+      "translation": "<pre class=\"code\">enum 颜色 {\n    灰色，蓝色\n}\n\nclass 颜色转换器 extends EnumWriteSupport&lt;颜色&gt; {\n\n}</pre>",
+      "count": 1
+    }
+  ]
+}

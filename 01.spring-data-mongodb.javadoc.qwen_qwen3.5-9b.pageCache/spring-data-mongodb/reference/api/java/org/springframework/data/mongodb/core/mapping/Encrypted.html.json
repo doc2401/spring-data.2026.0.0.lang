@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-06-19 02:17:01",
+  "updated_at": "2026-06-19 02:17:01",
+  "stats": {
+    "total_entries": 11,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 11,
+    "entries_with_hits": 11,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0011
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Get the <code>keyId</code> to use. The value must resolve to either the UUID representation of the key or a base64\nencoded value representing the UUID value.\n<br/>\nOn <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE\" title=\"class or interface in java.lang.annotation\"><code>ElementType.TYPE</code></a> level the <a href=\"#keyId()\"><code>keyId()</code></a> can be left empty if explicitly set for fields. <br/>\nOn <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD\" title=\"class or interface in java.lang.annotation\"><code>ElementType.FIELD</code></a> level the <a href=\"#keyId()\"><code>keyId()</code></a> can be left empty if inherited from\nencryptMetadata.",
+      "translation": "获取要使用的 `<code>keyId</code>`。其值必须解析为密钥的 UUID 表示形式，或代表该 UUID 值的 base64 编码字符串。  \n<br/>\n在 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE\" title=\"java.lang.annotation 中的类或接口\"><code>ElementType.TYPE</code></a> 级别，如果字段已显式设置 `<a href=\"#keyId()\"><code>keyId()</code></a>`，则可以将其留空。  \n<br/>\n在 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD\" title=\"java.lang.annotation 中的类或接口\"><code>ElementType.FIELD</code></a> 级别，如果 `<a href=\"#keyId()\"><code>keyId()</code></a>` 是从 `encryptMetadata` 继承的，则可以将其留空。",
+      "count": 1
+    },
+    {
+      "source": "Set the algorithm to use.\n<br/>\nOn <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE\" title=\"class or interface in java.lang.annotation\"><code>ElementType.TYPE</code></a> level the <a href=\"#algorithm()\"><code>algorithm()</code></a> can be left empty if explicitly set for fields. <br/>\nOn <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD\" title=\"class or interface in java.lang.annotation\"><code>ElementType.FIELD</code></a> level the <a href=\"#algorithm()\"><code>algorithm()</code></a> can be left empty if inherited from\nencryptMetadata.",
+      "translation": "设置要使用的算法。  \n<br/>\n在<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#TYPE\" title=\"java.lang.annotation 中的类或接口\"><code>ElementType.TYPE</code></a>级别，如果字段已显式设置，则<a href=\"#algorithm()\"><code>algorithm()</code></a>可以留空。<br/>\n在<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD\" title=\"java.lang.annotation 中的类或接口\"><code>ElementType.FIELD</code></a>级别，如果从 encryptMetadata 继承，则<a href=\"#algorithm()\"><code>algorithm()</code></a>可以留空。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"Encrypted.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Encrypted</code></a> provides data required for MongoDB Client Side Field Level Encryption that is applied during schema\nresolution. It can be applied on top level (typically those types annotated with <a href=\"Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a> to provide the\nencryptMetadata.\n\n<pre class=\"code\">@Document\n@Encrypted(keyId = \"4fPYFM9qSgyRAjgQ2u+IMQ==\")\npublic class Patient {\n         private ObjectId id;\n         private String name;\n\n         @Field(\"publisher_ac\")\n         @DocumentReference(lookup = \"{ 'acronym' : ?#{#target} }\") private Publisher publisher;\n}\n\n\"encryptMetadata\": {\n   \"keyId\": [\n     {\n       \"$binary\": {\n         \"base64\": \"4fPYFM9qSgyRAjgQ2u+IMQ==\",\n         \"subType\": \"04\"\n       }\n     }\n   ]\n }\n</pre>\n\n<br/>\nOn property level it is used for deriving field specific encrypt settings.\n\n<pre class=\"code\">public class Patient {\n         private ObjectId id;\n         private String name;\n\n         @Encrypted(keyId = \"4fPYFM9qSgyRAjgQ2u+IMQ==\", algorithm = \"AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic\")\n         private String ssn;\n}\n\n\"ssn\" : {\n  \"encrypt\": {\n     \"keyId\": [\n       {\n         \"$binary\": {\n           \"base64\": \"4fPYFM9qSgyRAjgQ2u+IMQ==\",\n           \"subType\": \"04\"\n         }\n       }\n     ],\n     \"algorithm\" : \"AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic\",\n     \"bsonType\" : \"string\"\n   }\n }\n</pre>",
+      "translation": "<a href=\"Encrypted.html\" title=\"org.springframework.data.mongodb.core.mapping 包中的注解接口\"><code>Encrypted</code></a> 提供了在模式解析期间应用于 MongoDB 客户端字段级加密所需的数据。它可以应用于顶层（通常是带有 <a href=\"Document.html\" title=\"org.springframework.data.mongodb.core.mapping 包中的注解接口\"><code>Document</code></a> 注解的类型），以提供 encryptMetadata。\n\n<pre class=\"code\">@Document\n@Encrypted(keyId = \"4fPYFM9qSgyRAjgQ2u+IMQ==\")\npublic class Patient {\n         private ObjectId id;\n         private String name;\n\n         @Field(\"publisher_ac\")\n         @DocumentReference(lookup = \"{ 'acronym' : ?#{#target} }\") private Publisher publisher;\n}\n\n\"encryptMetadata\": {\n   \"keyId\": [\n     {\n       \"$binary\": {\n         \"base64\": \"4fPYFM9qSgyRAjgQ2u+IMQ==\",\n         \"subType\": \"04\"\n       }\n     }\n   ]\n }\n</pre>\n\n<br/>\n在属性级别，它用于派生特定字段的加密设置。\n\n<pre class=\"code\">public class Patient {\n         private ObjectId id;\n         private String name;\n\n         @Encrypted(keyId = \"4fPYFM9qSgyRAjgQ2u+IMQ==\", algorithm = \"AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic\")\n         private String ssn;\n}\n\n\"ssn\" : {\n  \"encrypt\": {\n     \"keyId\": [\n       {\n         \"$binary\": {\n           \"base64\": \"4fPYFM9qSgyRAjgQ2u+IMQ==\",\n           \"subType\": \"04\"\n         }\n       }\n     ],\n     \"algorithm\" : \"AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic\",\n     \"bsonType\" : \"string\"\n   }\n }\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Get the <code>keyId</code> to use.",
+      "translation": "获取要使用的<code>keyId</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set the algorithm to use.",
+      "translation": "设置要使用的算法。",
+      "count": 1
+    },
+    {
+      "source": "the key id to use. May contain a parsable <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/Expression.html\" title=\"class or interface in org.springframework.expression\"><code>expression</code></a>. In\n        this case the <code>#target</code> variable will hold the target element name.",
+      "translation": "要使用的键 ID。可以包含可解析的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/Expression.html\" title=\"org.springframework.expression 中的类或接口\"><code>expression</code></a>。在这种情况下，<code>#target</code>变量将持有目标元素名称。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "the encryption algorithm.",
+      "translation": "加密算法。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

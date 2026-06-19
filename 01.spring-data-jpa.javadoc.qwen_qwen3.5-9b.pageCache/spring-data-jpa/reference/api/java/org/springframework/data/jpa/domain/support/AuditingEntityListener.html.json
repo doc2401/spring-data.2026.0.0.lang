@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-06-18 18:02:35",
+  "updated_at": "2026-06-18 18:02:35",
+  "stats": {
+    "total_entries": 7,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 10,
+    "entries_with_hits": 7,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4285714285714286,
+    "usage_percentage": 0.0007
+  },
+  "items": [
+    {
+      "source": "Configures the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/auditing/AuditingHandler.html\" title=\"class or interface in org.springframework.data.auditing\"><code>AuditingHandler</code></a> to be used to set the current auditor on the domain types touched.",
+      "translation": "配置 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/auditing/AuditingHandler.html\" title=\"class or interface in org.springframework.data.auditing\"><code>AuditingHandler</code></a>，用于设置所涉及的领域类型上的当前审计人。",
+      "count": 2
+    },
+    {
+      "source": "Sets modification and creation date and auditor on the target object in case it implements <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Auditable.html\" title=\"class or interface in org.springframework.data.domain\"><code>Auditable</code></a> on\npersist events.",
+      "translation": "在持久化事件中，如果目标对象实现了<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Auditable.html\" title=\"class or interface in org.springframework.data.domain\"><code>Auditable</code></a>接口，则设置其修改日期、创建日期和审计人。",
+      "count": 2
+    },
+    {
+      "source": "Sets modification and creation date and auditor on the target object in case it implements <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Auditable.html\" title=\"class or interface in org.springframework.data.domain\"><code>Auditable</code></a> on\nupdate events.",
+      "translation": "在更新事件期间，如果目标对象实现了<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Auditable.html\" title=\"class or interface in org.springframework.data.domain\"><code>Auditable</code></a>接口，则设置其修改日期、创建日期和审计人。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "JPA entity listener to capture auditing information on persisting and updating entities. To get this one flying be\nsure you configure it as entity listener in your <code>orm.xml</code> as follows:\n\n<pre>&lt;persistence-unit-metadata&gt;\n    &lt;persistence-unit-defaults&gt;\n        &lt;entity-listeners&gt;\n            &lt;entity-listener class=\"org.springframework.data.jpa.domain.support.AuditingEntityListener\" /&gt;\n        &lt;/entity-listeners&gt;\n    &lt;/persistence-unit-defaults&gt;\n&lt;/persistence-unit-metadata&gt;\n</pre>\n\nAfter that it's just a matter of activating auditing in your Spring config:\n\n<pre>@Configuration\n@EnableJpaAuditing\nclass ApplicationConfig {\n\n}\n</pre>\n\n<pre>&lt;jpa:auditing auditor-aware-ref=\"yourAuditorAwarebean\" /&gt;\n</pre>",
+      "translation": "JPA 实体监听器用于在持久化和更新实体时捕获审计信息。要让此功能正常运行，请按照以下方式在 `<code>orm.xml</code>` 中将其配置为实体监听器：\n\n<pre>&lt;persistence-unit-metadata&gt;\n    &lt;persistence-unit-defaults&gt;\n        &lt;entity-listeners&gt;\n            &lt;entity-listener class=\"org.springframework.data.jpa.domain.support.AuditingEntityListener\" /&gt;\n        &lt;/entity-listeners&gt;\n    &lt;/persistence-unit-defaults&gt;\n&lt;/persistence-unit-metadata&gt;\n</pre>\n\n之后，只需在 Spring 配置中启用审计功能即可：\n\n<pre>@Configuration\n@EnableJpaAuditing\nclass ApplicationConfig {\n\n}\n</pre>\n\n<pre>&lt;jpa:auditing auditor-aware-ref=\"yourAuditorAwarebean\" /&gt;\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "<code>auditingHandler</code> - must not be null.",
+      "translation": "<code>auditingHandler</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Thomas Darimont, Christoph Strobl, Mark Paluch",
+      "translation": "Oliver Gierke，Thomas Darimont，Christoph Strobl，Mark Paluch",
+      "count": 1
+    }
+  ]
+}

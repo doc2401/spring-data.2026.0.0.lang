@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-19 02:17:10",
+  "updated_at": "2026-06-19 02:17:10",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 20,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1764705882352942,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "The <a href=\"../convert/encryption/EncryptingConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert.encryption\"><code>EncryptingConverter</code></a> type handling the en-/decryption of the annotated property.",
+      "translation": "负责处理已注解属性的加密/解密操作的 <a href=\"../convert/encryption/EncryptingConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert.encryption\"><code>EncryptingConverter</code></a> 类型。",
+      "count": 2
+    },
+    {
+      "source": "Define the algorithm to use.",
+      "translation": "定义所使用的算法。",
+      "count": 2
+    },
+    {
+      "source": "Set the Key Alternate Name that references the Data Encryption Key to be used.",
+      "translation": "设置引用将用于数据加密密钥的密钥别名。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"#value()\"><code>value()</code></a> attribute, defines the bean type to look up within the\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContext.html\" title=\"class or interface in org.springframework.context\"><code>ApplicationContext</code></a> to obtain the <a href=\"../convert/encryption/EncryptingConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert.encryption\"><code>EncryptingConverter</code></a> responsible for the\nactual en-/decryption while <a href=\"#algorithm()\"><code>algorithm()</code></a> and <a href=\"#keyAltName()\"><code>keyAltName()</code></a> can be used to define aspects\nof the encryption process.",
+      "translation": "`value()` 属性定义了要在 `<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/ApplicationContext.html\" title=\"class or interface in org.springframework.context\"><code>ApplicationContext</code></a>` 中查找的 Bean 类型，以获取负责实际加密/解密的 `<a href=\"../convert/encryption/EncryptingConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert.encryption\"><code>EncryptingConverter</code></a>`，而 `<a href=\"#algorithm()\"><code>algorithm()</code></a>` 和 `<a href=\"#keyAltName()\"><code>keyAltName()</code></a>` 可用于定义加密过程的某些方面。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "It is possible to use the \"/\" character as a prefix to access a particular field value in the same\ndomain type. In this case <code>\"/name\"</code> references the value of the name field. Please note that\nupdate operations will require the full object to resolve those values.",
+      "translation": "可以使用 \"/\" 字符作为前缀来访问同一域类型中的特定字段值。在这种情况下，`/name` 引用的是 name 字段的值。请注意，更新操作需要完整的对象才能解析这些值。",
+      "count": 1
+    },
+    {
+      "source": "A Deterministic algorithm ensures that a given input value always encrypts to the same output while a\nrandomized one will produce different results every time.  A range algorithm allows for\nthe value to be queried whilst encrypted.",
+      "translation": "确定性算法确保给定的输入值始终加密为相同的输出，而随机化算法则每次都会产生不同的结果。范围算法允许在数据保持加密状态的情况下对其进行查询。",
+      "count": 1
+    },
+    {
+      "source": "Please make sure to use an algorithm that is in line with MongoDB's encryption rules for simple types, complex\nobjects and arrays as well as the query limitations that come with each of them.",
+      "translation": "请确保使用符合 MongoDB 加密规则的算法，该算法需适用于简单类型、复杂对象和数组，并遵循各类数据类型的查询限制。",
+      "count": 1
+    },
+    {
+      "source": "An empty String indicates that no alternative key name was configured.",
+      "translation": "空字符串表示未配置替代键名。",
+      "count": 1
+    },
+    {
+      "source": "the configured <a href=\"../convert/encryption/EncryptingConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert.encryption\"><code>EncryptingConverter</code></a>. A <a href=\"../convert/encryption/MongoEncryptionConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert.encryption\"><code>MongoEncryptionConverter</code></a> by default.",
+      "translation": "配置的<a href=\"../convert/encryption/EncryptingConverter.html\" title=\"org.springframework.data.mongodb.core.convert.encryption 中的接口\"><code>EncryptingConverter</code></a>，默认为<a href=\"../convert/encryption/MongoEncryptionConverter.html\" title=\"org.springframework.data.mongodb.core.convert.encryption 中的类\"><code>MongoEncryptionConverter</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the Key Alternate Name if set or an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>.",
+      "translation": "如果设置了“关键备用名称”，则使用该名称；否则，使用一个空的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Ross Lawley",
+      "translation": "克里斯托夫·施特罗布，罗斯·劳利",
+      "count": 1
+    },
+    {
+      "source": "the string representation of the encryption algorithm to use.",
+      "translation": "要使用的加密算法的字符串表示。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ExplicitEncrypted.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>ExplicitEncrypted</code></a> is a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD\" title=\"class or interface in java.lang.annotation\"><code>field</code></a> level <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/ValueConverter.html\" title=\"class or interface in org.springframework.data.convert\"><code>ValueConverter</code></a> annotation that indicates\nthe target element is subject to encryption during the mapping process, in which a given domain type is converted\ninto the store specific format.",
+      "translation": "<a href=\"ExplicitEncrypted.html\" title=\"org.springframework.data.mongodb.core.mapping 中的注解接口\"><code>ExplicitEncrypted</code></a> 是一个字段级别的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/ElementType.html#FIELD\" title=\"java.lang.annotation 中的类或接口\"><code>ValueConverter</code></a> 注解，用于指示目标元素在映射过程中需进行加密。在此过程中，给定的领域类型将被转换为存储特定的格式。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">public class Patient {\n        private ObjectId id;\n        private String name;\n\n        @ExplicitEncrypted(algorithm = AEAD_AES_256_CBC_HMAC_SHA_512_Random, keyAltName = \"secred-key-alternative-name\") //\n        private String ssn;\n}\n</pre>",
+      "translation": "<pre class=\"code\">public class Patient {\n    private ObjectId id;\n    private String name;\n\n    @ExplicitEncrypted(algorithm = AEAD_AES_256_CBC_HMAC_SHA_512_Random, keyAltName = \"secred-key-alternative-name\") //\n    private String ssn;\n}\n</pre>",
+      "count": 1
+    }
+  ]
+}

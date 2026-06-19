@@ -1,120 +1,190 @@
 {
   "created_at": "2026-06-16 17:33:28",
-  "updated_at": "2026-06-16 17:33:28",
+  "updated_at": "2026-06-18 07:52:42",
   "stats": {
-    "total_entries": 91,
+    "total_entries": 120,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 110,
-    "entries_with_hits": 91,
+    "total_hits": 170,
+    "entries_with_hits": 120,
     "entries_without_hits": 0,
-    "hit_rate": 1.2087912087912087,
-    "usage_percentage": 0.0091
+    "hit_rate": 1.4166666666666667,
+    "usage_percentage": 0.012
   },
   "items": [
     {
-      "source": "The returned <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> is supposed to contain the original <code>RuntimeException</code> as root\ncause. However, client code may not generally rely on this due to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>s possibly being\ncaused by other resource APIs as well. That said, a <code>getRootCause() instanceof DataAccessException</code> check\n(and subsequent cast) is considered reliable when expecting Cassandra-based access to have happened.",
-      "translation": "返回的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>本应包含原始的<code>RuntimeException</code>作为根本原因。然而，客户端代码通常不能依赖这一点，因为<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>也可能由其他资源 API 引发。尽管如此，当预期已发生基于 Cassandra 的访问时，执行<code>getRootCause() instanceof DataAccessException</code>检查（并进行后续类型转换）被认为是可靠的。",
-      "count": 2
-    },
-    {
       "source": "Translate the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a> into a generic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.",
       "translation": "将给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"java.lang 中的类或接口\"><code>RuntimeException</code></a>转换为通用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>。",
-      "count": 2
+      "count": 5
+    },
+    {
+      "source": "The returned <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> is supposed to contain the original <code>RuntimeException</code> as root\ncause. However, client code may not generally rely on this due to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>s possibly being\ncaused by other resource APIs as well. That said, a <code>getRootCause() instanceof DataAccessException</code> check\n(and subsequent cast) is considered reliable when expecting Cassandra-based access to have happened.",
+      "translation": "返回的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>本应包含原始的<code>RuntimeException</code>作为根本原因。然而，客户端代码通常不能依赖这一点，因为<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a>也可能由其他资源 API 引发。尽管如此，当预期已发生基于 Cassandra 的访问时，执行<code>getRootCause() instanceof DataAccessException</code>检查（并进行后续类型转换）被认为是可靠的。",
+      "count": 3
     },
     {
       "source": "Returns the Cassandra <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
       "translation": "返回此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\"><code>SessionFactory</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Create a <code>SimpleStatement</code> given <code>cql</code>.",
       "translation": "根据 `cql` 创建一个 `<code>SimpleStatement</code>`。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Set the <a href=\"ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a> for this template.",
       "translation": "为此模板设置<a href=\"ExecutionProfileResolver.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>ExecutionProfileResolver</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Sets the Cassandra <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
       "translation": "设置此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\"><code>SessionFactory</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Ensures the Cassandra <code>CqlSession</code> and exception translator has been propertly set.",
       "translation": "确保已正确设置 Cassandra 的 `<code>CqlSession</code>` 和异常转换器。",
+      "count": 3
+    },
+    {
+      "source": "Logger available to subclasses",
+      "translation": "子类可用的日志记录器",
+      "count": 3
+    },
+    {
+      "source": "Prepare the given CQL Statement applying statement settings such as page size and consistency level.",
+      "translation": "根据页面大小和一致性级别等语句设置，准备给定的 CQL 语句。",
+      "count": 3
+    },
+    {
+      "source": "Return the exception translator used by this template to translate Cassandra specific Exceptions into Spring DAO's\nException Hierarchy.",
+      "translation": "返回此模板用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器。",
+      "count": 3
+    },
+    {
+      "source": "Create a new RowMapper for reading columns as key-value pairs.",
+      "translation": "创建一个用于将列读取为键值对的新 RowMapper。",
+      "count": 3
+    },
+    {
+      "source": "Create a new RowMapper for reading result objects from a single column.",
+      "translation": "为从单列读取结果对象创建一个新的 RowMapper。",
+      "count": 3
+    },
+    {
+      "source": "Sets the exception translator used by this template to translate Cassandra specific Exceptions into Spring DAO's\nException Hierarchy.",
+      "translation": "将本模板中用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器设置为此值。",
+      "count": 3
+    },
+    {
+      "source": "Set the driver execution profile for this template.",
+      "translation": "为此模板设置驱动程序执行配置文件。",
+      "count": 3
+    },
+    {
+      "source": "Set the serial consistency level for this template.",
+      "translation": "为此模板设置串行一致性级别。",
+      "count": 3
+    },
+    {
+      "source": "Determine CQL from potential provider object.",
+      "translation": "从潜在提供者对象中确定 CQL。",
+      "count": 3
+    },
+    {
+      "source": "Classes providing a higher abstraction level usually extend <a href=\"CassandraAccessor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraAccessor</code></a> to provide a richer set of\nfunctionality on top of a <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> using <code>CqlSession</code>.",
+      "translation": "提供更高抽象级别的类通常会扩展<a href=\"CassandraAccessor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraAccessor</code></a>，以便在基于<a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>的基础上，利用<code>CqlSession</code>提供更丰富的功能。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "Sets the Cassandra <code>CqlSession</code> used by this template to perform Cassandra data access operations. The\n<code>session</code> will replace the current <a href=\"#getSessionFactory()\"><code>getSessionFactory()</code></a> with <a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a>.",
+      "translation": "设置本模板用于执行 Cassandra 数据访问操作的 Cassandra <code>CqlSession</code>。<code>session</code> 将替换当前的 <a href=\"#getSessionFactory()\"><code>getSessionFactory()</code></a>，并替换为 <a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set the <code>keyspace</code> to be applied on statement-level for this template. If not set, the default\n<code>CqlSession</code> keyspace will be used.",
+      "translation": "将本模板的 `keyspace` 设置为语句级别。如果未设置，则使用默认的 `CqlSession` 键空间。",
+      "count": 2
+    },
+    {
+      "source": "Create a new arg-based PreparedStatementSetter using the args passed in. By default, we'll create an\n<a href=\"ArgumentPreparedStatementBinder.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ArgumentPreparedStatementBinder</code></a>. This method allows for the creation to be overridden by subclasses.",
+      "translation": "使用传入的参数创建一个新的基于参数的 PreparedStatementSetter。默认情况下，我们将创建一个 <a href=\"ArgumentPreparedStatementBinder.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ArgumentPreparedStatementBinder</code></a>。此方法允许子类覆盖该创建过程。",
+      "count": 2
+    },
+    {
+      "source": "Set the <code>keyspace</code> to be applied on statement-level for this template.",
+      "translation": "将此模板的<code>keyspace</code>设置为语句级别应用。",
+      "count": 2
+    },
+    {
+      "source": "Sets the Cassandra <code>CqlSession</code> used by this template to perform Cassandra data access operations.",
+      "translation": "设置此模板用于执行 Cassandra 数据访问操作的 Cassandra <code>CqlSession</code>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new arg-based PreparedStatementSetter using the args passed in.",
+      "translation": "使用传入的参数创建一个新的基于参数的 PreparedStatementSetter。",
+      "count": 2
+    },
+    {
+      "source": "Set the consistency level for this template.",
+      "translation": "为此模板设置一致性级别。",
+      "count": 2
+    },
+    {
+      "source": "Set the page size for this template.",
+      "translation": "设置此模板的页面大小。",
+      "count": 2
+    },
+    {
+      "source": "Set the consistency level for this template. Consistency level defines the number of nodes involved into query\nprocessing. Relaxed consistency level settings use fewer nodes but eventual consistency is more likely to occur\nwhile a higher consistency level involves more nodes to obtain results with a higher consistency guarantee.",
+      "translation": "为此模板设置一致性级别。一致性级别定义了参与查询处理的节点数量。放宽的一致性级别设置会使用较少的节点，但更有可能出现最终一致性；而较高的一致性级别则会涉及更多节点，以获得更高的一致性保证的结果。",
+      "count": 2
+    },
+    {
+      "source": "Set the page size for this template. This is important for processing large result sets: Setting this higher than\nthe default value will increase processing speed at the cost of memory consumption; setting this lower can avoid\ntransferring row data that will never be read by the application. Default is -1, indicating to use the CQL driver's\ndefault configuration (i.e. to not pass a specific page size setting on to the driver).",
+      "translation": "设置此模板的页面大小。这对于处理大型结果集非常重要：将此值设置为高于默认值可以提高处理速度，但会增加内存消耗；将其设置得较低可以避免传输应用程序永远不会读取的行数据。默认为 -1，表示使用 CQL 驱动程序的默认配置（即不向驱动程序传递特定的页面大小设置）。",
+      "count": 2
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 2
+    },
+    {
+      "source": "<code>ex</code> - the offending <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>",
+      "translation": "<code>ex</code> - 引发异常的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>",
+      "count": 2
+    },
+    {
+      "source": "the DataAccessException, wrapping the <code>RuntimeException</code>",
+      "translation": "DataAccessException，包装了<code>RuntimeException</code>",
+      "count": 2
+    },
+    {
+      "source": "the RowMapper to use",
+      "translation": "要使用的 RowMapper",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "Logger available to subclasses",
-      "translation": "子类可用的日志记录器",
-      "count": 2
-    },
-    {
-      "source": "Prepare the given CQL Statement applying statement settings such as page size and consistency level.",
-      "translation": "根据页面大小和一致性级别等语句设置，准备给定的 CQL 语句。",
-      "count": 2
-    },
-    {
-      "source": "Return the exception translator used by this template to translate Cassandra specific Exceptions into Spring DAO's\nException Hierarchy.",
-      "translation": "返回此模板用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器。",
-      "count": 2
-    },
-    {
-      "source": "Create a new RowMapper for reading columns as key-value pairs.",
-      "translation": "创建一个用于将列读取为键值对的新 RowMapper。",
-      "count": 2
-    },
-    {
-      "source": "Create a new RowMapper for reading result objects from a single column.",
-      "translation": "为从单列读取结果对象创建一个新的 RowMapper。",
-      "count": 2
-    },
-    {
-      "source": "Sets the exception translator used by this template to translate Cassandra specific Exceptions into Spring DAO's\nException Hierarchy.",
-      "translation": "将本模板中用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器设置为此值。",
-      "count": 2
-    },
-    {
-      "source": "Set the driver execution profile for this template.",
-      "translation": "为此模板设置驱动程序执行配置文件。",
-      "count": 2
-    },
-    {
-      "source": "Set the serial consistency level for this template.",
-      "translation": "为此模板设置串行一致性级别。",
-      "count": 2
-    },
-    {
-      "source": "Determine CQL from potential provider object.",
-      "translation": "从潜在提供者对象中确定 CQL。",
-      "count": 2
+      "count": 1
     },
     {
       "source": "Translate the given",
       "translation": "请提供需要翻译的文本内容。",
-      "count": 2
+      "count": 1
     },
     {
       "source": "into a generic",
       "translation": "转化为通用型",
-      "count": 2
-    },
-    {
-      "source": "Classes providing a higher abstraction level usually extend <a href=\"CassandraAccessor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraAccessor</code></a> to provide a richer set of\nfunctionality on top of a <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> using <code>CqlSession</code>.",
-      "translation": "提供更高抽象级别的类通常会扩展<a href=\"CassandraAccessor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraAccessor</code></a>，以便在基于<a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>的基础上，利用<code>CqlSession</code>提供更丰富的功能。",
-      "count": 1
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
       "count": 1
     },
     {
@@ -125,11 +195,6 @@
     {
       "source": "<span class=\"modifiers\">protected static</span> <span class=\"return-type\">@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a></span> <span class=\"element-name\">toCql</span><wbr/><span class=\"parameters\">(@Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a> cqlProvider)</span>",
       "translation": "<span class=\"modifiers\">protected static</span> <span class=\"return-type\">@Nullable String</span> <span class=\"element-name\">toCql</span><wbr/><span class=\"parameters\">(@Nullable Object cqlProvider)</span>",
-      "count": 1
-    },
-    {
-      "source": "Sets the Cassandra <code>CqlSession</code> used by this template to perform Cassandra data access operations. The\n<code>session</code> will replace the current <a href=\"#getSessionFactory()\"><code>getSessionFactory()</code></a> with <a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a>.",
-      "translation": "设置本模板用于执行 Cassandra 数据访问操作的 Cassandra <code>CqlSession</code>。<code>session</code> 将替换当前的 <a href=\"#getSessionFactory()\"><code>getSessionFactory()</code></a>，并替换为 <a href=\"session/DefaultSessionFactory.html\" title=\"class in org.springframework.data.cassandra.core.cql.session\"><code>DefaultSessionFactory</code></a>。",
       "count": 1
     },
     {
@@ -188,16 +253,6 @@
       "count": 1
     },
     {
-      "source": "Set the <code>keyspace</code> to be applied on statement-level for this template. If not set, the default\n<code>CqlSession</code> keyspace will be used.",
-      "translation": "将本模板的 `keyspace` 设置为语句级别。如果未设置，则使用默认的 `CqlSession` 键空间。",
-      "count": 1
-    },
-    {
-      "source": "Create a new arg-based PreparedStatementSetter using the args passed in. By default, we'll create an\n<a href=\"ArgumentPreparedStatementBinder.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ArgumentPreparedStatementBinder</code></a>. This method allows for the creation to be overridden by subclasses.",
-      "translation": "使用传入的参数创建一个新的基于参数的 PreparedStatementSetter。默认情况下，我们将创建一个 <a href=\"ArgumentPreparedStatementBinder.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ArgumentPreparedStatementBinder</code></a>。此方法允许子类覆盖该创建过程。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
@@ -208,43 +263,8 @@
       "count": 1
     },
     {
-      "source": "Set the <code>keyspace</code> to be applied on statement-level for this template.",
-      "translation": "将此模板的<code>keyspace</code>设置为语句级别应用。",
-      "count": 1
-    },
-    {
-      "source": "Sets the Cassandra <code>CqlSession</code> used by this template to perform Cassandra data access operations.",
-      "translation": "设置此模板用于执行 Cassandra 数据访问操作的 Cassandra <code>CqlSession</code>。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Create a new arg-based PreparedStatementSetter using the args passed in.",
-      "translation": "使用传入的参数创建一个新的基于参数的 PreparedStatementSetter。",
-      "count": 1
-    },
-    {
-      "source": "Set the consistency level for this template.",
-      "translation": "为此模板设置一致性级别。",
-      "count": 1
-    },
-    {
-      "source": "Set the page size for this template.",
-      "translation": "设置此模板的页面大小。",
-      "count": 1
-    },
-    {
-      "source": "Set the consistency level for this template. Consistency level defines the number of nodes involved into query\nprocessing. Relaxed consistency level settings use fewer nodes but eventual consistency is more likely to occur\nwhile a higher consistency level involves more nodes to obtain results with a higher consistency guarantee.",
-      "translation": "为此模板设置一致性级别。一致性级别定义了参与查询处理的节点数量。放宽的一致性级别设置会使用较少的节点，但更有可能出现最终一致性；而较高的一致性级别则会涉及更多节点，以获得更高的一致性保证的结果。",
-      "count": 1
-    },
-    {
-      "source": "Set the page size for this template. This is important for processing large result sets: Setting this higher than\nthe default value will increase processing speed at the cost of memory consumption; setting this lower can avoid\ntransferring row data that will never be read by the application. Default is -1, indicating to use the CQL driver's\ndefault configuration (i.e. to not pass a specific page size setting on to the driver).",
-      "translation": "设置此模板的页面大小。这对于处理大型结果集非常重要：将此值设置为高于默认值可以提高处理速度，但会增加内存消耗；将其设置得较低可以避免传输应用程序永远不会读取的行数据。默认为 -1，表示使用 CQL 驱动程序的默认配置（即不向驱动程序传递特定的页面大小设置）。",
       "count": 1
     },
     {
@@ -443,11 +463,6 @@
       "count": 1
     },
     {
-      "source": "Field Details",
-      "translation": "字段详情",
-      "count": 1
-    },
-    {
       "source": "Constructor Details",
       "translation": "构造器详情",
       "count": 1
@@ -465,6 +480,136 @@
     {
       "source": "and the",
       "translation": "以及",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">Consistent\n     exception hierarchy</a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">一致的异常层次结构</a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/NestedRuntimeException.html#getRootCause()\" title=\"class or interface in org.springframework.core\"><code>NestedRuntimeException.getRootCause()</code></a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">Consistent\n     exception hierarchy</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/NestedRuntimeException.html#getRootCause()\" title=\"org.springframework.core 中的类或接口\"><code>NestedRuntimeException.getRootCause()</code></a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">一致的异常层次结构</a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>cqlProvider</code> - object that's potentially a <a href=\"CqlProvider.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlProvider</code></a>",
+      "translation": "<code>cqlProvider</code> - 可能是一个 <a href=\"CqlProvider.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>CqlProvider</code></a> 的对象",
+      "count": 1
+    },
+    {
+      "source": "the <a href=\"ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a> specified for this template.",
+      "translation": "为此模板指定的<a href=\"ExecutionProfileResolver.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>ExecutionProfileResolver</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - Cassandra <code>CqlSession</code> used by this template, must not benull.",
+      "translation": "<code>session</code> - 本模板使用的 Cassandra <code>CqlSession</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>sessionFactory</code> - Cassandra <code>CqlSession</code> used by this template. Must not benull.",
+      "translation": "<code>sessionFactory</code> - 本模板使用的 Cassandra <code>CqlSession</code>。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "the Cassandra <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template.",
+      "translation": "本模板所使用的 Cassandra <a href=\"../../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the new <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> to use",
+      "translation": "使用新的<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the <code>ConsistencyLevel</code> specified for this template.",
+      "translation": "此模板指定的<code>ConsistencyLevel</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>exceptionTranslator</code> - exception translator to set; must not be null.",
+      "translation": "<code>exceptionTranslator</code> - 要设置的异常转换器；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>keyspace</code> - the keyspace to apply, must not be null.",
+      "translation": "<code>keyspace</code> - 要应用的关键字空间，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "the <code>keyspace</code> to be applied on statement-level for this template.",
+      "translation": "该模板将在语句级别应用此<code>keyspace</code>。",
+      "count": 1
+    },
+    {
+      "source": "the serial <code>ConsistencyLevel</code> specified for this template.",
+      "translation": "此模板指定的串行 <code>ConsistencyLevel</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>cql</code> - the CQL query.",
+      "translation": "<code>cql</code> - CQL 查询。",
+      "count": 1
+    },
+    {
+      "source": "the <code>SimpleStatement</code> to use.",
+      "translation": "要使用的<code>SimpleStatement</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>statement</code> - the CQL Statement to prepare",
+      "translation": "<code>statement</code> - 要准备的 CQL 语句",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - readable text describing the task being attempted",
+      "translation": "<code>task</code> - 描述正在尝试执行的任务的可读文本",
+      "count": 1
+    },
+    {
+      "source": "<code>cql</code> - CQL query or update that caused the problem (may be null)",
+      "translation": "<code>cql</code> - 导致问题的 CQL 查询或更新语句（可能为 null）",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - object array with arguments",
+      "translation": "<code>args</code> - 包含参数的对象数组",
+      "count": 1
+    },
+    {
+      "source": "<code>requiredType</code> - the type that each result object is expected to match",
+      "translation": "<code>requiredType</code> - 每个结果对象预期匹配的类型",
+      "count": 1
+    },
+    {
+      "source": "David Webb, Mark Paluch, John Blum, Tomasz Lelek",
+      "translation": "大卫·韦布，马克·帕卢赫，约翰·布鲁姆，托马什·莱莱克",
+      "count": 1
+    },
+    {
+      "source": "the Cassandra exception translator.",
+      "translation": "Cassandra 异常翻译器。",
+      "count": 1
+    },
+    {
+      "source": "the page size specified for this template.",
+      "translation": "此模板指定的页面大小。",
+      "count": 1
+    },
+    {
+      "source": "the CQL string, or null",
+      "translation": "CQL 字符串，或为 null",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"CassandraAccessor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraAccessor</code></a> provides access to a Cassandra <a href=\"../../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> and the\n<a href=\"CassandraExceptionTranslator.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CassandraExceptionTranslator</code></a>.",
+      "translation": "<CassandraAccessor> 类提供了对 Cassandra <SessionFactory> 接口和 <CassandraExceptionTranslator> 类的访问。",
       "count": 1
     }
   ]

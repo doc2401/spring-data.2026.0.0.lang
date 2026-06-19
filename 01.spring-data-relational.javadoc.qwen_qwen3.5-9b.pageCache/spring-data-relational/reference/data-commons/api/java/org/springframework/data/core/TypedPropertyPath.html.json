@@ -1,0 +1,326 @@
+{
+  "created_at": "2026-06-19 10:53:13",
+  "updated_at": "2026-06-19 10:53:13",
+  "stats": {
+    "total_entries": 62,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 80,
+    "entries_with_hits": 62,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2903225806451613,
+    "usage_percentage": 0.006200000000000001
+  },
+  "items": [
+    {
+      "source": "Extend the property path by appending the <code>next</code> path segment and return a new property path instance.",
+      "translation": "通过追加 `<code>next</code>` 路径段来扩展属性路径，并返回一个新的属性路径实例。",
+      "count": 4
+    },
+    {
+      "source": "This method returns a resolved <a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a> by introspecting the given method reference.",
+      "translation": "此方法通过内省给定的方法引用，返回一个解析后的<a href=\"TypedPropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>TypedPropertyPath</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "the typed property path.",
+      "translation": "已输入的属性路径。",
+      "count": 3
+    },
+    {
+      "source": "Note that <a href=\"#get(T)\"><code>get(Object)</code></a> becomes unusable for collection properties as the property type adapted from\n<code>Iterable &amp;lt;P&amp;gt;</code> and a single <code>P</code> cannot represent a collection of items.",
+      "translation": "请注意，由于从 `<code>Iterable &amp;lt;P&amp;gt;</code>` 适配的属性类型无法用单个 `<code>P</code>` 来表示项目集合，因此 `<a href=\"#get(T)\"><code>get(Object)</code></a>` 对于集合属性将变得不可用。",
+      "count": 2
+    },
+    {
+      "source": "Returns the owning type of the <a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a>.",
+      "translation": "返回 <a href=\"PropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>PropertyPath</code></a> 的拥有类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the current property path segment (i.e. first part of <a href=\"PropertyPath.html#toDotPath()\"><code>PropertyPath.toDotPath()</code></a>).",
+      "translation": "返回当前属性路径段（即<a href=\"PropertyPath.html#toDotPath()\"><code>PropertyPath.toDotPath()</code></a>的第一部分）。",
+      "count": 2
+    },
+    {
+      "source": "Syntax sugar to create a <a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a> from a method reference to a Java beans property.",
+      "translation": "语法糖用于从 Java Bean 的属性方法引用创建<a href=\"TypedPropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>TypedPropertyPath</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Syntax sugar to create a <a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a> from a method reference to a Java beans collection property.",
+      "translation": "语法糖用于从 Java Bean 集合属性的方法引用创建<a href=\"TypedPropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>TypedPropertyPath</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get the property value for the given object.",
+      "translation": "获取给定对象的属性值。",
+      "count": 2
+    },
+    {
+      "source": "Returns the type information for the property at this segment.",
+      "translation": "返回此段中属性的类型信息。",
+      "count": 2
+    },
+    {
+      "source": "Returns true if the property path contains further segments or false if the path ends at this\nsegment.",
+      "translation": "如果属性路径包含更多段，则返回 true；否则，如果路径在此段结束，则返回 false。",
+      "count": 2
+    },
+    {
+      "source": "<code>next</code> - the next property path segment as method reference accepting the owner object <code>P</code> type and\n         returning <code>N</code> as result of accessing a property.",
+      "translation": "<code>next</code> - 作为方法引用的下一个属性路径段，该方法接受类型为 <code>P</code> 的拥有者对象，并返回访问属性后的结果 <code>N</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>property</code> - the method reference to a Java beans property.",
+      "translation": "<code>property</code> - 指向 JavaBean 属性的方法引用。",
+      "count": 2
+    },
+    {
+      "source": "a new composed <code>TypedPropertyPath</code>.",
+      "translation": "一个新创建的 `<code>TypedPropertyPath</code>`。",
+      "count": 2
+    },
+    {
+      "source": "This functional interface extends <a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a> to provide compile-time type safety and refactoring support.\nInstead of using <a href=\"PropertyPath.html#from(java.lang.String,org.springframework.data.core.TypeInformation)\"><code>string-based property paths</code></a> for textual property\nrepresentation that are easy to miss when changing the domain model, <code>TypedPropertyPath</code> leverages Java's\ndeclarative method references to ensure type-safe property access.",
+      "translation": "该功能接口扩展了<a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a>，以提供编译时类型安全和重构支持。  \n与使用<a href=\"PropertyPath.html#from(java.lang.String,org.springframework.data.core.TypeInformation)\"><code>基于字符串的属性路径</code></a>来文本化表示属性（在修改领域模型时容易遗漏）不同，<code>TypedPropertyPath</code>利用 Java 的声明式方法引用来确保类型安全的属性访问。",
+      "count": 1
+    },
+    {
+      "source": "The generic type parameters preserve type information across the property path chain: <code>T</code> represents the owning\ntype of the current segment (or the root type for composed paths), while <code>P</code> represents the property value type\nat this segment. Composition automatically flows type information forward, ensuring that <code>then()</code> preserves the\nfull chain's type safety.",
+      "translation": "泛型类型参数在属性路径链中保留类型信息：<code>T</code> 表示当前段（或组合路径的根）的所有者类型，而 <code>P</code> 表示该段的属性值类型。组合会自动将类型信息向前传递，确保 <code>then()</code> 保持整个链的类型安全性。",
+      "count": 1
+    },
+    {
+      "source": "Implement <code>TypedPropertyPath</code> using method references (strongly recommended)s that directly access a property\ngetter. Constructor references, method calls with parameters, and complex expressions are not supported and result in\n<a href=\"PropertyResolutionException.html\" title=\"class in org.springframework.data.core\"><code>PropertyResolutionException</code></a>. Unlike method references, introspection of lambda expressions requires bytecode\nanalysis of the declaration site classes and thus depends on their availability at runtime.",
+      "translation": "使用直接访问属性获取器的方法引用实现 <code>TypedPropertyPath</code>（强烈推荐）。不支持构造函数引用、带参数的方法调用以及复杂表达式，这些会导致抛出 <a href=\"PropertyResolutionException.html\" title=\"class in org.springframework.data.core\"><code>PropertyResolutionException</code></a>。与使用 lambda 表达式进行反射不同，后者需要分析声明位类的字节码，因此依赖于这些类在运行时的可用性。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Create a typed property path using the static factory method <a href=\"#of(org.springframework.data.core.TypedPropertyPath)\"><code>of(TypedPropertyPath)</code></a> with a method reference ,\nfor example:",
+      "translation": "使用静态工厂方法 <a href=\"#of(org.springframework.data.core.TypedPropertyPath)\"><code>of(TypedPropertyPath)</code></a> 创建一个类型化属性路径，并传入一个方法引用，例如：",
+      "count": 1
+    },
+    {
+      "source": "For example:",
+      "translation": "例如：",
+      "count": 1
+    },
+    {
+      "source": "Returns an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator of PropertyPath</code></a> that iterates over all property path segments. For example:\n\n<pre class=\"code\">PropertyPath path = PropertyPath.from(\"address.city.name\", Person.class);\npath.forEach(p -&gt; p.toDotPath());\n</pre>\n\nresults in the dot paths:\n\n<pre class=\"code\">address.city.name     (this object)\ncity.name             (next() object)\nname             (next().next() object)\n</pre>",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>PropertyPath 的 Iterator</code></a>，用于遍历所有属性路径段。例如：\n\n<pre class=\"code\">PropertyPath path = PropertyPath.from(\"address.city.name\", Person.class);\npath.forEach(p -&gt; p.toDotPath());\n</pre>\n\n生成的点路径如下：\n\n<pre class=\"code\">address.city.name     (当前对象)\ncity.name             (next() 对象)\nname             (next().next() 对象)\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PropertyPath.html#getOwningType()\">PropertyPath</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PropertyPath.html#getOwningType()\">PropertyPath</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PropertyPath.html#getSegment()\">PropertyPath</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PropertyPath.html#getSegment()\">PropertyPath</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PropertyPath.html#getTypeInformation()\">PropertyPath</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PropertyPath.html#getTypeInformation()\">PropertyPath</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PropertyPath.html#next()\">PropertyPath</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PropertyPath.html#next()\">PropertyPath</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Returns the next <code>PropertyPath</code> segment in the property path chain.\n\n<pre class=\"code\">PropertyPath.from(\"address.city.name\", Person.class).next().toDotPath();\n</pre>\n\nresults in the output: <code>city.name</code>.",
+      "translation": "返回属性路径链中的下一个 <code>PropertyPath</code> 段。\n\n<pre class=\"code\">PropertyPath.from(\"address.city.name\", Person.class).next().toDotPath();\n</pre>\n\n结果为：<code>city.name</code>。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PropertyPath.html#hasNext()\">PropertyPath</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PropertyPath.html#hasNext()\">PropertyPath</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"PropertyPath.html#iterator()\">PropertyPath</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"PropertyPath.html#iterator()\">PropertyPath</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Returns an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"class or interface in java.util\"><code>Iterator of PropertyPath</code></a> that iterates over all property path segments.",
+      "translation": "返回一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Iterator.html\" title=\"java.util 中的类或接口\"><code>PropertyPath</code>的 Iterator</a>，用于遍历所有属性路径段。",
+      "count": 1
+    },
+    {
+      "source": "Syntax sugar to create a <a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a> from a property described as method reference to a Java beans\nproperty.",
+      "translation": "语法糖用于从描述为 Java  Bean 属性的方法引用的属性创建<a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the next <code>PropertyPath</code> segment in the property path chain.",
+      "translation": "返回属性路径链中的下一个 <code>PropertyPath</code> 段。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#iterator()\" title=\"class or interface in java.lang\">iterator</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\">Iterable</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in TypedPropertyPath\">T</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#iterator()\" title=\"class or interface in java.lang\">iterator</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\">Iterable</a>&lt;<a href=\"#type-param-T\" title=\"类型参数 TypedPropertyPath\">T</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PropertyPath.html#getOwningType()\">getOwningType</a></code> in interface <code><a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\">PropertyPath</a></code>",
+      "translation": "接口 <code><a href=\"PropertyPath.html\" title=\"org.springframework.data.core 中的接口\">PropertyPath</a></code> 中的方法 <code><a href=\"PropertyPath.html#getOwningType()\">getOwningType</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PropertyPath.html#getSegment()\">getSegment</a></code> in interface <code><a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\">PropertyPath</a></code>",
+      "translation": "接口 <code><a href=\"PropertyPath.html\" title=\"org.springframework.data.core 中的接口\">PropertyPath</a></code> 中的方法 <code><a href=\"PropertyPath.html#getSegment()\">getSegment</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PropertyPath.html#getTypeInformation()\">getTypeInformation</a></code> in interface <code><a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\">PropertyPath</a></code>",
+      "translation": "接口 <code><a href=\"PropertyPath.html\" title=\"org.springframework.data.core 中的接口\">PropertyPath</a></code> 中的方法 <code><a href=\"PropertyPath.html#getTypeInformation()\">getTypeInformation</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PropertyPath.html#next()\">next</a></code> in interface <code><a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\">PropertyPath</a></code>",
+      "translation": "接口 <code><a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\">PropertyPath</a></code> 中的 <code><a href=\"PropertyPath.html#next()\">next</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PropertyPath.html#hasNext()\">hasNext</a></code> in interface <code><a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\">PropertyPath</a></code>",
+      "translation": "<code><a href=\"PropertyPath.html#hasNext()\">hasNext</a></code> 接口 <code><a href=\"PropertyPath.html\" title=\"org.springframework.data.core 中的接口\">PropertyPath</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"PropertyPath.html#iterator()\">iterator</a></code> in interface <code><a href=\"PropertyPath.html\" title=\"interface in org.springframework.data.core\">PropertyPath</a></code>",
+      "translation": "<code><a href=\"PropertyPath.html#iterator()\">iterator()</a></code> 在接口 <code><a href=\"PropertyPath.html\" title=\"org.springframework.data.core 中的接口\">PropertyPath</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - the owning type of this path segment; the root type for composed paths.</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 此路径段的拥有类型；对于组合路径，它是根类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-P\"><code>P</code> - the property value type at this path segment.</span>",
+      "translation": "<span id=\"type-param-P\"><code>P</code> - 此路径段处的属性值类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"path(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - owning type.</span>",
+      "translation": "<span id=\"path(org.springframework.data.core.PropertyReference)-type-param-T\"><code>T</code> - 拥有类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"path(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - property type.</span>",
+      "translation": "<span id=\"path(org.springframework.data.core.PropertyReference)-type-param-P\"><code>P</code> - 属性类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"of(org.springframework.data.core.TypedPropertyPath)-type-param-T\"><code>T</code> - owning type.</span>",
+      "translation": "<span id=\"of(org.springframework.data.core.TypedPropertyPath)-type-param-T\"><code>T</code> - 拥有类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"of(org.springframework.data.core.TypedPropertyPath)-type-param-P\"><code>P</code> - property type.</span>",
+      "translation": "<span id=\"of(org.springframework.data.core.TypedPropertyPath)-type-param-P\"><code>P</code> - 属性类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"ofMany(org.springframework.data.core.TypedPropertyPath)-type-param-T\"><code>T</code> - owning type.</span>",
+      "translation": "<span id=\"ofMany(org.springframework.data.core.TypedPropertyPath)-type-param-T\"><code>T</code> - 拥有类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"ofMany(org.springframework.data.core.TypedPropertyPath)-type-param-P\"><code>P</code> - property type.</span>",
+      "translation": "<span id=\"ofMany(org.springframework.data.core.TypedPropertyPath)-type-param-P\"><code>P</code> - 属性类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"then(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - the new property value type.</span>",
+      "translation": "<span id=\"then(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - 新的属性值类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"thenMany(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - the new property value type.</span>",
+      "translation": "<span id=\"thenMany(org.springframework.data.core.PropertyReference)-type-param-N\"><code>N</code> - 新属性值的类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>property</code> - the method reference to a Java beans collection property.",
+      "translation": "<code>property</code> - 指向 JavaBean 集合属性的方法引用。",
+      "count": 1
+    },
+    {
+      "source": "<code>obj</code> - the object to get the property value from.",
+      "translation": "<code>obj</code> - 要获取属性值的对象。",
+      "count": 1
+    },
+    {
+      "source": "the next <code>PropertyPath</code> or null if the path does not contain further segments.",
+      "translation": "下一个<code>PropertyPath</code>，或者如果路径不包含更多段则为null。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可以用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the property value.",
+      "translation": "财产价值。",
+      "count": 1
+    },
+    {
+      "source": "the owningType will never be null.",
+      "translation": "owningType 永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "the current property path segment.",
+      "translation": "当前属性路径段。",
+      "count": 1
+    },
+    {
+      "source": "the type information for the property at this segment.",
+      "translation": "该段属性对应的类型信息。",
+      "count": 1
+    },
+    {
+      "source": "true if the property path contains further segments or false if the path ends at this\n        segment.",
+      "translation": "如果属性路径包含更多段，则为 true；否则（即路径在此段结束），为 false。",
+      "count": 1
+    },
+    {
+      "source": "Interface providing type-safe property path navigation through method references expressions.",
+      "translation": "提供通过方法引用表达式实现类型安全的属性路径导航的接口。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">TypedPropertyPath.path(Person::getName);\n</pre>\n\nThe resulting object can be used to obtain the <a href=\"PropertyPath.html#toDotPath()\"><code>dot-path</code></a> and to interact with the targeting\nproperty. Typed paths allow for composition to navigate nested object structures using\n<a href=\"#then(org.springframework.data.core.PropertyReference)\"><code>then(PropertyReference)</code></a>:\n\n<pre class=\"code\">// factory method chaining\nTypedPropertyPath&lt;Person, String&gt; city = TypedPropertyPath.path(Person::getAddress, Address::getCity);\n\n// fluent API\nTypedPropertyPath&lt;Person, String&gt; city = TypedPropertyPath.of(Person::getAddress).then(Address::getCity);\n</pre>",
+      "translation": "<pre class=\"code\">TypedPropertyPath.path(Person::getName);\n</pre>\n\n生成的对象可用于获取 <a href=\"PropertyPath.html#toDotPath()\"><code>dot-path</code></a> 并与目标属性进行交互。使用类型化路径，可以通过 <a href=\"#then(org.springframework.data.core.PropertyReference)\"><code>then(PropertyReference)</code></a> 组合导航嵌套对象结构：\n\n<pre class=\"code\">// 工厂方法链式调用\nTypedPropertyPath&lt;Person, String&gt; city = TypedPropertyPath.path(Person::getAddress, Address::getCity);\n\n// 流式 API\nTypedPropertyPath&lt;Person, String&gt; city = TypedPropertyPath.of(Person::getAddress).then(Address::getCity);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Syntax sugar to create a <a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a> from a property described as method reference to a Java beans\nproperty. Suitable for static imports.",
+      "translation": "语法糖用于从描述为 Java  Bean 属性的方法引用的属性创建<a href=\"TypedPropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>TypedPropertyPath</code></a>。适用于静态导入。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">PropertyPath.from(\"address.city.name\", Person.class).getSegment();\n</pre>\n\nresults in <code>address</code>.",
+      "translation": "<pre class=\"code\">PropertyPath.from(\"address.city.name\", Person.class).getSegment();</pre>\n\n结果为 <code>address</code>。",
+      "count": 1
+    }
+  ]
+}

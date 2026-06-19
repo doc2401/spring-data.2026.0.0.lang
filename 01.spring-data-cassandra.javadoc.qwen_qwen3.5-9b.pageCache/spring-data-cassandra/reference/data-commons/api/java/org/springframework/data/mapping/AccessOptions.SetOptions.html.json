@@ -1,45 +1,65 @@
 {
   "created_at": "2026-06-16 10:39:04",
-  "updated_at": "2026-06-16 10:39:04",
+  "updated_at": "2026-06-18 07:13:55",
   "stats": {
-    "total_entries": 28,
+    "total_entries": 31,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 35,
-    "entries_with_hits": 28,
+    "total_hits": 46,
+    "entries_with_hits": 31,
     "entries_without_hits": 0,
-    "hit_rate": 1.25,
-    "usage_percentage": 0.0028
+    "hit_rate": 1.4838709677419355,
+    "usage_percentage": 0.0031000000000000003
   },
   "items": [
     {
       "source": "Returns a new <a href=\"AccessOptions.html\" title=\"class in org.springframework.data.mapping\"><code>AccessOptions</code></a> that will cause paths that contain null values to be skipped when\nsetting a property.",
       "translation": "返回一个新的<a href=\"AccessOptions.html\" title=\"org.springframework.data.mapping 中的类\"><code>AccessOptions</code></a>，在设置属性时，该选项会导致包含空值的路径被跳过。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Returns a new <a href=\"AccessOptions.html\" title=\"class in org.springframework.data.mapping\"><code>AccessOptions</code></a> that will cause paths that contain null values to be skipped when\nsetting a property but a log message produced in TRACE level.",
       "translation": "返回一个新的<a href=\"AccessOptions.html\" title=\"org.springframework.data.mapping 中的类\"><code>AccessOptions</code></a>，该选项在设置属性时会跳过包含 null 值的路径，但会在 TRACE 级别生成日志消息。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Shortcut to configure the same <a href=\"AccessOptions.SetOptions.Propagation.html\" title=\"enum class in org.springframework.data.mapping\"><code>AccessOptions.SetOptions.Propagation</code></a> for both collection and map property path segments.",
       "translation": "配置集合和映射属性路径段相同<a href=\"AccessOptions.SetOptions.Propagation.html\" title=\"org.springframework.data.mapping 中的枚举类\"><code>AccessOptions.SetOptions.Propagation</code></a>的快捷方式。",
+      "count": 3
+    },
+    {
+      "source": "Returns whether the given property is supposed to be propagated, i.e. if values for it are supposed to be set at\nall.",
+      "translation": "返回给定的属性是否应该被传播，即是否应该为其设置值。",
+      "count": 3
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "Access options for setting values for property paths.",
+      "translation": "设置属性路径值的访问选项。",
+      "count": 2
+    },
+    {
+      "source": "How to propagate setting values that cross collection and map properties.",
+      "translation": "如何传播跨越集合和映射属性的设置值。",
+      "count": 2
+    },
+    {
+      "source": "How to handle intermediate null values when setting",
+      "translation": "设置时如何处理中间的空值？",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "Returns whether the given property is supposed to be propagated, i.e. if values for it are supposed to be set at\nall.",
-      "translation": "返回给定的属性是否应该被传播，即是否应该为其设置值。",
-      "count": 2
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
       "count": 1
     },
     {
@@ -78,21 +98,6 @@
       "count": 1
     },
     {
-      "source": "Access options for setting values for property paths.",
-      "translation": "设置属性路径值的访问选项。",
-      "count": 1
-    },
-    {
-      "source": "How to propagate setting values that cross collection and map properties.",
-      "translation": "如何传播跨越集合和映射属性的设置值。",
-      "count": 1
-    },
-    {
-      "source": "How to handle intermediate null values when setting",
-      "translation": "设置时如何处理中间的空值？",
-      "count": 1
-    },
-    {
       "source": "<li><a href=\"#\" tabindex=\"0\">Description</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">Nested Class Summary</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">Constructor Summary</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">Method Summary</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">Constructor Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E(org.springframework.data.mapping.AccessOptions.SetOptions.SetNulls,org.springframework.data.mapping.AccessOptions.SetOptions.Propagation,org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">SetOptions(AccessOptions.SetOptions.SetNulls, AccessOptions.SetOptions.Propagation, AccessOptions.SetOptions.Propagation)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">Method Details</a>\n<ol class=\"toc-list\">\n<li><a href=\"#withNullHandling(org.springframework.data.mapping.AccessOptions.SetOptions.SetNulls)\" tabindex=\"0\">withNullHandling(AccessOptions.SetOptions.SetNulls)</a></li>\n<li><a href=\"#withCollectionPropagation(org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">withCollectionPropagation(AccessOptions.SetOptions.Propagation)</a></li>\n<li><a href=\"#withMapPropagation(org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">withMapPropagation(AccessOptions.SetOptions.Propagation)</a></li>\n<li><a href=\"#getNullHandling()\" tabindex=\"0\">getNullHandling()</a></li>\n<li><a href=\"#skipNulls()\" tabindex=\"0\">skipNulls()</a></li>\n<li><a href=\"#skipAndLogNulls()\" tabindex=\"0\">skipAndLogNulls()</a></li>\n<li><a href=\"#rejectNulls()\" tabindex=\"0\">rejectNulls()</a></li>\n<li><a href=\"#withCollectionAndMapPropagation(org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">withCollectionAndMapPropagation(AccessOptions.SetOptions.Propagation)</a></li>\n<li><a href=\"#propagate(org.springframework.data.mapping.PersistentProperty)\" tabindex=\"0\">propagate(PersistentProperty)</a></li>\n</ol>\n</li>",
       "translation": "<li><a href=\"#\" tabindex=\"0\">描述</a></li>\n<li><a href=\"#nested-class-summary\" tabindex=\"0\">嵌套类摘要</a></li>\n<li><a href=\"#constructor-summary\" tabindex=\"0\">构造函数摘要</a></li>\n<li><a href=\"#method-summary\" tabindex=\"0\">方法摘要</a></li>\n<li><a href=\"#constructor-detail\" tabindex=\"0\">构造函数详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#%3Cinit%3E(org.springframework.data.mapping.AccessOptions.SetOptions.SetNulls,org.springframework.data.mapping.AccessOptions.SetOptions.Propagation,org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">SetOptions(AccessOptions.SetOptions.SetNulls, AccessOptions.SetOptions.Propagation, AccessOptions.SetOptions.Propagation)</a></li>\n</ol>\n</li>\n<li><a href=\"#method-detail\" tabindex=\"0\">方法详情</a>\n<ol class=\"toc-list\">\n<li><a href=\"#withNullHandling(org.springframework.data.mapping.AccessOptions.SetOptions.SetNulls)\" tabindex=\"0\">withNullHandling(AccessOptions.SetOptions.SetNulls)</a></li>\n<li><a href=\"#withCollectionPropagation(org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">withCollectionPropagation(AccessOptions.SetOptions.Propagation)</a></li>\n<li><a href=\"#withMapPropagation(org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">withMapPropagation(AccessOptions.SetOptions.Propagation)</a></li>\n<li><a href=\"#getNullHandling()\" tabindex=\"0\">getNullHandling()</a></li>\n<li><a href=\"#skipNulls()\" tabindex=\"0\">skipNulls()</a></li>\n<li><a href=\"#skipAndLogNulls()\" tabindex=\"0\">skipAndLogNulls()</a></li>\n<li><a href=\"#rejectNulls()\" tabindex=\"0\">rejectNulls()</a></li>\n<li><a href=\"#withCollectionAndMapPropagation(org.springframework.data.mapping.AccessOptions.SetOptions.Propagation)\" tabindex=\"0\">withCollectionAndMapPropagation(AccessOptions.SetOptions.Propagation)</a></li>\n<li><a href=\"#propagate(org.springframework.data.mapping.PersistentProperty)\" tabindex=\"0\">propagate(PersistentProperty)</a></li>\n</ol>\n</li>",
       "count": 1
@@ -128,11 +133,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Constructor Summary",
       "translation": "构造函数摘要",
       "count": 1
@@ -150,6 +150,21 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code>propagation</code> - must not be null.",
+      "translation": "<code>propagation</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>property</code> - can be null.",
+      "translation": "<code>property</code> - 可为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Drotbohm",
+      "translation": "奥利弗·德罗特博姆",
       "count": 1
     }
   ]

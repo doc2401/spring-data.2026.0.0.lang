@@ -1,280 +1,445 @@
 {
   "created_at": "2026-06-16 17:23:57",
-  "updated_at": "2026-06-16 17:23:57",
+  "updated_at": "2026-06-18 07:51:08",
   "stats": {
-    "total_entries": 141,
+    "total_entries": 183,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 220,
-    "entries_with_hits": 141,
+    "total_hits": 446,
+    "entries_with_hits": 183,
     "entries_without_hits": 0,
-    "hit_rate": 1.5602836879432624,
-    "usage_percentage": 0.014100000000000001
+    "hit_rate": 2.4371584699453552,
+    "usage_percentage": 0.0183
   },
   "items": [
     {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></code> - if there is any problem executing the query.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\">DataAccessException</a></code> - 如果执行查询时出现任何问题。",
+      "count": 44
+    },
+    {
+      "source": "<code>cql</code> - static CQL to execute, must not be null or empty.",
+      "translation": "<code>cql</code> - 要执行的静态 CQL，不能为 null 或为空。",
+      "count": 25
+    },
+    {
+      "source": "Execute a query for a result <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>, given static CQL.",
+      "translation": "针对静态 CQL 执行查询以获取 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 类型的结果。",
+      "count": 9
+    },
+    {
+      "source": "<code>statement</code> - static CQL <code>Statement</code>, must not be null.",
+      "translation": "<code>statement</code> - 静态 CQL <code>Statement</code>，不能为 null。",
+      "count": 9
+    },
+    {
+      "source": "<code>rowMapper</code> - object that will map one object per row, must not be null.",
+      "translation": "<code>rowMapper</code> - 用于将每一行映射为一个对象的对象，不得为 null。",
+      "count": 8
+    },
+    {
       "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <code>query</code> method with null as argument array.",
       "translation": "使用 CQL 语句，而不是 `<code>PreparedStatement</code>`。如果您想使用 `<code>PreparedStatement</code>` 执行静态查询，请使用带有空参数数组的重载 `<code>query</code>` 方法。",
+      "count": 7
+    },
+    {
+      "source": "<code>preparedStatementCreator</code> - object that can create a <code>PreparedStatement</code> given a\n         <code>CqlSession</code>, must not be null.",
+      "translation": "<code>preparedStatementCreator</code> - 一个能够根据 <code>CqlSession</code> 创建 <code>PreparedStatement</code> 的对象，不能为 null。",
+      "count": 7
+    },
+    {
+      "source": "<code>psb</code> - object that knows how to set values on the prepared statement. If this is null, the CQL will\n         be assumed to contain no bind parameters. Even if there are no bind parameters, this object may be used to\n         set fetch size and other performance options.",
+      "translation": "<code>psb</code> - 一个知道如何在预编译语句中设置值的对象。如果该值为 null，则假定 CQL 不包含绑定参数。即使没有绑定参数，此对象也可用于设置获取大小和其他性能选项。",
+      "count": 7
+    },
+    {
+      "source": "<code>args</code> - arguments to bind to the query (leaving it to the <code>PreparedStatement</code> to guess the corresponding\n         CQL type).",
+      "translation": "<code>args</code> - 要绑定到查询的参数（由 <code>PreparedStatement</code> 自行猜测对应的 CQL 类型）。",
+      "count": 6
+    },
+    {
+      "source": "<code>rowCallbackHandler</code> - object that will extract results, one row at a time, must not be null.",
+      "translation": "<code>rowCallbackHandler</code> - 用于逐行提取结果的对象，不得为 null。",
       "count": 6
     },
     {
       "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <code>queryForList</code> method with null as argument array.",
       "translation": "使用 CQL 语句，而不是 `<code>PreparedStatement</code>`。如果您想使用 `<code>PreparedStatement</code>` 执行静态查询，请使用带有空参数数组的重载 `<code>queryForList</code>` 方法。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Query using a prepared statement, reading the <code>ResultSet</code> with a <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>.",
       "translation": "使用预编译语句执行查询，并通过 <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a> 读取 <code>ResultSet</code>。",
-      "count": 4
-    },
-    {
-      "source": "Execute a query for a result <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>, given static CQL.",
-      "translation": "针对静态 CQL 执行查询以获取 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 类型的结果。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Issue a single CQL execute, typically a DDL statement, insert, update or delete statement.",
       "translation": "执行单个 CQL 语句，通常为 DDL 语句、INSERT、UPDATE 或 DELETE 语句。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Execute a query for a result Map, given static CQL.",
       "translation": "根据静态 CQL 执行查询以获取结果 Map。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Execute a query for a result object, given static CQL.",
       "translation": "根据静态 CQL 执行查询以获取结果对象。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Execute a query for a ResultSet, given static CQL.",
       "translation": "使用静态 CQL 执行查询以获取 ResultSet。",
-      "count": 4
-    },
-    {
-      "source": "Execute a query given static CQL, reading the",
-      "translation": "执行给定静态 CQL 的查询，读取",
-      "count": 4
-    },
-    {
-      "source": "Execute a query for a result",
-      "translation": "执行查询以获取结果。",
-      "count": 4
-    },
-    {
-      "source": ", given static CQL.",
-      "translation": "，给定静态 CQL。",
-      "count": 4
-    },
-    {
-      "source": "The results will be mapped to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> (one item for each row) of result objects, each of them matching the\nspecified element type.",
-      "translation": "结果将被映射到一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>（每行对应一个元素）的结果对象列表中，每个对象都符合指定的元素类型。",
-      "count": 3
-    },
-    {
-      "source": "The results will be mapped to an <code>ResultSet</code>.",
-      "translation": "结果将被映射到<code>ResultSet</code>。",
-      "count": 3
-    },
-    {
-      "source": "The callback action can return a result object, for example a domain object or a collection of domain objects.",
-      "translation": "回调操作可以返回结果对象，例如领域对象或领域对象的集合。",
-      "count": 3
-    },
-    {
-      "source": "The query is expected to be a single row query; the result row will be mapped to a Map (one entry for each column,\nusing the column name as the key).",
-      "translation": "该查询预期为单行查询；结果行将被映射到 Map 中（每个列对应一个条目，使用列名作为键）。",
-      "count": 3
-    },
-    {
-      "source": "s into Spring's",
-      "translation": "转换为 Spring 的",
-      "count": 3
-    },
-    {
-      "source": "The results will be mapped to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> (one item for each row) of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>s (one entry for each column\nusing the column name as the key). Each item in the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> will be of the form returned by this interface's\nqueryForMap() methods.",
-      "translation": "结果将映射到一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>（每行对应一个元素），该列表包含多个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>（每列对应一个条目，使用列名作为键）。<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 中的每个元素的形式均由此接口的 queryForMap() 方法返回。",
-      "count": 2
-    },
-    {
-      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <a href=\"#queryForMap(java.lang.String,java.lang.Object...)\"><code>queryForMap(String, Object...)</code></a> method with null\nas argument array.",
-      "translation": "使用 CQL 语句，而不是 `<code>PreparedStatement</code>`。如果您想使用 `<code>PreparedStatement</code>` 执行静态查询，请使用重载的 <a href=\"#queryForMap(java.lang.String,java.lang.Object...)\"><code>queryForMap(String, Object...)</code></a> 方法，并将参数数组设为 null。",
-      "count": 2
-    },
-    {
-      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <a href=\"#queryForObject(java.lang.String,java.lang.Class,java.lang.Object...)\"><code>queryForObject(String, Class, Object...)</code></a> method with\nnull as argument array.",
-      "translation": "使用 CQL 语句，而不是<code>PreparedStatement</code>。如果您想使用<code>PreparedStatement</code>执行静态查询，请使用重载的<a href=\"#queryForObject(java.lang.String,java.lang.Class,java.lang.Object...)\"><code>queryForObject(String, Class, Object...)</code></a>方法，并将参数数组设为 null。",
-      "count": 2
-    },
-    {
-      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <a href=\"#queryForObject(java.lang.String,org.springframework.data.cassandra.core.cql.RowMapper,java.lang.Object...)\"><code>queryForObject(String, RowMapper, Object...)</code></a> method with\nnull as argument array.",
-      "translation": "使用 CQL 语句，而不是 <code>PreparedStatement</code>。如果您想使用 <code>PreparedStatement</code> 执行静态查询，请使用重载的 <a href=\"#queryForObject(java.lang.String,org.springframework.data.cassandra.core.cql.RowMapper,java.lang.Object...)\"><code>queryForObject(String, RowMapper, Object...)</code></a> 方法，并将参数数组设为 null。",
-      "count": 2
-    },
-    {
-      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <code>queryForResultSet</code> method with null as argument\narray.",
-      "translation": "使用 CQL 语句，而不是 `<code>PreparedStatement</code>`。如果您想使用 `<code>PreparedStatement</code>` 执行静态查询，请使用重载的 `<code>queryForResultSet</code>` 方法，并将参数数组设为 null。",
-      "count": 2
-    },
-    {
-      "source": "This method is useful for running static CQL with a known outcome. The query is expected to be a single row/single\ncolumn query; the returned result will be directly mapped to the corresponding object type.",
-      "translation": "此方法适用于运行具有已知结果的静态 CQL。该查询应为单行/单列查询；返回的结果将直接映射到对应的对象类型。",
-      "count": 2
-    },
-    {
-      "source": "Query given CQL to create a prepared statement from CQL and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that\nknows how to bind values to the query, reading the <code>ResultSet</code> on a per-row basis with a\n<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
-      "translation": "根据提供的 CQL 创建预编译语句，并使用一个 <a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a> 实现来绑定查询值；该实现会逐行读取 <code>ResultSet</code>，并通过一个\n<a href=\"RowCallbackHandler.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowCallbackHandler</code></a> 进行处理。",
-      "count": 2
-    },
-    {
-      "source": "Query using a prepared statement and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that knows how to bind values\nto the query, reading the <code>ResultSet</code> with a <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>.",
-      "translation": "使用预编译语句和了解如何绑定值的<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a>实现来执行查询，并使用<a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>读取<code>ResultSet</code>。",
-      "count": 2
-    },
-    {
-      "source": "Query using a prepared statement and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that knows how to bind values\nto the query, reading the <code>ResultSet</code> on a per-row basis with a <a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
-      "translation": "使用预编译语句和能够绑定值的<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a>实现来执行查询，并通过<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>逐行读取<code>ResultSet</code>。",
-      "count": 2
-    },
-    {
-      "source": "Query given CQL to create a prepared statement from CQL and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that\nknows how to bind values to the query, mapping each row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
-      "translation": "根据 CQL 查询创建预编译语句，并配合一个 `<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>` 实现来绑定值到该查询中，同时通过一个 `<a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowMapper</code></a>` 将每一行映射为 Java 对象。",
-      "count": 2
-    },
-    {
-      "source": "Query using a prepared statement and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that knows how to bind values\nto the query, mapping each row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
-      "translation": "使用预编译语句和了解如何将值绑定到查询的<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a>实现，并通过<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>将每一行映射为 Java 对象。",
-      "count": 2
+      "count": 5
     },
     {
       "source": "Execute a query given static CQL, reading the <code>ResultSet</code> with a <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>.",
       "translation": "执行给定静态 CQL 的查询，并使用<a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>读取<code>ResultSet</code>。",
-      "count": 2
+      "count": 5
     },
     {
       "source": "Execute a query given static CQL, reading the <code>ResultSet</code> on a per-row basis with a\n<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
       "translation": "执行给定静态 CQL 的查询，逐行读取 <code>ResultSet</code>，并使用一个\n<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>。",
-      "count": 2
-    },
-    {
-      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, reading the\n<code>ResultSet</code> with a <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>.",
-      "translation": "根据提供的 CQL 创建预编译语句，并绑定参数列表到该查询，然后使用 <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a> 读取<code>ResultSet</code>。",
-      "count": 2
-    },
-    {
-      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, reading the\n<code>ResultSet</code> on a per-row basis with a <a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
-      "translation": "根据提供的 CQL 查询创建预编译语句，并绑定一组参数到该查询，然后逐行读取<code>ResultSet</code>，使用<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>接口。",
-      "count": 2
-    },
-    {
-      "source": "Query using a prepared statement, reading the <code>ResultSet</code> on a per-row basis with a\n<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
-      "translation": "使用预编译语句进行查询，并通过<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>逐行读取<code>ResultSet</code>。",
-      "count": 2
-    },
-    {
-      "source": "Issue a single CQL execute operation (such as an insert, update or delete statement) using a\n<a href=\"AsyncPreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncPreparedStatementCreator</code></a> to provide CQL and any required parameters.",
-      "translation": "使用 <a href=\"AsyncPreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncPreparedStatementCreator</code></a> 发出单个 CQL 执行操作（例如插入、更新或删除语句），以提供 CQL 及任何必需的参数。",
-      "count": 2
+      "count": 5
     },
     {
       "source": "Execute a query given static CQL, mapping each row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
       "translation": "根据给定的静态 CQL 执行查询，并通过<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>将每一行映射为 Java 对象。",
-      "count": 2
-    },
-    {
-      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, mapping each\nrow to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
-      "translation": "给定一个用于从 CQL 创建预编译语句的 CQL，以及一组要绑定到该查询的参数列表，并通过 <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> 将每一行映射为 Java 对象。",
-      "count": 2
-    },
-    {
-      "source": "Query using a prepared statement, mapping each row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
-      "translation": "使用预编译语句执行查询，并通过<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>将每一行映射为 Java 对象。",
-      "count": 2
+      "count": 5
     },
     {
       "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>.",
       "translation": "给定一个用于从 CQL 创建预编译语句的 CQL 查询以及一组要绑定到该查询的参数列表，期望返回结果为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>。",
-      "count": 2
+      "count": 5
     },
     {
       "source": "Execute a query given static CQL, mapping a single result row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
       "translation": "根据给定的静态 CQL 执行查询，并通过一个<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>将单个结果行映射到 Java 对象。",
-      "count": 2
+      "count": 5
+    },
+    {
+      "source": "the result <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>, containing mapped objects.",
+      "translation": "结果为包含已映射对象的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"java.util 中的类或接口\"><code>List</code></a>。",
+      "count": 5
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - if the query does not return exactly one row.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - 当查询未返回恰好一行时。",
+      "count": 5
+    },
+    {
+      "source": "boolean value whether the statement was applied.",
+      "translation": "布尔值，表示是否已应用该语句。",
+      "count": 5
+    },
+    {
+      "source": "The results will be mapped to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> (one item for each row) of result objects, each of them matching the\nspecified element type.",
+      "translation": "结果将被映射到一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>（每行对应一个元素）的结果对象列表中，每个对象都符合指定的元素类型。",
+      "count": 4
+    },
+    {
+      "source": "The results will be mapped to an <code>ResultSet</code>.",
+      "translation": "结果将被映射到<code>ResultSet</code>。",
+      "count": 4
+    },
+    {
+      "source": "The callback action can return a result object, for example a domain object or a collection of domain objects.",
+      "translation": "回调操作可以返回结果对象，例如领域对象或领域对象的集合。",
+      "count": 4
+    },
+    {
+      "source": "The query is expected to be a single row query; the result row will be mapped to a Map (one entry for each column,\nusing the column name as the key).",
+      "translation": "该查询预期为单行查询；结果行将被映射到 Map 中（每个列对应一个条目，使用列名作为键）。",
+      "count": 4
+    },
+    {
+      "source": "<code>resultSetExtractor</code> - object that will extract results, must not be null.",
+      "translation": "<code>resultSetExtractor</code> - 用于提取结果的对象，不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "The results will be mapped to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> (one item for each row) of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>s (one entry for each column\nusing the column name as the key). Each item in the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> will be of the form returned by this interface's\nqueryForMap() methods.",
+      "translation": "结果将映射到一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>（每行对应一个元素），该列表包含多个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>（每列对应一个条目，使用列名作为键）。<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 中的每个元素的形式均由此接口的 queryForMap() 方法返回。",
+      "count": 3
+    },
+    {
+      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <a href=\"#queryForMap(java.lang.String,java.lang.Object...)\"><code>queryForMap(String, Object...)</code></a> method with null\nas argument array.",
+      "translation": "使用 CQL 语句，而不是 `<code>PreparedStatement</code>`。如果您想使用 `<code>PreparedStatement</code>` 执行静态查询，请使用重载的 <a href=\"#queryForMap(java.lang.String,java.lang.Object...)\"><code>queryForMap(String, Object...)</code></a> 方法，并将参数数组设为 null。",
+      "count": 3
+    },
+    {
+      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <a href=\"#queryForObject(java.lang.String,java.lang.Class,java.lang.Object...)\"><code>queryForObject(String, Class, Object...)</code></a> method with\nnull as argument array.",
+      "translation": "使用 CQL 语句，而不是<code>PreparedStatement</code>。如果您想使用<code>PreparedStatement</code>执行静态查询，请使用重载的<a href=\"#queryForObject(java.lang.String,java.lang.Class,java.lang.Object...)\"><code>queryForObject(String, Class, Object...)</code></a>方法，并将参数数组设为 null。",
+      "count": 3
+    },
+    {
+      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <a href=\"#queryForObject(java.lang.String,org.springframework.data.cassandra.core.cql.RowMapper,java.lang.Object...)\"><code>queryForObject(String, RowMapper, Object...)</code></a> method with\nnull as argument array.",
+      "translation": "使用 CQL 语句，而不是 <code>PreparedStatement</code>。如果您想使用 <code>PreparedStatement</code> 执行静态查询，请使用重载的 <a href=\"#queryForObject(java.lang.String,org.springframework.data.cassandra.core.cql.RowMapper,java.lang.Object...)\"><code>queryForObject(String, RowMapper, Object...)</code></a> 方法，并将参数数组设为 null。",
+      "count": 3
+    },
+    {
+      "source": "Uses a CQL Statement, not a <code>PreparedStatement</code>. If you want to execute a static query with a\n<code>PreparedStatement</code>, use the overloaded <code>queryForResultSet</code> method with null as argument\narray.",
+      "translation": "使用 CQL 语句，而不是 `<code>PreparedStatement</code>`。如果您想使用 `<code>PreparedStatement</code>` 执行静态查询，请使用重载的 `<code>queryForResultSet</code>` 方法，并将参数数组设为 null。",
+      "count": 3
+    },
+    {
+      "source": "This method is useful for running static CQL with a known outcome. The query is expected to be a single row/single\ncolumn query; the returned result will be directly mapped to the corresponding object type.",
+      "translation": "此方法适用于运行具有已知结果的静态 CQL。该查询应为单行/单列查询；返回的结果将直接映射到对应的对象类型。",
+      "count": 3
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that\nknows how to bind values to the query, reading the <code>ResultSet</code> on a per-row basis with a\n<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
+      "translation": "根据提供的 CQL 创建预编译语句，并使用一个 <a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a> 实现来绑定查询值；该实现会逐行读取 <code>ResultSet</code>，并通过一个\n<a href=\"RowCallbackHandler.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowCallbackHandler</code></a> 进行处理。",
+      "count": 3
+    },
+    {
+      "source": "Query using a prepared statement and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that knows how to bind values\nto the query, reading the <code>ResultSet</code> with a <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>.",
+      "translation": "使用预编译语句和了解如何绑定值的<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a>实现来执行查询，并使用<a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>读取<code>ResultSet</code>。",
+      "count": 3
+    },
+    {
+      "source": "Query using a prepared statement and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that knows how to bind values\nto the query, reading the <code>ResultSet</code> on a per-row basis with a <a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
+      "translation": "使用预编译语句和能够绑定值的<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a>实现来执行查询，并通过<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>逐行读取<code>ResultSet</code>。",
+      "count": 3
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that\nknows how to bind values to the query, mapping each row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
+      "translation": "根据 CQL 查询创建预编译语句，并配合一个 `<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>` 实现来绑定值到该查询中，同时通过一个 `<a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowMapper</code></a>` 将每一行映射为 Java 对象。",
+      "count": 3
+    },
+    {
+      "source": "Query using a prepared statement and a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> implementation that knows how to bind values\nto the query, mapping each row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
+      "translation": "使用预编译语句和了解如何将值绑定到查询的<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a>实现，并通过<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>将每一行映射为 Java 对象。",
+      "count": 3
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, reading the\n<code>ResultSet</code> with a <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>.",
+      "translation": "根据提供的 CQL 创建预编译语句，并绑定参数列表到该查询，然后使用 <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a> 读取<code>ResultSet</code>。",
+      "count": 3
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, reading the\n<code>ResultSet</code> on a per-row basis with a <a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
+      "translation": "根据提供的 CQL 查询创建预编译语句，并绑定一组参数到该查询，然后逐行读取<code>ResultSet</code>，使用<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>接口。",
+      "count": 3
+    },
+    {
+      "source": "Query using a prepared statement, reading the <code>ResultSet</code> on a per-row basis with a\n<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>.",
+      "translation": "使用预编译语句进行查询，并通过<a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a>逐行读取<code>ResultSet</code>。",
+      "count": 3
+    },
+    {
+      "source": "Issue a single CQL execute operation (such as an insert, update or delete statement) using a\n<a href=\"AsyncPreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncPreparedStatementCreator</code></a> to provide CQL and any required parameters.",
+      "translation": "使用 <a href=\"AsyncPreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncPreparedStatementCreator</code></a> 发出单个 CQL 执行操作（例如插入、更新或删除语句），以提供 CQL 及任何必需的参数。",
+      "count": 3
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, mapping each\nrow to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
+      "translation": "给定一个用于从 CQL 创建预编译语句的 CQL，以及一组要绑定到该查询的参数列表，并通过 <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> 将每一行映射为 Java 对象。",
+      "count": 3
+    },
+    {
+      "source": "Query using a prepared statement, mapping each row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
+      "translation": "使用预编译语句执行查询，并通过<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>将每一行映射为 Java 对象。",
+      "count": 3
     },
     {
       "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, mapping a\nsingle result row to a Java object via a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>.",
       "translation": "根据给定的 CQL 创建预编译语句，并提供一组参数绑定到该查询中，同时通过一个<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>将单个结果行映射为 Java 对象。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Execute a CQL data access operation, implemented as callback action working on a CQL <code>PreparedStatement</code>.",
       "translation": "执行一个 CQL 数据访问操作，该操作实现为在 CQL <code>PreparedStatement</code> 上运行的回调动作。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Issue a single CQL operation (such as an insert, update or delete statement) via a prepared statement, binding the\ngiven arguments.",
       "translation": "通过预编译语句发出单个 CQL 操作（例如 INSERT、UPDATE 或 DELETE 语句），并绑定给定的参数。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult object.",
       "translation": "根据提供的 CQL 查询语句创建预编译语句，并绑定参数列表以期望返回结果对象。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nResultSet.",
       "translation": "根据提供的 CQL 查询语句创建预编译语句，并绑定参数列表以期望返回 ResultSet。",
-      "count": 2
+      "count": 3
     },
     {
-      "source": "Method Details",
-      "translation": "方法详情",
-      "count": 2
+      "source": "<code>elementType</code> - the required type of element in the result <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> (for example, <code>Integer.class</code>),\n         must not be null.",
+      "translation": "<code>elementType</code> - 结果中元素的必需类型，为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"java.util 中的类或接口\"><code>List</code></a>（例如 <code>Integer.class</code>）的类型，不得为 null。",
+      "count": 3
     },
     {
-      "source": "Execute a CQL data access operation, implemented as callback action working on a CQL",
-      "translation": "执行一个作为回调操作实现的 CQL 数据访问操作，该操作在 CQL 上运行。",
-      "count": 2
+      "source": "<code>args</code> - arguments to bind to the query (leaving it to the <code>PreparedStatement</code> to guess the corresponding\n         CQL type)",
+      "translation": "<code>args</code> - 要绑定到查询的参数（由 <code>PreparedStatement</code> 自行猜测对应的 CQL 类型）",
+      "count": 3
     },
     {
-      "source": "with a",
-      "translation": "带有",
-      "count": 2
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> of objects that match the specified element type.",
+      "translation": "一个包含与指定元素类型匹配的对象的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>。",
+      "count": 3
     },
     {
-      "source": "on a per-row basis with a",
-      "translation": "按行基础与一个",
-      "count": 2
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - if the query does not return exactly one row, or does not return\n          exactly one column in that row.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - 如果查询未返回恰好一行，或未在该行中返回恰好一列。",
+      "count": 3
     },
     {
-      "source": "Execute a query given static CQL, mapping each row to a Java object via a",
-      "translation": "执行给定静态 CQL 的查询，通过映射将每一行转换为 Java 对象。",
-      "count": 2
+      "source": "<code>requiredType</code> - the type that the result object is expected to match, must not be null.",
+      "translation": "<code>requiredType</code> - 结果对象预期匹配的类型，不得为 null。",
+      "count": 3
     },
     {
-      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult",
-      "translation": "根据提供的 CQL 创建预编译语句，并将参数列表绑定到该查询，以期望获得结果。",
-      "count": 2
-    },
-    {
-      "source": "Execute a query given static CQL, mapping a single result row to a Java object via a",
-      "translation": "根据给定的静态 CQL 执行查询，通过一个将单个结果行映射到 Java 对象的",
-      "count": 2
+      "source": "the result object of the required type, or null in case of CQL NULL.",
+      "translation": "所需类型的结果对象，或为 CQL NULL 时返回 null。",
+      "count": 3
     },
     {
       "source": "The results will be mapped to a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> (one item for each row) of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>s (one entry for each column,\nusing the column name as the key). Each item in the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> will be of the form returned by this interface's\nqueryForMap() methods.",
       "translation": "结果将映射到一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>（每行对应一个元素），该列表由多个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 组成（每列对应一个条目，使用列名作为键）。该 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 中的每个元素的形式均与此接口的 queryForMap() 方法返回的结果一致。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "The query is expected to be a single row/single column query; the returned result will be directly mapped to the\ncorresponding object type.",
       "translation": "该查询应为单行/单列查询；返回的结果将直接映射到相应的对象类型。",
+      "count": 2
+    },
+    {
+      "source": "Issue an statement using a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> to set bind parameters, with given CQL. Simpler than\nusing a <a href=\"AsyncPreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncPreparedStatementCreator</code></a> as this method will create the <code>PreparedStatement</code>: The\n<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> just needs to set parameters.",
+      "translation": "使用带有给定 CQL 的<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>发出语句以设置绑定参数。这比使用<a href=\"AsyncPreparedStatementCreator.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>AsyncPreparedStatementCreator</code></a>更简单，因为此方法会创建<code>PreparedStatement</code>：<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>只需设置参数。",
+      "count": 2
+    },
+    {
+      "source": "Interface specifying a basic set of CQL asynchronously executed operations. Exposes similar methods as\n<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>, but returns result handles or accepts callbacks as opposed to concrete results. Implemented by\n<a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a>. Not often used directly, but a useful option to enhance testability, as it can easily be\nmocked or stubbed.",
+      "translation": "定义了一组基本异步执行 CQL 操作的接口。它提供了与<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>类似的方法，但返回的是结果处理器或接受回调，而不是具体的结果。该接口由<a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a>实现。虽然不常直接使用，但它是一个增强可测试性的有用选项，因为它可以轻松地进行模拟或存根处理。",
+      "count": 2
+    },
+    {
+      "source": "Issue an statement using a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> to set bind parameters, with given CQL.",
+      "translation": "使用带有给定 CQL 的<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>发出语句以设置绑定参数。",
+      "count": 2
+    },
+    {
+      "source": "Execute a CQL data access operation, implemented as callback action working on a\n<code>CqlSession</code>.",
+      "translation": "执行一个 CQL 数据访问操作，该操作作为回调动作实现，作用于 <code>CqlSession</code>。",
+      "count": 2
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult Map.",
+      "translation": "根据提供的 CQL 查询语句创建预编译语句，并绑定参数列表以期望返回结果映射。",
+      "count": 2
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult Map. The queryForMap() methods defined by this interface are appropriate when you don't have a domain model.\nOtherwise, consider using one of the queryForObject() methods.",
+      "translation": "给定一个用于从 CQL 创建预编译语句的 CQL 查询以及一组要绑定到该查询的参数列表，期望返回结果 Map。当没有领域模型时，由本接口定义的 queryForMap() 方法非常适用；否则，请考虑使用 queryForObject() 方法之一。",
+      "count": 2
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> that contains a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> per row.",
+      "translation": "一个包含每行一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "an arbitrary result object, as returned by the <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>",
+      "translation": "任意结果对象，由<a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>接口返回。",
+      "count": 2
+    },
+    {
+      "source": "an arbitrary result object, as returned by the <a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>.",
+      "translation": "任意结果对象，由<a href=\"AsyncResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncResultSetExtractor</code></a>接口返回。",
+      "count": 2
+    },
+    {
+      "source": "<code>action</code> - callback object that specifies the action, must not be null.",
+      "translation": "<code>action</code> - 指定操作的回调对象，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>resultSetExtractor</code> - object that will extract all rows of results, must not be null.",
+      "translation": "<code>resultSetExtractor</code> - 用于提取所有结果行的对象，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "a result object returned by the action, or null.",
+      "translation": "操作返回的结果对象，或为 null。",
+      "count": 2
+    },
+    {
+      "source": "an arbitrary result object, as returned by the AsyncResultSetExtractor.",
+      "translation": "由 AsyncResultSetExtractor 返回的任意结果对象。",
+      "count": 2
+    },
+    {
+      "source": "the result Map (one entry for each column, using the column name as the key), must not be null.",
+      "translation": "结果 Map（每个列对应一个条目，使用列名作为键）不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "the single mapped object.",
+      "translation": "单个映射对象。",
+      "count": 2
+    },
+    {
+      "source": "Execute a query given static CQL, reading the",
+      "translation": "执行给定静态 CQL 的查询，读取",
+      "count": 1
+    },
+    {
+      "source": "Execute a query for a result",
+      "translation": "执行查询以获取结果。",
+      "count": 1
+    },
+    {
+      "source": ", given static CQL.",
+      "translation": "，给定静态 CQL。",
+      "count": 1
+    },
+    {
+      "source": "s into Spring's",
+      "translation": "转换为 Spring 的",
+      "count": 1
+    },
+    {
+      "source": "Method Details",
+      "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "Execute a CQL data access operation, implemented as callback action working on a CQL",
+      "translation": "执行一个作为回调操作实现的 CQL 数据访问操作，该操作在 CQL 上运行。",
+      "count": 1
+    },
+    {
+      "source": "with a",
+      "translation": "带有",
+      "count": 1
+    },
+    {
+      "source": "on a per-row basis with a",
+      "translation": "按行基础与一个",
+      "count": 1
+    },
+    {
+      "source": "Execute a query given static CQL, mapping each row to a Java object via a",
+      "translation": "执行给定静态 CQL 的查询，通过映射将每一行转换为 Java 对象。",
+      "count": 1
+    },
+    {
+      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult",
+      "translation": "根据提供的 CQL 创建预编译语句，并将参数列表绑定到该查询，以期望获得结果。",
+      "count": 1
+    },
+    {
+      "source": "Execute a query given static CQL, mapping a single result row to a Java object via a",
+      "translation": "根据给定的静态 CQL 执行查询，通过一个将单个结果行映射到 Java 对象的",
       "count": 1
     },
     {
@@ -383,16 +548,6 @@
       "count": 1
     },
     {
-      "source": "Issue an statement using a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> to set bind parameters, with given CQL. Simpler than\nusing a <a href=\"AsyncPreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>AsyncPreparedStatementCreator</code></a> as this method will create the <code>PreparedStatement</code>: The\n<a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> just needs to set parameters.",
-      "translation": "使用带有给定 CQL 的<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>发出语句以设置绑定参数。这比使用<a href=\"AsyncPreparedStatementCreator.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>AsyncPreparedStatementCreator</code></a>更简单，因为此方法会创建<code>PreparedStatement</code>：<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>只需设置参数。",
-      "count": 1
-    },
-    {
-      "source": "Interface specifying a basic set of CQL asynchronously executed operations. Exposes similar methods as\n<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>, but returns result handles or accepts callbacks as opposed to concrete results. Implemented by\n<a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a>. Not often used directly, but a useful option to enhance testability, as it can easily be\nmocked or stubbed.",
-      "translation": "定义了一组基本异步执行 CQL 操作的接口。它提供了与<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>类似的方法，但返回的是结果处理器或接受回调，而不是具体的结果。该接口由<a href=\"AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a>实现。虽然不常直接使用，但它是一个增强可测试性的有用选项，因为它可以轻松地进行模拟或存根处理。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
       "count": 1
@@ -400,11 +555,6 @@
     {
       "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">AsyncCqlOperations</span>",
       "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">AsyncCqlOperations</span>",
-      "count": 1
-    },
-    {
-      "source": "Issue an statement using a <a href=\"PreparedStatementBinder.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementBinder</code></a> to set bind parameters, with given CQL.",
-      "translation": "使用带有给定 CQL 的<a href=\"PreparedStatementBinder.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>PreparedStatementBinder</code></a>发出语句以设置绑定参数。",
       "count": 1
     },
     {
@@ -418,11 +568,6 @@
       "count": 1
     },
     {
-      "source": "Execute a CQL data access operation, implemented as callback action working on a\n<code>CqlSession</code>.",
-      "translation": "执行一个 CQL 数据访问操作，该操作作为回调动作实现，作用于 <code>CqlSession</code>。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
       "count": 1
@@ -430,11 +575,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult Map.",
-      "translation": "根据提供的 CQL 查询语句创建预编译语句，并绑定参数列表以期望返回结果映射。",
       "count": 1
     },
     {
@@ -703,11 +843,6 @@
       "count": 1
     },
     {
-      "source": "Query given CQL to create a prepared statement from CQL and a list of arguments to bind to the query, expecting a\nresult Map. The queryForMap() methods defined by this interface are appropriate when you don't have a domain model.\nOtherwise, consider using one of the queryForObject() methods.",
-      "translation": "给定一个用于从 CQL 创建预编译语句的 CQL 查询以及一组要绑定到该查询的参数列表，期望返回结果 Map。当没有领域模型时，由本接口定义的 queryForMap() 方法非常适用；否则，请考虑使用 queryForObject() 方法之一。",
-      "count": 1
-    },
-    {
       "source": ".\nThis allows for implementing arbitrary data access operations on a single",
       "translation": "这允许在单个上实现任意的数据访问操作。",
       "count": 1
@@ -715,6 +850,81 @@
     {
       "source": ", within\nSpring's managed CQL environment: that is, participating in Spring-managed transactions and converting CQL",
       "translation": "，在 Spring 管理的 CQL 环境中：即参与由 Spring 管理的事务并将 CQL 进行转换。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> that contains a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> per row",
+      "translation": "一个包含每行一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"java.util 中的类或接口\"><code>Map</code></a>的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"java.util 中的类或接口\"><code>List</code></a>",
+      "count": 1
+    },
+    {
+      "source": "the result <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>, containing mapped objects",
+      "translation": "结果为包含已映射对象的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"java.util 中的类或接口\"><code>List</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - if the query does not return exactly one row",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - 当查询未返回恰好一行数据时",
+      "count": 1
+    },
+    {
+      "source": "<code>statement</code> - static CQL <code>Statement</code> to execute, must not be null or empty.",
+      "translation": "<code>statement</code> - 要执行的静态 CQL <code>Statement</code>，不能为 null 或为空。",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - the callback object that specifies the action.",
+      "translation": "<code>action</code> - 指定操作的回调对象。",
+      "count": 1
+    },
+    {
+      "source": "<code>rowMapper</code> - object that will map one object per row",
+      "translation": "<code>rowMapper</code> - 用于将每一行映射为一个对象的对象",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - arguments to bind to the query (leaving it to the PreparedStatement to guess the corresponding CQL\n         type)",
+      "translation": "<code>args</code> - 要绑定到查询的参数（将对应的 CQL 类型交由 PreparedStatement 自行推断）",
+      "count": 1
+    },
+    {
+      "source": "<code>preparedStatementCreator</code> - object that provides CQL and any necessary parameters, must not be null.",
+      "translation": "<code>preparedStatementCreator</code> - 提供 CQL 及任何必要参数的对象，不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, John Blum",
+      "translation": "马克·帕卢赫，约翰·布鲁姆",
+      "count": 1
+    },
+    {
+      "source": "a result object returned by the action, or null",
+      "translation": "action 返回的结果对象，或为 null。",
+      "count": 1
+    },
+    {
+      "source": "the result Map (one entry for each column, using the column name as the key).",
+      "translation": "结果 Map（每个列一个条目，使用列名作为键）。",
+      "count": 1
+    },
+    {
+      "source": "the single mapped object",
+      "translation": "单个映射对象",
+      "count": 1
+    },
+    {
+      "source": "Execute a CQL data access operation, implemented as callback action working on a\n<code>CqlSession</code>. This allows for implementing arbitrary data access operations,\nwithin Spring's managed CQL environment: that is, converting CQL\n<code>DriverException</code>s into Spring's <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> hierarchy.",
+      "translation": "执行一个 CQL 数据访问操作，该操作作为回调动作在 <code>CqlSession</code> 上运行。这允许在 Spring 管理的 CQL 环境中实现任意的数据访问操作：即将 CQL <code>DriverException</code> 转换为 Spring 的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> 层次结构。",
+      "count": 1
+    },
+    {
+      "source": "Execute a CQL data access operation, implemented as callback action working on a CQL <code>PreparedStatement</code>.\nThis allows for implementing arbitrary data access operations on a single Statement, within Spring's managed CQL\nenvironment: that is, participating in Spring-managed transactions and converting CQL\n<code>DriverException</code>s into Spring's <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> hierarchy.",
+      "translation": "执行一个 CQL 数据访问操作，该操作实现为在 CQL <code>PreparedStatement</code> 上运行的回调动作。\n这使得可以在 Spring 管理的 CQL 环境中对单个 Statement 实现任意的数据访问操作：即参与 Spring 管理的事务，并将 CQL\n<code>DriverException</code> 转换为 Spring 的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> 层次结构。",
+      "count": 1
+    },
+    {
+      "source": "Execute a CQL data access operation, implemented as callback action working on a CQL <code>PreparedStatement</code>.\nThis allows for implementing arbitrary data access operations on a single <code>PreparedStatement</code>, within\nSpring's managed CQL environment: that is, participating in Spring-managed transactions and converting CQL\n<code>DriverException</code>s into Spring's <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> hierarchy.",
+      "translation": "执行一个 CQL 数据访问操作，该操作实现为在 CQL <code>PreparedStatement</code> 上工作的回调动作。\n这使得可以在 Spring 管理的 CQL 环境中，针对单个 <code>PreparedStatement</code> 实现任意的数据访问操作：即参与 Spring 管理的事务，并将 CQL <code>DriverException</code> 转换为 Spring 的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> 层次结构。",
       "count": 1
     }
   ]

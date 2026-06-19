@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-06-18 14:16:54",
+  "updated_at": "2026-06-18 14:16:54",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 31,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1923076923076923,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "Creates a <a href=\"ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter</code></a> from the current one and the given\n<a href=\"QueryMethodValueEvaluationContextAccessor.html\" title=\"class in org.springframework.data.repository.query\"><code>QueryMethodValueEvaluationContextAccessor</code></a>.",
+      "translation": "基于当前对象和给定的 <a href=\"QueryMethodValueEvaluationContextAccessor.html\" title=\"类在 org.springframework.data.repository.query 中\"><code>QueryMethodValueEvaluationContextAccessor</code></a>，创建一个 <a href=\"ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter.html\" title=\"类在 org.springframework.data.repository.query 中\"><code>ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new ValueExpressionQueryRewriter using the given <a href=\"../../expression/ValueExpressionParser.html\" title=\"interface in org.springframework.data.expression\"><code>ValueExpressionParser</code></a> and rewrite functions.",
+      "translation": "使用给定的<a href=\"../../expression/ValueExpressionParser.html\" title=\"interface in org.springframework.data.expression\"><code>ValueExpressionParser</code></a>和重写函数创建一个新的 ValueExpressionQueryRewriter。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new EvaluatingValueExpressionQueryRewriter using the given <a href=\"ValueExpressionDelegate.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionDelegate</code></a> and rewrite\nfunctions.",
+      "translation": "使用给定的<a href=\"ValueExpressionDelegate.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionDelegate</code></a>和重写函数创建一个新的 EvaluatingValueExpressionQueryRewriter。",
+      "count": 2
+    },
+    {
+      "source": "<code>parameterNameSource</code> - function to generate parameter names. Typically, a function of the form\n         <code>(index, expression) -&gt; \"__some_placeholder_\" + index</code>.",
+      "translation": "<code>parameterNameSource</code> - 用于生成参数名称的函数。通常形式为 <code>(index, expression) -&gt; \"__some_placeholder_\" + index</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>replacementSource</code> - function to generate replacements. Typically, a concatenation of the prefix and the\n         parameter name such as <code>String::concat</code>.",
+      "translation": "<code>replacementSource</code> - 用于生成替换内容的函数。通常是将前缀与参数名称进行拼接，例如 <code>String::concat</code>。",
+      "count": 2
+    },
+    {
+      "source": "Result of the parse process is a <a href=\"ValueExpressionQueryRewriter.ParsedQuery.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.ParsedQuery</code></a> which provides the transformed query string. Alternatively and\npreferred one may provide a <a href=\"QueryMethodValueEvaluationContextAccessor.html\" title=\"class in org.springframework.data.repository.query\"><code>QueryMethodValueEvaluationContextAccessor</code></a> via\n<a href=\"#withEvaluationContextAccessor(org.springframework.data.repository.query.QueryMethodValueEvaluationContextAccessor)\"><code>withEvaluationContextAccessor(QueryMethodValueEvaluationContextAccessor)</code></a> which will yield the more powerful\n<a href=\"ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter</code></a>.",
+      "translation": "解析过程的结果是一个 <a href=\"ValueExpressionQueryRewriter.ParsedQuery.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.ParsedQuery</code></a>，它提供了转换后的查询字符串。或者，更优选的方式是通过 <a href=\"#withEvaluationContextAccessor(org.springframework.data.repository.query.QueryMethodValueEvaluationContextAccessor)\"><code>withEvaluationContextAccessor(QueryMethodValueEvaluationContextAccessor)</code></a> 提供一个 <a href=\"QueryMethodValueEvaluationContextAccessor.html\" title=\"class in org.springframework.data.repository.query\"><code>QueryMethodValueEvaluationContextAccessor</code></a>，这将生成功能更强大的 <a href=\"ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Typical usage looks like",
+      "translation": "典型用法如下：",
+      "count": 1
+    },
+    {
+      "source": "with prefix being the character ':' or '?'. Parsing honors quoted Strings enclosed in single or double\nquotation marks.",
+      "translation": "前缀为字符':'或'?'。解析过程支持用单引号或双引号括起来的字符串。",
+      "count": 1
+    },
+    {
+      "source": "An extension of <a href=\"ValueExpressionQueryRewriter.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter</code></a> that can create <a href=\"ValueExpressionQueryRewriter.QueryExpressionEvaluator.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.QueryExpressionEvaluator</code></a> instances as\nit also knows about a <a href=\"QueryMethodValueEvaluationContextAccessor.html\" title=\"class in org.springframework.data.repository.query\"><code>QueryMethodValueEvaluationContextAccessor</code></a>.",
+      "translation": "这是<a href=\"ValueExpressionQueryRewriter.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter</code></a>的扩展，能够创建<a href=\"ValueExpressionQueryRewriter.QueryExpressionEvaluator.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.QueryExpressionEvaluator</code></a>实例，因为它还了解<a href=\"QueryMethodValueEvaluationContextAccessor.html\" title=\"class in org.springframework.data.repository.query\"><code>QueryMethodValueEvaluationContextAccessor</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Parses a query string, identifies the contained Value expressions, replaces them with bind parameters and offers a\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> from those bind parameters to the value expression.",
+      "translation": "解析查询字符串，识别其中包含的 Value 表达式，将其替换为绑定参数，并提供一个从这些绑定参数到 Value 表达式的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Evaluates Value expressions as detected by <a href=\"ValueExpressionQueryRewriter.ParsedQuery.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.ParsedQuery</code></a> based on parameter information from a method and\nparameter values from a method call.",
+      "translation": "根据方法中的参数信息和方法调用中的参数值，评估由<a href=\"ValueExpressionQueryRewriter.ParsedQuery.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.ParsedQuery</code></a>检测到的 Value 表达式。",
+      "count": 1
+    },
+    {
+      "source": "Parses the query for <a href=\"../../expression/ValueExpression.html\" title=\"interface in org.springframework.data.expression\"><code>value expressions</code></a> using the\npattern:",
+      "translation": "使用模式解析查询以查找<a href=\"../../expression/ValueExpression.html\" title=\"org.springframework.data.expression 中的接口\"><code>值表达式</code></a>：",
+      "count": 1
+    },
+    {
+      "source": "a ValueExpressionQueryRewriter instance to rewrite queries and extract parsed <a href=\"../../expression/ValueExpression.html\" title=\"interface in org.springframework.data.expression\"><code>ValueExpression</code></a>s.",
+      "translation": "一个 ValueExpressionQueryRewriter 实例，用于重写查询并提取解析后的<a href=\"../../expression/ValueExpression.html\" title=\"org.springframework.data.expression 中的接口\"><code>ValueExpression</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a EvaluatingValueExpressionQueryRewriter instance to rewrite queries and extract parsed\n        <a href=\"../../expression/ValueExpression.html\" title=\"interface in org.springframework.data.expression\"><code>ValueExpression</code></a>s.",
+      "translation": "a 评估 ValueExpressionQueryRewriter 实例以重写查询并提取解析后的<a href=\"../../expression/ValueExpression.html\" title=\"org.springframework.data.expression 中的接口\"><code>ValueExpression</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"ValueExpressionQueryRewriter.ParsedQuery.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.ParsedQuery</code></a> which makes the query with Value Expressions replaced by bind parameters and a map\n        from bind parameter to Value Expression available. Guaranteed to be not null.",
+      "translation": "一个<a href=\"ValueExpressionQueryRewriter.ParsedQuery.html\" title=\"class in org.springframework.data.repository.query\"><code>ValueExpressionQueryRewriter.ParsedQuery</code></a>，其中查询已用绑定参数替换了 Value 表达式，并提供了一个从绑定参数到 Value 表达式的映射。保证不为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>expressionParser</code> - the expression parser to use.",
+      "translation": "<code>expressionParser</code> - 要使用的表达式解析器。",
+      "count": 1
+    },
+    {
+      "source": "<code>delegate</code> - the ValueExpressionDelegate to use for parsing and to obtain EvaluationContextAccessor from.",
+      "translation": "<code>delegate</code> - 用于解析并从中获取 EvaluationContextAccessor 的 ValueExpressionDelegate。",
+      "count": 1
+    },
+    {
+      "source": "<code>query</code> - a query containing Value Expressions in the format described above. Must not be null.",
+      "translation": "<code>query</code> - 包含上述格式中描述的 Value 表达式的查询。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>accessor</code> - must not be null.",
+      "translation": "<code>accessor</code> 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "Jens Schauder, Gerrit Meier, Mark Paluch",
+      "translation": "Jens Schauder，Gerrit Meier，Mark Paluch",
+      "count": 1
+    },
+    {
+      "source": "EvaluatingValueExpressionQueryRewriter instance to rewrite and evaluate Value Expressions.",
+      "translation": "评估 ValueExpressionQueryRewriter 实例以重写和评估值表达式。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "A ValueExpressionQueryRewriter is able to detect Value expressions in a query string and to replace them\nwith bind variables.",
+      "translation": "ValueExpressionQueryRewriter 能够检测查询字符串中的 Value 表达式，并将其替换为绑定变量。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter rewriter = ValueExpressionQueryRewriter\n                .of(valueExpressionParser, (counter, expression) -&gt; String.format(\"__$synthetic$__%d\", counter), String::concat)\n                .withEvaluationContextAccessor(evaluationContextProviderFactory);\n\nValueExpressionQueryRewriter.QueryExpressionEvaluator evaluator = rewriter.parse(query, queryMethod.getParameters());\n\nevaluator.evaluate(objects).forEach(parameterMap::addValue);\n</pre>",
+      "translation": "<pre class=\"code\">ValueExpressionQueryRewriter.EvaluatingValueExpressionQueryRewriter rewriter = ValueExpressionQueryRewriter\n                .of(valueExpressionParser, (counter, expression) -&gt; String.format(\"__$synthetic$__%d\", counter), String::concat)\n                .withEvaluationContextAccessor(evaluationContextProviderFactory);\n\nValueExpressionQueryRewriter.QueryExpressionEvaluator evaluator = rewriter.parse(query, queryMethod.getParameters());\n\nevaluator.evaluate(objects).forEach(parameterMap::addValue);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Parses the query for <a href=\"../../expression/ValueExpression.html\" title=\"interface in org.springframework.data.expression\"><code>value expressions</code></a> using the\npattern:\n\n<pre>&lt;prefix&gt;#{&lt;spel&gt;}\n&lt;prefix&gt;${&lt;property placeholder&gt;}\n</pre>",
+      "translation": "使用模式解析查询以查找<a href=\"../../expression/ValueExpression.html\" title=\"interface in org.springframework.data.expression\"><code>值表达式</code></a>：\n\n<pre>&lt;前缀&gt;#{&lt;spel&gt;}\n&lt;前缀&gt;${&lt;属性占位符&gt;}\n</pre>",
+      "count": 1
+    }
+  ]
+}

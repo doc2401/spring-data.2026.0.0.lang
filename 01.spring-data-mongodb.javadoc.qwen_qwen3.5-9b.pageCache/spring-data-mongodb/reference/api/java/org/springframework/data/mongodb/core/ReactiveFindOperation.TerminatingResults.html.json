@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-06-19 01:09:42",
+  "updated_at": "2026-06-19 01:09:42",
+  "stats": {
+    "total_entries": 21,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 27,
+    "entries_with_hits": 21,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2857142857142858,
+    "usage_percentage": 0.0021
+  },
+  "items": [
+    {
+      "source": "Map the query result to a different type using <a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>QueryResultConverter</code></a>.",
+      "translation": "使用<a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>QueryResultConverter</code></a>将查询结果映射为不同的类型。",
+      "count": 2
+    },
+    {
+      "source": "Return a scroll of elements either starting or resuming at <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/ScrollPosition.html\" title=\"class or interface in org.springframework.data.domain\"><code>ScrollPosition</code></a>.",
+      "translation": "返回一个元素滚动条，其起始位置或恢复位置为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/ScrollPosition.html\" title=\"class or interface in org.springframework.data.domain\"><code>ScrollPosition</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get all matching elements.",
+      "translation": "获取所有匹配的元素。",
+      "count": 2
+    },
+    {
+      "source": "Get the first or no result.",
+      "translation": "获取第一个或无结果。",
+      "count": 2
+    },
+    {
+      "source": "Get exactly zero or one result.",
+      "translation": "获取零个或一个结果。",
+      "count": 2
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a> if no match found. Never null.",
+      "translation": "<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a> 如果没有找到匹配项。绝不返回 null。",
+      "count": 2
+    },
+    {
+      "source": "When using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/KeysetScrollPosition.html\" title=\"class or interface in org.springframework.data.domain\"><code>KeysetScrollPosition</code></a>, make sure to use non-nullable\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>sort properties</code></a> as MongoDB does not support criteria to reconstruct\na query result from absent document fields or null values through <code>$gt/$lt</code> operators.",
+      "translation": "使用<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/KeysetScrollPosition.html\" title=\"class or interface in org.springframework.data.domain\"><code>KeysetScrollPosition</code></a>时，请确保使用非空\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>sort properties</code></a>，因为 MongoDB 不支持通过<code>$gt/$lt</code>操作符根据缺失的文档字段或 null 值来重建查询结果的条件。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Get all matching elements using a <code>tailable cursor</code>. The stream will\nnot be completed unless the <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> is\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>canceled</code></a>. <br/>\nHowever, the stream may become dead, or invalid, if either the query returns no match or the cursor returns the\ndocument at the \"end\" of the collection and then the application deletes that document. <br/>\nA stream that is no longer in use must be <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/Disposable.html#dispose()\" title=\"class or interface in reactor.core\"><code>Disposable.dispose()</code></a> disposed} otherwise the\nstreams will linger and exhaust resources. <br/>\n<strong>NOTE:</strong> Requires a capped collection.",
+      "translation": "使用 <code>tailable cursor</code> 获取所有匹配的元素。除非 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a> 被\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html#cancel()\" title=\"class or interface in org.reactivestreams\"><code>canceled</code></a>，否则流不会完成。<br/>\n然而，如果查询未返回任何匹配项，或者游标返回了集合“末尾”的文档随后应用程序删除了该文档，则流可能会变为无效或死亡。<br/>\n不再使用的流必须调用 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/Disposable.html#dispose()\" title=\"class or interface in reactor.core\"><code>Disposable.dispose()</code></a> 进行释放，否则流将 lingering 并耗尽资源。<br/>\n<strong>NOTE:</strong> 需要 capped collection。",
+      "count": 1
+    },
+    {
+      "source": "Get all matching elements using a <code>tailable cursor</code>.",
+      "translation": "使用 <code>tailable cursor</code> 获取所有匹配的元素。",
+      "count": 1
+    },
+    {
+      "source": "Compose find execution by calling one of the terminating methods.",
+      "translation": "通过调用其中一个终止方法来触发查找执行。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"map(org.springframework.data.mongodb.core.QueryResultConverter)-type-param-R\"><code>R</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the result.</span>",
+      "translation": "<span id=\"map(org.springframework.data.mongodb.core.QueryResultConverter)-type-param-R\"><code>R</code> - 结果的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang中的类或接口\"><code>类型</code></a>。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>converter</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a href=\"QueryResultConverter.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>converter</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ReactiveFindOperation.TerminatingResults.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveFindOperation.TerminatingResults</code></a>.",
+      "translation": "创建了一个新的<a href=\"ReactiveFindOperation.TerminatingResults.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ReactiveFindOperation.TerminatingResults</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - if more than one match found.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - 当找到多个匹配项时。",
+      "count": 1
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> emitting converted objects.",
+      "translation": "发出转换后对象的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>converter</code> - the converter, must not be null.",
+      "translation": "<code>converter</code> - 转换器，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>scrollPosition</code> - the scroll position.",
+      "translation": "<code>scrollPosition</code> - 滚动位置。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl, Juergen Zimmermann",
+      "translation": "Mark Paluch，Christoph Strobl，Juergen Zimmermann",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 1
+    },
+    {
+      "source": "a scroll of the resulting elements.",
+      "translation": "结果元素的滚动条。",
+      "count": 1
+    }
+  ]
+}

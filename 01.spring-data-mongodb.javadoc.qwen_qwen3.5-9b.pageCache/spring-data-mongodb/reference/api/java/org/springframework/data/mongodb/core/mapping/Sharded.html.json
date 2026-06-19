@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-06-19 02:18:54",
+  "updated_at": "2026-06-19 02:18:54",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 18,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 1.125,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "Alias for <a href=\"#shardKey()\"><code>shardKey()</code></a>.",
+      "translation": "`<a href=\"#shardKey()\"><code>shardKey()</code></a>` 的别名。",
+      "count": 2
+    },
+    {
+      "source": "The sharding strategy to use for distributing data across sharded clusters.",
+      "translation": "用于在分片集群中分发数据的分片策略。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"Sharded.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Sharded</code></a> annotation provides meta information about the actual distribution of data. The\n<a href=\"#shardKey()\"><code>shardKey()</code></a> is used to distribute documents across shards. <br/>\nPlease see the <a href=\"https://docs.mongodb.com/manual/sharding/\">MongoDB Documentation</a> for more information\nabout requirements and limitations of sharding.\n<br/>\nSpring Data adds the shard key to filter queries used for\n<code>MongoCollection.replaceOne(org.bson.conversions.Bson, Object)</code> operations triggered by\n<code>save</code> operations on <a href=\"../MongoOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>MongoOperations</code></a> and\n<a href=\"../ReactiveMongoOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveMongoOperations</code></a> as well as <code>update/upsert</code> operations\nreplacing/upserting a single existing document as long as the given\n<a href=\"../query/UpdateDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>UpdateDefinition</code></a> holds a full copy of the entity.\n<br/>\nAll other operations that require the presence of the shard key in the filter query need to provide the\ninformation via the <a href=\"../query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> parameter when invoking the method.",
+      "translation": "<a href=\"Sharded.html\" title=\"org.springframework.data.mongodb.core.mapping 注解接口中的注解接口\"><code>Sharded</code></a> 注解提供了关于数据实际分布的元信息。<a href=\"#shardKey()\"><code>shardKey()</code></a> 用于将文档分发到各个分片。有关分片的限制和要求，请参阅 <a href=\"https://docs.mongodb.com/manual/sharding/\">MongoDB 官方文档</a>。\n<br/>\nSpring Data 会将分片键添加到由 <a href=\"../MongoOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>MongoOperations</code></a> 和 <a href=\"../ReactiveMongoOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ReactiveMongoOperations</code></a> 上的 <code>save</code> 操作触发的 <code>MongoCollection.replaceOne(org.bson.conversions.Bson, Object)</code> 操作所使用的过滤查询中，同时也添加到替换或更新单个现有文档的 <code>update/upsert</code> 操作所使用的过滤查询中，前提是给定的 <a href=\"../query/UpdateDefinition.html\" title=\"org.springframework.data.mongodb.core.query 中的接口\"><code>UpdateDefinition</code></a> 包含实体的完整副本。\n<br/>\n所有其他需要在过滤查询中包含分片键的操作，在调用方法时都需要通过 <a href=\"../query/Query.html\" title=\"org.springframework.data.mongodb.core.query 中的类\"><code>Query</code></a> 参数提供相关信息。",
+      "count": 1
+    },
+    {
+      "source": "The shard key determines the distribution of the collection's documents among the cluster's shards. The shard key\nis either a single or multiple indexed properties that exist in every document in the collection.\n<br/>\nBy default the id property is used for sharding. <br/>\n<strong>NOTE:</strong> Required indexes are not created automatically. Create these either externally, via\n<a href=\"../index/IndexOperations.html#ensureIndex(org.springframework.data.mongodb.core.index.IndexDefinition)\"><code>IndexOperations.ensureIndex(org.springframework.data.mongodb.core.index.IndexDefinition)</code></a>\nor by annotating your domain model with <a href=\"../index/Indexed.html\" title=\"annotation interface in org.springframework.data.mongodb.core.index\"><code>Indexed</code></a>/\n<a href=\"../index/CompoundIndex.html\" title=\"annotation interface in org.springframework.data.mongodb.core.index\"><code>CompoundIndex</code></a> along with enabled\n<a href=\"../../config/MongoConfigurationSupport.html#autoIndexCreation()\"><code>auto index creation</code></a>.",
+      "translation": "分片键决定了集合中的文档在集群的分片之间的分布方式。分片键可以是单个或多个存在于集合中每个文档的索引属性。\n<br/>\n默认情况下，使用 id 属性进行分片。<br/>\n<strong>注意：</strong>不会自动创建必需的索引。请通过外部方式、使用 <a href=\"../index/IndexOperations.html#ensureIndex(org.springframework.data.mongodb.core.index.IndexDefinition)\"><code>IndexOperations.ensureIndex(org.springframework.data.mongodb.core.index.IndexDefinition)</code></a> 或在您的领域模型上添加 <a href=\"../index/Indexed.html\" title=\"annotation interface in org.springframework.data.mongodb.core.index\"><code>Indexed</code></a>/\n<a href=\"../index/CompoundIndex.html\" title=\"annotation interface in org.springframework.data.mongodb.core.index\"><code>CompoundIndex</code></a> 注解并启用 <a href=\"../../config/MongoConfigurationSupport.html#autoIndexCreation()\"><code>自动索引创建</code></a> 来创建这些索引。",
+      "count": 1
+    },
+    {
+      "source": "As of MongoDB 4.2 it is possible to change the shard key using update.",
+      "translation": "从 MongoDB 4.2 版本开始，可以使用 update 命令来修改分片键。",
+      "count": 1
+    },
+    {
+      "source": "The shard key determines the distribution of the collection's documents among the cluster's shards.",
+      "translation": "分片键决定了集合中的文档在集群的分片之间的分布。",
+      "count": 1
+    },
+    {
+      "source": "As of MongoDB 4.2 it is possible to change the shard key using update. Using immutable shard keys avoids server\nround trips to obtain an entities actual shard key from the database.",
+      "translation": "从 MongoDB 4.2 版本开始，可以通过 update 操作修改分片键。使用不可变分片键可以避免向数据库发起服务器往返请求以获取实体的实际分片键。",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/manual/core/sharding-shard-key/#change-a-document-s-shard-key-value\">MongoDB\n     Reference: Change a Document's Shard Key Value</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/manual/core/sharding-shard-key/#change-a-document-s-shard-key-value\">MongoDB 参考：更改文档的分片键值</a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ShardingStrategy.html#RANGE\"><code>ShardingStrategy.RANGE</code></a> by default",
+      "translation": "默认情况下为<a href=\"ShardingStrategy.html#RANGE\"><code>ShardingStrategy.RANGE</code></a>",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "_id by default.",
+      "translation": "默认情况下使用_id。",
+      "count": 1
+    },
+    {
+      "source": "an empty key by default. Which indicates to use the entities id property.",
+      "translation": "默认情况下为空键，表示使用实体的 id 属性。",
+      "count": 1
+    },
+    {
+      "source": "false by default.",
+      "translation": "默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

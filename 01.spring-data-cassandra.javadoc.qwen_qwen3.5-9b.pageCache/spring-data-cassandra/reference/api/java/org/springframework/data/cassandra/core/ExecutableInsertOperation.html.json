@@ -1,40 +1,55 @@
 {
   "created_at": "2026-06-16 16:06:18",
-  "updated_at": "2026-06-16 16:06:18",
+  "updated_at": "2026-06-18 07:40:05",
   "stats": {
-    "total_entries": 25,
+    "total_entries": 31,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 27,
-    "entries_with_hits": 25,
+    "total_hits": 39,
+    "entries_with_hits": 31,
     "entries_without_hits": 0,
-    "hit_rate": 1.08,
-    "usage_percentage": 0.0025
+    "hit_rate": 1.2580645161290323,
+    "usage_percentage": 0.0031000000000000003
   },
   "items": [
     {
       "source": "Begin creating an <code>INSERT</code> operation for given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>domainType</code></a>.",
       "translation": "为给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>domainType</code></a>创建<code>INSERT</code>操作。",
+      "count": 3
+    },
+    {
+      "source": "The table to operate on is by default derived from the initial domainType and can be defined there via\n<a href=\"mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>Table</code></a>. Using <code>inTable</code> allows to override the\ncollection name for the execution.",
+      "translation": "默认情况下，要操作的表是从初始的 domainType 派生而来的，可以通过<a href=\"mapping/Table.html\" title=\"org.springframework.data.cassandra.core.mapping 中的注解接口\"><code>Table</code></a>在此处定义。使用<code>inTable</code>可以覆盖执行时的集合名称。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"ExecutableInsertOperation.ExecutableInsert.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableInsertOperation.ExecutableInsert</code></a> interface provides methods for constructing <code>INSERT</code> operations in a fluent way.",
+      "translation": "`<a href=\"ExecutableInsertOperation.ExecutableInsert.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableInsertOperation.ExecutableInsert</code></a>` 接口提供了以流畅方式构建 `<code>INSERT</code>` 操作的方法。",
+      "count": 2
+    },
+    {
+      "source": "Trigger <code>INSERT</code> execution by calling one of the terminating methods.",
+      "translation": "通过调用终止方法之一来触发 `<code>INSERT</code>` 执行。",
+      "count": 2
+    },
+    {
+      "source": "Table override (optional).",
+      "translation": "表覆盖（可选）。",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "The table to operate on is by default derived from the initial domainType and can be defined there via\n<a href=\"mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>Table</code></a>. Using <code>inTable</code> allows to override the\ncollection name for the execution.",
-      "translation": "默认情况下，要操作的表是从初始的 domainType 派生而来的，可以通过<a href=\"mapping/Table.html\" title=\"org.springframework.data.cassandra.core.mapping 中的注解接口\"><code>Table</code></a>在此处定义。使用<code>inTable</code>可以覆盖执行时的集合名称。",
-      "count": 1
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
-    },
-    {
-      "source": "The <a href=\"ExecutableInsertOperation.ExecutableInsert.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableInsertOperation.ExecutableInsert</code></a> interface provides methods for constructing <code>INSERT</code> operations in a fluent way.",
-      "translation": "`<a href=\"ExecutableInsertOperation.ExecutableInsert.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableInsertOperation.ExecutableInsert</code></a>` 接口提供了以流畅方式构建 `<code>INSERT</code>` 操作的方法。",
       "count": 1
     },
     {
@@ -63,18 +78,8 @@
       "count": 1
     },
     {
-      "source": "Trigger <code>INSERT</code> execution by calling one of the terminating methods.",
-      "translation": "通过调用终止方法之一来触发 `<code>INSERT</code>` 执行。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Table override (optional).",
-      "translation": "表覆盖（可选）。",
       "count": 1
     },
     {
@@ -113,11 +118,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Method Summary",
       "translation": "方法摘要",
       "count": 1
@@ -135,6 +135,36 @@
     {
       "source": "insert operations in a\nfluent API style.",
       "translation": "以流式 API 风格插入操作。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>domainType</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>domainType</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>domainType</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of domain object to insert; must not be null.",
+      "translation": "<code>domainType</code> - 要插入的域对象的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a>；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ExecutableInsertOperation.ExecutableInsert.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableInsertOperation.ExecutableInsert</code></a>.",
+      "translation": "创建<a href=\"ExecutableInsertOperation.ExecutableInsert.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableInsertOperation.ExecutableInsert</code></a>的新实例。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, John Blum",
+      "translation": "马克·帕卢赫，约翰·布鲁姆",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ExecutableInsertOperation.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableInsertOperation</code></a> allows creation and execution of Cassandra <code>INSERT</code> insert operations in a\nfluent API style.",
+      "translation": "<a href=\"ExecutableInsertOperation.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableInsertOperation</code></a> 允许以流式 API 风格创建并执行 Cassandra <code>INSERT</code> 插入操作。",
+      "count": 1
+    },
+    {
+      "source": "<pre>    <code>\n        insert(Jedi.class)\n            .inTable(\"star_wars\")\n            .one(luke);\n    </code>\n</pre>",
+      "translation": "<pre>\n    <code>\n        insert(Jedi.class)\n            .inTable(\"star_wars\")\n            .one(luke);\n    </code>\n</pre>",
       "count": 1
     }
   ]

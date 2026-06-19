@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-06-18 20:03:59",
+  "updated_at": "2026-06-18 20:03:59",
+  "stats": {
+    "total_entries": 6,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 6,
+    "entries_with_hits": 6,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0006000000000000001
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Marker interface for methods with <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Persistent.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Persistent</code></a> annotations indicating the presence of a dedicated keyspace the\nentity should reside in. If present the value will be picked up for resolving the keyspace. The <a href=\"#value()\"><code>value()</code></a>\nattribute supports Value Expressions to dynamically resolve the keyspace based on a per-operation basis.\n\n<pre class=\"code\">@Persistent\n@Retention(RetentionPolicy.RUNTIME)\n@Target({ ElementType.TYPE })\nstatic @interface CacheCentricAnnotation {\n\n        @AliasFor(annotation = KeySpace.class, attribute = \"value\")\n        String cacheRegion() default \"\";\n}\n\n@CacheCentricAnnotation(cacheRegion = \"customers\")\nclass Customer {\n        // ...\n}\n</pre>\n\nCan also be directly used on types to indicate the keyspace.\n\n<pre class=\"code\">@KeySpace(\"persons\")\npublic class Foo {\n\n}\n</pre>",
+      "translation": "标记接口，用于带有 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Persistent.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Persistent</code></a> 注解的方法，表明实体应驻留的专用键空间。如果存在该注解，其值将被用于解析键空间。<a href=\"#value()\"><code>value()</code></a> 属性支持值表达式，可基于每个操作动态解析键空间。\n\n<pre class=\"code\">@Persistent\n@Retention(RetentionPolicy.RUNTIME)\n@Target({ ElementType.TYPE })\nstatic @interface CacheCentricAnnotation {\n\n        @AliasFor(annotation = KeySpace.class, attribute = \"value\")\n        String cacheRegion() default \"\";\n}\n\n@CacheCentricAnnotation(cacheRegion = \"customers\")\nclass Customer {\n        // ...\n}\n</pre>\n\n也可以直接应用于类型以指示键空间。\n\n<pre class=\"code\">@KeySpace(\"persons\")\npublic class Foo {\n\n}\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "dedicated keyspace the entity should reside in.",
+      "translation": "实体应驻留的专用键空间。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

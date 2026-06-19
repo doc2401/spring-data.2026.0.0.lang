@@ -1,40 +1,65 @@
 {
   "created_at": "2026-06-16 16:12:29",
-  "updated_at": "2026-06-16 16:12:29",
+  "updated_at": "2026-06-18 07:40:47",
   "stats": {
-    "total_entries": 29,
+    "total_entries": 41,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 32,
-    "entries_with_hits": 29,
+    "total_hits": 52,
+    "entries_with_hits": 41,
     "entries_without_hits": 0,
-    "hit_rate": 1.103448275862069,
-    "usage_percentage": 0.0029
+    "hit_rate": 1.2682926829268293,
+    "usage_percentage": 0.0041
   },
   "items": [
     {
       "source": "Map a <code>Row</code> that is read from the Cassandra database to a query result.",
       "translation": "将已从 Cassandra 数据库读取的<code>Row</code>映射到查询结果。",
+      "count": 3
+    },
+    {
+      "source": "Returns a function that returns the materialized entity.",
+      "translation": "返回一个用于返回实体化实体的函数。",
+      "count": 3
+    },
+    {
+      "source": "This is a functional interface that allows for mapping a <code>Row</code> to a result type.\n<a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\"><code>row mapping</code></a> can obtain upstream a <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>upstream converter</code></a> to enrich the final result object. This is useful when e.g. wrapping result objects where the\nwrapper needs to obtain information from the actual <code>Row</code>.",
+      "translation": "这是一个功能接口，用于将 `<code>Row` 映射到结果类型。  \n<a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\"><code>row mapping</code></a> 可以获取上游的 <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>upstream converter</code></a>，以丰富最终结果对象。这在需要包装结果对象且包装器需要从实际的 `<code>Row` 中获取信息时非常有用。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "A supplier that converts a <code>Row</code> into <code>T</code>.",
+      "translation": "将<code>Row</code>转换为<T>的供应商。",
+      "count": 2
+    },
+    {
+      "source": "Returns a composed function that first applies this function to its input, and then applies the <code>after</code>\nfunction to the result.",
+      "translation": "返回一个组合函数，该函数首先将输入应用到此函数上，然后将结果应用于<code>after</code>函数。",
+      "count": 2
+    },
+    {
+      "source": "Returns a composed function that first applies this function to its input, and then applies the <code>after</code>\nfunction to the result. If evaluation of either function throws an exception, it is relayed to the caller of the\ncomposed function.",
+      "translation": "返回一个组合函数，该函数首先将输入传递给此函数，然后将结果传递给 `<code>after</code>` 函数。如果任一函数的求值抛出异常，则该异常会传递给组合函数的调用者。",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 2
+    },
+    {
+      "source": "Converter for Cassandra query results.",
+      "translation": "Cassandra 查询结果转换器。",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "Returns a function that returns the materialized entity.",
-      "translation": "返回一个用于返回实体化实体的函数。",
-      "count": 2
-    },
-    {
-      "source": "This is a functional interface that allows for mapping a <code>Row</code> to a result type.\n<a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\"><code>row mapping</code></a> can obtain upstream a <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>upstream converter</code></a> to enrich the final result object. This is useful when e.g. wrapping result objects where the\nwrapper needs to obtain information from the actual <code>Row</code>.",
-      "translation": "这是一个功能接口，用于将 `<code>Row` 映射到结果类型。  \n<a href=\"#mapRow(com.datastax.oss.driver.api.core.cql.Row,org.springframework.data.cassandra.core.QueryResultConverter.ConversionResultSupplier)\"><code>row mapping</code></a> 可以获取上游的 <a href=\"QueryResultConverter.ConversionResultSupplier.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>upstream converter</code></a>，以丰富最终结果对象。这在需要包装结果对象且包装器需要从实际的 `<code>Row` 中获取信息时非常有用。",
-      "count": 1
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
       "count": 1
     },
     {
@@ -63,11 +88,6 @@
       "count": 1
     },
     {
-      "source": "A supplier that converts a <code>Row</code> into <code>T</code>.",
-      "translation": "将<code>Row</code>转换为<T>的供应商。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
@@ -75,16 +95,6 @@
     {
       "source": "<span>Nested Classes</span>",
       "translation": "<span>嵌套类</span>",
-      "count": 1
-    },
-    {
-      "source": "Returns a composed function that first applies this function to its input, and then applies the <code>after</code>\nfunction to the result.",
-      "translation": "返回一个组合函数，该函数首先将输入应用到此函数上，然后将结果应用于<code>after</code>函数。",
-      "count": 1
-    },
-    {
-      "source": "Returns a composed function that first applies this function to its input, and then applies the <code>after</code>\nfunction to the result. If evaluation of either function throws an exception, it is relayed to the caller of the\ncomposed function.",
-      "translation": "返回一个组合函数，该函数首先将输入传递给此函数，然后将结果传递给 `<code>after</code>` 函数。如果任一函数的求值抛出异常，则该异常会传递给组合函数的调用者。",
       "count": 1
     },
     {
@@ -138,11 +148,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Method Summary",
       "translation": "方法摘要",
       "count": 1
@@ -153,8 +158,63 @@
       "count": 1
     },
     {
-      "source": "Converter for Cassandra query results.",
-      "translation": "Cassandra 查询结果转换器。",
+      "source": "<span id=\"andThen(org.springframework.data.cassandra.core.QueryResultConverter)-type-param-V\"><code>V</code> - the type of output of the <code>after</code> function, and of the composed function.</span>",
+      "translation": "<span id=\"andThen(org.springframework.data.cassandra.core.QueryResultConverter)-type-param-V\"><code>V</code> - 函数<code>after</code>的输出类型，以及组合函数的类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-T\"><code>T</code> - object type accepted by this converter.</span>",
+      "translation": "<span id=\"type-param-T\"><code>T</code> - 此转换器接受的对象类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-R\"><code>R</code> - the returned result type.</span>",
+      "translation": "<span id=\"type-param-R\"><code>R</code> - 返回结果类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"entity()-type-param-T\"><code>T</code> - the type of the input and output entity to the function.</span>",
+      "translation": "<span id=\"entity()-type-param-T\"><code>T</code> - 函数输入和输出实体的类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>row</code> - the raw row from the Cassandra result.",
+      "translation": "<code>row</code> - 来自 Cassandra 结果的原始行。",
+      "count": 1
+    },
+    {
+      "source": "<code>reader</code> - reader object that supplies an upstream result from an earlier converter.",
+      "translation": "<code>reader</code> - 提供来自早期转换器上游结果的读取器对象。",
+      "count": 1
+    },
+    {
+      "source": "<code>after</code> - the function to apply after this function is applied.",
+      "translation": "`after` - 在此函数应用后应用的函数。",
+      "count": 1
+    },
+    {
+      "source": "a composed function that first applies this function and then applies the <code>after</code> function.",
+      "translation": "一个组合函数，它首先应用此函数，然后应用 `<code>after</code>` 函数。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "a function that returns the materialized entity.",
+      "translation": "一个返回实体化实体的函数。",
+      "count": 1
+    },
+    {
+      "source": "the mapped result.",
+      "translation": "映射结果。",
       "count": 1
     }
   ]

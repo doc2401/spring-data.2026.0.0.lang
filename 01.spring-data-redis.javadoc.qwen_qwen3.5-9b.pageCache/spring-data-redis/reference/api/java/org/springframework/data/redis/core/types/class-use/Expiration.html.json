@@ -1,0 +1,366 @@
+{
+  "created_at": "2026-06-19 09:38:58",
+  "updated_at": "2026-06-19 09:38:58",
+  "stats": {
+    "total_entries": 70,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 87,
+    "entries_with_hits": 70,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2428571428571429,
+    "usage_percentage": 0.006999999999999999
+  },
+  "items": [
+    {
+      "source": "Return the value at <code>key</code> and expire the key by applying <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>.",
+      "translation": "返回 `<code>key</code>` 的值，并通过应用<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>使该键过期。",
+      "count": 3
+    },
+    {
+      "source": "Set the <code>value</code> and <code>expiration</code> for <code>key</code>.",
+      "translation": "为<code>key</code>设置<code>value</code>和<code>expiration</code>。",
+      "count": 3
+    },
+    {
+      "source": "in favor of <a href=\"../../../connection/RedisCommandsProvider.html#hashCommands()\"><code>RedisCommandsProvider.hashCommands()</code></a>}.",
+      "translation": "支持<a href=\"../../../connection/RedisCommandsProvider.html#hashCommands()\"><code>RedisCommandsProvider.hashCommands()</code></a>}。",
+      "count": 3
+    },
+    {
+      "source": "in favor of <a href=\"../../../connection/RedisCommandsProvider.html#stringCommands()\"><code>RedisCommandsProvider.stringCommands()</code></a>}.",
+      "translation": "支持<a href=\"../../../connection/RedisCommandsProvider.html#stringCommands()\"><code>RedisCommandsProvider.stringCommands()</code></a>}。",
+      "count": 3
+    },
+    {
+      "source": "Set <code>value</code> for <code>key</code> applying timeouts from <code>expiration</code> if set and inserting/updating values\ndepending on <code>condition</code>.",
+      "translation": "为<code>key</code>设置<code>value</code>，若已设置则应用来自<code>expiration</code>的超时时间，并根据<code>condition</code>插入或更新值。",
+      "count": 2
+    },
+    {
+      "source": "Create <code>key</code> using the <code>serializedValue</code>, previously obtained using <a href=\"../../RedisOperations.html#dump(K)\"><code>RedisOperations.dump(Object)</code></a>.",
+      "translation": "使用之前通过<a href=\"../../RedisOperations.html#dump(K)\"><code>RedisOperations.dump(Object)</code></a>获取的<code>serializedValue</code>创建<code>key</code>。",
+      "count": 2
+    },
+    {
+      "source": "Get the value of one or more <code>fields</code> from hash at <code>key</code> and optionally set expiration time or\ntime-to-live (TTL) for given <code>fields</code>.",
+      "translation": "从哈希的<code>key</code>中获取一个或多个<code>fields</code>的值，并可选地为给定的<code>fields</code>设置过期时间或生存时间（TTL）。",
+      "count": 2
+    },
+    {
+      "source": "since 4.1 in favor of <a href=\"../../../connection/RedisStringCommands.html#set(byte%5B%5D,byte%5B%5D,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>RedisStringCommands.set(byte[], byte[], SetCondition, Expiration)</code></a>.",
+      "translation": "自 4.1 起，改为使用 <a href=\"../../../connection/RedisStringCommands.html#set(byte%5B%5D,byte%5B%5D,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>RedisStringCommands.set(byte[], byte[], SetCondition, Expiration)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set key value pair and <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>.",
+      "translation": "设置键值对和<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Get and optionally expire the value for given <code>hashKeys</code> from hash at <code>key</code>.",
+      "translation": "获取并可选地使给定 `<code>hashKeys</code>` 在哈希表 `<code>key</code>` 中的值过期。",
+      "count": 2
+    },
+    {
+      "source": "Set the expiration for given <code>key</code>.",
+      "translation": "为给定的<code>key</code>设置过期时间。",
+      "count": 2
+    },
+    {
+      "source": "Set multiple hash fields to multiple values using data provided in <code>m</code> with optional condition and\nexpiration.",
+      "translation": "使用 `<code>m` 中提供的数据，为多个哈希字段设置多个值，并可选择性地指定条件和过期时间。",
+      "count": 2
+    },
+    {
+      "source": "Set field-value pairs in hash at key with optional condition and expiration.",
+      "translation": "在哈希表中以指定键设置字段值对，并可选地设置条件和过期时间。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../../../connection/ReactiveKeyCommands.ExpireCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveKeyCommands.ExpireCommand</code></a> given a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>key</code></a> and <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>.",
+      "translation": "创建一个新的<a href=\"../../../connection/ReactiveKeyCommands.ExpireCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveKeyCommands.ExpireCommand</code></a>，该命令基于一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html\" title=\"class or interface in java.nio\"><code>key</code></a>和一个<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Set value with <a href=\"../../../connection/SetCondition.html\" title=\"class in org.springframework.data.redis.connection\"><code>SetCondition</code></a> and <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> for <code>key</code>.",
+      "translation": "使用<a href=\"../../../connection/SetCondition.html\" title=\"class in org.springframework.data.redis.connection\"><code>SetCondition</code></a>和<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>为<code>key</code>设置值。",
+      "count": 1
+    },
+    {
+      "source": "Set <code>value</code> for <code>key</code> applying timeouts from <code>expiration</code> if set and inserting/updating values\ndepending on <code>option</code>.",
+      "translation": "为<code>key</code>设置<code>value</code>，若已设置则应用来自<code>expiration</code>的超时时间，并根据<code>option</code>插入或更新值。",
+      "count": 1
+    },
+    {
+      "source": "Apply <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> to the bound hash key/hash fields given <a href=\"../../../connection/ExpirationOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>expiration options</code></a>.",
+      "translation": "在给定<a href=\"../../../connection/ExpirationOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>过期选项</code></a>的情况下，将<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>应用于绑定的哈希键或哈希字段。",
+      "count": 1
+    },
+    {
+      "source": "Apply <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> to the bound key given <a href=\"../../../connection/ExpirationOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>expiration options</code></a>.",
+      "translation": "将<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>应用于绑定键，并给定<a href=\"../../../connection/ExpirationOptions.html\" title=\"class in org.springframework.data.redis.connection\"><code>过期选项</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Set <code>key</code> to hold the string <code>value</code> and <code>expiration</code> if <code>key</code> is absent.",
+      "translation": "将<code>key</code>设置为字符串<code>value</code>，如果<code>key</code>不存在，则同时设置<code>expiration</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set the <code>value</code> and <code>expiration</code> for <code>key</code> if <code>key</code> is absent.",
+      "translation": "如果<code>key</code>不存在，则为其设置<code>value</code>和<code>expiration</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set the <code>value</code> and <code>expiration</code> for <code>key</code> if <code>key</code> is present.",
+      "translation": "如果存在<code>key</code>，则为其设置<code>value</code>和<code>expiration</code>。",
+      "count": 1
+    },
+    {
+      "source": "Creates new <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> with the provided <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>.",
+      "translation": "创建新的<a href=\"../Expiration.html\" title=\"org.springframework.data.redis.core.types 包中的类\"><code>Expiration</code></a>，使用提供的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"java.util.concurrent 包中的类或接口\"><code>TimeUnit</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> with the given, required <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>Duration</code></a>.",
+      "translation": "创建一个使用给定的必需<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"类或接口在 java.time\"><code>Duration</code></a>构建的新<a href=\"../Expiration.html\" title=\"org.springframework.data.redis.core.types 中的类\"><code>Expiration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> in <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html#MILLISECONDS\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit.MILLISECONDS</code></a>.",
+      "translation": "创建一个新的 <a href=\"../Expiration.html\" title=\"org.springframework.data.redis.core.types 包中的类\"><code>Expiration</code></a>，单位为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html#MILLISECONDS\" title=\"java.util.concurrent 包中的类或接口\"><code>TimeUnit.MILLISECONDS</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> in <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html#SECONDS\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit.SECONDS</code></a>.",
+      "translation": "创建一个 <a href=\"../Expiration.html\" title=\"org.springframework.data.redis.core.types 包中的类\"><code>Expiration</code></a>，单位为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html#SECONDS\" title=\"java.util.concurrent 包中的类或接口\"><code>TimeUnit.SECONDS</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> with the given unix timestamp and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>.",
+      "translation": "创建一个带有给定 Unix 时间戳和<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>的新<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Set <code>key</code> to hold the string <code>value</code> if <code>key</code> is present.",
+      "translation": "如果存在<code>key</code>，则将其设置为字符串<code>value</code>。",
+      "count": 1
+    },
+    {
+      "source": "Obtain an <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> that indicates to keep the existing one, e.g. when sending a <code>SET</code> command.",
+      "translation": "获取一个<a href=\"../Expiration.html\" title=\"org.springframework.data.redis.core.types 中的类\"><code>Expiration</code></a>，表示保留现有的过期时间，例如在发送<code>SET</code>命令时。",
+      "count": 1
+    },
+    {
+      "source": "since 4.1 in favor of <a href=\"../../../connection/ReactiveStringCommands.html#set(java.nio.ByteBuffer,java.nio.ByteBuffer,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>ReactiveStringCommands.set(ByteBuffer, ByteBuffer, SetCondition, Expiration)</code></a>.",
+      "translation": "自 4.1 版本起，改为使用 <a href=\"../../../connection/ReactiveStringCommands.html#set(java.nio.ByteBuffer,java.nio.ByteBuffer,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>ReactiveStringCommands.set(ByteBuffer, ByteBuffer, SetCondition, Expiration)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "since 4.1 in favor of <a href=\"../../../connection/StringRedisConnection.html#set(java.lang.String,java.lang.String,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>StringRedisConnection.set(String, String, SetCondition, Expiration)</code></a>.",
+      "translation": "自 4.1 版本起，改为使用 <a href=\"../../../connection/StringRedisConnection.html#set(java.lang.String,java.lang.String,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>StringRedisConnection.set(String, String, SetCondition, Expiration)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "since 4.1 in favor of <a href=\"../../../connection/ReactiveStringCommands.html#setGet(java.nio.ByteBuffer,java.nio.ByteBuffer,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>ReactiveStringCommands.setGet(ByteBuffer, ByteBuffer, SetCondition, Expiration)</code></a>.",
+      "translation": "自 4.1 版本起，改为使用 <a href=\"../../../connection/ReactiveStringCommands.html#setGet(java.nio.ByteBuffer,java.nio.ByteBuffer,org.springframework.data.redis.connection.SetCondition,org.springframework.data.redis.core.types.Expiration)\"><code>ReactiveStringCommands.setGet(ByteBuffer, ByteBuffer, SetCondition, Expiration)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Get the <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> to apply.",
+      "translation": "获取<a href=\"../Expiration.html\" title=\"org.springframework.data.redis.core.types 中的类\"><code>Expiration</code></a>以应用。",
+      "count": 1
+    },
+    {
+      "source": "Apply a given <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> to the given fields.",
+      "translation": "将给定的<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>应用于给定字段。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../../../connection/ReactiveHashCommands.HashExpireCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveHashCommands.HashExpireCommand</code></a>.",
+      "translation": "创建一个新的<a href=\"../../../connection/ReactiveHashCommands.HashExpireCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveHashCommands.HashExpireCommand</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../../../connection/ReactiveHashCommands.HGetExCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveHashCommands.HGetExCommand</code></a>.",
+      "translation": "创建一个新的<a href=\"../../../connection/ReactiveHashCommands.HGetExCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveHashCommands.HGetExCommand</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"../../../connection/ReactiveHashCommands.HSetExCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveHashCommands.HSetExCommand</code></a> for setting field-value pairs with condition and expiration.",
+      "translation": "创建一个用于设置带条件和过期时间的字段 - 值对的 <a href=\"../../../connection/ReactiveHashCommands.HSetExCommand.html\" title=\"class in org.springframework.data.redis.connection\"><code>ReactiveHashCommands.HSetExCommand</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Apply <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> to the bound hash key/hash fields without any additional constraints.",
+      "translation": "将<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>应用于绑定哈希键/哈希字段，无需任何额外约束。",
+      "count": 1
+    },
+    {
+      "source": "Apply <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a> to the bound key without any additional constraints.",
+      "translation": "将<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>应用于绑定键，无需任何额外约束。",
+      "count": 1
+    },
+    {
+      "source": "Return the value at <code>key</code> and expire the key by applying <code>expiration</code>.",
+      "translation": "返回 `<code>key`</code> 的值，并通过应用 `<code>expiration`</code> 使该键过期。",
+      "count": 1
+    },
+    {
+      "source": "Set <code>value</code> and <code>expiration</code> for the bound key.",
+      "translation": "为绑定键设置<code>value</code>和<code>expiration</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set the <code>value</code> and <code>expiration</code> for the bound key.",
+      "translation": "为绑定键设置 `<code>value</code>` 和 `<code>expiration</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Set the bound key to hold the string <code>value</code> and <code>expiration</code> if the bound key is absent.",
+      "translation": "如果绑定键不存在，则将其设置为持有字符串<code>value</code>和<code>expiration</code>。",
+      "count": 1
+    },
+    {
+      "source": "Set the bound key to hold the string <code>value</code> and <code>expiration</code> if the bound key is present.",
+      "translation": "如果存在绑定键，则将其设置为持有字符串<code>value</code>和<code>expiration</code>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new persistent, non-expiring <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>.",
+      "translation": "创建一个持久的、永不过期的<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expiration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Connection package for <a href=\"https://lettuce.io\">Lettuce</a> Redis client.",
+      "translation": "用于 <a href=\"https://lettuce.io\">Lettuce</a> Redis 客户端的连接包。",
+      "count": 1
+    },
+    {
+      "source": "Core package for integrating <a href=\"https://redis.io\">Redis</a> with Spring concepts.",
+      "translation": "用于将 Redis 与 Spring 概念集成的核心包。",
+      "count": 1
+    },
+    {
+      "source": "Small toolkit mirroring the <code>java.util.atomic</code> package in Redis.",
+      "translation": "一个小型工具包，在 Redis 中镜像了 `java.util.concurrent.atomic` 包的功能。",
+      "count": 1
+    },
+    {
+      "source": "Package providing implementations for most of the <code>java.util</code> collections on top of Redis.",
+      "translation": "提供在 Redis 之上实现大多数 `java.util` 集合的包。",
+      "count": 1
+    },
+    {
+      "source": "Apply the expiration for given <code>hashKeys</code>.",
+      "translation": "对给定的<code>hashKeys</code>应用过期时间。",
+      "count": 1
+    },
+    {
+      "source": "Set time to live for given <code>key</code>.",
+      "translation": "为给定的 `<code>key</code>` 设置生存时间。",
+      "count": 1
+    },
+    {
+      "source": "Get and optionally expire the value for given <code>hashFields</code> from the hash at the bound key.",
+      "translation": "从绑定键的哈希中获取并可选地使给定 `<code>hashFields</code>` 的值过期。",
+      "count": 1
+    },
+    {
+      "source": "Return the value at the bound key and expire the key by applying <code>expiration</code>.",
+      "translation": "返回绑定键的值，并通过应用<code>expiration</code>使该键过期。",
+      "count": 1
+    },
+    {
+      "source": "Set the value of one or more fields using data provided in <code>m</code> at the bound key, and optionally set their\nexpiration time or time-to-live (TTL).",
+      "translation": "使用绑定键中提供的 `<code>m</code>` 数据来设置一个或多个字段的值，并可选地设置其过期时间或生存时间（TTL）。",
+      "count": 1
+    },
+    {
+      "source": "since 4.1.",
+      "translation": "自 4.1 版本以来。",
+      "count": 1
+    },
+    {
+      "source": "Connection package providing low-level abstractions for interacting with the various Redis 'drivers'/libraries.",
+      "translation": "提供低级抽象的连接器包，用于与各种 Redis“驱动程序”/库进行交互。",
+      "count": 1
+    },
+    {
+      "source": "Redis domain specific types.",
+      "translation": "Redis 专用数据类型。",
+      "count": 1
+    },
+    {
+      "source": "Get the value of one or more fields from hash at key and optionally set expiration time or\ntime-to-live (TTL) for given fields.",
+      "translation": "从哈希表中指定键获取一个或多个字段的值，并可选择地为给定字段设置过期时间或生存时间（TTL）。",
+      "count": 1
+    },
+    {
+      "source": "Set field-value pairs in hash at key with condition and expiration.",
+      "translation": "在哈希表中按指定键设置带条件和过期时间的字段值对。",
+      "count": 1
+    },
+    {
+      "source": "Set value for key with expiration and options.",
+      "translation": "为键设置带过期时间和选项的值。",
+      "count": 1
+    },
+    {
+      "source": "Set the key with the given expiration.",
+      "translation": "设置具有给定过期时间的密钥。",
+      "count": 1
+    },
+    {
+      "source": "Sets the key time-to-live/expiration.",
+      "translation": "设置键的生存时间（TTL）或过期时间。",
+      "count": 1
+    },
+    {
+      "source": "Set time to live for given hashKeys stored within key.",
+      "translation": "为存储在 key 中的给定 hashKeys 设置生存时间。",
+      "count": 1
+    },
+    {
+      "source": "Executes the Redis restore command.",
+      "translation": "执行 Redis 的 restore 命令。",
+      "count": 1
+    },
+    {
+      "source": "Uses of <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> in <a href=\"../../../connection/package-summary.html\">org.springframework.data.redis.connection</a>",
+      "translation": "<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> 在 <a href=\"../../../connection/package-summary.html\">org.springframework.data.redis.connection</a> 中的用途",
+      "count": 1
+    },
+    {
+      "source": "Uses of <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> in <a href=\"../../../connection/lettuce/package-summary.html\">org.springframework.data.redis.connection.lettuce</a>",
+      "translation": "<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> 在 <a href=\"../../../connection/lettuce/package-summary.html\">org.springframework.data.redis.connection.lettuce</a> 中的用途",
+      "count": 1
+    },
+    {
+      "source": "Uses of <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> in <a href=\"../../package-summary.html\">org.springframework.data.redis.core</a>",
+      "translation": "<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> 在 <a href=\"../../package-summary.html\">org.springframework.data.redis.core</a> 中的用途",
+      "count": 1
+    },
+    {
+      "source": "Uses of <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> in <a href=\"../package-summary.html\">org.springframework.data.redis.core.types</a>",
+      "translation": "<a href=\"../Expiration.html\" title=\"类 org.springframework.data.redis.core.types.Expiration\">Expiration</a> 在 <a href=\"../package-summary.html\">org.springframework.data.redis.core.types</a> 包中的用途",
+      "count": 1
+    },
+    {
+      "source": "Uses of <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> in <a href=\"../../../support/atomic/package-summary.html\">org.springframework.data.redis.support.atomic</a>",
+      "translation": "<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> 在 <a href=\"../../../support/atomic/package-summary.html\">org.springframework.data.redis.support.atomic</a> 中的用途",
+      "count": 1
+    },
+    {
+      "source": "Uses of <a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> in <a href=\"../../../support/collections/package-summary.html\">org.springframework.data.redis.support.collections</a>",
+      "translation": "<a href=\"../Expiration.html\" title=\"class in org.springframework.data.redis.core.types\">Expiration</a> 在 <a href=\"../../../support/collections/package-summary.html\">org.springframework.data.redis.support.collections</a> 中的用途",
+      "count": 1
+    }
+  ]
+}

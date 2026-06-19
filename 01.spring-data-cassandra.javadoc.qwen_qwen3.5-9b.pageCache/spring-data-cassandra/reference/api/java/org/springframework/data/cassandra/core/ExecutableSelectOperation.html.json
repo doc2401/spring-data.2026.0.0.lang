@@ -1,60 +1,110 @@
 {
   "created_at": "2026-06-16 16:07:25",
-  "updated_at": "2026-06-16 16:07:25",
+  "updated_at": "2026-06-18 07:40:14",
   "stats": {
-    "total_entries": 37,
+    "total_entries": 49,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 39,
-    "entries_with_hits": 37,
+    "total_hits": 68,
+    "entries_with_hits": 49,
     "entries_without_hits": 0,
-    "hit_rate": 1.054054054054054,
-    "usage_percentage": 0.0036999999999999997
+    "hit_rate": 1.3877551020408163,
+    "usage_percentage": 0.0049
   },
   "items": [
     {
       "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>domainType</code></a>.",
       "translation": "为给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>domainType</code></a>创建 Cassandra <code>SELECT</code> 查询操作。",
+      "count": 3
+    },
+    {
+      "source": "The starting domainType is used for mapping the <a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a> provided via <code>matching</code> into the\nCassandra-specific representation. By default, the originating domainType is also used for mapping back\nthe result from the <code>Row</code>. However, it is possible to define an different\nreturnType via <code>as</code> for mapping the result.",
+      "translation": "起始的 `domainType` 用于将通过 `<a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a>`（通过 `matching` 提供）映射到 Cassandra 特定的表示形式。默认情况下，也使用源 `domainType` 将结果从 `<code>Row</code>` 映射回来。但是，可以通过 `<code>as</code>` 定义不同的 `returnType` 来映射结果。",
+      "count": 2
+    },
+    {
+      "source": "By default, the table to operate on is derived from the initial domainType and can be defined there with\nthe <a href=\"mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>Table</code></a> annotation as well. Using <code>inTable</code> allows a\nuser to override the table name for the execution.",
+      "translation": "默认情况下，要操作的表是从初始的 domainType 派生的，并且可以通过<a href=\"mapping/Table.html\" title=\"org.springframework.data.cassandra.core.mapping 中的注解接口\"><code>Table</code></a>注解在此处定义。使用<code>inTable</code>允许用户覆盖执行时的表名。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>cql</code>. The given <code>cql</code> must be\na <code>SELECT</code> query.",
+      "translation": "为给定的<cql>创建Cassandra<code>SELECT</code>查询操作。该<cql>必须是一个<code>SELECT</code>查询。",
+      "count": 2
+    },
+    {
+      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>Statement</code>. The given\n<code>Statement</code> must be a <code>SELECT</code> query.",
+      "translation": "为给定的 <code>Statement</code> 开始创建 Cassandra <code>SELECT</code> 查询操作。该给定的 <code>Statement</code> 必须是一个 <code>SELECT</code> 查询。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"ExecutableSelectOperation.ExecutableSelect.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableSelectOperation.ExecutableSelect</code></a> interface provides methods for constructing <code>SELECT</code> query operations in a\nfluent way.",
+      "translation": "`<a href=\"ExecutableSelectOperation.ExecutableSelect.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableSelectOperation.ExecutableSelect</code></a>` 接口提供了以流畅方式构建 `<code>SELECT</code>` 查询操作的方法。",
+      "count": 2
+    },
+    {
+      "source": "Define a <a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a> used as the filter for the <code>SELECT</code>.",
+      "translation": "定义一个用作 <code>SELECT</code> 过滤器的<a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>Statement</code>.",
+      "translation": "为给定的 `Statement` 开始创建 Cassandra 的 `<code>SELECT</code>` 查询操作。",
+      "count": 2
+    },
+    {
+      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>cql</code>.",
+      "translation": "为给定的 `<cql>` 创建 Cassandra `<code>SELECT` 查询操作。",
+      "count": 2
+    },
+    {
+      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods returning result projections for\ncount and exists projections.",
+      "translation": "通过调用返回计数和存在投影的终止方法之一，触发 `<code>SELECT</code>` 查询的执行。",
+      "count": 2
+    },
+    {
+      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods and return mapped results.",
+      "translation": "通过调用终止方法之一来触发 `<code>SELECT</code>` 查询的执行，并返回映射后的结果。",
+      "count": 2
+    },
+    {
+      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods.",
+      "translation": "通过调用终止方法之一来触发 `<code>SELECT</code>` 查询的执行。",
+      "count": 2
+    },
+    {
+      "source": "Result type override (optional).",
+      "translation": "结果类型覆盖（可选）。",
+      "count": 2
+    },
+    {
+      "source": "Table override (optional).",
+      "translation": "表覆盖（可选）。",
+      "count": 2
+    },
+    {
+      "source": "Select query that is not yet associated with a result type.",
+      "translation": "尚未关联结果类型的查询。",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 2
+    },
+    {
+      "source": "new instance of <a href=\"ExecutableSelectOperation.UntypedSelect.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableSelectOperation.UntypedSelect</code></a>.",
+      "translation": "创建了一个新的<a href=\"ExecutableSelectOperation.UntypedSelect.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableSelectOperation.UntypedSelect</code></a>实例。",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "The starting domainType is used for mapping the <a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a> provided via <code>matching</code> into the\nCassandra-specific representation. By default, the originating domainType is also used for mapping back\nthe result from the <code>Row</code>. However, it is possible to define an different\nreturnType via <code>as</code> for mapping the result.",
-      "translation": "起始的 `domainType` 用于将通过 `<a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a>`（通过 `matching` 提供）映射到 Cassandra 特定的表示形式。默认情况下，也使用源 `domainType` 将结果从 `<code>Row</code>` 映射回来。但是，可以通过 `<code>as</code>` 定义不同的 `returnType` 来映射结果。",
-      "count": 1
-    },
-    {
-      "source": "By default, the table to operate on is derived from the initial domainType and can be defined there with\nthe <a href=\"mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>Table</code></a> annotation as well. Using <code>inTable</code> allows a\nuser to override the table name for the execution.",
-      "translation": "默认情况下，要操作的表是从初始的 domainType 派生的，并且可以通过<a href=\"mapping/Table.html\" title=\"org.springframework.data.cassandra.core.mapping 中的注解接口\"><code>Table</code></a>注解在此处定义。使用<code>inTable</code>允许用户覆盖执行时的表名。",
-      "count": 1
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
-    },
-    {
-      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>cql</code>. The given <code>cql</code> must be\na <code>SELECT</code> query.",
-      "translation": "为给定的<cql>创建Cassandra<code>SELECT</code>查询操作。该<cql>必须是一个<code>SELECT</code>查询。",
-      "count": 1
-    },
-    {
-      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>Statement</code>. The given\n<code>Statement</code> must be a <code>SELECT</code> query.",
-      "translation": "为给定的 <code>Statement</code> 开始创建 Cassandra <code>SELECT</code> 查询操作。该给定的 <code>Statement</code> 必须是一个 <code>SELECT</code> 查询。",
-      "count": 1
-    },
-    {
-      "source": "The <a href=\"ExecutableSelectOperation.ExecutableSelect.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableSelectOperation.ExecutableSelect</code></a> interface provides methods for constructing <code>SELECT</code> query operations in a\nfluent way.",
-      "translation": "`<a href=\"ExecutableSelectOperation.ExecutableSelect.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableSelectOperation.ExecutableSelect</code></a>` 接口提供了以流畅方式构建 `<code>SELECT</code>` 查询操作的方法。",
-      "count": 1
-    },
-    {
-      "source": "Define a <a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a> used as the filter for the <code>SELECT</code>.",
-      "translation": "定义一个用作 <code>SELECT</code> 过滤器的<a href=\"query/Query.html\" title=\"class in org.springframework.data.cassandra.core.query\"><code>Query</code></a>。",
       "count": 1
     },
     {
@@ -65,16 +115,6 @@
     {
       "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ExecutableSelectOperation</span>",
       "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ExecutableSelectOperation</span>",
-      "count": 1
-    },
-    {
-      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>Statement</code>.",
-      "translation": "为给定的 `Statement` 开始创建 Cassandra 的 `<code>SELECT</code>` 查询操作。",
-      "count": 1
-    },
-    {
-      "source": "Begin creating a Cassandra <code>SELECT</code> query operation for the given <code>cql</code>.",
-      "translation": "为给定的 `<cql>` 创建 Cassandra `<code>SELECT` 查询操作。",
       "count": 1
     },
     {
@@ -93,38 +133,8 @@
       "count": 1
     },
     {
-      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods returning result projections for\ncount and exists projections.",
-      "translation": "通过调用返回计数和存在投影的终止方法之一，触发 `<code>SELECT</code>` 查询的执行。",
-      "count": 1
-    },
-    {
-      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods and return mapped results.",
-      "translation": "通过调用终止方法之一来触发 `<code>SELECT</code>` 查询的执行，并返回映射后的结果。",
-      "count": 1
-    },
-    {
-      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods.",
-      "translation": "通过调用终止方法之一来触发 `<code>SELECT</code>` 查询的执行。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Result type override (optional).",
-      "translation": "结果类型覆盖（可选）。",
-      "count": 1
-    },
-    {
-      "source": "Table override (optional).",
-      "translation": "表覆盖（可选）。",
-      "count": 1
-    },
-    {
-      "source": "Select query that is not yet associated with a result type.",
-      "translation": "尚未关联结果类型的查询。",
       "count": 1
     },
     {
@@ -173,11 +183,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Method Summary",
       "translation": "方法摘要",
       "count": 1
@@ -195,6 +200,61 @@
     {
       "source": "operations\nin a fluent API style.",
       "translation": "以流畅的 API 风格进行操作。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"query(java.lang.Class)-type-param-T\"><code>T</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the application domain object.</span>",
+      "translation": "<span id=\"query(java.lang.Class)-type-param-T\"><code>T</code> - 应用程序域对象的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a>（类型）。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>domainType</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>domainType</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>domainType</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> to domain object to query; must not be null.",
+      "translation": "<code>domainType</code> - 要查询的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>type</code></a> 到域对象；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <code>cql</code> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <code>cql</code> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <code>statement</code> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <code>statement</code> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ExecutableSelectOperation.ExecutableSelect.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableSelectOperation.ExecutableSelect</code></a>.",
+      "translation": "创建<a href=\"ExecutableSelectOperation.ExecutableSelect.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableSelectOperation.ExecutableSelect</code></a>的新实例。",
+      "count": 1
+    },
+    {
+      "source": "<code>cql</code> - <code>SELECT</code> statement, must not be null.",
+      "translation": "<code>cql</code> - 必须不为空的 <code>SELECT</code> 语句。",
+      "count": 1
+    },
+    {
+      "source": "<code>statement</code> - <code>SELECT</code> statement, must not be null.",
+      "translation": "<code>statement</code> - <code>SELECT</code> 语句，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, John Blum",
+      "translation": "马克·帕卢赫，约翰·布鲁姆",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"ExecutableSelectOperation.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableSelectOperation</code></a> interface allows creation and execution of Cassandra <code>SELECT</code> operations\nin a fluent API style.",
+      "translation": "<a href=\"ExecutableSelectOperation.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableSelectOperation</code></a> 接口允许以流式 API 风格创建并执行 Cassandra <code>SELECT</code> 操作。",
+      "count": 1
+    },
+    {
+      "source": "<pre>    <code>\n        query(Human.class)\n            .inTable(\"star_wars\")\n            .as(Jedi.class)\n            .matching(query(where(\"firstname\").is(\"luke\")))\n            .all();\n    </code>\n</pre>",
+      "translation": "<pre>\n    <code>\n        query(Human.class)\n            .inTable(\"star_wars\")\n            .as(Jedi.class)\n            .matching(query(where(\"firstname\").is(\"luke\")))\n            .all();\n    </code>\n</pre>",
       "count": 1
     }
   ]

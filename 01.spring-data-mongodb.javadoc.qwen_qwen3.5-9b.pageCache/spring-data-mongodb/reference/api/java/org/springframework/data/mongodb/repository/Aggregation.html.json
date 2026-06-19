@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-06-19 01:20:57",
+  "updated_at": "2026-06-19 01:20:57",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 19,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0555555555555556,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "an empty array by default.",
+      "translation": "默认情况下为空数组。",
+      "count": 2
+    },
+    {
+      "source": "Pipeline stages are mapped against the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a> domain type to consider\n<a href=\"../core/mapping/Field.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>field</code></a> mappings and may contain simple placeholders\n<code>?0</code> as well as <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>SpelExpressions</code></a>.",
+      "translation": "管道阶段与 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a> 域类型进行映射，以考虑\n<a href=\"../core/mapping/Field.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>field</code></a> 映射，并可包含简单占位符\n<code>?0</code> 以及 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>SpelExpressions</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Query method <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> and <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Pageable.html\" title=\"class or interface in org.springframework.data.domain\"><code>Pageable</code></a>\narguments are applied at the end of the pipeline or can be defined manually as part of it.",
+      "translation": "查询方法 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> 和 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Pageable.html\" title=\"class or interface in org.springframework.data.domain\"><code>Pageable</code></a> 的参数可在管道末尾应用，也可作为管道的一部分手动定义。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Alias for <a href=\"#pipeline()\"><code>pipeline()</code></a>.",
+      "translation": "`<a href=\"#pipeline()\"><code>pipeline()</code></a>` 的别名。",
+      "count": 1
+    },
+    {
+      "source": "Alias for <a href=\"#pipeline()\"><code>pipeline()</code></a>. Defines the aggregation pipeline to apply.",
+      "translation": "`<a href=\"#pipeline()\"><code>pipeline()</code></a>` 的别名。用于定义要应用的聚合管道。",
+      "count": 1
+    },
+    {
+      "source": "The mode of the read preference to use. This attribute (<code>@Aggregation(pipeline = { ... }, readPreference =\n\"secondary\")</code>) is an alias for:\n\n<pre class=\"code\">@@Aggregation(pipeline = { ... })\n@ReadPreference(\"secondary\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property);\n</pre>",
+      "translation": "读偏好模式。此属性（<code>@Aggregation(pipeline = { ... }, readPreference = \"secondary\")</code>）是以下内容的别名：\n\n<pre class=\"code\">@@Aggregation(pipeline = { ... })\n@ReadPreference(\"secondary\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Defines the aggregation pipeline to apply.\n\n<pre class=\"code\">\n// aggregation resulting in collection with single value\n@Aggregation(\"{ '$project': { '_id' : '$lastname' } }\")\nList&lt;String&gt; findAllLastnames();\n\n// aggregation with parameter replacement\n@Aggregation(\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property);\n\n// aggregation with sort in pipeline\n@Aggregation(pipeline = {\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\", \"{ '$sort' : { 'lastname' : -1 } }\"})\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property);\n\n// Sort parameter is used for sorting results\n@Aggregation(\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property, Sort sort);\n\n// Pageable parameter used for sort, skip and limit\n@Aggregation(\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property, Pageable page);\n\n// Single value result aggregation.\n@Aggregation(\"{ '$group' : { '_id' : null, 'total' : { $sum: '$age' } } }\")\nLong sumAge();\n\n// Single value wrapped in container object\n@Aggregation(\"{ '$group' : { '_id' : null, 'total' : { $sum: '$age' } } })\nSumAge sumAgeAndReturnAggregationResultWrapperWithConcreteType();\n\n// Raw aggregation result\n@Aggregation(\"{ '$group' : { '_id' : null, 'total' : { $sum: '$age' } } })\nAggregationResults&lt;org.bson.Document&gt;&gt; sumAgeAndReturnAggregationResultWrapper();\n</pre>",
+      "translation": "定义要应用的聚合管道。\n\n<pre class=\"code\">\n// 生成包含单个值的集合的聚合\n@Aggregation(\"{ '$project': { '_id' : '$lastname' } }\")\nList&lt;String&gt; findAllLastnames();\n\n// 带参数替换的聚合\n@Aggregation(\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property);\n\n// 管道中包含排序的聚合\n@Aggregation(pipeline = {\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\", \"{ '$sort' : { 'lastname' : -1 } }\"})\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property);\n\n// 排序参数用于对结果进行排序\n@Aggregation(\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property, Sort sort);\n\n// Pageable 参数用于排序、跳过和限制\n@Aggregation(\"{ '$group': { '_id' : '$lastname', names : { $addToSet : '$?0' } } }\")\nList&lt;PersonAggregate&gt; groupByLastnameAnd(String property, Pageable page);\n\n// 单值结果聚合。\n@Aggregation(\"{ '$group' : { '_id' : null, 'total' : { $sum: '$age' } } }\")\nLong sumAge();\n\n// 单个值封装在容器对象中\n@Aggregation(\"{ '$group' : { '_id' : null, 'total' : { $sum: '$age' } } })\nSumAge sumAgeAndReturnAggregationResultWrapperWithConcreteType();\n\n// 原始聚合结果\n@Aggregation(\"{ '$group' : { '_id' : null, 'total' : { $sum: '$age' } } })\nAggregationResults&lt;org.bson.Document&gt;&gt; sumAgeAndReturnAggregationResultWrapper();\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Defines the collation to apply when executing the aggregation.\n\n<pre class=\"code\">// Fixed value\n@Aggregation(pipeline = \"...\", collation = \"en_US\")\nList&lt;Entry&gt; findAllByFixedCollation();\n\n// Fixed value as Document\n@Aggregation(pipeline = \"...\", collation = \"{ 'locale' :  'en_US' }\")\nList&lt;Entry&gt; findAllByFixedJsonCollation();\n\n// Dynamic value as String\n@Aggregation(pipeline = \"...\", collation = \"?0\")\nList&lt;Entry&gt; findAllByDynamicCollation(String collation);\n\n// Dynamic value as Document\n@Aggregation(pipeline = \"...\", collation = \"{ 'locale' :  ?0 }\")\nList&lt;Entry&gt; findAllByDynamicJsonCollation(String collation);\n\n// SpEL expression\n@Aggregation(pipeline = \"...\", collation = \"?#{[0]}\")\nList&lt;Entry&gt; findAllByDynamicSpElCollation(String collation);\n</pre>",
+      "translation": "定义在执行聚合操作时应用的排序规则。\n\n<pre class=\"code\">// 固定值\n@Aggregation(pipeline = \"...\", collation = \"en_US\")\nList&lt;Entry&gt; findAllByFixedCollation();\n\n// 作为 Document 的固定值\n@Aggregation(pipeline = \"...\", collation = \"{ 'locale' :  'en_US' }\")\nList&lt;Entry&gt; findAllByFixedJsonCollation();\n\n// 作为 String 的动态值\n@Aggregation(pipeline = \"...\", collation = \"?0\")\nList&lt;Entry&gt; findAllByDynamicCollation(String collation);\n\n// 作为 Document 的动态值\n@Aggregation(pipeline = \"...\", collation = \"{ 'locale' :  ?0 }\")\nList&lt;Entry&gt; findAllByDynamicJsonCollation(String collation);\n\n// SpEL 表达式\n@Aggregation(pipeline = \"...\", collation = \"?#{[0]}\")\nList&lt;Entry&gt; findAllByDynamicSpElCollation(String collation);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Defines the collation to apply when executing the aggregation.",
+      "translation": "定义执行聚合时要应用的排序规则。",
+      "count": 1
+    },
+    {
+      "source": "Defines the aggregation pipeline to apply.",
+      "translation": "定义要应用的聚合管道。",
+      "count": 1
+    },
+    {
+      "source": "The mode of the read preference to use.",
+      "translation": "要使用的读偏好模式。",
+      "count": 1
+    },
+    {
+      "source": "an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> by default.",
+      "translation": "默认情况下为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "the index name.",
+      "translation": "索引名称。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"Aggregation.html\" title=\"annotation interface in org.springframework.data.mongodb.repository\"><code>Aggregation</code></a> annotation can be used to annotate a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a>\nquery method so that it runs the <a href=\"#pipeline()\"><code>pipeline()</code></a> on invocation.",
+      "translation": "<a href=\"Aggregation.html\" title=\"org.springframework.data.mongodb.repository 中的注解接口\"><code>Aggregation</code></a> 注解可用于标注一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"org.springframework.data.repository 中的类或接口\"><code>Repository</code></a>查询方法，以便在调用时执行 <a href=\"#pipeline()\"><code>pipeline()</code></a>。",
+      "count": 1
+    }
+  ]
+}

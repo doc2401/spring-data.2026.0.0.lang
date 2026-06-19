@@ -1,36 +1,61 @@
 {
   "created_at": "2026-06-16 09:36:26",
-  "updated_at": "2026-06-16 09:36:26",
+  "updated_at": "2026-06-18 07:04:16",
   "stats": {
-    "total_entries": 33,
+    "total_entries": 40,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 36,
-    "entries_with_hits": 33,
+    "total_hits": 52,
+    "entries_with_hits": 40,
     "entries_without_hits": 0,
-    "hit_rate": 1.0909090909090908,
-    "usage_percentage": 0.0033000000000000004
+    "hit_rate": 1.3,
+    "usage_percentage": 0.004
   },
   "items": [
     {
       "source": "Creates a new <a href=\"AuditableBeanWrapper.html\" title=\"interface in org.springframework.data.auditing\"><code>AuditableBeanWrapper</code></a> using the given <a href=\"../mapping/context/PersistentEntities.html\" title=\"class in org.springframework.data.mapping.context\"><code>PersistentEntities</code></a> when looking up auditing\nmetadata via reflection.",
       "translation": "使用给定的 <a href=\"../mapping/context/PersistentEntities.html\" title=\"class in org.springframework.data.mapping.context\"><code>PersistentEntities</code></a> 创建一个新的 <a href=\"AuditableBeanWrapper.html\" title=\"interface in org.springframework.data.auditing\"><code>AuditableBeanWrapper</code></a>，以便通过反射查找审计元数据。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Sets the <a href=\"DateTimeProvider.html\" title=\"interface in org.springframework.data.auditing\"><code>DateTimeProvider</code></a> to be used to determine the dates to be set.",
       "translation": "设置用于确定要设置的日期的<a href=\"DateTimeProvider.html\" title=\"org.springframework.data.auditing 包中的接口\"><code>DateTimeProvider</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns whether the given source is considered to be auditable in the first place.",
       "translation": "返回给定的源是否可审计。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Setter do determine if <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a>} and\n<a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a> shall be filled with the current Java time.",
+      "translation": "Setter 用于确定是否应使用当前 Java 时间填充 <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a>} 和 <a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Setter do determine if <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a>} and\n<a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a> shall be filled with the current Java time. Defaults to\ntrue. One might set this to false to use database features to set entity time.",
+      "translation": "Setter 用于确定是否应使用当前 Java 时间填充 <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a> 和 <a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a>。默认值为 true。若需使用数据库功能来设置实体时间，可将其设置为 false。",
+      "count": 2
+    },
+    {
+      "source": "Support class to implement auditing handlers.",
+      "translation": "支持类，用于实现审计处理器。",
+      "count": 2
+    },
+    {
+      "source": "Set this to true if you want to treat entity creation as modification and thus setting the current date as\nmodification date during creation, too.",
+      "translation": "将此值设置为 true 可将实体创建视为修改，从而在创建时也将当前日期设为修改日期。",
+      "count": 2
+    },
+    {
+      "source": "Set this to true if you want to treat entity creation as modification and thus setting the current date as\nmodification date during creation, too. Defaults to true.",
+      "translation": "将此值设置为 true 可将实体创建视为修改，从而在创建时也将当前日期设为修改日期。默认值为 true。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -58,16 +83,6 @@
       "count": 1
     },
     {
-      "source": "Setter do determine if <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a>} and\n<a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a> shall be filled with the current Java time.",
-      "translation": "Setter 用于确定是否应使用当前 Java 时间填充 <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a>} 和 <a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Setter do determine if <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a>} and\n<a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a> shall be filled with the current Java time. Defaults to\ntrue. One might set this to false to use database features to set entity time.",
-      "translation": "Setter 用于确定是否应使用当前 Java 时间填充 <a href=\"../domain/Auditable.html#setCreatedDate(T)\"><code>Auditable.setCreatedDate(TemporalAccessor)</code></a> 和 <a href=\"../domain/Auditable.html#setLastModifiedDate(T)\"><code>Auditable.setLastModifiedDate(TemporalAccessor)</code></a>。默认值为 true。若需使用数据库功能来设置实体时间，可将其设置为 false。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
       "count": 1
@@ -88,23 +103,8 @@
       "count": 1
     },
     {
-      "source": "Support class to implement auditing handlers.",
-      "translation": "支持类，用于实现审计处理器。",
-      "count": 1
-    },
-    {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Set this to true if you want to treat entity creation as modification and thus setting the current date as\nmodification date during creation, too.",
-      "translation": "将此值设置为 true 可将实体创建视为修改，从而在创建时也将当前日期设为修改日期。",
-      "count": 1
-    },
-    {
-      "source": "Set this to true if you want to treat entity creation as modification and thus setting the current date as\nmodification date during creation, too. Defaults to true.",
-      "translation": "将此值设置为 true 可将实体创建视为修改，从而在创建时也将当前日期设为修改日期。默认值为 true。",
       "count": 1
     },
     {
@@ -175,6 +175,41 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code>dateTimeProvider</code> - can be null, defaults to <a href=\"CurrentDateTimeProvider.html\" title=\"enum class in org.springframework.data.auditing\"><code>CurrentDateTimeProvider</code></a> in that case.",
+      "translation": "<code>dateTimeProvider</code> - 可为 null，若为 null 则默认为 <a href=\"CurrentDateTimeProvider.html\" title=\"org.springframework.data.auditing 中的枚举类\"><code>CurrentDateTimeProvider</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>entities</code> - must not be null.",
+      "translation": "<code>entities</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>dateTimeForNow</code> - the dateTimeForNow to set",
+      "translation": "<code>dateTimeForNow</code> - 要设置的 dateTimeForNow",
+      "count": 1
+    },
+    {
+      "source": "<code>modifyOnCreation</code> - if modification information shall be set on creation, too",
+      "translation": "<code>modifyOnCreation</code> - 如果创建时也需要设置修改信息，则设为 true。",
+      "count": 1
+    },
+    {
+      "source": "<code>source</code> - must not be null.",
+      "translation": "<source> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Christoph Strobl, Mark Paluch",
+      "translation": "奥利弗·吉尔克，克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "true if the given source considered to be auditable.",
+      "translation": "如果给定的源被视为可审计，则为 true。",
       "count": 1
     }
   ]

@@ -1,91 +1,231 @@
 {
   "created_at": "2026-06-16 16:04:44",
-  "updated_at": "2026-06-16 16:04:44",
+  "updated_at": "2026-06-18 07:39:48",
   "stats": {
-    "total_entries": 89,
+    "total_entries": 124,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 108,
-    "entries_with_hits": 89,
+    "total_hits": 187,
+    "entries_with_hits": 124,
     "entries_without_hits": 0,
-    "hit_rate": 1.2134831460674158,
-    "usage_percentage": 0.0089
+    "hit_rate": 1.5080645161290323,
+    "usage_percentage": 0.012400000000000001
   },
   "items": [
     {
       "source": "Sets the timestamp of write operations.",
       "translation": "设置写入操作的 timestamps。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Enables statement tracing.",
       "translation": "启用语句跟踪。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Sets the time to live in seconds for write operations.",
       "translation": "设置写操作的生存时间（以秒为单位）。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Use light-weight transactions by applying <code>IF EXISTS</code>. Replaces a previous <a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a>.",
       "translation": "使用轻量级事务，应用<code>IF EXISTS</code>。替换之前的<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Builds a new <a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a> with the configured values.",
       "translation": "构建一个新的<a href=\"DeleteOptions.html\" title=\"org.springframework.data.cassandra.core 中的类\"><code>DeleteOptions</code></a>，其中包含已配置的值。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Sets the <a href=\"cql/ExecutionProfileResolver.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ExecutionProfileResolver</code></a> to use.",
       "translation": "设置要使用的<a href=\"cql/ExecutionProfileResolver.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>ExecutionProfileResolver</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Sets the <code>ConsistencyLevel</code> to use.",
       "translation": "设置要使用的<code>ConsistencyLevel</code>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Sets the <code>execution profile</code> to use.",
       "translation": "设置要使用的<code>执行配置文件</code>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Use light-weight transactions by applying <code>IF EXISTS</code>.",
       "translation": "通过应用 `<code>IF EXISTS</code>` 来使用轻量级事务。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Sets the serial <code>ConsistencyLevel</code> to use.",
       "translation": "设置要使用的串行<code>ConsistencyLevel</code>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Set query execution idempotency.",
       "translation": "设置查询执行的幂等性。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Set query routing key.",
       "translation": "设置查询路由键。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Set query routing keyspace.",
       "translation": "设置查询路由的键空间。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "Sets the query fetch size for <code>ResultSet</code> chunks.",
+      "translation": "设置 `<code>ResultSet` 分块的查询获取大小。",
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "The fetch size controls how much resulting rows will be retrieved simultaneously (the goal being to avoid loading\ntoo many results in memory for queries yielding large results). Please note that while value as low as 1 can be\nused, it is <strong>highly</strong> discouraged to use such a low value in practice as it will yield very poor\nperformance.",
       "translation": "fetch size 控制同时检索的结果行数（目标是避免为产生大量结果的查询在内存中加载过多数据）。请注意，虽然可以使用低至 1 的值，但在实践中强烈不建议使用如此低的值，因为这会导致性能极差。",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>. Replaces a previous\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> and <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>.",
+      "translation": "通过应用 <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a> 来使用轻量级事务。此方法替换了之前的\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> 和 <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>. Replaces a previous\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> and <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>.",
+      "translation": "通过应用 `<code>IF</code>` <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a> 来使用轻量级事务。此方法替换了之前的\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> 和 <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>.",
+      "translation": "通过应用 <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"org.springframework.data.cassandra.core.query 中的接口\"><code>condition</code></a> 来使用轻量级事务。",
+      "count": 2
+    },
+    {
+      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>.",
+      "translation": "通过应用<code>IF</code> <a href=\"query/Filter.html\" title=\"org.springframework.data.cassandra.core.query 中的接口\"><code>condition</code></a>来使用轻量级事务。",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#consistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#consistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(java.lang.String)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(java.lang.String)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#idempotent(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#idempotent(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#keyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#keyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#pageSize(int)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#pageSize(int)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKey(java.nio.ByteBuffer)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKey(java.nio.ByteBuffer)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#serialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#serialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#timeout(java.time.Duration)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#timeout(java.time.Duration)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(java.time.Duration)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(java.time.Duration)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#tracing(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#tracing(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#withTracing()\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#withTracing()\">QueryOptions.QueryOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(int)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(int)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(long)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(long)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(java.time.Instant)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(java.time.Instant)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
+      "count": 2
+    },
+    {
+      "source": "Builder for <a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a>.",
+      "translation": "用于构建<a href=\"DeleteOptions.html\" title=\"org.springframework.data.cassandra.core 中的类\"><code>DeleteOptions</code></a>的构造器。",
+      "count": 2
+    },
+    {
+      "source": "Sets the <code>keyspace</code> to use. If left unconfigured, then the keyspace set on the statement or\n<code>CqlSession</code> will be used.",
+      "translation": "设置要使用的 `<code>keyspace</code>`。如果未配置，则使用语句或 `<code>CqlSession</code>` 上设置的键空间。",
+      "count": 2
+    },
+    {
+      "source": "Sets the <code>keyspace</code> to use.",
+      "translation": "设置要使用的 `<code>keyspace</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Sets the request timeout.",
+      "translation": "设置请求超时时间。",
+      "count": 2
+    },
+    {
+      "source": "Sets the request timeout. Overrides the default timeout.",
+      "translation": "设置请求超时时间，覆盖默认超时设置。",
+      "count": 2
+    },
+    {
+      "source": "<code>consistencyLevel</code> - must not be null.",
+      "translation": "<code>consistencyLevel</code> - 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>ttl</code> - the time to live.",
+      "translation": "<code>ttl</code> - 生存时间。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -95,16 +235,6 @@
     {
       "source": "<h3 id=\"fields-inherited-from-class-org.springframework.data.cassandra.core.cql.QueryOptions.QueryOptionsBuilder\">Fields inherited from class <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#field-summary\" title=\"class in org.springframework.data.cassandra.core.cql\">QueryOptions.QueryOptionsBuilder</a></h3>\n<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#consistencyLevel\">consistencyLevel</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfileResolver\">executionProfileResolver</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#idempotent\">idempotent</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#keyspace\">keyspace</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#pageSize\">pageSize</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKey\">routingKey</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKeyspace\">routingKeyspace</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#serialConsistencyLevel\">serialConsistencyLevel</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#timeout\">timeout</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#tracing\">tracing</a></code>",
       "translation": "<h3 id=\"fields-inherited-from-class-org.springframework.data.cassandra.core.cql.QueryOptions.QueryOptionsBuilder\">从类 <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#field-summary\" title=\"class in org.springframework.data.cassandra.core.cql\">QueryOptions.QueryOptionsBuilder</a> 继承的字段</h3>\n<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#consistencyLevel\">consistencyLevel</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfileResolver\">executionProfileResolver</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#idempotent\">idempotent</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#keyspace\">keyspace</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#pageSize\">pageSize</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKey\">routingKey</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKeyspace\">routingKeyspace</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#serialConsistencyLevel\">serialConsistencyLevel</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#timeout\">timeout</a>, <a href=\"cql/QueryOptions.QueryOptionsBuilder.html#tracing\">tracing</a></code>",
-      "count": 1
-    },
-    {
-      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>. Replaces a previous\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> and <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>.",
-      "translation": "通过应用 <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a> 来使用轻量级事务。此方法替换了之前的\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> 和 <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>. Replaces a previous\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> and <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>.",
-      "translation": "通过应用 `<code>IF</code>` <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a> 来使用轻量级事务。此方法替换了之前的\n<a href=\"#ifCondition(org.springframework.data.cassandra.core.query.Filter)\"><code>ifCondition(Filter)</code></a> 和 <a href=\"#ifExists(boolean)\"><code>ifExists(boolean)</code></a>。",
       "count": 1
     },
     {
@@ -173,106 +303,6 @@
       "count": 1
     },
     {
-      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>.",
-      "translation": "通过应用 <code>IF</code> <a href=\"query/CriteriaDefinition.html\" title=\"org.springframework.data.cassandra.core.query 中的接口\"><code>condition</code></a> 来使用轻量级事务。",
-      "count": 1
-    },
-    {
-      "source": "Use light-weight transactions by applying <code>IF</code> <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a>.",
-      "translation": "通过应用<code>IF</code> <a href=\"query/Filter.html\" title=\"org.springframework.data.cassandra.core.query 中的接口\"><code>condition</code></a>来使用轻量级事务。",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#consistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#consistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(java.lang.String)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(java.lang.String)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#executionProfile(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#idempotent(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#idempotent(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#keyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#keyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#pageSize(int)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#pageSize(int)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKey(java.nio.ByteBuffer)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#routingKey(java.nio.ByteBuffer)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#serialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#serialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#timeout(java.time.Duration)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#timeout(java.time.Duration)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(java.time.Duration)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(java.time.Duration)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#tracing(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#tracing(boolean)\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#withTracing()\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从类中复制：<code><a href=\"cql/QueryOptions.QueryOptionsBuilder.html#withTracing()\">QueryOptions.QueryOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(int)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(int)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(long)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(long)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(java.time.Instant)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从类中复制：<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(java.time.Instant)\">WriteOptions.WriteOptionsBuilder</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "Builder for <a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a>.",
-      "translation": "用于构建<a href=\"DeleteOptions.html\" title=\"org.springframework.data.cassandra.core 中的类\"><code>DeleteOptions</code></a>的构造器。",
-      "count": 1
-    },
-    {
-      "source": "Sets the <code>keyspace</code> to use. If left unconfigured, then the keyspace set on the statement or\n<code>CqlSession</code> will be used.",
-      "translation": "设置要使用的 `<code>keyspace</code>`。如果未配置，则使用语句或 `<code>CqlSession</code>` 上设置的键空间。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
@@ -283,16 +313,6 @@
       "count": 1
     },
     {
-      "source": "Sets the <code>keyspace</code> to use.",
-      "translation": "设置要使用的 `<code>keyspace</code>`。",
-      "count": 1
-    },
-    {
-      "source": "Sets the query fetch size for <code>ResultSet</code> chunks.",
-      "translation": "设置 `<code>ResultSet` 分块的查询获取大小。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
       "count": 1
@@ -300,16 +320,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Sets the request timeout.",
-      "translation": "设置请求超时时间。",
-      "count": 1
-    },
-    {
-      "source": "Sets the request timeout. Overrides the default timeout.",
-      "translation": "设置请求超时时间，覆盖默认超时设置。",
       "count": 1
     },
     {
@@ -455,6 +465,171 @@
     {
       "source": "Sets the query fetch size for",
       "translation": "设置查询获取大小",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#consistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">consistencyLevel</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#consistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">consistencyLevel</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#executionProfile(java.lang.String)\">executionProfile</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#executionProfile(java.lang.String)\">executionProfile</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#executionProfile(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\">executionProfile</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#executionProfile(org.springframework.data.cassandra.core.cql.ExecutionProfileResolver)\">executionProfile</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#idempotent(boolean)\">idempotent</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#idempotent(boolean)\">idempotent</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#keyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">keyspace</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#keyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">keyspace</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#pageSize(int)\">pageSize</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#pageSize(int)\">pageSize</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#routingKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">routingKeyspace</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#routingKeyspace(com.datastax.oss.driver.api.core.CqlIdentifier)\">routingKeyspace</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#routingKey(java.nio.ByteBuffer)\">routingKey</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#routingKey(java.nio.ByteBuffer)\">routingKey</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#serialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">serialConsistencyLevel</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#serialConsistencyLevel(com.datastax.oss.driver.api.core.ConsistencyLevel)\">serialConsistencyLevel</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timeout(java.time.Duration)\">timeout</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timeout(java.time.Duration)\">timeout</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(java.time.Duration)\">ttl</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(java.time.Duration)\">ttl</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#tracing(boolean)\">tracing</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#tracing(boolean)\">tracing</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#withTracing()\">withTracing</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#withTracing()\">withTracing</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(int)\">ttl</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#ttl(int)\">ttl</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(long)\">timestamp</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(long)\">timestamp</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(java.time.Instant)\">timestamp</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#timestamp(java.time.Instant)\">timestamp</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#build()\">build</a></code> in class <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "translation": "<code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html#build()\">build</a></code> 类 <code><a href=\"cql/WriteOptions.WriteOptionsBuilder.html\" title=\"class in org.springframework.data.cassandra.core.cql\">WriteOptions.WriteOptionsBuilder</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code>criteria</code> - the <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>criteria</code></a> to apply for conditional updates, must not be null.",
+      "translation": "<code>criteria</code> - 用于条件更新的<a href=\"query/Filter.html\" title=\"org.springframework.data.cassandra.core.query 中的接口\"><code>criteria</code></a>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>condition</code> - the <a href=\"query/Filter.html\" title=\"interface in org.springframework.data.cassandra.core.query\"><code>condition</code></a> to apply for conditional deletes, must not be null.",
+      "translation": "<code>condition</code> - 用于条件删除的<a href=\"query/Filter.html\" title=\"org.springframework.data.cassandra.core.query 中的接口\"><code>condition</code></a>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>pageSize</code> - the number of rows to fetch per chunking request. To disable chunking of the result set, use\n         <code>pageSize == Integer.MAX_VALUE</code>. Negative values are not allowed.",
+      "translation": "`pageSize` - 每次分块请求中要获取的行数。若要禁用结果集的分块，请使用 `pageSize == Integer.MAX_VALUE`。不允许使用负值。",
+      "count": 1
+    },
+    {
+      "source": "<code>timeout</code> - the read timeout. Negative values are not allowed. If it is <code>0</code>, the read timeout will be\n         disabled for this statement.",
+      "translation": "<code>timeout</code> - 读取超时时间。不允许为负值。如果设置为 <code>0</code>，则此语句的读取超时将被禁用。",
+      "count": 1
+    },
+    {
+      "source": "<code>ifNotExists</code> - true to enable <code>IF EXISTS</code>.",
+      "translation": "<code>ifNotExists</code> - 设置为 true 以启用 <code>IF EXISTS</code>。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a> with the configured values",
+      "translation": "包含已配置值的新<a href=\"DeleteOptions.html\" title=\"org.springframework.data.cassandra.core 中的类\"><code>DeleteOptions</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<code>profileName</code> - must not be null or empty.",
+      "translation": "<code>profileName</code> 不能为空或 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>executionProfileResolver</code> - must not be null.",
+      "translation": "<code>executionProfileResolver</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>idempotent</code> - true to mark the query as idempotent.",
+      "translation": "<code>idempotent</code> - 设置为 true 以标记该查询为幂等。",
+      "count": 1
+    },
+    {
+      "source": "<code>keyspace</code> - the specific keyspace to use to run a statement, must not be null.",
+      "translation": "<code>keyspace</code> - 用于执行语句的特定键空间，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>routingKeyspace</code> - the routing keyspace to use for token-aware routing.",
+      "translation": "<code>routingKeyspace</code> - 用于令牌感知路由的路由键空间。",
+      "count": 1
+    },
+    {
+      "source": "<code>routingKey</code> - the routing key to use for token-aware routing.",
+      "translation": "<code>routingKey</code> - 用于令牌感知路由的路由键。",
+      "count": 1
+    },
+    {
+      "source": "<code>tracing</code> - true to enable statement tracing to the executed statements.",
+      "translation": "<tracing> - 设置为 true 以启用语句追踪，记录已执行的语句。",
+      "count": 1
+    },
+    {
+      "source": "<code>timestamp</code> - mutation timestamp in microseconds.",
+      "translation": "<code>timestamp</code> - 微秒级的变更时间戳。",
+      "count": 1
+    },
+    {
+      "source": "<code>timestamp</code> - mutation date time.",
+      "translation": "<code>timestamp</code> - 突变日期时间。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
       "count": 1
     }
   ]

@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-06-19 05:13:42",
+  "updated_at": "2026-06-19 05:13:42",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1818181818181819,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "Returns the (reading and writing) converter used to read records into entities and\nwrite entities into maps.",
+      "translation": "返回用于将记录读取为实体以及将实体写入映射的（读和写）转换器。",
+      "count": 2
+    },
+    {
+      "source": "Retrieves a node's description by its underlying class.",
+      "translation": "根据其底层类检索节点的描述。",
+      "count": 2
+    },
+    {
+      "source": "Retrieves a node's description by its primary label.",
+      "translation": "根据主标签检索节点的描述。",
+      "count": 2
+    },
+    {
+      "source": "the description if any, null otherwise",
+      "translation": "如有描述则显示，否则为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2019–2026 <a href=\"https://neo4j.com\">Neo4j, Neo4j Sweden AB</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2019–2026 <a href=\"https://neo4j.com\">Neo4j、Neo4j Sweden AB</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "In case the mapping function returns a null, the Neo4j client will throw\nan exception and prevent further processing.",
+      "translation": "如果映射函数返回 null，Neo4j 客户端将抛出异常并阻止后续处理。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves a schema based mapping function for the <code>targetClass</code>.",
+      "translation": "获取基于模式的映射函数，该函数针对 `<code>targetClass</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Contains the descriptions of all nodes, their properties and relationships known to\nSDN.",
+      "translation": "包含 SDN 已知的所有节点、其属性及关系的描述。",
+      "count": 1
+    },
+    {
+      "source": "Creates or retrieves an instance of the given id generator class.",
+      "translation": "创建或获取给定 ID 生成器类的实例。",
+      "count": 1
+    },
+    {
+      "source": "Creates or retrieves an instance of the given id generator class. During the\nlifetime of the schema, this method returns the same instance of reoccurring\nrequests of the same type.",
+      "translation": "创建或获取给定 ID 生成器类的实例。在架构的生命周期内，此方法对于相同类型的重复请求返回相同的实例。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"UnknownEntityException.html\" title=\"class in org.springframework.data.neo4j.core.mapping\">UnknownEntityException</a></code> - when <code>targetClass</code> is not a managed class",
+      "translation": "<code><a href=\"UnknownEntityException.html\" title=\"class in org.springframework.data.neo4j.core.mapping\">UnknownEntityException</a></code> - 当 <code>targetClass</code> 不是托管类时发生此异常。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"getRequiredMappingFunctionFor(java.lang.Class)-type-param-T\"><code>T</code> - the type of the target class</span>",
+      "translation": "<span id=\"getRequiredMappingFunctionFor(java.lang.Class)-type-param-T\"><code>T</code> - 目标类的类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"getOrCreateIdGeneratorOfType(java.lang.Class)-type-param-T\"><code>T</code> - the class type</span>",
+      "translation": "<span id=\"getOrCreateIdGeneratorOfType(java.lang.Class)-type-param-T\"><code>T</code> - 类类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>primaryLabel</code> - the primary label under which the node is described",
+      "translation": "<code>primaryLabel</code> - 描述该节点的主要标签",
+      "count": 1
+    },
+    {
+      "source": "<code>underlyingClass</code> - the underlying class of the node description to be retrieved",
+      "translation": "<code>underlyingClass</code> - 要检索的节点描述的基础类",
+      "count": 1
+    },
+    {
+      "source": "<code>targetClass</code> - the target class to which to map to.",
+      "translation": "<code>targetClass</code> - 要映射到的目标类。",
+      "count": 1
+    },
+    {
+      "source": "<code>idGeneratorType</code> - the type of the ID generator to return",
+      "translation": "<code>idGeneratorType</code> - 要返回的 ID 生成器类型",
+      "count": 1
+    },
+    {
+      "source": "Michael J. Simons",
+      "translation": "迈克尔·J·西蒙斯",
+      "count": 1
+    },
+    {
+      "source": "the default, stateless and reusable mapping function for the given target\nclass",
+      "translation": "默认情况下，针对给定目标类的无状态且可复用的映射函数。",
+      "count": 1
+    },
+    {
+      "source": "the entity converter for the schema",
+      "translation": "用于该模式的实体转换器",
+      "count": 1
+    },
+    {
+      "source": "the id generator.",
+      "translation": "ID 生成器。",
+      "count": 1
+    },
+    {
+      "source": "Retrieves a schema based mapping function for the <code>targetClass</code>. The mapping\nfunction will expect a record containing all the nodes and relationships necessary\nto fully populate an instance of the given class. It will not try to fetch data\nfrom any other records or queries. The mapping function is free to throw a\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>, most likely a\n<code>org.springframework.data.mapping.MappingException</code> or\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> when mapping is not possible.",
+      "translation": "获取基于模式的映射函数，该函数针对 `<code>targetClass</code>`。此映射函数将期望接收一个包含所有节点和关系的记录，以便能够完全填充给定类的实例。它不会尝试从任何其他记录或查询中获取数据。当无法进行映射时，该映射函数可以抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html\" title=\"class or interface in java.lang\"><code>RuntimeException</code></a>，通常是 <code>org.springframework.data.mapping.MappingException</code> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
+      "count": 1
+    }
+  ]
+}

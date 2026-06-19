@@ -1,41 +1,81 @@
 {
   "created_at": "2026-06-16 12:13:52",
-  "updated_at": "2026-06-16 12:13:52",
+  "updated_at": "2026-06-18 07:26:08",
   "stats": {
-    "total_entries": 39,
+    "total_entries": 50,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 42,
-    "entries_with_hits": 39,
+    "total_hits": 70,
+    "entries_with_hits": 50,
     "entries_without_hits": 0,
-    "hit_rate": 1.0769230769230769,
-    "usage_percentage": 0.0039
+    "hit_rate": 1.4,
+    "usage_percentage": 0.005
   },
   "items": [
     {
+      "source": "<code>example</code> - must not be null.",
+      "translation": "<code>example</code> 不能为 null。",
+      "count": 4
+    },
+    {
       "source": "Returns a single entity matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> or <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a> if none was found.",
       "translation": "返回与给定<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>匹配的单条实体，若未找到则返回<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the number of instances matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>.",
       "translation": "返回与给定<a href=\"../../domain/Example.html\" title=\"org.springframework.data.domain 中的接口\"><code>Example</code></a>匹配的实例数量。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Checks whether the data store contains elements that match the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>.",
       "translation": "检查数据存储是否包含与给定<a href=\"../../domain/Example.html\" title=\"org.springframework.data.domain 中的接口\"><code>Example</code></a>匹配的项。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "Returns entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> applying the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>queryFunction</code></a> that defines the\nquery and its result type.",
+      "translation": "返回与给定 <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> 匹配且应用由 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>queryFunction</code></a> 定义的查询及其结果类型的实体。",
+      "count": 3
+    },
+    {
+      "source": "all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>.",
+      "translation": "所有匹配给定<a href=\"../../domain/Example.html\" title=\"org.springframework.data.domain 包中的接口\"><code>Example</code></a>的实体。",
+      "count": 3
     },
     {
       "source": "The query object used with <code>queryFunction</code> is only valid inside the <code>findBy(…)</code> method call. This\nrequires the query function to return a query result and not the <a href=\"FluentQuery.html\" title=\"interface in org.springframework.data.repository.query\"><code>FluentQuery</code></a> object itself to ensure the\nquery is executed inside the <code>findBy(…)</code> method.",
       "translation": "与 `<code>queryFunction</code>` 一起使用的查询对象仅在 `<code>findBy(…)</code>` 方法调用内有效。这要求查询函数返回查询结果，而不是 `<a href=\"FluentQuery.html\" title=\"interface in org.springframework.data.repository.query\"><code>FluentQuery</code></a>` 对象本身，以确保查询在 `<code>findBy(…)</code>` 方法内部执行。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> applying the given <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>. In case no match could be\nfound <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a> is returned.",
+      "translation": "返回所有与给定 <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> 匹配并应用给定 <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> 的实体。如果未找到任何匹配项，则返回 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> applying the given <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>.",
+      "translation": "返回所有与给定<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>匹配并应用给定<a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>的实体。",
+      "count": 2
+    },
+    {
+      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>. In case no match could be found <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a> is\nreturned.",
+      "translation": "返回所有与给定 <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> 匹配的实体。如果未找到匹配项，则返回 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Interface to allow execution of Query by Example <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> instances using a reactive infrastructure.",
+      "translation": "提供使用响应式基础设施执行基于示例<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>实例的查询的接口。",
+      "count": 2
+    },
+    {
+      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>.",
+      "translation": "返回所有匹配给定<a href=\"../../domain/Example.html\" title=\"org.springframework.data.domain 中的接口\"><code>Example</code></a>的实体。",
+      "count": 2
     },
     {
       "source": "<span class=\"type-parameters\">&lt;S extends <a href=\"#type-param-T\" title=\"type parameter in ReactiveQueryByExampleExecutor\">T</a>, R, P extends <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\">Publisher</a>&lt;R&gt;&gt;</span> <span class=\"return-type\">P</span> <span class=\"element-name\">findBy</span><wbr/><span class=\"parameters\">(<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\">Example</a>&lt;S&gt; example,\n <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\">Function</a>&lt;<a href=\"FluentQuery.ReactiveFluentQuery.html\" title=\"interface in org.springframework.data.repository.query\">FluentQuery.ReactiveFluentQuery</a>&lt;S&gt;, P&gt; queryFunction)</span>",
@@ -68,26 +108,6 @@
       "count": 1
     },
     {
-      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> applying the given <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>. In case no match could be\nfound <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a> is returned.",
-      "translation": "返回所有与给定 <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> 匹配并应用给定 <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> 的实体。如果未找到任何匹配项，则返回 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> applying the given <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>.",
-      "translation": "返回所有与给定<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>匹配并应用给定<a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>的实体。",
-      "count": 1
-    },
-    {
-      "source": "Returns entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> applying the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>queryFunction</code></a> that defines the\nquery and its result type.",
-      "translation": "返回与给定 <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> 匹配且应用由 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html\" title=\"class or interface in java.util.function\"><code>queryFunction</code></a> 定义的查询及其结果类型的实体。",
-      "count": 1
-    },
-    {
-      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>. In case no match could be found <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a> is\nreturned.",
-      "translation": "返回所有与给定 <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> 匹配的实体。如果未找到匹配项，则返回 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Flux.empty()</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
       "count": 1
@@ -95,16 +115,6 @@
     {
       "source": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ReactiveQueryByExampleExecutor&lt;T&gt;</span>",
       "translation": "<span class=\"modifiers\">public interface </span><span class=\"element-name type-name-label\">ReactiveQueryByExampleExecutor&lt;T&gt;</span>",
-      "count": 1
-    },
-    {
-      "source": "Interface to allow execution of Query by Example <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> instances using a reactive infrastructure.",
-      "translation": "提供使用响应式基础设施执行基于示例<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>实例的查询的接口。",
-      "count": 1
-    },
-    {
-      "source": "Returns all entities matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>.",
-      "translation": "返回所有匹配给定<a href=\"../../domain/Example.html\" title=\"org.springframework.data.domain 中的接口\"><code>Example</code></a>的实体。",
       "count": 1
     },
     {
@@ -205,6 +215,51 @@
     {
       "source": "that defines the\nquery and its result type.",
       "translation": "定义查询及其结果类型的部分。",
+      "count": 1
+    },
+    {
+      "source": "<code>sort</code> - the <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> specification to sort the results by, may be <a href=\"../../domain/Sort.html#unsorted()\"><code>Sort.unsorted()</code></a>, must not be\n         null.",
+      "translation": "<code>sort</code> - 用于对结果进行排序的 <a href=\"../../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> 规范，可以是 <a href=\"../../domain/Sort.html#unsorted()\"><code>Sort.unsorted()</code></a>，但绝不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "a single entity matching the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> or <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a> if none was found.",
+      "translation": "返回一个与给定<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>或<a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#empty()\" title=\"class or interface in reactor.core.publisher\"><code>Mono.empty()</code></a>匹配的单个实体；若未找到则返回空。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - via <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#error(java.lang.Throwable)\" title=\"class or interface in reactor.core.publisher\"><code>Mono.error(Throwable)</code></a> if the\n          example yields more than one result.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - 通过 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html#error(java.lang.Throwable)\" title=\"class or interface in reactor.core.publisher\"><code>Mono.error(Throwable)</code></a> 抛出，如果示例返回的结果超过一个。",
+      "count": 1
+    },
+    {
+      "source": "<code>example</code> - the <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> to count instances for. Must not be null.",
+      "translation": "<code>example</code> - 要统计实例数量的<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>接口。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>example</code> - the <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a> to use for the existence check. Must not be null.",
+      "translation": "<code>example</code> - 用于存在性检查的<a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>接口。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "the number of instances matching the <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>.",
+      "translation": "匹配<a href=\"../../domain/Example.html\" title=\"org.springframework.data.domain 中的接口\"><code>Example</code></a>的实例数量。",
+      "count": 1
+    },
+    {
+      "source": "true if the data store contains elements that match the given <a href=\"../../domain/Example.html\" title=\"interface in org.springframework.data.domain\"><code>Example</code></a>.",
+      "translation": "如果数据存储包含与给定<a href=\"../../domain/Example.html\" title=\"org.springframework.data.domain 中的接口\"><code>Example</code></a>匹配的元素，则返回 true。",
+      "count": 1
+    },
+    {
+      "source": "<code>queryFunction</code> - the query function defining projection, sorting, and the result type",
+      "translation": "<code>queryFunction</code> - 定义投影、排序和结果类型的查询函数",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl",
+      "translation": "马克·帕卢赫，克里斯托夫·施特罗布",
       "count": 1
     }
   ]

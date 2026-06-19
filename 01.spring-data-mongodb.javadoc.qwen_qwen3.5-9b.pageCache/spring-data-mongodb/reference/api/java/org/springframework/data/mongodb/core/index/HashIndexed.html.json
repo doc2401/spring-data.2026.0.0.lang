@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-06-19 02:12:06",
+  "updated_at": "2026-06-19 02:12:06",
+  "stats": {
+    "total_entries": 3,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 3,
+    "entries_with_hits": 3,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.00030000000000000003
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Annotation for a property that should be used as key for a\n<a href=\"https://docs.mongodb.com/manual/core/index-hashed/\">Hashed Index</a>. If used on a simple property, the\nindex uses a hashing function to compute the hash of the value of the index field. Added to a property of complex\ntype the embedded document is collapsed and the hash computed for the entire object.\n<br/>\n\n<pre class=\"code\">@Document\npublic class DomainType {\n\n        @HashIndexed @Id String id;\n}\n</pre>\n\n<a href=\"HashIndexed.html\" title=\"annotation interface in org.springframework.data.mongodb.core.index\"><code>HashIndexed</code></a> can also be used as meta <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>Annotation</code></a> to create composed annotations:\n\n<pre class=\"code\">@Indexed\n@HashIndexed\n@Retention(RetentionPolicy.RUNTIME)\npublic @interface IndexAndHash {\n\n        @AliasFor(annotation = Indexed.class, attribute = \"name\")\n        String name() default \"\";\n}\n\n@Document\npublic class DomainType {\n\n        @ComposedHashIndexed(name = \"idx-name\") String value;\n}\n</pre>",
+      "translation": "用于指定应作为<a href=\"https://docs.mongodb.com/manual/core/index-hashed/\">哈希索引</a>键的属性的注解。如果应用于简单属性，索引将使用哈希函数计算索引字段值的哈希值；如果应用于复杂类型的属性，则会将嵌入文档折叠起来，并对整个对象计算哈希值。\n<br/>\n\n<pre class=\"code\">@Document\npublic class DomainType {\n\n        @HashIndexed @Id String id;\n}\n</pre>\n\n<a href=\"HashIndexed.html\" title=\"org.springframework.data.mongodb.core.index 中的注解接口\"><code>HashIndexed</code></a>也可用作元 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"java.lang.annotation 中的类或接口\"><code>Annotation</code></a>，以创建组合注解：\n\n<pre class=\"code\">@Indexed\n@HashIndexed\n@Retention(RetentionPolicy.RUNTIME)\npublic @interface IndexAndHash {\n\n        @AliasFor(annotation = Indexed.class, attribute = \"name\")\n        String name() default \"\";\n}\n\n@Document\npublic class DomainType {\n\n        @ComposedHashIndexed(name = \"idx-name\") String value;\n}\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "created_at": "2026-06-19 09:09:38",
+  "updated_at": "2026-06-19 09:09:38",
+  "stats": {
+    "total_entries": 45,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 71,
+    "entries_with_hits": 45,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5777777777777777,
+    "usage_percentage": 0.0045000000000000005
+  },
+  "items": [
+    {
+      "source": "On <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\"><code>Lifecycle.stop()</code></a> all <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>subscriptions</code></a> are cancelled prior to\nshutting down the container itself.",
+      "translation": "在关闭容器本身之前，会先取消所有 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>subscriptions</code></a>，具体操作请参考 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\"><code>Lifecycle.stop()</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "Register a new subscription for a Redis Stream.",
+      "translation": "为 Redis 流注册一个新的订阅。",
+      "count": 4
+    },
+    {
+      "source": "<code>listener</code> - must not be null.",
+      "translation": "<code>listener</code> 不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "the subscription handle.",
+      "translation": "订阅句柄。",
+      "count": 4
+    },
+    {
+      "source": "Register a new subscription for a Redis Stream. If the container is already\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"class or interface in org.springframework.context\"><code>running</code></a> the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> will be added and started\nimmediately, otherwise it'll be scheduled and started once the container is actually\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>started</code></a>.",
+      "translation": "为 Redis Stream 注册新订阅。如果容器已经<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#isRunning()\" title=\"class or interface in org.springframework.context\"><code>运行中</code></a>，则 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>订阅</code></a> 将立即被添加并启动；否则，它将被安排并在容器实际<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>启动</code></a>后开始运行。",
+      "count": 4
+    },
+    {
+      "source": "Errors during <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>Record</code></a> retrieval lead to <a href=\"Cancelable.html#cancel()\"><code>cancellation</code></a> of the underlying task.",
+      "translation": "在检索<a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>Record</code></a>期间发生的错误会导致底层任务被<a href=\"Cancelable.html#cancel()\"><code>取消</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>streamOffset</code> - the stream along its offset.",
+      "translation": "<code>streamOffset</code> - 沿偏移量的流。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> using <a href=\"../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>string serializers</code></a> given\n<a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a>.",
+      "translation": "使用 <a href=\"../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a> 创建一个新的 <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a>，并传入 <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> given <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> and\n<a href=\"StreamMessageListenerContainer.StreamMessageListenerContainerOptions.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.StreamMessageListenerContainerOptions</code></a>.",
+      "translation": "根据 <a href=\"../connection/RedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>RedisConnectionFactory</code></a> 和 <a href=\"StreamMessageListenerContainer.StreamMessageListenerContainerOptions.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.StreamMessageListenerContainerOptions</code></a>，创建一个新的 <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> Offset using a particular message Id: Start with the given offset and use the\nlast seen <a href=\"../connection/stream/Record.html#getId()\"><code>message Id</code></a>.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的消息 ID 作为偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> Last consumed: Start with the latest offset (<code>$</code>) and use latest offset\n(<code>$</code>) for subsequent reads.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。",
+      "count": 2
+    },
+    {
+      "source": "the new <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a>.",
+      "translation": "新的<a href=\"StreamMessageListenerContainer.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamMessageListenerContainer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>connectionFactory</code> - must not be null.",
+      "translation": "<code>connectionFactory</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>consumer</code> - consumer group, must not be null.",
+      "translation": "<code>consumer</code> - 消费者组，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "Once created, a <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> can subscribe to a Redis Stream and consume incoming\n<a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>messages</code></a>. <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> allows multiple stream read requests and returns a\n<a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> handle per read request. Cancelling the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> terminates eventually background\npolling. Messages are converted using <a href=\"../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>key and value serializers</code></a> to support various\nserialization strategies. <br/>\n<a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> supports multiple modes of stream consumption:",
+      "translation": "创建后，<a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> 可以订阅 Redis Stream 并消费传入的 <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>消息</code></a>。<a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> 支持多个流读取请求，并为每个读取请求返回一个 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> 句柄。取消 <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> 最终会终止后台轮询。消息通过 <a href=\"../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>键和值序列化器</code></a> 进行转换，以支持各种序列化策略。<br/>\n<a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> 支持多种流消费模式：",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> tasks propagate errors during stream reads and\n<a href=\"StreamListener.html#onMessage(V)\"><code>listener notification</code></a> to a configurable <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/ErrorHandler.html\" title=\"class or interface in org.springframework.util\"><code>ErrorHandler</code></a>. Errors stop a\n<a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> by default. Configuring a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html\" title=\"class or interface in java.util.function\"><code>Predicate</code></a> for a <a href=\"StreamMessageListenerContainer.StreamReadRequest.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.StreamReadRequest</code></a> allows conditional\nsubscription cancelling or continuing on all errors.",
+      "translation": "`StreamMessageListenerContainer` 任务在读取流期间传播错误，并将 `<a href=\"StreamListener.html#onMessage(V)\"><code>listener notification</code></a>` 传递到可配置的 `<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/util/ErrorHandler.html\" title=\"class or interface in org.springframework.util\"><code>ErrorHandler</code></a>`。默认情况下，错误会终止 `<a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a>`。通过为 `<a href=\"StreamMessageListenerContainer.StreamReadRequest.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.StreamReadRequest</code></a>` 配置一个 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html\" title=\"class or interface in java.util.function\"><code>Predicate</code></a>`，可以在所有错误发生时有条件地取消或继续订阅。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> requires a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a> to fork long-running polling tasks on a different\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a>. This thread is used as event loop to poll for stream messages and invoke the\n<a href=\"StreamListener.html#onMessage(V)\"><code>listener callback</code></a>.",
+      "translation": "`StreamMessageListenerContainer` 需要一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Executor.html\" title=\"class or interface in java.util.concurrent\"><code>Executor</code></a>，以便在不同的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Thread.html\" title=\"class or interface in java.lang\"><code>Thread</code></a> 上分叉执行长轮询任务。该线程用作事件循环，用于轮询流消息并调用 <a href=\"StreamListener.html#onMessage(V)\"><code>监听器回调</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Errors during <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>Record</code></a> are tested against test <a href=\"StreamMessageListenerContainer.StreamReadRequest.html#getCancelSubscriptionOnError()\"><code>cancellation predicate</code></a> whether to cancel the underlying task.",
+      "translation": "<code>Record</code> 接口在记录期间发生的错误会根据测试中的<a href=\"StreamMessageListenerContainer.StreamReadRequest.html#getCancelSubscriptionOnError()\"><code>取消谓词</code></a>来判断是否取消底层任务。",
+      "count": 1
+    },
+    {
+      "source": "Errors during <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>Record</code></a> retrieval are delegated to the given <a href=\"StreamMessageListenerContainer.StreamReadRequest.html#getErrorHandler()\"><code>StreamMessageListenerContainer.StreamReadRequest.getErrorHandler()</code></a>.",
+      "translation": "检索<a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>Record</code></a>期间发生的错误将委托给指定的<a href=\"StreamMessageListenerContainer.StreamReadRequest.html#getErrorHandler()\"><code>StreamMessageListenerContainer.StreamReadRequest.getErrorHandler()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "See the following example code how to use <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a>:",
+      "translation": "参考以下示例代码，了解如何使用<a href=\"StreamMessageListenerContainer.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamMessageListenerContainer</code></a>：",
+      "count": 1
+    },
+    {
+      "source": "Every message must be acknowledged using\n<a href=\"../core/StreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>StreamOperations.acknowledge(Object, String, String...)</code></a> after\nprocessing.",
+      "translation": "每条消息在处理之后都必须使用 <a href=\"../core/StreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>StreamOperations.acknowledge(Object, String, String...)</code></a> 进行确认。",
+      "count": 1
+    },
+    {
+      "source": "Every message is acknowledged when received.",
+      "translation": "所有消息在收到时均会确认。",
+      "count": 1
+    },
+    {
+      "source": "Unregister a given <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> from the container. This prevents the <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> to be restarted\nin a potential <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"class or interface in org.springframework.context\"><code>stop</code></a>/<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"class or interface in org.springframework.context\"><code>start</code></a> scenario. An\n<a href=\"Subscription.html#isActive()\"><code>active</code></a> <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>subcription</code></a> is <a href=\"Cancelable.html#cancel()\"><code>cancelled</code></a>\nprior to removal.",
+      "translation": "从容器中注销给定的<a href=\"Subscription.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>Subscription</code></a>。这将防止该<a href=\"Subscription.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>Subscription</code></a>在潜在的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#stop()\" title=\"org.springframework.context 中的类或接口\"><code>stop</code></a>/<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/context/Lifecycle.html#start()\" title=\"org.springframework.context 中的类或接口\"><code>start</code></a>场景中重新启动。在移除之前，会先取消<a href=\"Subscription.html#isActive()\"><code>active</code></a><a href=\"Subscription.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>subscription</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Request to read a Redis Stream with a <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a>.",
+      "translation": "请求读取一个由 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> 管理的 Redis Stream。",
+      "count": 1
+    },
+    {
+      "source": "Builder to build a <a href=\"StreamMessageListenerContainer.ConsumerStreamReadRequest.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.ConsumerStreamReadRequest</code></a>.",
+      "translation": "用于构建<a href=\"StreamMessageListenerContainer.ConsumerStreamReadRequest.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.ConsumerStreamReadRequest</code></a>的构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Options for <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a>.",
+      "translation": "<a href=\"StreamMessageListenerContainer.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamMessageListenerContainer</code></a>的选项。",
+      "count": 1
+    },
+    {
+      "source": "Builder for <a href=\"StreamMessageListenerContainer.StreamMessageListenerContainerOptions.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.StreamMessageListenerContainerOptions</code></a>.",
+      "translation": "<code>StreamMessageListenerContainer.StreamMessageListenerContainerOptions</code> 的构建器。<a href=\"StreamMessageListenerContainer.StreamMessageListenerContainerOptions.html\" title=\"class in org.springframework.data.redis.stream\">",
+      "count": 1
+    },
+    {
+      "source": "Builder to build a <a href=\"StreamMessageListenerContainer.StreamReadRequest.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.StreamReadRequest</code></a>.",
+      "translation": "用于构建<a href=\"StreamMessageListenerContainer.StreamReadRequest.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer.StreamReadRequest</code></a>的构造函数。",
+      "count": 1
+    },
+    {
+      "source": "Unregister a given <a href=\"Subscription.html\" title=\"interface in org.springframework.data.redis.stream\"><code>Subscription</code></a> from the container.",
+      "translation": "从容器中注销给定的<a href=\"Subscription.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>Subscription</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Request to read a Redis Stream.",
+      "translation": "请求读取 Redis 流。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> Last consumed: Start with the latest offset (<code>$</code>) and use the last seen\n<a href=\"../connection/stream/Record.html#getId()\"><code>message Id</code></a>.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并使用上次看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Using a <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> with external\n<a href=\"../core/StreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>StreamOperations.acknowledge(Object, String, String...)</code></a> acknowledge}",
+      "translation": "使用带有外部 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> 的 <a href=\"../core/StreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>StreamOperations.acknowledge(Object, String, String...)</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> Last consumed: Start with the last consumed message by the consumer (<code>&gt;</code>)\nand use the last consumed message by the consumer (<code>&gt;</code>) for subsequent reads.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从消费者最后消费的消息开始（<code>&gt;</code>），并在后续读取中使用消费者最后消费的消息（<code>&gt;</code>）。",
+      "count": 1
+    },
+    {
+      "source": "Using a <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> with auto-acknowledge",
+      "translation": "使用带有自动确认功能的<a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-K\"><code>K</code> - Stream key and Stream field type.</span>",
+      "translation": "<span id=\"type-param-K\"><code>K</code> - 流密钥和流字段类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-V\"><code>V</code> - Stream value type.</span>",
+      "translation": "<span id=\"type-param-V\"><code>V</code> - 流值类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - must not be null.",
+      "translation": "<code>options</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>streamRequest</code> - must not be null.",
+      "translation": "<code>streamRequest</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>subscription</code> - must not be null.",
+      "translation": "<code>subscription</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl, Christian Rest, DongCheol Kim, Su Ko",
+      "translation": "Mark Paluch，Christoph Strobl，Christian Rest，DongCheol Kim，Su Ko",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Abstraction used by the framework representing a message listener container. <strong>Not</strong> meant to be\nimplemented externally.",
+      "translation": "框架中用于表示消息监听器容器的抽象类。<strong>不</strong>应被外部实现。",
+      "count": 1
+    },
+    {
+      "source": "<ul>\n<li>Standalone</li>\n<li>使用带有外部 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> 的 <a href=\"../core/StreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>StreamOperations.acknowledge(Object, String, String...)</code></a></li>\n<li>使用带有自动确认功能的<a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></li>\n</ul>\nReading from a stream requires polling and a strategy to advance stream offsets. Depending on the initial\n<a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>, <a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> applies an individual strategy to obtain the next\n<a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>: <br/><strong>Standalone</strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的消息 ID 作为偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并使用上次看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><br/><strong>Using <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的消息 ID 作为偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从消费者最后消费的消息开始（<code>&gt;</code>），并在后续读取中使用消费者最后消费的消息（<code>&gt;</code>）。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><strong>Note: Using <a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> bears the chance of dropped messages as messages can arrive in the\ntime during polling is suspended. Use messagedId's as offset or <a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> to minimize the\nchance of message loss.</strong>",
+      "translation": "<ul>\n<li>独立模式</li>\n<li>使用带有外部 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> 的 <a href=\"../core/StreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>StreamOperations.acknowledge(Object, String, String...)</code></a></li>\n<li>使用带有自动确认功能的 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></li>\n</ul>\n从流中读取需要轮询以及推进流偏移量的策略。根据初始 <a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>，<a href=\"StreamMessageListenerContainer.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamMessageListenerContainer</code></a> 会应用不同的策略来获取下一个 <a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>：<br/><strong>独立模式</strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的消息 ID 作为偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并使用上次看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><br/><strong>使用 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的消息 ID 作为偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>消息 ID</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从消费者最后消费的消息开始（<code>&gt;</code>），并在后续读取中使用消费者最后消费的消息（<code>&gt;</code>）。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><strong>注意：使用 <a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 存在消息丢失的风险，因为在轮询暂停期间消息可能会到达。请使用消息 ID 作为偏移量或 <a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 以最大限度地减少消息丢失的可能性。</strong>",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">RedisConnectionFactory factory = …;\n\nStreamMessageListenerContainer&lt;String, MapRecord&lt;String, String, String&gt;&gt; container = StreamMessageListenerContainer.create(factory);\nSubscription subscription = container.receive(StreamOffset.fromStart(\"my-stream\"), message -&gt; …);\n\ncontainer.start();\n\n// later\ncontainer.stop();\n</pre>",
+      "translation": "<pre class=\"code\">RedisConnectionFactory factory = …;\n\nStreamMessageListenerContainer&lt;String, MapRecord&lt;String, String, String&gt;&gt; container = StreamMessageListenerContainer.create(factory);\nSubscription subscription = container.receive(StreamOffset.fromStart(\"my-stream\"), message -&gt; …);\n\ncontainer.start();\n\n// 稍后\ncontainer.stop();\n</pre>",
+      "count": 1
+    }
+  ]
+}

@@ -1,46 +1,66 @@
 {
   "created_at": "2026-06-16 16:08:31",
-  "updated_at": "2026-06-16 16:08:31",
+  "updated_at": "2026-06-18 07:40:27",
   "stats": {
-    "total_entries": 32,
+    "total_entries": 45,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 41,
-    "entries_with_hits": 32,
+    "total_hits": 64,
+    "entries_with_hits": 45,
     "entries_without_hits": 0,
-    "hit_rate": 1.28125,
-    "usage_percentage": 0.0031999999999999997
+    "hit_rate": 1.4222222222222223,
+    "usage_percentage": 0.0045000000000000005
   },
   "items": [
     {
       "source": "Get the first result, or no result.",
       "translation": "获取第一个结果，或无结果。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Get exactly zero or one result.",
       "translation": "获取零个或一个结果。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Map the query result to a different type using <a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>QueryResultConverter</code></a>.",
       "translation": "使用<a href=\"QueryResultConverter.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>QueryResultConverter</code></a>将查询结果映射为不同的类型。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Get all matching elements.",
       "translation": "获取所有匹配的元素。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Stream all matching elements.",
       "translation": "流所有匹配的元素。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Execute the query with paging and convert the result set to a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a> of entities. A sliced query\ntranslates the effective <code>fetch size</code> to the page size.",
+      "translation": "执行带分页的查询，并将结果集转换为实体类的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a>。切片查询会将有效的<code>fetch size</code>转换为每页大小。",
+      "count": 2
+    },
+    {
+      "source": "Execute the query with paging and convert the result set to a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a> of entities.",
+      "translation": "使用分页执行查询，并将结果集转换为实体类的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods and return mapped results.",
+      "translation": "通过调用终止方法之一来触发 `<code>SELECT</code>` 查询的执行，并返回映射后的结果。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - if more than one match found.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/IncorrectResultSizeDataAccessException.html\" title=\"class or interface in org.springframework.dao\">IncorrectResultSizeDataAccessException</a></code> - 当找到多个匹配项时。",
+      "count": 2
     },
     {
       "source": "<span class=\"annotations\"><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/lang/Contract.html\" title=\"class or interface in org.springframework.lang\">@Contract</a>(\"_ -&gt; new\")\n</span><span class=\"type-parameters\">&lt;R&gt;</span> <span class=\"return-type\"><a href=\"ExecutableSelectOperation.TerminatingResults.html\" title=\"interface in org.springframework.data.cassandra.core\">ExecutableSelectOperation.TerminatingResults</a>&lt;R&gt;</span> <span class=\"element-name\">map</span><wbr/><span class=\"parameters\">(<a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.cassandra.core\">QueryResultConverter</a>&lt;? super <a href=\"#type-param-T\" title=\"type parameter in ExecutableSelectOperation.TerminatingResults\">T</a>, ? extends R&gt; converter)</span>",
@@ -50,11 +70,6 @@
     {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Default Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab5\" onclick=\"show('method-summary-table', 'method-summary-table-tab5', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">默认方法</button>",
-      "count": 1
-    },
-    {
-      "source": "Execute the query with paging and convert the result set to a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a> of entities. A sliced query\ntranslates the effective <code>fetch size</code> to the page size.",
-      "translation": "执行带分页的查询，并将结果集转换为实体类的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a>。切片查询会将有效的<code>fetch size</code>转换为每页大小。",
       "count": 1
     },
     {
@@ -68,18 +83,8 @@
       "count": 1
     },
     {
-      "source": "Execute the query with paging and convert the result set to a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a> of entities.",
-      "translation": "使用分页执行查询，并将结果集转换为实体类的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
-      "count": 1
-    },
-    {
-      "source": "Trigger <code>SELECT</code> query execution by calling one of the terminating methods and return mapped results.",
-      "translation": "通过调用终止方法之一来触发 `<code>SELECT</code>` 查询的执行，并返回映射后的结果。",
       "count": 1
     },
     {
@@ -170,6 +175,66 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"map(org.springframework.data.cassandra.core.QueryResultConverter)-type-param-R\"><code>R</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the result.</span>",
+      "translation": "<span id=\"map(org.springframework.data.cassandra.core.QueryResultConverter)-type-param-R\"><code>R</code> - 结果的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>类型</code></a>。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if <a href=\"QueryResultConverter.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>converter</code></a> is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <a href=\"QueryResultConverter.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>converter</code></a> 为 null。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a> wrapping the Cassandra <code>ResultSet</code>, which needs to be closed; never\n        null.",
+      "translation": "一个包装了 Cassandra `ResultSet` 的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a>，该结果集需要被关闭；此对象永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ExecutableSelectOperation.TerminatingResults.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ExecutableSelectOperation.TerminatingResults</code></a>.",
+      "translation": "创建了一个新的<a href=\"ExecutableSelectOperation.TerminatingResults.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ExecutableSelectOperation.TerminatingResults</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "the first result or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if no match found.",
+      "translation": "返回第一个结果，或者如果未找到匹配项，则返回 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"java.util 中的类或接口\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a single result or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"class or interface in java.util\"><code>Optional.empty()</code></a> if no match found.",
+      "translation": "返回单个结果，或者如果未找到匹配项，则返回 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html#empty()\" title=\"java.util 中的类或接口\"><code>Optional.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> of all the matching elements; never null.",
+      "translation": "所有匹配元素的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>；永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>converter</code> - the converter, must not be null.",
+      "translation": "<code>converter</code> - 转换器，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, John Blum",
+      "translation": "马克·帕卢赫，约翰·布鲁姆",
+      "count": 1
+    },
+    {
+      "source": "the first result or null if no match found.",
+      "translation": "返回第一个匹配结果，若未找到匹配项则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "the single result or null if no match found.",
+      "translation": "返回单个结果，若未找到匹配项则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "the converted results",
+      "translation": "转换后的结果",
       "count": 1
     }
   ]

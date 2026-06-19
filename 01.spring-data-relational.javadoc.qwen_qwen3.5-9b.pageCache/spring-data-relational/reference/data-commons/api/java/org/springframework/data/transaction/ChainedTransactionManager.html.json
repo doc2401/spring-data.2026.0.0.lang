@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-06-19 11:12:47",
+  "updated_at": "2026-06-19 11:12:47",
+  "stats": {
+    "total_entries": 12,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 13,
+    "entries_with_hits": 12,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0833333333333333,
+    "usage_percentage": 0.0012000000000000001
+  },
+  "items": [
+    {
+      "source": "Creates a new <a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> delegating to the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>s.",
+      "translation": "创建一个新的 <a href=\"ChainedTransactionManager.html\" title=\"org.springframework.data.transaction 中的类\"><code>ChainedTransactionManager</code></a>，该管理器将委托给指定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\"><code>PlatformTransactionManager</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "As consequence, a transaction can get into a state, where the first <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> has committed\nits transaction and a subsequent <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> failed to commit its transaction (e.g. caused by\nan I/O error or the transactional resource failed to commit for other reasons). In that case,\n<a href=\"#commit(org.springframework.transaction.TransactionStatus)\"><code>commit(TransactionStatus)</code></a> throws a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/HeuristicCompletionException.html\" title=\"class or interface in org.springframework.transaction\"><code>HeuristicCompletionException</code></a> to indicate a partially committed\ntransaction. Rollback isn't affected as the natural consequence of a missing commit is a rollback of a transactional\nresource. <a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> should be only used if the application can tolerate or recover from\ninconsistent state caused by partially committed transactions. In any other case, the use of\n<a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> is not recommended.",
+      "translation": "因此，事务可能进入一种状态：第一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\"><code>PlatformTransactionManager</code></a> 已提交其事务，而后续的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\"><code>PlatformTransactionManager</code></a> 未能提交其事务（例如，由 I/O 错误引起，或因其他原因导致事务性资源无法提交）。在这种情况下，<a href=\"#commit(org.springframework.transaction.TransactionStatus)\"><code>commit(TransactionStatus)</code></a> 会抛出一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/HeuristicCompletionException.html\" title=\"org.springframework.transaction 中的类或接口\"><code>HeuristicCompletionException</code></a>，以指示部分提交的事务。回滚不受影响，因为缺少提交的自然后果是事务性资源被回滚。<a href=\"ChainedTransactionManager.html\" title=\"org.springframework.data.transaction 中的类\"><code>ChainedTransactionManager</code></a> 仅应在应用程序能够容忍或从部分提交事务导致的不一致状态中恢复时才使用。在任何其他情况下，不建议使用 <a href=\"ChainedTransactionManager.html\" title=\"org.springframework.data.transaction 中的类\"><code>ChainedTransactionManager</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The configured instances will start transactions in the order given and commit/rollback in <em>reverse</em> order,\nwhich means the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> most likely to break the transaction should be the <em>last</em>\nin the list configured. A <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> throwing an exception during commit will automatically\ncause the remaining transaction managers to roll back instead of committing.",
+      "translation": "配置的实例将按照给定顺序启动事务，并以<em>相反</em>的顺序提交或回滚。这意味着最有可能破坏事务的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\"><code>PlatformTransactionManager</code></a>应该是配置列表中的<em>最后一个</em>。如果在提交过程中某个<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\"><code>PlatformTransactionManager</code></a>抛出异常，将自动导致其余事务管理器回滚，而不是提交。",
+      "count": 1
+    },
+    {
+      "source": "Instead of using <a href=\"ChainedTransactionManager.html\" title=\"class in org.springframework.data.transaction\"><code>ChainedTransactionManager</code></a> for attaching callbacks to transaction commit (pre commit/post\ncommit), either register a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/TransactionSynchronization.html\" title=\"class or interface in org.springframework.transaction.reactive\"><code>TransactionSynchronization</code></a> to explicitly\nfollow transaction cleanup with simplified semantics in case of exceptions.",
+      "translation": "不要使用 <a href=\"ChainedTransactionManager.html\" title=\"org.springframework.data.transaction 中的类\"><code>ChainedTransactionManager</code></a> 来为事务提交（预提交/后提交）附加回调，而是注册一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/reactive/TransactionSynchronization.html\" title=\"org.springframework.transaction.reactive 中的类或接口\"><code>TransactionSynchronization</code></a>，以便在发生异常时通过简化的语义显式地跟随事务清理。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "since 2.5",
+      "translation": "自 2.5 版本以来",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#getTransaction(org.springframework.transaction.TransactionDefinition)\" title=\"class or interface in org.springframework.transaction\">getTransaction</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#getTransaction(org.springframework.transaction.TransactionDefinition)\" title=\"class or interface in org.springframework.transaction\">getTransaction</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\" title=\"class or interface in org.springframework.transaction\">commit</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#commit(org.springframework.transaction.TransactionStatus)\" title=\"类或接口 org.springframework.transaction\">commit</a></code> 是接口<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"类或接口 org.springframework.transaction\">PlatformTransactionManager</a></code>中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\" title=\"class or interface in org.springframework.transaction\">rollback</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\">PlatformTransactionManager</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html#rollback(org.springframework.transaction.TransactionStatus)\" title=\"org.springframework.transaction 中的类或接口\">rollback</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"org.springframework.transaction 中的类或接口\">PlatformTransactionManager</a></code> 中的一个方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>transactionManagers</code> - must not be null or empty.",
+      "translation": "<code>transactionManagers</code> 不能为 null 或为空。",
+      "count": 1
+    },
+    {
+      "source": "Michael Hunger, Oliver Gierke, Mark Paluch",
+      "translation": "Michael Hunger，Oliver Gierke，Mark Paluch",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> implementation that orchestrates transaction creation, commits and rollbacks to a\nlist of delegates. Using this implementation assumes that errors causing a transaction rollback will usually happen\nbefore the transaction completion or during the commit of the most inner <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a>.",
+      "translation": "实现 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> 以协调向一组委托创建、提交和回滚事务。使用此实现假设导致事务回滚的错误通常会在最内层 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html\" title=\"class or interface in org.springframework.transaction\"><code>PlatformTransactionManager</code></a> 的事务完成之前或提交期间发生。",
+      "count": 1
+    }
+  ]
+}

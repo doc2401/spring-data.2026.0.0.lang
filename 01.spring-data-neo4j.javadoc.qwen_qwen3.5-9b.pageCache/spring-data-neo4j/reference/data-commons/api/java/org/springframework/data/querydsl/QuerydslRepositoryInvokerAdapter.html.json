@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-06-19 03:55:10",
+  "updated_at": "2026-06-19 03:55:10",
+  "stats": {
+    "total_entries": 47,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 61,
+    "entries_with_hits": 47,
+    "entries_without_hits": 0,
+    "hit_rate": 1.297872340425532,
+    "usage_percentage": 0.004699999999999999
+  },
+  "items": [
+    {
+      "source": "Invokes the find-all method of the underlying repository using the method taking a <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> as parameter if\navailable (i.e. the equivalent to\n<a href=\"../repository/PagingAndSortingRepository.html#findAll(org.springframework.data.domain.Pageable)\"><code>PagingAndSortingRepository.findAll(Pageable)</code></a>), using the method taking\na <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> if available (i.e. the equivalent to\n<a href=\"../repository/PagingAndSortingRepository.html#findAll(org.springframework.data.domain.Sort)\"><code>PagingAndSortingRepository.findAll(Sort)</code></a> by extracting the <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>\ncontained in the given <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a>) or the plain equivalent to\n<a href=\"../repository/CrudRepository.html#findAll()\"><code>CrudRepository.findAll()</code></a>.",
+      "translation": "使用底层存储库的 find-all 方法，如果存在接受 <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> 参数的方法（即等同于 <a href=\"../repository/PagingAndSortingRepository.html#findAll(org.springframework.data.domain.Pageable)\"><code>PagingAndSortingRepository.findAll(Pageable)</code></a>），则使用该方法的变体；如果存在接受 <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> 的方法（即等同于从给定的 <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> 中提取其中包含的 <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>，然后调用 <a href=\"../repository/PagingAndSortingRepository.html#findAll(org.springframework.data.domain.Sort)\"><code>PagingAndSortingRepository.findAll(Sort)</code></a>），则使用该方法的变体；否则使用等同于 <a href=\"../repository/CrudRepository.html#findAll()\"><code>CrudRepository.findAll()</code></a> 的普通方法。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"QuerydslRepositoryInvokerAdapter.html\" title=\"class in org.springframework.data.querydsl\"><code>QuerydslRepositoryInvokerAdapter</code></a> for the given delegate <a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\"><code>RepositoryInvoker</code></a>,\n<a href=\"QuerydslPredicateExecutor.html\" title=\"interface in org.springframework.data.querydsl\"><code>QuerydslPredicateExecutor</code></a> and Querydsl <code>Predicate</code>.",
+      "translation": "为给定的委托 <a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\"><code>RepositoryInvoker</code></a>、<a href=\"QuerydslPredicateExecutor.html\" title=\"interface in org.springframework.data.querydsl\"><code>QuerydslPredicateExecutor</code></a> 以及 Querydsl <code>Predicate</code> 创建一个新的 <a href=\"QuerydslRepositoryInvokerAdapter.html\" title=\"class in org.springframework.data.querydsl\"><code>QuerydslRepositoryInvokerAdapter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Invokes the find-all method of the underlying repository using the method taking a <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> as parameter if\navailable (i.e. the equivalent to\n<a href=\"../repository/PagingAndSortingRepository.html#findAll(org.springframework.data.domain.Sort)\"><code>PagingAndSortingRepository.findAll(Sort)</code></a>) or the plain equivalent to\n<a href=\"../repository/CrudRepository.html#findAll()\"><code>CrudRepository.findAll()</code></a>.",
+      "translation": "使用底层存储库的 find-all 方法，如果可用则采用接受 <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a> 参数的方法（即等同于 <a href=\"../repository/PagingAndSortingRepository.html#findAll(org.springframework.data.domain.Sort)\"><code>PagingAndSortingRepository.findAll(Sort)</code></a>），否则采用简单的 <a href=\"../repository/CrudRepository.html#findAll()\"><code>CrudRepository.findAll()</code></a> 等效方法。",
+      "count": 2
+    },
+    {
+      "source": "Invokes the query method backed by the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> using the given parameters, <a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> and\n<a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>.",
+      "translation": "使用给定的参数、<a href=\"../domain/Pageable.html\" title=\"interface in org.springframework.data.domain\"><code>Pageable</code></a> 和 <a href=\"../domain/Sort.html\" title=\"class in org.springframework.data.domain\"><code>Sort</code></a>，调用由给定<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html\" title=\"class or interface in java.lang.reflect\"><code>Method</code></a> 支持的查询方法。",
+      "count": 2
+    },
+    {
+      "source": "Invokes the method equivalent to <a href=\"../repository/CrudRepository.html#findById(ID)\"><code>CrudRepository.findById(Object)</code></a>.",
+      "translation": "调用与<a href=\"../repository/CrudRepository.html#findById(ID)\"><code>CrudRepository.findById(Object)</code></a>等效的方法。",
+      "count": 2
+    },
+    {
+      "source": "Invokes the method equivalent to <a href=\"../repository/CrudRepository.html#save(S)\"><code>CrudRepository.save(Object)</code></a> on the\nrepository.",
+      "translation": "在存储库上调用与<a href=\"../repository/CrudRepository.html#save(S)\"><code>CrudRepository.save(Object)</code></a>等效的方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the repository has a method to delete objects.",
+      "translation": "返回该存储库是否具有删除对象的方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the repository has a method to find all objects.",
+      "translation": "返回该存储库是否具有查找所有对象的方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the repository has a method to find a single object.",
+      "translation": "返回该存储库是否具有查找单个对象的方法。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the repository has a method to save objects.",
+      "translation": "返回该存储库是否具有保存对象的方法。",
+      "count": 2
+    },
+    {
+      "source": "<code>pageable</code> - must not be null.",
+      "translation": "<code>pageable</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>sort</code> - must not be null.",
+      "translation": "<code>sort</code> - 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>id</code> - must not be null.",
+      "translation": "<code>id</code> 不能为空。",
+      "count": 2
+    },
+    {
+      "source": "the result of the invocation of the find-all method.",
+      "translation": "find-all 方法的调用结果。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\"><code>RepositoryInvoker</code></a> that is aware of a <a href=\"QuerydslPredicateExecutor.html\" title=\"interface in org.springframework.data.querydsl\"><code>QuerydslPredicateExecutor</code></a> and <code>Predicate</code> to be executed\nfor all flavors of <code>findAll(…)</code>. All other calls are forwarded to the configured delegate.",
+      "translation": "<a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\"><code>RepositoryInvoker</code></a> 能够感知到 <a href=\"QuerydslPredicateExecutor.html\" title=\"interface in org.springframework.data.querydsl\"><code>QuerydslPredicateExecutor</code></a> 和用于执行所有类型 <code>findAll(…)</code> 的 <code>Predicate</code>。其他所有调用均会转发至配置的代理对象。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Pageable)\">RepositoryInvoker</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Pageable)\">RepositoryInvoker</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Sort)\">RepositoryInvoker</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Sort)\">RepositoryInvoker</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasDeleteMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasDeleteMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindAllMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindAllMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindOneMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindOneMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasSaveMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasSaveMethod()\">RepositoryInvocationInformation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvoker.html#invokeDeleteById(java.lang.Object)\">RepositoryInvoker</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvoker.html#invokeDeleteById(java.lang.Object)\">RepositoryInvoker</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindById(java.lang.Object)\">RepositoryInvoker</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindById(java.lang.Object)\">RepositoryInvoker</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvoker.html#invokeQueryMethod(java.lang.reflect.Method,org.springframework.util.MultiValueMap,org.springframework.data.domain.Pageable,org.springframework.data.domain.Sort)\">RepositoryInvoker</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvoker.html#invokeQueryMethod(java.lang.reflect.Method,org.springframework.util.MultiValueMap,org.springframework.data.domain.Pageable,org.springframework.data.domain.Sort)\">RepositoryInvoker</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../repository/support/RepositoryInvoker.html#invokeSave(T)\">RepositoryInvoker</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../repository/support/RepositoryInvoker.html#invokeSave(T)\">RepositoryInvoker</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Invokes the method equivalent to <a href=\"../repository/CrudRepository.html#deleteById(ID)\"><code>CrudRepository.deleteById(Object)</code></a>.",
+      "translation": "调用与<a href=\"../repository/CrudRepository.html#deleteById(ID)\"><code>CrudRepository.deleteById(Object)</code></a>等效的方法。",
+      "count": 1
+    },
+    {
+      "source": "Invokes the method equivalent to <a href=\"../repository/CrudRepository.html#deleteById(ID)\"><code>CrudRepository.deleteById(Object)</code></a>. The\ngiven id is assumed to be of a type convertible into the actual identifier type of the backing repository.",
+      "translation": "调用与<a href=\"../repository/CrudRepository.html#deleteById(ID)\"><code>CrudRepository.deleteById(Object)</code></a>等效的方法。给定的 id 将被视为可转换为底层存储库实际标识符类型的类型。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Pageable)\">invokeFindAll</a></code> in interface <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code>",
+      "translation": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Pageable)\">invokeFindAll</a></code> 接口 <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Sort)\">invokeFindAll</a></code> in interface <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code>",
+      "translation": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindAll(org.springframework.data.domain.Sort)\">invokeFindAll</a></code> 接口 <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code> 中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasDeleteMethod()\">hasDeleteMethod</a></code> in interface <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvocationInformation</a></code>",
+      "translation": "<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasDeleteMethod()\">hasDeleteMethod</a></code> 接口 <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvocationInformation</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindAllMethod()\">hasFindAllMethod</a></code> in interface <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvocationInformation</a></code>",
+      "translation": "接口 <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"org.springframework.data.repository.support 中的接口\">RepositoryInvocationInformation</a></code> 中的 <code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindAllMethod()\">hasFindAllMethod</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindOneMethod()\">hasFindOneMethod</a></code> in interface <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvocationInformation</a></code>",
+      "translation": "接口 <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"org.springframework.data.repository.support 中的接口\">RepositoryInvocationInformation</a></code> 中的 <code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasFindOneMethod()\">hasFindOneMethod</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasSaveMethod()\">hasSaveMethod</a></code> in interface <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvocationInformation</a></code>",
+      "translation": "接口 <code><a href=\"../repository/support/RepositoryInvocationInformation.html\" title=\"org.springframework.data.repository.support 中的接口\">RepositoryInvocationInformation</a></code> 中的 <code><a href=\"../repository/support/RepositoryInvocationInformation.html#hasSaveMethod()\">hasSaveMethod</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeDeleteById(java.lang.Object)\">invokeDeleteById</a></code> in interface <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code>",
+      "translation": "接口 <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"org.springframework.data.repository.support 中的接口\">RepositoryInvoker</a></code> 中的 <code><a href=\"../repository/support/RepositoryInvoker.html#invokeDeleteById(java.lang.Object)\">invokeDeleteById</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindById(java.lang.Object)\">invokeFindById</a></code> in interface <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code>",
+      "translation": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeFindById(java.lang.Object)\">invokeFindById</a></code> 接口 <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"org.springframework.data.repository.support 中的接口\">RepositoryInvoker</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeQueryMethod(java.lang.reflect.Method,org.springframework.util.MultiValueMap,org.springframework.data.domain.Pageable,org.springframework.data.domain.Sort)\">invokeQueryMethod</a></code> in interface <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code>",
+      "translation": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeQueryMethod(java.lang.reflect.Method,org.springframework.util.MultiValueMap,org.springframework.data.domain.Pageable,org.springframework.data.domain.Sort)\">invokeQueryMethod</a></code> 接口 <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeSave(T)\">invokeSave</a></code> in interface <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code>",
+      "translation": "<code><a href=\"../repository/support/RepositoryInvoker.html#invokeSave(T)\">invokeSave</a></code> 接口 <code><a href=\"../repository/support/RepositoryInvoker.html\" title=\"interface in org.springframework.data.repository.support\">RepositoryInvoker</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>delegate</code> - must not be null.",
+      "translation": "<code>delegate</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>executor</code> - must not be null.",
+      "translation": "<code>executor</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>predicate</code> - must not be null.",
+      "translation": "<predicate> - 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>method</code> - must not be null.",
+      "translation": "<code>method</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>parameters</code> - must not be null.",
+      "translation": "<code>parameters</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke",
+      "translation": "奥利弗·吉尔克",
+      "count": 1
+    },
+    {
+      "source": "the entity with the given id.",
+      "translation": "具有给定 ID 的实体。",
+      "count": 1
+    },
+    {
+      "source": "the result of the invoked query method.",
+      "translation": "被调用的查询方法的结果。",
+      "count": 1
+    },
+    {
+      "source": "the result of the invocation of the save method",
+      "translation": "调用 save 方法的结果",
+      "count": 1
+    }
+  ]
+}

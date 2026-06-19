@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-06-18 12:22:56",
+  "updated_at": "2026-06-18 12:22:56",
+  "stats": {
+    "total_entries": 26,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 26,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2307692307692308,
+    "usage_percentage": 0.0026
+  },
+  "items": [
+    {
+      "source": "Use the given <a href=\"CacheKeyPrefix.html\" title=\"interface in org.springframework.data.couchbase.cache\"><code>CacheKeyPrefix</code></a> to compute the prefix for the actual\nCouchbase key given the\ncache name as function input.",
+      "translation": "使用给定的<a href=\"CacheKeyPrefix.html\" title=\"org.springframework.data.couchbase.cache 中的接口\"><code>CacheKeyPrefix</code></a>，以缓存名称作为函数输入来计算实际 Couchbase 键的前缀。",
+      "count": 2
+    },
+    {
+      "source": "Set the collectinName to use.",
+      "translation": "设置要使用的收集名称。",
+      "count": 2
+    },
+    {
+      "source": "The name of the collection to use for this cache - if empty uses the default\ncollection.",
+      "translation": "用于此缓存的集合名称，如果为空则使用默认集合。",
+      "count": 2
+    },
+    {
+      "source": "Get the computed key prefix for a given cacheName.",
+      "translation": "获取给定缓存名称的已计算键前缀。",
+      "count": 2
+    },
+    {
+      "source": "Get the transcoder for encoding and decoding cache values.",
+      "translation": "获取用于编码和解码缓存值的转换器。",
+      "count": 2
+    },
+    {
+      "source": "Sets a custom transcoder to use for reads and writes.",
+      "translation": "设置用于读取和写入的自定义转码器。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Registers default cache key converters. The following converters get\nregistered:\n<ul>\n<li><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> to byte using UTF-8 encoding.</li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/interceptor/SimpleKey.html\" title=\"class or interface in org.springframework.cache.interceptor\"><code>SimpleKey</code></a> to <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a></li>\n</ul>",
+      "translation": "注册默认的缓存键转换器。以下转换器将被注册：\n<ul>\n<li>使用 UTF-8 编码将 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> 转换为字节。</li>\n<li>将 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/interceptor/SimpleKey.html\" title=\"class or interface in org.springframework.cache.interceptor\"><code>SimpleKey</code></a> 转换为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "Disable caching null values. <br/>\n<strong>NOTE</strong> any\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html#put(java.lang.Object,java.lang.Object)\" title=\"class or interface in org.springframework.cache\"><code>Cache.put(Object, Object)</code></a> operation\ninvolving\nnull value will error. Nothing will be written to Couchbase,\nnothing will be removed. An already\nexisting key will still be there afterwards with the very same value as\nbefore.",
+      "translation": "禁用空值的缓存。<br/>\n<strong>注意</strong>，任何涉及 null 值的\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html#put(java.lang.Object,java.lang.Object)\" title=\"class or interface in org.springframework.cache\"><code>Cache.put(Object, Object)</code></a> 操作\n都会报错。不会向 Couchbase 写入任何内容，也不会删除任何内容。已存在的键在操作后仍将保留，且其值与之前完全相同。",
+      "count": 1
+    },
+    {
+      "source": "Prefix the <a href=\"CouchbaseCache.html#getName()\"><code>cache name</code></a> with the given value.\n<br/>\nThe generated cache key will be:\n<code>prefix + cache name + \"::\" + cache entry key</code>.",
+      "translation": "在 <a href=\"CouchbaseCache.html#getName()\"><code>缓存名称</code></a> 前添加给定值。\n<br/>\n生成的缓存键格式为：\n<code>前缀 + 缓存名称 + \"::\" + 缓存条目键</code>。",
+      "count": 1
+    },
+    {
+      "source": "Prefix the <a href=\"CouchbaseCache.html#getName()\"><code>cache name</code></a> with the given value.",
+      "translation": "在<a href=\"CouchbaseCache.html#getName()\"><code>缓存名称</code></a>前添加给定值。",
+      "count": 1
+    },
+    {
+      "source": "Set the expiry to apply for cache entries. Use <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html#ZERO\" title=\"class or interface in java.time\"><code>Duration.ZERO</code></a> to\ndeclare an eternal cache.",
+      "translation": "设置过期时间以应用于缓存条目。使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html#ZERO\" title=\"class or interface in java.time\"><code>Duration.ZERO</code></a> 声明一个永久的缓存。",
+      "count": 1
+    },
+    {
+      "source": "Disable caching null values.",
+      "translation": "禁用空值的缓存。",
+      "count": 1
+    },
+    {
+      "source": "Set the expiry to apply for cache entries.",
+      "translation": "设置缓存条目的过期时间。",
+      "count": 1
+    },
+    {
+      "source": "Registers default cache key converters.",
+      "translation": "注册默认的缓存键转换器。",
+      "count": 1
+    },
+    {
+      "source": "The <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a> used for cache key to <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>\n        conversion. Never null.",
+      "translation": "用于将缓存键转换为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> 的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/convert/ConversionService.html\" title=\"class or interface in org.springframework.core.convert\"><code>ConversionService</code></a>。绝不为空。",
+      "count": 1
+    },
+    {
+      "source": "true if cache keys need to be prefixed with the\n        <a href=\"#getKeyPrefixFor(java.lang.String)\"><code>getKeyPrefixFor(String)</code></a> if present or\n        the default which resolves to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html#getName()\" title=\"class or interface in org.springframework.cache\"><code>Cache.getName()</code></a>.",
+      "translation": "如果存在 <a href=\"#getKeyPrefixFor(java.lang.String)\"><code>getKeyPrefixFor(String)</code></a>，则缓存键需要以前缀形式添加；否则使用默认值，该默认值解析为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html#getName()\" title=\"class or interface in org.springframework.cache\"><code>Cache.getName()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>registry</code> - must not be null.",
+      "translation": "<code>registry</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>expiry</code> - must not be null.",
+      "translation": "<code>expiry</code> 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - must not be null.",
+      "translation": "<code>collectionName</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>valueTranscoder</code> - the transcoder that should be used.",
+      "translation": "<code>valueTranscoder</code> - 应使用的转换器。",
+      "count": 1
+    },
+    {
+      "source": "<code>prefix</code> - the prefix to prepend to the cache name.",
+      "translation": "<code>prefix</code> - 附加到缓存名称前缀的字符串。",
+      "count": 1
+    },
+    {
+      "source": "<code>cacheKeyPrefix</code> - must not be null.",
+      "translation": "<code>cacheKeyPrefix</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "The expiration time (ttl) for cache entries. Never null.",
+      "translation": "缓存条目的过期时间（TTL）。永远不为空。",
+      "count": 1
+    },
+    {
+      "source": "true if caching null is allowed.",
+      "translation": "如果允许缓存 null，则为 true。",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 1
+    }
+  ]
+}

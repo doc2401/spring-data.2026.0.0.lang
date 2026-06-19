@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-06-19 02:11:58",
+  "updated_at": "2026-06-19 02:11:58",
+  "stats": {
+    "total_entries": 21,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 21,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2380952380952381,
+    "usage_percentage": 0.0021
+  },
+  "items": [
+    {
+      "source": "The name of the additional field to use for <a href=\"GeoSpatialIndexType.html#GEO_HAYSTACK\"><code>GeoSpatialIndexType.GEO_HAYSTACK</code></a> indexes",
+      "translation": "用于 `<a href=\"GeoSpatialIndexType.html#GEO_HAYSTACK\"><code>GeoSpatialIndexType.GEO_HAYSTACK</code></a>` 索引的附加字段名称。",
+      "count": 2
+    },
+    {
+      "source": "Bits of precision for boundary calculations.",
+      "translation": "边界计算的精度位数。",
+      "count": 2
+    },
+    {
+      "source": "Maximum value for indexed values.",
+      "translation": "索引值的最大值。",
+      "count": 2
+    },
+    {
+      "source": "Minimum value for indexed values.",
+      "translation": "索引值的最小值。",
+      "count": 2
+    },
+    {
+      "source": "empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> by default.",
+      "translation": "默认为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Index name either as plain value or as <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template\nexpression</code></a>. <br/>\nThe name will only be applied as is when defined on root level. For usage on nested or embedded structures the\nprovided name will be prefixed with the path leading to the entity. <br/>\n<br/>\nThe structure below\n\n<pre><code>\n@Document\nclass Root {\n  Hybrid hybrid;\n  Nested nested;\n}\n\n@Document\nclass Hybrid {\n  @GeoSpatialIndexed(name=\"index\") Point h1;\n  @GeoSpatialIndexed(name=\"#{@myBean.indexName}\") Point h2;\n}\n\nclass Nested {\n  @GeoSpatialIndexed(name=\"index\") Point n1;\n}\n</code>\n</pre>\n\nresolves in the following index structures\n\n<pre><code>\ndb.root.createIndex( { hybrid.h1: \"2d\" } , { name: \"hybrid.index\" } )\ndb.root.createIndex( { nested.n1: \"2d\" } , { name: \"nested.index\" } )\ndb.hybrid.createIndex( { h1: \"2d\" } , { name: \"index\" } )\ndb.hybrid.createIndex( { h2: \"2d\"} , { name: the value myBean.getIndexName() returned } )\n</code>\n</pre>",
+      "translation": "索引名称可以是纯值，也可以是 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>。<br/>\n当名称定义在根级别时，将原样应用该名称。对于嵌套或嵌入结构的使用，提供的名称将前缀上指向该实体的路径。<br/>\n<br/>\n以下结构\n\n<pre><code>\n@Document\nclass Root {\n  Hybrid hybrid;\n  Nested nested;\n}\n\n@Document\nclass Hybrid {\n  @GeoSpatialIndexed(name=\"index\") Point h1;\n  @GeoSpatialIndexed(name=\"#{@myBean.indexName}\") Point h2;\n}\n\nclass Nested {\n  @GeoSpatialIndexed(name=\"index\") Point n1;\n}\n</code>\n</pre>\n\n解析为以下索引结构\n\n<pre><code>\ndb.root.createIndex( { hybrid.h1: \"2d\" } , { name: \"hybrid.index\" } )\ndb.root.createIndex( { nested.n1: \"2d\" } , { name: \"nested.index\" } )\ndb.hybrid.createIndex( { h1: \"2d\" } , { name: \"index\" } )\ndb.hybrid.createIndex( { h2: \"2d\"} , { name: the value myBean.getIndexName() returned } )\n</code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Index name either as plain value or as <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template\nexpression</code></a>.",
+      "translation": "索引名称可以是纯值，也可以是 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>template expression</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "The type of the geospatial index. Default is <a href=\"GeoSpatialIndexType.html#GEO_2D\"><code>GeoSpatialIndexType.GEO_2D</code></a>",
+      "translation": "地理空间索引的类型。默认为<a href=\"GeoSpatialIndexType.html#GEO_2D\"><code>GeoSpatialIndexType.GEO_2D</code></a>",
+      "count": 1
+    },
+    {
+      "source": "Mark a field to be indexed using MongoDB's geospatial indexing feature.",
+      "translation": "使用 MongoDB 的地理空间索引功能标记字段以进行索引。",
+      "count": 1
+    },
+    {
+      "source": "The type of the geospatial index.",
+      "translation": "地理空间索引的类型。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。",
+      "count": 1
+    },
+    {
+      "source": "If set to true then MongoDB will ignore the given index name and instead generate a new name. Defaults\nto false.",
+      "translation": "如果设置为 true，MongoDB 将忽略给定的索引名称并生成一个新名称。默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"GeoSpatialIndexType.html#GEO_2D\"><code>GeoSpatialIndexType.GEO_2D</code></a> by default.",
+      "translation": "默认情况下为 <a href=\"GeoSpatialIndexType.html#GEO_2D\"><code>GeoSpatialIndexType.GEO_2D</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Jon Brisbin, Laurent Canet, Thomas Darimont, Christoph Strobl, Mark Paluch",
+      "translation": "Jon Brisbin，Laurent Canet，Thomas Darimont，Christoph Strobl，Mark Paluch",
+      "count": 1
+    },
+    {
+      "source": "false by default.",
+      "translation": "默认值为 false。",
+      "count": 1
+    },
+    {
+      "source": "-180 by default.",
+      "translation": "默认值为 -180。",
+      "count": 1
+    },
+    {
+      "source": "+180 by default.",
+      "translation": "默认值为 +180。",
+      "count": 1
+    },
+    {
+      "source": "26 by default.",
+      "translation": "默认值为 26。",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}

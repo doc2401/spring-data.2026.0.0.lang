@@ -1,0 +1,156 @@
+{
+  "created_at": "2026-06-18 15:27:42",
+  "updated_at": "2026-06-18 15:27:42",
+  "stats": {
+    "total_entries": 28,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 30,
+    "entries_with_hits": 28,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0714285714285714,
+    "usage_percentage": 0.0028
+  },
+  "items": [
+    {
+      "source": "Returns the value of the <code>primaryTerm</code> record component.",
+      "translation": "返回 `<code>primaryTerm</code>` 记录组件的值。",
+      "count": 2
+    },
+    {
+      "source": "Returns the value of the <code>sequenceNumber</code> record component.",
+      "translation": "返回 `<code>sequenceNumber</code>` 记录组件的值。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "This allows to implement optimistic locking pattern for full-update scenario, when an entity is first read from\nElasticsearch and then gets reindexed with new _content. Index operations will throw an\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/OptimisticLockingFailureException.html\" title=\"class or interface in org.springframework.dao\"><code>OptimisticLockingFailureException</code></a> if the seq_no + primary_term pair already has\ndifferent values for the given document. See Elasticsearch documentation for more information:\nhttps://www.elastic.co/guide/en/elasticsearch/reference/current/optimistic-concurrency-control.html",
+      "translation": "这允许在全量更新场景中实现乐观锁模式：首先从 Elasticsearch 读取实体，然后使用新的 _content 重新索引。如果给定文档的 seq_no + primary_term 对的值已发生变化，索引操作将抛出 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/OptimisticLockingFailureException.html\" title=\"class or interface in org.springframework.dao\"><code>OptimisticLockingFailureException</code></a>。有关更多信息，请参阅 Elasticsearch 文档：https://www.elastic.co/guide/en/elasticsearch/reference/current/optimistic-concurrency-control.html",
+      "count": 1
+    },
+    {
+      "source": "A property of this type is implicitly @<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Transient.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Transient</code></a> and never gets included\ninto a mapping at Elasticsearch side.",
+      "translation": "此类属性隐式标记为@<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Transient.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Transient</code></a>，因此永远不会被包含到 Elasticsearch 端的映射中。",
+      "count": 1
+    },
+    {
+      "source": "A container for seq_no and primary_term values. When an entity class contains a field of this type, it will be\nautomatically filled with SeqNoPrimaryTerm instance on read operations (like get or search), and also, when the\nSeqNoPrimaryTerm is not null and filled with seq_no and primary_term, they will be sent to Elasticsearch\nwhen indexing such an entity.",
+      "translation": "一个用于存储 seq_no 和 primary_term 值的容器。当实体类包含此类型的字段时，在读取操作（如 get 或 search）期间会自动填充 SeqNoPrimaryTerm 实例；同时，当 SeqNoPrimaryTerm 不为空且已填充了 seq_no 和 primary_term 时，这些值将在索引该实体时被发送到 Elasticsearch。",
+      "count": 1
+    },
+    {
+      "source": "A SeqNoPrimaryTerm instance cannot contain an invalid or unassigned seq_no or primary_term.",
+      "translation": "SeqNoPrimaryTerm 实例不能包含无效的或未分配的 seq_no 或 primary_term。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether some other object is \"equal to\" this one. The objects are equal if the other object is of the same class and if all the record components are equal. All components in this record class are compared with the <code>compare</code> method from their corresponding wrapper classes.",
+      "translation": "指示某些其他对象是否“等于”当前对象。如果另一个对象属于同一类，且所有记录组件均相等，则这两个对象相等。本记录类中的所有组件均通过其对应包装类的<code>compare</code>方法进行比较。",
+      "count": 1
+    },
+    {
+      "source": "Creates an instance of SeqNoPrimaryTerm with the given seq_no and primary_term.",
+      "translation": "使用给定的 seq_no 和 primary_term 创建 SeqNoPrimaryTerm 实例。",
+      "count": 1
+    },
+    {
+      "source": "Indicates whether some other object is \"equal to\" this one.",
+      "translation": "指示其他对象是否“等于”此对象。",
+      "count": 1
+    },
+    {
+      "source": "Returns a hash code value for this object.",
+      "translation": "返回此对象的哈希码值。",
+      "count": 1
+    },
+    {
+      "source": "Returns a string representation of this record class.",
+      "translation": "返回此记录类的字符串表示形式。",
+      "count": 1
+    },
+    {
+      "source": "Creates an instance of SeqNoPrimaryTerm with the given seq_no and primary_term. The passed values are validated:\nsequenceNumber must be non-negative, primaryTerm must be positive. If validation fails, an IllegalArgumentException\nis thrown.",
+      "translation": "使用给定的 seq_no 和 primary_term 创建 SeqNoPrimaryTerm 实例。对传入的值进行验证：sequenceNumber 必须为非负数，primaryTerm 必须为正数。如果验证失败，则抛出 IllegalArgumentException。",
+      "count": 1
+    },
+    {
+      "source": "Returns a string representation of this record class. The representation contains the name of the class, followed by the name and value of each of the record components.",
+      "translation": "返回此记录类的字符串表示形式。该表示形式包含类名，随后是各记录组件的名称和值。",
+      "count": 1
+    },
+    {
+      "source": "Returns a hash code value for this object. The value is derived from the hash code of each of the record components.",
+      "translation": "返回此对象的哈希码值。该值由每个记录组件的哈希码推导得出。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html\" title=\"class or interface in java.lang\">Record</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html#toString()\" title=\"类或接口在 java.lang 中\">toString</a></code> 方法位于 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html\" title=\"类或接口在 java.lang 中\">Record</a></code> 类中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html\" title=\"class or interface in java.lang\">Record</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html#hashCode()\" title=\"类或接口在 java.lang 中\">hashCode</a></code> 方法位于 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html\" title=\"类或接口在 java.lang 中\">Record</a></code> 类中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html\" title=\"class or interface in java.lang\">Record</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html#equals(java.lang.Object)\" title=\"类或接口在 java.lang 中\">equals</a></code> 方法位于 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html\" title=\"类或接口在 java.lang 中\">Record</a></code> 类中",
+      "count": 1
+    },
+    {
+      "source": "<code>true</code> if this object is the same as the <code>o</code> argument; <code>false</code> otherwise.",
+      "translation": "如果该对象与参数 `o` 相同，则返回 `<code>true</code>`；否则返回 `<code>false</code>`。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if seq_no or primary_term is not valid",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 seq_no 或 primary_term 无效",
+      "count": 1
+    },
+    {
+      "source": "<code>sequenceNumber</code> - seq_no, must not be negative",
+      "translation": "<code>sequenceNumber</code> - seq_no，不得为负数",
+      "count": 1
+    },
+    {
+      "source": "<code>primaryTerm</code> - primary_term, must be positive",
+      "translation": "<code>primaryTerm</code> - 主术语，必须为正数",
+      "count": 1
+    },
+    {
+      "source": "<code>o</code> - the object with which to compare",
+      "translation": "<code>o</code> - 用于比较的对象",
+      "count": 1
+    },
+    {
+      "source": "the value of the <code>sequenceNumber</code> record component",
+      "translation": "<code>sequenceNumber</code> 记录组件的值",
+      "count": 1
+    },
+    {
+      "source": "the value of the <code>primaryTerm</code> record component",
+      "translation": "`primaryTerm` 记录组件的值",
+      "count": 1
+    },
+    {
+      "source": "Roman Puchkovskiy",
+      "translation": "罗曼·普乔夫斯基",
+      "count": 1
+    },
+    {
+      "source": "a string representation of this object",
+      "translation": "该对象的字符串表示形式",
+      "count": 1
+    },
+    {
+      "source": "a hash code value for this object",
+      "translation": "该对象的哈希码值",
+      "count": 1
+    }
+  ]
+}

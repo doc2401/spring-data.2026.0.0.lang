@@ -1,0 +1,176 @@
+{
+  "created_at": "2026-06-19 09:10:23",
+  "updated_at": "2026-06-19 09:10:23",
+  "stats": {
+    "total_entries": 32,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 47,
+    "entries_with_hits": 32,
+    "entries_without_hits": 0,
+    "hit_rate": 1.46875,
+    "usage_percentage": 0.0031999999999999997
+  },
+  "items": [
+    {
+      "source": "Starts a Redis Stream consumer that consumes <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>records</code></a> from the <a href=\"../connection/stream/StreamOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>stream</code></a>.",
+      "translation": "启动一个 Redis Stream 消费者，从指定的流中消费<a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>records</code></a>。该流由<a href=\"../connection/stream/StreamOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>stream</code></a>定义。",
+      "count": 3
+    },
+    {
+      "source": "Flux of inbound <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>Record</code></a>s.",
+      "translation": "入站<a href=\"../connection/stream/Record.html\" title=\"org.springframework.data.redis.connection.stream 中的接口\"><code>Record</code></a>的流。",
+      "count": 3
+    },
+    {
+      "source": "<code>streamOffset</code> - the stream along its offset.",
+      "translation": "<code>streamOffset</code> - 沿偏移量的流。",
+      "count": 3
+    },
+    {
+      "source": "Starts a Redis Stream consumer that consumes <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>records</code></a> from the <a href=\"../connection/stream/StreamOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>stream</code></a>. Records\nare consumed from Redis and delivered on the returned <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> when requests are made on the Flux. The receiver\nis closed when the returned <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> terminates.",
+      "translation": "启动一个 Redis Stream 消费者，从指定的 <a href=\"../connection/stream/StreamOffset.html\" title=\"类 org.springframework.data.redis.connection.stream.StreamOffset\"><code>stream</code></a> 中消费 <a href=\"../connection/stream/Record.html\" title=\"接口 org.springframework.data.redis.connection.stream.Record\"><code>records</code></a>。记录将从 Redis 中消费，并在对返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"类或接口 reactor.core.publisher.Flux\"><code>Flux</code></a> 发出请求时通过该 Flux 交付。当返回的 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"类或接口 reactor.core.publisher.Flux\"><code>Flux</code></a> 终止时，接收器将被关闭。",
+      "count": 3
+    },
+    {
+      "source": "Create a new <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> using <a href=\"../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>string serializers</code></a> given\n<a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a>.",
+      "translation": "使用 <a href=\"../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a> 创建一个新的 <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a>，前提是提供了 <a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> given <a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a> and <a href=\"StreamReceiver.StreamReceiverOptions.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamReceiver.StreamReceiverOptions</code></a>.",
+      "translation": "根据 <a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>ReactiveRedisConnectionFactory</code></a> 和 <a href=\"StreamReceiver.StreamReceiverOptions.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamReceiver.StreamReceiverOptions</code></a> 创建一个新的 <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> Offset using a particular record Id: Start with the given offset and use the last\nseen <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的记录 ID 创建偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> Last consumed: Start with the latest offset (<code>$</code>) and use latest offset\n(<code>$</code>) for subsequent reads.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。",
+      "count": 2
+    },
+    {
+      "source": "the new <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a>.",
+      "translation": "新的<a href=\"StreamReceiver.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamReceiver</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>connectionFactory</code> - must not be null.",
+      "translation": "<code>connectionFactory</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>consumer</code> - consumer group, must not be null.",
+      "translation": "<code>consumer</code> - 消费者组，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "Once created, a <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> can subscribe to a Redis Stream and consume incoming <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>records</code></a>.\nConsider a <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"class or interface in reactor.core.publisher\"><code>Flux</code></a> of <a href=\"../connection/stream/Record.html\" title=\"interface in org.springframework.data.redis.connection.stream\"><code>Record</code></a> infinite. Cancelling the <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"class or interface in org.reactivestreams\"><code>Subscription</code></a>\nterminates eventually background polling. Records are converted using <a href=\"../serializer/RedisSerializationContext.SerializationPair.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>key and value\nserializers</code></a> to support various serialization strategies. <br/>\n<a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> supports three modes of stream consumption:",
+      "translation": "创建后，<a href=\"StreamReceiver.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamReceiver</code></a> 可以订阅 Redis Stream 并消费传入的 <a href=\"../connection/stream/Record.html\" title=\"org.springframework.data.redis.connection.stream 中的接口\"><code>records</code></a>。\n假设 <a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\" title=\"reactor.core.publisher 中的类或接口\"><code>Flux</code></a> 包含无限个 <a href=\"../connection/stream/Record.html\" title=\"org.springframework.data.redis.connection.stream 中的接口\"><code>Record</code></a>，取消 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Subscription.html\" title=\"org.reactivestreams 中的类或接口\"><code>Subscription</code></a> 最终会终止后台轮询。记录将通过 <a href=\"../serializer/RedisSerializationContext.SerializationPair.html\" title=\"org.springframework.data.redis.serializer 中的接口\"><code>key 和 value 序列化器</code></a> 进行转换，以支持多种序列化策略。<br/>\n<a href=\"StreamReceiver.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamReceiver</code></a> 支持三种流消费模式：",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> propagates errors during stream reads and deserialization as terminal error signal by default.\nConfiguring a <a href=\"StreamReceiver.StreamReceiverOptions.html#getResumeFunction()\"><code>resume function</code></a> allows conditional resumption by\ndropping the record or by propagating the error to terminate the subscription.",
+      "translation": "<a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> 默认将流读取和反序列化过程中的错误传播为终端错误信号。通过配置 <a href=\"StreamReceiver.StreamReceiverOptions.html#getResumeFunction()\"><code>恢复函数</code></a>，可以实现条件恢复：即丢弃记录或将错误传播以终止订阅。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "See the following example code how to use <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a>:",
+      "translation": "请参见以下示例代码，了解如何使用<a href=\"StreamReceiver.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamReceiver</code></a>：",
+      "count": 1
+    },
+    {
+      "source": "Every record must be acknowledged using\n<a href=\"../connection/ReactiveStreamCommands.html#xAck(java.nio.ByteBuffer,java.lang.String,java.lang.String...)\"><code>ReactiveStreamCommands.xAck(ByteBuffer, String, String...)</code></a>",
+      "translation": "每条记录都必须使用 <a href=\"../connection/ReactiveStreamCommands.html#xAck(java.nio.ByteBuffer,java.lang.String,java.lang.String...)\"><code>ReactiveStreamCommands.xAck(ByteBuffer, String, String...)</code></a> 进行确认。",
+      "count": 1
+    },
+    {
+      "source": "Every record must be acknowledged using\n<a href=\"../core/ReactiveStreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>ReactiveStreamOperations.acknowledge(Object, String, String...)</code></a> after\nprocessing.",
+      "translation": "每条记录在处理之后都必须使用 <a href=\"../core/ReactiveStreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>ReactiveStreamOperations.acknowledge(Object, String, String...)</code></a> 进行确认。",
+      "count": 1
+    },
+    {
+      "source": "Every record is acknowledged when received.",
+      "translation": "所有记录在收到时均予以确认。",
+      "count": 1
+    },
+    {
+      "source": "Options for <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a>.",
+      "translation": "<a href=\"StreamReceiver.html\" title=\"org.springframework.data.redis.stream 中的接口\"><code>StreamReceiver</code></a> 的选项。",
+      "count": 1
+    },
+    {
+      "source": "Builder for <a href=\"StreamReceiver.StreamReceiverOptions.html\" title=\"class in org.springframework.data.redis.stream\"><code>StreamReceiver.StreamReceiverOptions</code></a>.",
+      "translation": "<code>StreamReceiver.StreamReceiverOptions</code> 的构建器。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> Last consumed: Start with the latest offset (<code>$</code>) and use the last seen\n<a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并使用上次看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Using a <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> with external\n<a href=\"../core/ReactiveStreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>acknowledge</code></a>",
+      "translation": "使用带有外部 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> 的 <a href=\"../core/ReactiveStreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>acknowledge</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> Last consumed: Start with the last consumed record by the consumer (<code>&gt;</code>)\nand use the last consumed record by the consumer (<code>&gt;</code>) for subsequent reads.",
+      "translation": "<a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从消费者最后消费的记录开始（<code>&gt;</code>），并在后续读取中使用消费者最后消费的记录（<code>&gt;</code>）。",
+      "count": 1
+    },
+    {
+      "source": "Using a <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> with auto-acknowledge",
+      "translation": "使用带有自动确认功能的<a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-K\"><code>K</code> - Stream key and Stream field type.</span>",
+      "translation": "<span id=\"type-param-K\"><code>K</code> - 流密钥和流字段类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"type-param-V\"><code>V</code> - Stream value type.</span>",
+      "translation": "<span id=\"type-param-V\"><code>V</code> - 流值类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - must not be null.",
+      "translation": "<code>options</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Eddie McDaniel",
+      "translation": "马克·帕卢赫，埃迪·麦克丹尼尔",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "A receiver to consume Redis Streams using reactive infrastructure.",
+      "translation": "一个用于通过响应式基础设施消费 Redis Streams 的接收器。",
+      "count": 1
+    },
+    {
+      "source": "<ul>\n<li>Standalone</li>\n<li>使用带有外部 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> 的 <a href=\"../core/ReactiveStreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>acknowledge</code></a></li>\n<li>使用带有自动确认功能的<a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></li>\n</ul>\nReading from a stream requires polling and a strategy to advance stream offsets. Depending on the initial\n<a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>, <a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> applies an individual strategy to obtain the next <a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>:\n<br/><strong>Standalone</strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的记录 ID 创建偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并使用上次看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><br/><strong>Using <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的记录 ID 创建偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从消费者最后消费的记录开始（<code>&gt;</code>），并在后续读取中使用消费者最后消费的记录（<code>&gt;</code>）。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><strong>Note: Using <a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> bears the chance of dropped records as records can arrive in the time\nduring polling is suspended. Use recordId's as offset or <a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> to minimize the chance of\nrecord loss.</strong>",
+      "translation": "<ul>\n<li>独立模式</li>\n<li>使用带有外部 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a> 的 <a href=\"../core/ReactiveStreamOperations.html#acknowledge(K,java.lang.String,java.lang.String...)\"><code>acknowledge</code></a></li>\n<li>使用带有自动确认功能的 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></li>\n</ul>\n从流中读取需要轮询以及推进流偏移量的策略。根据初始 <a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>，<a href=\"StreamReceiver.html\" title=\"interface in org.springframework.data.redis.stream\"><code>StreamReceiver</code></a> 会应用不同的策略来获取下一个 <a href=\"../connection/stream/ReadOffset.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>ReadOffset</code></a>：\n<br/><strong>独立模式</strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的记录 ID 创建偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并使用上次看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><br/><strong>使用 <a href=\"../connection/stream/Consumer.html\" title=\"class in org.springframework.data.redis.connection.stream\"><code>Consumer</code></a></strong><ul>\n<li><a href=\"../connection/stream/ReadOffset.html#from(java.lang.String)\"><code>ReadOffset.from(String)</code></a> 使用特定的记录 ID 创建偏移量：从给定的偏移量开始，并使用最后看到的 <a href=\"../connection/stream/Record.html#getId()\"><code>record Id</code></a>。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 最后消费：从消费者最后消费的记录开始（<code>&gt;</code>），并在后续读取中使用消费者最后消费的记录（<code>&gt;</code>）。</li>\n<li><a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 最后消费：从最新偏移量（<code>$</code>）开始，并在后续读取中使用最新偏移量（<code>$</code>）。</li>\n</ul><strong>注意：使用 <a href=\"../connection/stream/ReadOffset.html#latest()\"><code>ReadOffset.latest()</code></a> 存在记录丢失的风险，因为在轮询暂停期间记录可能会到达。请使用记录 ID 作为偏移量或 <a href=\"../connection/stream/ReadOffset.html#lastConsumed()\"><code>ReadOffset.lastConsumed()</code></a> 以最大限度地减少记录丢失的可能性。</strong>",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">ReactiveRedisConnectionFactory factory = …;\n\nStreamReceiver&lt;String, String, String&gt; receiver = StreamReceiver.create(factory);\nFlux&lt;MapRecord&lt;String, String, String&gt;&gt; records = receiver.receive(StreamOffset.fromStart(\"my-stream\"));\n\nrecordFlux.doOnNext(record -&gt; …);\n</pre>",
+      "translation": "<pre class=\"code\">ReactiveRedisConnectionFactory factory = …;\n\nStreamReceiver&lt;String, String, String&gt; receiver = StreamReceiver.create(factory);\nFlux&lt;MapRecord&lt;String, String, String&gt;&gt; records = receiver.receive(StreamOffset.fromStart(\"my-stream\"));\n\nrecordFlux.doOnNext(record -&gt; …);\n</pre>",
+      "count": 1
+    }
+  ]
+}

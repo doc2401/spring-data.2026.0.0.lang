@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-06-19 09:07:16",
+  "updated_at": "2026-06-19 09:07:16",
+  "stats": {
+    "total_entries": 16,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 19,
+    "entries_with_hits": 16,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1875,
+    "usage_percentage": 0.0015999999999999999
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a> instance.",
+      "translation": "创建一个新的<a href=\"RedisMessageConverters.Builder.html\" title=\"org.springframework.data.redis.serializer 中的接口\"><code>RedisMessageConverters.Builder</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "Return the configured <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>.",
+      "translation": "返回配置的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"org.springframework.messaging.converter 中的类或接口\"><code>MessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "the configured <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>.",
+      "translation": "配置的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"org.springframework.messaging.converter 中的类或接口\"><code>MessageConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<strong>Note:</strong><code>RedisMessageConverters</code> uses Spring Data Redis's <a href=\"RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>s for JSON\nserialization. Its JSON serialization format and behavior might slightly differ from Spring Messaging's\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/JacksonJsonMessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>JacksonJsonMessageConverter</code></a>. If you wish to use Spring Messaging's\nvariant then configure the desired converter through <a href=\"RedisMessageConverters.Builder.html#addCustomConverter(org.springframework.messaging.converter.MessageConverter)\"><code>RedisMessageConverters.Builder.addCustomConverter(MessageConverter)</code></a>.",
+      "translation": "<strong>注意：</strong><code>RedisMessageConverters</code> 使用 Spring Data Redis 的 <a href=\"RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a> 进行 JSON 序列化。其 JSON 序列化格式和行为可能与 Spring Messaging 的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/JacksonJsonMessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>JacksonJsonMessageConverter</code></a> 略有不同。如果您希望使用 Spring Messaging 的变体，则可以通过 <a href=\"RedisMessageConverters.Builder.html#addCustomConverter(org.springframework.messaging.converter.MessageConverter)\"><code>RedisMessageConverters.Builder.addCustomConverter(MessageConverter)</code></a> 配置所需的转换器。",
+      "count": 1
+    },
+    {
+      "source": "By default, it registers a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/StringMessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>StringMessageConverter</code></a>, a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/ByteArrayMessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>ByteArrayMessageConverter</code></a>, and JSON converters\nif a supported library (Jackson, Gson, JSON-B, or Kotlin Serialization) is present on the classpath.",
+      "translation": "默认情况下，它会注册一个<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/StringMessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>StringMessageConverter</code></a>、一个<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/ByteArrayMessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>ByteArrayMessageConverter</code></a>以及 JSON 转换器，前提是类路径中存在支持的库（Jackson、Gson、JSON-B 或 Kotlin Serialization）。",
+      "count": 1
+    },
+    {
+      "source": "Converters are provided with <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/DefaultContentTypeResolver.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>DefaultContentTypeResolver</code></a> support, and\nthe default content type can be configured via <a href=\"RedisMessageConverters.Builder.html#defaultMimeType(org.springframework.util.MimeType)\"><code>RedisMessageConverters.Builder.defaultMimeType(MimeType)</code></a>.",
+      "translation": "转换器提供了对<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/DefaultContentTypeResolver.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>DefaultContentTypeResolver</code></a>的支持，并且默认内容类型可以通过<a href=\"RedisMessageConverters.Builder.html#defaultMimeType(org.springframework.util.MimeType)\"><code>RedisMessageConverters.Builder.defaultMimeType(MimeType)</code></a>进行配置。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> by applying the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>builder consumer</code></a> a <a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a>\ninstance. The <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> is then built and returned.",
+      "translation": "通过应用给定的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>builder consumer</code></a> 到 <a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a> 实例，创建一个新的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>。随后构建该 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> 并返回。",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> by applying the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>builder consumer</code></a> a <a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a>\ninstance.",
+      "translation": "通过应用给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html\" title=\"class or interface in java.util.function\"><code>builder consumer</code></a>来构建一个<a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a>实例，从而创建一个新的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> with a default configuration. This is equivalent to\n<code>builder().build().getConverter()</code> and uses class path scanning to determine available\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>s such as Jackson, Gson, JSON-B, or Kotlin Serialization.",
+      "translation": "创建一个具有默认配置的新的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>。这等同于<code>builder().build().getConverter()</code>，并使用类路径扫描来确定可用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>，例如 Jackson、Gson、JSON-B 或 Kotlin Serialization。",
+      "count": 1
+    },
+    {
+      "source": "A builder for configuring a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a>.",
+      "translation": "用于配置 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"org.springframework.messaging.converter 中的类或接口\"><code>MessageConverter</code></a> 的构建器。",
+      "count": 1
+    },
+    {
+      "source": "Create a new <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> with a default configuration.",
+      "translation": "创建一个具有默认配置的新的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"org.springframework.messaging.converter 中的类或接口\"><code>MessageConverter</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a>",
+      "translation": "一个新的<a href=\"RedisMessageConverters.Builder.html\" title=\"org.springframework.data.redis.serializer 中的接口\"><code>RedisMessageConverters.Builder</code></a>",
+      "count": 1
+    },
+    {
+      "source": "Ilyass Bougati, Mark Paluch",
+      "translation": "伊利亚斯·布加蒂，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Converter configuration that provides a <a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a> to create a composite <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> for Redis\nlistener endpoints.",
+      "translation": "提供 <a href=\"RedisMessageConverters.Builder.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisMessageConverters.Builder</code></a> 以创建用于 Redis 监听器端点的复合 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/messaging/converter/MessageConverter.html\" title=\"class or interface in org.springframework.messaging.converter\"><code>MessageConverter</code></a> 的转换器配置。",
+      "count": 1
+    }
+  ]
+}

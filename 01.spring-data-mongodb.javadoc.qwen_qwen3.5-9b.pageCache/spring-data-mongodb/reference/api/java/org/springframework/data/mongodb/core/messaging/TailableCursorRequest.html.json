@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-06-19 02:21:59",
+  "updated_at": "2026-06-19 02:21:59",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 1.368421052631579,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"TailableCursorRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest</code></a> with options, passing <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>messages</code></a> to the given\n<a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a>.",
+      "translation": "创建一个带有选项的新 <a href=\"TailableCursorRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest</code></a>，并将 <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>messages</code></a> 传递给指定的\n<a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain the <a href=\"MessageListener.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>MessageListener</code></a> to publish <a href=\"Message.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>messages</code></a> to.",
+      "translation": "获取<a href=\"MessageListener.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>MessageListener</code></a>，用于发布<a href=\"Message.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>messages</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a shiny new <a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a> and start defining options in this fancy fluent way. Just\ndon't forget to call <a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html#build()\"><code>build()</code></a> when done.",
+      "translation": "获取一个崭新的<a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a>，并以这种优雅的链式方式开始定义选项。只需在完成时记得调用<a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html#build()\"><code>build()</code></a>即可。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a shiny new <a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a> and start defining options in this fancy fluent way.",
+      "translation": "获取一个崭新的<a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a>，并以这种优雅的链式方式开始定义选项。",
+      "count": 2
+    },
+    {
+      "source": "Get the <a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest.RequestOptions</code></a> specifying the requests behaviour.",
+      "translation": "获取指定请求行为的<a href=\"SubscriptionRequest.RequestOptions.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest.RequestOptions</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "new instance of <a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a>.",
+      "translation": "创建一个新的<a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest</code></a> implementation to be used to listen to query results in a\n<a href=\"https://docs.mongodb.com/manual/core/capped-collections/\">Capped Collection</a> using a\n<a href=\"https://docs.mongodb.com/manual/core/tailable-cursors/\">Tailable Cursor</a>.\n<br/>\nThe most trivial use case is subscribing to all events of a specific <code>collection</code>.\n\n<pre><code>\n    TailableCursorRequest&lt;Document&gt; request = new TailableCursorRequest&lt;&gt;(System.out::println, () -&gt; \"collection-name\");\n</code>\n</pre>\n\n<a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a> offers a fluent API for creating <a href=\"TailableCursorRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest</code></a> with\n<a href=\"TailableCursorRequest.TailableCursorRequestOptions.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest.TailableCursorRequestOptions</code></a> in one go.\n\n<pre>  <code>\n      TailableCursorRequest&lt;Document&gt; request = TailableCursorRequest.builder()\n          .collection(\"collection-name\")\n          .publishTo(System.out::println)\n          .build();\n  </code>\n</pre>",
+      "translation": "<a href=\"SubscriptionRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\"><code>SubscriptionRequest</code></a> 的实现，用于通过 <a href=\"https://docs.mongodb.com/manual/core/tailable-cursors/\">可尾随游标</a> 监听 <a href=\"https://docs.mongodb.com/manual/core/capped-collections/\">定长集合</a> 中的查询结果。\n<br/>\n最简单的用例是订阅特定 <code>collection</code> 的所有事件。\n\n<pre><code>\n    TailableCursorRequest&lt;Document&gt; request = new TailableCursorRequest&lt;&gt;(System.out::println, () -&gt; \"collection-name\");\n</code>\n</pre>\n\n<a href=\"TailableCursorRequest.TailableCursorRequestBuilder.html\" title=\"org.springframework.data.mongodb.core.messaging 中的类\"><code>TailableCursorRequest.TailableCursorRequestBuilder</code></a> 提供流式 API，可一次性创建带有 <a href=\"TailableCursorRequest.TailableCursorRequestOptions.html\" title=\"org.springframework.data.mongodb.core.messaging 中的类\"><code>TailableCursorRequest.TailableCursorRequestOptions</code></a> 的 <a href=\"TailableCursorRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的类\"><code>TailableCursorRequest</code></a>。\n\n<pre>  <code>\n      TailableCursorRequest&lt;Document&gt; request = TailableCursorRequest.builder()\n          .collection(\"collection-name\")\n          .publishTo(System.out::println)\n          .build();\n  </code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest.RequestOptions</code></a> implementation specific to a <a href=\"TailableCursorRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest</code></a>.",
+      "translation": "<a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\"><code>SubscriptionRequest.RequestOptions</code></a> 针对 <a href=\"TailableCursorRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest</code></a> 的实现特定选项。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"SubscriptionRequest.html#getMessageListener()\">SubscriptionRequest</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"SubscriptionRequest.html#getMessageListener()\">SubscriptionRequest</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"SubscriptionRequest.html#getRequestOptions()\">SubscriptionRequest</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"SubscriptionRequest.html#getRequestOptions()\">SubscriptionRequest</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Builder for creating <a href=\"TailableCursorRequest.html\" title=\"class in org.springframework.data.mongodb.core.messaging\"><code>TailableCursorRequest</code></a>.",
+      "translation": "用于创建<a href=\"TailableCursorRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的类\"><code>TailableCursorRequest</code></a>的构建器。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SubscriptionRequest.html#getMessageListener()\">getMessageListener</a></code> in interface <code><a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest</a>&lt;org.bson.Document, <a href=\"#type-param-T\" title=\"type parameter in TailableCursorRequest\">T</a>, <a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest.RequestOptions</a>&gt;</code>",
+      "translation": "<code><a href=\"SubscriptionRequest.html#getMessageListener()\">getMessageListener</a></code> 接口 <code><a href=\"SubscriptionRequest.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\">SubscriptionRequest</a>&lt;org.bson.Document, <a href=\"#type-param-T\" title=\"TailableCursorRequest 中的类型参数\">T</a>, <a href=\"SubscriptionRequest.RequestOptions.html\" title=\"org.springframework.data.mongodb.core.messaging 中的接口\">SubscriptionRequest.RequestOptions</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"SubscriptionRequest.html#getRequestOptions()\">getRequestOptions</a></code> in interface <code><a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest</a>&lt;org.bson.Document, <a href=\"#type-param-T\" title=\"type parameter in TailableCursorRequest\">T</a>, <a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest.RequestOptions</a>&gt;</code>",
+      "translation": "<code><a href=\"SubscriptionRequest.html#getRequestOptions()\">getRequestOptions</a></code> 在接口<code><a href=\"SubscriptionRequest.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest</a>&lt;org.bson.Document, <a href=\"#type-param-T\" title=\"type parameter in TailableCursorRequest\">T</a>, <a href=\"SubscriptionRequest.RequestOptions.html\" title=\"interface in org.springframework.data.mongodb.core.messaging\">SubscriptionRequest.RequestOptions</a>&gt;</code>中",
+      "count": 1
+    },
+    {
+      "source": "<code>messageListener</code> - must not be null.",
+      "translation": "<code>messageListener</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - must not be null.",
+      "translation": "<code>options</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

@@ -1,55 +1,125 @@
 {
   "created_at": "2026-06-16 12:54:55",
-  "updated_at": "2026-06-16 12:54:55",
+  "updated_at": "2026-06-18 07:30:14",
   "stats": {
-    "total_entries": 52,
+    "total_entries": 58,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 58,
-    "entries_with_hits": 52,
+    "total_hits": 83,
+    "entries_with_hits": 58,
     "entries_without_hits": 0,
-    "hit_rate": 1.1153846153846154,
-    "usage_percentage": 0.0052
+    "hit_rate": 1.4310344827586208,
+    "usage_percentage": 0.0058
   },
   "items": [
     {
       "source": "Returns an <a href=\"QuerydslBindings.AliasingPathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.AliasingPathBinder</code></a> for the given <code>Path</code> to define bindings for them.",
       "translation": "返回一个用于给定 <code>Path</code> 的 <a href=\"QuerydslBindings.AliasingPathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.AliasingPathBinder</code></a>，以便定义它们的绑定。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns a new <a href=\"QuerydslBindings.PathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.PathBinder</code></a> for the given <code>Path</code>s to define bindings for them.",
       "translation": "返回一个新的<a href=\"QuerydslBindings.PathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.PathBinder</code></a>，用于为给定的<code>Path</code>定义绑定。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Creates a new <a href=\"QuerydslBindings.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings</code></a> instance.",
       "translation": "创建一个新的<a href=\"QuerydslBindings.html\" title=\"org.springframework.data.querydsl.binding 包中的类\"><code>QuerydslBindings</code></a>实例。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns a new <a href=\"QuerydslBindings.TypeBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.TypeBinder</code></a> for the given type.",
       "translation": "返回给定类型的新的<a href=\"QuerydslBindings.TypeBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.TypeBinder</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>paths</code> - must not be null or empty.",
+      "translation": "<code>paths</code> 不能为 null 或空。",
+      "count": 3
+    },
+    {
+      "source": "<a href=\"QuerydslBindings.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings</code></a> are usually manipulated using a <a href=\"QuerydslBinderCustomizer.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>QuerydslBinderCustomizer</code></a>, either implemented\ndirectly or using a default method on a Spring Data repository.",
+      "translation": "<a href=\"QuerydslBindings.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings</code></a> 通常通过 <a href=\"QuerydslBinderCustomizer.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>QuerydslBinderCustomizer</code></a> 进行操纵，该接口可以直接实现，也可以在 Spring Data 仓库上使用默认方法。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"SingleValueBinding.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>SingleValueBinding</code></a> for the given <a href=\"../../core/PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a>.",
+      "translation": "返回给定<a href=\"../../core/PropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>PropertyPath</code></a>的<a href=\"SingleValueBinding.html\" title=\"org.springframework.data.querydsl.binding 中的接口\"><code>SingleValueBinding</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"SingleValueBinding.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>SingleValueBinding</code></a> for the given <a href=\"../../core/PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a>. Prefers a path configured for the\nspecific path but falls back to the builder registered for a given type.",
+      "translation": "返回给定<a href=\"../../core/PropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>PropertyPath</code></a>的<a href=\"SingleValueBinding.html\" title=\"org.springframework.data.querydsl.binding 中的接口\"><code>SingleValueBinding</code></a>。优先使用为该特定路径配置的绑定，若未找到则回退到为给定类型注册的构建器。",
+      "count": 2
+    },
+    {
+      "source": "Exclude properties from binding. Exclusion of all properties of a nested type can be done by exclusion on a higher\nlevel. E.g. <code>address</code> would exclude both <code>address.city</code> and <code>address.street</code>.",
+      "translation": "排除绑定属性。可以通过更高层级的排除来排除嵌套类型的所有属性。例如，排除<code>address</code>将同时排除<code>address.city</code>和<code>address.street</code>。",
+      "count": 2
+    },
+    {
+      "source": "A special <a href=\"QuerydslBindings.PathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.PathBinder</code></a> that additionally registers the binding under a dedicated alias.",
+      "translation": "一个特殊的<a href=\"QuerydslBindings.PathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.PathBinder</code></a>，它还会将绑定注册到专用别名下。",
+      "count": 2
+    },
+    {
+      "source": "A binder for <code>Path</code>s.",
+      "translation": "用于绑定<code>Path</code>的绑定器。",
+      "count": 2
+    },
+    {
+      "source": "A binder for types.",
+      "translation": "类型的绑定器。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether to exclude all properties for which no explicit binding has been defined or it has been explicitly\nallowed.",
+      "translation": "返回是否应排除所有未定义显式绑定或已明确允许的属性。",
+      "count": 2
+    },
+    {
+      "source": "Exclude properties from binding.",
+      "translation": "排除属性绑定。",
+      "count": 2
+    },
+    {
+      "source": "Include properties for binding.",
+      "translation": "包含用于绑定的属性。",
+      "count": 2
+    },
+    {
+      "source": "Include properties for binding. Include the property considered a binding candidate.",
+      "translation": "包含用于绑定的属性。将视为绑定候选项的属性包含在内。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether to exclude all properties for which no explicit binding has been defined or it has been explicitly\nallowed. This defaults to false which means that for properties without an explicitly defined binding a\ntype specific default binding will be applied.",
+      "translation": "返回是否排除所有未定义显式绑定或已明确允许的属性。默认值为 false，这意味着对于没有显式定义绑定的属性，将应用特定于类型的默认绑定。",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 2
+    },
+    {
+      "source": "<code>path</code> - must not be null.",
+      "translation": "<code>path</code> 不能为 null。",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
+      "count": 1
     },
     {
       "source": "<dt>Parameters:</dt>\n<dd><code>paths</code> - must not be null or empty.</dd>",
       "translation": "<dt>参数：</dt>\n<dd><code>paths</code> - 不能为 null 或空。</dd>",
-      "count": 2
-    },
-    {
-      "source": "<a href=\"QuerydslBindings.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings</code></a> are usually manipulated using a <a href=\"QuerydslBinderCustomizer.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>QuerydslBinderCustomizer</code></a>, either implemented\ndirectly or using a default method on a Spring Data repository.",
-      "translation": "<a href=\"QuerydslBindings.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings</code></a> 通常通过 <a href=\"QuerydslBinderCustomizer.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>QuerydslBinderCustomizer</code></a> 进行操纵，该接口可以直接实现，也可以在 Spring Data 仓库上使用默认方法。",
-      "count": 1
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
       "count": 1
     },
     {
@@ -98,28 +168,8 @@
       "count": 1
     },
     {
-      "source": "Returns the <a href=\"SingleValueBinding.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>SingleValueBinding</code></a> for the given <a href=\"../../core/PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a>.",
-      "translation": "返回给定<a href=\"../../core/PropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>PropertyPath</code></a>的<a href=\"SingleValueBinding.html\" title=\"org.springframework.data.querydsl.binding 中的接口\"><code>SingleValueBinding</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"SingleValueBinding.html\" title=\"interface in org.springframework.data.querydsl.binding\"><code>SingleValueBinding</code></a> for the given <a href=\"../../core/PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a>. Prefers a path configured for the\nspecific path but falls back to the builder registered for a given type.",
-      "translation": "返回给定<a href=\"../../core/PropertyPath.html\" title=\"org.springframework.data.core 中的接口\"><code>PropertyPath</code></a>的<a href=\"SingleValueBinding.html\" title=\"org.springframework.data.querydsl.binding 中的接口\"><code>SingleValueBinding</code></a>。优先使用为该特定路径配置的绑定，若未找到则回退到为给定类型注册的构建器。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "Exclude properties from binding. Exclusion of all properties of a nested type can be done by exclusion on a higher\nlevel. E.g. <code>address</code> would exclude both <code>address.city</code> and <code>address.street</code>.",
-      "translation": "排除绑定属性。可以通过更高层级的排除来排除嵌套类型的所有属性。例如，排除<code>address</code>将同时排除<code>address.city</code>和<code>address.street</code>。",
-      "count": 1
-    },
-    {
-      "source": "A special <a href=\"QuerydslBindings.PathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.PathBinder</code></a> that additionally registers the binding under a dedicated alias.",
-      "translation": "一个特殊的<a href=\"QuerydslBindings.PathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.PathBinder</code></a>，它还会将绑定注册到专用别名下。",
       "count": 1
     },
     {
@@ -138,43 +188,8 @@
       "count": 1
     },
     {
-      "source": "A binder for <code>Path</code>s.",
-      "translation": "用于绑定<code>Path</code>的绑定器。",
-      "count": 1
-    },
-    {
       "source": "Spring Data Core",
       "translation": "Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "A binder for types.",
-      "translation": "类型的绑定器。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether to exclude all properties for which no explicit binding has been defined or it has been explicitly\nallowed.",
-      "translation": "返回是否应排除所有未定义显式绑定或已明确允许的属性。",
-      "count": 1
-    },
-    {
-      "source": "Exclude properties from binding.",
-      "translation": "排除属性绑定。",
-      "count": 1
-    },
-    {
-      "source": "Include properties for binding.",
-      "translation": "包含用于绑定的属性。",
-      "count": 1
-    },
-    {
-      "source": "Include properties for binding. Include the property considered a binding candidate.",
-      "translation": "包含用于绑定的属性。将视为绑定候选项的属性包含在内。",
-      "count": 1
-    },
-    {
-      "source": "Returns whether to exclude all properties for which no explicit binding has been defined or it has been explicitly\nallowed. This defaults to false which means that for properties without an explicitly defined binding a\ntype specific default binding will be applied.",
-      "translation": "返回是否排除所有未定义显式绑定或已明确允许的属性。默认值为 false，这意味着对于没有显式定义绑定的属性，将应用特定于类型的默认绑定。",
       "count": 1
     },
     {
@@ -223,11 +238,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Constructor Summary",
       "translation": "构造函数摘要",
       "count": 1
@@ -270,6 +280,26 @@
     {
       "source": "is returned which - as the name suggests - allows aliasing of\npaths, i.e. exposing the path under a different name.",
       "translation": "返回的内容——正如名称所示——允许路径别名化，即通过不同的名称暴露该路径。",
+      "count": 1
+    },
+    {
+      "source": "<code>type</code> - must not be null.",
+      "translation": "<code>type</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Oliver Gierke, Mark Paluch, Johannes Englmeier",
+      "translation": "Christoph Strobl，Oliver Gierke，Mark Paluch，Johannes Englmeier",
+      "count": 1
+    },
+    {
+      "source": "can be null.",
+      "translation": "可以为空。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"QuerydslBindings.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings</code></a> allows definition of path specific bindings.\n\n<pre><code>\nnew QuerydslBindings() {\n  {\n    bind(QUser.user.address.city).first((path, value) -&gt; path.like(value.toString()));\n    bind(String.class).first((path, value) -&gt; path.like(value.toString()));\n  }\n}\n</code>\n</pre>\n\nThe bindings can either handle a single - see <a href=\"QuerydslBindings.PathBinder.html#first(org.springframework.data.querydsl.binding.SingleValueBinding)\"><code>QuerydslBindings.PathBinder.first(SingleValueBinding)</code></a> - (the first in case\nmultiple ones are supplied) or multiple - see <a href=\"QuerydslBindings.PathBinder.html#all(org.springframework.data.querydsl.binding.MultiValueBinding)\"><code>QuerydslBindings.PathBinder.all(MultiValueBinding)</code></a> - value binding. If exactly\none path is deployed, an <a href=\"QuerydslBindings.AliasingPathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.AliasingPathBinder</code></a> is returned which - as the name suggests - allows aliasing of\npaths, i.e. exposing the path under a different name.",
+      "translation": "<a href=\"QuerydslBindings.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings</code></a> 允许定义特定路径的绑定。\n\n<pre><code>\nnew QuerydslBindings() {\n  {\n    bind(QUser.user.address.city).first((path, value) -&gt; path.like(value.toString()));\n    bind(String.class).first((path, value) -&gt; path.like(value.toString()));\n  }\n}\n</code>\n</pre>\n\n绑定可以处理单个值——参见 <a href=\"QuerydslBindings.PathBinder.html#first(org.springframework.data.querydsl.binding.SingleValueBinding)\"><code>QuerydslBindings.PathBinder.first(SingleValueBinding)</code></a>（如果在提供多个绑定时，则使用第一个）——或多个值的绑定——参见 <a href=\"QuerydslBindings.PathBinder.html#all(org.springframework.data.querydsl.binding.MultiValueBinding)\"><code>QuerydslBindings.PathBinder.all(MultiValueBinding)</code></a>。如果恰好部署了一个路径，则会返回一个 <a href=\"QuerydslBindings.AliasingPathBinder.html\" title=\"class in org.springframework.data.querydsl.binding\"><code>QuerydslBindings.AliasingPathBinder</code></a>——顾名思义，它允许对路径进行别名化，即以不同的名称暴露该路径。",
       "count": 1
     }
   ]

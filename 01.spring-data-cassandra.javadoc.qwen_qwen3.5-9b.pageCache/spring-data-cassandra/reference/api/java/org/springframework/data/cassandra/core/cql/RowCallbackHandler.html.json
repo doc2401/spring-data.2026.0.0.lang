@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-06-18 07:57:40",
+  "updated_at": "2026-06-18 07:57:40",
+  "stats": {
+    "total_entries": 11,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 11,
+    "entries_with_hits": 11,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0011
+  },
+  "items": [
+    {
+      "source": "In contrast to a <a href=\"ResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ResultSetExtractor</code></a>, a <a href=\"RowCallbackHandler.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowCallbackHandler</code></a> object is typically stateful: It keeps the\nresult state within the object, to be available for later inspection.",
+      "translation": "与<a href=\"ResultSetExtractor.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>ResultSetExtractor</code></a>不同，<a href=\"RowCallbackHandler.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowCallbackHandler</code></a>对象通常是状态化的：它在对象内部保存结果状态，以便稍后进行检查。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Consider using a <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> instead if you need to map exactly one result object per row, assembling them into\na List.",
+      "translation": "如果需要在每行映射一个结果对象并将其组装为 List，可以考虑使用 <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Exactly what the implementation chooses to do is up to it: A trivial implementation might simply count rows, while\nanother implementation might build an XML document.",
+      "translation": "具体实现选择做什么完全由它决定：一个简单的实现可能只是统计行数，而另一个实现可能会构建一个 XML 文档。",
+      "count": 1
+    },
+    {
+      "source": "Implementations must implement this method to process each row of data in the\n<code>ResultSet</code>.",
+      "translation": "实现类必须实现此方法以处理 <code>ResultSet</code> 中的每一行数据。",
+      "count": 1
+    },
+    {
+      "source": "<code>com.datastax.oss.driver.api.core.DriverException</code> - if a <code>DriverException</code> is encountered getting column values (that is, there's no need\n          to catch <code>DriverException</code>).",
+      "translation": "<code>com.datastax.oss.driver.api.core.DriverException</code> - 如果在获取列值时遇到 <code>DriverException</code>（即无需捕获 <code>DriverException</code>）。",
+      "count": 1
+    },
+    {
+      "source": "<code>row</code> - the <code>Row</code> to process (pre-initialized for the current row).",
+      "translation": "<code>row</code> - 要处理的 <code>Row</code>（当前行已预初始化）。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "An interface used by <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> for processing rows of a\n<code>ResultSet</code> on a per-row basis. Implementations of this interface perform\nthe actual work of processing each row but don't need to worry about exception handling. <code>DriverException</code>s\nwill be caught and handled by the calling <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>.",
+      "translation": "这是一个由<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>使用的接口，用于逐行处理<code>ResultSet</code>中的每一行。该接口的实现负责实际执行每行的处理工作，但无需担心异常处理。<code>DriverException</code>将被调用的<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>捕获并处理。",
+      "count": 1
+    },
+    {
+      "source": "Implementations must implement this method to process each row of data in the\n<code>ResultSet</code>. This method is only supposed to extract values of the\ncurrent row.",
+      "translation": "实现类必须实现此方法以处理 <code>ResultSet</code> 中的每一行数据。此方法仅用于提取当前行的值。",
+      "count": 1
+    }
+  ]
+}

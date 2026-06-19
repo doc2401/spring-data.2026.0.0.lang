@@ -1,36 +1,56 @@
 {
   "created_at": "2026-06-16 16:30:05",
-  "updated_at": "2026-06-16 16:30:05",
+  "updated_at": "2026-06-18 07:42:55",
   "stats": {
-    "total_entries": 33,
+    "total_entries": 44,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 34,
-    "entries_with_hits": 33,
+    "total_hits": 53,
+    "entries_with_hits": 44,
     "entries_without_hits": 0,
-    "hit_rate": 1.0303030303030303,
-    "usage_percentage": 0.0033000000000000004
+    "hit_rate": 1.2045454545454546,
+    "usage_percentage": 0.0044
   },
   "items": [
     {
       "source": "Returns a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a> of entities meeting the paging restriction provided in the <code>Pageable</code> object.",
       "translation": "返回一个满足<code>Pageable</code>对象中提供的分页限制的实体<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Note: Cassandra supports single-field <code>IN</code> queries only. When using <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> with multiple components,\nuse <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById(ID)\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository.findById(Object)</code></a>.",
       "translation": "注意：Cassandra 仅支持单字段的 <code>IN</code> 查询。当使用包含多个组件的 <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> 时，请使用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById(ID)\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository.findById(Object)</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Repositories based on <a href=\"CassandraRepository.html\" title=\"interface in org.springframework.data.cassandra.repository\"><code>CassandraRepository</code></a> can define either a single primary key, use a primary key class or\na compound primary key without a primary key class. Types using a compound primary key without a primary key class\nmust use <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> to declare their key value.",
       "translation": "基于<a href=\"CassandraRepository.html\" title=\"org.springframework.data.cassandra.repository 中的接口\"><code>CassandraRepository</code></a>的存储库可以定义单个主键、使用主键类，或使用不带主键类的复合主键。对于使用不带主键类的复合主键的类型，必须使用<a href=\"../core/mapping/MapId.html\" title=\"org.springframework.data.cassandra.core.mapping 中的接口\"><code>MapId</code></a>来声明其键值。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entities. Assumes the given entities to have not been persisted yet and thus will optimize the\ninsert over a call to <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a>. Prefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a> to avoid the usage of\nstore specific API.",
+      "translation": "插入给定的实体。假定这些实体尚未持久化，因此将优化对<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a>的调用。为避免使用特定于存储层的 API，建议使用<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entity. Assumes the instance to be new to be able to apply insertion optimizations. Use the\nreturned instance for further operations as the save operation might have changed the entity instance completely.\nPrefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
+      "translation": "插入给定的实体。假定该实例是新的，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository.save(Object)</code></a>，以避免使用特定于存储的 API。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entities.",
+      "translation": "插入给定的实体。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entity.",
+      "translation": "插入给定的实体。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.repository.CrudRepository\">Methods inherited from interface <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#method-summary\" title=\"class or interface in org.springframework.data.repository\">CrudRepository</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#count()\" title=\"class or interface in org.springframework.data.repository\">count</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#delete(T)\" title=\"class or interface in org.springframework.data.repository\">delete</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteAll()\" title=\"class or interface in org.springframework.data.repository\">deleteAll</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\">deleteAll</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteAllById(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\">deleteAllById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#deleteById(ID)\" title=\"class or interface in org.springframework.data.repository\">deleteById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#existsById(ID)\" title=\"class or interface in org.springframework.data.repository\">existsById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById(ID)\" title=\"class or interface in org.springframework.data.repository\">findById</a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository\">save</a></code>",
@@ -63,18 +83,8 @@
       "count": 1
     },
     {
-      "source": "Inserts the given entities. Assumes the given entities to have not been persisted yet and thus will optimize the\ninsert over a call to <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a>. Prefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a> to avoid the usage of\nstore specific API.",
-      "translation": "插入给定的实体。假定这些实体尚未持久化，因此将优化对<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a>的调用。为避免使用特定于存储层的 API，建议使用<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#saveAll(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\"><code>ListCrudRepository.saveAll(Iterable)</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Abstract Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab3\" onclick=\"show('method-summary-table', 'method-summary-table-tab3', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">抽象方法</button>",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given entity. Assumes the instance to be new to be able to apply insertion optimizations. Use the\nreturned instance for further operations as the save operation might have changed the entity instance completely.\nPrefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
-      "translation": "插入给定的实体。假定该实例是新的，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository.save(Object)</code></a>，以避免使用特定于存储的 API。",
       "count": 1
     },
     {
@@ -90,16 +100,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given entities.",
-      "translation": "插入给定的实体。",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given entity.",
-      "translation": "插入给定的实体。",
       "count": 1
     },
     {
@@ -175,6 +175,61 @@
     {
       "source": "interface that allows the specification of a type for the\nidentity of the",
       "translation": "允许指定身份类型的接口",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findAllById(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\">findAllById</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html\" title=\"class or interface in org.springframework.data.repository\">CrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CassandraRepository\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"type parameter in CassandraRepository\">ID</a>&gt;</code>",
+      "translation": "<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findAllById(java.lang.Iterable)\" title=\"类或接口 org.springframework.data.repository\">findAllById</a> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html\" title=\"类或接口 org.springframework.data.repository\">CrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"CassandraRepository 中的类型参数\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"CassandraRepository 中的类型参数\">ID</a>&gt;</code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#findAllById(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\">findAllById</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html\" title=\"class or interface in org.springframework.data.repository\">ListCrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CassandraRepository\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"type parameter in CassandraRepository\">ID</a>&gt;</code>",
+      "translation": "接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html\" title=\"class or interface in org.springframework.data.repository\">ListCrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in CassandraRepository\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"type parameter in CassandraRepository\">ID</a>&gt;</code> 中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/ListCrudRepository.html#findAllById(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository\">findAllById</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"class or interface in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - thrown when using <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> with multiple\n          key components.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/InvalidDataAccessApiUsageException.html\" title=\"class or interface in org.springframework.dao\">InvalidDataAccessApiUsageException</a></code> - 在使用 <a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> 且包含多个键组件时抛出。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"class or interface in org.springframework.data.domain\"><code>Slice</code></a> of entities.",
+      "translation": "<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Slice.html\" title=\"org.springframework.data.domain 中的类或接口\"><code>Slice</code></a> 类型的实体。",
+      "count": 1
+    },
+    {
+      "source": "<code>pageable</code> - must not be null.",
+      "translation": "<code>pageable</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entity</code> - must not be null.",
+      "translation": "<code>entity</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entities</code> - must not be null.",
+      "translation": "<code>entities</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Alex Shvid, Matthew T. Adams, Mark Paluch",
+      "translation": "亚历克斯·什维德，马修·T·亚当斯，马克·帕卢奇",
+      "count": 1
+    },
+    {
+      "source": "the saved entity",
+      "translation": "已保存的实体",
+      "count": 1
+    },
+    {
+      "source": "the saved entities",
+      "translation": "已保存的实体",
+      "count": 1
+    },
+    {
+      "source": "Cassandra-specific extension of the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository</code></a> interface that allows the specification of a type for the\nidentity of the <a href=\"../core/mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>@Table</code></a> (or <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Persistable.html\" title=\"class or interface in org.springframework.data.domain\"><code>@Persistable</code></a>) type.",
+      "translation": "Cassandra 专用的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html\" title=\"class or interface in org.springframework.data.repository\"><code>CrudRepository</code></a> 接口扩展，允许指定 <a href=\"../core/mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>@Table</code></a>（或 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Persistable.html\" title=\"class or interface in org.springframework.data.domain\"><code>@Persistable</code></a>）类型的标识类型。",
       "count": 1
     }
   ]

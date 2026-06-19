@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-06-19 07:51:35",
+  "updated_at": "2026-06-19 07:51:35",
+  "stats": {
+    "total_entries": 11,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 11,
+    "entries_with_hits": 11,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0011
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<code>KEYS</code> is supported for standalone and clustered (sharded) Redis operation modes.",
+      "translation": "`KEYS` 支持独立和集群（分片）Redis 操作模式。",
+      "count": 1
+    },
+    {
+      "source": "Note that using the <code>SCAN</code> strategy might be not supported on all drivers and Redis operation modes.",
+      "translation": "请注意，使用 `<code>SCAN`</code> 策略可能并不支持所有驱动程序和 Redis 操作模式。",
+      "count": 1
+    },
+    {
+      "source": "Collection of predefined <a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a> implementations using the Redis <code>KEYS</code> or <code>SCAN</code> command.",
+      "translation": "使用 Redis 的 `KEYS` 或 `SCAN` 命令收集预定义的 `<a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a>` 实现。",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a> using a single <code>KEYS</code> and <code>DEL</code> command to remove all matching keys.",
+      "translation": "使用单个 `KEYS` 和 `DEL` 命令来删除所有匹配键的<a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a> using a <code>SCAN</code> cursors and potentially multiple <code>DEL</code> commands to remove all\nmatching keys.",
+      "translation": "使用 `<code>SCAN`</code> 游标和多个可能删除所有匹配键的 `<code>DEL`</code> 命令的<a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "batching strategy using <code>KEYS</code>.",
+      "translation": "使用<code>KEYS</code>的批处理策略。",
+      "count": 1
+    },
+    {
+      "source": "batching strategy using <code>SCAN</code>.",
+      "translation": "使用<code>SCAN</code>的批处理策略。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl, John Blum, Yong-Hyun Kim",
+      "translation": "Mark Paluch，Christoph Strobl，John Blum，Yong-Hyun Kim",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a> using a single <code>KEYS</code> and <code>DEL</code> command to remove all matching keys.\n<code>KEYS</code> scans the entire keyspace of the Redis database and can block the Redis worker thread for a long time\non large keyspaces.",
+      "translation": "使用单个 `KEYS` 和 `DEL` 命令来删除所有匹配键的<a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a>。  \n`KEYS` 会扫描 Redis 数据库的整个键空间，在大型键空间中可能会长时间阻塞 Redis 工作线程。",
+      "count": 1
+    },
+    {
+      "source": "A <a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a> using a <code>SCAN</code> cursors and potentially multiple <code>DEL</code> commands to remove all\nmatching keys. This strategy allows a configurable batch size to optimize for scan batching.",
+      "translation": "使用 `<code>SCAN` 游标和多个 `<code>DEL` 命令来删除所有匹配键的<a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a>。该策略允许配置批处理大小以优化扫描批处理。",
+      "count": 1
+    }
+  ]
+}

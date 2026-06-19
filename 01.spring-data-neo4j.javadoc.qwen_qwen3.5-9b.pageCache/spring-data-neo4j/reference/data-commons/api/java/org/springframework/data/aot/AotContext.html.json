@@ -1,0 +1,271 @@
+{
+  "created_at": "2026-06-19 03:29:48",
+  "updated_at": "2026-06-19 03:29:48",
+  "stats": {
+    "total_entries": 51,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 75,
+    "entries_with_hits": 51,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4705882352941178,
+    "usage_percentage": 0.0051
+  },
+  "items": [
+    {
+      "source": "Create an <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a> backed by the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"class or interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>.",
+      "translation": "创建一个由给定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"类或接口在 org.springframework.beans.factory\"><code>BeanFactory</code></a> 支持的 <a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "since 4.0, use <a href=\"#getBeanFactory()\"><code>getBeanFactory()</code></a> and interact with the bean factory directly.",
+      "translation": "自 4.0 版本起，请使用<a href=\"#getBeanFactory()\"><code>getBeanFactory()</code></a>并直接与 Bean 工厂交互。",
+      "count": 4
+    },
+    {
+      "source": "since 4.0 as this isn't widely used and can be easily implemented within user code.",
+      "translation": "自 4.0 版本起，由于该功能使用不广泛且易于在用户代码中实现。",
+      "count": 4
+    },
+    {
+      "source": "Unset properties are considered being true.",
+      "translation": "未设置的属性被视为为真。",
+      "count": 2
+    },
+    {
+      "source": "Returns a reference to the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"class or interface in org.springframework.beans.factory.config\"><code>ConfigurableListableBeanFactory</code></a> backing this <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a>.",
+      "translation": "返回一个引用，指向支持此<a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"org.springframework.beans.factory.config 中的类或接口\"><code>ConfigurableListableBeanFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns a new <a href=\"../util/TypeScanner.html\" title=\"interface in org.springframework.data.util\"><code>TypeScanner</code></a> used to scan for <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a> that will be contributed to the AOT\nprocessing infrastructure.",
+      "translation": "返回一个新的<a href=\"../util/TypeScanner.html\" title=\"interface in org.springframework.data.util\"><code>TypeScanner</code></a>，用于扫描将贡献给 AOT 处理基础设施的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a <a href=\"AotTypeConfiguration.html\" title=\"interface in org.springframework.data.aot\"><code>AotTypeConfiguration</code></a> for the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/ResolvableType.html\" title=\"class or interface in org.springframework.core\"><code>ResolvableType</code></a> to customize the AOT processing for the\ngiven type.",
+      "translation": "获取一个针对给定 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/ResolvableType.html\" title=\"class or interface in org.springframework.core\"><code>ResolvableType</code></a> 的 <a href=\"AotTypeConfiguration.html\" title=\"interface in org.springframework.data.aot\"><code>AotTypeConfiguration</code></a>，以自定义该类型的 AOT 处理。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a <a href=\"AotTypeConfiguration.html\" title=\"interface in org.springframework.data.aot\"><code>AotTypeConfiguration</code></a> for the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/ResolvableType.html\" title=\"class or interface in org.springframework.core\"><code>ResolvableType</code></a> to customize the AOT processing for the\ngiven type. Repeated calls to the same type will result in merging the configuration.",
+      "translation": "获取给定 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/ResolvableType.html\" title=\"class or interface in org.springframework.core\"><code>ResolvableType</code></a> 的 <a href=\"AotTypeConfiguration.html\" title=\"interface in org.springframework.data.aot\"><code>AotTypeConfiguration</code></a>，以自定义该类型的 AOT 处理。对同一类型重复调用将合并配置。",
+      "count": 2
+    },
+    {
+      "source": "since 4.0, use <a href=\"#getTypeScanner()\"><code>getTypeScanner()</code></a> directly",
+      "translation": "自 4.0 版本起，请直接使用<a href=\"#getTypeScanner()\"><code>getTypeScanner()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Checks if repository code generation is enabled for a given module by checking environment variables for general\nenablement (<a href=\"#GENERATED_REPOSITORIES_ENABLED\"><code>GENERATED_REPOSITORIES_ENABLED</code></a>) and store-specific ones following the pattern\nspring.aot.&amp;lt;module-name&amp;gt;.repositories.enabled.",
+      "translation": "检查是否已为给定模块启用仓库代码生成，方法是检查环境变量以确认总体启用状态（<a href=\"#GENERATED_REPOSITORIES_ENABLED\"><code>GENERATED_REPOSITORIES_ENABLED</code></a>）以及遵循以下模式的特定存储启用状态：spring.aot.&amp;lt;module-name&amp;gt;.repositories.enabled。",
+      "count": 2
+    },
+    {
+      "source": "Checks if repository metadata file writing is enabled by checking environment variables for general enablement\n(<a href=\"#GENERATED_REPOSITORIES_JSON_ENABLED\"><code>GENERATED_REPOSITORIES_JSON_ENABLED</code></a>)",
+      "translation": "检查是否启用了仓库元数据文件的写入功能，通过检查环境变量中的通用启用状态（<a href=\"#GENERATED_REPOSITORIES_JSON_ENABLED\"><code>GENERATED_REPOSITORIES_JSON_ENABLED</code></a>）",
+      "count": 2
+    },
+    {
+      "source": "Returns a <a href=\"AotContext.IntrospectedBeanDefinition.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext.IntrospectedBeanDefinition</code></a> to obtain further detail about the underlying bean definition. An\nintrospected bean definition can also point to an absent bean definition.",
+      "translation": "返回一个 <a href=\"AotContext.IntrospectedBeanDefinition.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext.IntrospectedBeanDefinition</code></a> 以获取有关底层 Bean 定义的更多详细信息。一个已检查的 Bean 定义也可以指向一个不存在的 Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "Create a <code>AotContext</code> builder.",
+      "translation": "创建一个 `<code>AotContext</code>` 构建器。",
+      "count": 2
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by this <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a> to resolve <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>.",
+      "translation": "此<a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>所使用的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>用于解析<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>beanFactory</code> - reference to the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"class or interface in org.springframework.beans.factory\"><code>BeanFactory</code></a>; must not be null.",
+      "translation": "<code>beanFactory</code> - 对 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"class or interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> 的引用；不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "a new instance of <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a>.",
+      "translation": "一个<a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>的新实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>configurationConsumer</code> - configuration consumer function.",
+      "translation": "<code>configurationConsumer</code> - 配置消费者函数。",
+      "count": 2
+    },
+    {
+      "source": "the introspected bean definition.",
+      "translation": "内省后的 Bean 定义。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#GENERATED_REPOSITORIES_ENABLED\"><code>GENERATED_REPOSITORIES_ENABLED</code></a> acts as a main switch, if disabled, store specific flags have no effect.",
+      "translation": "<a href=\"#GENERATED_REPOSITORIES_ENABLED\"><code>GENERATED_REPOSITORIES_ENABLED</code></a> 作为主开关，若将其禁用，则特定标志将不生效。",
+      "count": 1
+    },
+    {
+      "source": "Mainly for internal use within the framework.",
+      "translation": "主要用于框架内部。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by this <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a> to resolve <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>. By default, this is\nthe same <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"class or interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> to resolve <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a> declared in bean\ndefinitions.",
+      "translation": "返回此 <a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a> 用于解析 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a> 所使用的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>。默认情况下，这是与 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"org.springframework.beans.factory 中的类或接口\"><code>BeanFactory</code></a> 用于解析 bean 定义中声明的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a> 所使用的相同 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the required <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by this <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a> to resolve <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>. By\ndefault, this is the same <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"class or interface in org.springframework.beans.factory\"><code>BeanFactory</code></a> to resolve <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>\ndeclared in bean definitions.",
+      "translation": "返回此 <a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a> 用于解析 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a> 所需的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>。默认情况下，这是与 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/BeanFactory.html\" title=\"org.springframework.beans.factory 中的类或接口\"><code>BeanFactory</code></a> 用于解析 bean 定义中声明的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a> 所使用的相同 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by this <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a> to resolve <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>.",
+      "translation": "返回此<a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>用于解析<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a>所使用的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns the required <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> used by this <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a> to resolve <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>.",
+      "translation": "返回此<a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>用于解析<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a>所需的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Scans for <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a> in the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>named packages</code></a> annotated with the store-specific\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>identifying annotations</code></a>.",
+      "translation": "扫描给定 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>named packages</code></a> 中的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>，这些类型带有特定存储库的\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>identifying annotations</code></a> 注解。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a href=\"AotContext.TypeIntrospector.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext.TypeIntrospector</code></a> to obtain further detail about a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> given its fully-qualified\ntype name",
+      "translation": "返回一个 <a href=\"AotContext.TypeIntrospector.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext.TypeIntrospector</code></a>，用于根据完全限定的类型名称获取有关 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> 的更多详细信息。",
+      "count": 1
+    },
+    {
+      "source": "Contribute type configurations to the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/generate/GenerationContext.html\" title=\"class or interface in org.springframework.aot.generate\"><code>GenerationContext</code></a>. This method is called once per\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/generate/GenerationContext.html\" title=\"class or interface in org.springframework.aot.generate\"><code>GenerationContext</code></a> after all type configurations have been registered.",
+      "translation": "向给定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/generate/GenerationContext.html\" title=\"class or interface in org.springframework.aot.generate\"><code>GenerationContext</code></a> 贡献类型配置。此方法在所有类型配置注册完成后，针对每个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/generate/GenerationContext.html\" title=\"class or interface in org.springframework.aot.generate\"><code>GenerationContext</code></a> 调用一次。",
+      "count": 1
+    },
+    {
+      "source": "Builder to create <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a> instances.",
+      "translation": "用于创建<a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>实例的构建器。",
+      "count": 1
+    },
+    {
+      "source": "Contribute type configurations to the given <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/generate/GenerationContext.html\" title=\"class or interface in org.springframework.aot.generate\"><code>GenerationContext</code></a>.",
+      "translation": "向给定的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/aot/generate/GenerationContext.html\" title=\"class or interface in org.springframework.aot.generate\"><code>GenerationContext</code></a>贡献类型配置。",
+      "count": 1
+    },
+    {
+      "source": "<code>identifyingAnnotations</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a> of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>Annotations</code></a> identifying store-specific model\n         <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>; must not be null.",
+      "translation": "<code>identifyingAnnotations</code> - 用于标识特定存储模型类型的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a>，其中包含 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/annotation/Annotation.html\" title=\"class or interface in java.lang.annotation\"><code>Annotations</code></a>；该值不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>typeName</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>name</code></a> of the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> to evaluate; must not be null.",
+      "translation": "<code>typeName</code> - 要评估的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> 的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>name</code></a>；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>packageNames</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"class or interface in java.util\"><code>Collection</code></a> of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>package names</code></a> to scan.",
+      "translation": "<code>packageNames</code> - 要扫描的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html\" title=\"java.util 中的类或接口\"><code>Collection</code></a>，包含 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>包名</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a reference to the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"class or interface in org.springframework.beans.factory.config\"><code>ConfigurableListableBeanFactory</code></a> backing this <a href=\"AotContext.html\" title=\"interface in org.springframework.data.aot\"><code>AotContext</code></a>.",
+      "translation": "对支持此<a href=\"AotContext.html\" title=\"org.springframework.data.aot 中的接口\"><code>AotContext</code></a>的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"org.springframework.beans.factory.config 中的类或接口\"><code>ConfigurableListableBeanFactory</code></a>的引用。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if no <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> is available.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果不可用任何 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"java.lang 中的类或接口\"><code>ClassLoader</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a <a href=\"../util/TypeScanner.html\" title=\"interface in org.springframework.data.util\"><code>TypeScanner</code></a> used to scan for <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a> that will be contributed to the AOT processing\n        infrastructure.",
+      "translation": "一个<a href=\"../util/TypeScanner.html\" title=\"interface in org.springframework.data.util\"><code>TypeScanner</code></a>用于扫描将贡献给 AOT 处理基础设施的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html\" title=\"class or interface in java.util\"><code>Set</code></a> of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>types</code></a> found during the scan.",
+      "translation": "扫描期间发现的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html\" title=\"java.util 中的类或接口\"><code>Set</code></a>，其中包含 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>types</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>environment</code> - reference to the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/Environment.html\" title=\"class or interface in org.springframework.core.env\"><code>Environment</code></a>; must not be null.",
+      "translation": "<code>environment</code> - 对 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/env/Environment.html\" title=\"org.springframework.core.env 中的类或接口\"><code>Environment</code></a> 的引用；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>moduleName</code> - name of the module. Can be null or empty, in which case it will only check\n         the general <a href=\"#GENERATED_REPOSITORIES_ENABLED\"><code>GENERATED_REPOSITORIES_ENABLED</code></a> flag.",
+      "translation": "<code>moduleName</code> - 模块名称。可为 null 或空，此时将仅检查通用标志 <a href=\"#GENERATED_REPOSITORIES_ENABLED\"><code>GENERATED_REPOSITORIES_ENABLED</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>reference</code> - <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/BeanReference.html\" title=\"class or interface in org.springframework.beans.factory.config\"><code>BeanReference</code></a> to the managed bean.",
+      "translation": "<code>reference</code> - 指向托管 Bean 的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/BeanReference.html\" title=\"org.springframework.beans.factory.config 中的类或接口\"><code>BeanReference</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>beanName</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> containing the name of the bean to evaluate; must not be null.",
+      "translation": "<code>beanName</code> - 包含要评估的 Bean 名称的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>resolvableType</code> - the resolvable type to configure.",
+      "translation": "<code>resolvableType</code> - 要配置的可解析类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>type</code> - the type to configure.",
+      "translation": "<code>type</code> - 要配置的類型。",
+      "count": 1
+    },
+    {
+      "source": "<code>generationContext</code> - the context to contribute the type configurations to.",
+      "translation": "<code>generationContext</code> - 用于贡献类型配置的上下文。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, John Blum, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，约翰·布鲁姆，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "indicator if repository code generation is enabled.",
+      "translation": "指示器，用于显示是否启用了仓库代码生成。",
+      "count": 1
+    },
+    {
+      "source": "indicator if repository metadata should be written",
+      "translation": "指示是否应写入仓库元数据的标志",
+      "count": 1
+    },
+    {
+      "source": "the type introspector for further type-based introspection.",
+      "translation": "用于进一步基于类型的类型检查器。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "The context in which the AOT processing happens. Grants access to the <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"class or interface in org.springframework.beans.factory.config\"><code>beanFactory</code></a> and <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a>.",
+      "translation": "AOT 处理发生的上下文。授予对 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.html\" title=\"class or interface in org.springframework.beans.factory.config\"><code>beanFactory</code></a> 和 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/ClassLoader.html\" title=\"class or interface in java.lang\"><code>ClassLoader</code></a> 的访问权限。",
+      "count": 1
+    }
+  ]
+}

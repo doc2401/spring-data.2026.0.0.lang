@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-06-19 00:58:07",
+  "updated_at": "2026-06-19 00:58:07",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1666666666666667,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "Trigger find execution by calling one of the terminating methods.",
+      "translation": "通过调用终止方法之一来触发查找执行。",
+      "count": 3
+    },
+    {
+      "source": "Start creating a find operation for the given domainType.",
+      "translation": "开始为给定的 domainType 创建查找操作。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ExecutableFindOperation.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ExecutableFindOperation</code></a> allows creation and execution of MongoDB find operations in a fluent API style.\n<br/>\nThe starting domainType is used for mapping the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> provided via <code>matching</code> into the\nMongoDB specific representation. By default, the originating domainType is also used for mapping back the\nresult from the <code>Document</code>. However, it is possible to define an different returnType via\n<code>as</code> to mapping the result.<br/>\nThe collection to operate on is by default derived from the initial domainType and can be defined there\nvia <a href=\"mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a>. Using <code>inCollection</code> allows to override the\ncollection name for the execution.\n\n<pre>    <code>\n        query(Human.class)\n            .inCollection(\"star-wars\")\n            .as(Jedi.class)\n            .matching(where(\"firstname\").is(\"luke\"))\n            .all();\n    </code>\n</pre>",
+      "translation": "<a href=\"ExecutableFindOperation.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ExecutableFindOperation</code></a> 支持以流式 API 风格创建并执行 MongoDB 查找操作。  \n<br/>\n起始的 <code>domainType</code> 用于将通过 <code>matching</code> 提供的 <a href=\"query/Query.html\" title=\"org.springframework.data.mongodb.core.query 中的类\"><code>Query</code></a> 映射到 MongoDB 特定表示形式。默认情况下，该起始 <code>domainType</code> 也用于将结果从 <code>Document</code> 映射回来；但也可以通过 <code>as</code> 定义不同的 <code>returnType</code> 来映射结果。<br/>\n要操作的数据集默认由初始的 <code>domainType</code> 推导得出，并可通过 <a href=\"mapping/Document.html\" title=\"org.springframework.data.mongodb.core.mapping 中的注解接口\"><code>Document</code></a> 在此处定义。使用 <code>inCollection</code> 可覆盖执行时使用的集合名称。\n\n<pre>    <code>\n        query(Human.class)\n            .inCollection(\"star-wars\")\n            .as(Jedi.class)\n            .matching(where(\"firstname\").is(\"luke\"))\n            .all();\n    </code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"ExecutableFindOperation.ExecutableFind.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ExecutableFindOperation.ExecutableFind</code></a> provides methods for constructing lookup operations in a fluent way.",
+      "translation": "<a href=\"ExecutableFindOperation.ExecutableFind.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ExecutableFindOperation.ExecutableFind</code></a> 提供了以流畅方式构建查找操作的方法。",
+      "count": 1
+    },
+    {
+      "source": "Trigger <code>geoNear</code> execution by calling one of the terminating methods.",
+      "translation": "通过调用终止方法之一来触发<code>geoNear</code>的执行。",
+      "count": 1
+    },
+    {
+      "source": "Result type override.",
+      "translation": "结果类型覆盖。",
+      "count": 1
+    },
+    {
+      "source": "Result restrictions.",
+      "translation": "结果限制。",
+      "count": 1
+    },
+    {
+      "source": "Distinct Find support.",
+      "translation": "支持独特发现。",
+      "count": 1
+    },
+    {
+      "source": "Collection override (Optional).",
+      "translation": "集合覆盖（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Result type override (Optional).",
+      "translation": "结果类型覆盖（可选）。",
+      "count": 1
+    },
+    {
+      "source": "Terminating operations invoking the actual query execution.",
+      "translation": "终止调用实际查询执行的操作。",
+      "count": 1
+    },
+    {
+      "source": "Terminating distinct find operations.",
+      "translation": "终止不同的查找操作。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ExecutableFindOperation.ExecutableFind.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ExecutableFindOperation.ExecutableFind</code></a>.",
+      "translation": "创建了一个新的<a href=\"ExecutableFindOperation.ExecutableFind.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ExecutableFindOperation.ExecutableFind</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if domainType is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 domainType 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>domainType</code> - must not be null.",
+      "translation": "<code>domainType</code> 不能为空。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

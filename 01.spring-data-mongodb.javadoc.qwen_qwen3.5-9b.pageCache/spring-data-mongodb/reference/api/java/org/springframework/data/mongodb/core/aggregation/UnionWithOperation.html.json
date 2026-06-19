@@ -1,0 +1,151 @@
+{
+  "created_at": "2026-06-19 01:59:06",
+  "updated_at": "2026-06-19 01:59:06",
+  "stats": {
+    "total_entries": 27,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 40,
+    "entries_with_hits": 27,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4814814814814814,
+    "usage_percentage": 0.0026999999999999997
+  },
+  "items": [
+    {
+      "source": "new instance of <a href=\"UnionWithOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>UnionWithOperation</code></a>.",
+      "translation": "创建<a href=\"UnionWithOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 中的类\"><code>UnionWithOperation</code></a>的新实例。",
+      "count": 5
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the required argument is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果必需的参数为 null。",
+      "count": 5
+    },
+    {
+      "source": "Turns the <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a> into a <code>Document</code> by using the given\n<a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a>.",
+      "translation": "使用给定的 <a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a> 将 <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a> 转换为 <code>Document</code>。",
+      "count": 2
+    },
+    {
+      "source": "Set the name of the collection from which pipeline results should be included in the result set.<br/>\nThe collection name is used to set the <code>coll</code> parameter of <code>$unionWith</code>.",
+      "translation": "设置要包含在结果集中的管道结果的集合名称。<br/>\n该集合名称用于设置 `$unionWith` 的 `coll` 参数。",
+      "count": 2
+    },
+    {
+      "source": "Set the aggregation pipeline stages to apply to the specified collection. The pipeline corresponds to the optional\n<code>pipeline</code> field of the <code>$unionWith</code> aggregation stage and is used to compute the documents going into\nthe result set.",
+      "translation": "将聚合管道阶段设置为应用于指定的集合。该管道对应于 `$unionWith` 聚合阶段的可选 `<code>pipeline</code>` 字段，并用于计算进入结果集的文档。",
+      "count": 2
+    },
+    {
+      "source": "Set the aggregation pipeline stages to apply to the specified collection.",
+      "translation": "将聚合管道阶段设置为应用于指定的集合。",
+      "count": 2
+    },
+    {
+      "source": "<code>aggregationStages</code> - the aggregation pipeline stages that compute the documents. Must not be null.",
+      "translation": "<code>aggregationStages</code> - 用于计算文档的聚合管道阶段。不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"https://docs.mongodb.com/master/reference/operator/aggregation/unionWith/\">$unionWith</a> aggregation\nstage (available since MongoDB 4.4) performs a union of two collections by combining pipeline results, potentially\ncontaining duplicates, into a single result set that is handed over to the next stage. <br/>\nIn order to remove duplicates it is possible to append a <a href=\"GroupOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>GroupOperation</code></a> right after\n<a href=\"UnionWithOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>UnionWithOperation</code></a>.\n<br/>\nIf the <a href=\"UnionWithOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>UnionWithOperation</code></a> uses a\n<a href=\"https://docs.mongodb.com/master/reference/operator/aggregation/unionWith/#unionwith-pipeline\">pipeline</a>\nto process documents, field names within the pipeline will be treated as is. In order to map domain type property\nnames to actual field names (considering potential <a href=\"../mapping/Field.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Field</code></a>\nannotations) make sure the enclosing aggregation is a <a href=\"TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a> and provide the target type for the\n<code>$unionWith</code> stage via <a href=\"#mapFieldsTo(java.lang.Class)\"><code>mapFieldsTo(Class)</code></a>.",
+      "translation": "<a href=\"https://docs.mongodb.com/master/reference/operator/aggregation/unionWith/\">$unionWith</a>聚合阶段（自 MongoDB 4.4 版本起可用）通过将管道结果合并，可能包含重复项，生成一个传递给下一阶段的单个结果集，从而执行两个集合的并集操作。<br/>\n若要移除重复项，可以在 <a href=\"UnionWithOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>UnionWithOperation</code></a> 之后追加一个 <a href=\"GroupOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>GroupOperation</code></a>。<br/>\n如果 <a href=\"UnionWithOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>UnionWithOperation</code></a> 使用<a href=\"https://docs.mongodb.com/master/reference/operator/aggregation/unionWith/#unionwith-pipeline\">管道</a>处理文档，则管道内的字段名将按原样处理。为了将域类型属性名映射到实际字段名（考虑潜在的 <a href=\"../mapping/Field.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Field</code></a> 注解），请确保封装的聚合操作是 <a href=\"TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a>，并通过 <a href=\"#mapFieldsTo(java.lang.Class)\"><code>mapFieldsTo(Class)</code></a> 为 <code>$unionWith</code> 阶段提供目标类型。",
+      "count": 1
+    },
+    {
+      "source": "Set domain type used for field name mapping of property references used by the <a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a>.\nRemember to also use a <a href=\"TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a> in the outer pipeline.<br/>\nIf not set, field names used within <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>pipeline operations</code></a> are taken as is.",
+      "translation": "设置用于属性引用的字段名映射的域类型。请记得在外层管道中也使用<a href=\"TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a>。<br/>如果未设置，则<pipeline operations</p><a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\">中使用的字段名将按原样使用。</a>",
+      "count": 1
+    },
+    {
+      "source": "Set the <a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a> to apply to the specified collection. The pipeline corresponds to the optional\n<code>pipeline</code> field of the <code>$unionWith</code> aggregation stage and is used to compute the documents going into\nthe result set.",
+      "translation": "将<a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a>设置为应用于指定的集合。该管道对应于<code>$unionWith</code>聚合阶段的可选<code>pipeline</code>字段，并用于计算进入结果集的文档。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">AggregationOperation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">AggregationOperation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"AggregationOperation.html#getOperator()\">AggregationOperation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"AggregationOperation.html#getOperator()\">AggregationOperation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Return the MongoDB operator that is used for this <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a>.",
+      "translation": "返回用于此<a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 包中的接口\"><code>AggregationOperation</code></a>的 MongoDB 运算符。",
+      "count": 1
+    },
+    {
+      "source": "Set domain type used for field name mapping of property references used by the <a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a>.",
+      "translation": "设置用于属性引用的字段名映射的域类型。",
+      "count": 1
+    },
+    {
+      "source": "Set the <a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a> to apply to the specified collection.",
+      "translation": "将<a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a>设置为应用于指定的集合。",
+      "count": 1
+    },
+    {
+      "source": "Return the MongoDB operator that is used for this <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a>. Aggregation operations should\nimplement this method to avoid document rendering.",
+      "translation": "返回用于此<a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 包中的接口\"><code>AggregationOperation</code></a>的 MongoDB 运算符。聚合操作应实现此方法以避免文档渲染。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">toDocument</a></code> in interface <code><a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\">AggregationOperation</a></code>",
+      "translation": "<code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">toDocument</a></code> 接口 <code><a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\">AggregationOperation</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AggregationOperation.html#getOperator()\">getOperator</a></code> in interface <code><a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\">AggregationOperation</a></code>",
+      "translation": "接口 <code><a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 中的接口\">AggregationOperation</a></code> 中的 <code><a href=\"AggregationOperation.html#getOperator()\">getOperator</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/master/reference/operator/aggregation/unionWith/\">Aggregation Pipeline Stage:\n     $unionWith</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/master/reference/operator/aggregation/unionWith/\">聚合管道阶段：$unionWith</a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<code>pipeline</code> - the <a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a> that computes the documents. Must not be null.",
+      "translation": "<pipeline> - 用于计算文档的<a href=\"AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a>。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>context</code> - the <a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a> to operate within. Must not be null.",
+      "translation": "<code>context</code> - 在此范围内操作的 <a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a>。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "the operator used for this <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a>.",
+      "translation": "此<a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 中的接口\"><code>AggregationOperation</code></a>所使用的运算符。",
+      "count": 1
+    },
+    {
+      "source": "<code>collection</code> - the MongoDB collection name. Must not be null.",
+      "translation": "<code>collection</code> - MongoDB 集合名称。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>domainType</code> - the domain type to map field names used in pipeline operations to. Must not be null.",
+      "translation": "<code>domainType</code> - 用于映射管道操作中使用的字段名的域类型。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    },
+    {
+      "source": "the Document",
+      "translation": "该文件",
+      "count": 1
+    }
+  ]
+}

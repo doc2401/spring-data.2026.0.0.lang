@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-06-18 20:05:22",
+  "updated_at": "2026-06-18 20:05:22",
+  "stats": {
+    "total_entries": 17,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 22,
+    "entries_with_hits": 17,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2941176470588236,
+    "usage_percentage": 0.0017
+  },
+  "items": [
+    {
+      "source": "Interface that specifies a basic set of key/value operations.",
+      "translation": "定义基本键值操作的接口。",
+      "count": 3
+    },
+    {
+      "source": "Resolves the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> object from given <a href=\"query/KeyValueQuery.html\" title=\"class in org.springframework.data.keyvalue.core.query\"><code>KeyValueQuery</code></a> and potentially converts it into a store specific\nrepresentation that can be used by the <a href=\"QueryEngine.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>QueryEngine</code></a> implementation.",
+      "translation": "从给定的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> 对象中解析出排序信息，并可能将其转换为特定存储实现所支持的表示形式，以便供 <a href=\"QueryEngine.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>QueryEngine</code></a> 使用。",
+      "count": 2
+    },
+    {
+      "source": "Base implementation for accessing and executing <a href=\"query/KeyValueQuery.html\" title=\"class in org.springframework.data.keyvalue.core.query\"><code>KeyValueQuery</code></a> against a <a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueAdapter</code></a>.",
+      "translation": "提供访问并针对 <a href=\"query/KeyValueQuery.html\" title=\"class in org.springframework.data.keyvalue.core.query\"><code>KeyValueQuery</code></a> 执行操作的基类实现，该操作作用于 <a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueAdapter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueAdapter</code></a> unifies access and shields the underlying key/value specific implementation.",
+      "translation": "<KeyValueAdapter> 统一了访问方式并屏蔽了底层键/值特定实现。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"QueryEngine.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>QueryEngine</code></a> implementation specific for executing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html\" title=\"class or interface in java.util.function\"><code>Predicate</code></a> based <a href=\"query/KeyValueQuery.html\" title=\"class in org.springframework.data.keyvalue.core.query\"><code>KeyValueQuery</code></a> against\n<a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueAdapter</code></a>.",
+      "translation": "针对执行基于 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html\" title=\"class or interface in java.util.function\"><code>Predicate</code></a> 的 <a href=\"query/KeyValueQuery.html\" title=\"class in org.springframework.data.keyvalue.core.query\"><code>KeyValueQuery</code></a> 的 <a href=\"QueryEngine.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>QueryEngine</code></a> 实现，该实现专门用于与 <a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueAdapter</code></a> 交互。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"SpelCriteria.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>SpelCriteria</code></a> allows to pass on a <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>SpelExpression</code></a> and <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/EvaluationContext.html\" title=\"class or interface in org.springframework.expression\"><code>EvaluationContext</code></a> to the actual query\nprocessor.",
+      "translation": "<a href=\"SpelCriteria.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>SpelCriteria</code></a> 允许将 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>SpelExpression</code></a> 和 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/EvaluationContext.html\" title=\"class or interface in org.springframework.expression\"><code>EvaluationContext</code></a> 传递给实际的查询处理器。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a> implementation to compare objects based on a <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/core/PropertyPath.html\" title=\"class or interface in org.springframework.data.core\"><code>PropertyPath</code></a>.",
+      "translation": "基于<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a>实现的比较器，用于根据<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/core/PropertyPath.html\" title=\"class or interface in org.springframework.data.core\"><code>PropertyPath</code></a>对对象进行比较。",
+      "count": 1
+    },
+    {
+      "source": "<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a> implementation using <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>SpelExpression</code></a>.",
+      "translation": "使用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/expression/spel/standard/SpelExpression.html\" title=\"class or interface in org.springframework.expression.spel.standard\"><code>SpelExpression</code></a> 实现的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html\" title=\"class or interface in java.util\"><code>Comparator</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Base implementation of <a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueAdapter</code></a> holds <a href=\"QueryEngine.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>QueryEngine</code></a> to delegate find and\ncount execution to.",
+      "translation": "<KeyValueAdapter>接口的<a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\">基本实现</a>包含一个<a href=\"QueryEngine.html\" title=\"class in org.springframework.data.keyvalue.core\"><code>QueryEngine</code></a>，用于委托执行查找和计数操作。",
+      "count": 1
+    },
+    {
+      "source": "Repository implementation backed by generic <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> instances.",
+      "translation": "由通用<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"java.util 中的类或接口\"><code>Map</code></a>实例支持的存储库实现。",
+      "count": 1
+    },
+    {
+      "source": "Resolves the criteria object from given <a href=\"query/KeyValueQuery.html\" title=\"class in org.springframework.data.keyvalue.core.query\"><code>KeyValueQuery</code></a>.",
+      "translation": "从给定的<a href=\"query/KeyValueQuery.html\" title=\"class in org.springframework.data.keyvalue.core.query\"><code>KeyValueQuery</code></a>解析出条件对象。",
+      "count": 1
+    },
+    {
+      "source": "Generic callback interface for code that operates on a <a href=\"KeyValueAdapter.html\" title=\"interface in org.springframework.data.keyvalue.core\"><code>KeyValueAdapter</code></a>.",
+      "translation": "针对在<a href=\"KeyValueAdapter.html\" title=\"org.springframework.data.keyvalue.core 中的接口\"><code>KeyValueAdapter</code></a>上操作的代码的通用回调接口。",
+      "count": 1
+    },
+    {
+      "source": "Core key/value implementation.",
+      "translation": "核心键值对实现。",
+      "count": 1
+    },
+    {
+      "source": "Query derivation mechanism for key/value specific repositories providing a generic SpEL based implementation.",
+      "translation": "为提供基于通用 SpEL 实现的键值特定存储库而设计的查询推导机制。",
+      "count": 1
+    },
+    {
+      "source": "Support infrastructure for query derivation of key/value specific repositories.",
+      "translation": "支持针对键值特定存储库的查询推导的基础设施。",
+      "count": 1
+    },
+    {
+      "source": "API for components generating identifiers.",
+      "translation": "用于生成标识符的组件 API。",
+      "count": 1
+    }
+  ]
+}

@@ -1,35 +1,80 @@
 {
   "created_at": "2026-06-16 16:31:58",
-  "updated_at": "2026-06-16 16:31:58",
+  "updated_at": "2026-06-18 07:43:11",
   "stats": {
-    "total_entries": 32,
+    "total_entries": 38,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 33,
-    "entries_with_hits": 32,
+    "total_hits": 51,
+    "entries_with_hits": 38,
     "entries_without_hits": 0,
-    "hit_rate": 1.03125,
-    "usage_percentage": 0.0031999999999999997
+    "hit_rate": 1.3421052631578947,
+    "usage_percentage": 0.0038000000000000004
   },
   "items": [
     {
-      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the saved entity</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 不能为 null。</dd>\n<dt>返回：</dt>\n<dd>保存后的实体</dd>",
-      "count": 2
+      "source": "the saved entity",
+      "translation": "已保存的实体",
+      "count": 3
     },
     {
       "source": "Note: Cassandra supports single-field <code>IN</code> queries only. Fetches each row individually when using\n<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a> with multiple components.",
       "translation": "注意：Cassandra 仅支持单字段 <code>IN</code> 查询。当使用包含多个组件的<a href=\"../core/mapping/MapId.html\" title=\"interface in org.springframework.data.cassandra.core.mapping\"><code>MapId</code></a>时，会逐行获取数据。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Fetches each row individually.",
       "translation": "逐行获取每一行。",
+      "count": 2
+    },
+    {
+      "source": "Cassandra specific <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a> interface with reactive support.",
+      "translation": "支持响应式特性的 Cassandra 专用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a> 接口。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entity. Assumes the instance to be new to be able to apply insertion optimizations. Use the\nreturned instance for further operations as the save operation might have changed the entity instance completely.\nPrefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
+      "translation": "插入给定的实体。假定该实例为新建实例，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> 以避免使用特定于存储的 API。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entities. Assumes the instance to be new to be able to apply insertion optimizations. Use the\nreturned instance for further operations as the save operation might have changed the entity instance completely.\nPrefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
+      "translation": "插入给定的实体。假设该实例为新建实例，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> 以避免使用存储特定的 API。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given a given entities. Assumes the instance to be new to be able to apply insertion optimizations. Use\nthe returned instance for further operations as the save operation might have changed the entity instance\ncompletely. Prefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
+      "translation": "插入给定的实体。假设该实例是新的，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> 以避免使用特定于存储的 API。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entities.",
+      "translation": "插入给定的实体。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given a given entities.",
+      "translation": "插入给定的实体。",
+      "count": 2
+    },
+    {
+      "source": "Inserts the given entity.",
+      "translation": "插入给定的实体。",
+      "count": 2
+    },
+    {
+      "source": "<code>entities</code> - must not be null.",
+      "translation": "<code>entities</code> - 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - must not be null.</dd>\n<dt>Returns:</dt>\n<dd>the saved entity</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 不能为 null。</dd>\n<dt>返回：</dt>\n<dd>保存后的实体</dd>",
       "count": 1
     },
     {
@@ -68,26 +113,6 @@
       "count": 1
     },
     {
-      "source": "Cassandra specific <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a> interface with reactive support.",
-      "translation": "支持响应式特性的 Cassandra 专用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a> 接口。",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given entity. Assumes the instance to be new to be able to apply insertion optimizations. Use the\nreturned instance for further operations as the save operation might have changed the entity instance completely.\nPrefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
-      "translation": "插入给定的实体。假定该实例为新建实例，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> 以避免使用特定于存储的 API。",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given entities. Assumes the instance to be new to be able to apply insertion optimizations. Use the\nreturned instance for further operations as the save operation might have changed the entity instance completely.\nPrefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
-      "translation": "插入给定的实体。假设该实例为新建实例，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> 以避免使用存储特定的 API。",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given a given entities. Assumes the instance to be new to be able to apply insertion optimizations. Use\nthe returned instance for further operations as the save operation might have changed the entity instance\ncompletely. Prefer using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> instead to avoid the usage of store-specific API.",
-      "translation": "插入给定的实体。假设该实例是新的，以便应用插入优化。请使用返回的实例进行后续操作，因为保存操作可能会完全更改实体实例。建议改用 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#save(S)\" title=\"class or interface in org.springframework.data.repository.reactive\"><code>ReactiveCrudRepository.save(Object)</code></a> 以避免使用特定于存储的 API。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
@@ -100,21 +125,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given entities.",
-      "translation": "插入给定的实体。",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given a given entities.",
-      "translation": "插入给定的实体。",
-      "count": 1
-    },
-    {
-      "source": "Inserts the given entity.",
-      "translation": "插入给定的实体。",
       "count": 1
     },
     {
@@ -170,6 +180,26 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#findAllById(java.lang.Iterable)\" title=\"class or interface in org.springframework.data.repository.reactive\">findAllById</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html\" title=\"class or interface in org.springframework.data.repository.reactive\">ReactiveCrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in ReactiveCassandraRepository\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"type parameter in ReactiveCassandraRepository\">ID</a>&gt;</code>",
+      "translation": "接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html\" title=\"类或接口在 org.springframework.data.repository.reactive\">ReactiveCrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"ReactiveCassandraRepository 中的类型参数\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"ReactiveCassandraRepository 中的类型参数\">ID</a>&gt;</code> 中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#findAllById(java.lang.Iterable)\" title=\"类或接口在 org.springframework.data.repository.reactive\">findAllById</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#findAllById(org.reactivestreams.Publisher)\" title=\"class or interface in org.springframework.data.repository.reactive\">findAllById</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html\" title=\"class or interface in org.springframework.data.repository.reactive\">ReactiveCrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in ReactiveCassandraRepository\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"type parameter in ReactiveCassandraRepository\">ID</a>&gt;</code>",
+      "translation": "接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html\" title=\"类或接口在 org.springframework.data.repository.reactive\">ReactiveCrudRepository</a>&lt;<a href=\"#type-param-T\" title=\"ReactiveCassandraRepository 中的类型参数\">T</a>,<wbr/><a href=\"#type-param-ID\" title=\"ReactiveCassandraRepository 中的类型参数\">ID</a>&gt;</code> 中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/reactive/ReactiveCrudRepository.html#findAllById(org.reactivestreams.Publisher)\" title=\"类或接口在 org.springframework.data.repository.reactive\">findAllById</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code>entity</code> - must not be null.",
+      "translation": "<code>entity</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
       "count": 1
     }
   ]

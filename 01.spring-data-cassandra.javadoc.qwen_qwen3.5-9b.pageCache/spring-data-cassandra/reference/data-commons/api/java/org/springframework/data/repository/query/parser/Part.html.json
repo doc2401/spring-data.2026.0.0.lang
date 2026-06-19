@@ -1,40 +1,70 @@
 {
   "created_at": "2026-06-16 12:26:43",
-  "updated_at": "2026-06-16 12:26:43",
+  "updated_at": "2026-06-18 07:27:22",
   "stats": {
-    "total_entries": 32,
+    "total_entries": 40,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 38,
-    "entries_with_hits": 32,
+    "total_hits": 55,
+    "entries_with_hits": 40,
     "entries_without_hits": 0,
-    "hit_rate": 1.1875,
-    "usage_percentage": 0.0031999999999999997
+    "hit_rate": 1.375,
+    "usage_percentage": 0.004
   },
   "items": [
     {
       "source": "Creates a new <a href=\"Part.html\" title=\"class in org.springframework.data.repository.query.parser\"><code>Part</code></a> from the given method name part, the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>Class</code></a> the part originates from and the\nstart parameter index.",
       "translation": "根据给定的方法名部分、该部分所属的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>Class</code></a> 以及起始参数索引，创建一个新的 <a href=\"Part.html\" title=\"class in org.springframework.data.repository.query.parser\"><code>Part</code></a>。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Returns whether the <a href=\"../../../core/PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a> referenced should be matched ignoring case.",
       "translation": "返回是否应该忽略大小写来匹配引用的<a href=\"../../../core/PropertyPath.html\" title=\"interface in org.springframework.data.core\"><code>PropertyPath</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Returns how many method parameters are bound by this part.",
+      "translation": "返回此部分绑定的方法参数数量。",
+      "count": 3
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "A single part of a method name that has to be transformed into a query part. The actual transformation is defined by\na <a href=\"Part.Type.html\" title=\"enum class in org.springframework.data.repository.query.parser\"><code>Part.Type</code></a> that is determined from inspecting the given part. The query part can then be looked up via\n<a href=\"#getProperty()\"><code>getProperty()</code></a>.",
+      "translation": "方法名中需要转换为查询部分的一个单独部分。实际的转换由 `<a href=\"Part.Type.html\" title=\"enum class in org.springframework.data.repository.query.parser\"><code>Part.Type</code></a>` 定义，该类型是通过检查给定部分确定的。随后，可以通过 `<a href=\"#getProperty()\"><code>getProperty()</code></a>` 查找查询部分。",
+      "count": 2
+    },
+    {
+      "source": "The various types of ignore case that are supported.",
+      "translation": "支持的多种忽略大小写类型。",
+      "count": 2
+    },
+    {
+      "source": "The type of method name part.",
+      "translation": "方法名部分的类型。",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 2
+    },
+    {
+      "source": "<code>source</code> - must not be null.",
+      "translation": "<source> - 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>clazz</code> - must not be null.",
+      "translation": "<code>clazz</code> 不能为 null。",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "Returns how many method parameters are bound by this part.",
-      "translation": "返回此部分绑定的方法参数数量。",
-      "count": 2
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
       "count": 1
     },
     {
@@ -50,11 +80,6 @@
     {
       "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">Part</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>",
       "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">Part</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></span>",
-      "count": 1
-    },
-    {
-      "source": "A single part of a method name that has to be transformed into a query part. The actual transformation is defined by\na <a href=\"Part.Type.html\" title=\"enum class in org.springframework.data.repository.query.parser\"><code>Part.Type</code></a> that is determined from inspecting the given part. The query part can then be looked up via\n<a href=\"#getProperty()\"><code>getProperty()</code></a>.",
-      "translation": "方法名中需要转换为查询部分的一个单独部分。实际的转换由 `<a href=\"Part.Type.html\" title=\"enum class in org.springframework.data.repository.query.parser\"><code>Part.Type</code></a>` 定义，该类型是通过检查给定部分确定的。随后，可以通过 `<a href=\"#getProperty()\"><code>getProperty()</code></a>` 查找查询部分。",
       "count": 1
     },
     {
@@ -80,16 +105,6 @@
     {
       "source": "Spring Data Core",
       "translation": "Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "The various types of ignore case that are supported.",
-      "translation": "支持的多种忽略大小写类型。",
-      "count": 1
-    },
-    {
-      "source": "The type of method name part.",
-      "translation": "方法名部分的类型。",
       "count": 1
     },
     {
@@ -148,11 +163,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Constructor Summary",
       "translation": "构造函数摘要",
       "count": 1
@@ -170,6 +180,36 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "`Object` 类中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"类或接口位于 java.lang\">hashCode</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"类或接口位于 java.lang\">Object</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "类 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a></code> 中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a></code>",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Martin Baumgartner, Jens Schauder",
+      "translation": "奥利弗·吉尔克，马丁·鲍姆加特纳，延斯·肖尔德",
+      "count": 1
+    },
+    {
+      "source": "the propertyPath",
+      "translation": "属性路径",
+      "count": 1
+    },
+    {
+      "source": "the type",
+      "translation": "类型",
       "count": 1
     }
   ]

@@ -1,0 +1,201 @@
+{
+  "created_at": "2026-06-19 02:14:34",
+  "updated_at": "2026-06-19 02:14:34",
+  "stats": {
+    "total_entries": 37,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 53,
+    "entries_with_hits": 37,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4324324324324325,
+    "usage_percentage": 0.0036999999999999997
+  },
+  "items": [
+    {
+      "source": "ttl option is not supported.",
+      "translation": "不支持 ttl 选项。",
+      "count": 6
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"class or interface in java.lang\">UnsupportedOperationException</a></code> - not supported for wildcard indexes.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html\" title=\"java.lang 中的类或接口\">UnsupportedOperationException</a></code> - 不支持通配符索引。",
+      "count": 4
+    },
+    {
+      "source": "Create a new instance of <a href=\"WildcardIndex.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>WildcardIndex</code></a> using <code>$**</code>.",
+      "translation": "使用 `$**` 创建一个新的 <a href=\"WildcardIndex.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>WildcardIndex</code></a> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Get the <code>Document</code> containing properties covered by the index.",
+      "translation": "获取包含索引所覆盖属性的<code>Document</code>。",
+      "count": 2
+    },
+    {
+      "source": "Include the <code>_id</code> field in wildcardProjection.",
+      "translation": "在 wildcardProjection 中包含 <code>_id</code> 字段。",
+      "count": 2
+    },
+    {
+      "source": "Get the index properties such as unique,...",
+      "translation": "获取索引属性，例如唯一性...",
+      "count": 2
+    },
+    {
+      "source": "Set the index name to use.",
+      "translation": "设置要使用的索引名称。",
+      "count": 2
+    },
+    {
+      "source": "Unique option is not supported.",
+      "translation": "不支持唯一选项。",
+      "count": 2
+    },
+    {
+      "source": "<code>paths</code> - must not be null.",
+      "translation": "<code>paths</code> - 不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"WildcardIndex.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>WildcardIndex</code></a> is a specific <a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>Index</code></a> that can be used to include all fields into an index based on the\n<code>$**\" : 1</code> pattern on a root object (the one typically carrying the\n<a href=\"../mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a> annotation). On those it is possible to use\n<a href=\"#wildcardProjectionInclude(java.lang.String...)\"><code>wildcardProjectionInclude(String...)</code></a> and <a href=\"#wildcardProjectionExclude(java.lang.String...)\"><code>wildcardProjectionExclude(String...)</code></a> to define specific\npaths for in-/exclusion.\n<br/>\nIt can also be used to define an index on a specific field path and its subfields, e.g.\n<code>\"path.to.field.$**\" : 1</code>. <br/>\nNote that wildcardProjections are not allowed in this case.\n<br/>\n<strong>LIMITATIONS</strong><br/>\n<ul>\n<li><a href=\"#unique()\"><code>Unique</code></a> and <a href=\"#expire(long)\"><code>ttl</code></a> options are not supported.</li>\n<li>Keys used for sharding must not be included</li>\n<li>Cannot be used to generate any type of geo index.</li>\n</ul>",
+      "translation": "<code>WildcardIndex</code> 是一种特定的 <code>Index</code>，可用于基于根对象（通常带有 <code>Document</code> 注解的对象）上的 <code>$**\" : 1</code> 模式将所有字段包含到索引中。在此类索引上，可以使用 <code>wildcardProjectionInclude(String...)</code> 和 <code>wildcardProjectionExclude(String...)</code> 来定义特定路径的包含/排除规则。\n<br/>\n它也可用于在特定字段路径及其子字段上定义索引，例如 <code>\"path.to.field.$**\" : 1</code>。<br/>\n请注意，在此情况下不允许使用通配符投影（wildcardProjections）。\n<br/>\n<strong>限制条件</strong><br/>\n<ul>\n<li>不支持 <a href=\"#unique()\"><code>Unique</code></a> 和 <a href=\"#expire(long)\"><code>ttl</code></a> 选项。</li>\n<li>不能包含用于分片的键。</li>\n<li>无法用于生成任何类型的地理空间索引。</li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "Create a new instance of <a href=\"WildcardIndex.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>WildcardIndex</code></a> for the given path. If no path is provided the\nindex will be considered a root one using <code>$**</code>. <br/>\n<strong>NOTE:</strong> <a href=\"#wildcardProjectionInclude(java.lang.String...)\"><code>wildcardProjectionInclude(String...)</code></a>, <a href=\"#wildcardProjectionExclude(java.lang.String...)\"><code>wildcardProjectionExclude(String...)</code></a>\ncan only be used for top level index definitions having an empty or null path.",
+      "translation": "为给定路径创建一个新的<a href=\"WildcardIndex.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>WildcardIndex</code></a>实例。如果未提供路径，则索引将被视为根索引，使用<code>$**</code>。<br/>\n<strong>注意：</strong><a href=\"#wildcardProjectionInclude(java.lang.String...)\"><code>wildcardProjectionInclude(String...)</code></a>和<a href=\"#wildcardProjectionExclude(java.lang.String...)\"><code>wildcardProjectionExclude(String...)</code></a>仅可用于具有空或 null 路径的顶层索引定义。",
+      "count": 1
+    },
+    {
+      "source": "Add fields to be included from indexing via <code>wildcardProjection</code>. <br/>\nThis option is only allowed on <a href=\"#%3Cinit%3E()\"><code>top level</code></a> wildcard indexes.",
+      "translation": "通过 <code>wildcardProjection</code> 添加索引中包含的字段。<br/>\n此选项仅允许用于 <a href=\"#%3Cinit%3E()\"><code>顶层</code></a> 通配符索引。",
+      "count": 1
+    },
+    {
+      "source": "Add fields to be excluded from indexing via <code>wildcardProjection</code>. <br/>\nThis option is only allowed on <a href=\"#%3Cinit%3E()\"><code>top level</code></a> wildcard indexes.",
+      "translation": "通过 `<code>wildcardProjection</code>` 添加不应被索引的字段。<br/>\n此选项仅允许用于<a href=\"#%3Cinit%3E()\"><code>顶层</code></a>通配符索引。",
+      "count": 1
+    },
+    {
+      "source": "Set the fields to be in-/excluded from indexing via <code>wildcardProjection</code>. <br/>\nThis option is only allowed on <a href=\"#%3Cinit%3E()\"><code>top level</code></a> wildcard indexes.",
+      "translation": "通过 `<code>wildcardProjection</code>` 设置字段是否包含在索引中。<br/>\n此选项仅允许用于<a href=\"#%3Cinit%3E()\"><code>顶层</code></a>通配符索引。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"IndexDefinition.html#getIndexKeys()\">IndexDefinition</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"IndexDefinition.html#getIndexKeys()\">IndexDefinition</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"IndexDefinition.html#getIndexOptions()\">IndexDefinition</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"IndexDefinition.html#getIndexOptions()\">IndexDefinition</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Create a new instance of <a href=\"WildcardIndex.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>WildcardIndex</code></a> for the given path.",
+      "translation": "为给定路径创建一个新的<a href=\"WildcardIndex.html\" title=\"class in org.springframework.data.mongodb.core.index\"><code>WildcardIndex</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "Set the fields to be in-/excluded from indexing via <code>wildcardProjection</code>.",
+      "translation": "通过 `<code>wildcardProjection</code>` 设置要包含或排除在索引中的字段。",
+      "count": 1
+    },
+    {
+      "source": "Add fields to be excluded from indexing via <code>wildcardProjection</code>.",
+      "translation": "通过 `<code>wildcardProjection</code>` 添加要排除在索引之外的字段。",
+      "count": 1
+    },
+    {
+      "source": "Add fields to be included from indexing via <code>wildcardProjection</code>.",
+      "translation": "通过 <code>wildcardProjection</code> 添加索引中包含的字段。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Index.html#named(java.lang.String)\">named</a></code> in class <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code>",
+      "translation": "<code><a href=\"Index.html#named(java.lang.String)\">named</a></code> 类 <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Index.html#unique()\">unique</a></code> in class <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code>",
+      "translation": "<code><a href=\"Index.html#unique()\">unique</a></code> 类 <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Index.html#expire(long)\">expire</a></code> in class <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code>",
+      "translation": "<code><a href=\"Index.html#expire(long)\">expire</a></code> 类 <code><a href=\"Index.html\" title=\"org.springframework.data.mongodb.core.index 中的类\">Index</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Index.html#expire(long,java.util.concurrent.TimeUnit)\">expire</a></code> in class <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code>",
+      "translation": "<code><a href=\"Index.html#expire(long,java.util.concurrent.TimeUnit)\">expire</a></code> 类 <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Index.html#expire(java.time.Duration)\">expire</a></code> in class <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code>",
+      "translation": "<code><a href=\"Index.html#expire(java.time.Duration)\">expire</a></code> 类 <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"IndexDefinition.html#getIndexKeys()\">getIndexKeys</a></code> in interface <code><a href=\"IndexDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.index\">IndexDefinition</a></code>",
+      "translation": "<code><a href=\"IndexDefinition.html#getIndexKeys()\">getIndexKeys</a></code> 接口 <code><a href=\"IndexDefinition.html\" title=\"org.springframework.data.mongodb.core.index 中的接口\">IndexDefinition</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Index.html#getIndexKeys()\">getIndexKeys</a></code> in class <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code>",
+      "translation": "类 <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code> 中的方法 <code><a href=\"Index.html#getIndexKeys()\">getIndexKeys</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"IndexDefinition.html#getIndexOptions()\">getIndexOptions</a></code> in interface <code><a href=\"IndexDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.index\">IndexDefinition</a></code>",
+      "translation": "<code><a href=\"IndexDefinition.html#getIndexOptions()\">getIndexOptions</a></code> 接口 <code><a href=\"IndexDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.index\">IndexDefinition</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"Index.html#getIndexOptions()\">getIndexOptions</a></code> in class <code><a href=\"Index.html\" title=\"class in org.springframework.data.mongodb.core.index\">Index</a></code>",
+      "translation": "<code><a href=\"Index.html#getIndexOptions()\">getIndexOptions</a></code> 类 <code><a href=\"Index.html\" title=\"org.springframework.data.mongodb.core.index 中的类\">Index</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/manual/core/index-wildcard/\">MongoDB Reference Documentation: Wildcard\n     Indexes/</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.mongodb.com/manual/core/index-wildcard/\">MongoDB 参考文档：通配符索引</a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<code>path</code> - can be null. If null all fields will be indexed.",
+      "translation": "<code>path</code> - 可为 null。如果为 null，则所有字段都将建立索引。",
+      "count": 1
+    },
+    {
+      "source": "<code>timeUnit</code> - must not be null.",
+      "translation": "<code>timeUnit</code> 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>duration</code> - must not be null.",
+      "translation": "<code>duration</code> 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>includeExclude</code> - must not be null.",
+      "translation": "<code>includeExclude</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    }
+  ]
+}

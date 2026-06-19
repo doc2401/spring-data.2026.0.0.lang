@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-06-19 07:55:48",
+  "updated_at": "2026-06-19 07:55:48",
+  "stats": {
+    "total_entries": 19,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 30,
+    "entries_with_hits": 19,
+    "entries_without_hits": 0,
+    "hit_rate": 1.5789473684210527,
+    "usage_percentage": 0.0019000000000000002
+  },
+  "items": [
+    {
+      "source": "Enable cache locking to synchronize cache access across multiple cache instances.",
+      "translation": "启用缓存锁定以在多个缓存实例之间同步缓存访问。",
+      "count": 4
+    },
+    {
+      "source": "Several <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>Cache</code></a> operations can be performed asynchronously or deferred and this\nis the default behavior for <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a>. Enable immediate writes in case a particular cache requires\nstronger consistency (i.e. Cache writes must be visible immediately).",
+      "translation": "可以异步或延迟执行多种 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/cache/Cache.html\" title=\"class or interface in org.springframework.cache\"><code>Cache</code></a> 操作，这也是 <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a> 的默认行为。如果某个缓存需要更强的数据一致性（即缓存写入必须立即可见），请启用立即写入功能。",
+      "count": 2
+    },
+    {
+      "source": "When using a <a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"interface in org.springframework.data.redis.connection\"><code>reactive Redis\ndriver</code></a>, immediate writes lead to blocking.",
+      "translation": "使用<a href=\"../connection/ReactiveRedisConnectionFactory.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>响应式 Redis 驱动</code></a>时，立即写入会导致阻塞。",
+      "count": 2
+    },
+    {
+      "source": "Use immediate writes (i.e. write operations such as\n<a href=\"RedisCacheWriter.html#put(java.lang.String,byte%5B%5D,byte%5B%5D,java.time.Duration)\"><code>RedisCacheWriter.put(String, byte[], byte[], Duration)</code></a> or <a href=\"RedisCacheWriter.html#clear(java.lang.String,byte%5B%5D)\"><code>RedisCacheWriter.clear(String, byte[])</code></a>) shall apply\nimmediately.",
+      "translation": "使用即时写入（即写操作，例如<a href=\"RedisCacheWriter.html#put(java.lang.String,byte%5B%5D,byte%5B%5D,java.time.Duration)\"><code>RedisCacheWriter.put(String, byte[], byte[], Duration)</code></a>或<a href=\"RedisCacheWriter.html#clear(java.lang.String,byte%5B%5D)\"><code>RedisCacheWriter.clear(String, byte[])</code></a>）必须立即生效。",
+      "count": 2
+    },
+    {
+      "source": "Configure whether to use immediate writes (i.e. write operations such as\n<a href=\"RedisCacheWriter.html#put(java.lang.String,byte%5B%5D,byte%5B%5D,java.time.Duration)\"><code>RedisCacheWriter.put(String, byte[], byte[], Duration)</code></a> or <a href=\"RedisCacheWriter.html#clear(java.lang.String,byte%5B%5D)\"><code>RedisCacheWriter.clear(String, byte[])</code></a>) shall apply\nimmediately.",
+      "translation": "配置是否使用即时写入（即写入操作，如<a href=\"RedisCacheWriter.html#put(java.lang.String,byte%5B%5D,byte%5B%5D,java.time.Duration)\"><code>RedisCacheWriter.put(String, byte[], byte[], Duration)</code></a>或<a href=\"RedisCacheWriter.html#clear(java.lang.String,byte%5B%5D)\"><code>RedisCacheWriter.clear(String, byte[])</code></a>）是否立即生效。",
+      "count": 2
+    },
+    {
+      "source": "Configure the <a href=\"BatchStrategy.html\" title=\"interface in org.springframework.data.redis.cache\"><code>BatchStrategy</code></a> when clearing the cache (i.e. bulk removal of cache keys).",
+      "translation": "在清除缓存（即批量删除缓存键）时，配置<a href=\"BatchStrategy.html\" title=\"org.springframework.data.redis.cache 中的接口\"><code>BatchStrategy</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Configure the <a href=\"CacheStatisticsCollector.html\" title=\"interface in org.springframework.data.redis.cache\"><code>CacheStatisticsCollector</code></a> to use.",
+      "translation": "配置要使用的<a href=\"CacheStatisticsCollector.html\" title=\"org.springframework.data.redis.cache 中的接口\"><code>CacheStatisticsCollector</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Configure the <a href=\"CacheStatisticsCollector.html\" title=\"interface in org.springframework.data.redis.cache\"><code>CacheStatisticsCollector</code></a> to use. This is useful for plugging in and/or customizing\nstatistics collection.",
+      "translation": "配置要使用的<a href=\"CacheStatisticsCollector.html\" title=\"org.springframework.data.redis.cache 中的接口\"><code>CacheStatisticsCollector</code></a>。这有助于插入和/或自定义统计信息的收集。",
+      "count": 2
+    },
+    {
+      "source": "Configure cache locking to synchronize cache access across multiple cache instances.",
+      "translation": "配置缓存锁定以在多个缓存实例之间同步缓存访问。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "If no batch strategy is specified, the RedisCacheWriter uses <a href=\"BatchStrategies.html#keys()\"><code>BatchStrategies.keys()</code></a>;",
+      "translation": "如果未指定批处理策略，RedisCacheWriter 将使用<a href=\"BatchStrategies.html#keys()\"><code>BatchStrategies.keys()</code></a>；",
+      "count": 1
+    },
+    {
+      "source": "If no statistics collector is specified, no statistics will be recorded. Statistics collection can be\nreconfigured on the built RedisCacheWriter by invoking\n<code>RedisCacheWriter#withStatisticsCollector(CacheStatisticsCollector)</code>.",
+      "translation": "如果未指定统计收集器，则不会记录任何统计数据。可以通过调用 <code>RedisCacheWriter#withStatisticsCollector(CacheStatisticsCollector)</code> 在内置的 RedisCacheWriter 上重新配置统计收集功能。",
+      "count": 1
+    },
+    {
+      "source": "Interface that allows for configuring a <a href=\"RedisCacheWriter.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter</code></a>.",
+      "translation": "允许配置<a href=\"RedisCacheWriter.html\" title=\"org.springframework.data.redis.cache 中的接口\"><code>RedisCacheWriter</code></a>的接口。",
+      "count": 1
+    },
+    {
+      "source": "<code>configurerConsumer</code> - a configuration function that configures <a href=\"RedisCacheWriter.CacheLockingConfiguration.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter.CacheLockingConfiguration</code></a>.",
+      "translation": "`configurerConsumer` - 一个配置函数，用于配置<a href=\"RedisCacheWriter.CacheLockingConfiguration.html\" title=\"org.springframework.data.redis.cache 中的接口\"><code>RedisCacheWriter.CacheLockingConfiguration</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>configurerConsumer</code> - a configuration function that configures <a href=\"RedisCacheWriter.CacheLockingConfigurer.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter.CacheLockingConfigurer</code></a>.",
+      "translation": "`configurerConsumer` - 一个配置函数，用于配置<a href=\"RedisCacheWriter.CacheLockingConfigurer.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter.CacheLockingConfigurer</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>cacheStatisticsCollector</code> - the statistics collector to use.",
+      "translation": "<code>cacheStatisticsCollector</code> - 要使用的统计收集器。",
+      "count": 1
+    },
+    {
+      "source": "<code>batchStrategy</code> - the batch strategy to use.",
+      "translation": "<code>batchStrategy</code> - 要使用的批处理策略。",
+      "count": 1
+    },
+    {
+      "source": "<code>enableImmediateWrites</code> - whether write operations must be visible immediately.",
+      "translation": "<code>enableImmediateWrites</code> - 写操作是否必须立即可见。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    }
+  ]
+}

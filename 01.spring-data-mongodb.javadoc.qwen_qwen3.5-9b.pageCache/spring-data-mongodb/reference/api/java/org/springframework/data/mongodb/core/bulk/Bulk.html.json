@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-06-19 02:00:11",
+  "updated_at": "2026-06-19 02:00:11",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 16,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1428571428571428,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "Creates a new <a href=\"Bulk.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk</code></a> by applying the given builder customizer to a fresh <a href=\"Bulk.BulkBuilder.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk.BulkBuilder</code></a>.",
+      "translation": "通过应用给定的构建器自定义器到新的<a href=\"Bulk.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk</code></a>，创建一个新的<a href=\"Bulk.BulkBuilder.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk.BulkBuilder</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the ordered list of bulk operations to execute.",
+      "translation": "返回待执行的批量操作有序列表。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Container for an ordered list of <a href=\"BulkOperation.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>bulk operations</code></a> that modify documents in one or more\ncollections within a single request. Execution can be <a href=\"BulkWriteOptions.Order.html#ORDERED\"><code>ordered</code></a> (serial, stop on first error) or\n<a href=\"BulkWriteOptions.Order.html#UNORDERED\"><code>unordered</code></a> (possibly parallel, continue on errors).",
+      "translation": "一个用于存储有序列表的容器，该列表包含 <a href=\"BulkOperation.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>批量操作</code></a>，这些操作会在单个请求中修改一个或多个集合中的文档。执行方式可以是 <a href=\"BulkWriteOptions.Order.html#ORDERED\"><code>有序</code></a>（串行，遇到第一个错误即停止）或 <a href=\"BulkWriteOptions.Order.html#UNORDERED\"><code>无序</code></a>（可能并行，继续处理后续操作）。",
+      "count": 1
+    },
+    {
+      "source": "Returns a new <a href=\"Bulk.BulkBuilder.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk.BulkBuilder</code></a> to define and build a <a href=\"Bulk.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk</code></a>.\n\n<pre class=\"code\">Bulk bulk = Bulk.builder()\n    .inCollection(Person.class, it -&gt; it..insert(p1).upsert(where(...)))\n    .inCollection(\"user\", it -&gt; it.update(where(...), ...)\n    .build();\n</pre>",
+      "translation": "返回一个新的 <a href=\"Bulk.BulkBuilder.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk.BulkBuilder</code></a> 用于定义和构建一个 <a href=\"Bulk.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk</code></a>。\n\n<pre class=\"code\">Bulk bulk = Bulk.builder()\n    .inCollection(Person.class, it -&gt; it..insert(p1).upsert(where(...)))\n    .inCollection(\"user\", it -&gt; it.update(where(...), ...)\n    .build();\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Returns a new <a href=\"Bulk.BulkBuilder.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk.BulkBuilder</code></a> to define and build a <a href=\"Bulk.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk</code></a>.",
+      "translation": "返回一个新的<a href=\"Bulk.BulkBuilder.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk.BulkBuilder</code></a>，用于定义和构建一个<a href=\"Bulk.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Builder for defining <a href=\"BulkOperation.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>bulk operations</code></a> across one or more collections.",
+      "translation": "用于定义一个或多个集合上的<a href=\"BulkOperation.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>BulkOperation</code></a>的构建器。",
+      "count": 1
+    },
+    {
+      "source": "Builder for adding bulk operations (insert, update, replace, remove) to a single collection.",
+      "translation": "用于向单个集合添加批量操作（插入、更新、替换、删除）的构建器。",
+      "count": 1
+    },
+    {
+      "source": "the ordered list of <a href=\"BulkOperation.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>operations</code></a>.",
+      "translation": "包含<a href=\"BulkOperation.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>operations</code></a>的有序列表。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"Bulk.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk</code></a> instance.",
+      "translation": "一个新的<a href=\"Bulk.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk</code></a>实例。",
+      "count": 1
+    },
+    {
+      "source": "a new <a href=\"Bulk.BulkBuilder.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk.BulkBuilder</code></a>.",
+      "translation": "新增了一个<a href=\"Bulk.BulkBuilder.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk.BulkBuilder</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>builderCustomizer</code> - the customizer that configures the builder with operations.",
+      "translation": "<code>builderCustomizer</code> - 用于配置构建器操作的自定义器。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

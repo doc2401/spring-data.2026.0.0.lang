@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-06-18 11:36:25",
+  "updated_at": "2026-06-18 11:36:25",
+  "stats": {
+    "total_entries": 15,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 17,
+    "entries_with_hits": 15,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1333333333333333,
+    "usage_percentage": 0.0015
+  },
+  "items": [
+    {
+      "source": "Returns the metadata for the repository.",
+      "translation": "返回仓库的元数据。",
+      "count": 2
+    },
+    {
+      "source": "Returns the current method that is being invoked.",
+      "translation": "返回当前被调用的方法。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The <a href=\"#getMetadata()\"><code>getMetadata()</code></a> method is usable if the repository factory is configured to expose the current repository\nmethod metadata (not the default). It returns the invoked repository method. Target objects or advice can use this to\nmake advised calls.",
+      "translation": "如果仓库工厂被配置为暴露当前仓库方法的元数据（而非默认行为），则可以使用 <a href=\"#getMetadata()\"><code>getMetadata()</code></a> 方法。该方法会返回已调用的仓库方法。目标对象或切面可以利用此信息来执行经过增强的调用。",
+      "count": 1
+    },
+    {
+      "source": "Spring Data's framework does not expose method metadata by default, as there is a performance cost in doing so.",
+      "translation": "默认情况下，Spring Data 框架不暴露方法元数据，因为这样做会产生性能开销。",
+      "count": 1
+    },
+    {
+      "source": "The functionality in this class might be used by a target object that needed access to resources on the invocation.\nHowever, this approach should not be used when there is a reasonable alternative, as it makes application code\ndependent on usage in particular.",
+      "translation": "此类中的功能可能会被目标对象使用，以便在调用时访问资源。然而，如果存在合理的替代方案，则不应采用此方法，因为它会使应用程序代码依赖于特定的使用方式。",
+      "count": 1
+    },
+    {
+      "source": "The method object represents the method as being invoked on the repository interface. It doesn't match the backing\nrepository implementation in case the method invocation is delegated to an implementation method.",
+      "translation": "method 对象表示在仓储接口上调用的方法。如果方法调用被委托给实现方法，则它不与底层仓储实现相匹配。",
+      "count": 1
+    },
+    {
+      "source": "Try to return the current repository method metadata.",
+      "translation": "尝试返回当前存储库方法的元数据。",
+      "count": 1
+    },
+    {
+      "source": "Try to return the current repository method metadata. This method is usable only if the calling method has been\ninvoked via a repository method, and the repository factory has been set to expose metadata. Otherwise, this method\nwill throw an IllegalStateException.",
+      "translation": "尝试返回当前存储库方法的元数据。仅当调用方法是通过存储库方法调用的，且存储库工厂已设置为公开元数据时，此方法才可用；否则，此方法将抛出 IllegalStateException 异常。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the repository method metadata cannot be found, because the method was invoked\n          outside a repository method invocation context, or because the repository has not been configured to\n          expose its metadata.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 当无法找到存储库方法的元数据时抛出此异常，原因可能是该方法在存储库方法调用上下文中之外被调用，或者该存储库尚未配置为公开其元数据。",
+      "count": 1
+    },
+    {
+      "source": "the current repository method metadata (never returns <code>null</code>)",
+      "translation": "当前存储库方法元数据（永不返回<code>null</code>）",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch, Oliver Drotbohm",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫，奥利弗·德罗特博姆",
+      "count": 1
+    },
+    {
+      "source": "the repository metadata, will never be null.",
+      "translation": "仓库元数据永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "the current method, will never be null.",
+      "translation": "当前方法永远不会为 null。",
+      "count": 1
+    },
+    {
+      "source": "Interface containing methods and value objects to obtain information about the current repository method invocation.",
+      "translation": "包含用于获取当前仓库方法调用信息的接口、方法和值对象的集合。",
+      "count": 1
+    }
+  ]
+}

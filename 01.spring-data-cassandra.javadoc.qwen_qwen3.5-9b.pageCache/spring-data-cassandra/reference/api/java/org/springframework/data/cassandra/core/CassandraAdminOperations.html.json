@@ -1,46 +1,106 @@
 {
   "created_at": "2026-06-16 15:55:54",
-  "updated_at": "2026-06-16 15:55:54",
+  "updated_at": "2026-06-18 07:38:07",
   "stats": {
-    "total_entries": 53,
+    "total_entries": 67,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 60,
-    "entries_with_hits": 53,
+    "total_hits": 94,
+    "entries_with_hits": 67,
     "entries_without_hits": 0,
-    "hit_rate": 1.1320754716981132,
-    "usage_percentage": 0.0053
+    "hit_rate": 1.4029850746268657,
+    "usage_percentage": 0.0067
   },
   "items": [
     {
       "source": "Drops the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>named</code></a> table.",
       "translation": "删除<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>named</code></a>表。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Create a table with the name, that is derived from the given <code>entityClass</code> and also fields corresponding to\nthe same class. If the table already exists and parameter <code>ifNotExists</code> is true, this is a no-op\nand false is returned. If the table doesn't exist, parameter <code>ifNotExists</code> is ignored, the table\nis created and true is returned.",
       "translation": "创建一个表，其名称由给定的<code>entityClass</code>派生而来，并且包含与该类对应的字段。如果表已存在且参数<code>ifNotExists</code>为true，则此操作无效果并返回false。如果表不存在，则忽略参数<code>ifNotExists</code>，创建该表并返回true。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Create a table with the name, that is derived from the given <code>entityClass</code> and also fields corresponding to\nthe same class.",
       "translation": "创建一个表，其名称由给定的<code>entityClass</code>派生而来，并且包含与该类对应的字段。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns <code>KeyspaceMetadata</code> for the current keyspace.",
       "translation": "返回当前键空间（keyspace）的<code>KeyspaceMetadata</code>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Drops a user type.",
       "translation": "删除用户类型。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "<code>ifNotExists</code> - if <code>true</code>, create the table only if it doesn't exist.",
+      "translation": "<code>ifNotExists</code> - 如果为 <code>true</code>，则仅在表不存在时创建该表。",
+      "count": 3
+    },
+    {
+      "source": "<code>entityClass</code> - the class whose fields determine the columns created.",
+      "translation": "<code>entityClass</code> - 其字段决定所创建列的类。",
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Drops a table based on the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>entity type</code></a>. The name of the table is derived from either the simple\nname of the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>entity class</code></a> or name of the table specified with the <a href=\"mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>Table</code></a> mapping annotation.",
+      "translation": "根据给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>实体类型</code></a>删除表。表的名称源自<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>实体类</code></a>的简单名称，或由<code>Table</code>映射注解指定的表名。",
+      "count": 2
+    },
+    {
+      "source": "Drops a table based on the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>entity type</code></a>.",
+      "translation": "根据给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>实体类型</code></a>创建表。",
+      "count": 2
+    },
+    {
+      "source": "Create a table with the name given and fields corresponding to the given class. If the table already exists and\nparameter <code>ifNotExists</code> is true, this is a no-op and false is returned. If the table\ndoesn't exist, parameter <code>ifNotExists</code> is ignored, the table is created and true is returned.",
+      "translation": "创建一个表，其名称为给定值，字段对应于给定的类。如果表已存在且参数 <code>ifNotExists</code> 为 true，则此操作无效果并返回 false。如果表不存在，则忽略参数 <code>ifNotExists</code>，创建该表并返回 true。",
+      "count": 2
+    },
+    {
+      "source": "Operations for managing a Cassandra keyspace.",
+      "translation": "用于管理 Cassandra 键空间的命令。",
+      "count": 2
+    },
+    {
+      "source": "Create a table with the name given and fields corresponding to the given class.",
+      "translation": "根据提供的名称和类字段创建表格。",
+      "count": 2
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 2
+    },
+    {
+      "source": "<code>tableName</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>Name</code></a> of the table to drop.",
+      "translation": "<code>tableName</code> - 要删除的表的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>Name</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<code>optionsByName</code> - table options, given by the string option name and the appropriate option value.",
+      "translation": "`optionsByName` - 表格选项，由字符串选项名称和相应的选项值给出。",
+      "count": 2
+    },
+    {
+      "source": "<code>tableName</code> - must not be null.",
+      "translation": "<code>tableName</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "the <code>TableMetadata</code> or null.",
+      "translation": "`TableMetadata` 或 null。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.cassandra.core.CassandraOperations\">Methods inherited from interface <a href=\"CassandraOperations.html#method-summary\" title=\"interface in org.springframework.data.cassandra.core\">CassandraOperations</a></h3>\n<code><a href=\"CassandraOperations.html#batchOps()\" title=\"batchOps()\">batchOps</a>, <a href=\"CassandraOperations.html#batchOps(com.datastax.oss.driver.api.core.cql.BatchType)\" title=\"batchOps(BatchType)\">batchOps</a>, <a href=\"CassandraOperations.html#count(java.lang.Class)\" title=\"count(Class)\">count</a>, <a href=\"CassandraOperations.html#count(org.springframework.data.cassandra.core.query.Query,java.lang.Class)\" title=\"count(Query, Class)\">count</a>, <a href=\"CassandraOperations.html#delete(java.lang.Object)\" title=\"delete(Object)\">delete</a>, <a href=\"CassandraOperations.html#delete(java.lang.Object,org.springframework.data.cassandra.core.cql.QueryOptions)\" title=\"delete(Object, QueryOptions)\">delete</a>, <a href=\"CassandraOperations.html#delete(java.lang.Object,org.springframework.data.cassandra.core.DeleteOptions)\" title=\"delete(Object, DeleteOptions)\">delete</a>, <a href=\"CassandraOperations.html#delete(org.springframework.data.cassandra.core.query.Query,java.lang.Class)\" title=\"delete(Query, Class)\">delete</a>, <a href=\"CassandraOperations.html#deleteById(java.lang.Object,java.lang.Class)\" title=\"deleteById(Object, Class)\">deleteById</a>, <a href=\"CassandraOperations.html#execute(com.datastax.oss.driver.api.core.cql.Statement)\" title=\"execute(Statement)\">execute</a>, <a href=\"CassandraOperations.html#exists(java.lang.Object,java.lang.Class)\" title=\"exists(Object, Class)\">exists</a>, <a href=\"CassandraOperations.html#exists(org.springframework.data.cassandra.core.query.Query,java.lang.Class)\" title=\"exists(Query, Class)\">exists</a>, <a href=\"CassandraOperations.html#getConverter()\" title=\"getConverter()\">getConverter</a>, <a href=\"CassandraOperations.html#getCqlOperations()\" title=\"getCqlOperations()\">getCqlOperations</a>, <a href=\"CassandraOperations.html#getTableName(java.lang.Class)\" title=\"getTableName(Class)\">getTableName</a>, <a href=\"CassandraOperations.html#insert(T)\" title=\"insert(T)\">insert</a>, <a href=\"CassandraOperations.html#insert(T,org.springframework.data.cassandra.core.InsertOptions)\" title=\"insert(T, InsertOptions)\">insert</a>, <a href=\"CassandraOperations.html#select(com.datastax.oss.driver.api.core.cql.Statement,java.lang.Class)\" title=\"select(Statement, Class)\">select</a>, <a href=\"CassandraOperations.html#select(java.lang.String,java.lang.Class)\" title=\"select(String, Class)\">select</a>, <a href=\"CassandraOperations.html#select(org.springframework.data.cassandra.core.query.Query,java.lang.Class)\" title=\"select(Query, Class)\">select</a>, <a href=\"CassandraOperations.html#selectOne(com.datastax.oss.driver.api.core.cql.Statement,java.lang.Class)\" title=\"selectOne(Statement, Class)\">selectOne</a>, <a href=\"CassandraOperations.html#selectOne(java.lang.String,java.lang.Class)\" title=\"selectOne(String, Class)\">selectOne</a>, <a href=\"CassandraOperations.html#selectOne(org.springframework.data.cassandra.core.query.Query,java.lang.Class)\" title=\"selectOne(Query, Class)\">selectOne</a>, <a href=\"CassandraOperations.html#selectOneById(java.lang.Object,java.lang.Class)\" title=\"selectOneById(Object, Class)\">selectOneById</a>, <a href=\"CassandraOperations.html#slice(com.datastax.oss.driver.api.core.cql.Statement,java.lang.Class)\" title=\"slice(Statement, Class)\">slice</a>, <a href=\"CassandraOperations.html#slice(org.springframework.data.cassandra.core.query.Query,java.lang.Class)\" title=\"slice(Query, Class)\">slice</a>, <a href=\"CassandraOperations.html#stream(com.datastax.oss.driver.api.core.cql.Statement,java.lang.Class)\" title=\"stream(Statement, Class)\">stream</a>, <a href=\"CassandraOperations.html#stream(java.lang.String,java.lang.Class)\" title=\"stream(String, Class)\">stream</a>, <a href=\"CassandraOperations.html#stream(org.springframework.data.cassandra.core.query.Query,java.lang.Class)\" title=\"stream(Query, Class)\">stream</a>, <a href=\"CassandraOperations.html#truncate(java.lang.Class)\" title=\"truncate(Class)\">truncate</a>, <a href=\"CassandraOperations.html#update(org.springframework.data.cassandra.core.query.Query,org.springframework.data.cassandra.core.query.Update,java.lang.Class)\" title=\"update(Query, Update, Class)\">update</a>, <a href=\"CassandraOperations.html#update(T)\" title=\"update(T)\">update</a>, <a href=\"CassandraOperations.html#update(T,org.springframework.data.cassandra.core.UpdateOptions)\" title=\"update(T, UpdateOptions)\">update</a></code>",
@@ -93,11 +153,6 @@
       "count": 1
     },
     {
-      "source": "Drops a table based on the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>entity type</code></a>. The name of the table is derived from either the simple\nname of the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>entity class</code></a> or name of the table specified with the <a href=\"mapping/Table.html\" title=\"annotation interface in org.springframework.data.cassandra.core.mapping\"><code>Table</code></a> mapping annotation.",
-      "translation": "根据给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>实体类型</code></a>删除表。表的名称源自<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>实体类</code></a>的简单名称，或由<code>Table</code>映射注解指定的表名。",
-      "count": 1
-    },
-    {
       "source": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\">Optional</a>&lt;com.datastax.oss.driver.api.core.metadata.schema.TableMetadata&gt;</span> <span class=\"element-name\">getTableMetadata</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlIdentifier keyspace,\n com.datastax.oss.driver.api.core.CqlIdentifier tableName)</span>",
       "translation": "<span class=\"return-type\"><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Optional.html\" title=\"class or interface in java.util\">Optional</a>&lt;com.datastax.oss.driver.api.core.metadata.schema.TableMetadata&gt;</span> <span class=\"element-name\">getTableMetadata</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.CqlIdentifier keyspace,\n com.datastax.oss.driver.api.core.CqlIdentifier tableName)</span>",
       "count": 1
@@ -143,16 +198,6 @@
       "count": 1
     },
     {
-      "source": "Drops a table based on the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>entity type</code></a>.",
-      "translation": "根据给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"java.lang 中的类或接口\"><code>实体类型</code></a>创建表。",
-      "count": 1
-    },
-    {
-      "source": "Create a table with the name given and fields corresponding to the given class. If the table already exists and\nparameter <code>ifNotExists</code> is true, this is a no-op and false is returned. If the table\ndoesn't exist, parameter <code>ifNotExists</code> is ignored, the table is created and true is returned.",
-      "translation": "创建一个表，其名称为给定值，字段对应于给定的类。如果表已存在且参数 <code>ifNotExists</code> 为 true，则此操作无效果并返回 false。如果表不存在，则忽略参数 <code>ifNotExists</code>，创建该表并返回 true。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
@@ -168,18 +213,8 @@
       "count": 1
     },
     {
-      "source": "Operations for managing a Cassandra keyspace.",
-      "translation": "用于管理 Cassandra 键空间的命令。",
-      "count": 1
-    },
-    {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Create a table with the name given and fields corresponding to the given class.",
-      "translation": "根据提供的名称和类字段创建表格。",
       "count": 1
     },
     {
@@ -263,11 +298,6 @@
       "count": 1
     },
     {
-      "source": "Nested Class Summary",
-      "translation": "嵌套类摘要",
-      "count": 1
-    },
-    {
       "source": "Method Summary",
       "translation": "方法摘要",
       "count": 1
@@ -275,6 +305,46 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code>entityType</code> - <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a> of the entity for which the table will be dropped.",
+      "translation": "<code>entityType</code> - 将要删除表的实体对应的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html\" title=\"class or interface in java.lang\"><code>type</code></a>（java.lang 中的类或接口）。",
+      "count": 1
+    },
+    {
+      "source": "<code>ifExists</code> - if <code>true</code>, drop the table only if it exists.",
+      "translation": "<code>ifExists</code> - 如果为 <code>true</code>，则仅在表存在时才删除该表。",
+      "count": 1
+    },
+    {
+      "source": "<code>tableName</code> - the name of the table.",
+      "translation": "<table> - 表名。",
+      "count": 1
+    },
+    {
+      "source": "<code>typeName</code> - must not be null.",
+      "translation": "<code>typeName</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>KeyspaceMetadata</code> for the current keyspace.",
+      "translation": "当前键空间对应的 KeyspaceMetadata。",
+      "count": 1
+    },
+    {
+      "source": "<code>keyspace</code> - must not be empty or null.",
+      "translation": "<code>keyspace</code> 不能为空或为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>keyspace</code> - must not be null.",
+      "translation": "<code>keyspace</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "David Webb, Matthew T. Adams, Mark Paluch, Fabio J. Mendes, Mikhail Polivakha",
+      "translation": "戴维·韦布，马修·T·亚当斯，马克·帕卢赫，法比奥·J·门德斯，米哈伊尔·波利瓦卡",
       "count": 1
     }
   ]

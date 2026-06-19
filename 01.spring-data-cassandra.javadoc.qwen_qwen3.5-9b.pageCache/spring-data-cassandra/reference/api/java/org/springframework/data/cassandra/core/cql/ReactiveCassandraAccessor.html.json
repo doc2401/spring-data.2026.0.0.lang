@@ -1,85 +1,100 @@
 {
   "created_at": "2026-06-16 17:51:05",
-  "updated_at": "2026-06-16 17:51:05",
+  "updated_at": "2026-06-18 07:54:29",
   "stats": {
-    "total_entries": 45,
+    "total_entries": 60,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 57,
-    "entries_with_hits": 45,
+    "total_hits": 85,
+    "entries_with_hits": 60,
     "entries_without_hits": 0,
-    "hit_rate": 1.2666666666666666,
-    "usage_percentage": 0.0045000000000000005
+    "hit_rate": 1.4166666666666667,
+    "usage_percentage": 0.006
   },
   "items": [
     {
-      "source": "The returned <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> is supposed to contain the original <code>DriverException</code> as root cause.\nHowever, client code may not generally rely on this due to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>s possibly being caused by\nother resource APIs as well. That said, a <code>getRootCause() instanceof DataAccessException</code> check (and\nsubsequent cast) is considered reliable when expecting Cassandra-based access to have happened.",
-      "translation": "返回的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 本应包含原始的 <code>DriverException</code> 作为根本原因。\n然而，客户端代码通常不能依赖这一点，因为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 也可能由其他资源 API 引起。尽管如此，当预期已发生基于 Cassandra 的访问时，执行 <code>getRootCause() instanceof DataAccessException</code> 检查（并进行后续类型转换）被认为是可靠的。",
-      "count": 2
-    },
-    {
       "source": "Translate the given <code>DriverException</code> into a generic <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>.",
       "translation": "将给定的<code>DriverException</code>转换为通用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>。",
-      "count": 2
+      "count": 5
+    },
+    {
+      "source": "The returned <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a> is supposed to contain the original <code>DriverException</code> as root cause.\nHowever, client code may not generally rely on this due to <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a>s possibly being caused by\nother resource APIs as well. That said, a <code>getRootCause() instanceof DataAccessException</code> check (and\nsubsequent cast) is considered reliable when expecting Cassandra-based access to have happened.",
+      "translation": "返回的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 本应包含原始的 <code>DriverException</code> 作为根本原因。\n然而，客户端代码通常不能依赖这一点，因为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a> 也可能由其他资源 API 引起。尽管如此，当预期已发生基于 Cassandra 的访问时，执行 <code>getRootCause() instanceof DataAccessException</code> 检查（并进行后续类型转换）被认为是可靠的。",
+      "count": 3
     },
     {
       "source": "Ensures the Cassandra <a href=\"../../ReactiveSessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSessionFactory</code></a> and exception translator has been properly set.",
       "translation": "确保已正确设置 Cassandra <a href=\"../../ReactiveSessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSessionFactory</code></a> 和异常转换器。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the configured <a href=\"../../ReactiveSessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSessionFactory</code></a>.",
       "translation": "返回配置的<a href=\"../../ReactiveSessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSessionFactory</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Sets the <a href=\"../../ReactiveSessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSessionFactory</code></a> to use.",
       "translation": "设置要使用的<a href=\"../../ReactiveSessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSessionFactory</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "Logger available to subclasses",
+      "translation": "子类可用的日志记录器",
+      "count": 3
+    },
+    {
+      "source": "Returns the exception translator for this instance.",
+      "translation": "返回此实例的异常转换器。",
+      "count": 3
+    },
+    {
+      "source": "Sets the exception translator used by this template to translate Cassandra specific exceptions into Spring DAO's\nException Hierarchy.",
+      "translation": "将本模板中用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器设置为此值。",
+      "count": 3
+    },
+    {
+      "source": "Determine CQL from potential provider object.",
+      "translation": "从潜在提供者对象中确定 CQL。",
+      "count": 3
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "Not intended to be used directly.",
+      "translation": "请勿直接使用。",
+      "count": 2
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 2
+    },
+    {
+      "source": "<code>ex</code> - the offending <code>DriverException</code>",
+      "translation": "<code>ex</code> - 引发异常的 <code>DriverException</code>",
+      "count": 2
+    },
+    {
+      "source": "the DataAccessException, wrapping the <code>DriverException</code>",
+      "translation": "DataAccessException，其中封装了<code>DriverException</code>。",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "Logger available to subclasses",
-      "translation": "子类可用的日志记录器",
-      "count": 2
-    },
-    {
-      "source": "Returns the exception translator for this instance.",
-      "translation": "返回此实例的异常转换器。",
-      "count": 2
-    },
-    {
-      "source": "Sets the exception translator used by this template to translate Cassandra specific exceptions into Spring DAO's\nException Hierarchy.",
-      "translation": "将本模板中用于将 Cassandra 特定异常转换为 Spring DAO 异常层次结构的异常转换器设置为此值。",
-      "count": 2
-    },
-    {
-      "source": "Determine CQL from potential provider object.",
-      "translation": "从潜在提供者对象中确定 CQL。",
-      "count": 2
+      "count": 1
     },
     {
       "source": "Translate the given",
       "translation": "请提供需要翻译的文本内容。",
-      "count": 2
+      "count": 1
     },
     {
       "source": "into a generic",
       "translation": "转化为通用型",
-      "count": 2
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
-    },
-    {
-      "source": "Not intended to be used directly.",
-      "translation": "请勿直接使用。",
       "count": 1
     },
     {
@@ -208,11 +223,6 @@
       "count": 1
     },
     {
-      "source": "Field Details",
-      "translation": "字段详情",
-      "count": 1
-    },
-    {
       "source": "Constructor Details",
       "translation": "构造器详情",
       "count": 1
@@ -235,6 +245,71 @@
     {
       "source": "and exception translator.",
       "translation": "以及异常翻译器。",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">Consistent\n     exception hierarchy</a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\"><code>DataAccessException</code></a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">一致的异常层次结构</a></li>\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\"><code>DataAccessException</code></a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/NestedRuntimeException.html#getRootCause()\" title=\"class or interface in org.springframework.core\"><code>NestedRuntimeException.getRootCause()</code></a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">Consistent\n     exception hierarchy</a></li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/core/NestedRuntimeException.html#getRootCause()\" title=\"org.springframework.core 中的类或接口\"><code>NestedRuntimeException.getRootCause()</code></a></li>\n<li><a href=\"https://docs.spring.io/spring-framework/reference/data-access/dao.html#dao-exceptions\">一致的异常层次结构</a></li>\n</ul>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>cqlProvider</code> - object that's potentially a <a href=\"CqlProvider.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>CqlProvider</code></a>",
+      "translation": "<code>cqlProvider</code> - 可能是一个 <a href=\"CqlProvider.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>CqlProvider</code></a> 的对象",
+      "count": 1
+    },
+    {
+      "source": "the configured <a href=\"../../ReactiveSessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSessionFactory</code></a>.",
+      "translation": "配置的<a href=\"../../ReactiveSessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSessionFactory</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>sessionFactory</code> - must not be null.",
+      "translation": "<code>sessionFactory</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>exceptionTranslator</code> - exception translator to set; must not be null.",
+      "translation": "<code>exceptionTranslator</code> - 要设置的异常转换器；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>task</code> - readable text describing the task being attempted",
+      "translation": "<code>task</code> - 描述正在尝试执行的任务的可读文本",
+      "count": 1
+    },
+    {
+      "source": "<code>cql</code> - CQL query or update that caused the problem (can be null)",
+      "translation": "<code>cql</code> - 导致问题的 CQL 查询或更新语句（可为 null）",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the Cassandra exception translator.",
+      "translation": "Cassandra 异常翻译器。",
+      "count": 1
+    },
+    {
+      "source": "the CQL string, or null",
+      "translation": "CQL 字符串，或为 null",
+      "count": 1
+    },
+    {
+      "source": "Base class for <a href=\"ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a> and other CQL-accessing DAO helpers, defining common properties such as\n<a href=\"../../ReactiveSessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSessionFactory</code></a> and exception translator.",
+      "translation": "<code>ReactiveCqlTemplate</code> 及其他 CQL 访问 DAO 辅助类的基类，定义了诸如 <code>ReactiveSessionFactory</code> 和异常翻译器等通用属性。",
       "count": 1
     }
   ]

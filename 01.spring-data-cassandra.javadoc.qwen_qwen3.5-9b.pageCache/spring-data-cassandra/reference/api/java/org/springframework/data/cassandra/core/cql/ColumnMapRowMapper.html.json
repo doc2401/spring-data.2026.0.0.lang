@@ -1,56 +1,66 @@
 {
   "created_at": "2026-06-16 17:34:15",
-  "updated_at": "2026-06-16 17:34:15",
+  "updated_at": "2026-06-18 07:52:55",
   "stats": {
-    "total_entries": 37,
+    "total_entries": 50,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 40,
-    "entries_with_hits": 37,
+    "total_hits": 64,
+    "entries_with_hits": 50,
     "entries_without_hits": 0,
-    "hit_rate": 1.0810810810810811,
-    "usage_percentage": 0.0036999999999999997
+    "hit_rate": 1.28,
+    "usage_percentage": 0.005
   },
   "items": [
     {
       "source": "Implementations must implement this method to map each row of data in the <code>ResultSet</code>.",
       "translation": "实现类必须实现此方法，以映射 `<code>ResultSet`</code> 中的每一行数据。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Determine the key to use for the given column in the column Map.",
       "translation": "确定列映射中给定列所使用的键。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Retrieve a CQL object value for the specified column.",
       "translation": "检索指定列的 CQL 对象值。",
-      "count": 2
+      "count": 3
+    },
+    {
+      "source": "Create a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> instance to be used as column map.",
+      "translation": "创建一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>实例用作列映射。",
+      "count": 3
     },
     {
       "source": "The Map implementation to use and the key to use for each column in the column Map can be customized through\noverriding <a href=\"#createColumnMap(int)\"><code>createColumnMap(int)</code></a> and <a href=\"#getColumnKey(java.lang.String)\"><code>getColumnKey(String)</code></a>, respectively.",
       "translation": "用于的 Map 实现以及列中每个列 Map 所使用的键可以通过分别重写<a href=\"#createColumnMap(int)\"><code>createColumnMap(int)</code></a>和<a href=\"#getColumnKey(java.lang.String)\"><code>getColumnKey(String)</code></a>来自定义。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<b>Note:</b> By default, ColumnMapRowMapper will try to build a linked Map with case-insensitive keys, to preserve\ncolumn order as well as allow any casing to be used for column names. This requires Commons Collections on the\nclasspath (which will be autodetected). Else, the fallback is a standard linked HashMap, which will still preserve\ncolumn order but requires the application to specify the column names in the same casing as exposed by the driver.",
       "translation": "<b>注意：</b>默认情况下，ColumnMapRowMapper 将尝试构建一个具有不区分大小写键的关联 Map，以保留列顺序并允许使用任意大小写的列名。这需要在类路径中包含 Commons Collections（该库将被自动检测）。否则，回退方案为标准关联 HashMap，它仍能保留列顺序，但要求应用程序指定列名时的大小写必须与驱动程序暴露的大小写一致。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "The default implementation uses the <code>getObject</code> method.",
       "translation": "默认实现使用<code>getObject</code>方法。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "By default, a linked case-insensitive Map will be created.",
       "translation": "默认情况下，将创建一个关联的不区分大小写的 Map。",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">RowMapper</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">RowMapper</a></code></span>",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Object\">Methods inherited from class <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#method-summary\" title=\"class or interface in java.lang\">Object</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()\" title=\"class or interface in java.lang\">clone</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)\" title=\"class or interface in java.lang\">equals</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()\" title=\"class or interface in java.lang\">finalize</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()\" title=\"class or interface in java.lang\">getClass</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()\" title=\"class or interface in java.lang\">hashCode</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()\" title=\"class or interface in java.lang\">notify</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()\" title=\"class or interface in java.lang\">notifyAll</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)\" title=\"class or interface in java.lang\">wait</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)\" title=\"class or interface in java.lang\">wait</a></code>",
@@ -80,16 +90,6 @@
     {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">RowMapper</a></code></span>",
-      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">RowMapper</a></code></span>",
-      "count": 1
-    },
-    {
-      "source": "Create a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> instance to be used as column map.",
-      "translation": "创建一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>实例用作列映射。",
       "count": 1
     },
     {
@@ -195,6 +195,71 @@
     {
       "source": "instance to be used as column map.",
       "translation": "用作列映射的实例。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">mapRow</a></code> in interface <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>, @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"RowMapper.html#mapRow(com.datastax.oss.driver.api.core.cql.Row,int)\">mapRow</a></code> 接口 <code><a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\">RowMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\">Map</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\">String</a>, @Nullable <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>&gt;&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>columnCount</code> - the column count, to be used as initial capacity for the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>, must not be\n         null.",
+      "translation": "<code>columnCount</code> - 列数，将用作 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> 的初始容量，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>rs</code> - the <code>Row</code> to map, must not be null.",
+      "translation": "<code>rs</code> - 要映射的 <code>Row</code>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>columnName</code> - the column name as returned by the <code>Row</code>, must not be null.",
+      "translation": "<code>columnName</code> - 由 <code>Row</code> 返回的列名，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>row</code> - is the <code>Row</code> holding the data, must not be null.",
+      "translation": "<code>row</code> - 是包含数据的 <code>Row</code>，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>rowNum</code> - the number of the current row.",
+      "translation": "<code>rowNum</code> - 当前行的行号。",
+      "count": 1
+    },
+    {
+      "source": "<code>index</code> - is the column index.",
+      "translation": "<code>index</code> - 表示列索引。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the result object for the current row.",
+      "translation": "当前行的结果对象。",
+      "count": 1
+    },
+    {
+      "source": "the new Map instance.",
+      "translation": "新的 Map 实例。",
+      "count": 1
+    },
+    {
+      "source": "the column key to use.",
+      "translation": "要使用的列键。",
+      "count": 1
+    },
+    {
+      "source": "the Object returned",
+      "translation": "返回的对象",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> implementation that creates a <code>java.util.Map</code> for each row, representing all columns as\nkey-value pairs: one entry for each column, with the column name as key.",
+      "translation": "<a href=\"RowMapper.html\" title=\"org.springframework.data.cassandra.core.cql 中的接口\"><code>RowMapper</code></a> 实现，为每一行创建一个 <code>java.util.Map</code>，将所有列表示为键值对：每个列对应一个条目，以列名为键。",
       "count": 1
     }
   ]

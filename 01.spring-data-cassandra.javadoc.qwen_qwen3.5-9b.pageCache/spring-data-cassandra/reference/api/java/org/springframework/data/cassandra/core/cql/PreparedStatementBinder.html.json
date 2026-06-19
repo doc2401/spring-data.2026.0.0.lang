@@ -1,41 +1,41 @@
 {
   "created_at": "2026-06-16 17:47:56",
-  "updated_at": "2026-06-16 17:47:56",
+  "updated_at": "2026-06-18 07:54:11",
   "stats": {
-    "total_entries": 23,
+    "total_entries": 28,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 24,
-    "entries_with_hits": 23,
+    "total_hits": 34,
+    "entries_with_hits": 28,
     "entries_without_hits": 0,
-    "hit_rate": 1.0434782608695652,
-    "usage_percentage": 0.0023
+    "hit_rate": 1.2142857142857142,
+    "usage_percentage": 0.0028
   },
   "items": [
     {
       "source": "Bind parameter values on the given <code>PreparedStatement</code>.",
       "translation": "在指定的 <code>PreparedStatement</code> 上绑定参数值。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "It's easier to use this interface than <a href=\"PreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementCreator</code></a>: The <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> will create the\n<code>PreparedStatement</code>, with the callback only being responsible for setting parameter values.",
       "translation": "使用此接口比 <a href=\"PreparedStatementCreator.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>PreparedStatementCreator</code></a> 更简单：<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> 会创建 <code>PreparedStatement</code>，回调函数只需负责设置参数值。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Implementations <i>do not</i> need to concern themselves with <code>DriverException</code>s that may be thrown from\noperations they attempt. The <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> class will catch and handle <code>DriverException</code> appropriately.",
       "translation": "实现无需关心从它们尝试执行的操作中可能抛出的<code>DriverException</code>。<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>类将捕获并适当处理这些<code>DriverException</code>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "This interface binds values on a <code>PreparedStatement</code> provided by the <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> class, for each of a\nnumber of updates in a batch using the same CQL. Implementations are responsible for setting any necessary\nparameters. CQL with placeholders will already have been supplied.",
       "translation": "该接口用于绑定由 <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> 类提供的 <code>PreparedStatement</code> 上的值，以便使用相同的 CQL 语句对批量中的多个更新进行操作。实现方负责设置任何必要的参数。带有占位符的 CQL 语句已经提供。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<span class=\"return-type\">com.datastax.oss.driver.api.core.cql.BoundStatement</span> <span class=\"element-name\">bindValues</span><wbr/><span class=\"parameters\">(com.datastax.oss.driver.api.core.cql.PreparedStatement ps)</span>\n                                                        throws <span class=\"exceptions\">com.datastax.oss.driver.api.core.DriverException</span>",
@@ -125,6 +125,31 @@
     {
       "source": "General callback interface used by the",
       "translation": "由通用回调接口使用的",
+      "count": 1
+    },
+    {
+      "source": "<code>com.datastax.oss.driver.api.core.DriverException</code> - if a <code>DriverException</code> is encountered (i.e. there is no need to catch\n          <code>DriverException</code>)",
+      "translation": "<code>com.datastax.oss.driver.api.core.DriverException</code> - 如果遇到 <code>DriverException</code>（即无需捕获该异常）",
+      "count": 1
+    },
+    {
+      "source": "<code>ps</code> - the PreparedStatement to invoke setter methods on.",
+      "translation": "<code>ps</code> - 用于调用 setter 方法的 PreparedStatement。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "David Webb, Mark Paluch",
+      "translation": "大卫·韦伯，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "General callback interface used by the <a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> and <a href=\"ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a> classes.",
+      "translation": "通用回调接口，由<a href=\"CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>和<a href=\"ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>类使用。",
       "count": 1
     }
   ]

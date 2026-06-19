@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-06-19 09:02:14",
+  "updated_at": "2026-06-19 09:02:14",
+  "stats": {
+    "total_entries": 18,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 26,
+    "entries_with_hits": 18,
+    "entries_without_hits": 0,
+    "hit_rate": 1.4444444444444444,
+    "usage_percentage": 0.0018
+  },
+  "items": [
+    {
+      "source": "Creates new <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a>.",
+      "translation": "创建新的<a href=\"ObjectHashMapper.html\" title=\"org.springframework.data.redis.hash 中的类\"><code>ObjectHashMapper</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "Creates a new <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a> using the given <a href=\"../core/convert/RedisConverter.html\" title=\"interface in org.springframework.data.redis.core.convert\"><code>RedisConverter</code></a> for conversion.",
+      "translation": "使用给定的 <a href=\"../core/convert/RedisConverter.html\" title=\"interface in org.springframework.data.redis.core.convert\"><code>RedisConverter</code></a> 进行转换，创建一个新的 <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Return a shared default <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a> instance, lazily building it once needed.",
+      "translation": "返回一个共享的默认<a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a>实例，仅在需要时懒式构建。",
+      "count": 2
+    },
+    {
+      "source": "Convert a <code>hash</code> (map) to an object.",
+      "translation": "将<code>hash</code>（映射）转换为对象。",
+      "count": 2
+    },
+    {
+      "source": "Convert a <code>hash</code> (map) to an object and return the casted result.",
+      "translation": "将<code>hash</code>（映射）转换为对象并返回转换后的结果。",
+      "count": 2
+    },
+    {
+      "source": "Convert an <code>object</code> to a map that can be used with Redis hashes.",
+      "translation": "将<code>object</code>转换为可用于 Redis 哈希的映射。",
+      "count": 2
+    },
+    {
+      "source": "<b>NOTE:</b> We highly recommend constructing individual <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a> instances for customization\npurposes. This accessor is only meant as a fallback for code paths which need simple type coercion but cannot\naccess a longer-lived <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a> instance any other way.",
+      "translation": "<b>注意：</b>我们强烈建议出于自定义目的构建独立的<a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a>实例。此访问器仅作为回退方案，适用于那些需要简单类型转换但无法以其他方式访问长期存在的<a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a>实例的代码路径。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"HashMapper.html\" title=\"interface in org.springframework.data.redis.hash\"><code>HashMapper</code></a> based on <a href=\"../core/convert/MappingRedisConverter.html\" title=\"class in org.springframework.data.redis.core.convert\"><code>MappingRedisConverter</code></a>. Supports nested properties and simple types like\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>.\n\n<pre><code>\nclass Person {\n\n  String firstname;\n  String lastname;\n\n  List&lt;String&gt; nicknames;\n  List&lt;Person&gt; coworkers;\n\n  Address address;\n}\n</code>\n</pre>\n\nThe above is represented as:\n\n<pre><code>\n_class=org.example.Person\nfirstname=rand\nlastname=al'thor\ncoworkers.[0].firstname=mat\ncoworkers.[0].nicknames.[0]=prince of the ravens\ncoworkers.[1].firstname=perrin\ncoworkers.[1].address.city=two rivers\n</code>\n</pre>",
+      "translation": "基于 <a href=\"../core/convert/MappingRedisConverter.html\" title=\"class in org.springframework.data.redis.core.convert\"><code>MappingRedisConverter</code></a> 的 <a href=\"HashMapper.html\" title=\"interface in org.springframework.data.redis.hash\"><code>HashMapper</code></a>。支持嵌套属性以及简单类型，如\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>。\n\n<pre><code>\nclass Person {\n\n  String firstname;\n  String lastname;\n\n  List&lt;String&gt; nicknames;\n  List&lt;Person&gt; coworkers;\n\n  Address address;\n}\n</code>\n</pre>\n\n上述内容表示为：\n\n<pre><code>\n_class=org.example.Person\nfirstname=rand\nlastname=al'thor\ncoworkers.[0].firstname=mat\ncoworkers.[0].nicknames.[0]=prince of the ravens\ncoworkers.[1].firstname=perrin\ncoworkers.[1].address.city=two rivers\n</code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"HashMapper.html#toHash(T)\">HashMapper</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"HashMapper.html#toHash(T)\">HashMapper</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"HashMapper.html#fromHash(java.util.Map)\">HashMapper</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"HashMapper.html#fromHash(java.util.Map)\">HashMapper</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"HashMapper.html#toHash(T)\">toHash</a></code> in interface <code><a href=\"HashMapper.html\" title=\"interface in org.springframework.data.redis.hash\">HashMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/>byte[],<wbr/>byte[]&gt;</code>",
+      "translation": "<code><a href=\"HashMapper.html#toHash(T)\">toHash</a></code> 接口 <code><a href=\"HashMapper.html\" title=\"interface in org.springframework.data.redis.hash\">HashMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/>byte[],<wbr/>byte[]&gt;</code> 中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"HashMapper.html#fromHash(java.util.Map)\">fromHash</a></code> in interface <code><a href=\"HashMapper.html\" title=\"interface in org.springframework.data.redis.hash\">HashMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/>byte[],<wbr/>byte[]&gt;</code>",
+      "translation": "接口 <code><a href=\"HashMapper.html\" title=\"interface in org.springframework.data.redis.hash\">HashMapper</a>&lt;<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a>,<wbr/>byte[],<wbr/>byte[]&gt;</code> 中的 <code><a href=\"HashMapper.html#fromHash(java.util.Map)\">fromHash</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if the given converter is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果给定的转换器为 null。",
+      "count": 1
+    },
+    {
+      "source": "the shared <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a> instance (never null).",
+      "translation": "共享的 <a href=\"ObjectHashMapper.html\" title=\"class in org.springframework.data.redis.hash\"><code>ObjectHashMapper</code></a> 实例（永不为 null）。",
+      "count": 1
+    },
+    {
+      "source": "<code>converter</code> - must not be null.",
+      "translation": "<code>converter</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>customConversions</code> - can be null.",
+      "translation": "<code>customConversions</code> - 可为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    }
+  ]
+}

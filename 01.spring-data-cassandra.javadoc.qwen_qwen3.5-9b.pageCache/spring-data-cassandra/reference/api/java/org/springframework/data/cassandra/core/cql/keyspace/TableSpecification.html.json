@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-06-18 08:17:20",
+  "updated_at": "2026-06-18 08:17:20",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 85,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 2.8333333333333335,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "<code>name</code> - The column name; must be a valid unquoted or quoted identifier without the surrounding double quotes,\n         must not be null.",
+      "translation": "<code>name</code> - 列名；必须是有效的未加引号或已加引号的标识符，且不带周围的双引号，不能为 null。",
+      "count": 14
+    },
+    {
+      "source": "<code>type</code> - The data type of the column, must not be null.",
+      "translation": "<code>type</code> - 列的数据类型，不能为空。",
+      "count": 14
+    },
+    {
+      "source": "Adds the given primary key column to the table with ascending ordering.",
+      "translation": "将给定的主键列添加到表中，并按升序排列。",
+      "count": 5
+    },
+    {
+      "source": "Adds the given primary key column to the table with ascending ordering. Must be specified after all partition key\ncolumns and before any non-key columns.",
+      "translation": "将给定的主键列添加到表中，并按升序排列。必须在所有分区键列之后指定，且在任意非键列之前指定。",
+      "count": 5
+    },
+    {
+      "source": "Returns an unmodifiable list of all primary key columns that are not also partition key columns.",
+      "translation": "返回一个不可修改的列表，包含所有不是分区键列的主键列。",
+      "count": 4
+    },
+    {
+      "source": "Adds the given info as a new column to the table.",
+      "translation": "将给定信息作为新列添加到表中。",
+      "count": 3
+    },
+    {
+      "source": "Adds the given info as a new column to the table. Partition key columns must precede primary key columns, which\nmust precede non-key columns.",
+      "translation": "将给定的信息作为新列添加到表中。分区键列必须位于主键列之前，而主键列又必须位于非键列之前。",
+      "count": 3
+    },
+    {
+      "source": "<code>ordering</code> - The data type of the column, must not be null.",
+      "translation": "<code>ordering</code> - 列的数据类型，不能为 NULL。",
+      "count": 3
+    },
+    {
+      "source": "Adds the given non-key column to the table.",
+      "translation": "向表中添加指定的非键列。",
+      "count": 2
+    },
+    {
+      "source": "Returns an unmodifiable list of all columns.",
+      "translation": "返回所有列的不可变列表。",
+      "count": 2
+    },
+    {
+      "source": "Returns an unmodifiable list of all non-key columns.",
+      "translation": "返回所有非键列的不可变列表。",
+      "count": 2
+    },
+    {
+      "source": "Returns an unmodifiable list of all partition key columns.",
+      "translation": "返回所有分区键列的不可变列表。",
+      "count": 2
+    },
+    {
+      "source": "Returns an unmodifiable list of static columns.",
+      "translation": "返回不可修改的静态列列表。",
+      "count": 2
+    },
+    {
+      "source": "Adds the given partition key column to the table.",
+      "translation": "向表中添加指定的分区键列。",
+      "count": 2
+    },
+    {
+      "source": "Adds the given static column to the table.",
+      "translation": "向表中添加指定的静态列。",
+      "count": 2
+    },
+    {
+      "source": "Adds the given non-key column to the table. Must be specified after all primary key columns.",
+      "translation": "将给定的非键列添加到表中。必须在所有主键列之后指定。",
+      "count": 2
+    },
+    {
+      "source": "Adds the given static column to the table. Must be specified after all primary key columns.",
+      "translation": "向表中添加指定的静态列。必须在所有主键列之后指定。",
+      "count": 2
+    },
+    {
+      "source": "Adds the given partition key column to the table. Must be specified before any other columns.",
+      "translation": "将给定的分区键列添加到表中。必须在添加任何其他列之前指定该列。",
+      "count": 2
+    },
+    {
+      "source": "<code>ordering</code> - If the given <a href=\"../PrimaryKeyType.html\" title=\"enum class in org.springframework.data.cassandra.core.cql\"><code>PrimaryKeyType</code></a> is <a href=\"../PrimaryKeyType.html#CLUSTERED\"><code>PrimaryKeyType.CLUSTERED</code></a>, then the given ordering is\n         used, else ignored, must not be null.",
+      "translation": "<code>ordering</code> - 如果给定的<a href=\"../PrimaryKeyType.html\" title=\"enum class in org.springframework.data.cassandra.core.cql\"><code>PrimaryKeyType</code></a>是<a href=\"../PrimaryKeyType.html#CLUSTERED\"><code>PrimaryKeyType.CLUSTERED</code></a>，则使用该排序；否则将被忽略。该参数不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>keyType</code> - Indicates key type, must not be null.",
+      "translation": "<code>keyType</code> - 表示密钥类型，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Object to support the configuration of table specifications that have columns. This class can also be used as a\nstandalone <a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\"><code>TableDescriptor</code></a>, independent of <a href=\"CreateTableSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\"><code>CreateTableSpecification</code></a>.",
+      "translation": "用于支持具有列的表规格配置的类。该类也可作为独立的<a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\"><code>TableDescriptor</code></a>使用，无需依赖<a href=\"CreateTableSpecification.html\" title=\"class in org.springframework.data.cassandra.core.cql.keyspace\"><code>CreateTableSpecification</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TableDescriptor.html#getColumns()\">getColumns</a></code> in interface <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "translation": "<code><a href=\"TableDescriptor.html#getColumns()\">getColumns</a></code> 接口 <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TableDescriptor.html#getPartitionKeyColumns()\">getPartitionKeyColumns</a></code> in interface <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "translation": "<code><a href=\"TableDescriptor.html#getPartitionKeyColumns()\">getPartitionKeyColumns</a></code> 接口 <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TableDescriptor.html#getClusteredKeyColumns()\">getClusteredKeyColumns</a></code> in interface <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "translation": "<code><a href=\"TableDescriptor.html#getClusteredKeyColumns()\">getClusteredKeyColumns</a></code> 接口 <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TableDescriptor.html#getPrimaryKeyColumns()\">getPrimaryKeyColumns</a></code> in interface <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "translation": "<code><a href=\"TableDescriptor.html#getPrimaryKeyColumns()\">getPrimaryKeyColumns</a></code> 接口 <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TableDescriptor.html#getNonKeyColumns()\">getNonKeyColumns</a></code> in interface <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "translation": "<code><a href=\"TableDescriptor.html#getNonKeyColumns()\">getNonKeyColumns</a></code> 接口 <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"TableDescriptor.html#getStaticColumns()\">getStaticColumns</a></code> in interface <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code>",
+      "translation": "<code><a href=\"TableDescriptor.html#getStaticColumns()\">getStaticColumns</a></code> 接口 <code><a href=\"TableDescriptor.html\" title=\"interface in org.springframework.data.cassandra.core.cql.keyspace\">TableDescriptor</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>keyType</code> - Indicates key type. Null means that the column is not a key column, must not be null.",
+      "translation": "<code>keyType</code> - 表示键类型。若为 null，则表示该列不是键列；此字段不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Matthew T. Adams, Alex Shvid, Mark Paluch, Aleksei Zotov",
+      "translation": "马修·T·亚当斯，亚历克斯·什维德，马克·帕卢奇，阿列克谢·佐托夫",
+      "count": 1
+    }
+  ]
+}

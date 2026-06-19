@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-06-19 10:02:58",
+  "updated_at": "2026-06-19 10:02:58",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 24,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0909090909090908,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "<code>connectionType</code> - must not be null.",
+      "translation": "<code>connectionType</code> 不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>connection</code> - must not be null.",
+      "translation": "<code>connection</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "This interface is typically used to encapsulate a native factory which returns a <code>connection</code> of on each invocation.",
+      "translation": "该接口通常用于封装原生工厂，使其在每次调用时返回一个 `<code>connection</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Connection providers are usually associated with a <code>RedisCodec</code> to create connections\nwith an appropriate codec.",
+      "translation": "连接提供者通常与一个<code>RedisCodec</code>关联，以使用适当的编解码器创建连接。",
+      "count": 1
+    },
+    {
+      "source": "Connection providers may create a new connection on each invocation or return pooled instances. Each obtained\nconnection must be released through its connection provider to allow disposal or release back to the pool.",
+      "translation": "连接提供者可以在每次调用时创建新连接，也可以返回池化实例。每个获取的连接都必须通过其连接提供者进行释放，以便进行处置或归还到池中。",
+      "count": 1
+    },
+    {
+      "source": "Extension to <a href=\"LettuceConnectionProvider.html\" title=\"interface in org.springframework.data.redis.connection.lettuce\"><code>LettuceConnectionProvider</code></a> for providers that allow connection creation to specific nodes.",
+      "translation": "对<a href=\"LettuceConnectionProvider.html\" title=\"org.springframework.data.redis.connection.lettuce 包中的接口\"><code>LettuceConnectionProvider</code></a>的扩展，以支持允许连接到特定节点的提供者。",
+      "count": 1
+    },
+    {
+      "source": "Release the <code>connection</code>. Closes connection <code>StatefulConnection.close()</code> by default.\nImplementations may choose whether they override this method and return the connection to a pool.",
+      "translation": "释放<code>connection</code>。默认情况下，这会关闭连接<code>StatefulConnection.close()</code>。  \n实现类可以选择是否重写此方法并将连接返回到连接池。",
+      "count": 1
+    },
+    {
+      "source": "Release asynchronously the <code>connection</code>. Closes connection\n<code>StatefulConnection.closeAsync()</code> by default. Implementations may choose whether they override this method\nand return the connection to a pool.",
+      "translation": "异步释放 `<code>connection</code>`。默认情况下，会关闭状态连接 `<code>StatefulConnection.closeAsync()</code>`。实现类可以选择是否重写此方法并将连接返回到连接池。",
+      "count": 1
+    },
+    {
+      "source": "Request a connection given <code>connectionType</code>.",
+      "translation": "根据<code>connectionType</code>请求建立连接。",
+      "count": 1
+    },
+    {
+      "source": "Request asynchronously a connection given <code>connectionType</code>.",
+      "translation": "根据 `<code>connectionType</code>` 异步请求连接。",
+      "count": 1
+    },
+    {
+      "source": "Release the <code>connection</code>.",
+      "translation": "释放<code>connection</code>。",
+      "count": 1
+    },
+    {
+      "source": "Release asynchronously the <code>connection</code>.",
+      "translation": "异步释放<code>connection</code>。",
+      "count": 1
+    },
+    {
+      "source": "Request a connection given <code>connectionType</code>. Providing a connection type allows specialization to provide a\nmore specific connection type.",
+      "translation": "根据 `<code>connectionType`</code> 请求连接。提供连接类型可允许进行专业化，以提供更具体的连接类型。",
+      "count": 1
+    },
+    {
+      "source": "Request asynchronously a connection given <code>connectionType</code>. Providing a connection type allows specialization\nto provide a more specific connection type.",
+      "translation": "异步请求一个连接，给定 `<code>connectionType</code>`。提供连接类型允许进行特化，以提供更具体的连接类型。",
+      "count": 1
+    },
+    {
+      "source": "a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletionStage.html\" title=\"class or interface in java.util.concurrent\"><code>CompletionStage</code></a> that is notified with the connection progress. Must be\n        <a href=\"#releaseAsync(io.lettuce.core.api.StatefulConnection)\"><code>released</code></a> if the connection is no longer in use.",
+      "translation": "一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletionStage.html\" title=\"class or interface in java.util.concurrent\"><code>CompletionStage</code></a>，用于接收连接进度的通知。如果连接不再使用，则必须\n        <a href=\"#releaseAsync(io.lettuce.core.api.StatefulConnection)\"><code>released</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the requested connection. Must be <a href=\"#release(io.lettuce.core.api.StatefulConnection)\"><code>released</code></a> if the connection is no\n        longer in use.",
+      "translation": "请求的连接。如果连接不再使用，必须为<a href=\"#release(io.lettuce.core.api.StatefulConnection)\"><code>released</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Close <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>future</code></a> notified once the connection is released.",
+      "translation": "关闭 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/CompletableFuture.html\" title=\"class or interface in java.util.concurrent\"><code>future</code></a>，以便在连接释放后收到通知。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Christoph Strobl",
+      "translation": "Mark Paluch，Christoph Strobl",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Defines a provider for Lettuce connections.",
+      "translation": "定义一个用于 Lettuce 连接的提供者。",
+      "count": 1
+    }
+  ]
+}

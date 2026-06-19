@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-06-19 05:01:08",
+  "updated_at": "2026-06-19 05:01:08",
+  "stats": {
+    "total_entries": 14,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 17,
+    "entries_with_hits": 14,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2142857142857142,
+    "usage_percentage": 0.0014
+  },
+  "items": [
+    {
+      "source": "Creates a statically configured database selection provider always selecting the\ndatabase with the given name <code>databaseName</code>.",
+      "translation": "创建一个静态配置的数据库选择器，始终选择名为<code>databaseName</code>的数据库。",
+      "count": 2
+    },
+    {
+      "source": "Retrieves the database selection.",
+      "translation": "检索数据库选择。",
+      "count": 2
+    },
+    {
+      "source": "A database selection provider always returning the default selection.",
+      "translation": "数据库选择提供者始终返回默认选择。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2019–2026 <a href=\"https://neo4j.com\">Neo4j, Neo4j Sweden AB</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2019–2026 <a href=\"https://neo4j.com\">Neo4j、Neo4j Sweden AB</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "An instance of a database name provider is only relevant when SDN is used with a Neo4j\n4.0+ cluster or server.",
+      "translation": "数据库名称提供程序实例仅在将 SDN 与 Neo4j 4.0+ 集群或服务器一起使用时才具有意义。",
+      "count": 1
+    },
+    {
+      "source": "To select the default database, return an empty optional. If you return a database\nname, it must not be empty. The empty optional indicates an unset database name on the\nclient, so that the server can decide on the default to use.",
+      "translation": "要选择默认数据库，请返回一个空可选值。如果您返回了数据库名称，则它不能为空。空可选值表示客户端未设置数据库名称，以便服务器自行决定使用哪个默认值。",
+      "count": 1
+    },
+    {
+      "source": "The provider is asked before any interaction of a repository or template with the\ncluster or server. That means you can in theory return different database names for\neach interaction. Be aware that you might end up with no data on queries or data stored\nto wrong database if you don't pay meticulously attention to the database you interact\nwith.",
+      "translation": "在提供者与集群或服务器进行任何仓库或模板交互之前，都会对其进行询问。这意味着理论上您可以为每次交互返回不同的数据库名称。请注意，如果您不仔细关注所交互的数据库，可能会导致查询无数据或将数据存储到错误的数据库中。",
+      "count": 1
+    },
+    {
+      "source": "the selected database me to interact with. Use\n<a href=\"DatabaseSelection.html#undecided()\"><code>DatabaseSelection.undecided()</code></a> to indicate the default database.",
+      "translation": "所选数据库将用于交互。使用 <a href=\"DatabaseSelection.html#undecided()\"><code>DatabaseSelection.undecided()</code></a> 来指示默认数据库。",
+      "count": 1
+    },
+    {
+      "source": "<code>databaseName</code> - the database name to use, must not be null nor empty",
+      "translation": "<code>databaseName</code> - 要使用的数据库名称，不能为 null 或空字符串",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个功能接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Michael J. Simons",
+      "translation": "迈克尔·J·西蒙斯",
+      "count": 1
+    },
+    {
+      "source": "a statically configured database name provider",
+      "translation": "静态配置的数据库名称提供器",
+      "count": 1
+    },
+    {
+      "source": "a provider for the default database name",
+      "translation": "默认数据库名称的提供者",
+      "count": 1
+    },
+    {
+      "source": "A provider interface that knows in which database repositories or either the reactive\nor imperative template should work.",
+      "translation": "一个能够知晓应在哪些数据库存储库中工作，或者应使用响应式还是命令式模板的提供者接口。",
+      "count": 1
+    }
+  ]
+}

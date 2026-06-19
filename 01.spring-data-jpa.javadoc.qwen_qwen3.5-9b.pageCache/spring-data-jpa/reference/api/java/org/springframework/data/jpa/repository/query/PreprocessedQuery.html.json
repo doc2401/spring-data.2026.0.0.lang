@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-06-18 17:53:57",
+  "updated_at": "2026-06-18 17:53:57",
+  "stats": {
+    "total_entries": 22,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 24,
+    "entries_with_hits": 22,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0909090909090908,
+    "usage_percentage": 0.0022
+  },
+  "items": [
+    {
+      "source": "Return the query string.",
+      "translation": "返回查询字符串。",
+      "count": 2
+    },
+    {
+      "source": "Return whether the query is a native query of not.",
+      "translation": "请返回该查询是否为原生查询。",
+      "count": 2
+    },
+    {
+      "source": "Preprocessing consists of parsing and rewriting so that no extension elements interfere with downstream parsers.\nHowever, pre-processing is a lossy procedure because the resulting <a href=\"#getQueryString()\"><code>query string</code></a> only\ncontains parameter binding markers and so the original query cannot be restored. Any query derivation must align its\n<a href=\"ParameterBinding.html\" title=\"class in org.springframework.data.jpa.repository.query\"><code>parameter bindings</code></a> to ensure the derived query uses the same binding semantics instead of\nplain parameters. See <a href=\"ParameterBinding.html#isCompatibleWith(org.springframework.data.jpa.repository.query.ParameterBinding)\"><code>ParameterBinding.isCompatibleWith(ParameterBinding)</code></a> for further reference.",
+      "translation": "预处理包括解析和重写，以确保扩展元素不会干扰下游解析器。然而，预处理是一种有损过程，因为生成的<a href=\"#getQueryString()\"><code>查询字符串</code></a>仅包含参数绑定标记，因此无法还原原始查询。任何查询推导都必须将其<a href=\"ParameterBinding.html\" title=\"class in org.springframework.data.jpa.repository.query\"><code>参数绑定</code></a>对齐，以确保派生的查询使用相同的绑定语义，而不是普通参数。有关进一步参考，请查看<a href=\"ParameterBinding.html#isCompatibleWith(org.springframework.data.jpa.repository.query.ParameterBinding)\"><code>ParameterBinding.isCompatibleWith(ParameterBinding)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Query-preprocessing transforms queries using Spring Data-specific syntax such as <code>query\ntemplating</code>, extended <code>LIKE</code> syntax and usage of <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/expression/ValueExpression.html\" title=\"class or interface in org.springframework.data.expression\"><code>value expressions</code></a> into a syntax that\nis valid for JPA queries (JPQL and native).",
+      "translation": "查询预处理使用 Spring Data 特定的语法（如 <code>query templating</code>、扩展的 <code>LIKE</code> 语法以及 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/expression/ValueExpression.html\" title=\"class or interface in org.springframework.data.expression\"><code>value expressions</code></a>）将查询转换为适用于 JPA 查询（JPQL 和本地 SQL）的有效语法。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Parse a <a href=\"DeclaredQuery.html\" title=\"interface in org.springframework.data.jpa.repository.query\"><code>query</code></a> into its parametrized form by identifying anonymous, named, indexed and SpEL\nparameters. Query parsing applies special treatment to <code>IN</code> and <code>LIKE</code> parameter bindings.",
+      "translation": "将<a href=\"DeclaredQuery.html\" title=\"org.springframework.data.jpa.repository.query 中的接口\"><code>query</code></a>解析为其参数化形式，通过识别匿名、命名、索引以及 SpEL 参数。查询解析会对<code>IN</code>和<code>LIKE</code>参数绑定应用特殊处理。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"QueryProvider.html#getQueryString()\">QueryProvider</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"QueryProvider.html#getQueryString()\">QueryProvider</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"DeclaredQuery.html#isNative()\">DeclaredQuery</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"DeclaredQuery.html#isNative()\">DeclaredQuery</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Parse a <a href=\"DeclaredQuery.html\" title=\"interface in org.springframework.data.jpa.repository.query\"><code>query</code></a> into its parametrized form by identifying anonymous, named, indexed and SpEL\nparameters.",
+      "translation": "解析<a href=\"DeclaredQuery.html\" title=\"org.springframework.data.jpa.repository.query 中的接口\"><code>query</code></a>，通过识别匿名、命名、索引和 SpEL 参数将其转换为参数化形式。",
+      "count": 1
+    },
+    {
+      "source": "Derive a query (typically a count query) from the given query string.",
+      "translation": "从给定的查询字符串派生出一个查询（通常为计数查询）。",
+      "count": 1
+    },
+    {
+      "source": "Derive a query (typically a count query) from the given query string. We need to copy expression bindings from the\ndeclared to the derived query as JPQL query derivation only sees JPA parameter markers and not the original\nexpressions anymore.",
+      "translation": "从给定的查询字符串派生出一个查询（通常为计数查询）。我们需要将声明中的表达式绑定复制到派生的查询中，因为 JPQL 查询推导仅能看到 JPA 参数标记，而看不到原始表达式。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"QueryProvider.html#getQueryString()\">getQueryString</a></code> in interface <code><a href=\"QueryProvider.html\" title=\"interface in org.springframework.data.jpa.repository.query\">QueryProvider</a></code>",
+      "translation": "接口 <code><a href=\"QueryProvider.html\" title=\"org.springframework.data.jpa.repository.query 中的接口\">QueryProvider</a></code> 中的方法 <code><a href=\"QueryProvider.html#getQueryString()\">getQueryString</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"DeclaredQuery.html#isNative()\">isNative</a></code> in interface <code><a href=\"DeclaredQuery.html\" title=\"interface in org.springframework.data.jpa.repository.query\">DeclaredQuery</a></code>",
+      "translation": "接口 <code><a href=\"DeclaredQuery.html\" title=\"org.springframework.data.jpa.repository.query 中的接口\">DeclaredQuery</a></code> 中的 <code><a href=\"DeclaredQuery.html#isNative()\">isNative</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"DeclaredQuery.html#rewrite(java.lang.String)\">rewrite</a></code> in interface <code><a href=\"DeclaredQuery.html\" title=\"interface in org.springframework.data.jpa.repository.query\">DeclaredQuery</a></code>",
+      "translation": "<a href=\"DeclaredQuery.html#rewrite(java.lang.String)\">rewrite</a> 接口 <code><a href=\"DeclaredQuery.html\" title=\"org.springframework.data.jpa.repository.query 中的接口\">DeclaredQuery</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"class or interface in java.lang\">toString</a></code> in class <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\">Object</a></code>",
+      "translation": "类 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"java.lang 中的类或接口\">Object</a></code> 中的 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()\" title=\"java.lang 中的类或接口\">toString</a></code>",
+      "count": 1
+    },
+    {
+      "source": "a parsed <a href=\"PreprocessedQuery.html\" title=\"class in org.springframework.data.jpa.repository.query\"><code>PreprocessedQuery</code></a>.",
+      "translation": "一个已解析的<a href=\"PreprocessedQuery.html\" title=\"org.springframework.data.jpa.repository.query 中的类\"><code>PreprocessedQuery</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>declaredQuery</code> - the source query to parse.",
+      "translation": "<code>declaredQuery</code> - 要解析的源查询。",
+      "count": 1
+    },
+    {
+      "source": "<code>newQueryString</code> - the new query string.",
+      "translation": "<code>newQueryString</code> - 新的查询字符串。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the query string.",
+      "translation": "查询字符串。",
+      "count": 1
+    },
+    {
+      "source": "true if native query; false if it is a JPQL query.",
+      "translation": "如果为原生查询则为 true；如果为 JPQL 查询则为 false。",
+      "count": 1
+    },
+    {
+      "source": "A pre-parsed query implementing <a href=\"DeclaredQuery.html\" title=\"interface in org.springframework.data.jpa.repository.query\"><code>DeclaredQuery</code></a> providing information about parameter bindings.",
+      "translation": "一个已解析的查询，实现了<a href=\"DeclaredQuery.html\" title=\"interface in org.springframework.data.jpa.repository.query\"><code>DeclaredQuery</code></a>接口，并提供有关参数绑定的信息。",
+      "count": 1
+    }
+  ]
+}

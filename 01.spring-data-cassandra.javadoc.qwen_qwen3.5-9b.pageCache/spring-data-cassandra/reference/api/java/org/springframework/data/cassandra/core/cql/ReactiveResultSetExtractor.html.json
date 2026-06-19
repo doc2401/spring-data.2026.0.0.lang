@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-06-18 07:57:12",
+  "updated_at": "2026-06-18 07:57:12",
+  "stats": {
+    "total_entries": 11,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 12,
+    "entries_with_hits": 11,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0909090909090908,
+    "usage_percentage": 0.0011
+  },
+  "items": [
+    {
+      "source": "Implementations must implement this method to process the entire <a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "实现类必须实现此方法以处理整个<a href=\"../../ReactiveResultSet.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveResultSet</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "This interface is mainly used within the CQL framework itself. A <a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a> is usually a simpler choice for\n<a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> processing, mapping one result object per row instead of one result object for the entire\n<a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>.",
+      "translation": "该接口主要在 CQL 框架内部使用。对于 `<a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>` 的处理，通常选择 `<a href=\"RowMapper.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>RowMapper</code></a>` 更为简单，因为它将每一行映射为一个结果对象，而不是将整个 `<a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>` 映射为一个结果对象。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Note: <a href=\"ReactiveResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ReactiveResultSetExtractor</code></a> object is typically stateless and thus reusable, as long as it doesn't\naccess stateful resources or keep result state within the object.",
+      "translation": "注意：<a href=\"ReactiveResultSetExtractor.html\" title=\"interface in org.springframework.data.cassandra.core.cql\"><code>ReactiveResultSetExtractor</code></a> 对象通常是无状态的，因此只要它不访问有状态资源或在对象内部保留结果状态，就可以重复使用。",
+      "count": 1
+    },
+    {
+      "source": "<code>resultSet</code> - <a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a> to extract data from, must not be null.",
+      "translation": "<code>resultSet</code> - 用于从中提取数据的<a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>接口，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>com.datastax.oss.driver.api.core.DriverException</code> - if a <code>DriverException</code> is encountered getting column values or navigating (that is,\n          there's no need to catch <code>DriverException</code>).",
+      "translation": "<code>com.datastax.oss.driver.api.core.DriverException</code> - 如果在获取列值或导航时遇到 <code>DriverException</code>（即无需捕获 <code>DriverException</code>）。",
+      "count": 1
+    },
+    {
+      "source": "an arbitrary result object <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\"><code>Publisher</code></a>.",
+      "translation": "一个任意的结果对象 <a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html\" title=\"class or interface in org.reactivestreams\"><code>Publisher</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"class or interface in org.springframework.dao\">DataAccessException</a></code> - in case of custom exceptions.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/DataAccessException.html\" title=\"org.springframework.dao 中的类或接口\">DataAccessException</a></code> - 针对自定义异常的情况。",
+      "count": 1
+    },
+    {
+      "source": "This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.",
+      "translation": "这是一个函数式接口，因此可用作 Lambda 表达式或方法引用的赋值目标。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Callback interface used by <a href=\"ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>'s query methods. Implementations of this interface perform the\nactual work of extracting results from a <a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>, but don't need to worry about exception handling.\n<code>DriverException</code>s will be caught and handled by the calling <a href=\"ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>.",
+      "translation": "由<a href=\"ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>的查询方法使用的回调接口。该接口的实现负责从<a href=\"../../ReactiveResultSet.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveResultSet</code></a>中提取结果，但无需担心异常处理。<code>DriverException</code>将被调用的<a href=\"ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>捕获并处理。",
+      "count": 1
+    }
+  ]
+}

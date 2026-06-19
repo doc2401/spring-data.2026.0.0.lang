@@ -1,55 +1,90 @@
 {
   "created_at": "2026-06-16 15:49:30",
-  "updated_at": "2026-06-16 15:49:30",
+  "updated_at": "2026-06-18 07:37:07",
   "stats": {
-    "total_entries": 58,
+    "total_entries": 77,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 64,
-    "entries_with_hits": 58,
+    "total_hits": 96,
+    "entries_with_hits": 77,
     "entries_without_hits": 0,
-    "hit_rate": 1.103448275862069,
-    "usage_percentage": 0.0058
+    "hit_rate": 1.2467532467532467,
+    "usage_percentage": 0.0077
   },
   "items": [
     {
       "source": "Perform the configured <a href=\"SchemaAction.html\" title=\"enum class in org.springframework.data.cassandra.config\"><code>SchemaAction</code></a> using <a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a> metadata.",
       "translation": "使用 <a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a> 元数据执行配置的 <a href=\"SchemaAction.html\" title=\"enum class in org.springframework.data.cassandra.config\"><code>SchemaAction</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Set the <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> to execute during the bean destruction phase, cleaning up the keyspace and\nleaving it in a known state for others.",
       "translation": "将<a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a>设置为在 Bean 销毁阶段执行，以清理 keyspace 并将其置于已知状态供其他组件使用。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Set the <a href=\"SchemaAction.html\" title=\"enum class in org.springframework.data.cassandra.config\"><code>SchemaAction</code></a>.",
       "translation": "设置<a href=\"SchemaAction.html\" title=\"org.springframework.data.cassandra.config 中的枚举类\"><code>SchemaAction</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Set the <code>CqlSession</code> to use.",
       "translation": "设置要使用的 <code>CqlSession</code>。",
+      "count": 3
+    },
+    {
+      "source": "Perform schema actions.",
+      "translation": "执行架构操作。",
+      "count": 3
+    },
+    {
+      "source": "Suspending schema refresh can be useful to delay schema agreement until the entire schema is created. Note that\ndisabling schema refresh may interfere with schema actions. <a href=\"SchemaAction.html#RECREATE_DROP_UNUSED\"><code>SchemaAction.RECREATE_DROP_UNUSED</code></a> and\nmapping-based schema creation rely on schema metadata.",
+      "translation": "挂起模式刷新可能有助于延迟模式协议的达成，直到整个模式创建完成。请注意，禁用模式刷新可能会干扰模式操作。<a href=\"SchemaAction.html#RECREATE_DROP_UNUSED\"><code>SchemaAction.RECREATE_DROP_UNUSED</code></a> 和基于映射的模式创建依赖于模式元数据。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 2
+    },
+    {
+      "source": "Factory to create and configure a Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> with support for executing CQL and initializing\nthe database schema (a.k.a. keyspace). This factory bean invokes a <a href=\"../core/cql/session/init/SessionFactoryInitializer.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.init\"><code>SessionFactoryInitializer</code></a> to prepare a\nkeyspace before applying <a href=\"SchemaAction.html\" title=\"enum class in org.springframework.data.cassandra.config\"><code>schema actions</code></a> such as creating user-defined types and tables.",
+      "translation": "工厂用于创建和配置支持执行 CQL 并初始化数据库模式（即 keyspace）的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。该工厂 bean 会调用 <a href=\"../core/cql/session/init/SessionFactoryInitializer.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.init\"><code>SessionFactoryInitializer</code></a> 来在应用诸如创建用户定义类型和表等<a href=\"SchemaAction.html\" title=\"enum class in org.springframework.data.cassandra.config\"><code>模式操作</code></a>之前准备 keyspace。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> to execute during the bean initialization phase. The\n<a href=\"../core/cql/session/init/KeyspacePopulator.html#populate(com.datastax.oss.driver.api.core.CqlSession)\"><code>KeyspacePopulator</code></a> is invoked before creating\n<a href=\"#setSchemaAction(org.springframework.data.cassandra.config.SchemaAction)\"><code>the schema</code></a>.",
+      "translation": "将 <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> 配置为在 Bean 初始化阶段执行。\n<a href=\"../core/cql/session/init/KeyspacePopulator.html#populate(com.datastax.oss.driver.api.core.CqlSession)\"><code>KeyspacePopulator</code></a> 会在创建 <a href=\"#setSchemaAction(org.springframework.data.cassandra.config.SchemaAction)\"><code>模式</code></a> 之前被调用。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a> to use. Schema actions will derive table and user type information from the\n<a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a> inside <code>converter</code>.",
+      "translation": "设置要使用的 <a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a>。模式操作将从 <code>converter</code> 内部的 <a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a> 派生表和用户类型信息。",
+      "count": 2
+    },
+    {
+      "source": "Set whether to suspend schema refresh settings during <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> and <a href=\"#destroy()\"><code>destroy()</code></a>\nlifecycle callbacks.",
+      "translation": "设置是否在 `<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>` 和 `<a href=\"#destroy()\"><code>destroy()</code></a>` 生命周期回调期间挂起模式刷新设置。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a> to use.",
+      "translation": "设置要使用的<a href=\"../core/convert/CassandraConverter.html\" title=\"org.springframework.data.cassandra.core.convert 中的接口\"><code>CassandraConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Set the <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> to execute during the bean initialization phase.",
+      "translation": "将<a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"org.springframework.data.cassandra.core.cql.session.init 接口中的接口\"><code>KeyspacePopulator</code></a>设置为在 Bean 初始化阶段执行。",
+      "count": 2
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
       "count": 2
     },
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 2
-    },
-    {
-      "source": "Perform schema actions.",
-      "translation": "执行架构操作。",
-      "count": 2
-    },
-    {
-      "source": "Suspending schema refresh can be useful to delay schema agreement until the entire schema is created. Note that\ndisabling schema refresh may interfere with schema actions. <a href=\"SchemaAction.html#RECREATE_DROP_UNUSED\"><code>SchemaAction.RECREATE_DROP_UNUSED</code></a> and\nmapping-based schema creation rely on schema metadata.",
-      "translation": "挂起模式刷新可能有助于延迟模式协议的达成，直到整个模式创建完成。请注意，禁用模式刷新可能会干扰模式操作。<a href=\"SchemaAction.html#RECREATE_DROP_UNUSED\"><code>SchemaAction.RECREATE_DROP_UNUSED</code></a> 和基于映射的模式创建依赖于模式元数据。",
-      "count": 1
-    },
-    {
-      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
-      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
       "count": 1
     },
     {
@@ -63,23 +98,8 @@
       "count": 1
     },
     {
-      "source": "Factory to create and configure a Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> with support for executing CQL and initializing\nthe database schema (a.k.a. keyspace). This factory bean invokes a <a href=\"../core/cql/session/init/SessionFactoryInitializer.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.init\"><code>SessionFactoryInitializer</code></a> to prepare a\nkeyspace before applying <a href=\"SchemaAction.html\" title=\"enum class in org.springframework.data.cassandra.config\"><code>schema actions</code></a> such as creating user-defined types and tables.",
-      "translation": "工厂用于创建和配置支持执行 CQL 并初始化数据库模式（即 keyspace）的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。该工厂 bean 会调用 <a href=\"../core/cql/session/init/SessionFactoryInitializer.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.init\"><code>SessionFactoryInitializer</code></a> 来在应用诸如创建用户定义类型和表等<a href=\"SchemaAction.html\" title=\"enum class in org.springframework.data.cassandra.config\"><code>模式操作</code></a>之前准备 keyspace。",
-      "count": 1
-    },
-    {
-      "source": "Set the <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> to execute during the bean initialization phase. The\n<a href=\"../core/cql/session/init/KeyspacePopulator.html#populate(com.datastax.oss.driver.api.core.CqlSession)\"><code>KeyspacePopulator</code></a> is invoked before creating\n<a href=\"#setSchemaAction(org.springframework.data.cassandra.config.SchemaAction)\"><code>the schema</code></a>.",
-      "translation": "将 <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> 配置为在 Bean 初始化阶段执行。\n<a href=\"../core/cql/session/init/KeyspacePopulator.html#populate(com.datastax.oss.driver.api.core.CqlSession)\"><code>KeyspacePopulator</code></a> 会在创建 <a href=\"#setSchemaAction(org.springframework.data.cassandra.config.SchemaAction)\"><code>模式</code></a> 之前被调用。",
-      "count": 1
-    },
-    {
       "source": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">SessionFactoryFactoryBean</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a>&gt;</span>",
       "translation": "<span class=\"modifiers\">public class </span><span class=\"element-name type-name-label\">SessionFactoryFactoryBean</span>\n<span class=\"extends-implements\">extends <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a>&gt;</span>",
-      "count": 1
-    },
-    {
-      "source": "Set the <a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a> to use. Schema actions will derive table and user type information from the\n<a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a> inside <code>converter</code>.",
-      "translation": "设置要使用的 <a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a>。模式操作将从 <code>converter</code> 内部的 <a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a> 派生表和用户类型信息。",
       "count": 1
     },
     {
@@ -108,11 +128,6 @@
       "count": 1
     },
     {
-      "source": "Set whether to suspend schema refresh settings during <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> and <a href=\"#destroy()\"><code>destroy()</code></a>\nlifecycle callbacks.",
-      "translation": "设置是否在 `<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>` 和 `<a href=\"#destroy()\"><code>destroy()</code></a>` 生命周期回调期间挂起模式刷新设置。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
       "count": 1
@@ -130,16 +145,6 @@
     {
       "source": "<span class=\"modifiers\">protected static final</span> <span class=\"return-type\">boolean</span> <span class=\"element-name\">DEFAULT_DROP_UNUSED_TABLES</span>",
       "translation": "<span class=\"modifiers\">protected static final</span> <span class=\"return-type\">boolean</span> <span class=\"element-name\">DEFAULT_DROP_UNUSED_TABLES</span>",
-      "count": 1
-    },
-    {
-      "source": "Set the <a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a> to use.",
-      "translation": "设置要使用的<a href=\"../core/convert/CassandraConverter.html\" title=\"org.springframework.data.cassandra.core.convert 中的接口\"><code>CassandraConverter</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Set the <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> to execute during the bean initialization phase.",
-      "translation": "将<a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"org.springframework.data.cassandra.core.cql.session.init 接口中的接口\"><code>KeyspacePopulator</code></a>设置为在 Bean 初始化阶段执行。",
       "count": 1
     },
     {
@@ -273,11 +278,6 @@
       "count": 1
     },
     {
-      "source": "Field Details",
-      "translation": "字段详情",
-      "count": 1
-    },
-    {
       "source": "Constructor Details",
       "translation": "构造器详情",
       "count": 1
@@ -300,6 +300,101 @@
     {
       "source": "), then schema refresh during lifecycle methods is suspended until finishing schema actions to\navoid periodic schema refreshes for each DDL statement.",
       "translation": ")，则在生命周期方法中暂停模式刷新，直到完成所有模式操作，以避免为每个 DDL 语句执行周期性的模式刷新。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory.config\">afterPropertiesSet</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#afterPropertiesSet()\" title=\"类或接口 org.springframework.beans.factory.config\">afterPropertiesSet</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"类或接口 org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"接口 org.springframework.data.cassandra\">SessionFactory</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#createInstance()\" title=\"class or interface in org.springframework.beans.factory.config\">createInstance</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#createInstance()\" title=\"类或接口 org.springframework.beans.factory.config\">createInstance</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"类或接口 org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"接口 org.springframework.data.cassandra\">SessionFactory</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#destroy()\" title=\"class or interface in org.springframework.beans.factory.config\">destroy</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#destroy()\" title=\"类或接口 org.springframework.beans.factory.config\">destroy</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"类或接口 org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"接口 org.springframework.data.cassandra\">SessionFactory</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html#getObjectType()\" title=\"class or interface in org.springframework.beans.factory\">getObjectType</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\">FactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html#getObjectType()\" title=\"类或接口 org.springframework.beans.factory\">getObjectType</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"类或接口 org.springframework.beans.factory\">FactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"接口 org.springframework.data.cassandra\">SessionFactory</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#getObjectType()\" title=\"class or interface in org.springframework.beans.factory.config\">getObjectType</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"class or interface in org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html#getObjectType()\" title=\"类或接口位于 org.springframework.beans.factory.config\">getObjectType</a></code> 在类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/config/AbstractFactoryBean.html\" title=\"类或接口位于 org.springframework.beans.factory.config\">AbstractFactoryBean</a>&lt;<a href=\"../SessionFactory.html\" title=\"接口位于 org.springframework.data.cassandra\">SessionFactory</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html#destroy()\" title=\"class or interface in org.springframework.beans.factory\">destroy</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html\" title=\"class or interface in org.springframework.beans.factory\">DisposableBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html#destroy()\" title=\"类或接口，位于 org.springframework.beans.factory\">destroy</a></code> 是接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/DisposableBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">DisposableBean</a></code> 中的方法。",
+      "count": 1
+    },
+    {
+      "source": "<code>keyspaceCleaner</code> - the <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> to use during cleanup.",
+      "translation": "<code>keyspaceCleaner</code> - 在清理期间使用的 <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>keyspacePopulator</code> - the <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> to use during initialization.",
+      "translation": "<code>keyspacePopulator</code> - 初始化期间使用的 <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>suspendLifecycleSchemaRefresh</code> - <code>true</code> to suspend the schema refresh during lifecycle callbacks;\n         <code>false</code> otherwise to retain the session schema refresh configuration.",
+      "translation": "<code>suspendLifecycleSchemaRefresh</code> - 设置为 <code>true</code> 可在生命周期回调期间暂停模式刷新；否则设置为 <code>false</code> 以保留会话模式刷新配置。",
+      "count": 1
+    },
+    {
+      "source": "<code>dropUnused</code> - true to drop unused types/tables (i.e. types/tables not know to be used by\n         <a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a>).",
+      "translation": "<code>dropUnused</code> - 设置为 true 时，将删除未使用的类型/表（即未被 <a href=\"../core/mapping/CassandraMappingContext.html\" title=\"class in org.springframework.data.cassandra.core.mapping\"><code>CassandraMappingContext</code></a> 知晓被使用的类型/表）。",
+      "count": 1
+    },
+    {
+      "source": "<code>ifNotExists</code> - true to perform creations fail-safe by adding <code>IF NOT EXISTS</code> to each creation\n         statement.",
+      "translation": "<code>ifNotExists</code> - 设置为 true 时，会在每个创建语句中添加 <code>IF NOT EXISTS</code>，以实现安全创建。",
+      "count": 1
+    },
+    {
+      "source": "true if schema action or <a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a> defined.",
+      "translation": "如果定义了模式操作或<a href=\"../core/cql/session/init/KeyspacePopulator.html\" title=\"interface in org.springframework.data.cassandra.core.cql.session.init\"><code>KeyspacePopulator</code></a>，则为 true。",
+      "count": 1
+    },
+    {
+      "source": "<code>converter</code> - must not be null.",
+      "translation": "<code>converter</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>schemaAction</code> - must not be null.",
+      "translation": "<code>schemaAction</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - must not be null.",
+      "translation": "<code>session</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>drop</code> - true to drop types/tables.",
+      "translation": "<code>drop</code> - 设为 true 以删除类型/表。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch, Ammar Khaku",
+      "translation": "马克·帕卢赫，阿马尔·哈库",
+      "count": 1
+    },
+    {
+      "source": "Set whether to suspend schema refresh settings during <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> and <a href=\"#destroy()\"><code>destroy()</code></a>\nlifecycle callbacks. Disabled by default to use schema metadata settings of the session configuration. When enabled\n(set to <code>true</code>), then schema refresh during lifecycle methods is suspended until finishing schema actions to\navoid periodic schema refreshes for each DDL statement.",
+      "translation": "设置是否在 `<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>` 和 `<a href=\"#destroy()\"><code>destroy()</code></a>` 生命周期回调期间挂起模式刷新设置。默认禁用，以使用会话配置的模式元数据设置。启用时（设置为 <code>true</code>），生命周期方法期间的模式刷新将暂停，直到完成模式操作，以避免为每个 DDL 语句进行周期性的模式刷新。",
       "count": 1
     }
   ]

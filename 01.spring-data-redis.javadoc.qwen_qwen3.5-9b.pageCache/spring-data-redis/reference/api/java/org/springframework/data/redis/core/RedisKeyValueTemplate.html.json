@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-06-19 08:56:12",
+  "updated_at": "2026-06-19 08:56:12",
+  "stats": {
+    "total_entries": 23,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 25,
+    "entries_with_hits": 23,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0869565217391304,
+    "usage_percentage": 0.0023
+  },
+  "items": [
+    {
+      "source": "Create new <a href=\"RedisKeyValueTemplate.html\" title=\"class in org.springframework.data.redis.core\"><code>RedisKeyValueTemplate</code></a>.",
+      "translation": "创建新的<a href=\"RedisKeyValueTemplate.html\" title=\"org.springframework.data.redis.core 中的类\"><code>RedisKeyValueTemplate</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain the underlying redis specific <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\"><code>EntityConverter</code></a>.",
+      "translation": "获取底层的 Redis 特定<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityConverter.html\" title=\"class or interface in org.springframework.data.convert\"><code>EntityConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Retrieve entities by resolving their ids and converting them into required type. <br/>\nThe callback provides either a single id or an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> of ids, used for retrieving\nthe actual domain types and shortcuts manual retrieval and conversion of ids via <a href=\"RedisTemplate.html\" title=\"class in org.springframework.data.redis.core\"><code>RedisTemplate</code></a>.\n\n<pre><code>\nList&lt;RedisSession&gt; sessions = template.find(new RedisCallback&lt;Set&lt;byte[]&gt;&gt;() {\n  public Set&lt;byte[]&lt; doInRedis(RedisConnection connection) throws DataAccessException {\n    return connection\n      .sMembers(\"spring:session:sessions:securityContext.authentication.principal.username:user\"\n        .getBytes());\n  }\n}, RedisSession.class);\n</code>\n</pre>",
+      "translation": "通过解析其 ID 并将其转换为所需类型来检索实体。<br/>\n回调提供单个 ID 或一个 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> 的 ID，用于检索实际的域类型，并简化通过 <a href=\"RedisTemplate.html\" title=\"class in org.springframework.data.redis.core\"><code>RedisTemplate</code></a> 手动检索和转换 ID 的操作。\n\n<pre><code>\nList&lt;RedisSession&gt; sessions = template.find(new RedisCallback&lt;Set&lt;byte[]&gt;&gt;() {\n  public Set&lt;byte[]&lt; doInRedis(RedisConnection connection) throws DataAccessException {\n    return connection\n      .sMembers(\"spring:session:sessions:securityContext.authentication.principal.username:user\"\n        .getBytes());\n  }\n}, RedisSession.class);\n</code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Redis specific implementation of <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\"><code>KeyValueTemplate</code></a>.",
+      "translation": "Redis 对 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\"><code>KeyValueTemplate</code></a> 的具体实现。",
+      "count": 1
+    },
+    {
+      "source": "Redis specific <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueCallback.html\" title=\"class or interface in org.springframework.data.keyvalue.core\"><code>KeyValueCallback</code></a>.",
+      "translation": "Redis 专用的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueCallback.html\" title=\"class or interface in org.springframework.data.keyvalue.core\"><code>KeyValueCallback</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Retrieve entities by resolving their ids and converting them into required type.",
+      "translation": "通过解析其 ID 并将它们转换为所需类型来检索实体。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#getMappingContext()\" title=\"class or interface in org.springframework.data.keyvalue.core\">getMappingContext</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#getMappingContext()\" title=\"class or interface in org.springframework.data.keyvalue.core\">getMappingContext</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#getMappingContext()\" title=\"class or interface in org.springframework.data.keyvalue.core\">getMappingContext</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#getMappingContext()\" title=\"class or interface in org.springframework.data.keyvalue.core\">getMappingContext</a></code> 类 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#insert(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">insert</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#insert(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">insert</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#insert(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">insert</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#insert(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">insert</a></code> 类中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#update(T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#update(T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#update(T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#update(T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> 类中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#update(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html#update(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueOperations.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueOperations</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#update(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> in class <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html#update(java.lang.Object,T)\" title=\"class or interface in org.springframework.data.keyvalue.core\">update</a></code> 类中的 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/keyvalue/docs/current/api/org/springframework/data/keyvalue/core/KeyValueTemplate.html\" title=\"class or interface in org.springframework.data.keyvalue.core\">KeyValueTemplate</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code>adapter</code> - must not be null.",
+      "translation": "<code>adapter</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>mappingContext</code> - must not be null.",
+      "translation": "<code>mappingContext</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>callback</code> - provides the to retrieve entity ids. Must not be null.",
+      "translation": "<code>callback</code> - 用于获取实体 ID。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>type</code> - must not be null.",
+      "translation": "<code>type</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 1
+    },
+    {
+      "source": "empty list if not elements found.",
+      "translation": "若未找到元素，则返回空列表。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

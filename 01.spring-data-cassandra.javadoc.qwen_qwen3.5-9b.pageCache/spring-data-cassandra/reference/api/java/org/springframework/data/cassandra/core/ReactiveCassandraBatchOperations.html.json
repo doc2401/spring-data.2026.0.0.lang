@@ -1,160 +1,205 @@
 {
   "created_at": "2026-06-16 16:13:27",
-  "updated_at": "2026-06-16 16:13:27",
+  "updated_at": "2026-06-18 07:40:51",
   "stats": {
-    "total_entries": 57,
+    "total_entries": 72,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 101,
-    "entries_with_hits": 57,
+    "total_hits": 174,
+    "entries_with_hits": 72,
     "entries_without_hits": 0,
-    "hit_rate": 1.7719298245614035,
-    "usage_percentage": 0.0057
+    "hit_rate": 2.4166666666666665,
+    "usage_percentage": 0.0072
   },
   "items": [
     {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果批处理已经执行。",
+      "count": 25
+    },
+    {
+      "source": "<code>options</code> - the WriteOptions to apply; must not be null.",
+      "translation": "<code>options</code> - 要应用的 WriteOptions；不能为 null。",
+      "count": 9
+    },
+    {
       "source": "Add a collection of deletes with given <a href=\"cql/WriteOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>WriteOptions</code></a> to the batch.",
       "translation": "向批处理中添加具有给定<a href=\"cql/WriteOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>WriteOptions</code></a>的删除集合。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Add a collection of inserts with given <a href=\"cql/WriteOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>WriteOptions</code></a> to the batch.",
       "translation": "向批处理中添加一组带有给定<a href=\"cql/WriteOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>WriteOptions</code></a>的插入操作。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Add a collection of updates with given <a href=\"cql/WriteOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>WriteOptions</code></a> to the batch.",
       "translation": "向批处理中添加带有指定<a href=\"cql/WriteOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>WriteOptions</code></a>的更新集合。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Add <code>statements</code> to the batch.",
       "translation": "向批处理中添加<code>statements</code>。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Add a collection of deletes to the batch.",
       "translation": "向批处理中添加删除集合。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Add a collection of inserts to the batch.",
       "translation": "向批处理中添加一组插入项。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Add a collection of updates to the batch.",
       "translation": "向批处理中添加一组更新。",
-      "count": 4
+      "count": 5
     },
     {
-      "source": "<dt>Parameters:</dt>\n<dd><code>statements</code> - the batchable statements such as <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>Since:</dt>\n<dd>4.4</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>statements</code> - 可批处理的语句，例如 <code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>版本：</dt>\n<dd>4.4</dd>",
-      "count": 3
+      "source": "<code>entities</code> - the entities to insert; must not be null.",
+      "translation": "<code>entities</code> - 要插入的实体；不能为 null。",
+      "count": 5
     },
     {
-      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to insert; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要插入的实体；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>",
-      "count": 3
+      "source": "<code>entities</code> - the entities to update; must not be null.",
+      "translation": "<code>entities</code> - 要更新的实体；不能为 null。",
+      "count": 5
     },
     {
-      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to update; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要更新的实体；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>",
-      "count": 3
-    },
-    {
-      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to delete; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要删除的实体；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>",
-      "count": 3
+      "source": "<code>entities</code> - the entities to delete; must not be null.",
+      "translation": "<code>entities</code> - 要删除的实体；不能为 null。",
+      "count": 5
     },
     {
       "source": "Apply given <a href=\"cql/QueryOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>QueryOptions</code></a> to the whole batch statement.",
       "translation": "将给定的<a href=\"cql/QueryOptions.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>QueryOptions</code></a>应用于整个批处理语句。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add a <code>statement</code> to the batch.",
       "translation": "向批处理中添加一个<code>statement</code>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add a Mono of <code>statement</code> to the batch.",
       "translation": "向批处理中添加 `<code>statement</code>` 的 Mono。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add Mono of <code>statements</code> to the batch.",
       "translation": "将 `<code>statements</code>` 的 `Mono` 添加到批处理中。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Apply a given <code>timestamp</code> to the whole batch.",
       "translation": "将给定的<code>timestamp</code>应用于整个批次。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add an array of deletes to the batch.",
       "translation": "向批处理中添加删除数组。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add delete to the batch.",
       "translation": "将删除操作添加到批处理中。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add an array of inserts to the batch.",
       "translation": "向批处理中添加插入数组。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add an insert to the batch.",
       "translation": "向批处理中添加插入操作。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add an array of updates to the batch.",
       "translation": "向批处理中添加更新数组。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Add an update to the batch.",
       "translation": "向批次添加更新。",
-      "count": 2
+      "count": 3
     },
     {
-      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to delete; must not be null.</dd>\n<dd><code>options</code> - the WriteOptions to apply; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>Since:</dt>\n<dd>2.2</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a></li>\n</ul>\n</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要删除的实体；不能为 null。</dd>\n<dd><code>options</code> - 要应用的 WriteOptions；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>版本：</dt>\n<dd>2.2</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a></li>\n</ul>\n</dd>",
-      "count": 2
-    },
-    {
-      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to insert; must not be null.</dd>\n<dd><code>options</code> - the WriteOptions to apply; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"InsertOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>InsertOptions</code></a></li>\n</ul>\n</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要插入的实体；不能为 null。</dd>\n<dd><code>options</code> - 要应用的 WriteOptions；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"InsertOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>InsertOptions</code></a></li>\n</ul>\n</dd>",
-      "count": 2
-    },
-    {
-      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to update; must not be null.</dd>\n<dd><code>options</code> - the WriteOptions to apply; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"UpdateOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>UpdateOptions</code></a></li>\n</ul>\n</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要更新的实体；不能为 null。</dd>\n<dd><code>options</code> - 要应用的 WriteOptions；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"UpdateOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>UpdateOptions</code></a></li>\n</ul>\n</dd>",
-      "count": 2
-    },
-    {
-      "source": "<dt>Parameters:</dt>\n<dd><code>statement</code> - the batchable statement such as <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>Since:</dt>\n<dd>4.4</dd>",
-      "translation": "<dt>参数：</dt>\n<dd><code>statement</code> - 可批处理的语句，例如 <code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>版本：</dt>\n<dd>4.4</dd>",
-      "count": 2
+      "source": "<code>statements</code> - the batchable statements such as <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.",
+      "translation": "<code>statements</code> - 可批处理的语句，例如 <code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>。",
+      "count": 3
     },
     {
       "source": "Batches are atomic by default. In the context of a Cassandra batch operation, atomic means that if any of the batch\nsucceeds, all of it will. Statement order does not matter within a batch. <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>\napplies all rows using the same <a href=\"#withTimestamp(long)\"><code>timestamp</code></a> if supplied, otherwise Cassandra will generate\na timestamp.",
       "translation": "默认情况下，批处理是原子的。在 Cassandra 批处理操作的上下文中，原子性意味着如果批处理中的任何一条语句成功，则所有语句都将成功。批处理内的语句顺序无关紧要。<a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a> 接口在提供 <a href=\"#withTimestamp(long)\"><code>timestamp</code></a> 时，会使用相同的 <a href=\"#withTimestamp(long)\"><code>timestamp</code></a> 应用所有行；否则，由 Cassandra 生成时间戳。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Multi partition batches should only be used to achieve atomicity for a few writes on different tables. Apart from\nthis they should be avoided because they’re too expensive. Single partition batches can be used to get atomicity and\nisolation, they're not much more expensive than normal writes.",
       "translation": "多分区批处理仅应用于少数跨不同表的写入操作以实现原子性。除此之外，应避免使用它们，因为其成本过高。单分区批处理可用于实现原子性和隔离性，其开销与常规写入相差不大。",
+      "count": 2
+    },
+    {
+      "source": "Execute the batch. The batch can be executed only once. An execution is registered on\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\"><code>subscribe</code></a>.",
+      "translation": "执行该批处理。该批处理只能执行一次。执行操作会在<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\"><code>subscribe</code></a>上注册。",
+      "count": 2
+    },
+    {
+      "source": "Execute the batch.",
+      "translation": "执行该批处理任务。",
+      "count": 2
+    },
+    {
+      "source": "<code>statement</code> - the batchable statement such as <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.",
+      "translation": "<code>statement</code> - 可批处理的语句，例如 <code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>。",
+      "count": 2
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>statements</code> - the batchable statements such as <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>Since:</dt>\n<dd>4.4</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>statements</code> - 可批处理的语句，例如 <code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>版本：</dt>\n<dd>4.4</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to insert; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要插入的实体；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to update; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要更新的实体；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to delete; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要删除的实体；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to delete; must not be null.</dd>\n<dd><code>options</code> - the WriteOptions to apply; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>Since:</dt>\n<dd>2.2</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要删除的实体；不能为 null。</dd>\n<dd><code>options</code> - 要应用的 WriteOptions；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>版本：</dt>\n<dd>2.2</dd>\n<dt>参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"DeleteOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>DeleteOptions</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to insert; must not be null.</dd>\n<dd><code>options</code> - the WriteOptions to apply; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"InsertOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>InsertOptions</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要插入的实体；不能为 null。</dd>\n<dd><code>options</code> - 要应用的 WriteOptions；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"InsertOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>InsertOptions</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>entities</code> - the entities to update; must not be null.</dd>\n<dd><code>options</code> - the WriteOptions to apply; must not be null.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>See Also:</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"UpdateOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>UpdateOptions</code></a></li>\n</ul>\n</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>entities</code> - 要更新的实体；不能为 null。</dd>\n<dd><code>options</code> - 要应用的 WriteOptions；不能为 null。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>另请参见：</dt>\n<dd>\n<ul class=\"tag-list\">\n<li><a href=\"UpdateOptions.html\" title=\"class in org.springframework.data.cassandra.core\"><code>UpdateOptions</code></a></li>\n</ul>\n</dd>",
+      "count": 1
+    },
+    {
+      "source": "<dt>Parameters:</dt>\n<dd><code>statement</code> - the batchable statement such as <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</dd>\n<dt>Returns:</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a>.</dd>\n<dt>Throws:</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if the batch was already executed.</dd>\n<dt>Since:</dt>\n<dd>4.4</dd>",
+      "translation": "<dt>参数：</dt>\n<dd><code>statement</code> - 可批处理的语句，例如 <code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>。</dd>\n<dt>返回：</dt>\n<dd><code>this</code> <a href=\"ReactiveCassandraBatchOperations.html\" title=\"org.springframework.data.cassandra.core 中的接口\"><code>ReactiveCassandraBatchOperations</code></a>。</dd>\n<dt>抛出：</dt>\n<dd><code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"java.lang 中的类或接口\">IllegalStateException</a></code> - 如果批处理已执行。</dd>\n<dt>版本：</dt>\n<dd>4.4</dd>",
       "count": 1
     },
     {
@@ -188,11 +233,6 @@
       "count": 1
     },
     {
-      "source": "Execute the batch. The batch can be executed only once. An execution is registered on\n<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\"><code>subscribe</code></a>.",
-      "translation": "执行该批处理。该批处理只能执行一次。执行操作会在<a class=\"external-link\" href=\"https://www.reactive-streams.org/reactive-streams-1.0.4-javadoc/org/reactivestreams/Publisher.html#subscribe(org.reactivestreams.Subscriber)\" title=\"class or interface in org.reactivestreams\"><code>subscribe</code></a>上注册。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
@@ -210,11 +250,6 @@
     {
       "source": "Modifier and Type",
       "translation": "修改类型",
-      "count": 1
-    },
-    {
-      "source": "Execute the batch.",
-      "translation": "执行该批处理任务。",
       "count": 1
     },
     {
@@ -295,6 +330,46 @@
     {
       "source": "instance cannot be modified/used once it was executed.",
       "translation": "实例一旦执行，便无法修改或使用。",
+      "count": 1
+    },
+    {
+      "source": "the <code><a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\">Mono</a>&lt;<a href=\"WriteResult.html\" title=\"class in org.springframework.data.cassandra.core\">WriteResult</a>&gt;</code> for the bulk operation. Terminates with <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a> if an\n        already executed batch is being attempted to execute.",
+      "translation": "用于批量操作的 <code><a class=\"external-link\" href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\" title=\"class or interface in reactor.core.publisher\">Mono</a>&lt;<a href=\"WriteResult.html\" title=\"class in org.springframework.data.cassandra.core\">WriteResult</a>&gt;</code>。如果尝试执行已执行的批处理，则终止并抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\"><code>IllegalStateException</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>timestamp</code> - the timestamp to apply.",
+      "translation": "<code>timestamp</code> - 要应用的 timestamps。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - the options to apply.",
+      "translation": "<code>options</code> - 要应用的选项。",
+      "count": 1
+    },
+    {
+      "source": "<code>entity</code> - the entity to insert; must not be null.",
+      "translation": "<code>entity</code> - 要插入的实体；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entity</code> - the entity to update; must not be null.",
+      "translation": "<code>entity</code> - 要更新的实体；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entity</code> - the entity to delete; must not be null.",
+      "translation": "<code>entity</code> - 要删除的实体；不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oleh Dokuka, Mark Paluch",
+      "translation": "作者：Dokuka、Mark Paluch",
+      "count": 1
+    },
+    {
+      "source": "Reactive Batch operations for insert/update/delete actions on a table. <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a> use\nlogged Cassandra <code>BATCH</code>es for single entities, collections of entities, and <code>statements</code>. A <a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a> instance cannot be modified/used once it was executed.",
+      "translation": "用于对表执行插入、更新和删除操作的响应式批处理操作。<a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a> 使用已记录的 Cassandra <code>BATCH</code> 语句来处理单个实体、实体集合以及<code>statements</code>。一旦执行，<a href=\"ReactiveCassandraBatchOperations.html\" title=\"interface in org.springframework.data.cassandra.core\"><code>ReactiveCassandraBatchOperations</code></a> 实例即不可修改或再次使用。",
       "count": 1
     }
   ]

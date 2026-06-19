@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-06-18 12:35:21",
+  "updated_at": "2026-06-18 12:35:21",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 37,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.48,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内置语句中使用此变量作为 SpEL 表达式。",
+      "count": 7
+    },
+    {
+      "source": "regexp that detect $named placeholder (starts with a letter, then alphanum chars)",
+      "translation": "用于检测以字母开头后跟字母数字字符的命名占位符（$named placeholder）的正则表达式。",
+      "count": 2
+    },
+    {
+      "source": "regexp that detect positional placeholder ($ followed by digits only)",
+      "translation": "用于检测位置占位符（即仅由数字组成的 $ 后跟）的正则表达式。",
+      "count": 2
+    },
+    {
+      "source": "regexp that detects \" and ' quote boundaries, ignoring escaped quotes",
+      "translation": "用于检测\"和'引号边界的正则表达式，忽略转义后的引号。",
+      "count": 2
+    },
+    {
+      "source": "regexp that detect SPEL Expression (#{..})",
+      "translation": "用于检测 SPEL 表达式（#{...}）的正则表达式。",
+      "count": 2
+    },
+    {
+      "source": "This constructor is to allow for generating the n1ql spel expressions from @Queries.",
+      "translation": "该构造函数用于从@Queries 生成 n1ql spel 表达式。",
+      "count": 2
+    },
+    {
+      "source": "Creates the N1QLExpression and parameterNames",
+      "translation": "创建 N1QLExpression 和 parameterNames。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement. This will be\nreplaced by the correct <code>SELECT x FROM y</code> clause needed for entity mapping. Eg.\n<code>\"#{\"#n1ql.selectEntity\"} WHERE test = true\"</code>. Note this only makes sense once, as the\nbeginning of the statement.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内置语句中使用此变量作为 SpEL 表达式。该变量将被替换为实体映射所需的正确 `<code>SELECT x FROM y</code>` 子句。例如：\n<code>\"#{\"#n1ql.selectEntity\"} WHERE test = true\"</code>。请注意，此用法仅在语句开头有意义。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement. This will be\nreplaced by the (escaped) scope name. Eg.\n<code>\"SELECT * FROM #{\"#n1ql.scope\"}.#{<a href=\"#SPEL_COLLECTION\">\"#n1ql.collection\"</a>} LIMIT 3\"</code>.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内置语句中使用此变量作为 SpEL 表达式。该变量将被（转义后的）作用域名称替换。例如：\n<code>\"SELECT * FROM #{\"#n1ql.scope\"}.#{<a href=\"#SPEL_COLLECTION\">\"#n1ql.collection\"</a>} LIMIT 3\"</code>。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement. This will be\nreplaced by the (escaped) collection name. Eg.\n<code>\"SELECT * FROM #{<a href=\"#SPEL_SCOPE\">\"#n1ql.scope\"</a>}.#{\"#n1ql.collection\"} LIMIT 3\"</code>.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内置语句中使用此变量作为 SpEL 表达式。该变量将被（转义后的）集合名称替换。例如：\n<code>\"SELECT * FROM #{<a href=\"#SPEL_SCOPE\">\"#n1ql.scope\"</a>}.#{\"#n1ql.collection\"} LIMIT 3\"</code>。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement. This will be\nreplaced by the correct <code>delete</code> expression needed Eg.\n<code>\"#{\"#n1ql.delete\"} WHERE test = true\"</code>. Note this only makes sense once, as the beginning of the\nstatement.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内联语句中使用此变量构建 SpEL 表达式。该变量将被替换为所需的正确 <code>delete</code> 表达式，例如：\n<code>\"#{\"#n1ql.delete\"} WHERE test = true\"</code>。请注意，此用法仅在语句开头有意义。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement. This will be\nreplaced by the correct <code>returning</code> clause needed for entity mapping. Eg.\n<code>\"#{\"#n1ql.returning\"} WHERE test = true\"</code>. Note this only makes sense once, as the beginning of\nthe statement.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内置语句中使用此变量编写 SpEL 表达式。该变量将被替换为实体映射所需的正确 <code>returning</code> 子句。例如：\n<code>\"#{\"#n1ql.returning\"} WHERE test = true\"</code>。请注意，此用法仅在语句开头有意义。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement. This will be\nreplaced by the (escaped) bucket name corresponding to the repository's entity. Eg.\n<code>\"SELECT * FROM #{\"#n1ql.bucket\"} LIMIT 3\"</code>.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内置语句中使用此变量编写 SpEL 表达式。该变量将被替换为与仓库实体对应的（已转义的）桶名称。例如：\n<code>\"SELECT * FROM #{\"#n1ql.bucket\"} LIMIT 3\"</code>。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement. This will be\nreplaced by the fields allowing to construct the repository's entity (SELECT clause). Eg.\n<code>\"SELECT #{\"#n1ql.fields\"} FROM test\"</code>.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内置语句中使用此变量编写 SpEL 表达式。该变量将被替换为用于构建仓库实体（SELECT 子句）的字段。例如：\n<code>\"SELECT #{\"#n1ql.fields\"} FROM test\"</code>。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement WHERE clause. This\nwill be replaced by the expression allowing to only select documents matching the entity's class. Eg.\n<code>\"SELECT * FROM test WHERE test = true AND #{\"#n1ql.filter\"}\"</code>.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内联语句的 WHERE 子句中使用此变量构建 SpEL 表达式。该变量将被替换为仅选择与实体类匹配的文档的表达式。例如：\n<code>\"SELECT * FROM test WHERE test = true AND #{\"#n1ql.filter\"}\"</code>。",
+      "count": 1
+    },
+    {
+      "source": "This class is exposed to SpEL parsing through the variable <code>#<a href=\"#SPEL_PREFIX\">\"n1ql\"</a></code>.",
+      "translation": "该类通过变量 `<code>#<a href=\"#SPEL_PREFIX\">\"n1ql\"</a></code>` 暴露给 SpEL 解析。",
+      "count": 1
+    },
+    {
+      "source": "Use this variable in a SpEL expression in a <a href=\"../Query.html\" title=\"annotation interface in org.springframework.data.couchbase.repository\"><code>@Query</code></a> annotation's inline statement WHERE clause.",
+      "translation": "在 `<a href=\"../Query.html\" title=\"org.springframework.data.couchbase.repository 包中的注解接口\"><code>@Query</code></a>` 注解的内联语句的 WHERE 子句中使用此变量作为 SpEL 表达式。",
+      "count": 1
+    },
+    {
+      "source": "This constructor is to allow for generating the n1ql spel expressions from NON-@Queries.",
+      "translation": "该构造函数用于从非 @Query 生成 N1QL SpEL 表达式。",
+      "count": 1
+    },
+    {
+      "source": "Create the n1ql spel values.",
+      "translation": "创建 N1QL spel 值。",
+      "count": 1
+    },
+    {
+      "source": "This constructor is to allow for generating the n1ql spel expressions from NON-@Queries. For selects,\nn1ql.selectEntity and n1ql.filter. FOr deletes, n1ql.delete, n1ql.filter and n1ql.returning",
+      "translation": "该构造函数用于从非 @Query 生成 N1QL SpEL 表达式。对于 SELECT 操作，使用 n1ql.selectEntity 和 n1ql.filter；对于 DELETE 操作，使用 n1ql.delete、n1ql.filter 和 n1ql.returning。",
+      "count": 1
+    },
+    {
+      "source": "Create the n1ql spel values. The domainClass is needed, but not the returnClass. Mapping the domainClass to the\nreturnClass is the responsibility of decoding.",
+      "translation": "创建 N1QL spel 值。需要指定 domainClass，但不需要指定 returnClass。将 domainClass 映射到 returnClass 是解码过程的责任。",
+      "count": 1
+    },
+    {
+      "source": "Subhashni Balakrishnan, Michael Reiche, Tigran Babloyan",
+      "translation": "Subhashni Balakrishnan，Michael Reiche，Tigran Babloyan",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    }
+  ]
+}

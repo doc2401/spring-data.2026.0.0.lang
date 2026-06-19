@@ -1,90 +1,190 @@
 {
   "created_at": "2026-06-16 15:39:35",
-  "updated_at": "2026-06-16 15:39:35",
+  "updated_at": "2026-06-18 07:35:35",
   "stats": {
     "total_entries": 56,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 71,
+    "total_hits": 93,
     "entries_with_hits": 56,
     "entries_without_hits": 0,
-    "hit_rate": 1.2678571428571428,
+    "hit_rate": 1.6607142857142858,
     "usage_percentage": 0.0056
   },
   "items": [
     {
-      "source": "Modifier and Type",
-      "translation": "修改类型",
-      "count": 13
-    },
-    {
       "source": "Sets the Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> to use.",
       "translation": "设置要使用的 Cassandra <a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\"><code>SessionFactory</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Create a new instance of <a href=\"../core/cql/session/lookup/MapSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>MapSessionFactoryLookup</code></a>.",
       "translation": "创建一个新的<a href=\"../core/cql/session/lookup/MapSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>MapSessionFactoryLookup</code></a>实例。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the initialized <code>CqlSession</code> instance.",
       "translation": "返回已初始化的 <code>CqlSession</code> 实例。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Set the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>session factories</code></a>; the keys are <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>Strings</code></a>, the values\nare actual <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> instances.",
       "translation": "设置一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，用于存储<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>session factories</code></a>；其键为<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>Strings</code></a>，值则是实际的<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>实例。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Creates an instance of <a href=\"../core/AsyncCassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>AsyncCassandraTemplate</code></a> initialized with the given <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> and\n<a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a>.",
       "translation": "创建一个由给定的 <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 和 <a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a> 初始化的 <a href=\"../core/AsyncCassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>AsyncCassandraTemplate</code></a> 实例。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Creates an instance of <a href=\"../core/CassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>CassandraTemplate</code></a> initialized with the given <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> and\n<a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a>.",
       "translation": "创建一个 <a href=\"../core/CassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>CassandraTemplate</code></a> 实例，该实例使用给定的 <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 和\n<a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a> 进行初始化。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Abstract <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> implementation that routes <a href=\"../core/cql/session/lookup/AbstractRoutingSessionFactory.html#getSession()\"><code>AbstractRoutingSessionFactory.getSession()</code></a> calls to one of various target\n<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>factories</code></a> based on a lookup key.",
       "translation": "一个实现了 <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 的抽象类，它会根据查找键将 <a href=\"../core/cql/session/lookup/AbstractRoutingSessionFactory.html#getSession()\"><code>AbstractRoutingSessionFactory.getSession()</code></a> 调用路由到多个目标 <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>factories</code></a> 中的某一个。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Constructs a new <a href=\"../core/cql/AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a> with the given <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
       "translation": "使用给定的<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>构建一个新的<a href=\"../core/cql/AsyncCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>AsyncCqlTemplate</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Constructs a new <a href=\"../core/cql/CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a> with the given <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
       "translation": "使用给定的<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>创建一个新的<a href=\"../core/cql/CqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>CqlTemplate</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Execute this <a href=\"../core/cql/session/init/ResourceKeyspacePopulator.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.init\"><code>ResourceKeyspacePopulator</code></a> against the given <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
       "translation": "对给定的<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>执行此<a href=\"../core/cql/session/init/ResourceKeyspacePopulator.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.init\"><code>ResourceKeyspacePopulator</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Get the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a> of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>session factories</code></a> maintained by this object.",
       "translation": "获取由本对象维护的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html\" title=\"class or interface in java.util\"><code>Map</code></a>，其中包含<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>session factories</code></a>。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Add the supplied <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> to the map of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>session factories</code></a> maintained by this\nobject.",
       "translation": "将提供的<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>添加到由本对象维护的<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>session factories</code></a>映射中。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Create a new instance of <a href=\"../core/cql/session/lookup/SingleSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>SingleSessionFactoryLookup</code></a> given <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
       "translation": "根据 <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> 创建一个新的 <a href=\"../core/cql/session/lookup/SingleSessionFactoryLookup.html\" title=\"class in org.springframework.data.cassandra.core.cql.session.lookup\"><code>SingleSessionFactoryLookup</code></a> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Resolve the specified <code>sessionFactory</code> object into a <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> instance.",
+      "translation": "将指定的<code>sessionFactory</code>对象解析为<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data Cassandra <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>factory beans</code></a> and configuration.",
+      "translation": "Spring Data Cassandra 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>工厂 Bean</code></a>和配置。",
+      "count": 2
+    },
+    {
+      "source": "Provides a strategy for looking up <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
+      "translation": "提供查找<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>的策略。",
+      "count": 2
+    },
+    {
+      "source": "Factory to create and configure a Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> with support for executing CQL and initializing\nthe database schema (a.k.a. keyspace).",
+      "translation": "工厂用于创建和配置支持执行 CQL 并初始化数据库模式（即键空间）的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
+      "translation": "返回此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Sets the Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
+      "translation": "设置此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "The <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> for the keyspace to populate when this component is initialized and to clean up when\nthis component is shut down.",
+      "translation": "用于在初始化此组件时填充以及在此组件关闭时清理的键空间 <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Retrieve the current target <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
+      "translation": "获取当前的目标<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Implementations must implement this method to retrieve the <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> identified by the given name from\ntheir backing store.",
+      "translation": "实现类必须实现此方法，以从其存储中检索给定名称的<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Provides utility classes for simple <code>CqlSession</code> access and various session\nimplementations.",
+      "translation": "提供用于简单访问 <code>CqlSession</code> 和各种会话实现的工具类。",
+      "count": 2
+    },
+    {
+      "source": "Apache Cassandra core support.",
+      "translation": "Apache Cassandra 核心支持。",
+      "count": 2
+    },
+    {
+      "source": "CQL core support.",
+      "translation": "CQL 核心支持。",
+      "count": 2
+    },
+    {
+      "source": "Provides extensible support for initializing databases through scripts.",
+      "translation": "提供通过脚本初始化数据库的可扩展支持。",
+      "count": 2
+    },
+    {
+      "source": "Constructor used for a basic template configuration.",
+      "translation": "用于基本模板配置的构造函数。",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a>",
+      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a>",
+      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a>",
+      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a>",
+      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/session/init/package-summary.html\">org.springframework.data.cassandra.core.cql.session.init</a>",
+      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/session/init/package-summary.html\">org.springframework.data.cassandra.core.cql.session.init</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/session/lookup/package-summary.html\">org.springframework.data.cassandra.core.cql.session.lookup</a>",
+      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/session/lookup/package-summary.html\">org.springframework.data.cassandra.core.cql.session.lookup</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
       "count": 1
     },
     {
@@ -148,11 +248,6 @@
       "count": 1
     },
     {
-      "source": "Resolve the specified <code>sessionFactory</code> object into a <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> instance.",
-      "translation": "将指定的<code>sessionFactory</code>对象解析为<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>实例。",
-      "count": 1
-    },
-    {
       "source": "<span>Methods in <a href=\"../core/cql/session/lookup/package-summary.html\">org.springframework.data.cassandra.core.cql.session.lookup</a> that return types with arguments of type <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a></span>",
       "translation": "<span>返回类型为包含 <a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra.SessionFactory 接口\">SessionFactory</a> 类型参数的类型的 <a href=\"../core/cql/session/lookup/package-summary.html\">org.springframework.data.cassandra.core.cql.session.lookup</a> 中的方法</span>",
       "count": 1
@@ -188,108 +283,13 @@
       "count": 1
     },
     {
-      "source": "Spring Data Cassandra <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>factory beans</code></a> and configuration.",
-      "translation": "Spring Data Cassandra 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>工厂 Bean</code></a>和配置。",
-      "count": 1
-    },
-    {
-      "source": "Provides a strategy for looking up <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
-      "translation": "提供查找<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>的策略。",
-      "count": 1
-    },
-    {
-      "source": "Factory to create and configure a Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> with support for executing CQL and initializing\nthe database schema (a.k.a. keyspace).",
-      "translation": "工厂用于创建和配置支持执行 CQL 并初始化数据库模式（即键空间）的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
-      "translation": "返回此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Sets the Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> used by this template to perform Cassandra data access operations.",
-      "translation": "设置此模板用于执行 Cassandra 数据访问操作的 Cassandra <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "The <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> for the keyspace to populate when this component is initialized and to clean up when\nthis component is shut down.",
-      "translation": "用于在初始化此组件时填充以及在此组件关闭时清理的键空间 <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Retrieve the current target <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a>.",
-      "translation": "获取当前的目标<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Implementations must implement this method to retrieve the <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\"><code>SessionFactory</code></a> identified by the given name from\ntheir backing store.",
-      "translation": "实现类必须实现此方法，以从其存储中检索给定名称的<a href=\"../SessionFactory.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>SessionFactory</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
     },
     {
-      "source": "Provides utility classes for simple <code>CqlSession</code> access and various session\nimplementations.",
-      "translation": "提供用于简单访问 <code>CqlSession</code> 和各种会话实现的工具类。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Apache Cassandra core support.",
-      "translation": "Apache Cassandra 核心支持。",
-      "count": 1
-    },
-    {
-      "source": "CQL core support.",
-      "translation": "CQL 核心支持。",
-      "count": 1
-    },
-    {
-      "source": "Provides extensible support for initializing databases through scripts.",
-      "translation": "提供通过脚本初始化数据库的可扩展支持。",
-      "count": 1
-    },
-    {
-      "source": "Constructor used for a basic template configuration.",
-      "translation": "用于基本模板配置的构造函数。",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a>",
-      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a>",
-      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a>",
-      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a>",
-      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/session/init/package-summary.html\">org.springframework.data.cassandra.core.cql.session.init</a>",
-      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/session/init/package-summary.html\">org.springframework.data.cassandra.core.cql.session.init</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> in <a href=\"../core/cql/session/lookup/package-summary.html\">org.springframework.data.cassandra.core.cql.session.lookup</a>",
-      "translation": "<a href=\"../SessionFactory.html\" title=\"interface in org.springframework.data.cassandra\">SessionFactory</a> 在 <a href=\"../core/cql/session/lookup/package-summary.html\">org.springframework.data.cassandra.core.cql.session.lookup</a> 中的用途",
       "count": 1
     }
   ]

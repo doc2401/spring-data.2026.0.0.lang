@@ -1,0 +1,251 @@
+{
+  "created_at": "2026-06-19 01:44:34",
+  "updated_at": "2026-06-19 01:44:34",
+  "stats": {
+    "total_entries": 47,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 57,
+    "entries_with_hits": 47,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2127659574468086,
+    "usage_percentage": 0.004699999999999999
+  },
+  "items": [
+    {
+      "source": "Turns the <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a> into a <code>Document</code> by using the given\n<a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a>.",
+      "translation": "使用给定的 <a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a> 将 <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a> 转换为 <code>Document</code>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a> given a <a href=\"AggregationExpression.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>group-by expression</code></a>.",
+      "translation": "根据<code>分组表达式</code>创建一个新的<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a> given a <a href=\"Field.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>group-by field</code></a>.",
+      "translation": "根据<code>group-by 字段</code>创建一个新的<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a> given an <a href=\"AggregationExpression.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationExpression</code></a> to add an output field to the\nresulting bucket documents.",
+      "translation": "根据给定的<a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a><a href=\"AggregationExpression.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationExpression</code></a>创建一个新实例，该实例用于向生成的桶文档添加输出字段。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"BucketOperationSupport.ExpressionBucketOperationBuilderSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.ExpressionBucketOperationBuilderSupport</code></a> given a SpEL expression and optional\nparams to add an output field to the resulting bucket documents.",
+      "translation": "根据给定的 SpEL 表达式和可选参数，创建一个新的 <a href=\"BucketOperationSupport.ExpressionBucketOperationBuilderSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.ExpressionBucketOperationBuilderSupport</code></a>，以便在生成的桶文档中添加输出字段。",
+      "count": 2
+    },
+    {
+      "source": "Configures a default bucket literal and return a new <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>.",
+      "translation": "配置默认桶字面量并返回一个新的<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Implementation hook to create a new bucket operation.",
+      "translation": "实现用于创建新桶操作的钩子。",
+      "count": 2
+    },
+    {
+      "source": "new instance of <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>.",
+      "translation": "创建一个新的<a href=\"BucketOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 中的类\"><code>BucketOperation</code></a>实例。",
+      "count": 2
+    },
+    {
+      "source": "<code>expression</code> - the SpEL expression, must not be null or empty.",
+      "translation": "<code>expression</code> - SpEL 表达式，不能为 null 或空。",
+      "count": 2
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Encapsulates the aggregation framework <code>$bucket</code>-operation. <br/>\nBucket stage is typically used with <a href=\"Aggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>Aggregation</code></a> and <code>$facet</code>. Categorizes incoming documents into\ngroups, called buckets, based on a specified expression and bucket boundaries. <br/>\nWe recommend to use the static factory method <a href=\"Aggregation.html#bucket(java.lang.String)\"><code>Aggregation.bucket(String)</code></a> instead of creating instances of\nthis class directly.",
+      "translation": "封装了聚合框架的 `$bucket` 操作。<br/>\nBucket 阶段通常与 <a href=\"Aggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>Aggregation</code></a> 和 <code>$facet</code> 一起使用。它根据指定的表达式和桶边界，将传入的文档分类到称为“桶”的组中。<br/>\n我们建议使用静态工厂方法 <a href=\"Aggregation.html#bucket(java.lang.String)\"><code>Aggregation.bucket(String)</code></a> 来创建实例，而不是直接创建此类对象。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"BucketOperationSupport.ExpressionBucketOperationBuilderSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.ExpressionBucketOperationBuilderSupport</code></a> implementation for <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a> using SpEL expression\nbased <a href=\"BucketOperationSupport.Output.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.Output</code></a>.",
+      "translation": "<a href=\"BucketOperationSupport.ExpressionBucketOperationBuilderSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.ExpressionBucketOperationBuilderSupport</code></a> 是用于基于 SpEL 表达式构建 <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a> 的 <a href=\"BucketOperationSupport.Output.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.Output</code></a> 实现。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"BucketOperationSupport.OutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.OutputBuilder</code></a> implementation for <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>.",
+      "translation": "<a href=\"BucketOperationSupport.OutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.OutputBuilder</code></a> 的实现，用于 <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a> given fieldName to add an output field to the resulting\nbucket documents. <a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a> exposes accumulation operations that can be applied to\nfieldName.",
+      "translation": "给定 fieldName 创建一个新的<a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a>，以便在生成的桶文档中添加一个输出字段。<a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a> 提供了可应用于 fieldName 的累积操作。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">AggregationOperation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">AggregationOperation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"AggregationOperation.html#getOperator()\">AggregationOperation</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"AggregationOperation.html#getOperator()\">AggregationOperation</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"BucketOperationSupport.html#newBucketOperation(org.springframework.data.mongodb.core.aggregation.BucketOperationSupport.Outputs)\">BucketOperationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从类复制：<code><a href=\"BucketOperationSupport.html#newBucketOperation(org.springframework.data.mongodb.core.aggregation.BucketOperationSupport.Outputs)\">BucketOperationSupport</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"BucketOperationSupport.html#andOutputExpression(java.lang.String,java.lang.Object...)\">BucketOperationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"BucketOperationSupport.html#andOutputExpression(java.lang.String,java.lang.Object...)\">BucketOperationSupport</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"BucketOperationSupport.html#andOutput(org.springframework.data.mongodb.core.aggregation.AggregationExpression)\">BucketOperationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类复制：<code><a href=\"BucketOperationSupport.html#andOutput(org.springframework.data.mongodb.core.aggregation.AggregationExpression)\">BucketOperationSupport</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from class: <code><a href=\"BucketOperationSupport.html#andOutput(java.lang.String)\">BucketOperationSupport</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述已从类中复制：<code><a href=\"BucketOperationSupport.html#andOutput(java.lang.String)\">BucketOperationSupport</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Creates a new <a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a> given fieldName to add an output field to the resulting\nbucket documents.",
+      "translation": "根据 fieldName 创建一个新的<a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport</code></a>，以便在生成的桶文档中添加一个输出字段。",
+      "count": 1
+    },
+    {
+      "source": "Return the MongoDB operator that is used for this <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a>.",
+      "translation": "返回用于此<a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 包中的接口\"><code>AggregationOperation</code></a>的 MongoDB 运算符。",
+      "count": 1
+    },
+    {
+      "source": "Configures boundaries and return a new <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>.",
+      "translation": "配置边界并返回一个新的<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Return the MongoDB operator that is used for this <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a>. Aggregation operations should\nimplement this method to avoid document rendering.",
+      "translation": "返回用于此<a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 包中的接口\"><code>AggregationOperation</code></a>的 MongoDB 运算符。聚合操作应实现此方法以避免文档渲染。",
+      "count": 1
+    },
+    {
+      "source": "Configures boundaries and return a new <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>. Existing boundaries are\npreserved and the new boundaries are appended.",
+      "translation": "配置边界并返回一个新的<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>。现有的边界将被保留，新的边界将被追加。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"BucketOperationSupport.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">toDocument</a></code> in class <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code>",
+      "translation": "<code><a href=\"BucketOperationSupport.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">toDocument</a></code> 类 <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"BucketOperationSupport.html#newBucketOperation(org.springframework.data.mongodb.core.aggregation.BucketOperationSupport.Outputs)\">newBucketOperation</a></code> in class <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code>",
+      "translation": "<code><a href=\"BucketOperationSupport.html#newBucketOperation(org.springframework.data.mongodb.core.aggregation.BucketOperationSupport.Outputs)\">newBucketOperation</a></code> 类 <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"BucketOperationSupport.html#andOutputExpression(java.lang.String,java.lang.Object...)\">andOutputExpression</a></code> in class <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code>",
+      "translation": "<code><a href=\"BucketOperationSupport.html#andOutputExpression(java.lang.String,java.lang.Object...)\">andOutputExpression</a></code> 类 <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"BucketOperationSupport.html#andOutput(org.springframework.data.mongodb.core.aggregation.AggregationExpression)\">andOutput</a></code> in class <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code>",
+      "translation": "<code><a href=\"BucketOperationSupport.html#andOutput(org.springframework.data.mongodb.core.aggregation.AggregationExpression)\">andOutput</a></code> 类 <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"BucketOperationSupport.html#andOutput(java.lang.String)\">andOutput</a></code> in class <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code>",
+      "translation": "<code><a href=\"BucketOperationSupport.html#andOutput(java.lang.String)\">andOutput</a></code> 类 <code><a href=\"BucketOperationSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperationSupport</a>&lt;<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation</a>, <a href=\"BucketOperation.BucketOperationOutputBuilder.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\">BucketOperation.BucketOperationOutputBuilder</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">toDocument</a></code> in interface <code><a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\">AggregationOperation</a></code>",
+      "translation": "<code><a href=\"AggregationOperation.html#toDocument(org.springframework.data.mongodb.core.aggregation.AggregationOperationContext)\">toDocument</a></code> 接口 <code><a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\">AggregationOperation</a></code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AggregationOperation.html#getOperator()\">getOperator</a></code> in interface <code><a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\">AggregationOperation</a></code>",
+      "translation": "接口 <code><a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 中的接口\">AggregationOperation</a></code> 中的 <code><a href=\"AggregationOperation.html#getOperator()\">getOperator</a></code>",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"BucketOperationSupport.ExpressionBucketOperationBuilderSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.ExpressionBucketOperationBuilderSupport</code></a> to create <a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>.",
+      "translation": "创建<a href=\"BucketOperation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperation</code></a>的<a href=\"BucketOperationSupport.ExpressionBucketOperationBuilderSupport.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>BucketOperationSupport.ExpressionBucketOperationBuilderSupport</code></a>新实例。",
+      "count": 1
+    },
+    {
+      "source": "<code>context</code> - the <a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a> to operate within. Must not be null.",
+      "translation": "<code>context</code> - 在此范围内操作的 <a href=\"AggregationOperationContext.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperationContext</code></a>。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "the operator used for this <a href=\"AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>AggregationOperation</code></a>.",
+      "translation": "此<a href=\"AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 中的接口\"><code>AggregationOperation</code></a>所使用的运算符。",
+      "count": 1
+    },
+    {
+      "source": "<code>groupByField</code> - must not be null.",
+      "translation": "<code>groupByField</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>groupByExpression</code> - must not be null.",
+      "translation": "<code>groupByExpression</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>literal</code> - must not be null.",
+      "translation": "<code>literal</code> 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>boundaries</code> - must not be null.",
+      "translation": "<code>boundaries</code> - 不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>outputs</code> - the outputs",
+      "translation": "<code>outputs</code> - 输出结果",
+      "count": 1
+    },
+    {
+      "source": "<code>params</code> - must not be null",
+      "translation": "<code>params</code> 不能为 null",
+      "count": 1
+    },
+    {
+      "source": "<code>fieldName</code> - must not be null or empty.",
+      "translation": "<code>fieldName</code> - 不能为 null 或空。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "the Document",
+      "translation": "该文件",
+      "count": 1
+    },
+    {
+      "source": "the new bucket operation.",
+      "translation": "新的桶操作。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

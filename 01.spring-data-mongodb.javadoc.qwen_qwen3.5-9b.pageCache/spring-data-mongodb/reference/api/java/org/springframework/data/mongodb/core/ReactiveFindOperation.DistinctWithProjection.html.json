@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-06-19 01:09:26",
+  "updated_at": "2026-06-19 01:09:26",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 9,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.0,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Define the target type the result should be mapped to. <br/>\nSkip this step if you are anyway fine with the default conversion.\n<dl>\n<dt><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> (the default)</dt>\n<dd>Result is mapped according to the <code>BsonType</code> converting eg. <code>BsonString</code> into\nplain <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>, <code>BsonInt64</code> to <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a>, etc. always picking the most concrete type with\nrespect to the domain types property.<br/>\nAny <code>BsonType.DOCUMENT</code> is run through the <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html\" title=\"class or interface in org.springframework.data.convert\"><code>EntityReader</code></a>\nto obtain the domain type. <br/>\nUsing <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> also works for non strictly typed fields. Eg. a mixture different types like fields using\n<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> in one <code>Document</code> while <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a> in another.</dd>\n<dt>Any Simple type like <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a>, ...</dt>\n<dd>The result is mapped directly by the MongoDB Java driver and the <code>Codecs</code> in\nplace. This works only for results where all documents considered for the operation use the very same type for\nthe field.</dd>\n<dt>Any Domain type</dt>\n<dd>Domain types can only be mapped if the if the result of the actual <code>distinct()</code> operation returns\n<code>BsonType.DOCUMENT</code>.</dd>\n<dt><code>BsonValue</code></dt>\n<dd>Using <code>BsonValue</code> allows retrieval of the raw driver specific format, which returns eg.\n<code>BsonString</code>.</dd>\n</dl>",
+      "translation": "定义结果应映射到的目标类型。<br/>\n如果您对默认转换方式满意，可跳过此步骤。\n<dl>\n<dt><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a>（默认值）</dt>\n<dd>结果将根据 <code>BsonType</code> 进行转换，例如将 <code>BsonString</code> 转换为普通的 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>，将 <code>BsonInt64</code> 转换为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a> 等，始终根据 domain types 属性选择最具体的类型。<br/>\n任何 <code>BsonType.DOCUMENT</code> 都会通过 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/convert/EntityReader.html\" title=\"class or interface in org.springframework.data.convert\"><code>EntityReader</code></a> 获取目标类型。<br/>\n使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html\" title=\"class or interface in java.lang\"><code>Object</code></a> 也适用于非严格类型的字段。例如，在一个 <code>Document</code> 中使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> 类型，而在另一个中使用 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a> 类型的混合情况。</dd>\n<dt>任何简单类型，如 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a>、<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html\" title=\"class or interface in java.lang\"><code>Long</code></a> 等</dt>\n<dd>结果将由 MongoDB Java 驱动程序和现有的 <code>Codecs</code> 直接映射。此方法仅适用于操作中所有文档对该字段均使用完全相同类型的情况。</dd>\n<dt>任何领域类型（Domain type）</dt>\n<dd>只有当实际的 <code>distinct()</code> 操作返回 <code>BsonType.DOCUMENT</code> 时，才能映射领域类型。</dd>\n<dt><code>BsonValue</code></dt>\n<dd>使用 <code>BsonValue</code> 可以获取驱动程序特定的原始格式，例如返回 <code>BsonString</code>。</dd>\n</dl>",
+      "count": 1
+    },
+    {
+      "source": "Result type override. Optional.",
+      "translation": "结果类型覆盖。可选。",
+      "count": 1
+    },
+    {
+      "source": "Define the target type the result should be mapped to.",
+      "translation": "定义结果应映射到的目标类型。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"as(java.lang.Class)-type-param-R\"><code>R</code> - result type.</span>",
+      "translation": "<span id=\"as(java.lang.Class)-type-param-R\"><code>R</code> - 结果类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"ReactiveFindOperation.TerminatingDistinct.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ReactiveFindOperation.TerminatingDistinct</code></a>.",
+      "translation": "创建 <a href=\"ReactiveFindOperation.TerminatingDistinct.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ReactiveFindOperation.TerminatingDistinct</code></a> 的新实例。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - if resultType is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 resultType 为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>resultType</code> - must not be null.",
+      "translation": "<code>resultType</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl",
+      "translation": "克里斯托夫·施特罗布",
+      "count": 1
+    }
+  ]
+}

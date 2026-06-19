@@ -1,0 +1,161 @@
+{
+  "created_at": "2026-06-19 12:16:34",
+  "updated_at": "2026-06-19 12:16:34",
+  "stats": {
+    "total_entries": 29,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 59,
+    "entries_with_hits": 29,
+    "entries_without_hits": 0,
+    "hit_rate": 2.0344827586206895,
+    "usage_percentage": 0.0029
+  },
+  "items": [
+    {
+      "source": "since 3.5, replacement <a href=\"org/springframework/data/jdbc/core/dialect/DialectResolver.html\" title=\"class in org.springframework.data.jdbc.core.dialect\"><code>DialectResolver</code></a> was moved to\n            the <a href=\"org/springframework/data/jdbc/core/dialect/package-summary.html\"><code>org.springframework.data.jdbc.core.dialect</code></a> package.",
+      "translation": "自 3.5 版本起，替换的<a href=\"org/springframework/data/jdbc/core/dialect/DialectResolver.html\" title=\"class in org.springframework.data.jdbc.core.dialect\"><code>DialectResolver</code></a>已移至<a href=\"org/springframework/data/jdbc/core/dialect/package-summary.html\"><code>org.springframework.data.jdbc.core.dialect</code></a>包中。",
+      "count": 8
+    },
+    {
+      "source": "no longer used nor supported. Use <a href=\"org/springframework/data/jdbc/repository/support/JdbcRepositoryFactory.html#%3Cinit%3E(org.springframework.data.jdbc.core.JdbcAggregateOperations)\"><code>JdbcRepositoryFactory(JdbcAggregateOperations)</code></a> instead.",
+      "translation": "不再使用或支持。请使用<a href=\"org/springframework/data/jdbc/repository/support/JdbcRepositoryFactory.html#%3Cinit%3E(org.springframework.data.jdbc.core.JdbcAggregateOperations)\"><code>JdbcRepositoryFactory(JdbcAggregateOperations)</code></a>代替。",
+      "count": 4
+    },
+    {
+      "source": "since 4.0 use <a href=\"org/springframework/data/jdbc/repository/config/EnableJdbcRepositories.html#jdbcAggregateOperationsRef()\"><code>EnableJdbcRepositories.jdbcAggregateOperationsRef()</code></a> instead to ensure consistent configuration\n            repositories.",
+      "translation": "自 4.0 版本起，请使用 <a href=\"org/springframework/data/jdbc/repository/config/EnableJdbcRepositories.html#jdbcAggregateOperationsRef()\"><code>EnableJdbcRepositories.jdbcAggregateOperationsRef()</code></a> 来确保配置的一致性。",
+      "count": 4
+    },
+    {
+      "source": "since 4.0. Use <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#findAll(java.lang.Class,org.springframework.data.domain.Sort)\"><code>JdbcAggregateOperations.findAll(Class, Sort)</code></a> together with <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#count(java.lang.Class)\"><code>JdbcAggregateOperations.count(Class)</code></a> to construct results\n            of type <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Page.html\" title=\"class or interface in org.springframework.data.domain\"><code>Page</code></a>.The API design is conflicts regarding pagination information. Also, pagination is\n            primarily a feature of the repository and not the template API.",
+      "translation": "自 4.0 版本起，请结合使用 <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#findAll(java.lang.Class,org.springframework.data.domain.Sort)\"><code>JdbcAggregateOperations.findAll(Class, Sort)</code></a> 与 <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#count(java.lang.Class)\"><code>JdbcAggregateOperations.count(Class)</code></a> 来构建类型为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Page.html\" title=\"class or interface in org.springframework.data.domain\"><code>Page</code></a> 的结果。API 设计在分页信息方面存在冲突。此外，分页主要是仓库（repository）的功能，而非模板 API 的功能。",
+      "count": 2
+    },
+    {
+      "source": "since 4.0. Use <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#findAll(org.springframework.data.relational.core.query.Query,java.lang.Class)\"><code>JdbcAggregateOperations.findAll(Query, Class)</code></a> together with <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#count(org.springframework.data.relational.core.query.Query,java.lang.Class)\"><code>JdbcAggregateOperations.count(Query, Class)</code></a> to construct\n            results of type <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Page.html\" title=\"class or interface in org.springframework.data.domain\"><code>Page</code></a>. The API design is conflicts regarding pagination information. Also,\n            pagination is primarily a feature of the repository and not the template API.",
+      "translation": "自 4.0 版本起，请结合使用 <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#findAll(org.springframework.data.relational.core.query.Query,java.lang.Class)\"><code>JdbcAggregateOperations.findAll(Query, Class)</code></a> 与 <a href=\"org/springframework/data/jdbc/core/JdbcAggregateOperations.html#count(org.springframework.data.relational.core.query.Query,java.lang.Class)\"><code>JdbcAggregateOperations.count(Query, Class)</code></a> 来构建类型为 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Page.html\" title=\"class or interface in org.springframework.data.domain\"><code>Page</code></a> 的结果。该 API 设计在分页信息方面存在冲突。此外，分页主要是仓库（repository）的功能，而非模板 API 的功能。",
+      "count": 2
+    },
+    {
+      "source": "Construct your own <a href=\"org/springframework/data/relational/core/sql/IdentifierProcessing.html\" title=\"interface in org.springframework.data.relational.core.sql\"><code>IdentifierProcessing</code></a>. There is no one standard identifier processing for\n            MySql. See <a href=\"https://dev.mysql.com/doc/refman/8.4/en/identifier-case-sensitivity.html\">Identifier Case Sensitivity</a>.",
+      "translation": "自行构建一个<a href=\"org/springframework/data/relational/core/sql/IdentifierProcessing.html\" title=\"interface in org.springframework.data.relational.core.sql\"><code>IdentifierProcessing</code></a>。MySQL 没有统一的标识符处理标准。请参阅<a href=\"https://dev.mysql.com/doc/refman/8.4/en/identifier-case-sensitivity.html\">标识符大小写敏感性</a>。",
+      "count": 2
+    },
+    {
+      "source": "since 3.0, use <a href=\"org/springframework/data/jdbc/core/convert/DelegatingDataAccessStrategy.html#%3Cinit%3E(org.springframework.data.jdbc.core.convert.DataAccessStrategy)\"><code>DelegatingDataAccessStrategy(DataAccessStrategy)</code></a> to avoid mutable state.",
+      "translation": "自 3.0 版本起，请使用 <a href=\"org/springframework/data/jdbc/core/convert/DelegatingDataAccessStrategy.html#%3Cinit%3E(org.springframework.data.jdbc.core.convert.DataAccessStrategy)\"><code>DelegatingDataAccessStrategy(DataAccessStrategy)</code></a> 以避免可变状态。",
+      "count": 2
+    },
+    {
+      "source": "since 3.5, replacement moved to <a href=\"org/springframework/data/jdbc/core/dialect/JdbcArrayColumns.html\" title=\"interface in org.springframework.data.jdbc.core.dialect\"><code>JdbcArrayColumns</code></a>.",
+      "translation": "自 3.5 版本起，替换操作已移至<a href=\"org/springframework/data/jdbc/core/dialect/JdbcArrayColumns.html\" title=\"interface in org.springframework.data.jdbc.core.dialect\"><code>JdbcArrayColumns</code></a>接口。",
+      "count": 2
+    },
+    {
+      "source": "Use the constructor instead. There is no one correct MySqlDialect, since the behaviour of MySql depends\n            on various configuration options. See\n\n            <pre><a href=\"https://dev.mysql.com/doc/refman/8.4/en/identifier-case-sensitivity.html\">Identifier Case Sensitivity</a>\n            </pre>",
+      "translation": "请使用构造函数。由于 MySQL 的行为取决于各种配置选项，因此不存在唯一的正确 `MySqlDialect`。请参阅\n\n<pre><a href=\"https://dev.mysql.com/doc/refman/8.4/en/identifier-case-sensitivity.html\">标识符大小写敏感性</a>\n</pre>",
+      "count": 2
+    },
+    {
+      "source": "use <a href=\"org/springframework/data/jdbc/repository/support/JdbcRepositoryFactory.html#%3Cinit%3E(org.springframework.data.jdbc.core.JdbcAggregateOperations)\"><code>JdbcRepositoryFactory(JdbcAggregateOperations)</code></a> for consistent configuration instead.",
+      "translation": "请使用 <a href=\"org/springframework/data/jdbc/repository/support/JdbcRepositoryFactory.html#%3Cinit%3E(org.springframework.data.jdbc.core.JdbcAggregateOperations)\"><code>JdbcRepositoryFactory(JdbcAggregateOperations)</code></a> 进行一致的配置。",
+      "count": 2
+    },
+    {
+      "source": "use either the <code>org.springframework.data.r2dbc.dialect.H2Dialect</code> or\n                                                 <code>org.springframework.data.jdbc.core.dialect.JdbcH2Dialect</code>.",
+      "translation": "使用<code>org.springframework.data.r2dbc.dialect.H2Dialect</code>或<code>org.springframework.data.jdbc.core.dialect.JdbcH2Dialect</code>。",
+      "count": 2
+    },
+    {
+      "source": "use either the <code>org.springframework.data.r2dbc.dialect.MySqlDialect</code> or\n            <code>org.springframework.data.jdbc.core.dialect.JdbcMySqlDialect</code>",
+      "translation": "使用<code>org.springframework.data.r2dbc.dialect.MySqlDialect</code>或<code>org.springframework.data.jdbc.core.dialect.JdbcMySqlDialect</code>其中之一。",
+      "count": 2
+    },
+    {
+      "source": "use either the <code>org.springframework.data.r2dbc.dialect.OracleDialect</code> or\n                                                 <code>org.springframework.data.jdbc.core.dialect.JdbcOracleDialect</code>.",
+      "translation": "使用<code>org.springframework.data.r2dbc.dialect.OracleDialect</code>或<code>org.springframework.data.jdbc.core.dialect.JdbcOracleDialect</code>。",
+      "count": 2
+    },
+    {
+      "source": "use either the <code>org.springframework.data.r2dbc.dialect.PostgresDialect</code> or\n            <code>org.springframework.data.jdbc.core.dialect.JdbcPostgresDialect</code>.",
+      "translation": "使用<code>org.springframework.data.r2dbc.dialect.PostgresDialect</code>或<code>org.springframework.data.jdbc.core.dialect.JdbcPostgresDialect</code>。",
+      "count": 2
+    },
+    {
+      "source": "use either the <code>org.springframework.data.r2dbc.dialect.SqlServerDialect</code> or\n            <code>org.springframework.data.jdbc.core.dialect.JdbcSqlServerDialect</code>.",
+      "translation": "使用<code>org.springframework.data.r2dbc.dialect.SqlServerDialect</code>或<code>org.springframework.data.jdbc.core.dialect.JdbcSqlServerDialect</code>。",
+      "count": 2
+    },
+    {
+      "source": "since there might be more than one reverse column instead. Use <a href=\"org/springframework/data/relational/core/mapping/AggregatePath.TableInfo.html#backReferenceColumnInfos()\"><code>AggregatePath.TableInfo.backReferenceColumnInfos()</code></a>\n            instead.",
+      "translation": "由于可能存在多个反向列，请使用<a href=\"org/springframework/data/relational/core/mapping/AggregatePath.TableInfo.html#backReferenceColumnInfos()\"><code>AggregatePath.TableInfo.backReferenceColumnInfos()</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "use the <code>org.springframework.data.jdbc.core.dialect.JdbcDb2Dialect</code> directly.",
+      "translation": "直接使用<code>org.springframework.data.jdbc.core.dialect.JdbcDb2Dialect</code>。",
+      "count": 2
+    },
+    {
+      "source": "use the <code>org.springframework.data.jdbc.core.dialect.JdbcHsqlDbDialect</code> directly.",
+      "translation": "直接使用<code>org.springframework.data.jdbc.core.dialect.JdbcHsqlDbDialect</code>。",
+      "count": 2
+    },
+    {
+      "source": "because an entity may have multiple id columns. Use\n            <code>AggregatePath.getTableInfo().getIdColumnInfos()</code> instead.",
+      "translation": "因为实体可能拥有多个 ID 列。请使用 `<code>AggregatePath.getTableInfo().getIdColumnInfos()</code>` 替代。",
+      "count": 2
+    },
+    {
+      "source": "Use one of the other constructors.",
+      "translation": "使用其他构造函数之一。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2017–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2017–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "since 1.2 in favor of using direct usage of <a href=\"org/springframework/data/r2dbc/core/StatementMapper.html\" title=\"interface in org.springframework.data.r2dbc.core\"><code>StatementMapper</code></a>,\n            <a href=\"org/springframework/data/r2dbc/query/UpdateMapper.html\" title=\"class in org.springframework.data.r2dbc.query\"><code>UpdateMapper</code></a> and <a href=\"org/springframework/data/r2dbc/convert/R2dbcConverter.html\" title=\"interface in org.springframework.data.r2dbc.convert\"><code>R2dbcConverter</code></a>.",
+      "translation": "自 1.2 版本起，推荐使用直接使用<a href=\"org/springframework/data/r2dbc/core/StatementMapper.html\" title=\"interface in org.springframework.data.r2dbc.core\"><code>StatementMapper</code></a>、<a href=\"org/springframework/data/r2dbc/query/UpdateMapper.html\" title=\"class in org.springframework.data.r2dbc.query\"><code>UpdateMapper</code></a>和<a href=\"org/springframework/data/r2dbc/convert/R2dbcConverter.html\" title=\"interface in org.springframework.data.r2dbc.convert\"><code>R2dbcConverter</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "use <a href=\"org/springframework/data/r2dbc/core/R2dbcEntityOperations.html#getConverter()\"><code>R2dbcEntityOperations.getConverter()</code></a> instead as <a href=\"org/springframework/data/r2dbc/core/ReactiveDataAccessStrategy.html\" title=\"interface in org.springframework.data.r2dbc.core\"><code>ReactiveDataAccessStrategy</code></a> will be removed in a future\n            release.",
+      "translation": "请使用<a href=\"org/springframework/data/r2dbc/core/R2dbcEntityOperations.html#getConverter()\"><code>R2dbcEntityOperations.getConverter()</code></a>，因为<a href=\"org/springframework/data/r2dbc/core/ReactiveDataAccessStrategy.html\" title=\"interface in org.springframework.data.r2dbc.core\"><code>ReactiveDataAccessStrategy</code></a>将在未来的版本中被移除。",
+      "count": 1
+    },
+    {
+      "source": "since 4.0 in favor of <a href=\"org/springframework/data/r2dbc/query/QueryMapper.html#getMappedObjects(org.springframework.data.relational.core.sql.Expression,org.springframework.data.relational.core.mapping.RelationalPersistentEntity)\"><code>QueryMapper.getMappedObjects(Expression, RelationalPersistentEntity)</code></a> where usage of\n            <a href=\"org/springframework/data/relational/core/mapping/Embedded.html\" title=\"annotation interface in org.springframework.data.relational.core.mapping\"><code>embeddable properties</code></a> can return more\n            than one mapped result.",
+      "translation": "自 4.0 版本起，推荐使用 <a href=\"org/springframework/data/r2dbc/query/QueryMapper.html#getMappedObjects(org.springframework.data.relational.core.sql.Expression,org.springframework.data.relational.core.mapping.RelationalPersistentEntity)\"><code>QueryMapper.getMappedObjects(Expression, RelationalPersistentEntity)</code></a>，因为使用\n            <a href=\"org/springframework/data/relational/core/mapping/Embedded.html\" title=\"annotation interface in org.springframework.data.relational.core.mapping\"><code>可嵌入属性</code></a> 可能会返回多个映射结果。",
+      "count": 1
+    },
+    {
+      "source": "since 1.2. <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/r2dbc/core/DatabaseClient.html\" title=\"class or interface in org.springframework.r2dbc.core\"><code>DatabaseClient</code></a> encapsulates named parameter handling\n            entirely.",
+      "translation": "自 1.2 版起，<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/r2dbc/core/DatabaseClient.html\" title=\"class or interface in org.springframework.r2dbc.core\"><code>DatabaseClient</code></a> 完全封装了命名参数的处理。",
+      "count": 1
+    },
+    {
+      "source": "since 4.1 in favor of <a href=\"org/springframework/data/relational/core/dialect/Dialect.html#simpleTypes()\"><code>Dialect.simpleTypes()</code></a>.",
+      "translation": "自 4.1 起，改为使用<a href=\"org/springframework/data/relational/core/dialect/Dialect.html#simpleTypes()\"><code>Dialect.simpleTypes()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#for-removal\">Terminally Deprecated</a>",
+      "translation": "<a href=\"#for-removal\">已终止维护</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#exception-class\">Exception Classes</a>",
+      "translation": "<a href=\"#exception-class\">异常类</a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"#annotation-interface-member\">Annotation Interface Elements</a>",
+      "translation": "<a href=\"#annotation-interface-member\">注解接口元素</a>",
+      "count": 1
+    }
+  ]
+}

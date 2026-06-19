@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-06-19 09:38:17",
+  "updated_at": "2026-06-19 09:38:17",
+  "stats": {
+    "total_entries": 20,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 21,
+    "entries_with_hits": 20,
+    "entries_without_hits": 0,
+    "hit_rate": 1.05,
+    "usage_percentage": 0.002
+  },
+  "items": [
+    {
+      "source": "Factory Method to create <a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expirations</code></a> from raw sources provided in a given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>.",
+      "translation": "工厂方法用于从给定<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"类或接口在 java.util.concurrent\"><code>TimeUnit</code></a>中提供的原始源创建<a href=\"Expirations.html\" title=\"org.springframework.data.redis.core.types 中的类\"><code>Expirations</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Value Object linking a number of keys to their <a href=\"Expirations.TimeToLive.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expirations.TimeToLive</code></a> retaining the order of the original source.\nDedicated higher level methods interpret raw expiration values retrieved from a Redis Client.\n<ol>\n<li><a href=\"#persistent()\"><code>persistent()</code></a> returns keys that do not have an associated time to live</li>\n<li><a href=\"#missing()\"><code>missing()</code></a> returns keys that do not exist and therefore have no associated time to live</li>\n<li><a href=\"#ttl()\"><code>ttl()</code></a> returns the ordered list of <a href=\"Expirations.TimeToLive.html\" title=\"class in org.springframework.data.redis.core.types\"><code>expirations</code></a> based on the raw values</li>\n<li><a href=\"#expiring()\"><code>expiring()</code></a> returns the expiring keys along with their <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>time to live</code></a></li>\n</ol>",
+      "translation": "值对象将多个键与其 <a href=\"Expirations.TimeToLive.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expirations.TimeToLive</code></a> 关联，并保留原始源中的顺序。  \n专用的更高层方法解释从 Redis 客户端获取的原始过期值。\n<ol>\n<li><a href=\"#persistent()\"><code>persistent()</code></a> 返回没有关联生存时间的键</li>\n<li><a href=\"#missing()\"><code>missing()</code></a> 返回不存在的键，因此没有关联的生存时间</li>\n<li><a href=\"#ttl()\"><code>ttl()</code></a> 返回基于原始值的有序 <a href=\"Expirations.TimeToLive.html\" title=\"class in org.springframework.data.redis.core.types\"><code>过期时间列表</code></a></li>\n<li><a href=\"#expiring()\"><code>expiring()</code></a> 返回即将过期的键及其 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html\" title=\"class or interface in java.time\"><code>生存时间</code></a></li>\n</ol>",
+      "count": 1
+    },
+    {
+      "source": "Collection of timeouts associated with a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>.",
+      "translation": "与<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"java.util.concurrent 中的类或接口\"><code>TimeUnit</code></a>关联的超时集合。",
+      "count": 1
+    },
+    {
+      "source": "Expiration holds time to live <a href=\"Expirations.TimeToLive.html#raw()\"><code>Expirations.TimeToLive.raw()</code></a> values as returned by a Redis Client.",
+      "translation": "过期时间持有由 Redis 客户端返回的<a href=\"Expirations.TimeToLive.html#raw()\"><code>Expirations.TimeToLive.raw()</code></a>值。",
+      "count": 1
+    },
+    {
+      "source": "an ordered set of all <a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>expirations</code></a> where the <a href=\"Expirations.TimeToLive.html#value()\"><code>Expirations.TimeToLive.value()</code></a> is using the\n        <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a> defined in <a href=\"#timeUnit()\"><code>timeUnit()</code></a>.",
+      "translation": "一个有序集合，包含所有 `<a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>expirations</code></a>`，其中 `<a href=\"Expirations.TimeToLive.html#value()\"><code>Expirations.TimeToLive.value()</code></a>` 使用的是在 `<a href=\"#timeUnit()\"><code>timeUnit()</code></a>` 中定义的\n        <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "an ordered <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> of <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.Entry.html\" title=\"class or interface in java.util\"><code>entries</code></a> combining keys with their actual time to\n        live. <a href=\"Expirations.TimeToLive.html#isMissing()\"><code>Missing</code></a> and <a href=\"Expirations.TimeToLive.html#isPersistent()\"><code>persistent</code></a> entries are\n        skipped.",
+      "translation": "一个有序的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>，其中包含将键与其实际生存时间相结合的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.Entry.html\" title=\"class or interface in java.util\"><code>entries</code></a>。<a href=\"Expirations.TimeToLive.html#isMissing()\"><code>Missing</code></a>和<a href=\"Expirations.TimeToLive.html#isPersistent()\"><code>persistent</code></a>条目将被跳过。",
+      "count": 1
+    },
+    {
+      "source": "the <a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>expirations</code></a> where the <a href=\"Expirations.TimeToLive.html#value()\"><code>Expirations.TimeToLive.value()</code></a> is using the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>\n        defined in <a href=\"#timeUnit()\"><code>timeUnit()</code></a> or null if no entry could be found.",
+      "translation": "<a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>expirations</code></a> 中，<a href=\"Expirations.TimeToLive.html#value()\"><code>Expirations.TimeToLive.value()</code></a> 使用在 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a> 中定义的<a href=\"#timeUnit()\"><code>timeUnit()</code></a>，如果找不到任何条目则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a> for <a href=\"Expirations.TimeToLive.html\" title=\"class in org.springframework.data.redis.core.types\"><code>expirations</code></a> held by this instance.",
+      "translation": "用于本实例持有的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html\" title=\"class or interface in java.util.concurrent\"><code>TimeUnit</code></a>的<a href=\"Expirations.TimeToLive.html\" title=\"class in org.springframework.data.redis.core.types\"><code>expirations</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "the time to live value of the requested key if it exists and the expiration is neither\n        <a href=\"Expirations.TimeToLive.html#isMissing()\"><code>missing</code></a> nor <a href=\"Expirations.TimeToLive.html#isPersistent()\"><code>persistent</code></a>, null\n        otherwise.",
+      "translation": "如果请求的键存在且其过期状态既非<a href=\"Expirations.TimeToLive.html#isMissing()\"><code>missing</code></a>也非<a href=\"Expirations.TimeToLive.html#isPersistent()\"><code>persistent</code></a>，则返回该键的生存时间（TTL）值；否则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>keys</code> - the keys to associated with the raw values in timeToLive. Defines the actual order of entries within\n         <a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expirations</code></a>.",
+      "translation": "<code>keys</code> - 与 timeToLive 中的原始值关联的键。定义了 <a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expirations</code></a> 中条目的实际顺序。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"of(java.util.concurrent.TimeUnit,java.util.List,org.springframework.data.redis.core.types.Expirations.Timeouts)-type-param-K\"><code>K</code> - the key type used</span>",
+      "translation": "<span id=\"of(java.util.concurrent.TimeUnit,java.util.List,org.springframework.data.redis.core.types.Expirations.Timeouts)-type-param-K\"><code>K</code> - 使用的键类型</span>",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"Expirations.html\" title=\"class in org.springframework.data.redis.core.types\"><code>Expirations</code></a>.",
+      "translation": "<code>Expirations</code> 类的新实例。",
+      "count": 1
+    },
+    {
+      "source": "<code>targetUnit</code> - the actual time unit of the raw timeToLive values.",
+      "translation": "<code>targetUnit</code> - 原始 timeToLive 值的实际时间单位。",
+      "count": 1
+    },
+    {
+      "source": "<code>timeouts</code> - the raw Redis time to live values.",
+      "translation": "<code>timeouts</code> - 原始 Redis 生存时间值。",
+      "count": 1
+    },
+    {
+      "source": "Christoph Strobl, Mark Paluch",
+      "translation": "克里斯托夫·施特罗布，马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "an ordered set of keys that do not have a time to live.",
+      "translation": "一组没有生存时间的有序键。",
+      "count": 1
+    },
+    {
+      "source": "an ordered set of keys that do not exist and therefore do not have a time to live.",
+      "translation": "一组不存在的有序键，因此没有生存时间。",
+      "count": 1
+    },
+    {
+      "source": "the ordered collection of keys that are associated with an expiration.",
+      "translation": "与过期时间关联的有序键集合。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    }
+  ]
+}

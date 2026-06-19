@@ -1,36 +1,91 @@
 {
   "created_at": "2026-06-16 13:06:57",
-  "updated_at": "2026-06-16 13:06:57",
+  "updated_at": "2026-06-18 07:31:21",
   "stats": {
-    "total_entries": 40,
+    "total_entries": 50,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 45,
-    "entries_with_hits": 40,
+    "total_hits": 70,
+    "entries_with_hits": 50,
     "entries_without_hits": 0,
-    "hit_rate": 1.125,
-    "usage_percentage": 0.004
+    "hit_rate": 1.4,
+    "usage_percentage": 0.005
   },
   "items": [
     {
       "source": "Creates a new <a href=\"PersistentEntities.html\" title=\"class in org.springframework.data.mapping.context\"><code>PersistentEntities</code></a> for the given <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s.",
       "translation": "为给定的<a href=\"MappingContext.html\" title=\"接口在 org.springframework.data.mapping.context\"><code>MappingContext</code></a>创建一个新的<a href=\"PersistentEntities.html\" title=\"类在 org.springframework.data.mapping.context\"><code>PersistentEntities</code></a>。",
-      "count": 4
+      "count": 5
     },
     {
       "source": "Returns all <a href=\"../../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformation</code></a> exposed by the registered <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s.",
       "translation": "返回所有已注册的<a href=\"../../core/TypeInformation.html\" title=\"interface in org.springframework.data.core\"><code>TypeInformation</code></a>，这些<code>TypeInformation</code>由已注册的<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>暴露。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> for the given type.",
       "translation": "返回给定类型的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。",
-      "count": 2
+      "count": 3
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a> on the given <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a> and <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> based on the\ngiven type. Considers all <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s for lookup. This method will create a new\n<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> in case there is only a single <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a> registered.",
+      "translation": "根据给定的类型，在指定的<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>和<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>上执行给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a>。该方法会考虑所有注册的<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>进行查找。如果仅注册了一个<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>，则此方法将创建一个新的<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> refers to in case it's an association.\nFor direct aggregate references, that's simply the entity for the <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>'s actual type. If the\nproperty type is not an entity - as it might rather refer to the identifier type - we either use the reference's\ndefined target type and fall back to trying to find a <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> identified by the\n<a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>'s actual type.",
+      "translation": "返回给定 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 所引用的 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>，如果它是一个关联关系。\n对于直接的聚合引用，这仅仅是 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 实际类型对应的实体。如果属性类型不是实体——它可能指的是标识符类型——则使用引用定义的自标类型，并回退尝试查找由 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 的实际类型标识的 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a> on the given <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a> and <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> based on the\ngiven type.",
+      "translation": "根据给定的类型，在指定的<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>和<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>上执行给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> for the given type. Will consider all <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s registered but\nreturn Optional#empty() in case none of the registered ones already have a <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>\nregistered for the given type.",
+      "translation": "返回给定类型的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。该方法会考虑所有已注册的<a href=\"MappingContext.html\" title=\"org.springframework.data.mapping.context 中的接口\"><code>MappingContext</code></a>，但如果没有任何一个已注册的上下文为给定类型注册了<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>，则返回 Optional#empty()。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> for the given type. Will consider all <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s registered and\ncreate a new <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> in case none of the registered ones already have it registered for the given\ntype, if there is only one context available.",
+      "translation": "返回给定类型的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。将考虑所有已注册的<a href=\"MappingContext.html\" title=\"org.springframework.data.mapping.context 中的接口\"><code>MappingContext</code></a>，并且如果只有一个上下文可用且已注册的上下文中尚未为给定类型注册任何实体，则创建一个新的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Value object to access <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> instances managed by <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s.",
+      "translation": "用于访问由<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>管理的<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实例的值对象。",
+      "count": 2
+    },
+    {
+      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> refers to in case it's an association.",
+      "translation": "如果给定的 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 是一个关联，则返回它所引用的 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the type the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> ultimately refers to.",
+      "translation": "返回给定<a href=\"../PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>最终指向的类型。",
+      "count": 2
+    },
+    {
+      "source": "Returns the type the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> ultimately refers to. In case it's of a unique identifier\ntype of entity known it'll return the entity type.",
+      "translation": "返回给定<a href=\"../PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>最终引用的类型。如果它是已知实体的唯一标识符类型，则返回该实体类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>type</code> - must not be null.",
+      "translation": "<code>type</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>property</code> - must not be null.",
+      "translation": "<code>property</code> 不能为 null。",
+      "count": 2
     },
     {
       "source": "<h3 id=\"methods-inherited-from-class-org.springframework.data.util.Streamable\">Methods inherited from interface <a href=\"../../util/Streamable.html#method-summary\" title=\"interface in org.springframework.data.util\">Streamable</a></h3>\n<code><a href=\"../../util/Streamable.html#and(java.lang.Iterable)\" title=\"and(Iterable)\">and</a>, <a href=\"../../util/Streamable.html#and(java.util.function.Supplier)\" title=\"and(Supplier)\">and</a>, <a href=\"../../util/Streamable.html#and(org.springframework.data.util.Streamable)\" title=\"and(Streamable)\">and</a>, <a href=\"../../util/Streamable.html#and(T...)\" title=\"and(PersistentEntity...)\">and</a>, <a href=\"../../util/Streamable.html#filter(java.util.function.Predicate)\" title=\"filter(Predicate)\">filter</a>, <a href=\"../../util/Streamable.html#flatMap(java.util.function.Function)\" title=\"flatMap(Function)\">flatMap</a>, <a href=\"../../util/Streamable.html#get()\" title=\"get()\">get</a>, <a href=\"../../util/Streamable.html#isEmpty()\" title=\"isEmpty()\">isEmpty</a>, <a href=\"../../util/Streamable.html#map(java.util.function.Function)\" title=\"map(Function)\">map</a>, <a href=\"../../util/Streamable.html#stream()\" title=\"stream()\">stream</a>, <a href=\"../../util/Streamable.html#toList()\" title=\"toList()\">toList</a>, <a href=\"../../util/Streamable.html#toSet()\" title=\"toSet()\">toSet</a></code>",
@@ -48,16 +103,6 @@
       "count": 1
     },
     {
-      "source": "Executes the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a> on the given <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a> and <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> based on the\ngiven type. Considers all <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s for lookup. This method will create a new\n<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> in case there is only a single <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a> registered.",
-      "translation": "根据给定的类型，在指定的<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>和<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>上执行给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a>。该方法会考虑所有注册的<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>进行查找。如果仅注册了一个<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>，则此方法将创建一个新的<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> refers to in case it's an association.\nFor direct aggregate references, that's simply the entity for the <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>'s actual type. If the\nproperty type is not an entity - as it might rather refer to the identifier type - we either use the reference's\ndefined target type and fall back to trying to find a <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> identified by the\n<a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>'s actual type.",
-      "translation": "返回给定 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> 所引用的 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>，如果它是一个关联关系。\n对于直接的聚合引用，这仅仅是 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 实际类型对应的实体。如果属性类型不是实体——它可能指的是标识符类型——则使用引用定义的自标类型，并回退尝试查找由 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 的实际类型标识的 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"PersistentEntities.html\" title=\"class in org.springframework.data.mapping.context\">PersistentEntities</a></span> <span class=\"element-name\">of</span><wbr/><span class=\"parameters\">(<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\">MappingContext</a>&lt;?,<wbr/>?&gt;... contexts)</span>",
       "translation": "<span class=\"modifiers\">public static</span> <span class=\"return-type\"><a href=\"PersistentEntities.html\" title=\"类 org.springframework.data.mapping.context 中的 PersistentEntities\">PersistentEntities</a></span> <span class=\"element-name\">of</span><wbr/><span class=\"parameters\">(<a href=\"MappingContext.html\" title=\"接口 org.springframework.data.mapping.context 中的 MappingContext\">&lt;?,<wbr/>?&gt;</a>... contexts)</span>",
       "count": 1
@@ -68,48 +113,13 @@
       "count": 1
     },
     {
-      "source": "Executes the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a> on the given <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a> and <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> based on the\ngiven type.",
-      "translation": "根据给定的类型，在指定的<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>和<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>上执行给定的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> for the given type. Will consider all <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s registered but\nreturn Optional#empty() in case none of the registered ones already have a <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>\nregistered for the given type.",
-      "translation": "返回给定类型的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。该方法会考虑所有已注册的<a href=\"MappingContext.html\" title=\"org.springframework.data.mapping.context 中的接口\"><code>MappingContext</code></a>，但如果没有任何一个已注册的上下文为给定类型注册了<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>，则返回 Optional#empty()。",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> for the given type. Will consider all <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s registered and\ncreate a new <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> in case none of the registered ones already have it registered for the given\ntype, if there is only one context available.",
-      "translation": "返回给定类型的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。将考虑所有已注册的<a href=\"MappingContext.html\" title=\"org.springframework.data.mapping.context 中的接口\"><code>MappingContext</code></a>，并且如果只有一个上下文可用且已注册的上下文中尚未为给定类型注册任何实体，则创建一个新的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<h3 id=\"methods-inherited-from-class-java.lang.Iterable\">Methods inherited from interface <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#method-summary\" title=\"class or interface in java.lang\">Iterable</a></h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#forEach(java.util.function.Consumer)\" title=\"class or interface in java.lang\">forEach</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#spliterator()\" title=\"class or interface in java.lang\">spliterator</a></code>",
       "translation": "<h3 id=\"methods-inherited-from-class-java.lang.Iterable\">从接口 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#method-summary\" title=\"java.lang 中的类或接口\">Iterable</a> 继承的方法</h3>\n<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#forEach(java.util.function.Consumer)\" title=\"java.lang 中的类或接口\">forEach</a>, <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#spliterator()\" title=\"java.lang 中的类或接口\">spliterator</a></code>",
       "count": 1
     },
     {
-      "source": "Value object to access <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> instances managed by <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>s.",
-      "translation": "用于访问由<a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>管理的<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实例的值对象。",
-      "count": 1
-    },
-    {
       "source": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">All Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Static Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Instance Methods</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">Concrete Methods</button>",
       "translation": "<button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"true\" class=\"active-table-tab\" id=\"method-summary-table-tab0\" onclick=\"show('method-summary-table', 'method-summary-table', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"0\">所有方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab1\" onclick=\"show('method-summary-table', 'method-summary-table-tab1', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">静态方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab2\" onclick=\"show('method-summary-table', 'method-summary-table-tab2', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">实例方法</button><button aria-controls=\"method-summary-table.tabpanel\" aria-selected=\"false\" class=\"table-tab\" id=\"method-summary-table-tab4\" onclick=\"show('method-summary-table', 'method-summary-table-tab4', 3)\" onkeydown=\"switchTab(event)\" role=\"tab\" tabindex=\"-1\">具体方法</button>",
-      "count": 1
-    },
-    {
-      "source": "Returns the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> refers to in case it's an association.",
-      "translation": "如果给定的 <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> 是一个关联，则返回它所引用的 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Returns the type the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> ultimately refers to.",
-      "translation": "返回给定<a href=\"../PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>最终指向的类型。",
-      "count": 1
-    },
-    {
-      "source": "Returns the type the given <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> ultimately refers to. In case it's of a unique identifier\ntype of entity known it'll return the entity type.",
-      "translation": "返回给定<a href=\"../PersistentProperty.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentProperty</code></a>最终引用的类型。如果它是已知实体的唯一标识符类型，则返回该实体类型。",
       "count": 1
     },
     {
@@ -210,6 +220,46 @@
     {
       "source": "Method Details",
       "translation": "方法详情",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../MappingException.html\" title=\"class in org.springframework.data.mapping\">MappingException</a></code> - if the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> cannot be found or\n          <a href=\"MappingContext.html#getPersistentEntity(java.lang.Class)\"><code>created</code></a> by the underlying <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a>.",
+      "translation": "<code><a href=\"../MappingException.html\" title=\"class in org.springframework.data.mapping\">MappingException</a></code> - 如果找不到 <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>，或者它是由底层的 <a href=\"MappingContext.html\" title=\"interface in org.springframework.data.mapping.context\"><code>MappingContext</code></a> 创建的。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#iterator()\" title=\"class or interface in java.lang\">iterator</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\">Iterable</a>&lt;<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\">PersistentEntity</a>&lt;?, ? extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;?&gt;&gt;&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html#iterator()\" title=\"class or interface in java.lang\">iterator</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\">Iterable</a>&lt;<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\">PersistentEntity</a>&lt;?, ? extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;?&gt;&gt;&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "the <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> for the given domain type.",
+      "translation": "给定领域类型的<a href=\"../PersistentEntity.html\" title=\"org.springframework.data.mapping 中的接口\"><code>PersistentEntity</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "result of the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/BiFunction.html\" title=\"class or interface in java.util.function\"><code>BiFunction</code></a>.",
+      "translation": "`BiFunction` 类的结果。",
+      "count": 1
+    },
+    {
+      "source": "<code>contexts</code> - must not be null.",
+      "translation": "<code>contexts</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>type</code> - can be null.",
+      "translation": "<code>type</code> - 可为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>combiner</code> - must not be null.",
+      "translation": "<code>combiner</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Christoph Strobl, Mark Paluch, Johannes Englmeier",
+      "translation": "Oliver Gierke，Christoph Strobl，Mark Paluch，Johannes Englmeier",
       "count": 1
     }
   ]

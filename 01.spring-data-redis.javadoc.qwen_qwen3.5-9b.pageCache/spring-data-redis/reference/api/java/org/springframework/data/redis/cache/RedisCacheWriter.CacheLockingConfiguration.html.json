@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-06-19 07:55:05",
+  "updated_at": "2026-06-19 07:55:05",
+  "stats": {
+    "total_entries": 9,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 10,
+    "entries_with_hits": 9,
+    "entries_without_hits": 0,
+    "hit_rate": 1.1111111111111112,
+    "usage_percentage": 0.0009
+  },
+  "items": [
+    {
+      "source": "Configure a <a href=\"RedisCacheWriter.TtlFunction.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter.TtlFunction</code></a> to compute the lock timeout.",
+      "translation": "配置一个<a href=\"RedisCacheWriter.TtlFunction.html\" title=\"interface in org.springframework.data.redis.cache\"><code>RedisCacheWriter.TtlFunction</code></a>以计算锁超时时间。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "If no TTL function is specified, the RedisCacheWriter persistent lock keys. Persistent lock keys need to be\nremoved in case of failures (e.g. Redis crashes before a lock key is removed). Expiring lock keys can become\nsubject to GC timing if lock keys expire while a garbage collection halts the JVM.",
+      "translation": "如果未指定 TTL 函数，RedisCacheWriter 的持久化锁键将不会设置过期时间。在发生故障（例如 Redis 在锁键被移除之前崩溃）时，需要手动删除这些持久化锁键。此外，如果垃圾回收暂停了 JVM 期间锁键恰好过期，这些可过期的锁键可能会受到 GC 时序的影响。",
+      "count": 1
+    },
+    {
+      "source": "Interface that allows for configuring cache locking options.",
+      "translation": "用于配置缓存锁定选项的界面。",
+      "count": 1
+    },
+    {
+      "source": "Configure the sleep time between cache lock checks.",
+      "translation": "配置缓存锁检查之间的休眠时间。",
+      "count": 1
+    },
+    {
+      "source": "Configure the sleep time between cache lock checks. Sleep time is applied to reattempt lock checks if a cache key\nis locked.",
+      "translation": "配置缓存锁检查之间的睡眠时间。如果缓存键被锁定，该睡眠时间将用于重新尝试获取锁的检查。",
+      "count": 1
+    },
+    {
+      "source": "<code>sleepTime</code> - the sleep time, must not be null and must be greater <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html#ZERO\" title=\"class or interface in java.time\"><code>Duration.ZERO</code></a>.",
+      "translation": "<code>sleepTime</code> - 睡眠时长，不能为 null 且必须大于 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/Duration.html#ZERO\" title=\"class or interface in java.time\"><code>Duration.ZERO</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>ttlFunction</code> - the lock timeout function.",
+      "translation": "<code>ttlFunction</code> - 锁超时函数。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    }
+  ]
+}

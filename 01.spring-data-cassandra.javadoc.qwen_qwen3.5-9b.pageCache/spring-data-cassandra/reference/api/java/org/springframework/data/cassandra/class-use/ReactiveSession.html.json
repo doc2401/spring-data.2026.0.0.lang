@@ -1,55 +1,160 @@
 {
   "created_at": "2026-06-16 15:38:46",
-  "updated_at": "2026-06-16 15:38:46",
+  "updated_at": "2026-06-18 07:35:35",
   "stats": {
     "total_entries": 46,
     "maxsize": 1000000,
     "cache_full": false,
-    "total_hits": 65,
+    "total_hits": 84,
     "entries_with_hits": 46,
     "entries_without_hits": 0,
-    "hit_rate": 1.4130434782608696,
+    "hit_rate": 1.826086956521739,
     "usage_percentage": 0.0046
   },
   "items": [
     {
-      "source": "Modifier and Type",
-      "translation": "修改类型",
-      "count": 10
-    },
-    {
       "source": "Factory method for creation of a <a href=\"../observability/ObservableReactiveSession.html\" title=\"class in org.springframework.data.cassandra.observability\"><code>ObservableReactiveSession</code></a>.",
       "translation": "用于创建<a href=\"../observability/ObservableReactiveSession.html\" title=\"org.springframework.data.cassandra.observability 中的类\"><code>ObservableReactiveSession</code></a>的工厂方法。",
-      "count": 6
+      "count": 7
     },
     {
       "source": "Wrap the <code>CqlSession</code> with a <code>CqlSessionObservationInterceptor</code>.",
       "translation": "使用 <code>CqlSessionObservationInterceptor</code> 包装 <code>CqlSession</code>。",
-      "count": 6
+      "count": 7
     },
     {
       "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
       "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Creates an instance of <a href=\"../core/ReactiveCassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>ReactiveCassandraTemplate</code></a> initialized with the given <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> and a\ndefault <a href=\"../core/convert/MappingCassandraConverter.html\" title=\"class in org.springframework.data.cassandra.core.convert\"><code>MappingCassandraConverter</code></a>.",
       "translation": "创建一个由给定的<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>和默认<a href=\"../core/convert/MappingCassandraConverter.html\" title=\"class in org.springframework.data.cassandra.core.convert\"><code>MappingCassandraConverter</code></a>初始化的<a href=\"../core/ReactiveCassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>ReactiveCassandraTemplate</code></a>实例。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Create an instance of <a href=\"../core/CassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>CassandraTemplate</code></a> initialized with the given <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> and\n<a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a>.",
       "translation": "创建一个 <a href=\"../core/CassandraTemplate.html\" title=\"class in org.springframework.data.cassandra.core\"><code>CassandraTemplate</code></a> 实例，该实例使用给定的 <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> 和\n<a href=\"../core/convert/CassandraConverter.html\" title=\"interface in org.springframework.data.cassandra.core.convert\"><code>CassandraConverter</code></a> 进行初始化。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Return a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> to be used directly or inside a callback inside\n<a href=\"../core/cql/ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>.",
       "translation": "返回一个 <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>，可直接使用或在 <a href=\"../core/cql/ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a> 内部的回调中使用。",
-      "count": 1
+      "count": 2
     },
     {
       "source": "Construct a new <a href=\"../core/cql/ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>, given a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>.",
       "translation": "根据 <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> 构建一个新的 <a href=\"../core/cql/ReactiveCqlTemplate.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveCqlTemplate</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Gets called by <a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String,org.springframework.data.cassandra.core.cql.ReactivePreparedStatementCallback)\"><code>ReactiveCqlTemplate.execute(String, ReactivePreparedStatementCallback)</code></a> with an active CQL\nsession and <code>PreparedStatement</code>.",
+      "translation": "由<a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String,org.springframework.data.cassandra.core.cql.ReactivePreparedStatementCallback)\"><code>ReactiveCqlTemplate.execute(String, ReactivePreparedStatementCallback)</code></a>调用，此时拥有活跃的 CQL 会话和<code>PreparedStatement</code>。",
+      "count": 2
+    },
+    {
+      "source": "Factory bean to construct a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> integrated with given <code>ObservationRegistry</code>.",
+      "translation": "工厂 Bean 用于构建与给定 <code>ObservationRegistry</code> 集成的 <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data Cassandra <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>factory beans</code></a> and configuration.",
+      "translation": "Spring Data Cassandra 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>工厂 Bean</code></a>和配置。",
+      "count": 2
+    },
+    {
+      "source": "Creates a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> object.",
+      "translation": "创建一个<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a>对象。",
+      "count": 2
+    },
+    {
+      "source": "Gets called by <a href=\"../core/cql/ReactiveCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.ReactiveSessionCallback)\"><code>ReactiveCqlTemplate.execute(ReactiveSessionCallback)</code></a> with an active Cassandra session.",
+      "translation": "由<a href=\"../core/cql/ReactiveCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.ReactiveSessionCallback)\"><code>ReactiveCqlTemplate.execute(ReactiveSessionCallback)</code></a>调用，并传入一个活跃的 Cassandra 会话。",
+      "count": 2
+    },
+    {
+      "source": "Gets called by <a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String)\"><code>ReactiveCqlTemplate.execute(String)</code></a> with an active Cassandra session.",
+      "translation": "由<a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String)\"><code>ReactiveCqlTemplate.execute(String)</code></a>调用，并传入一个活跃的 Cassandra 会话。",
+      "count": 2
+    },
+    {
+      "source": "Default implementation of a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>.",
+      "translation": "<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a>的默认实现。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"../core/cql/ReactiveRowMapperResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveRowMapperResultSetExtractor</code></a>.",
+      "translation": "创建一个新的<a href=\"../core/cql/ReactiveRowMapperResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveRowMapperResultSetExtractor</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Instrumented <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> for observability.",
+      "translation": "带观测能力的<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Provides utility classes for simple <code>CqlSession</code> access and various session\nimplementations.",
+      "translation": "提供用于简单访问 <code>CqlSession</code> 和各种会话实现的工具类。",
+      "count": 2
+    },
+    {
+      "source": "Spring Data's Cassandra abstraction.",
+      "translation": "Spring Data 对 Cassandra 的抽象。",
+      "count": 2
+    },
+    {
+      "source": "Apache Cassandra core support.",
+      "translation": "Apache Cassandra 核心支持。",
+      "count": 2
+    },
+    {
+      "source": "CQL core support.",
+      "translation": "CQL 核心支持。",
+      "count": 2
+    },
+    {
+      "source": "Infrastructure to provide driver observability using Micrometer.",
+      "translation": "使用 Micrometer 提供可观测性的基础设施。",
+      "count": 2
+    },
+    {
+      "source": "Create a statement in this session.",
+      "translation": "请在本次会话中发表声明。",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../package-summary.html\">org.springframework.data.cassandra</a>",
+      "translation": "<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a> 在 <a href=\"../package-summary.html\">org.springframework.data.cassandra</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a>",
+      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a>",
+      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a>",
+      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a>",
+      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../observability/package-summary.html\">org.springframework.data.cassandra.observability</a>",
+      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../observability/package-summary.html\">org.springframework.data.cassandra.observability</a> 中的用途",
+      "count": 2
+    },
+    {
+      "source": "Modifier and Type",
+      "translation": "修改类型",
       "count": 1
     },
     {
@@ -75,11 +180,6 @@
     {
       "source": "<span>Methods in <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a> with parameters of type <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span>",
       "translation": "<span><a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a> 包中参数类型为 <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 的方法</span>",
-      "count": 1
-    },
-    {
-      "source": "Gets called by <a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String,org.springframework.data.cassandra.core.cql.ReactivePreparedStatementCallback)\"><code>ReactiveCqlTemplate.execute(String, ReactivePreparedStatementCallback)</code></a> with an active CQL\nsession and <code>PreparedStatement</code>.",
-      "translation": "由<a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String,org.springframework.data.cassandra.core.cql.ReactivePreparedStatementCallback)\"><code>ReactiveCqlTemplate.execute(String, ReactivePreparedStatementCallback)</code></a>调用，此时拥有活跃的 CQL 会话和<code>PreparedStatement</code>。",
       "count": 1
     },
     {
@@ -113,11 +213,6 @@
       "count": 1
     },
     {
-      "source": "Factory bean to construct a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> integrated with given <code>ObservationRegistry</code>.",
-      "translation": "工厂 Bean 用于构建与给定 <code>ObservationRegistry</code> 集成的 <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<span>Methods in <a href=\"../observability/package-summary.html\">org.springframework.data.cassandra.observability</a> that return <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a></span>",
       "translation": "<code>org.springframework.data.cassandra.observability</code> 包中返回 <code>org.springframework.data.cassandra.ReactiveSession</code> 接口的方法",
       "count": 1
@@ -138,108 +233,13 @@
       "count": 1
     },
     {
-      "source": "Spring Data Cassandra <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>factory beans</code></a> and configuration.",
-      "translation": "Spring Data Cassandra 的<a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/FactoryBean.html\" title=\"class or interface in org.springframework.beans.factory\"><code>工厂 Bean</code></a>和配置。",
-      "count": 1
-    },
-    {
-      "source": "Creates a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> object.",
-      "translation": "创建一个<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a>对象。",
-      "count": 1
-    },
-    {
-      "source": "Gets called by <a href=\"../core/cql/ReactiveCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.ReactiveSessionCallback)\"><code>ReactiveCqlTemplate.execute(ReactiveSessionCallback)</code></a> with an active Cassandra session.",
-      "translation": "由<a href=\"../core/cql/ReactiveCqlTemplate.html#execute(org.springframework.data.cassandra.core.cql.ReactiveSessionCallback)\"><code>ReactiveCqlTemplate.execute(ReactiveSessionCallback)</code></a>调用，并传入一个活跃的 Cassandra 会话。",
-      "count": 1
-    },
-    {
-      "source": "Gets called by <a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String)\"><code>ReactiveCqlTemplate.execute(String)</code></a> with an active Cassandra session.",
-      "translation": "由<a href=\"../core/cql/ReactiveCqlTemplate.html#execute(java.lang.String)\"><code>ReactiveCqlTemplate.execute(String)</code></a>调用，并传入一个活跃的 Cassandra 会话。",
-      "count": 1
-    },
-    {
-      "source": "Default implementation of a <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a>.",
-      "translation": "<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a>的默认实现。",
-      "count": 1
-    },
-    {
-      "source": "Create a new <a href=\"../core/cql/ReactiveRowMapperResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveRowMapperResultSetExtractor</code></a>.",
-      "translation": "创建一个新的<a href=\"../core/cql/ReactiveRowMapperResultSetExtractor.html\" title=\"class in org.springframework.data.cassandra.core.cql\"><code>ReactiveRowMapperResultSetExtractor</code></a>。",
-      "count": 1
-    },
-    {
-      "source": "Instrumented <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\"><code>ReactiveSession</code></a> for observability.",
-      "translation": "带观测能力的<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\"><code>ReactiveSession</code></a>。",
-      "count": 1
-    },
-    {
       "source": "<a href=\"#skip-navbar-top\" title=\"Skip navigation links\">Skip navigation links</a>",
       "translation": "<a href=\"#skip-navbar-top\" title=\"跳过导航链接\">跳过导航链接</a>",
       "count": 1
     },
     {
-      "source": "Provides utility classes for simple <code>CqlSession</code> access and various session\nimplementations.",
-      "translation": "提供用于简单访问 <code>CqlSession</code> 和各种会话实现的工具类。",
-      "count": 1
-    },
-    {
       "source": "Spring Data for Apache Cassandra Core",
       "translation": "Apache Cassandra Spring Data 核心",
-      "count": 1
-    },
-    {
-      "source": "Spring Data's Cassandra abstraction.",
-      "translation": "Spring Data 对 Cassandra 的抽象。",
-      "count": 1
-    },
-    {
-      "source": "Apache Cassandra core support.",
-      "translation": "Apache Cassandra 核心支持。",
-      "count": 1
-    },
-    {
-      "source": "CQL core support.",
-      "translation": "CQL 核心支持。",
-      "count": 1
-    },
-    {
-      "source": "Infrastructure to provide driver observability using Micrometer.",
-      "translation": "使用 Micrometer 提供可观测性的基础设施。",
-      "count": 1
-    },
-    {
-      "source": "Create a statement in this session.",
-      "translation": "请在本次会话中发表声明。",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../package-summary.html\">org.springframework.data.cassandra</a>",
-      "translation": "<a href=\"../ReactiveSession.html\" title=\"org.springframework.data.cassandra 中的接口\">ReactiveSession</a> 在 <a href=\"../package-summary.html\">org.springframework.data.cassandra</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a>",
-      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../config/package-summary.html\">org.springframework.data.cassandra.config</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a>",
-      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../core/package-summary.html\">org.springframework.data.cassandra.core</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a>",
-      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../core/cql/package-summary.html\">org.springframework.data.cassandra.core.cql</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a>",
-      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../core/cql/session/package-summary.html\">org.springframework.data.cassandra.core.cql.session</a> 中的用途",
-      "count": 1
-    },
-    {
-      "source": "Uses of <a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> in <a href=\"../observability/package-summary.html\">org.springframework.data.cassandra.observability</a>",
-      "translation": "<a href=\"../ReactiveSession.html\" title=\"interface in org.springframework.data.cassandra\">ReactiveSession</a> 在 <a href=\"../observability/package-summary.html\">org.springframework.data.cassandra.observability</a> 中的用途",
       "count": 1
     }
   ]

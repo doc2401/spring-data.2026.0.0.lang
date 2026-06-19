@@ -1,0 +1,281 @@
+{
+  "created_at": "2026-06-19 09:29:13",
+  "updated_at": "2026-06-19 09:29:13",
+  "stats": {
+    "total_entries": 53,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 70,
+    "entries_with_hits": 53,
+    "entries_without_hits": 0,
+    "hit_rate": 1.320754716981132,
+    "usage_percentage": 0.0053
+  },
+  "items": [
+    {
+      "source": "Create a new <a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.data.redis.listener.adapter\"><code>MessageListenerAdapter</code></a> for the given delegate.",
+      "translation": "为给定的委托对象创建一个新的<a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.data.redis.listener.adapter\"><code>MessageListenerAdapter</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "The default converter is a <a href=\"../../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a>.",
+      "translation": "默认转换器为<a href=\"../../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.data.redis.listener.adapter\"><code>MessageListenerAdapter</code></a> with default settings.",
+      "translation": "使用默认设置创建一个新的<a href=\"MessageListenerAdapter.html\" title=\"class in org.springframework.data.redis.listener.adapter\"><code>MessageListenerAdapter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Standard Redis <a href=\"../../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>MessageListener</code></a> entry point.",
+      "translation": "标准 Redis <a href=\"../../connection/MessageListener.html\" title=\"org.springframework.data.redis.connection 中的接口\"><code>MessageListener</code></a> 入口点。",
+      "count": 2
+    },
+    {
+      "source": "Logger available to subclasses",
+      "translation": "子类可用的日志记录器",
+      "count": 2
+    },
+    {
+      "source": "Out-of-the-box value for the default listener method: \"handleMessage\".",
+      "translation": "默认监听器方法\"handleMessage\"的开箱即用价值。",
+      "count": 2
+    },
+    {
+      "source": "Extract the message body from the given Redis message.",
+      "translation": "从给定的 Redis 消息中提取消息正文。",
+      "count": 2
+    },
+    {
+      "source": "Return the name of the default listener method to delegate to.",
+      "translation": "返回默认监听器方法的名称，该方法将被委托调用。",
+      "count": 2
+    },
+    {
+      "source": "Returns the target object to delegate message listening to.",
+      "translation": "将目标对象返回，以便委托消息监听。",
+      "count": 2
+    },
+    {
+      "source": "Determine the name of the listener method that is supposed to handle the given message.",
+      "translation": "确定应处理给定消息的监听器方法名称。",
+      "count": 2
+    },
+    {
+      "source": "Initialize the default implementations for the adapter's strategies.",
+      "translation": "初始化适配器策略的默认实现。",
+      "count": 2
+    },
+    {
+      "source": "Invoke the specified listener method.",
+      "translation": "调用指定的监听器方法。",
+      "count": 2
+    },
+    {
+      "source": "Set the serializer that will convert incoming raw Redis messages to listener method arguments.",
+      "translation": "设置用于将传入的原始 Redis 消息转换为监听器方法参数的序列化器。",
+      "count": 2
+    },
+    {
+      "source": "Sets the serializer used for converting the channel/pattern to a String.",
+      "translation": "设置用于将通道/模式转换为字符串的序列化器。",
+      "count": 2
+    },
+    {
+      "source": "<code>delegate</code> - the delegate object",
+      "translation": "<code>delegate</code> - 委托对象",
+      "count": 2
+    },
+    {
+      "source": "By default, the content of incoming Redis messages gets extracted before being passed into the target listener\nmethod, to let the target method operate on message content types such as String or byte array instead of the raw\n<a href=\"../../connection/Message.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Message</code></a>. Message type conversion is delegated to a Spring Data <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>. By default, the\n<a href=\"../../serializer/JdkSerializationRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>JdkSerializationRedisSerializer</code></a> will be used. (If you do not want such automatic message conversion taking\nplace, then be sure to set the <a href=\"#setSerializer(org.springframework.data.redis.serializer.RedisSerializer)\"><code>Serializer</code></a> to <code>null</code>.) This class allows injection of up\nto two positional arguments:",
+      "translation": "默认情况下，传入的 Redis 消息内容会在传递给目标监听器方法之前被提取出来，以便让目标方法能够针对 String 或字节数组等消息内容类型进行操作，而不是直接处理原始的<a href=\"../../connection/Message.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Message</code></a>。消息类型转换会委托给 Spring Data 的<a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>接口。默认情况下，将使用<a href=\"../../serializer/JdkSerializationRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>JdkSerializationRedisSerializer</code></a>类。（如果您不希望发生这种自动消息转换，请确保将<a href=\"#setSerializer(org.springframework.data.redis.serializer.RedisSerializer)\"><code>Serializer</code></a>设置为<code>null</code>。）该类允许注入最多两个位置参数：",
+      "count": 1
+    },
+    {
+      "source": "Find below some examples of method signatures compliant with this adapter class. This first example handles all\n<a href=\"../../connection/Message.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Message</code></a> types and gets passed the contents of each <a href=\"../../connection/Message.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Message</code></a> type as an argument.",
+      "translation": "下面是一些符合该适配器类的方法签名示例。第一个示例处理所有<a href=\"../../connection/Message.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Message</code></a>类型，并将每种<a href=\"../../connection/Message.html\" title=\"interface in org.springframework.data.redis.connection\"><code>Message</code></a>类型的内容作为参数传递。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Make sure to call <a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a> after setting all the parameters on the adapter.",
+      "translation": "在设置适配器上的所有参数后，请确保调用<a href=\"#afterPropertiesSet()\"><code>afterPropertiesSet()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Note that if the underlying \"delegate\" is implementing <a href=\"../../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>MessageListener</code></a>, the adapter will delegate to it and\nallow an invalid method to be specified. However, if it is not, the method becomes mandatory. This lenient behavior\nallows the adapter to be used uniformly across existing listeners and message POJOs.",
+      "translation": "请注意，如果底层的“委托”实现了<a href=\"../../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\"><code>MessageListener</code></a>接口，适配器将委托给它并允许指定无效的方法。然而，如果未实现该接口，则方法变为强制要求。这种宽松的行为使得适配器能够统一用于现有的监听器和消息 POJO。",
+      "count": 1
+    },
+    {
+      "source": "Delegates the message to the target listener method, with appropriate conversion of the message argument. In case\nof an exception, the <a href=\"#handleListenerException(java.lang.Throwable)\"><code>handleListenerException(Throwable)</code></a> method will be invoked.",
+      "translation": "将消息委派给目标监听器方法，并对消息参数进行适当的转换。如果发生异常，将调用<a href=\"#handleListenerException(java.lang.Throwable)\"><code>handleListenerException(Throwable)</code></a> 方法。",
+      "count": 1
+    },
+    {
+      "source": "In addition, the topic (channel or pattern, depending on the actual subscription) through which a message has been\nreceived can be passed in to the method as a second argument of type String:",
+      "translation": "此外，消息接收的渠道（或模式，具体取决于实际订阅方式）可以作为第二个类型为 String 的参数传递给该方法：",
+      "count": 1
+    },
+    {
+      "source": "If no explicit delegate object has been specified, listener methods are expected to present on this adapter\ninstance, that is, on a custom subclass of this adapter, defining listener methods.",
+      "translation": "如果未显式指定委托对象，则预期监听器方法将定义在此适配器实例上，即在该适配器的自定义子类中定义监听器方法。",
+      "count": 1
+    },
+    {
+      "source": "The default implementation simply returns the configured default listener method, if any.",
+      "translation": "默认实现仅返回已配置的默认监听器方法（如果有）。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of the default listener method to delegate to, for the case where no specific listener method has\nbeen determined. Out-of-the-box value is <a href=\"#ORIGINAL_DEFAULT_LISTENER_METHOD\"><code>\"handleMessage\"</code></a>.",
+      "translation": "指定默认监听器方法的名称，用于在尚未确定具体监听器方法的情况。默认值为<a href=\"#ORIGINAL_DEFAULT_LISTENER_METHOD\"><code>\"handleMessage\"</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Handle the given exception that arose during listener execution.",
+      "translation": "处理在监听器执行期间引发的异常。",
+      "count": 1
+    },
+    {
+      "source": "Specify the name of the default listener method to delegate to, for the case where no specific listener method has\nbeen determined.",
+      "translation": "指定默认监听器方法名称，用于在尚未确定具体监听器方法时进行委托。",
+      "count": 1
+    },
+    {
+      "source": "Set a target object to delegate message listening to.",
+      "translation": "设置目标对象以委托消息监听。",
+      "count": 1
+    },
+    {
+      "source": "Handle the given exception that arose during listener execution. The default implementation logs the exception at\nerror level.",
+      "translation": "处理监听器执行期间引发的异常。默认实现会在错误级别记录该异常。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"class or interface in org.springframework.beans.factory\">afterPropertiesSet</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"class or interface in org.springframework.beans.factory\">InitializingBean</a></code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html#afterPropertiesSet()\" title=\"类或接口，位于 org.springframework.beans.factory\">afterPropertiesSet</a></code> 是接口<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/InitializingBean.html\" title=\"类或接口，位于 org.springframework.beans.factory\">InitializingBean</a></code>中的方法",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../../connection/MessageListener.html#onMessage(org.springframework.data.redis.connection.Message,byte%5B%5D)\">onMessage</a></code> in interface <code><a href=\"../../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\">MessageListener</a></code>",
+      "translation": "接口 <code><a href=\"../../connection/MessageListener.html\" title=\"interface in org.springframework.data.redis.connection\">MessageListener</a></code> 中的 <code><a href=\"../../connection/MessageListener.html#onMessage(org.springframework.data.redis.connection.Message,byte%5B%5D)\">onMessage</a></code>",
+      "count": 1
+    },
+    {
+      "source": "<code>message</code> - the Redis <code>Message</code>",
+      "translation": "<code>message</code> - Redis 的 <code>Message</code>",
+      "count": 1
+    },
+    {
+      "source": "<code>defaultListenerMethod</code> - method to call when a message comes",
+      "translation": "<code>defaultListenerMethod</code> - 消息到达时调用的方法",
+      "count": 1
+    },
+    {
+      "source": "<code>delegate</code> - delegate object",
+      "translation": "<code>delegate</code> - 委托对象",
+      "count": 1
+    },
+    {
+      "source": "<code>message</code> - the incoming Redis message",
+      "translation": "<code>message</code> - 传入的 Redis 消息",
+      "count": 1
+    },
+    {
+      "source": "<code>pattern</code> - pattern matching the channel (if specified) - can be null.",
+      "translation": "<code>pattern</code> - 用于匹配通道的模式（如果指定）- 可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>ex</code> - the exception to handle",
+      "translation": "<code>ex</code> - 要处理的异常",
+      "count": 1
+    },
+    {
+      "source": "<code>originalMessage</code> - the Redis request message",
+      "translation": "<code>originalMessage</code> - Redis 请求消息",
+      "count": 1
+    },
+    {
+      "source": "<code>extractedMessage</code> - the converted Redis request message, to be passed into the listener method as argument",
+      "translation": "`extractedMessage` - 转换后的 Redis 请求消息，将作为参数传递给监听器方法。",
+      "count": 1
+    },
+    {
+      "source": "the name of the listener method (never <code>null</code>)",
+      "translation": "监听器方法的名称（永远不为 null）",
+      "count": 1
+    },
+    {
+      "source": "<code>methodName</code> - the name of the listener method",
+      "translation": "<code>methodName</code> - 监听器方法的名称",
+      "count": 1
+    },
+    {
+      "source": "<code>arguments</code> - the message arguments to be passed in",
+      "translation": "<code>arguments</code> - 要传递的消息参数",
+      "count": 1
+    },
+    {
+      "source": "Message body",
+      "translation": "消息正文",
+      "count": 1
+    },
+    {
+      "source": "Optional: Channel (when subscribed to a channel) or pattern (when subscribed to a pattern)",
+      "translation": "可选：频道（订阅频道时）或模式（订阅模式时）",
+      "count": 1
+    },
+    {
+      "source": "Juergen Hoeller, Costin Leau, Greg Turnquist, Thomas Darimont, Christoph Strobl, Mark Paluch",
+      "translation": "Juergen Hoeller，Costin Leau，Greg Turnquist，Thomas Darimont，Christoph Strobl，Mark Paluch",
+      "count": 1
+    },
+    {
+      "source": "message listening delegation",
+      "translation": "消息监听委托",
+      "count": 1
+    },
+    {
+      "source": "the content of the message, to be passed into the listener method as argument",
+      "translation": "消息的内容，将作为参数传递给监听器方法。",
+      "count": 1
+    },
+    {
+      "source": "Field Details",
+      "translation": "字段详情",
+      "count": 1
+    },
+    {
+      "source": "Message listener adapter that delegates the handling of messages to target listener methods via reflection and\nflexible message type conversion through <a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>. Allows listener methods to operate on message\ncontent types, completely independent from the Redis API. It is a more limited and therefore lightweight variant of\nthe annotation-driven <a href=\"../../annotation/RedisListener.html\" title=\"annotation interface in org.springframework.data.redis.annotation\"><code>@RedisListener</code></a> approach.",
+      "translation": "该消息监听器适配器通过反射将消息处理委托给目标监听器方法，并通过<a href=\"../../serializer/RedisSerializer.html\" title=\"interface in org.springframework.data.redis.serializer\"><code>RedisSerializer</code></a>实现灵活的消息类型转换。它允许监听器方法直接操作消息内容类型，完全独立于 Redis API。它是基于注解的<a href=\"../../annotation/RedisListener.html\" title=\"annotation interface in org.springframework.data.redis.annotation\"><code>@RedisListener</code></a>方式的更受限且因此更轻量级的变体。",
+      "count": 1
+    },
+    {
+      "source": "<ol>\n<li>消息正文</li>\n<li>可选：频道（订阅频道时）或模式（订阅模式时）</li>\n</ol>",
+      "translation": "<ol>\n<li>消息正文</li>\n<li>可选：频道（订阅频道时）或模式（订阅模式时）</li>\n</ol>",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">public interface MessageContentsDelegate {\n        void handleMessage(String text);\n\n        void handleMessage(byte[] bytes);\n\n        void handleMessage(Person obj);\n}\n</pre>",
+      "translation": "<pre class=\"code\">public interface MessageContentsDelegate {\n    void handleMessage(String text);\n\n    void handleMessage(byte[] bytes);\n\n    void handleMessage(Person obj);\n}</pre>",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">public interface MessageContentsDelegate {\n\n        void handleMessage(String text, String channel);\n\n        void handleMessage(byte[] bytes, String pattern);\n}\n</pre>\n\nFor further examples and discussion, please do refer to the Spring Data reference documentation which describes this\nclass (and its attendant configuration) in detail. <b>Important:</b> Due to the nature of messages, the default\nserializer used by the adapter is <a href=\"../../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a>. If the messages are of a different type, change them\naccordingly through <a href=\"#setSerializer(org.springframework.data.redis.serializer.RedisSerializer)\"><code>setSerializer(RedisSerializer)</code></a>.",
+      "translation": "<pre class=\"code\">public interface MessageContentsDelegate {\n\n    void handleMessage(String text, String channel);\n\n    void handleMessage(byte[] bytes, String pattern);\n}\n</pre>\n\n有关更多示例和讨论，请参阅 Spring Data 参考文档，该文档对此类（及其相关配置）进行了详细描述。<b>重要提示：</b>由于消息的性质，适配器使用的默认序列化器是 <a href=\"../../serializer/StringRedisSerializer.html\" title=\"class in org.springframework.data.redis.serializer\"><code>StringRedisSerializer</code></a>。如果消息类型不同，请通过 <a href=\"#setSerializer(org.springframework.data.redis.serializer.RedisSerializer)\"><code>setSerializer(RedisSerializer)</code></a> 相应地进行更改。",
+      "count": 1
+    },
+    {
+      "source": "Set a target object to delegate message listening to. Specified listener methods have to be present on this target\nobject.",
+      "translation": "设置一个目标对象来委派消息监听。指定的监听器方法必须存在于该目标对象上。",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "created_at": "2026-06-18 10:05:14",
+  "updated_at": "2026-06-18 10:05:14",
+  "stats": {
+    "total_entries": 50,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 57,
+    "entries_with_hits": 50,
+    "entries_without_hits": 0,
+    "hit_rate": 1.14,
+    "usage_percentage": 0.005
+  },
+  "items": [
+    {
+      "source": "Considers plain transient fields, fields annotated with <a href=\"../../annotation/Transient.html\" title=\"annotation interface in org.springframework.data.annotation\"><code>Transient</code></a>, <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Value.html\" title=\"class or interface in org.springframework.beans.factory.annotation\"><code>Value</code></a> or <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html\" title=\"class or interface in org.springframework.beans.factory.annotation\"><code>Autowired</code></a> as\ntransient.",
+      "translation": "将普通瞬态字段、带有 <a href=\"../../annotation/Transient.html\" title=\"annotation interface in org.springframework.data.annotation\"><code>Transient</code></a> 注解的字段，以及带有 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Value.html\" title=\"class or interface in org.springframework.beans.factory.annotation\"><code>Value</code></a> 或 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html\" title=\"class or interface in org.springframework.beans.factory.annotation\"><code>Autowired</code></a> 注解的字段视为瞬态。",
+      "count": 2
+    },
+    {
+      "source": "Inspects a potentially available <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Value.html\" title=\"class or interface in org.springframework.beans.factory.annotation\"><code>Value</code></a> annotation at the property and returns the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> value of\nit.",
+      "translation": "检查属性上是否存在潜在的 <a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/beans/factory/annotation/Value.html\" title=\"org.springframework.beans.factory.annotation 中的类或接口\"><code>Value</code></a> 注解，并返回其 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a> 值。",
+      "count": 2
+    },
+    {
+      "source": "Considers the property an <a href=\"../Association.html\" title=\"class in org.springframework.data.mapping\"><code>Association</code></a> if it is annotated with <a href=\"../../annotation/Reference.html\" title=\"annotation interface in org.springframework.data.annotation\"><code>Reference</code></a>.",
+      "translation": "如果该属性被<a href=\"../Association.html\" title=\"class in org.springframework.data.mapping\"><code>Association</code></a>注解（即带有<a href=\"../../annotation/Reference.html\" title=\"annotation interface in org.springframework.data.annotation\"><code>Reference</code></a>注解），则将其视为一个关联。",
+      "count": 2
+    },
+    {
+      "source": "Creates a new <a href=\"AnnotationBasedPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\"><code>AnnotationBasedPersistentProperty</code></a>.",
+      "translation": "创建一个新的<a href=\"AnnotationBasedPersistentProperty.html\" title=\"org.springframework.data.mapping.model 中的类\"><code>AnnotationBasedPersistentProperty</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the property carries the annotation of the given type.",
+      "translation": "返回该属性是否带有给定类型的注解。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the current property is writable, i.e. if the value held for it shall be written to the data store.",
+      "translation": "返回当前属性是否可写，即其持有的值是否应写入数据存储。",
+      "count": 2
+    },
+    {
+      "source": "<code>annotationType</code> - must not be null.",
+      "translation": "<code>annotationType</code> 不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Returns whether the property is a <em>potential</em> identifier property of the owning <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.\nThis method is mainly used by <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> implementation to discover id property candidates on\n<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> creation you should rather call <a href=\"../PersistentEntity.html#isIdProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isIdProperty(PersistentProperty)</code></a>\nto determine whether the current property is the id property of that <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> under consideration.",
+      "translation": "返回该属性是否为所属<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>标识符属性。  \n此方法主要由<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实现类用于在创建<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>时发现标识符属性的候选项；若要确定当前属性是否为该<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的标识符属性，您应调用<a href=\"../PersistentEntity.html#isIdProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isIdProperty(PersistentProperty)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Returns whether the current property is a <em>potential</em> version property of the owning\n<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>. This method is mainly used by <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> implementation to discover version\nproperty candidates on <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> creation you should rather call\n<a href=\"../PersistentEntity.html#isVersionProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isVersionProperty(PersistentProperty)</code></a> to determine whether the current property is the\nversion property of that <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a> under consideration.",
+      "translation": "返回当前属性是否为所属<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>版本属性。此方法主要由<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>实现类在创建<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>时用于发现版本属性候选项；若要确定当前属性是否为所考虑的该<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的版本属性，您应调用<a href=\"../PersistentEntity.html#isVersionProperty(org.springframework.data.mapping.PersistentProperty)\"><code>PersistentEntity.isVersionProperty(PersistentProperty)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Return the type the property refers to in case it's an association, i.e. <a href=\"../PersistentProperty.html#isAssociation()\"><code>PersistentProperty.isAssociation()</code></a> returns\ntrue. That means, that implementations <em>must</em> return a non-null value from this method\nin that case. We also recommend to return null for non-associations right away to establish symmetry\nbetween this method and <a href=\"../PersistentProperty.html#isAssociation()\"><code>PersistentProperty.isAssociation()</code></a>.",
+      "translation": "在属性为关联的情况下，返回该属性所引用的类型；即如果<a href=\"../PersistentProperty.html#isAssociation()\"><code>PersistentProperty.isAssociation()</code></a>返回true，则必须从此方法返回一个非null值。此外，我们建议对于非关联属性直接返回null，以在此方法与<a href=\"../PersistentProperty.html#isAssociation()\"><code>PersistentProperty.isAssociation()</code></a>之间建立对称性。",
+      "count": 1
+    },
+    {
+      "source": "Returns whether the property is a <em>potential</em> identifier property of the owning <a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
+      "translation": "返回该属性是否为所属<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>标识属性。",
+      "count": 1
+    },
+    {
+      "source": "Returns whether the current property is a <em>potential</em> version property of the owning\n<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>.",
+      "translation": "返回当前属性是否为所属的<a href=\"../PersistentEntity.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentEntity</code></a>的<em>潜在</em>版本属性。",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../PersistentProperty.html#isIdProperty()\">PersistentProperty</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../PersistentProperty.html#isIdProperty()\">PersistentProperty</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../PersistentProperty.html#isVersionProperty()\">PersistentProperty</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../PersistentProperty.html#isVersionProperty()\">PersistentProperty</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../PersistentProperty.html#isWritable()\">PersistentProperty</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../PersistentProperty.html#isWritable()\">PersistentProperty</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../PersistentProperty.html#findPropertyOrOwnerAnnotation(java.lang.Class)\">PersistentProperty</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../PersistentProperty.html#findPropertyOrOwnerAnnotation(java.lang.Class)\">PersistentProperty</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../PersistentProperty.html#usePropertyAccess()\">PersistentProperty</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../PersistentProperty.html#usePropertyAccess()\">PersistentProperty</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "<span class=\"description-from-type-label\">Description copied from interface: <code><a href=\"../PersistentProperty.html#getAssociationTargetTypeInformation()\">PersistentProperty</a></code></span>",
+      "translation": "<span class=\"description-from-type-label\">描述从接口复制：<code><a href=\"../PersistentProperty.html#getAssociationTargetTypeInformation()\">PersistentProperty</a></code></span>",
+      "count": 1
+    },
+    {
+      "source": "Special <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a> that takes annotations at a property into account.",
+      "translation": "支持考虑属性注解的<a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\"><code>PersistentProperty</code></a>特殊接口。",
+      "count": 1
+    },
+    {
+      "source": "Returns the annotation found for the current <a href=\"AnnotationBasedPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\"><code>AnnotationBasedPersistentProperty</code></a>.",
+      "translation": "返回当前 <a href=\"AnnotationBasedPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\"><code>AnnotationBasedPersistentProperty</code></a> 找到的注解。",
+      "count": 1
+    },
+    {
+      "source": "Returns the annotation found for the current <a href=\"AnnotationBasedPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\"><code>AnnotationBasedPersistentProperty</code></a>. Will prefer getters or\nsetters annotations over ones found at the backing field as the former can be used to reconfigure the metadata in\nsubclasses.",
+      "translation": "返回当前 <a href=\"AnnotationBasedPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\"><code>AnnotationBasedPersistentProperty</code></a> 找到的注解。如果存在，将优先使用 getter 或 setter 上的注解，而不是底层字段上的注解，因为前者可用于在子类中重新配置元数据。",
+      "count": 1
+    },
+    {
+      "source": "Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.",
+      "translation": "如果在该属性上找不到注解，则查找该属性所属类型上的注解。",
+      "count": 1
+    },
+    {
+      "source": "Return the type the property refers to in case it's an association, i.e.",
+      "translation": "如果是关联，则返回该属性所引用的类型，即",
+      "count": 1
+    },
+    {
+      "source": "Returns whether property access shall be used for reading the property value.",
+      "translation": "返回是否应使用属性访问来读取属性值。",
+      "count": 1
+    },
+    {
+      "source": "Looks up the annotation of the given type on the property and the owning type if no annotation can be found on it.\nUseful to lookup annotations that can be configured on the type but overridden on an individual property.",
+      "translation": "在给定类型上查找属性的注解，如果在该属性上找不到注解，则在其所属类型上查找。  \n此方法适用于查找可在类型上配置但可被单个属性覆盖的注解。",
+      "count": 1
+    },
+    {
+      "source": "Returns whether property access shall be used for reading the property value. This means it will use the getter\ninstead of field access.",
+      "translation": "返回是否应使用属性访问来读取属性值。这意味着将使用 getter 而不是字段访问。",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../PersistentProperty.html#getSpelExpression()\">getSpelExpression</a></code> in interface <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"../PersistentProperty.html#getSpelExpression()\">getSpelExpression</a></code> 接口中的 <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractPersistentProperty.html#getSpelExpression()\">getSpelExpression</a></code> in class <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractPersistentProperty.html#getSpelExpression()\">getSpelExpression</a></code> 类 <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../PersistentProperty.html#isTransient()\">isTransient</a></code> in interface <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"../PersistentProperty.html#isTransient()\">isTransient</a></code> 接口中的 <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractPersistentProperty.html#isTransient()\">isTransient</a></code> in class <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractPersistentProperty.html#isTransient()\">isTransient</a></code> 类 <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../PersistentProperty.html#isAssociation()\">isAssociation</a></code> in interface <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"../PersistentProperty.html#isAssociation()\">isAssociation</a></code> 接口中的 <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractPersistentProperty.html#isAssociation()\">isAssociation</a></code> in class <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractPersistentProperty.html#isAssociation()\">isAssociation</a></code> 类 <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../PersistentProperty.html#isWritable()\">isWritable</a></code> in interface <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"../PersistentProperty.html#isWritable()\">isWritable</a></code> 接口中的 <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractPersistentProperty.html#isWritable()\">isWritable</a></code> in class <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractPersistentProperty.html#isWritable()\">isWritable</a></code> 类中的 <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../PersistentProperty.html#usePropertyAccess()\">usePropertyAccess</a></code> in interface <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"../PersistentProperty.html#usePropertyAccess()\">usePropertyAccess</a></code> 接口中的 <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractPersistentProperty.html#usePropertyAccess()\">usePropertyAccess</a></code> in class <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractPersistentProperty.html#usePropertyAccess()\">usePropertyAccess</a></code> 类 <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"../PersistentProperty.html#getAssociationTargetTypeInformation()\">getAssociationTargetTypeInformation</a></code> in interface <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"../PersistentProperty.html#getAssociationTargetTypeInformation()\">getAssociationTargetTypeInformation</a></code> 接口中的 <code><a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractPersistentProperty.html#getAssociationTargetTypeInformation()\">getAssociationTargetTypeInformation</a></code> in class <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractPersistentProperty.html#getAssociationTargetTypeInformation()\">getAssociationTargetTypeInformation</a></code> 类 <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "count": 1
+    },
+    {
+      "source": "<code><a href=\"AbstractPersistentProperty.html#toString()\">toString</a></code> in class <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code>",
+      "translation": "<code><a href=\"AbstractPersistentProperty.html#toString()\">toString</a></code> 类 <code><a href=\"AbstractPersistentProperty.html\" title=\"class in org.springframework.data.mapping.model\">AbstractPersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a> extends <a href=\"../PersistentProperty.html\" title=\"interface in org.springframework.data.mapping\">PersistentProperty</a>&lt;<a href=\"#type-param-P\" title=\"type parameter in AnnotationBasedPersistentProperty\">P</a>&gt;&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "the type the property refers to in case it's an association, i.e. <a href=\"../PersistentProperty.html#isAssociation()\"><code>PersistentProperty.isAssociation()</code></a> returns\n        true.",
+      "translation": "如果是关联关系，则指该属性所引用的类型，即 <a href=\"../PersistentProperty.html#isAssociation()\"><code>PersistentProperty.isAssociation()</code></a> 返回 true。",
+      "count": 1
+    },
+    {
+      "source": "<code>property</code> - must not be null.",
+      "translation": "<code>property</code> - 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>owner</code> - must not be null.",
+      "translation": "<code>owner</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>annotationType</code> - the annotation type to look up.",
+      "translation": "<code>annotationType</code> - 要查找的注解类型。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Christoph Strobl, Mark Paluch",
+      "translation": "Oliver Gierke，Christoph Strobl，Mark Paluch",
+      "count": 1
+    },
+    {
+      "source": "null if no expression defined.",
+      "translation": "未定义表达式时返回 null。",
+      "count": 1
+    },
+    {
+      "source": "true if the id property.",
+      "translation": "如果为 id 属性。",
+      "count": 1
+    },
+    {
+      "source": "null if annotation type not found on property.",
+      "translation": "如果属性上未找到注解类型，则返回 null。",
+      "count": 1
+    },
+    {
+      "source": "the annotation of the given type. Can be null.",
+      "translation": "给定类型的注解。可为 null。",
+      "count": 1
+    },
+    {
+      "source": "true if the annotation is present, false otherwise.",
+      "translation": "如果存在该注释则返回 true，否则返回 false。",
+      "count": 1
+    }
+  ]
+}

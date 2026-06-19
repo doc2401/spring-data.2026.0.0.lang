@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-06-18 16:30:54",
+  "updated_at": "2026-06-18 16:30:54",
+  "stats": {
+    "total_entries": 30,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 38,
+    "entries_with_hits": 30,
+    "entries_without_hits": 0,
+    "hit_rate": 1.2666666666666666,
+    "usage_percentage": 0.003
+  },
+  "items": [
+    {
+      "source": "Create a new <code>CodeBlockBuilder</code> instance using the given <code>CodeBlock.Builder</code>.",
+      "translation": "使用给定的 <code>CodeBlock.Builder</code> 创建一个新的 <code>CodeBlockBuilder</code> 实例。",
+      "count": 2
+    },
+    {
+      "source": "Create a <a href=\"LordOfTheStrings.InvocationBuilder.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.InvocationBuilder</code></a> for building method invocation code.",
+      "translation": "创建一个<a href=\"LordOfTheStrings.InvocationBuilder.html\" title=\"org.springframework.data.javapoet 中的类\"><code>LordOfTheStrings.InvocationBuilder</code></a>，用于构建方法调用代码。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>CodeBlockBuilder</code> instance.",
+      "translation": "创建一个新的<code>CodeBlockBuilder</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "Create a new <code>CodeBlockBuilder</code> instance with an initial format and arguments.",
+      "translation": "使用初始格式和参数创建一个新的<code>CodeBlockBuilder</code>实例。",
+      "count": 2
+    },
+    {
+      "source": "Create a builder for a return statement targeting the given return type.",
+      "translation": "为给定的返回类型创建返回语句的构建器。",
+      "count": 2
+    },
+    {
+      "source": "a new <code>CodeBlockBuilder</code>.",
+      "translation": "一个新的<code>CodeBlockBuilder</code>。",
+      "count": 2
+    },
+    {
+      "source": "<code>returnType</code> - the method return type.",
+      "translation": "<code>returnType</code> - 方法返回类型。",
+      "count": 2
+    },
+    {
+      "source": "a new <code>ReturnStatementBuilder</code>.",
+      "translation": "一个新的<code>ReturnStatementBuilder</code>。",
+      "count": 2
+    },
+    {
+      "source": "This class introduces additional abstractions such as <a href=\"LordOfTheStrings.CodeBlockBuilder.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.CodeBlockBuilder</code></a>, <a href=\"LordOfTheStrings.InvocationBuilder.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.InvocationBuilder</code></a>, and\n<a href=\"LordOfTheStrings.TypedReturnBuilder.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.TypedReturnBuilder</code></a> to facilitate the construction of dynamic code blocks. These abstractions enable\ndevelopers to create code with conditional logic, argument concatenation, and control flow in a declarative and\nintuitive manner.",
+      "translation": "本课程引入了诸如 <a href=\"LordOfTheStrings.CodeBlockBuilder.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.CodeBlockBuilder</code></a>、<a href=\"LordOfTheStrings.InvocationBuilder.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.InvocationBuilder</code></a> 以及\n<a href=\"LordOfTheStrings.TypedReturnBuilder.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.TypedReturnBuilder</code></a> 等额外的抽象类，以辅助动态代码块的构建。这些抽象使得开发人员能够以声明式和直观的方式创建包含条件逻辑、参数拼接以及控制流的代码。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "The given <code>methodCall</code> may contain format specifiers as defined in Java Poet. It must additionally contain a\nformat specifier (last position) that is used to expand the method arguments when intending to provide arguments,\nfor example:",
+      "translation": "给定的 `methodCall` 可能包含如 Java Poet 中定义的格式说明符。此外，它必须包含一个位于末尾的格式说明符，该说明符用于在需要提供参数时展开方法参数，例如：",
+      "count": 1
+    },
+    {
+      "source": "This class is intended for internal use within the framework and is not meant to be used directly by application\ndevelopers.",
+      "translation": "该类专为框架内部使用而设计，不供应用程序开发人员直接使用。",
+      "count": 1
+    },
+    {
+      "source": "Create a builder for a return statement targeting the given return type. Any formats provided to\n<a href=\"LordOfTheStrings.ReturnBuilderSupport.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.ReturnBuilderSupport</code></a> must not contain the <code>return</code> keyword as this will be included when building the\nresulting <code>CodeBlock</code>, for example:\n\n<pre class=\"code\">Method method = …;\nCodeBlock block = LordOfTheStrings.returning(ResolvableType.forMethodReturnType(method))\n    .whenBoxedLong(\"$T.valueOf(1)\", Long.class)\n    .whenLong(\"1L\")\n    .otherwise(\"0L\")\n    .build();\n</pre>",
+      "translation": "为给定的返回类型创建用于构建 return 语句的生成器。任何传递给 <a href=\"LordOfTheStrings.ReturnBuilderSupport.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.ReturnBuilderSupport</code></a> 的格式均不得包含 <code>return</code> 关键字，因为该关键字将在构建最终的 <code>CodeBlock</code> 时被包含在内，例如：\n\n<pre class=\"code\">Method method = …;\nCodeBlock block = LordOfTheStrings.returning(ResolvableType.forMethodReturnType(method))\n    .whenBoxedLong(\"$T.valueOf(1)\", Long.class)\n    .whenLong(\"1L\")\n    .otherwise(\"0L\")\n    .build();\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Create a builder for a return statement targeting the given return type. Any formats provided to\n<a href=\"LordOfTheStrings.ReturnBuilderSupport.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.ReturnBuilderSupport</code></a> must not contain the <code>return</code> keyword as this will be included when building the\nresulting <code>CodeBlock</code>, for example:\n\n<pre class=\"code\">Method method = …;\nCodeBlock block = LordOfTheStrings.returning(method.getReturnType())\n    .whenBoxedLong(\"$T.valueOf(1)\", Long.class)\n    .whenLong(\"1L\")\n    .otherwise(\"0L\")\n    .build();\n</pre>",
+      "translation": "为给定的返回类型创建一个 return 语句构建器。任何传递给 <a href=\"LordOfTheStrings.ReturnBuilderSupport.html\" title=\"class in org.springframework.data.javapoet\"><code>LordOfTheStrings.ReturnBuilderSupport</code></a> 的格式不得包含 <code>return</code> 关键字，因为该关键字将在构建最终的 <code>CodeBlock</code> 时自动添加，例如：\n\n<pre class=\"code\">Method method = …;\nCodeBlock block = LordOfTheStrings.returning(method.getReturnType())\n    .whenBoxedLong(\"$T.valueOf(1)\", Long.class)\n    .whenLong(\"1L\")\n    .otherwise(\"0L\")\n    .build();\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "An extended variant of <code>CodeBlock.Builder</code> that supports building statements in a fluent way and extended for\nfunctional <a href=\"LordOfTheStrings.CodeBlockBuilder.html#addStatement(java.util.function.Consumer)\"><code>statement creation</code></a>.",
+      "translation": "`CodeBlock.Builder` 的扩展变体，支持以流畅的方式构建语句，并针对功能式<a href=\"LordOfTheStrings.CodeBlockBuilder.html#addStatement(java.util.function.Consumer)\"><code>语句创建</code></a>进行了扩展。",
+      "count": 1
+    },
+    {
+      "source": "Builder to create method invocation code supporting argument concatenation.",
+      "translation": "用于创建支持参数拼接的方法调用代码的构建器。",
+      "count": 1
+    },
+    {
+      "source": "Builder for constructing return statements based on the target return type.",
+      "translation": "用于根据目标返回类型构建 return 语句的构建器。",
+      "count": 1
+    },
+    {
+      "source": "Builder for creating statements including conditional and concatenated variants.",
+      "translation": "用于创建语句的构建器，包括条件变体和连接变体。",
+      "count": 1
+    },
+    {
+      "source": "Builder for constructing return statements based conditionally on the target return type.",
+      "translation": "用于根据目标返回类型条件性地构建 return 语句的构建器。",
+      "count": 1
+    },
+    {
+      "source": "<code>builder</code> - the <code>CodeBlock.Builder</code> to use.",
+      "translation": "<code>builder</code> - 要使用的 <code>CodeBlock.Builder</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>format</code> - the format string.",
+      "translation": "<code>format</code> - 格式字符串。",
+      "count": 1
+    },
+    {
+      "source": "<code>args</code> - the arguments for the format string.",
+      "translation": "<code>args</code> - 格式字符串的参数。",
+      "count": 1
+    },
+    {
+      "source": "a new initialized <code>CodeBlockBuilder</code>.",
+      "translation": "一个已初始化的新 <code>CodeBlockBuilder</code>。",
+      "count": 1
+    },
+    {
+      "source": "<code>methodCall</code> - the invocation (or method call) format string.",
+      "translation": "<code>methodCall</code> - 调用（或方法调用）格式字符串。",
+      "count": 1
+    },
+    {
+      "source": "<code>arguments</code> - the arguments for the method call.",
+      "translation": "<code>arguments</code> - 方法调用的参数。",
+      "count": 1
+    },
+    {
+      "source": "a new <code>MethodCallBuilder</code>.",
+      "translation": "一个新的<code>MethodCallBuilder</code>。",
+      "count": 1
+    },
+    {
+      "source": "Mark Paluch",
+      "translation": "马克·帕卢赫",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "Utility class for creating Java code blocks using a fluent API. This class provides a structured and extensible\nprogramming model to simplify the creation of method calls, return statements, and complex code structures on top of\nJavaPoet. It is designed to reduce conditional nesting and improve readability in code generation scenarios.",
+      "translation": "这是一个用于通过流式 API 创建 Java 代码块的实用类。该类提供了一个结构化且可扩展的编程模型，以简化在 JavaPoet 之上构建方法调用、返回语句及复杂代码结构的过程。其设计旨在减少条件嵌套，并提升代码生成场景中的可读性。",
+      "count": 1
+    },
+    {
+      "source": "<pre class=\"code\">Sort sort = …;\nMethodCallBuilder method = PoetrySlam.method(\"$T.by($L)\", Sort.class);\n\nmethod.arguments(sort, (order, builder) -&gt; {\n        builder.add(\"$T.asc($S)\", Sort.Order.class, order.getProperty());\n});\n\nmethod.build();\n</pre>\n\nThe presence of arguments is detected when calling any <a href=\"LordOfTheStrings.InvocationBuilder.html#argument(java.lang.String)\"><code>LordOfTheStrings.InvocationBuilder.argument(String)</code></a> or\n<code>LordOfTheStrings.InvocationBuilder.arguments</code> method. Providing an empty <code>CodeBlock</code> or <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> activates\nargument processing for easier handling when calling this static method. Note that the argument placeholder in\n<code>methodCall</code> must be omitted if no arguments are added.",
+      "translation": "<pre class=\"code\">Sort sort = …;\nMethodCallBuilder method = PoetrySlam.method(\"$T.by($L)\", Sort.class);\n\nmethod.arguments(sort, (order, builder) -&gt; {\n        builder.add(\"$T.asc($S)\", Sort.Order.class, order.getProperty());\n});\n\nmethod.build();\n</pre>\n\n参数的存在性在调用任何 <a href=\"LordOfTheStrings.InvocationBuilder.html#argument(java.lang.String)\"><code>LordOfTheStrings.InvocationBuilder.argument(String)</code></a> 或\n<code>LordOfTheStrings.InvocationBuilder.arguments</code> 方法时被检测到。提供一个空的 <code>CodeBlock</code> 或 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html\" title=\"class or interface in java.lang\"><code>Iterable</code></a> 会激活参数处理，以便在调用此静态方法时更易于管理。请注意，如果未添加任何参数，则必须省略 <code>methodCall</code> 中的参数占位符。",
+      "count": 1
+    }
+  ]
+}

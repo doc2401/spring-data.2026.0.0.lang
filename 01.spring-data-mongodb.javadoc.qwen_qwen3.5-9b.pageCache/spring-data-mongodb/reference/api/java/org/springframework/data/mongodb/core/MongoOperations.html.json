@@ -1,0 +1,1721 @@
+{
+  "created_at": "2026-06-19 01:04:02",
+  "updated_at": "2026-06-19 01:04:02",
+  "stats": {
+    "total_entries": 341,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 715,
+    "entries_with_hits": 341,
+    "entries_without_hits": 0,
+    "hit_rate": 2.096774193548387,
+    "usage_percentage": 0.0341
+  },
+  "items": [
+    {
+      "source": "<code>replacement</code> - the replacement document. Must not be null.",
+      "translation": "<code>replacement</code> - 替换文档，不得为 null。",
+      "count": 11
+    },
+    {
+      "source": "Triggers\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a>\nto replace a single document matching <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code> document\ntaking <a href=\"FindAndReplaceOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndReplaceOptions</code></a> into account.<br/>\n<strong>NOTE:</strong> The replacement entity must not hold an id.",
+      "translation": "触发器\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a> 用于将匹配给定 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> 的单个文档替换为 <code>replacement</code> 文档，同时考虑 <a href=\"FindAndReplaceOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndReplaceOptions</code></a>。<br/>\n<strong>注意：</strong> 替换实体不能包含 id。",
+      "count": 10
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> used to find a document and also an\n         optional fields specification. Must not be null.",
+      "translation": "<code>query</code> - 指定用于查找文档的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类，同时也包含可选的字段规范。该参数不得为 null。",
+      "count": 10
+    },
+    {
+      "source": "the <code>UpdateResult</code> which lets you access the results of the previous write.",
+      "translation": "`UpdateResult`，它允许您访问上一次写入的结果。",
+      "count": 9
+    },
+    {
+      "source": "Finds the distinct values for a specified field across a single <code>MongoCollection</code> or view and\nreturns the results in a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>.",
+      "translation": "查找单个 <code>MongoCollection</code> 或视图在指定字段上的不同值，并将结果返回到 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a>。",
+      "count": 8
+    },
+    {
+      "source": "since 3.4 in favor of <a href=\"#aggregate(org.springframework.data.mongodb.core.aggregation.TypedAggregation,java.lang.Class)\"><code>aggregate(TypedAggregation, Class)</code></a>.",
+      "translation": "自 3.4 版本起，改为使用<a href=\"#aggregate(org.springframework.data.mongodb.core.aggregation.TypedAggregation,java.lang.Class)\"><code>aggregate(TypedAggregation, Class)</code></a>。",
+      "count": 8
+    },
+    {
+      "source": "Execute an aggregation operation backed by a Mongo DB <code>AggregateIterable</code>.",
+      "translation": "执行由 MongoDB 的 `AggregateIterable` 支持的聚合操作。",
+      "count": 8
+    },
+    {
+      "source": "<code>outputType</code> - The parametrized type of the returned list, must not be null.",
+      "translation": "<code>outputType</code> - 返回列表的参数化类型，不得为 null。",
+      "count": 8
+    },
+    {
+      "source": "A potential <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> property of the entityClass will be\nauto-incremented if not explicitly specified in the update.",
+      "translation": "如果未在更新中显式指定，实体类的潜在 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> 属性将自动递增。",
+      "count": 7
+    },
+    {
+      "source": "<code>query</code> - the query class that specifies the criteria used to find a document and also an optional fields\n         specification. Must not be null.",
+      "translation": "<code>query</code> - 用于查找文档并指定可选字段的查询类，不得为 null。",
+      "count": 7
+    },
+    {
+      "source": "never null.",
+      "translation": "永不为空。",
+      "count": 7
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - if the target collection name cannot be\n          <a href=\"#getCollectionName(java.lang.Class)\"><code>derived</code></a> from the given type.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - 如果无法从给定类型中<a href=\"#getCollectionName(java.lang.Class)\"><code>推导</code></a>目标集合名称。",
+      "count": 6
+    },
+    {
+      "source": "<code>update</code> - the <a href=\"query/UpdateDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>UpdateDefinition</code></a> that contains the updated object or <code>$</code> operators to manipulate\n         the existing. Must not be null.",
+      "translation": "<code>update</code> - 包含用于更新对象或操作现有数据的 <a href=\"query/UpdateDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>UpdateDefinition</code></a> 接口，该参数不得为 null。",
+      "count": 6
+    },
+    {
+      "source": "<code>options</code> - the <a href=\"FindAndModifyOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndModifyOptions</code></a> holding additional information. Must not be null.",
+      "translation": "<code>options</code> - 包含额外信息的 <a href=\"FindAndModifyOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndModifyOptions</code></a>。不能为 null。",
+      "count": 6
+    },
+    {
+      "source": "the result <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a>, containing mapped objects, needing to be closed once fully processed (e.g.\n        through a try-with-resources clause).",
+      "translation": "结果为包含已映射对象的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a>，在完全处理后需要关闭（例如通过 try-with-resources 语句）。",
+      "count": 6
+    },
+    {
+      "source": "<code>entityClass</code> - the parametrized type of the returned list.",
+      "translation": "<code>entityClass</code> - 返回列表的参数化类型。",
+      "count": 6
+    },
+    {
+      "source": "<code>collectionName</code> - the collection to query. Must not be null.",
+      "translation": "<code>collectionName</code> - 要查询的集合。不能为 null。",
+      "count": 6
+    },
+    {
+      "source": "the count of matching documents.",
+      "translation": "匹配文档的数量。",
+      "count": 6
+    },
+    {
+      "source": "Inserting new objects will trigger <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> property initialization.",
+      "translation": "插入新对象将触发 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> 属性的初始化。",
+      "count": 5
+    },
+    {
+      "source": "Determine result of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> contains at least one element.",
+      "translation": "确定给定的<a href=\"query/Query.html\" title=\"org.springframework.data.mongodb.core.query 中的类\"><code>Query</code></a>是否包含至少一个元素。",
+      "count": 5
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - if the collection name cannot be\n          <a href=\"#getCollectionName(java.lang.Class)\"><code>derived</code></a> from the given replacement value.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - 如果无法从给定的替换值中<a href=\"#getCollectionName(java.lang.Class)\"><code>推导</code></a>出集合名称。",
+      "count": 5
+    },
+    {
+      "source": "the converted object that was updated or null, if not found. Depending on the value of\n        <a href=\"FindAndReplaceOptions.html#isReturnNew()\"><code>FindAndReplaceOptions.isReturnNew()</code></a> this will either be the object as it was before the update or\n        as it is after the update.",
+      "translation": "已更新或找不到的转换对象，或者为 null。根据 <a href=\"FindAndReplaceOptions.html#isReturnNew()\"><code>FindAndReplaceOptions.isReturnNew()</code></a> 的值，此对象在更新前或更新后的状态将被返回。",
+      "count": 5
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection to retrieve the objects from.",
+      "translation": "<code>collectionName</code> - 要从中检索对象的集合名称。",
+      "count": 5
+    },
+    {
+      "source": "<code>entityClass</code> - class that determines the collection to use. Must not be null.",
+      "translation": "<code>entityClass</code> - 用于确定要使用的集合的类。不能为 null。",
+      "count": 5
+    },
+    {
+      "source": "<code>collectionName</code> - must not be null or empty.",
+      "translation": "<code>collectionName</code> 不能为 null 或空。",
+      "count": 5
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection to update the object in. Must not be null.",
+      "translation": "<code>collectionName</code> - 要更新对象的集合名称。不能为 null。",
+      "count": 5
+    },
+    {
+      "source": "the <code>DeleteResult</code> which lets you access the results of the previous delete.",
+      "translation": "<code>DeleteResult</code>，它允许您访问上一次删除操作的结果。",
+      "count": 5
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection where the documents will be removed from, must not be null\n         or empty.",
+      "translation": "<code>collectionName</code> - 文档将被移除的集合名称，不能为 null 或空。",
+      "count": 5
+    },
+    {
+      "source": "the created collection.",
+      "translation": "已创建的集合。",
+      "count": 5
+    },
+    {
+      "source": "Aggregation streaming can't be used with <a href=\"aggregation/AggregationOptions.html#isExplain()\"><code>aggregation explain</code></a>. Enabling\nexplanation mode will throw an <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\"><code>IllegalArgumentException</code></a>.",
+      "translation": "聚合流式处理无法与<a href=\"aggregation/AggregationOptions.html#isExplain()\"><code>聚合解释</code></a>一起使用。启用解释模式将抛出 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\"><code>IllegalArgumentException</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "The <code>objectToSave</code> must not be collection-like.",
+      "translation": "<code>objectToSave</code> 不能是集合类型。",
+      "count": 4
+    },
+    {
+      "source": "Triggers <a href=\"https://docs.mongodb.org/manual/reference/method/db.collection.findAndModify/\">findAndModify </a>\nto apply provided <a href=\"query/Update.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Update</code></a> on documents matching <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> taking\n<a href=\"FindAndModifyOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndModifyOptions</code></a> into account.",
+      "translation": "触发器 <a href=\"https://docs.mongodb.org/manual/reference/method/db.collection.findAndModify/\">findAndModify </a> 会对符合给定 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 中 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> 条件的文档应用所提供的 <a href=\"query/Update.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Update</code></a>，并考虑 <a href=\"FindAndModifyOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndModifyOptions</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "Triggers <a href=\"https://docs.mongodb.org/manual/reference/method/db.collection.findAndModify/\">findAndModify </a>\nto apply provided <a href=\"query/Update.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Update</code></a> on documents matching <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "触发器 <a href=\"https://docs.mongodb.org/manual/reference/method/db.collection.findAndModify/\">findAndModify </a> 会对符合给定 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 中 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> 条件的文档应用所提供的 <a href=\"query/Update.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Update</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "Replace a single document matching the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument taking <a href=\"ReplaceOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ReplaceOptions</code></a> into account.",
+      "translation": "用给定的<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>中匹配的单个文档的<a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>，替换为<code>replacement</code>文档，并考虑<a href=\"ReplaceOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ReplaceOptions</code></a>。",
+      "count": 4
+    },
+    {
+      "source": "Execute an aggregation operation.",
+      "translation": "执行聚合操作。",
+      "count": 4
+    },
+    {
+      "source": "Create a view with the provided name.",
+      "translation": "使用提供的名称创建视图。",
+      "count": 4
+    },
+    {
+      "source": "Returns the operations that can be performed on indexes",
+      "translation": "返回可对索引执行的操作。",
+      "count": 4
+    },
+    {
+      "source": "Updates all objects that are found in the collection for the entity class that matches the query document criteria\nwith the provided updated document.",
+      "translation": "使用提供的更新文档，更新与查询文档条件匹配的所有实体类集合中的对象。",
+      "count": 4
+    },
+    {
+      "source": "<code>aggregation</code> - The <a href=\"aggregation/TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a> specification holding the aggregation operations, must not be\n         null.",
+      "translation": "<code>aggregation</code> - 包含聚合操作的 <a href=\"aggregation/TypedAggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>TypedAggregation</code></a> 规范不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>aggregation</code> - The <a href=\"aggregation/Aggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>Aggregation</code></a> specification holding the aggregation operations, must not be\n         null.",
+      "translation": "<code>aggregation</code> - 包含聚合操作的 <a href=\"aggregation/Aggregation.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>Aggregation</code></a> 规范不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the criteria used to find documents. Must not be\n         null.",
+      "translation": "<code>query</code> - 用于指定查找文档所用条件的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类。不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - in case the <code>objectToSave</code> is collection-like.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 如果 <code>objectToSave</code> 是集合类型的对象。",
+      "count": 4
+    },
+    {
+      "source": "<code>entityClass</code> - must not be null.",
+      "translation": "<code>entityClass</code> 不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>name</code> - the name of the view to create.",
+      "translation": "<code>name</code> - 要创建的视图的名称。",
+      "count": 4
+    },
+    {
+      "source": "<code>inputCollectionName</code> - the collection where the map-reduce will read from. Must not be null.",
+      "translation": "<code>inputCollectionName</code> - 地图归约将读取的集合。不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>reduceFunction</code> - The JavaScript reduce function",
+      "translation": "<code>reduceFunction</code> - JavaScript 的 reduce 函数",
+      "count": 4
+    },
+    {
+      "source": "<code>entityClass</code> - The parametrized type of the returned list. Must not be null.",
+      "translation": "<code>entityClass</code> - 返回列表的参数化类型。不得为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>query</code> - the query class that specifies the criteria used to find a document and also an optional fields\n         specification.",
+      "translation": "<code>query</code> - 指定用于查找文档的条件的查询类，以及可选的字段规范。",
+      "count": 4
+    },
+    {
+      "source": "<code>field</code> - the name of the field to inspect for distinct values. Must not be null.",
+      "translation": "<code>field</code> - 要检查唯一值的字段名称。不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>resultClass</code> - the result type. Must not be null.",
+      "translation": "<code>resultClass</code> - 结果类型。不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>objectToSave</code> - the object to store in the collection. Must not be null.",
+      "translation": "<code>objectToSave</code> - 要存储在集合中的对象。不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "<code>entityClass</code> - class of the pojo to be operated on. Must not be null.",
+      "translation": "<code>entityClass</code> - 要操作的 POJO 的类。不能为 null。",
+      "count": 4
+    },
+    {
+      "source": "the <code>UpdateResult</code> which lets you access the results of the previous replacement.",
+      "translation": "用于访问上一次替换结果的 `<code>UpdateResult`。",
+      "count": 4
+    },
+    {
+      "source": "The results of the aggregation operation.",
+      "translation": "聚合操作的结果。",
+      "count": 4
+    },
+    {
+      "source": "The results of the map reduce operation",
+      "translation": "MapReduce 操作的结果",
+      "count": 4
+    },
+    {
+      "source": "A potential <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> property of the entityClass will be auto\nincremented if not explicitly specified in the update.",
+      "translation": "如果未在更新中显式指定，实体类的潜在 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> 属性将自动递增。",
+      "count": 3
+    },
+    {
+      "source": "If an object within the batch has an Id property which holds a null value, it will be set\nwith the generated Id from MongoDB.",
+      "translation": "如果批次中的某个对象的 Id 属性值为 null，则将从 MongoDB 生成并设置该 Id。",
+      "count": 3
+    },
+    {
+      "source": "since 2.2.",
+      "translation": "自 2.2 版本以来。",
+      "count": 3
+    },
+    {
+      "source": "Updates the first object that is found in the specified collection that matches the query document criteria with\nthe provided updated document.",
+      "translation": "更新指定集合中第一个与查询文档条件匹配的对象，将其替换为提供的更新后的文档。",
+      "count": 3
+    },
+    {
+      "source": "Performs an upsert.",
+      "translation": "执行插入或更新操作。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - the query document that specifies the criteria used to select a document to be updated. The\n         <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> may define a <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>sort order</code></a> to influence which document to update when\n         potentially matching multiple candidates. Must not be null.",
+      "translation": "<code>query</code> - 用于指定选择要更新的文档所使用条件的查询文档。该 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 可定义一个 <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>排序顺序</code></a>，以在潜在匹配多个候选项时影响要更新的文档。不得为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - if the collection name cannot be\n          <a href=\"#getCollectionName(java.lang.Class)\"><code>derived</code></a> from the given type.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - 如果无法从给定类型中<a href=\"#getCollectionName(java.lang.Class)\"><code>推导</code></a>出集合名称。",
+      "count": 3
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - if the target collection name cannot be\n          <a href=\"#getCollectionName(java.lang.Class)\"><code>derived</code></a> from the given object type.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - 如果无法从给定的对象类型中<a href=\"#getCollectionName(java.lang.Class)\"><code>推导</code></a>出目标集合名称。",
+      "count": 3
+    },
+    {
+      "source": "<code>update</code> - the <a href=\"query/UpdateDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>UpdateDefinition</code></a> that contains the updated object or <code>$</code> operators to manipulate\n         the existing object. Must not be null.",
+      "translation": "<code>update</code> - 包含用于更新对象或操作现有对象的更新定义（<a href=\"query/UpdateDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>UpdateDefinition</code></a>）或 <code>$</code> 运算符。该参数不得为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>pipeline</code> - the <a href=\"aggregation/AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a> defining the view content.",
+      "translation": "<pipeline> - 定义视图内容的<a href=\"aggregation/AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>AggregationPipeline</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "<code>mode</code> - the <a href=\"BulkOperations.BulkMode.html\" title=\"enum class in org.springframework.data.mongodb.core\"><code>BulkOperations.BulkMode</code></a> to use for bulk operations, must not be null.",
+      "translation": "<code>mode</code> - 用于批量操作的 <a href=\"BulkOperations.BulkMode.html\" title=\"enum class in org.springframework.data.mongodb.core\"><code>BulkOperations.BulkMode</code></a>，不得为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the criteria used to find a document.",
+      "translation": "<code>query</code> - 指定用于查找文档的条件的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - filter <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> to restrict search. Must not be null.",
+      "translation": "<code>query</code> - 用于限制搜索的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 过滤器。不得为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>update</code> - the <a href=\"query/UpdateDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>UpdateDefinition</code></a> to apply on matching documents. Must not be null.",
+      "translation": "<code>update</code> - 要在匹配的文档上应用的<a href=\"query/UpdateDefinition.html\" title=\"org.springframework.data.mongodb.core.query 中的接口\"><code>UpdateDefinition</code></a>。不能为 null。",
+      "count": 3
+    },
+    {
+      "source": "the <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> converted objects deleted by this operation.",
+      "translation": "由本操作删除的已转换为 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html\" title=\"class or interface in java.util\"><code>List</code></a> 的对象。",
+      "count": 3
+    },
+    {
+      "source": "<code>source</code> - the type defining the views source collection.",
+      "translation": "<code>source</code> - 定义视图源集合的类型。",
+      "count": 3
+    },
+    {
+      "source": "<code>mapFunction</code> - The JavaScript map function",
+      "translation": "<code>mapFunction</code> - JavaScript 的 map 函数",
+      "count": 3
+    },
+    {
+      "source": "<code>entityClass</code> - the parametrized type. Can be null.",
+      "translation": "<code>entityClass</code> - 参数化类型。可为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>entityClass</code> - the parametrized type. Must not be null.",
+      "translation": "<code>entityClass</code> - 参数化类型。不能为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection to store the object in. Must not be null.",
+      "translation": "<code>collectionName</code> - 用于存储对象的集合名称。不能为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - the query document that specifies the criteria used to select a document to be upserted. Must not be\n         null.",
+      "translation": "<code>query</code> - 用于指定选择要上载文档所使用条件的查询文档。不能为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - the query document that specifies the criteria used to select a document to be updated. Must not be\n         null.",
+      "translation": "<code>query</code> - 用于指定选择要更新的文档所使用条件的查询文档。不能为 null。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - the query document that specifies the criteria used to remove a document.",
+      "translation": "<code>query</code> - 指定用于删除文档的条件的查询文档。",
+      "count": 3
+    },
+    {
+      "source": "<code>query</code> - the query document that specifies the criteria used to find and remove documents.",
+      "translation": "<code>query</code> - 指定用于查找和删除文档的条件的查询文档。",
+      "count": 3
+    },
+    {
+      "source": "a result object returned by the action.",
+      "translation": "动作返回的结果对象。",
+      "count": 3
+    },
+    {
+      "source": "a result object returned by the action or null.",
+      "translation": "action 返回的结果对象或 null。",
+      "count": 3
+    },
+    {
+      "source": "the converted object.",
+      "translation": "转换后的对象。",
+      "count": 3
+    },
+    {
+      "source": "true if the query yields a result.",
+      "translation": "如果查询返回结果，则为 true。",
+      "count": 3
+    },
+    {
+      "source": "This method derives <a href=\"CollectionOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>CollectionOptions</code></a> from the given <code>entityClass</code> using\n<a href=\"mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a> and\n<a href=\"mapping/TimeSeries.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>TimeSeries</code></a> annotations to determine:",
+      "translation": "该方法通过 <a href=\"CollectionOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>CollectionOptions</code></a> 从给定的 <code>entityClass</code> 中派生，并利用 <a href=\"mapping/Document.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>Document</code></a> 和 <a href=\"mapping/TimeSeries.html\" title=\"annotation interface in org.springframework.data.mongodb.core.mapping\"><code>TimeSeries</code></a> 注解来确定：",
+      "count": 2
+    },
+    {
+      "source": "When using <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/KeysetScrollPosition.html\" title=\"class or interface in org.springframework.data.domain\"><code>KeysetScrollPosition</code></a>, make sure to use non-nullable <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>sort properties</code></a> as MongoDB does not support criteria to reconstruct a query result from absent document fields or\nnull values through <code>$gt/$lt</code> operators.",
+      "translation": "使用<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/KeysetScrollPosition.html\" title=\"class or interface in org.springframework.data.domain\"><code>KeysetScrollPosition</code></a>时，请确保使用非空<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>排序属性</code></a>，因为 MongoDB 不支持通过<code>$gt/$lt</code>操作符根据缺失的文档字段或 null 值来重建查询结果。",
+      "count": 2
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a> that wraps the Mongo DB <code>FindIterable</code> that needs to be closed.",
+      "translation": "返回一个 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a>`，该流封装了需要关闭的 MongoDB <code>FindIterable</code>。",
+      "count": 2
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a> that wraps the Mongo DB <code>AggregateIterable</code> that needs to be\nclosed. The raw results will be mapped to the given entity class.",
+      "translation": "返回一个<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a>，该流封装了需要关闭的 MongoDB <code>AggregateIterable</code>。原始结果将被映射到给定的实体类中。",
+      "count": 2
+    },
+    {
+      "source": "MongoDB 4.2 has removed the <code>geoNear</code> command. This method uses since version 2.2 aggregations and the\n<code>$geoNear</code> aggregation command to emulate <code>geoNear</code> command functionality. We recommend using\naggregations directly:",
+      "translation": "MongoDB 4.2 已移除了 `<code>geoNear</code>` 命令。自版本 2.2 起，该方法使用聚合管道和 `<code>$geoNear</code>` 聚合操作来模拟 `<code>geoNear</code>` 命令的功能。我们建议使用聚合管道直接实现该功能：",
+      "count": 2
+    },
+    {
+      "source": "A potential <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> the property will be auto incremented. The\noperation raises an error in case the document has been modified in between.",
+      "translation": "属性可能具有一个 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> 注解，此时该属性将自动递增。如果文档在此期间被修改，此操作将抛出错误。",
+      "count": 2
+    },
+    {
+      "source": "Replace a single document matching the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument.",
+      "translation": "将给定<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>中匹配单个文档的<a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>替换为<code>replacement</code>文档。",
+      "count": 2
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> by querying the given collection using the given entity\nclass to map the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "返回给定集合中符合指定实体类映射的<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>所查询到的文档数量。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> on the entity collection of the specified <code>entityType</code> backed by a Mongo DB\n<code>FindIterable</code>.",
+      "translation": "在由 MongoDB 支持的、指定 `<code>entityType</code>` 的实体集合上执行给定的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>，返回一个 `<code>FindIterable</code>`。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> on the entity collection of the specified <code>entityType</code> and collection backed\nby a Mongo DB <code>FindIterable</code>.",
+      "translation": "在由 MongoDB 的<code>FindIterable</code>支持的集合上，针对指定的<code>entityType</code>对应的实体集合执行给定的<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Obtain a <code>session</code> bound instance of <a href=\"SessionScoped.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>SessionScoped</code></a> binding a new <code>ClientSession</code>\nwith given sessionOptions to each and every command issued against MongoDB.",
+      "translation": "获取一个与<a href=\"SessionScoped.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>SessionScoped</code></a>绑定的会话实例，该实例将一个新的<code>ClientSession</code>（带有指定的 sessionOptions）绑定到针对 MongoDB 发出的每一条命令上。",
+      "count": 2
+    },
+    {
+      "source": "Create a view with the provided name. The view content is defined by the <a href=\"aggregation/AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>pipeline</code></a> on\nanother collection or view identified by the given <a href=\"#getCollectionName(java.lang.Class)\"><code>source type</code></a>.",
+      "translation": "使用提供的名称创建视图。该视图的内容由另一个集合或视图（通过给定的<a href=\"#getCollectionName(java.lang.Class)\"><code>源类型</code></a>标识）上的<a href=\"aggregation/AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>pipeline</code></a>定义。",
+      "count": 2
+    },
+    {
+      "source": "since 2.2. The <code>eval</code> command has been removed in MongoDB Server 4.2.0. Use Aggregations with\n            <a href=\"aggregation/Aggregation.html#geoNear(org.springframework.data.mongodb.core.query.NearQuery,java.lang.String)\"><code>Aggregation.geoNear(NearQuery, String)</code></a> instead.",
+      "translation": "自 2.2 版本起，MongoDB Server 4.2.0 已移除了 <code>eval</code> 命令。请使用聚合功能中的 <a href=\"aggregation/Aggregation.html#geoNear(org.springframework.data.mongodb.core.query.NearQuery,java.lang.String)\"><code>Aggregation.geoNear(NearQuery, String)</code></a> 作为替代方案。",
+      "count": 2
+    },
+    {
+      "source": "Returns a new <a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a> for the given entity type and collection name.",
+      "translation": "返回给定实体类型和集合名称的新<a href=\"BulkOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>BulkOperations</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns a new <a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a> for the given entity type.",
+      "translation": "返回给定实体类型的新<a href=\"BulkOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>BulkOperations</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Executes the given <a href=\"bulk/Bulk.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk</code></a> to perform insert, update, and delete operations.",
+      "translation": "执行给定的<a href=\"bulk/Bulk.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk</code></a>以执行插入、更新和删除操作。",
+      "count": 2
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> by querying the collection of the given entity class.",
+      "translation": "根据给定的<a href=\"query/Query.html\" title=\"org.springframework.data.mongodb.core.query 中的类\"><code>Query</code></a>查询给定实体类的集合，返回文档数量。",
+      "count": 2
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> querying the given collection.",
+      "translation": "返回给定集合中由指定<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>查询到的文档数量。",
+      "count": 2
+    },
+    {
+      "source": "Create an uncapped collection with a name based on the provided entity class allowing to customize derived\n<a href=\"CollectionOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>CollectionOptions</code></a>.",
+      "translation": "创建一个无上限集合，其名称基于提供的实体类，并允许自定义派生的 <a href=\"CollectionOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>CollectionOptions</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Returns the underlying <a href=\"convert/MongoConverter.html\" title=\"interface in org.springframework.data.mongodb.core.convert\"><code>MongoConverter</code></a>.",
+      "translation": "返回底层的<a href=\"convert/MongoConverter.html\" title=\"org.springframework.data.mongodb.core.convert 中的接口\"><code>MongoConverter</code></a>。",
+      "count": 2
+    },
+    {
+      "source": "Create an uncapped collection with a name based on the provided entity class.",
+      "translation": "根据提供的实体类创建一个无上限集合，其名称基于该实体类。",
+      "count": 2
+    },
+    {
+      "source": "Create a collection with a name based on the provided entity class using the options.",
+      "translation": "使用提供的选项，基于实体类创建一个集合。",
+      "count": 2
+    },
+    {
+      "source": "Create an uncapped collection with the provided name.",
+      "translation": "使用提供的名称创建一个无上限系列。",
+      "count": 2
+    },
+    {
+      "source": "Create a collection with the provided name and options.",
+      "translation": "使用提供的名称和选项创建集合。",
+      "count": 2
+    },
+    {
+      "source": "Execute a MongoDB command.",
+      "translation": "执行 MongoDB 命令。",
+      "count": 2
+    },
+    {
+      "source": "Execute a MongoDB query and iterate over the query results on a per-document basis with a DocumentCallbackHandler.",
+      "translation": "使用 DocumentCallbackHandler 执行 MongoDB 查询，并基于每个文档迭代查询结果。",
+      "count": 2
+    },
+    {
+      "source": "Returns and removes all documents matching the given query form the collection used to store the entityClass.",
+      "translation": "从用于存储 entityClass 的集合中返回并删除所有匹配给定查询的文档。",
+      "count": 2
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the specified collection to a single instance of an object of the specified\ntype.",
+      "translation": "将针对指定集合的临时查询结果映射到指定类型对象的单个实例。",
+      "count": 2
+    },
+    {
+      "source": "Returns the document with the given id from the given collection mapped onto the given target class.",
+      "translation": "根据给定集合和给定 ID 返回映射到给定目标类的文档。",
+      "count": 2
+    },
+    {
+      "source": "The collection name used for the specified class by this template.",
+      "translation": "此模板为指定类使用的集合名称。",
+      "count": 2
+    },
+    {
+      "source": "A set of collection names.",
+      "translation": "一组集合名称。",
+      "count": 2
+    },
+    {
+      "source": "Insert a Collection of objects into a collection in a single batch write to the database.",
+      "translation": "将对象集合以单个批量写入的方式插入到数据库的集合中。",
+      "count": 2
+    },
+    {
+      "source": "Insert a batch of objects into the specified collection in a single batch write to the database.",
+      "translation": "将一批对象以单次批量写入的方式插入到指定的数据库集合中。",
+      "count": 2
+    },
+    {
+      "source": "Insert a mixed Collection of objects into a database collection determining the collection name to use based on the\nclass.",
+      "translation": "将混合类型的对象集合插入到数据库集合中，并根据类名确定要使用的集合名称。",
+      "count": 2
+    },
+    {
+      "source": "Remove all documents that match the provided query document criteria from the collection used to store the\nentityClass.",
+      "translation": "从用于存储 entityClass 的集合中删除所有符合所提供查询文档条件的文档。",
+      "count": 2
+    },
+    {
+      "source": "Query for a window of objects of type T from the specified collection.",
+      "translation": "从指定的集合中查询类型为 T 的对象窗口。",
+      "count": 2
+    },
+    {
+      "source": "Updates the first object that is found in the collection of the entity class that matches the query document with\nthe provided update document.",
+      "translation": "将实体类集合中第一个与查询文档匹配的对象，使用提供的更新文档进行更新。",
+      "count": 2
+    },
+    {
+      "source": "Execute an aggregation operation. The raw results will be mapped to the given entity class. The name of the\ninputCollection is derived from the inputType of the aggregation.",
+      "translation": "执行聚合操作。原始结果将被映射到给定的实体类中。输入集合的名称源自聚合的输入类型。",
+      "count": 2
+    },
+    {
+      "source": "Execute an aggregation operation. The raw results will be mapped to the given entity class.",
+      "translation": "执行聚合操作。原始结果将被映射到给定的实体类中。",
+      "count": 2
+    },
+    {
+      "source": "Remove all documents that match the provided query document criteria from the collection used to store the\nentityClass. The Class parameter is also used to help convert the Id of the object if it is present in the query.",
+      "translation": "从用于存储 entityClass 的集合中删除所有符合所提供查询文档条件的文档。如果查询中包含对象的 Id，则还会使用该参数来辅助转换该 Id。",
+      "count": 2
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> used to find a document. The query may\n         contain an index <a href=\"query/Query.html#withHint(java.lang.String)\"><code>hint</code></a> or the <a href=\"query/Query.html#collation(org.springframework.data.mongodb.core.query.Collation)\"><code>collation</code></a>\n         to use. The <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> may define a <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>sort order</code></a> to influence which document to\n         replace when potentially matching multiple candidates. Must not be null.",
+      "translation": "<code>query</code> - 指定用于查找文档的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类，该类包含所使用的 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>。该查询可能包含索引 <a href=\"query/Query.html#withHint(java.lang.String)\"><code>hint</code></a> 或要使用的 <a href=\"query/Query.html#collation(org.springframework.data.mongodb.core.query.Collation)\"><code>collation</code></a>。<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 可定义 <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>排序顺序</code></a>，以在潜在匹配多个候选项时影响要替换的文档。不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - if a potential <a href=\"query/Query.html#getKeyset()\"><code>KeysetScrollPosition</code></a> contains an invalid\n          position.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html\" title=\"class or interface in java.lang\">IllegalStateException</a></code> - 如果潜在的 <a href=\"query/Query.html#getKeyset()\"><code>KeysetScrollPosition</code></a> 包含无效的位置。",
+      "count": 2
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/OptimisticLockingFailureException.html\" title=\"class or interface in org.springframework.dao\">OptimisticLockingFailureException</a></code> - in case of version mismatch in case a\n          <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> is defined.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-framework/docs/7.0.8/javadoc-api/org/springframework/dao/OptimisticLockingFailureException.html\" title=\"class or interface in org.springframework.dao\">OptimisticLockingFailureException</a></code> - 当定义了 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a> 时，若发生版本不匹配的情况。",
+      "count": 2
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the criteria used to find documents.",
+      "translation": "<code>query</code> - 指定用于查找文档的条件的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类。",
+      "count": 2
+    },
+    {
+      "source": "<code>options</code> - the <a href=\"ReplaceOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ReplaceOptions</code></a> holding additional information. Must not be null.",
+      "translation": "<code>options</code> - 包含额外信息的 <a href=\"ReplaceOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>ReplaceOptions</code></a>。不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "the converted object that was updated or null, if not found. Depending on the value of\n        <a href=\"FindAndModifyOptions.html#isReturnNew()\"><code>FindAndModifyOptions.isReturnNew()</code></a> this will either be the object as it was before the update or as\n        it is after the update.",
+      "translation": "已更新或找不到的转换对象，或者为 null。根据 <a href=\"FindAndModifyOptions.html#isReturnNew()\"><code>FindAndModifyOptions.isReturnNew()</code></a> 的值，此对象可能是更新前的状态或更新后的状态。",
+      "count": 2
+    },
+    {
+      "source": "<code>resultType</code> - the parametrized type projection return type. Must not be null, use the domain type of\n         <code>Object.class</code> instead.",
+      "translation": "<code>resultType</code> - 参数化类型投影的返回类型。不能为 null，应使用 <code>Object.class</code> 的域类型代替。",
+      "count": 2
+    },
+    {
+      "source": "TimeSeries time and meta fields, granularity and <code>expireAfter</code>",
+      "translation": "时间序列的时间和元数据字段、粒度以及<code>expireAfter</code>",
+      "count": 2
+    },
+    {
+      "source": "<code>entityType</code> - must not be null.",
+      "translation": "<code>entityType</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityClass</code> - class that determines the collection to create.",
+      "translation": "<code>entityClass</code> - 用于确定要创建的集合的类。",
+      "count": 2
+    },
+    {
+      "source": "<code>collectionOptions</code> - options to use when creating the collection.",
+      "translation": "<code>collectionOptions</code> - 创建集合时使用的选项。",
+      "count": 2
+    },
+    {
+      "source": "<code>options</code> - additional settings to apply when creating the view. Can be null.",
+      "translation": "`options` - 创建视图时应用的附加设置。可为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection. Must not be null.",
+      "translation": "<code>collectionName</code> - 集合名称。不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>collectionName</code> - the name of the collection to work on, must not be null or empty.",
+      "translation": "<code>collectionName</code> - 要操作的集合名称，不能为 null 或空。",
+      "count": 2
+    },
+    {
+      "source": "<code>collectionName</code> - The name of the input collection to use for the aggreation.",
+      "translation": "<code>collectionName</code> - 用于聚合的输入集合的名称。",
+      "count": 2
+    },
+    {
+      "source": "<code>inputType</code> - the inputType where the aggregation operation will read from, must not be null or\n         empty.",
+      "translation": "<code>inputType</code> - 聚合操作将读取的输入类型，不能为 null 或为空。",
+      "count": 2
+    },
+    {
+      "source": "<code>collectionName</code> - the collection where the aggregation operation will read from, must not be null or\n         empty.",
+      "translation": "<code>collectionName</code> - 聚合操作将读取的集合，不能为 null 或为空。",
+      "count": 2
+    },
+    {
+      "source": "<code>query</code> - The query to use to select the data for the map phase. Must not be null.",
+      "translation": "<code>query</code> - 用于选择地图阶段数据的查询。不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>near</code> - must not be null.",
+      "translation": "<code>near</code> 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection to check for objects.",
+      "translation": "<code>collectionName</code> - 要检查对象的集合名称。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityClass</code> - the parametrized type.",
+      "translation": "<code>entityClass</code> - 参数化类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityClass</code> - the parametrized type of the returned list. Must not be null.",
+      "translation": "<code>entityClass</code> - 返回列表的参数化类型。不得为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityType</code> - the parametrized type of the returned window.",
+      "translation": "<code>entityType</code> - 返回窗口的参数化类型。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityClass</code> - class that determines the collection to use.",
+      "translation": "<code>entityClass</code> - 用于确定要使用的集合的类。",
+      "count": 2
+    },
+    {
+      "source": "<code>object</code> - must not be null.",
+      "translation": "<code>object</code> - 不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "<code>entityClass</code> - class of the pojo to be operated on.",
+      "translation": "<code>entityClass</code> - 要操作的 pojo 的类。",
+      "count": 2
+    },
+    {
+      "source": "true if a collection with the given name is found, false otherwise.",
+      "translation": "如果找到具有给定名称的集合，则返回 true；否则返回 false。",
+      "count": 2
+    },
+    {
+      "source": "the converted collection.",
+      "translation": "转换后的集合。",
+      "count": 2
+    },
+    {
+      "source": "the List of converted objects.",
+      "translation": "已转换对象列表。",
+      "count": 2
+    },
+    {
+      "source": "the converted window.",
+      "translation": "转换后的窗口。",
+      "count": 2
+    },
+    {
+      "source": "the converted object that was updated before it was updated or null, if not found.",
+      "translation": "在更新之前被转换的对象，若未找到则为 null。",
+      "count": 2
+    },
+    {
+      "source": "the converted object that was updated or null, if not found.",
+      "translation": "已转换并更新的对象，若未找到则为 null。",
+      "count": 2
+    },
+    {
+      "source": "the estimated number of documents.",
+      "translation": "预计文件数量。",
+      "count": 2
+    },
+    {
+      "source": "the inserted object.",
+      "translation": "插入的对象。",
+      "count": 2
+    },
+    {
+      "source": "the inserted objects that.",
+      "translation": "插入的物体。",
+      "count": 2
+    },
+    {
+      "source": "the saved object.",
+      "translation": "已保存的对象。",
+      "count": 2
+    },
+    {
+      "source": "<pre class=\"code\">TypedAggregation&lt;T&gt; geoNear = TypedAggregation.newAggregation(entityClass, Aggregation.geoNear(near, \"dis\"))\n                .withOptions(AggregationOptions.builder().collation(near.getCollation()).build());\nAggregationResults&lt;Document&gt; results = aggregate(geoNear, Document.class);\n</pre>",
+      "translation": "<pre class=\"code\">TypedAggregation&lt;T&gt; geoNear = TypedAggregation.newAggregation(entityClass, Aggregation.geoNear(near, \"dis\"))\n                .withOptions(AggregationOptions.builder().collation(near.getCollation()).build());\nAggregationResults&lt;Document&gt; results = aggregate(geoNear, Document.class);\n</pre>",
+      "count": 2
+    },
+    {
+      "source": "Query for a window of objects of type T from the specified collection. <br/>\nMake sure to either set <a href=\"query/Query.html#skip(long)\"><code>Query.skip(long)</code></a> or <a href=\"query/Query.html#with(org.springframework.data.domain.KeysetScrollPosition)\"><code>Query.with(KeysetScrollPosition)</code></a> along with\n<a href=\"query/Query.html#limit(int)\"><code>Query.limit(int)</code></a> to limit large query results for efficient scrolling. <br/>\nResult objects are converted from the MongoDB native representation using an instance of .\nUnless configured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nIf your collection does not contain a homogeneous collection of types, this operation will not be an efficient way\nto map objects since the test for class type is done in the client and not on the server.",
+      "translation": "从指定的集合中查询类型为 T 的对象窗口。<br/>\n请确保在设置 <a href=\"query/Query.html#skip(long)\"><code>Query.skip(long)</code></a> 或 <a href=\"query/Query.html#with(org.springframework.data.domain.KeysetScrollPosition)\"><code>Query.with(KeysetScrollPosition)</code></a> 的同时，也设置 <a href=\"query/Query.html#limit(int)\"><code>Query.limit(int)</code></a>，以限制大型查询结果从而实现高效的滚动。<br/>\n结果对象将使用 . 的实例从 MongoDB 原生表示形式进行转换。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 的实例。<br/>\n如果您的集合不包含同质的类型集合，则此操作将无法高效地映射对象，因为类类型的检查是在客户端执行而非在服务器端。",
+      "count": 2
+    },
+    {
+      "source": "Performs an upsert. If no document is found that matches the query, a new document is created and inserted by\ncombining the query document and the update document.",
+      "translation": "执行更新或插入操作。如果未找到与查询匹配的任何文档，则通过合并查询文档和更新文档来创建并插入一个新文档。",
+      "count": 2
+    },
+    {
+      "source": "<strong>NOTE:</strong> <a href=\"query/Query.html#getSortObject()\"><code>sorting</code></a> is not supported by <code>db.collection.updateOne</code>.\nUse <a href=\"#findAndModify(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,org.springframework.data.mongodb.core.FindAndModifyOptions,java.lang.Class,java.lang.String)\"><code>findAndModify(Query, UpdateDefinition, FindAndModifyOptions, Class, String)</code></a> instead.",
+      "translation": "<strong>注意：</strong><a href=\"query/Query.html#getSortObject()\"><code>sorting</code></a> 不受 <code>db.collection.updateOne</code> 支持。请使用<a href=\"#findAndModify(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,org.springframework.data.mongodb.core.FindAndModifyOptions,java.lang.Class,java.lang.String)\"><code>findAndModify(Query, UpdateDefinition, FindAndModifyOptions, Class, String)</code></a> 替代。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a> that wraps the Mongo DB <code>AggregateIterable</code> that needs to be\nclosed. The raw results will be mapped to the given entity class. The name of the inputCollection is derived from\nthe inputType of the aggregation.",
+      "translation": "返回一个包装需要关闭的 MongoDB `AggregateIterable` 的 `<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a>`。原始结果将被映射到给定的实体类中。输入集合的名称是从聚合的 `inputType` 派生的。",
+      "count": 1
+    },
+    {
+      "source": "Returns a <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a> that wraps the Mongo DB <code>AggregateIterable</code> that needs to be\nclosed. The raw results will be mapped to the given entity class and are returned as stream. The name of the\ninputCollection is derived from the inputType of the aggregation.",
+      "translation": "返回一个包装需要关闭的 MongoDB <code>AggregateIterable</code> 的<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html\" title=\"class or interface in java.util.stream\"><code>Stream</code></a>。原始结果将被映射到给定的实体类，并以流的形式返回。输入集合的名称是从聚合的输入类型派生的。",
+      "count": 1
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "<strong>NOTE:</strong> targeting multiple collections requires MongoDB 8.0+.",
+      "translation": "<strong>注意：</strong>针对多个集合需要 MongoDB 8.0+ 版本。",
+      "count": 1
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> querying the given collection. The given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>\nmust solely consist of document field references as we lack type information to map potential property references\nonto document fields. Use <a href=\"#count(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>count(Query, Class, String)</code></a> to get full type specific support. <br/>\n<strong>NOTE:</strong> Query <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> and <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> can have direct\ninfluence on the resulting number of documents found as those values are passed on to the server and potentially\nlimit the range and order within which the server performs the count operation. Use an unpaged query to\ncount all matches. <br/>\nThis method uses an\n<code>aggregation execution</code> even for empty <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>queries</code></a> which may have an impact on performance, but guarantees\nshard, session and transaction compliance. In case an inaccurate count satisfies the applications needs use\n<a href=\"#estimatedCount(java.lang.String)\"><code>estimatedCount(String)</code></a> for empty queries instead.",
+      "translation": "返回给定集合中匹配指定 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 的文档数量。给定的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 必须仅由文档字段引用组成，因为我们缺乏类型信息来将潜在的属性引用映射到文档字段。如需获取完整的类型特定支持，请使用 <a href=\"#count(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>count(Query, Class, String)</code></a>。<br/>\n<strong>注意：</strong>查询的 <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> 和 <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> 可能会直接影响找到的文档数量，因为这些值会传递给服务器，并可能限制服务器执行计数操作的范围和顺序。请使用未分页的查询来统计所有匹配项。<br/>\n此方法即使对于空的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>queries</code></a> 也会使用<code>聚合执行</code>，这可能会影响性能，但能保证分片、会话和事务的合规性。如果应用需求允许不准确的计数结果，请在查询为空时使用 <a href=\"#estimatedCount(java.lang.String)\"><code>estimatedCount(String)</code></a> 代替。",
+      "count": 1
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> querying the given collection. The given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>\nmust solely consist of document field references as we lack type information to map potential property references\nonto document fields. Use <a href=\"#count(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>count(Query, Class, String)</code></a> to get full type specific support. <br/>\n<strong>NOTE:</strong> Query <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> and <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> can have direct\ninfluence on the resulting number of documents found as those values are passed on to the server and potentially\nlimit the range and order within which the server performs the count operation. Use an unpaged query to\ncount all matches. <br/>\nThis method may choose to use <a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a> for empty queries instead of running an\n<code>aggregation execution</code> which may have an impact on performance.",
+      "translation": "返回给定集合中匹配指定<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>的文档数量。给定的<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>必须仅由文档字段引用组成，因为我们缺乏类型信息来将潜在的属性引用映射到文档字段。请使用<a href=\"#count(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>count(Query, Class, String)</code></a>获取完整的类型特定支持。<br/>\n<strong>注意：</strong>查询的<a href=\"query/Query.html#getSkip()\"><code>offset</code></a>和<a href=\"query/Query.html#getLimit()\"><code>limit</code></a>可能会直接影响找到的文档数量，因为这些值会传递给服务器，并可能限制服务器执行计数操作的范围和顺序。请使用未分页的查询来统计所有匹配项。<br/>\n此方法可能会针对空查询选择使用<a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a>，而不是运行<code>aggregation execution</code>，这可能会对性能产生影响。",
+      "count": 1
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> by querying the given collection using the given entity\nclass to map the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>. <br/>\n<strong>NOTE:</strong> Query <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> and <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> can have direct\ninfluence on the resulting number of documents found as those values are passed on to the server and potentially\nlimit the range and order within which the server performs the count operation. Use an unpaged query to\ncount all matches. <br/>\nThis method uses an\n<code>aggregation execution</code> even for empty <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>queries</code></a> which may have an impact on performance, but guarantees\nshard, session and transaction compliance. In case an inaccurate count satisfies the applications needs use\n<a href=\"#estimatedCount(java.lang.String)\"><code>estimatedCount(String)</code></a> for empty queries instead.",
+      "translation": "返回给定集合中符合指定实体类映射的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 的文档数量，该查询使用给定的实体类对指定的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 进行映射。<br/>\n<strong>注意：</strong> 查询的 <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> 和 <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> 会直接影响找到的文档数量，因为这些值会被传递给服务器，并可能限制服务器执行计数操作的范围和顺序。请使用无分页的查询来统计所有匹配项。<br/>\n此方法即使对于空的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>queries</code></a> 也会使用<code>聚合执行</code>，这可能会影响性能，但能保证分片、会话和事务的合规性。如果应用程序对不准确的计数结果可以接受，请在查询为空时使用<a href=\"#estimatedCount(java.lang.String)\"><code>estimatedCount(String)</code></a> 替代。",
+      "count": 1
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> by querying the given collection using the given entity\nclass to map the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>. <br/>\n<strong>NOTE:</strong> Query <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> and <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> can have direct\ninfluence on the resulting number of documents found as those values are passed on to the server and potentially\nlimit the range and order within which the server performs the count operation. Use an unpaged query to\ncount all matches. <br/>\nThis method may choose to use <a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a> for empty queries instead of running an\n<code>aggregation execution</code> which may have an impact on performance.",
+      "translation": "返回给定集合中符合指定实体类映射的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 的文档数量，该查询使用给定的实体类来映射指定的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>。<br/>\n<strong>注意：</strong>查询的 <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> 和 <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> 会直接影响找到的文档数量，因为这些值会被传递给服务器，并可能限制服务器执行计数操作的范围和顺序。请使用无分页的查询来统计所有匹配项。<br/>\n此方法可能会选择使用 <a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a> 来处理空查询，而不是执行可能导致性能影响的聚合操作。",
+      "count": 1
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> by querying the collection of the given entity class.\n<br/>\n<strong>NOTE:</strong> Query <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> and <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> can have direct\ninfluence on the resulting number of documents found as those values are passed on to the server and potentially\nlimit the range and order within which the server performs the count operation. Use an unpaged query to\ncount all matches. <br/>\nThis method uses an\n<code>aggregation execution</code> even for empty <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>queries</code></a> which may have an impact on performance, but guarantees\nshard, session and transaction compliance. In case an inaccurate count satisfies the applications needs use\n<a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a> for empty queries instead.",
+      "translation": "返回给定实体类集合中符合指定 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 的文档数量。\n<br/>\n<strong>注意：</strong>查询中的 <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> 和 <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> 会直接影响找到的文档数量，因为这些值会被传递给服务器，并可能限制服务器执行计数操作的范围和顺序。若要统计所有匹配项，请使用未分页的查询。<br/>\n此方法即使对于空的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>queries</code></a> 也会使用<code>聚合执行</code>，这可能会影响性能，但能保证分片、会话和事务的合规性。如果应用程序对不精确的计数结果可以接受，对于空查询请使用 <a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a> 替代。",
+      "count": 1
+    },
+    {
+      "source": "Obtain a <code>session</code> bound instance of <a href=\"SessionScoped.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>SessionScoped</code></a> binding the <code>ClientSession</code>\nprovided by the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a> to each and every command issued against MongoDB. <br/>\n<strong>Note:</strong> It is up to the caller to manage the <code>ClientSession</code> lifecycle. Use the\n<a href=\"SessionScoped.html#execute(org.springframework.data.mongodb.core.SessionCallback,java.util.function.Consumer)\"><code>SessionScoped.execute(SessionCallback, Consumer)</code></a> hook to potentially close the <code>ClientSession</code>.",
+      "translation": "获取一个与给定 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"类或接口在 java.util.function\"><code>Supplier</code></a> 提供的 <code>ClientSession</code> 绑定的 <a href=\"SessionScoped.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>SessionScoped</code></a> 绑定实例，该实例会将此 <code>ClientSession</code> 绑定到针对 MongoDB 发出的每一条命令。<br/>\n<strong>注意：</strong> 调用方负责管理 <code>ClientSession</code> 的生命周期。请使用 <a href=\"SessionScoped.html#execute(org.springframework.data.mongodb.core.SessionCallback,java.util.function.Consumer)\"><code>SessionScoped.execute(SessionCallback, Consumer)</code></a> 钩子来关闭 <code>ClientSession</code>。",
+      "count": 1
+    },
+    {
+      "source": "Triggers\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a>\nto replace a single document matching <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument. <br/>\nThe collection name is derived from the replacement type. <br/>\nOptions are defaulted to <a href=\"FindAndReplaceOptions.html#empty()\"><code>FindAndReplaceOptions.empty()</code></a>. <br/>\n<strong>NOTE:</strong> The replacement entity must not hold an id.",
+      "translation": "触发器\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a> 用于将给定 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 中匹配的单个文档（符合 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>）替换为 <code>replacement</code> 文档。<br/>\n集合名称由替换类型推导得出。<br/>\n选项默认为 <a href=\"FindAndReplaceOptions.html#empty()\"><code>FindAndReplaceOptions.empty()</code></a>。<br/>\n<strong>注意：</strong> 替换实体不能包含 id。",
+      "count": 1
+    },
+    {
+      "source": "Returns the number of documents for the given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> by querying the collection of the given entity class.\n<br/>\n<strong>NOTE:</strong> Query <a href=\"query/Query.html#getSkip()\"><code>offset</code></a> and <a href=\"query/Query.html#getLimit()\"><code>limit</code></a> can have direct\ninfluence on the resulting number of documents found as those values are passed on to the server and potentially\nlimit the range and order within which the server performs the count operation. Use an unpaged query to\ncount all matches. <br/>\nThis method may choose to use <a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a> for empty queries instead of running an\n<code>aggregation execution</code> which may have an impact on performance.",
+      "translation": "返回给定实体类集合中符合指定<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>的文档数量。\n<br/>\n<strong>注意：</strong><a href=\"query/Query.html#getSkip()\"><code>offset</code></a>和<a href=\"query/Query.html#getLimit()\"><code>limit</code></a>可能会直接影响找到的文档数量，因为这些值会传递给服务器，并可能限制服务器执行计数操作的范围和顺序。若要统计所有匹配项，请使用未分页的查询。<br/>\n此方法可能会针对空查询选择使用<a href=\"#estimatedCount(java.lang.Class)\"><code>estimatedCount(Class)</code></a>，而不是执行<code>聚合操作</code>，这可能会对性能产生影响。",
+      "count": 1
+    },
+    {
+      "source": "Triggers\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a>\nto replace a single document matching <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument.<br/>\nOptions are defaulted to <a href=\"FindAndReplaceOptions.html#empty()\"><code>FindAndReplaceOptions.empty()</code></a>. <br/>\n<strong>NOTE:</strong> The replacement entity must not hold an id.",
+      "translation": "触发器\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a> 用于将匹配给定 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> 的单个文档替换为 <code>replacement</code> 文档。<br/>\n选项默认设置为 <a href=\"FindAndReplaceOptions.html#empty()\"><code>FindAndReplaceOptions.empty()</code></a>。<br/>\n<strong>注意：</strong> 替换实体不能包含 id。",
+      "count": 1
+    },
+    {
+      "source": "Performs an upsert. If no document is found that matches the query, a new document is created and inserted by\ncombining the query document and the update document. <br/>\n<strong>NOTE:</strong> Any additional support for field mapping, versions, etc. is not available due to the lack of\ndomain type information. Use <a href=\"#upsert(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,java.lang.Class,java.lang.String)\"><code>upsert(Query, UpdateDefinition, Class, String)</code></a> to get full type specific\nsupport. <br/>\n<strong>NOTE:</strong> <a href=\"query/Query.html#getSortObject()\"><code>sorting</code></a> is not supported by <code>db.collection.updateOne</code>.\nUse <a href=\"#findAndModify(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,org.springframework.data.mongodb.core.FindAndModifyOptions,java.lang.Class,java.lang.String)\"><code>findAndModify(Query, UpdateDefinition, FindAndModifyOptions, Class, String)</code></a> instead.",
+      "translation": "执行更新或插入操作。如果未找到与查询匹配的任何文档，则通过组合查询文档和更新文档来创建并插入一个新文档。<br/>\n<strong>注意：</strong>由于缺少域类型信息，不支持任何额外的字段映射、版本等功能。请使用 <a href=\"#upsert(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,java.lang.Class,java.lang.String)\"><code>upsert(Query, UpdateDefinition, Class, String)</code></a> 以获取完整的特定类型支持。<br/>\n<strong>注意：</strong> <a href=\"query/Query.html#getSortObject()\"><code>排序</code></a> 不受 <code>db.collection.updateOne</code> 支持。请改用 <a href=\"#findAndModify(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,org.springframework.data.mongodb.core.FindAndModifyOptions,java.lang.Class,java.lang.String)\"><code>findAndModify(Query, UpdateDefinition, FindAndModifyOptions, Class, String)</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the collection for the entity class to a single instance of an object of the\nspecified type. <br/>\nThe object is converted from the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nThe query is specified as a <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> which can be created either using the <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> or the more\nfeature rich <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "将针对集合的临时查询结果映射到指定类型的单个对象实例。<br/>\n该对象将从 MongoDB 原生表示形式转换而来，使用 <code>MappingMongoConverter</code> 类的实例进行转换。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 的实例。<br/>\n查询指定为 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>，该查询可以通过 <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> 或功能更丰富的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 创建。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the specified collection to a single instance of an object of the specified\ntype. <br/>\nThe object is converted from the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nThe query is specified as a <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> which can be created either using the <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> or the more\nfeature rich <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "将针对指定集合的临时查询结果映射为指定类型对象的单个实例。<br/>\n该对象通过一个 . 实例从 MongoDB 原生表示形式转换而来。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 的实例。<br/>\n查询被指定为 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>，该查询可以通过 <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> 或功能更丰富的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 创建。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the collection for the entity class to a List of the specified type. <br/>\nThe object is converted from the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nThe query is specified as a <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> which can be created either using the <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> or the more\nfeature rich <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "将针对集合的临时查询结果映射到指定类型的 List 中。<br/>\n该对象将从 MongoDB 原生表示形式转换，使用 <code>MappingMongoConverter</code> 类的实例进行转换。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 的实例。<br/>\n查询指定为 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>，该查询可以通过 <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> 或功能更丰富的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 创建。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the specified collection to a List of the specified type. <br/>\nThe object is converted from the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nThe query is specified as a <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> which can be created either using the <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> or the more\nfeature rich <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "将针对指定集合的临时查询结果映射为指定类型的列表。<br/>\n该对象将从 MongoDB 原生表示形式转换，使用 <code>MappingMongoConverter</code> 类的实例进行转换。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 类的实例。<br/>\n查询由 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 指定，该查询可以通过 <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> 或功能更丰富的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 创建。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the specified collection to a single instance of an object of the specified\ntype. The first document that matches the query is returned and also removed from the collection in the database.\n<br/>\nThe object is converted from the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nThe query is specified as a <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> which can be created either using the <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> or the more\nfeature rich <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "将针对指定集合的临时查询结果映射为指定类型对象的单个实例。返回并移除数据库中匹配该查询的第一个文档。<br/>\n使用 <code>MappingMongoConverter</code> 类的实例将对象从 MongoDB 原生表示形式进行转换。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 类的实例。<br/>\n查询由 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 指定，该查询可以通过 <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> 或功能更丰富的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 创建。",
+      "count": 1
+    },
+    {
+      "source": "Triggers\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a>\nto replace a single document matching <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument.<br/>\nOptions are defaulted to <a href=\"FindAndReplaceOptions.html#empty()\"><code>FindAndReplaceOptions.empty()</code></a>.",
+      "translation": "触发器\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a> 用于将匹配给定 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> 的单个文档替换为 <code>replacement</code> 文档。<br/>\n选项默认为 <a href=\"FindAndReplaceOptions.html#empty()\"><code>FindAndReplaceOptions.empty()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Replace a single document matching the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument. <br/>\nThe collection name is derived from the replacement type. <br/>\nOptions are defaulted to <a href=\"ReplaceOptions.html#none()\"><code>ReplaceOptions.none()</code></a>.",
+      "translation": "替换与给定<a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>匹配的单条文档，将其替换为<code>replacement</code>文档。<br/>集合名称由替换文档的类型推导得出。<br/>选项默认为<a href=\"ReplaceOptions.html#none()\"><code>ReplaceOptions.none()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the collection for the entity type to a single instance of an object of the\nspecified type. The first document that matches the query is returned and also removed from the collection in the\ndatabase. <br/>\nThe object is converted from the MongoDB native representation using an instance of . <br/>\nThe query is specified as a <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> which can be created either using the <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> or the more\nfeature rich <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>.",
+      "translation": "将针对集合的临时查询结果映射为指定类型的单个对象实例。返回并移除数据库中匹配该查询的第一个文档。<br/>\n使用 <code>...</code> 的实例将对象从 MongoDB 原生表示形式转换而来。<br/>\n查询由 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 指定，该查询可通过 <a href=\"query/BasicQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>BasicQuery</code></a> 或功能更丰富的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 创建。",
+      "count": 1
+    },
+    {
+      "source": "Replace a single document matching the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument. Options are defaulted to <a href=\"ReplaceOptions.html#none()\"><code>ReplaceOptions.none()</code></a>.",
+      "translation": "将给定<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>中匹配单个文档的<a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>替换为<code>replacement</code>文档。选项默认为<a href=\"ReplaceOptions.html#none()\"><code>ReplaceOptions.none()</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Triggers\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a>\nto replace a single document matching <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> with the <code>replacement</code>\ndocument.",
+      "translation": "触发器\n<a href=\"https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/\">findOneAndReplace</a> 用于替换与给定 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> 匹配的单条文档，将其替换为 <code>replacement</code> 文档。",
+      "count": 1
+    },
+    {
+      "source": "Obtain a <code>session</code> bound instance of <a href=\"SessionScoped.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>SessionScoped</code></a> binding the <code>ClientSession</code>\nprovided by the given <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a> to each and every command issued against MongoDB.",
+      "translation": "获取一个与 <a href=\"SessionScoped.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>SessionScoped</code></a> 绑定的 <code>session</code> 实例，该实例将给定 <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Supplier.html\" title=\"class or interface in java.util.function\"><code>Supplier</code></a> 提供的 <code>ClientSession</code> 绑定到针对 MongoDB 发出的每一条命令上。",
+      "count": 1
+    },
+    {
+      "source": "Obtain a <code>ClientSession</code> bound instance of <a href=\"MongoOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>MongoOperations</code></a>. <br/>\n<strong>Note:</strong> It is up to the caller to manage the <code>ClientSession</code> lifecycle.",
+      "translation": "获取一个绑定到<a href=\"MongoOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>MongoOperations</code></a>的<code>ClientSession</code>实例。<br/>\n<strong>注意：</strong>调用方负责管理<code>ClientSession</code>的生命周期。",
+      "count": 1
+    },
+    {
+      "source": "Get a <code>MongoCollection</code> by its name. The returned collection may not exists yet (except in local memory) and\nis created on first interaction with the server. Collections can be explicitly created via\n<a href=\"#createCollection(java.lang.Class)\"><code>createCollection(Class)</code></a>. Please make sure to check if the collection <a href=\"#collectionExists(java.lang.Class)\"><code>exists</code></a> first. <br/>\nTranslate any exceptions as necessary.",
+      "translation": "通过名称获取一个<code>MongoCollection</code>。返回的集合可能尚不存在（除非在本地内存中），并且会在首次与服务器交互时创建。可以通过<a href=\"#createCollection(java.lang.Class)\"><code>createCollection(Class)</code></a>显式创建集合。请确保首先检查该集合是否<a href=\"#collectionExists(java.lang.Class)\"><code>exists</code></a>。<br/>\n如有必要，将任何异常进行转换。",
+      "count": 1
+    },
+    {
+      "source": "Returns a new <a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a> for the given collection. <br/>\n<strong>NOTE:</strong> Any additional support for field mapping, etc. is not available for update or\nremove operations in bulk mode due to the lack of domain type information. Use\n<a href=\"#bulkOps(org.springframework.data.mongodb.core.BulkOperations.BulkMode,java.lang.Class,java.lang.String)\"><code>bulkOps(BulkMode, Class, String)</code></a> to get full type specific support.",
+      "translation": "返回给定集合的新 <a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a>。<br/>\n<strong>注意：</strong>由于批量模式下缺乏领域类型信息，更新或删除操作无法提供额外的字段映射等支持。请使用<a href=\"#bulkOps(org.springframework.data.mongodb.core.BulkOperations.BulkMode,java.lang.Class,java.lang.String)\"><code>bulkOps(BulkMode, Class, String)</code></a>以获取完整的特定类型支持。",
+      "count": 1
+    },
+    {
+      "source": "Determine result of given <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> contains at least one element. <br/>\n<strong>NOTE:</strong> Any additional support for query/field mapping, etc. is not available due to the lack of\ndomain type information. Use <a href=\"#exists(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>exists(Query, Class, String)</code></a> to get full type specific support.",
+      "translation": "确定给定的<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>是否包含至少一个元素。<br/>\n<strong>注意：</strong>由于缺少领域类型信息，任何额外的查询/字段映射等支持均不可用。请使用<a href=\"#exists(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>exists(Query, Class, String)</code></a>以获取完整的类型特定支持。",
+      "count": 1
+    },
+    {
+      "source": "Interface that specifies a basic set of MongoDB operations. Implemented by <a href=\"MongoTemplate.html\" title=\"class in org.springframework.data.mongodb.core\"><code>MongoTemplate</code></a>. Not often used but\na useful option for extensibility and testability (as it can be easily mocked, stubbed, or be the target of a JDK\nproxy). <br/>\n<strong>NOTE:</strong> Some operations cannot be executed within a MongoDB transaction. Please refer to the MongoDB\nspecific documentation to learn more about <a href=\"https://docs.mongodb.com/manual/core/transactions/\">Multi\nDocument Transactions</a>.",
+      "translation": "定义一组基本 MongoDB 操作的接口，由<a href=\"MongoTemplate.html\" title=\"class in org.springframework.data.mongodb.core\"><code>MongoTemplate</code></a>实现。虽然不常用，但这是一个用于扩展性和可测试性的有用选项（因为它可以轻松地进行模拟、存根处理或作为 JDK 代理的目标）。<br/>\n<strong>注意：</strong>某些操作无法在 MongoDB 事务中执行。有关<a href=\"https://docs.mongodb.com/manual/core/transactions/\">多文档事务</a>的更多信息，请参阅特定的 MongoDB 文档。",
+      "count": 1
+    },
+    {
+      "source": "Remove the given object from the collection by id and (if applicable) its\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>. <br/>\nUse <code>DeleteResult.getDeletedCount()</code> for insight whether an <code>acknowledged</code> remove operation was successful or not.",
+      "translation": "根据 id（以及适用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>）从集合中删除给定对象。<br/>\n使用<code>DeleteResult.getDeletedCount()</code>来了解<code>acknowledged</code>的删除操作是否成功。",
+      "count": 1
+    },
+    {
+      "source": "Removes the given object from the given collection by id and (if applicable) its\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>. <br/>\nUse <code>DeleteResult.getDeletedCount()</code> for insight whether an <code>acknowledged</code> remove operation was successful or not.",
+      "translation": "根据给定 id 以及（如适用）其<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>从给定集合中移除指定对象。<br/>\n使用<code>DeleteResult.getDeletedCount()</code>来了解<code>acknowledged</code>的删除操作是否成功。",
+      "count": 1
+    },
+    {
+      "source": "Create a view with the provided name. The view content is defined by the <a href=\"aggregation/AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>pipeline\nstages</code></a> on another collection or view identified by the given <a href=\"#getCollectionName(java.lang.Class)\"><code>source type</code></a>.",
+      "translation": "创建一个具有指定名称的视图。该视图的内容由另一个集合或视图（通过给定的<a href=\"#getCollectionName(java.lang.Class)\"><code>源类型</code></a>标识）上的<a href=\"aggregation/AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>管道阶段</code></a>定义。",
+      "count": 1
+    },
+    {
+      "source": "Query for a list of objects of type T from the collection used by the entity class. <br/>\nThe object is converted from the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nIf your collection does not contain a homogeneous collection of types, this operation will not be an efficient way\nto map objects since the test for class type is done in the client and not on the server.",
+      "translation": "从实体类使用的集合中查询类型为 T 的对象列表。<br/>\n该对象将使用 <code>MappingMongoConverter</code> 的实例从 MongoDB 原生表示形式进行转换。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 的实例。<br/>\n如果您的集合不包含同类型的对象集合，则此操作不会是映射对象的高效方式，因为类类型检查是在客户端执行而非在服务器端执行。",
+      "count": 1
+    },
+    {
+      "source": "Query for a list of objects of type T from the specified collection. <br/>\nThe object is converted from the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nIf your collection does not contain a homogeneous collection of types, this operation will not be an efficient way\nto map objects since the test for class type is done in the client and not on the server.",
+      "translation": "从指定的集合中查询类型为 T 的对象列表。<br/>\n该对象将使用 <code>MappingMongoConverter</code> 的实例从 MongoDB 原生表示形式进行转换。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 类的实例。<br/>\n如果您的集合不包含同质的类型集合，则此操作不会是映射对象的高效方式，因为类类型的检查是在客户端执行而非在服务器端。",
+      "count": 1
+    },
+    {
+      "source": "Updates the first object that is found in the specified collection that matches the query document criteria with\nthe provided updated document. <br/>\n<strong>NOTE:</strong> Any additional support for field mapping, versions, etc. is not available due to the lack of\ndomain type information. Use <a href=\"#updateFirst(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,java.lang.Class,java.lang.String)\"><code>updateFirst(Query, UpdateDefinition, Class, String)</code></a> to get full type specific\nsupport.",
+      "translation": "更新指定集合中第一个与查询文档条件匹配的对象，使用提供的更新文档。<br/>\n<strong>注意：</strong>由于缺少域类型信息，不支持字段映射、版本等额外功能。请使用<a href=\"#updateFirst(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,java.lang.Class,java.lang.String)\"><code>updateFirst(Query, UpdateDefinition, Class, String)</code></a>以获取完整的特定类型支持。",
+      "count": 1
+    },
+    {
+      "source": "Updates all objects that are found in the specified collection that matches the query document criteria with the\nprovided updated document. <br/>\n<strong>NOTE:</strong> Any additional support for field mapping, versions, etc. is not available due to the lack of\ndomain type information. Use <a href=\"#updateMulti(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,java.lang.Class,java.lang.String)\"><code>updateMulti(Query, UpdateDefinition, Class, String)</code></a> to get full type specific\nsupport.",
+      "translation": "更新指定集合中所有与查询文档条件匹配的对象，使用提供的更新文档进行更新。<br/>\n<strong>注意：</strong>由于缺少域类型信息，不支持字段映射、版本等额外功能。请使用 <a href=\"#updateMulti(org.springframework.data.mongodb.core.query.Query,org.springframework.data.mongodb.core.query.UpdateDefinition,java.lang.Class,java.lang.String)\"><code>updateMulti(Query, UpdateDefinition, Class, String)</code></a> 以获取完整的类型特定支持。",
+      "count": 1
+    },
+    {
+      "source": "Remove all documents from the specified collection that match the provided query document criteria. There is no\nconversion/mapping done for any criteria using the id field. <br/>\n<strong>NOTE:</strong> Any additional support for field mapping is not available due to the lack of domain type\ninformation. Use <a href=\"#remove(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>remove(Query, Class, String)</code></a> to get full type specific support.",
+      "translation": "从指定的集合中删除所有匹配所提供查询文档条件的文档。对于使用 id 字段的任何条件，均不进行转换/映射。<br/>\n<strong>注意：</strong>由于缺乏域类型信息，不支持任何额外的字段映射功能。请使用 <a href=\"#remove(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>remove(Query, Class, String)</code></a> 以获取完整的特定类型支持。",
+      "count": 1
+    },
+    {
+      "source": "Returns and removes all documents form the specified collection that match the provided query. <br/>\n<strong>NOTE:</strong> Any additional support for field mapping is not available due to the lack of domain type\ninformation. Use <a href=\"#findAllAndRemove(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>findAllAndRemove(Query, Class, String)</code></a> to get full type specific support.",
+      "translation": "删除并移除与指定查询条件匹配的所有文档。  \n<strong>注意：</strong>由于缺少域类型信息，不支持任何额外的字段映射功能。如需获取完整的特定类型支持，请使用 <a href=\"#findAllAndRemove(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)\"><code>findAllAndRemove(Query, Class, String)</code></a> 方法。",
+      "count": 1
+    },
+    {
+      "source": "Obtain a <code>ClientSession</code> bound instance of <a href=\"MongoOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>MongoOperations</code></a>.",
+      "translation": "获取一个与 <code>ClientSession</code> 绑定的 <a href=\"MongoOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>MongoOperations</code></a> 实例。",
+      "count": 1
+    },
+    {
+      "source": "Executes a <a href=\"DbCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>DbCallback</code></a> translating any exceptions as necessary. <br/>\nAllows for returning a result object, that is a domain object or a collection of domain objects.",
+      "translation": "执行一个<a href=\"DbCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>DbCallback</code></a>，并根据需要转换任何异常。<br/>\n允许返回结果对象，该对象可以是领域对象或领域对象的集合。",
+      "count": 1
+    },
+    {
+      "source": "Executes the given <a href=\"CollectionCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>CollectionCallback</code></a> on the entity collection of the specified class. <br/>\nAllows for returning a result object, that is a domain object or a collection of domain objects.",
+      "translation": "在指定类的实体集合上执行给定的<a href=\"CollectionCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>CollectionCallback</code></a>。<br/>\n允许返回一个结果对象，该对象可以是域对象或域对象的集合。",
+      "count": 1
+    },
+    {
+      "source": "Executes the given <a href=\"CollectionCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>CollectionCallback</code></a> on the collection of the given name. <br/>\nAllows for returning a result object, that is a domain object or a collection of domain objects.",
+      "translation": "在给定名称的集合上执行给定的<a href=\"CollectionCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>CollectionCallback</code></a>。<br/>\n允许返回一个结果对象，该对象可以是域对象或域对象的集合。",
+      "count": 1
+    },
+    {
+      "source": "Returns the <a href=\"ScriptOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>ScriptOperations</code></a> that can be performed on <code>MongoDatabase</code> level.",
+      "translation": "返回可在 <code>MongoDatabase</code> 级别执行的<a href=\"ScriptOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>ScriptOperations</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Estimate the number of documents, in the collection <a href=\"#getCollectionName(java.lang.Class)\"><code>identified by the given type</code></a>,\nbased on collection statistics. <br/>\nPlease make sure to read the MongoDB reference documentation about limitations on eg. sharded cluster or inside\ntransactions.",
+      "translation": "根据集合统计信息，估算由给定类型标识的集合 <a href=\"#getCollectionName(java.lang.Class)\"><code>中的文档数量</code></a>。<br/>\n请务必阅读 MongoDB 参考文档中关于分片集群或事务内的限制说明。",
+      "count": 1
+    },
+    {
+      "source": "Returns a new <a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a> for the given collection.",
+      "translation": "为给定集合返回一个新的<a href=\"BulkOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>BulkOperations</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Estimate the number of documents, in the collection <a href=\"#getCollectionName(java.lang.Class)\"><code>identified by the given type</code></a>,\nbased on collection statistics.",
+      "translation": "根据集合统计信息，估算由给定类型<a href=\"#getCollectionName(java.lang.Class)\"><code>标识的集合</code></a>中的文档数量。",
+      "count": 1
+    },
+    {
+      "source": "Executes the given <a href=\"CollectionCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>CollectionCallback</code></a> on the entity collection of the specified class.",
+      "translation": "在指定类的实体集合上执行给定的<a href=\"CollectionCallback.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>CollectionCallback</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Executes the given <a href=\"CollectionCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>CollectionCallback</code></a> on the collection of the given name.",
+      "translation": "在给定名称的集合上执行给定的<a href=\"CollectionCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>CollectionCallback</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Executes a <a href=\"DbCallback.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>DbCallback</code></a> translating any exceptions as necessary.",
+      "translation": "执行一个<a href=\"DbCallback.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>DbCallback</code></a>，并根据需要转换任何异常。",
+      "count": 1
+    },
+    {
+      "source": "Remove the given object from the collection by id and (if applicable) its\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>.",
+      "translation": "根据 id（以及如果适用的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>）从集合中移除给定对象。",
+      "count": 1
+    },
+    {
+      "source": "Removes the given object from the given collection by id and (if applicable) its\n<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>.",
+      "translation": "根据给定 id 和（如适用）其<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/Version.html\" title=\"class or interface in org.springframework.data.annotation\"><code>Version</code></a>从给定集合中移除指定对象。",
+      "count": 1
+    },
+    {
+      "source": "Execute a MongoDB command expressed as a JSON string. Parsing is delegated to <code>Document.parse(String)</code> to\nobtain the <code>Document</code> holding the actual command. Any errors that result from executing this command will be\nconverted into Spring's DAO exception hierarchy.",
+      "translation": "执行以 JSON 字符串形式表示的 MongoDB 命令。解析工作委托给 `<code>Document.parse(String)</code>` 方法，以获取包含实际命令的 `<code>Document</code>` 对象。执行此命令所产生的任何错误都将转换为 Spring 的 DAO 异常层次结构中的异常。",
+      "count": 1
+    },
+    {
+      "source": "Create a view with the provided name. The view content is defined by the <a href=\"aggregation/AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>pipeline</code></a> on\nanother collection or view identified by the given source.",
+      "translation": "使用提供的名称创建视图。该视图的内容由<a href=\"aggregation/AggregationPipeline.html\" title=\"class in org.springframework.data.mongodb.core.aggregation\"><code>pipeline</code></a>定义，该管道作用于另一个集合或视图，后者由给定的源标识。",
+      "count": 1
+    },
+    {
+      "source": "since 2.2. The <code>eval</code> command has been removed without replacement in MongoDB Server 4.2.0.",
+      "translation": "自 2.2 版本起，MongoDB Server 4.2.0 中已移除 `<code>eval` 命令且未提供替代方案。",
+      "count": 1
+    },
+    {
+      "source": "Get a <code>MongoCollection</code> by its name.",
+      "translation": "通过名称获取一个 <code>MongoCollection</code>。",
+      "count": 1
+    },
+    {
+      "source": "Check to see if a collection with a name indicated by the entity class exists. <br/>\nTranslate any exceptions as necessary.",
+      "translation": "检查是否存在由实体类指示名称的集合。<br/>\n如有必要，请翻译任何异常。",
+      "count": 1
+    },
+    {
+      "source": "Check to see if a collection with a given name exists. <br/>\nTranslate any exceptions as necessary.",
+      "translation": "检查是否存在具有给定名称的集合。<br/>\n如有必要，请翻译任何异常。",
+      "count": 1
+    },
+    {
+      "source": "Drop the collection with the name indicated by the entity class. <br/>\nTranslate any exceptions as necessary.",
+      "translation": "删除由实体类指定的名称的集合。<br/>\n如有必要，请翻译任何异常。",
+      "count": 1
+    },
+    {
+      "source": "Drop the collection with the given name. <br/>\nTranslate any exceptions as necessary.",
+      "translation": "删除给定名称的集合。<br/>\n如有必要，请翻译任何异常。",
+      "count": 1
+    },
+    {
+      "source": "Estimate the number of documents in the given collection based on collection statistics. <br/>\nPlease make sure to read the MongoDB reference documentation about limitations on eg. sharded cluster or inside\ntransactions.",
+      "translation": "根据集合统计信息估算给定集合中的文档数量。<br/>\n请务必阅读 MongoDB 参考文档中关于分片集群或事务内部限制的内容。",
+      "count": 1
+    },
+    {
+      "source": "Check to see if a collection with a name indicated by the entity class exists.",
+      "translation": "检查是否存在由实体类指示名称的集合。",
+      "count": 1
+    },
+    {
+      "source": "Check to see if a collection with a given name exists.",
+      "translation": "检查是否存在具有给定名称的集合。",
+      "count": 1
+    },
+    {
+      "source": "Drop the collection with the name indicated by the entity class.",
+      "translation": "删除由实体类指定的名称的集合。",
+      "count": 1
+    },
+    {
+      "source": "Drop the collection with the given name.",
+      "translation": "删除给定名称的集合。",
+      "count": 1
+    },
+    {
+      "source": "Estimate the number of documents in the given collection based on collection statistics.",
+      "translation": "根据集合统计信息估算给定集合中的文档数量。",
+      "count": 1
+    },
+    {
+      "source": "Execute a MongoDB command expressed as a JSON string.",
+      "translation": "执行以 JSON 字符串形式表达的 MongoDB 命令。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the collection for the entity class to a List of the specified type.",
+      "translation": "将针对集合的临时查询结果映射到指定类型的实体类列表。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the specified collection to a List of the specified type.",
+      "translation": "将针对指定集合的临时查询结果映射到指定类型的列表。",
+      "count": 1
+    },
+    {
+      "source": "Query for a list of objects of type T from the collection used by the entity class.",
+      "translation": "从实体类使用的集合中查询类型为 T 的对象列表。",
+      "count": 1
+    },
+    {
+      "source": "Query for a list of objects of type T from the specified collection.",
+      "translation": "从指定的集合中查询类型为 T 的对象列表。",
+      "count": 1
+    },
+    {
+      "source": "Returns and removes all documents that match the provided query document criteria from the collection used to store\nthe entityClass.",
+      "translation": "从用于存储 entityClass 的集合中返回并删除所有匹配提供的查询文档条件的文档。",
+      "count": 1
+    },
+    {
+      "source": "Returns and removes all documents form the specified collection that match the provided query.",
+      "translation": "返回并删除与指定查询条件匹配的所有文档。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the collection for the entity type to a single instance of an object of the\nspecified type.",
+      "translation": "将针对集合的临时查询结果映射为指定类型的单个对象实例。",
+      "count": 1
+    },
+    {
+      "source": "Returns a document with the given id mapped onto the given class.",
+      "translation": "返回一个具有给定 id 并映射到给定类的文档。",
+      "count": 1
+    },
+    {
+      "source": "Map the results of an ad-hoc query on the collection for the entity class to a single instance of an object of the\nspecified type.",
+      "translation": "将针对集合的临时查询结果映射为指定类型的单个对象实例。",
+      "count": 1
+    },
+    {
+      "source": "Insert the object into the collection for the entity type of the object to save.",
+      "translation": "将对象插入到该对象所属实体类型的集合中以便保存。",
+      "count": 1
+    },
+    {
+      "source": "Insert the object into the specified collection.",
+      "translation": "将对象插入指定的集合中。",
+      "count": 1
+    },
+    {
+      "source": "Remove all documents from the specified collection that match the provided query document criteria.",
+      "translation": "从指定的集合中删除所有匹配所提供查询文档条件的文档。",
+      "count": 1
+    },
+    {
+      "source": "Save the object to the collection for the entity type of the object to save.",
+      "translation": "将对象保存到该对象的实体类型的集合中。",
+      "count": 1
+    },
+    {
+      "source": "Save the object to the specified collection.",
+      "translation": "将对象保存到指定的集合中。",
+      "count": 1
+    },
+    {
+      "source": "Updates all objects that are found in the specified collection that matches the query document criteria with the\nprovided updated document.",
+      "translation": "更新指定集合中所有与查询文档条件匹配的对象，将其替换为提供的更新后的文档。",
+      "count": 1
+    },
+    {
+      "source": "Execute a MongoDB command. Any errors that result from executing this command will be converted into Spring's DAO\nexception hierarchy.",
+      "translation": "执行 MongoDB 命令。由此命令引发的任何错误都将转换为 Spring 的 DAO 异常层次结构中的异常。",
+      "count": 1
+    },
+    {
+      "source": "Execute a MongoDB command. Any errors that result from executing this command will be converted into Spring's data\naccess exception hierarchy.",
+      "translation": "执行 MongoDB 命令。由此命令引发的任何错误都将转换为 Spring 的数据访问异常层次结构中的异常。",
+      "count": 1
+    },
+    {
+      "source": "Execute a map-reduce operation. The map-reduce operation will be formed with an output type of INLINE",
+      "translation": "执行 MapReduce 操作。该 MapReduce 操作的输出类型将设置为 INLINE。",
+      "count": 1
+    },
+    {
+      "source": "Execute a map-reduce operation that takes additional map-reduce options.",
+      "translation": "执行一个带有额外 MapReduce 选项的 MapReduce 操作。",
+      "count": 1
+    },
+    {
+      "source": "Execute a map-reduce operation that takes a query. The map-reduce operation will be formed with an output type of\nINLINE",
+      "translation": "执行一个针对查询的 MapReduce 操作。该 MapReduce 操作的输出类型将定义为 INLINE。",
+      "count": 1
+    },
+    {
+      "source": "Execute a map-reduce operation that takes a query and additional map-reduce options",
+      "translation": "执行一个 MapReduce 操作，该操作接受查询和额外的 MapReduce 选项。",
+      "count": 1
+    },
+    {
+      "source": "Returns a document with the given id mapped onto the given class. The collection the query is ran against will be\nderived from the given target class as well.",
+      "translation": "返回一个具有给定 id 并映射到给定类的文档。查询所针对的集合也将根据给定的目标类推导得出。",
+      "count": 1
+    },
+    {
+      "source": "Returns and removes all documents that match the provided query document criteria from the collection used to store\nthe entityClass. The Class parameter is also used to help convert the Id of the object if it is present in the\nquery.",
+      "translation": "从用于存储 entityClass 的集合中返回并删除所有匹配所提供查询文档标准的文档。如果查询中包含对象的 Id，则还会使用该参数来辅助转换该 Id。",
+      "count": 1
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> used to find a document.The query may\n         contain an index <a href=\"query/Query.html#withHint(java.lang.String)\"><code>hint</code></a> or the <a href=\"query/Query.html#collation(org.springframework.data.mongodb.core.query.Collation)\"><code>collation</code></a>\n         to use. The <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> may define a <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>sort order</code></a> to influence which document to\n         replace when potentially matching multiple candidates. Must not be null.",
+      "translation": "<code>query</code> - 指定用于查找文档的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类，该类包含所使用的 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>。该查询可能包含索引 <a href=\"query/Query.html#withHint(java.lang.String)\"><code>hint</code></a> 或要使用的 <a href=\"query/Query.html#collation(org.springframework.data.mongodb.core.query.Collation)\"><code>collation</code></a>。<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类可定义 <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>排序顺序</code></a>，以在潜在匹配多个候选项时影响要替换的文档。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> used to find a document. The query may *\n         contain an index <a href=\"query/Query.html#withHint(java.lang.String)\"><code>hint</code></a> or the <a href=\"query/Query.html#collation(org.springframework.data.mongodb.core.query.Collation)\"><code>collation</code></a>\n         to use. The <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> may define a <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>sort order</code></a> to influence which document to\n         replace when potentially matching multiple candidates. Must not be null.",
+      "translation": "<code>query</code> - 指定用于查找文档的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类，该类包含所使用的 <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a>。查询可能包含索引 <a href=\"query/Query.html#withHint(java.lang.String)\"><code>hint</code></a> 或要使用的 <a href=\"query/Query.html#collation(org.springframework.data.mongodb.core.query.Collation)\"><code>collation</code></a>。<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 可定义 <a href=\"query/Query.html#with(org.springframework.data.domain.Sort)\"><code>排序顺序</code></a>，以在潜在匹配多个候选项时影响要替换的文档。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>query</code> - the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> class that specifies the <a href=\"query/Criteria.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Criteria</code></a> used to find a document and also an\n         optional fields specification.",
+      "translation": "<code>query</code> - 指定用于查找文档的 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 类，同时也包含一个可选的字段规范。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - the domain type used for determining the actual <code>MongoCollection</code> and mapping the\n         <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> to the domain type fields. Must not be null.",
+      "translation": "<code>entityClass</code> - 用于确定实际的 <code>MongoCollection</code> 并将 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 映射到领域类型字段的领域类型。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - if the target collection name cannot be\n          <a href=\"#getCollectionName(java.lang.Class)\"><code>derived</code></a> for the given objects.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - 如果无法为给定对象<a href=\"#getCollectionName(java.lang.Class)\"><code>推导</code></a>目标集合名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>bulk</code> - the <a href=\"bulk/Bulk.html\" title=\"interface in org.springframework.data.mongodb.core.bulk\"><code>Bulk</code></a> to write.",
+      "translation": "<code>bulk</code> - 要写入的 <a href=\"bulk/Bulk.html\" title=\"org.springframework.data.mongodb.core.bulk 中的接口\"><code>Bulk</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>ClientSession</code> bound instance of <a href=\"MongoOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>MongoOperations</code></a>.",
+      "translation": "<ClientSession> 绑定的 <a href=\"MongoOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>MongoOperations</code></a> 实例。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionOptionsCustomizer</code> - customizer function to customize the derived <a href=\"CollectionOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>CollectionOptions</code></a>.",
+      "translation": "<code>collectionOptionsCustomizer</code> - 自定义函数，用于定制派生的<a href=\"CollectionOptions.html\" title=\"org.springframework.data.mongodb.core 中的类\"><code>CollectionOptions</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>stages</code> - the <a href=\"aggregation/AggregationOperation.html\" title=\"interface in org.springframework.data.mongodb.core.aggregation\"><code>aggregation pipeline stages</code></a> defining the view content.",
+      "translation": "<code>stages</code> - 定义视图内容的<a href=\"aggregation/AggregationOperation.html\" title=\"org.springframework.data.mongodb.core.aggregation 中的接口\"><code>聚合管道阶段</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - the domain type used for mapping the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> to the domain type fields.",
+      "translation": "<code>entityClass</code> - 用于将 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 映射到领域类型字段的领域类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>update</code> - the <a href=\"query/UpdateDefinition.html\" title=\"interface in org.springframework.data.mongodb.core.query\"><code>UpdateDefinition</code></a> to apply on matching documents.",
+      "translation": "<code>update</code> - 应用于匹配文档的<a href=\"query/UpdateDefinition.html\" title=\"org.springframework.data.mongodb.core.query 中的接口\"><code>UpdateDefinition</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - the <a href=\"FindAndModifyOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndModifyOptions</code></a> holding additional information.",
+      "translation": "<code>options</code> - 包含额外信息的 <a href=\"FindAndModifyOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>FindAndModifyOptions</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityType</code> - the type used for mapping the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> to domain type fields and deriving the collection\n         from. Must not be null.",
+      "translation": "<code>entityType</code> - 用于将 <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> 映射到领域类型字段并派生集合的类型。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityType</code> - the type used for mapping the <a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a> to domain type fields. Must not be null.",
+      "translation": "<code>entityType</code> - 用于将<a href=\"query/Query.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>Query</code></a>映射到领域类型字段的类型。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - if the collection name cannot be derived from the type.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/mapping/MappingException.html\" title=\"class or interface in org.springframework.data.mapping\">MappingException</a></code> - 当无法从类型推导集合名称时抛出。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"execute(org.springframework.data.mongodb.core.DbCallback)-type-param-T\"><code>T</code> - return type.</span>",
+      "translation": "<span id=\"execute(org.springframework.data.mongodb.core.DbCallback)-type-param-T\"><code>T</code> - 返回类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"execute(java.lang.Class,org.springframework.data.mongodb.core.CollectionCallback)-type-param-T\"><code>T</code> - return type.</span>",
+      "translation": "<span id=\"execute(java.lang.Class,org.springframework.data.mongodb.core.CollectionCallback)-type-param-T\"><code>T</code> - 返回类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"execute(java.lang.String,org.springframework.data.mongodb.core.CollectionCallback)-type-param-T\"><code>T</code> - return type.</span>",
+      "translation": "<span id=\"execute(java.lang.String,org.springframework.data.mongodb.core.CollectionCallback)-type-param-T\"><code>T</code> - 返回类型。</span>",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - the name of the collection that specifies which <code>MongoCollection</code> instance will be\n         passed into. Must not be null or empty.",
+      "translation": "<code>collectionName</code> - 指定将哪个 <code>MongoCollection</code> 实例传入的集合名称。不能为 null 或空。",
+      "count": 1
+    },
+    {
+      "source": "new instance of <a href=\"SessionScoped.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>SessionScoped</code></a>. Never null.",
+      "translation": "新的<a href=\"SessionScoped.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>SessionScoped</code></a>实例。永不为 null。",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"stream(org.springframework.data.mongodb.core.query.Query,java.lang.Class)-type-param-T\"><code>T</code> - element return type</span>",
+      "translation": "<span id=\"stream(org.springframework.data.mongodb.core.query.Query,java.lang.Class)-type-param-T\"><code>T</code> - 元素返回类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<span id=\"stream(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)-type-param-T\"><code>T</code> - element return type</span>",
+      "translation": "<span id=\"stream(org.springframework.data.mongodb.core.query.Query,java.lang.Class,java.lang.String)-type-param-T\"><code>T</code> - 返回元素类型</span>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a> on the named collection",
+      "translation": "在指定集合上的<a href=\"BulkOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>BulkOperations</code></a>",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a> on the named collection associated of the given entity class.",
+      "translation": "在给定实体类关联的命名集合上的<a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<a href=\"BulkOperations.html\" title=\"interface in org.springframework.data.mongodb.core\"><code>BulkOperations</code></a> on the named collection associated with the given entity class.",
+      "translation": "在给定实体类关联的命名集合上的 <a href=\"BulkOperations.html\" title=\"org.springframework.data.mongodb.core 中的接口\"><code>BulkOperations</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - the domain type used for determining the actual <code>MongoCollection</code>. Must not be\n         null.",
+      "translation": "<code>entityClass</code> - 用于确定实际 <code>MongoCollection</code> 的领域类型。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - the explicit name of the actual <code>MongoCollection</code>. Must not be null.",
+      "translation": "<code>collectionName</code> - 实际 <code>MongoCollection</code> 的显式名称。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>collection</code> - the explicit name of the actual <code>MongoCollection</code>. Must not be null.",
+      "translation": "<code>collection</code> - 实际 <code>MongoCollection</code> 的显式名称。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - when query or entityClass is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 当查询或 entityClass 为 null 时。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - when query, entityClass or collectionName is\n          null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - 当 query、entityClass 或 collectionName 为 null 时抛出。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"class or interface in java.lang\">IllegalArgumentException</a></code> - when query or collectionName is null.",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html\" title=\"java.lang 中的类或接口\">IllegalArgumentException</a></code> - 当查询或 collectionName 为 null 时。",
+      "count": 1
+    },
+    {
+      "source": "<code>jsonCommand</code> - a MongoDB command expressed as a JSON string. Must not be null.",
+      "translation": "<code>jsonCommand</code> - 以 JSON 字符串形式表示的 MongoDB 命令。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>command</code> - a MongoDB command.",
+      "translation": "<code>command</code> - 一个 MongoDB 命令。",
+      "count": 1
+    },
+    {
+      "source": "<code>command</code> - a MongoDB command, must not be null.",
+      "translation": "<code>command</code> - 一个 MongoDB 命令，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>readPreference</code> - read preferences to use, can be null.",
+      "translation": "<code>readPreference</code> - 要使用的读取偏好，可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>dch</code> - the handler that will extract results, one document at a time.",
+      "translation": "`dch` - 用于逐个提取结果的处理器。",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - callback object that specifies the MongoDB actions to perform on the passed in DB instance. Must not\n         be null.",
+      "translation": "<code>action</code> - 回调对象，用于指定在传入的 DB 实例上执行的 MongoDB 操作。该对象不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - callback object that specifies the MongoDB action. Must not be null.",
+      "translation": "<code>action</code> - 指定 MongoDB 操作的回调对象，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>action</code> - callback object that specifies the MongoDB action the callback action. Must not be null.",
+      "translation": "<code>action</code> - 回调对象，指定 MongoDB 操作。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>options</code> - additional options applied to the execution.",
+      "translation": "<code>options</code> - 应用于执行的额外选项。",
+      "count": 1
+    },
+    {
+      "source": "<code>sessionOptions</code> - must not be null.",
+      "translation": "<code>sessionOptions</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>sessionProvider</code> - must not be null.",
+      "translation": "<code>sessionProvider</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>session</code> - must not be null.",
+      "translation": "<code>session</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - class that determines the collection to create. Must not be null.",
+      "translation": "<code>entityClass</code> - 用于确定要创建的集合的类。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection.",
+      "translation": "<code>collectionName</code> - 集合的名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection. Must not be null nor empty.",
+      "translation": "<code>collectionName</code> - 集合名称。不能为 null 或空字符串。",
+      "count": 1
+    },
+    {
+      "source": "<code>source</code> - the name of the collection or view defining the to be created views source.",
+      "translation": "<code>source</code> - 定义待创建视图来源的集合或视图名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - class that determines the name of the collection. Must not be null.",
+      "translation": "<code>entityClass</code> - 用于确定集合名称的类，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - class that determines the collection to drop/delete. Must not be null.",
+      "translation": "<code>entityClass</code> - 用于确定要删除/丢弃的集合的类。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection to drop/delete.",
+      "translation": "<code>collectionName</code> - 要删除/丢弃的集合名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityType</code> - the name of the entity class, must not be null.",
+      "translation": "<code>entityType</code> - 实体类名称，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityType</code> - the name of the entity class. Can be null.",
+      "translation": "<code>entityType</code> - 实体类的名称。可为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>mapFunction</code> - The JavaScript map function.",
+      "translation": "<code>mapFunction</code> - JavaScript 的 map 函数。",
+      "count": 1
+    },
+    {
+      "source": "<code>mapReduceOptions</code> - Options that specify detailed map-reduce behavior.",
+      "translation": "<code>mapReduceOptions</code> - 指定详细 MapReduce 行为的选项。",
+      "count": 1
+    },
+    {
+      "source": "<code>mapReduceOptions</code> - Options that specify detailed map-reduce behavior",
+      "translation": "<code>mapReduceOptions</code> - 指定详细 MapReduce 行为的选项",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - the collection to trigger the query against. If no collection name is given the entity class\n         will be inspected. Must not be null nor empty.",
+      "translation": "<code>collectionName</code> - 触发查询的集合。如果未提供集合名称，则检查实体类。该值不能为 null 或空字符串。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection to retrieve the objects from. Must not be null.",
+      "translation": "<code>collectionName</code> - 要从中检索对象的集合名称。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>id</code> - the id of the document to return. Must not be null.",
+      "translation": "<code>id</code> - 要返回的文档的 ID。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - the type the document shall be converted into. Must not be null.",
+      "translation": "<code>entityClass</code> - 文档应转换成的类型。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>id</code> - the id of the document to return.",
+      "translation": "<code>id</code> - 要返回的文档的 ID。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - the type to convert the document to.",
+      "translation": "<code>entityClass</code> - 要转换文档的类型。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - the collection to query for the document.",
+      "translation": "<code>collectionName</code> - 要查询文档的集合。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityType</code> - the parametrized type. Must not be null.",
+      "translation": "<code>entityType</code> - 参数化类型，不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - must not be null.",
+      "translation": "<code>collectionName</code> 不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>batchToSave</code> - the batch of objects to save. Must not be null.",
+      "translation": "<code>batchToSave</code> - 要保存的对象批次。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>batchToSave</code> - the list of objects to save. Must not be null.",
+      "translation": "<code>batchToSave</code> - 待保存的对象列表。不得为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>objectsToSave</code> - the list of objects to save. Must not be null.",
+      "translation": "<code>objectsToSave</code> - 要保存的对象列表。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>collectionName</code> - name of the collection to update the object in.",
+      "translation": "<code>collectionName</code> - 要更新对象的集合名称。",
+      "count": 1
+    },
+    {
+      "source": "<code>entityClass</code> - class of the pojo to be operated on. Can be null.",
+      "translation": "<code>entityClass</code> - 要操作的 POJO 的类。可以为 null。",
+      "count": 1
+    },
+    {
+      "source": "Thomas Risberg, Mark Pollack, Oliver Gierke, Tobias Trelle, Chuong Ngo, Christoph Strobl, Thomas Darimont, Maninder Singh, Mark Paluch, Woojin Shin",
+      "translation": "Thomas Risberg，Mark Pollack，Oliver Gierke，Tobias Trelle，Chuong Ngo，Christoph Strobl，Thomas Darimont，Maninder Singh，Mark Paluch，Woojin Shin",
+      "count": 1
+    },
+    {
+      "source": "the result of the bulk write operation. Never null.",
+      "translation": "批量写入操作的结果。永不为 null。",
+      "count": 1
+    },
+    {
+      "source": "list of collection names.",
+      "translation": "集合名称列表。",
+      "count": 1
+    },
+    {
+      "source": "an existing collection or one created on first server interaction.",
+      "translation": "现有集合或在与第一个服务器交互时创建的集合。",
+      "count": 1
+    },
+    {
+      "source": "index operations on the named collection",
+      "translation": "对命名集合执行索引操作",
+      "count": 1
+    },
+    {
+      "source": "index operations on the named collection associated with the given entity class",
+      "translation": "对给定实体类关联的命名集合执行索引操作。",
+      "count": 1
+    },
+    {
+      "source": "the document with the given id mapped onto the given target class.",
+      "translation": "将给定 ID 的文档映射到给定的目标类。",
+      "count": 1
+    },
+    {
+      "source": "he converted object or null if document does not exist.",
+      "translation": "如果文档不存在，则返回转换后的对象或 null。",
+      "count": 1
+    },
+    {
+      "source": "the converted object",
+      "translation": "转换后的对象",
+      "count": 1
+    },
+    {
+      "source": "the inserted objects.",
+      "translation": "插入的对象。",
+      "count": 1
+    },
+    {
+      "source": "Nested Class Summary",
+      "translation": "嵌套类摘要",
+      "count": 1
+    },
+    {
+      "source": "<ul>\n<li>Collation</li>\n<li>时间序列的时间和元数据字段、粒度以及<code>expireAfter</code></li>\n</ul>\nAny other options such as change stream options, schema-based details (validation, encryption) are not considered\nand must be provided through <a href=\"#createCollection(java.lang.Class,java.util.function.Function)\"><code>createCollection(Class, Function)</code></a> or\n<a href=\"#createCollection(java.lang.Class,org.springframework.data.mongodb.core.CollectionOptions)\"><code>createCollection(Class, CollectionOptions)</code></a>.",
+      "translation": "<ul>\n<li>排序规则</li>\n<li>时间序列的时间字段和元数据字段、粒度以及<code>expireAfter</code></li>\n</ul>\n其他选项（如变更流选项、基于模式的详细信息（验证、加密））不予考虑，必须通过<a href=\"#createCollection(java.lang.Class,java.util.function.Function)\"><code>createCollection(Class, Function)</code></a>或\n<a href=\"#createCollection(java.lang.Class,org.springframework.data.mongodb.core.CollectionOptions)\"><code>createCollection(Class, CollectionOptions)</code></a>提供。",
+      "count": 1
+    },
+    {
+      "source": "<ul>\n<li>Collation</li>\n<li>时间序列的时间和元数据字段、粒度以及<code>expireAfter</code></li>\n</ul>\nAny other options such as change stream options, schema-based details (validation, encryption) are not considered\nand must be provided through <a href=\"CollectionOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>CollectionOptions</code></a>.",
+      "translation": "<ul>\n<li>排序规则</li>\n<li>时间序列的时间字段和元数据字段、粒度以及<code>expireAfter</code></li>\n</ul>\n其他选项（如变更流选项、基于模式的详细信息（验证、加密））不予考虑，必须通过 <a href=\"CollectionOptions.html\" title=\"class in org.springframework.data.mongodb.core\"><code>CollectionOptions</code></a> 提供。",
+      "count": 1
+    },
+    {
+      "source": "Returns <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/geo/GeoResults.html\" title=\"class or interface in org.springframework.data.geo\"><code>GeoResults</code></a> for all entities matching the given <a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a>. Will consider entity mapping\ninformation to determine the collection the query is ran against. Note, that MongoDB limits the number of results\nby default. Make sure to add an explicit limit to the <a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a> if you expect a particular number of\nresults.",
+      "translation": "返回所有与给定<a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a>匹配的实体对应的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/geo/GeoResults.html\" title=\"class or interface in org.springframework.data.geo\"><code>GeoResults</code></a>。该方法将考虑实体映射信息以确定查询针对的集合。请注意，MongoDB 默认会限制返回结果的数量。如果您期望获得特定数量的结果，请确保在<a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a>中显式添加限制。",
+      "count": 1
+    },
+    {
+      "source": "Returns <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/geo/GeoResults.html\" title=\"class or interface in org.springframework.data.geo\"><code>GeoResults</code></a> for all entities matching the given <a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a>. Note, that MongoDB limits the\nnumber of results by default. Make sure to add an explicit limit to the <a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a> if you expect a\nparticular number of results.",
+      "translation": "返回所有与给定<a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a>匹配的实体对应的<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/geo/GeoResults.html\" title=\"class or interface in org.springframework.data.geo\"><code>GeoResults</code></a>。请注意，MongoDB 默认会限制结果数量。如果您期望获得特定数量的结果，请确保在<a href=\"query/NearQuery.html\" title=\"class in org.springframework.data.mongodb.core.query\"><code>NearQuery</code></a>中显式添加限制。",
+      "count": 1
+    },
+    {
+      "source": "Insert the object into the collection for the entity type of the object to save. <br/>\nThe object is converted to the MongoDB native representation using an instance of . <br/>\nIf your object has an Id property which holds a null value, it will be set with the generated\nId from MongoDB. If your Id property is a String then MongoDB ObjectId will be used to populate that string.\nOtherwise, the conversion from ObjectId to your property type will be handled by Spring's BeanWrapper class that\nleverages Type Conversion API. See\n<a href=\"https://docs.spring.io/spring-framework/reference/core/validation/convert.html\">Spring's Type\nConversion</a> for more details. <br/>\nInsert is used to initially store the object into the database. To update an existing object use the\n<a href=\"#save(T)\"><code>save(Object)</code></a> method.",
+      "translation": "将对象插入到集合中，以保存该对象所属的实体类型。  \n对象将通过一个实例转换为 MongoDB 的原生表示形式。  \n如果您的对象包含一个值为 null 的 Id 属性，则该属性将被设置为由 MongoDB 生成的 Id；如果 Id 属性为字符串类型，则使用 MongoDB ObjectId 来填充该字符串。否则，从 ObjectId 到目标属性类型的转换将由 Spring 的 BeanWrapper 类处理，该类利用类型转换 API 实现此功能。有关详细信息，请参阅  \n<a href=\"https://docs.spring.io/spring-framework/reference/core/validation/convert.html\">Spring 的类型转换</a>。  \nInsert 方法用于将对象首次存储到数据库中。若要更新已存在的对象，请使用  \n<a href=\"#save(T)\"><code>save(Object)</code></a> 方法。",
+      "count": 1
+    },
+    {
+      "source": "Insert the object into the specified collection. <br/>\nThe object is converted to the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nInsert is used to initially store the object into the database. To update an existing object use the save method.",
+      "translation": "将对象插入到指定的集合中。<br/>\n该对象将通过一个实例转换为 MongoDB 原生表示形式。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 类的实例进行转换。<br/>\nInsert 方法用于将对象首次存储到数据库中。若要更新现有对象，请使用 save 方法。",
+      "count": 1
+    },
+    {
+      "source": "Save the object to the collection for the entity type of the object to save. This will perform an insert if the\nobject is not already present, that is an 'upsert'. <br/>\nThe object is converted to the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nIf your object has an \"Id' property, it will be set with the generated Id from MongoDB. If your Id property is a\nString then MongoDB ObjectId will be used to populate that string. Otherwise, the conversion from ObjectId to your\nproperty type will be handled by Spring's BeanWrapper class that leverages Type Conversion API. See\n<a href=\"https://docs.spring.io/spring-framework/reference/core/validation/convert.html\">Spring's Type\nConversion</a> for more details.",
+      "translation": "将对象保存到该实体类型的集合中。如果对象尚未存在，则执行插入操作（即“upsert\"）。<br/>\n该对象将通过 <code>.save()</code> 实例转换为 MongoDB 原生表示形式。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 的实例。<br/>\n如果您的对象具有 \"Id\" 属性，该属性将被设置为 MongoDB 生成的 ID。如果 Id 属性为 String 类型，则使用 MongoDB ObjectId 来填充该字符串；否则，从 ObjectId 到目标属性类型的转换将由 Spring 的 BeanWrapper 类处理，该类利用类型转换 API。有关更多详细信息，请参阅 <a href=\"https://docs.spring.io/spring-framework/reference/core/validation/convert.html\">Spring 的类型转换</a>。",
+      "count": 1
+    },
+    {
+      "source": "Save the object to the specified collection. This will perform an insert if the object is not already present, that\nis an 'upsert'. <br/>\nThe object is converted to the MongoDB native representation using an instance of . Unless\nconfigured otherwise, an instance of <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> will be used. <br/>\nIf your object has an \"Id' property, it will be set with the generated Id from MongoDB. If your Id property is a\nString then MongoDB ObjectId will be used to populate that string. Otherwise, the conversion from ObjectId to your\nproperty type will be handled by Spring's BeanWrapper class that leverages Type Conversion API. See\n<a href=\"https://docs.spring.io/spring-framework/reference/core/validation/convert.html\">Spring's Type\nConversion</a> for more details.",
+      "translation": "将对象保存到指定的集合中。如果该对象尚未存在，则执行插入操作，即“upsert”。  \n对象将通过 <code>.save()</code> 实例转换为 MongoDB 原生表示形式。除非另有配置，否则将使用 <a href=\"convert/MappingMongoConverter.html\" title=\"class in org.springframework.data.mongodb.core.convert\"><code>MappingMongoConverter</code></a> 的实例进行转换。<br/>  \n如果您的对象包含 \"Id\" 属性，该属性将被设置为 MongoDB 生成的 ID。如果 Id 属性类型为 String，则使用 MongoDB 的 ObjectId 来填充该字符串；否则，从 ObjectId 到目标属性类型的转换将由 Spring 的 BeanWrapper 类处理，后者利用类型转换 API 实现。有关更多详细信息，请参阅 <a href=\"https://docs.spring.io/spring-framework/reference/core/validation/convert.html\">Spring 的类型转换</a>。",
+      "count": 1
+    }
+  ]
+}

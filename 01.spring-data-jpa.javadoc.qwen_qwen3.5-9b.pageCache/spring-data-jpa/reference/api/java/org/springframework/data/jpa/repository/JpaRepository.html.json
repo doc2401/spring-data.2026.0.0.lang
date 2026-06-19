@@ -1,0 +1,141 @@
+{
+  "created_at": "2026-06-18 17:46:41",
+  "updated_at": "2026-06-18 17:46:41",
+  "stats": {
+    "total_entries": 25,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 40,
+    "entries_with_hits": 25,
+    "entries_without_hits": 0,
+    "hit_rate": 1.6,
+    "usage_percentage": 0.0025
+  },
+  "items": [
+    {
+      "source": "Returns a reference to the entity with the given identifier. Depending on how the JPA persistence provider is\nimplemented this is very likely to always return an instance and throw an\n<code>EntityNotFoundException</code> on first access. Some of them will reject invalid identifiers\nimmediately.",
+      "translation": "返回具有给定标识符的实体的引用。根据 JPA 持久化提供程序的具体实现方式，此操作极有可能总是返回一个实例，并在首次访问时抛出 <code>EntityNotFoundException</code>。其中一些提供程序会立即拒绝无效的标识符。",
+      "count": 3
+    },
+    {
+      "source": "<ul class=\"tag-list-long\">\n<li>for details on when an exception is thrown.</li>\n</ul>",
+      "translation": "<ul class=\"tag-list-long\">\n<li>有关抛出异常时机的详细信息。</li>\n</ul>",
+      "count": 3
+    },
+    {
+      "source": "<code>id</code> - must not be null.",
+      "translation": "<code>id</code> 不能为空。",
+      "count": 3
+    },
+    {
+      "source": "a reference to the entity with the given identifier.",
+      "translation": "对具有给定标识符的实体的引用。",
+      "count": 3
+    },
+    {
+      "source": "It will also NOT honor cascade semantics of JPA, nor will it emit JPA lifecycle events.",
+      "translation": "它也不会遵循 JPA 的级联语义，更不会发出 JPA 生命周期事件。",
+      "count": 2
+    },
+    {
+      "source": "Deletes all entities in a batch call.",
+      "translation": "批量调用中删除所有实体。",
+      "count": 2
+    },
+    {
+      "source": "Flushes all pending changes to the database.",
+      "translation": "将所有待处理的更改刷新到数据库中。",
+      "count": 2
+    },
+    {
+      "source": "Saves all entities and flushes changes instantly.",
+      "translation": "保存所有实体并立即刷新更改。",
+      "count": 2
+    },
+    {
+      "source": "Saves an entity and flushes changes instantly.",
+      "translation": "保存实体并立即刷新更改。",
+      "count": 2
+    },
+    {
+      "source": "<code>entities</code> - entities to be deleted. Must not be null.",
+      "translation": "<code>entities</code> - 待删除的实体，不能为 null。",
+      "count": 2
+    },
+    {
+      "source": "Deletes the given entities in a batch which means it will create a single query. This kind of operation leaves JPAs\nfirst level cache and the database out of sync. Consider flushing the <code>EntityManager</code> before calling this\nmethod.",
+      "translation": "批量删除给定的实体，这意味着它将生成单个查询。此类操作会导致 JPA 的一级缓存与数据库不同步。在调用此方法之前，请考虑刷新 `<code>EntityManager</code>`。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "JPA specific extension of <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"class or interface in org.springframework.data.repository\"><code>Repository</code></a>.",
+      "translation": "JPA 对<a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html\" title=\"org.springframework.data.repository 中的类或接口\"><code>Repository</code></a>的特定扩展。",
+      "count": 1
+    },
+    {
+      "source": "Deletes the entities identified by the given ids using a single query. This kind of operation leaves JPAs first\nlevel cache and the database out of sync. Consider flushing the <code>EntityManager</code> before calling this method.",
+      "translation": "使用单个查询删除由给定 ID 标识的实体。此类操作会导致 JPA 的一级缓存与数据库不同步。在调用此方法之前，请考虑刷新 `<code>EntityManager</code>`。",
+      "count": 1
+    },
+    {
+      "source": "Deletes the entities identified by the given ids using a single query.",
+      "translation": "使用单个查询删除由给定 ID 标识的实体。",
+      "count": 1
+    },
+    {
+      "source": "Deletes the given entities in a batch which means it will create a single query.",
+      "translation": "批量删除给定实体，即生成单个查询。",
+      "count": 1
+    },
+    {
+      "source": "Returns a reference to the entity with the given identifier.",
+      "translation": "返回具有给定标识符的实体的引用。",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html#findAll(org.springframework.data.domain.Example)\" title=\"class or interface in org.springframework.data.repository.query\">findAll</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html\" title=\"class or interface in org.springframework.data.repository.query\">QueryByExampleExecutor</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in JpaRepository\">T</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html#findAll(org.springframework.data.domain.Example)\" title=\"类或接口 org.springframework.data.repository.query\">findAll</a></code> 在接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html\" title=\"类或接口 org.springframework.data.repository.query\">QueryByExampleExecutor</a>&lt;<a href=\"#type-param-T\" title=\"JpaRepository 中的类型参数\">T</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html#findAll(org.springframework.data.domain.Example,org.springframework.data.domain.Sort)\" title=\"class or interface in org.springframework.data.repository.query\">findAll</a></code> in interface <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html\" title=\"class or interface in org.springframework.data.repository.query\">QueryByExampleExecutor</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in JpaRepository\">T</a>&gt;</code>",
+      "translation": "<code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html#findAll(org.springframework.data.domain.Example,org.springframework.data.domain.Sort)\" title=\"class or interface in org.springframework.data.repository.query\">findAll</a></code> 接口 <code><a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/query/QueryByExampleExecutor.html\" title=\"class or interface in org.springframework.data.repository.query\">QueryByExampleExecutor</a>&lt;<a href=\"#type-param-T\" title=\"type parameter in JpaRepository\">T</a>&gt;</code> 中",
+      "count": 1
+    },
+    {
+      "source": "<code>entity</code> - entity to be saved. Must not be null.",
+      "translation": "<code>entity</code> - 要保存的实体。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>entities</code> - entities to be saved. Must not be null.",
+      "translation": "<code>entities</code> - 要保存的实体。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "<code>ids</code> - the ids of the entities to be deleted. Must not be null.",
+      "translation": "<code>ids</code> - 要删除的实体的 ID。不能为 null。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Christoph Strobl, Mark Paluch, Sander Krabbenborg, Jesse Wouters, Greg Turnquist, Jens Schauder",
+      "translation": "Oliver Gierke，Christoph Strobl，Mark Paluch，Sander Krabbenborg，Jesse Wouters，Greg Turnquist，Jens Schauder",
+      "count": 1
+    },
+    {
+      "source": "the saved entity",
+      "translation": "已保存的实体",
+      "count": 1
+    },
+    {
+      "source": "the saved entities",
+      "translation": "已保存的实体",
+      "count": 1
+    }
+  ]
+}

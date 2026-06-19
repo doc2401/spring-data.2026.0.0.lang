@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-06-19 01:21:32",
+  "updated_at": "2026-06-19 01:21:32",
+  "stats": {
+    "total_entries": 24,
+    "maxsize": 1000000,
+    "cache_full": false,
+    "total_hits": 32,
+    "entries_with_hits": 24,
+    "entries_without_hits": 0,
+    "hit_rate": 1.3333333333333333,
+    "usage_percentage": 0.0024000000000000002
+  },
+  "items": [
+    {
+      "source": "empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> by default.",
+      "translation": "默认为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a>。",
+      "count": 3
+    },
+    {
+      "source": "false by default.",
+      "translation": "默认值为 false。",
+      "count": 3
+    },
+    {
+      "source": "Returns whether the query defined should be executed as count projection.",
+      "translation": "返回是否应将定义的查询作为计数投影执行。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the query should delete matching documents.",
+      "translation": "返回是否应删除匹配的文档。",
+      "count": 2
+    },
+    {
+      "source": "Returns whether the query defined should be executed as exists projection.",
+      "translation": "返回是否应将定义的查询作为存在投影执行。",
+      "count": 2
+    },
+    {
+      "source": "the index name.",
+      "translation": "索引名称。",
+      "count": 2
+    },
+    {
+      "source": "<small>Copyright © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>. All rights reserved.</small>",
+      "translation": "<small>版权所有 © 2011–2026 <a href=\"https://www.spring.io\">Pivotal Software, Inc.</a>。保留所有权利。</small>",
+      "count": 1
+    },
+    {
+      "source": "Defines a default sort order for the given query. <strong>NOTE:</strong> The so set defaults can be altered /\noverwritten using an explicit <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> argument of the query method.\n\n<pre><code>\n\n                @Query(sort = \"{ age : -1 }\") // order by age descending\n                List&lt;Person&gt; findByFirstname(String firstname);\n</code>\n</pre>",
+      "translation": "为给定的查询定义默认排序顺序。<strong>注意：</strong> 可以使用查询方法的显式 <a class=\"external-link\" href=\"https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/Sort.html\" title=\"class or interface in org.springframework.data.domain\"><code>Sort</code></a> 参数来修改/覆盖这些默认设置。\n\n<pre><code>\n\n                @Query(sort = \"{ age : -1 }\") // 按年龄降序排列\n                List&lt;Person&gt; findByFirstname(String firstname);\n</code>\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Annotation to declare finder queries directly on repository methods. Both attributes allow using a placeholder\nnotation of <code>?0</code>, <code>?1</code> and so on.",
+      "translation": "注解用于直接在仓库方法上声明查询。这两个属性都支持使用占位符表示法，如<code>?0</code>、<code>?1</code>等。",
+      "count": 1
+    },
+    {
+      "source": "The name of the index to use. <code>@Query(value = \"...\", hint = \"lastname-idx\")</code> can be used as shortcut for:\n\n<pre class=\"code\">@Query(...)\n@Hint(\"lastname-idx\")\nList&lt;User&gt; findAllByLastname(String collation);\n</pre>",
+      "translation": "要使用的索引名称。可以使用 <code>@Query(value = \"...\", hint = \"lastname-idx\")</code> 作为以下内容的快捷方式：\n\n<pre class=\"code\">@Query(...)\n@Hint(\"lastname-idx\")\nList&lt;User&gt; findAllByLastname(String collation);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "The mode of the read preference to use. This attribute\n(<code>@Query(value = \"...\", readPreference = \"secondary\")</code>) is an alias for:\n\n<pre class=\"code\">@Query(...)\n@ReadPreference(\"secondary\")\nList&lt;User&gt; findAllByLastname(String lastname);\n</pre>",
+      "translation": "读偏好模式的类型。此属性（<code>@Query(value = \"...\", readPreference = \"secondary\")</code>）是以下内容的别名：\n\n<pre class=\"code\">@Query(...)\n@ReadPreference(\"secondary\")\nList&lt;User&gt; findAllByLastname(String lastname);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Defines the collation to apply when executing the query.\n\n<pre class=\"code\">// Fixed value\n@Query(collation = \"en_US\")\nList&lt;Entry&gt; findAllByFixedCollation();\n\n// Fixed value as Document\n@Query(collation = \"{ 'locale' :  'en_US' }\")\nList&lt;Entry&gt; findAllByFixedJsonCollation();\n\n// Dynamic value as String\n@Query(collation = \"?0\")\nList&lt;Entry&gt; findAllByDynamicCollation(String collation);\n\n// Dynamic value as Document\n@Query(collation = \"{ 'locale' :  ?0 }\")\nList&lt;Entry&gt; findAllByDynamicJsonCollation(String collation);\n\n// SpEL expression\n@Query(collation = \"?#{[0]}\")\nList&lt;Entry&gt; findAllByDynamicSpElCollation(String collation);\n</pre>",
+      "translation": "定义执行查询时应用的排序规则。\n\n<pre class=\"code\">// 固定值\n@Query(collation = \"en_US\")\nList&lt;Entry&gt; findAllByFixedCollation();\n\n// 作为文档的固定值\n@Query(collation = \"{ 'locale' :  'en_US' }\")\nList&lt;Entry&gt; findAllByFixedJsonCollation();\n\n// 作为字符串的动态值\n@Query(collation = \"?0\")\nList&lt;Entry&gt; findAllByDynamicCollation(String collation);\n\n// 作为文档的动态值\n@Query(collation = \"{ 'locale' :  ?0 }\")\nList&lt;Entry&gt; findAllByDynamicJsonCollation(String collation);\n\n// SpEL 表达式\n@Query(collation = \"?#{[0]}\")\nList&lt;Entry&gt; findAllByDynamicSpElCollation(String collation);\n</pre>",
+      "count": 1
+    },
+    {
+      "source": "Defines the collation to apply when executing the query.",
+      "translation": "定义执行查询时应用的排序规则。",
+      "count": 1
+    },
+    {
+      "source": "Defines the fields that should be returned for the given query.",
+      "translation": "定义给定查询应返回的字段。",
+      "count": 1
+    },
+    {
+      "source": "The name of the index to use.",
+      "translation": "要使用的索引名称。",
+      "count": 1
+    },
+    {
+      "source": "The mode of the read preference to use.",
+      "translation": "要使用的读偏好模式。",
+      "count": 1
+    },
+    {
+      "source": "Defines a default sort order for the given query.",
+      "translation": "为给定的查询定义默认排序顺序。",
+      "count": 1
+    },
+    {
+      "source": "Takes a MongoDB JSON string to define the actual query to be executed.",
+      "translation": "接收一个 MongoDB JSON 字符串，用于定义实际要执行的查询。",
+      "count": 1
+    },
+    {
+      "source": "Takes a MongoDB JSON string to define the actual query to be executed. This one will take precedence over the\nmethod name then.",
+      "translation": "接受一个定义实际要执行的查询的 MongoDB JSON 字符串。此时，该方法名将被此参数覆盖。",
+      "count": 1
+    },
+    {
+      "source": "Defines the fields that should be returned for the given query. Note that only these fields will make it into the\ndomain object returned.",
+      "translation": "定义给定查询应返回的字段。请注意，只有这些字段会包含在返回的领域对象中。",
+      "count": 1
+    },
+    {
+      "source": "an empty <a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"class or interface in java.lang\"><code>String</code></a> by default.",
+      "translation": "默认情况下为空<a class=\"external-link\" href=\"https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html\" title=\"java.lang 中的类或接口\"><code>String</code></a>。",
+      "count": 1
+    },
+    {
+      "source": "Oliver Gierke, Thomas Darimont, Christoph Strobl, Mark Paluch, Jorge Rodríguez",
+      "translation": "Oliver Gierke，Thomas Darimont，Christoph Strobl，Mark Paluch，Jorge Rodríguez",
+      "count": 1
+    },
+    {
+      "source": "Optional Element Summary",
+      "translation": "可选元素摘要",
+      "count": 1
+    },
+    {
+      "source": "Element Details",
+      "translation": "元素详情",
+      "count": 1
+    }
+  ]
+}
