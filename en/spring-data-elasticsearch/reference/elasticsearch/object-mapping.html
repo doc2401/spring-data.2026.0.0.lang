@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Elasticsearch Object Mapping :: Spring Data Elasticsearch</title>
+    <link rel="canonical" href="https://docs.spring.io/spring-data-elasticsearch/reference/elasticsearch/object-mapping.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="version" content="6.1.0">
+    <meta name="component" content="data-elasticsearch">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-elasticsearch" data-version="6.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Elasticsearch</span>
+  <span class="version">6.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../index.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../commons/upgrade.html">Upgrading Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../migration-guides.html">Migration Guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-3.2-4.0.html">Upgrading from 3.2.x to 4.0.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-4.0-4.1.html">Upgrading from 4.0.x to 4.1.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-4.1-4.2.html">Upgrading from 4.1.x to 4.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-4.2-4.3.html">Upgrading from 4.2.x to 4.3.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-4.3-4.4.html">Upgrading from 4.3.x to 4.4.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-4.4-5.0.html">Upgrading from 4.4.x to 5.0.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-5.0-5.1.html">Upgrading from 5.0.x to 5.1.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-5.1-5.2.html">Upgrading from 5.1.x to 5.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-5.2-5.3.html">Upgrading from 5.2.x to 5.3.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-5.3-5.4.html">Upgrading from 5.3.x to 5.4.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-5.4-5.5.html">Upgrading from 5.4.x to 5.5.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guides/migration-guide-5.5-6.0.html">Upgrading from 5.5.x to 6.0.x</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../elasticsearch.html">Elasticsearch Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="clients.html">Elasticsearch Clients</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link"  href="object-mapping.html">Elasticsearch Object Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="template.html">Elasticsearch Operations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="reactive-template.html">Reactive Elasticsearch Operations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="entity-callbacks.html">Entity Callbacks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="auditing.html">Elasticsearch Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="join-types.html">Join-Type implementation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="routing.html">Routing values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="misc.html">Miscellaneous Elasticsearch Operation Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="scripted-and-runtime-fields.html">Scripted and runtime fields</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories.html">Repositories</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-concepts.html">Core concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/definition.html">Defining Repository Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/elasticsearch-repositories.html">Elasticsearch Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/reactive-elasticsearch-repositories.html">Reactive Elasticsearch Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/create-instances.html">Creating Repository Instances</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods-details.html">Defining Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/elasticsearch-repository-queries.html">Query methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/projections.html">Projections</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/custom-implementations.html">Custom Repository Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-domain-events.html">Publishing Events from Aggregate Roots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/null-handling.html">Null Handling of Repository Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/cdi-integration.html">CDI Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-keywords-reference.html">Repository query keywords</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-return-types-reference.html">Repository query return types</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external"  target="_blank" href="../api/java/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external"  target="_blank" href="https://github.com/spring-projects/spring-data-commons/wiki">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="Elasticsearch Object Mapping"
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-elasticsearch/src/main/antora/modules/ROOT/pages/elasticsearch/object-mapping.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+        <a href="https://github.com/spring-projects/spring-data-elasticsearch" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><![CDATA[
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Spring Data Elasticsearch</a></li>
+      <li><a href="../elasticsearch.html">Elasticsearch Support</a></li>
+      <li><a href="object-mapping.html">Elasticsearch Object Mapping</a></li>
+    </ul>
+  </nav>
+</div><h1 id="page-title" class="page">Elasticsearch Object Mapping</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data Elasticsearch Object Mapping is the process that maps a Java object - the domain entity - into the JSON representation that is stored in Elasticsearch and back.
+The class that is internally used for this mapping is the
+<code>MappingElasticsearchConverter</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="elasticsearch.mapping.meta-model"><a class="anchor" href="#elasticsearch.mapping.meta-model"></a>Meta Model Object Mapping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Metamodel based approach uses domain type information for reading/writing from/to Elasticsearch.
+This allows to register <code>Converter</code> instances for specific domain type mapping.</p>
+</div>
+<div class="sect2">
+<h3 id="elasticsearch.mapping.meta-model.annotations"><a class="anchor" href="#elasticsearch.mapping.meta-model.annotations"></a>Mapping Annotation Overview</h3>
+<div class="paragraph">
+<p>The <code>MappingElasticsearchConverter</code> uses metadata to drive the mapping of objects to documents.
+The metadata is taken from the entity&#8217;s properties which can be annotated.</p>
+</div>
+<div class="paragraph">
+<p>The following annotations are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@Document</code>: Applied at the class level to indicate this class is a candidate for mapping to the database.
+The most important attributes are (check the API documentation for the complete list of attributes):</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>indexName</code>: the name of the index to store this entity in.
+This can contain a SpEL template expression like <code>"log-#{T(java.time.LocalDate).now().toString()}"</code></p>
+</li>
+<li>
+<p><code>createIndex</code>: flag whether to create an index on repository bootstrapping.
+Default value is <em>true</em>.
+See <a href="repositories/elasticsearch-repositories.html#elasticsearch.repositories.autocreation" class="xref page">Automatic creation of indices with the corresponding mapping</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>@Id</code>: Applied at the field level to mark the field used for identity purpose.</p>
+</li>
+<li>
+<p><code>@Transient</code>, <code>@ReadOnlyProperty</code>, <code>@WriteOnlyProperty</code>: see the following section <a href="#elasticsearch.mapping.meta-model.annotations.read-write">Controlling which properties are written to and read from Elasticsearch</a> for detailed information.</p>
+</li>
+<li>
+<p><code>@PersistenceConstructor</code>: Marks a given constructor - even a package protected one - to use when instantiating the object from the database.
+Constructor arguments are mapped by name to the key values in the retrieved Document.</p>
+</li>
+<li>
+<p><code>@Field</code>: Applied at the field level and defines properties of the field, most of the attributes map to the respective <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html">Elasticsearch Mapping</a> definitions (the following list is not complete, check the annotation Javadoc for a complete reference):</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>name</code>: The name of the field as it will be represented in the Elasticsearch document, if not set, the Java field name is used.</p>
+</li>
+<li>
+<p><code>type</code>: The field type, can be one of <em>Text, Keyword, Long, Integer, Short, Byte, Double, Float, Half_Float, Scaled_Float, Date, Date_Nanos, Boolean, Binary, Integer_Range, Float_Range, Long_Range, Double_Range, Date_Range, Ip_Range, Object, Nested, Ip, TokenCount, Percolator, Flattened, Search_As_You_Type</em>.
+See <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html">Elasticsearch Mapping Types</a>.
+If the field type is not specified, it defaults to <code>FieldType.Auto</code>.
+This means, that no mapping entry is written for the property and that Elasticsearch will add a mapping entry dynamically when the first data for this property is stored (check the Elasticsearch documentation for dynamic mapping rules).</p>
+</li>
+<li>
+<p><code>format</code>: One or more built-in date formats, see the next section <a href="#elasticsearch.mapping.meta-model.annotations.date-formats">Date format mapping</a>.</p>
+</li>
+<li>
+<p><code>pattern</code>: One or more custom date formats, see the next section <a href="#elasticsearch.mapping.meta-model.annotations.date-formats">Date format mapping</a>.</p>
+</li>
+<li>
+<p><code>store</code>: Flag whether the original field value should be store in Elasticsearch, default value is <em>false</em>.</p>
+</li>
+<li>
+<p><code>analyzer</code>, <code>searchAnalyzer</code>, <code>normalizer</code> for specifying custom analyzers and normalizer.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>@GeoPoint</code>: Marks a field as <em>geo_point</em> datatype.
+Can be omitted if the field is an instance of the <code>GeoPoint</code> class.</p>
+</li>
+<li>
+<p><code>@ValueConverter</code> defines a class to be used to convert the given property.
+In difference to a registered Spring <code>Converter</code> this only converts the annotated property and not every property of the given type.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The mapping metadata infrastructure is defined in a separate spring-data-commons project that is technology agnostic.</p>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.annotations.read-write"><a class="anchor" href="#elasticsearch.mapping.meta-model.annotations.read-write"></a>Controlling which properties are written to and read from Elasticsearch</h4>
+<div class="paragraph">
+<p>This section details the annotations that define if the value of a property is written to or read from Elasticsearch.</p>
+</div>
+<div class="paragraph">
+<p><code>@Transient</code>: A property annotated with this annotation will not be written to the mapping, it&#8217;s value will not be sent to Elasticsearch and when documents are returned from Elasticsearch, this property will not be set in the resulting entity.</p>
+</div>
+<div class="paragraph">
+<p><code>@ReadOnlyProperty</code>: A property with this annotation will not have its value written to Elasticsearch, but when returning data, the property will be filled with the value returned in the document from Elasticsearch.
+One use case for this are runtime fields defined in the index mapping.</p>
+</div>
+<div class="paragraph">
+<p><code>@WriteOnlyProperty</code>: A property with this annotation will have its value stored in Elasticsearch but will not be set with any value when reading document.
+This can be used for example for synthesized fields which should go into the Elasticsearch index but are not used elsewhere.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.annotations.date-formats"><a class="anchor" href="#elasticsearch.mapping.meta-model.annotations.date-formats"></a>Date format mapping</h4>
+<div class="paragraph">
+<p>Properties that derive from <code>TemporalAccessor</code> or are of type <code>java.util.Date</code> must either have a <code>@Field</code> annotation of type <code>FieldType.Date</code> or a custom converter must be registered for this type.
+This paragraph describes the use of
+<code>FieldType.Date</code>.</p>
+</div>
+<div class="paragraph">
+<p>There are two attributes of the <code>@Field</code> annotation that define which date format information is written to the mapping (also see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#built-in-date-formats">Elasticsearch Built In Formats</a> and <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#custom-date-formats">Elasticsearch Custom Date Formats</a>)</p>
+</div>
+<div class="paragraph">
+<p>The <code>format</code> attribute is used to define at least one of the predefined formats.
+If it is not defined, then a default value of <em>_date_optional_time</em> and <em>epoch_millis</em> is used.</p>
+</div>
+<div class="paragraph">
+<p>The <code>pattern</code> attribute can be used to add additional custom format strings.
+If you want to use only custom date formats, you must set the <code>format</code> property to empty <code>{}</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following table shows the different attributes and the mapping created from their values:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">annotation</th>
+<th class="tableblock halign-left valign-top">format string in Elasticsearch mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">@Field(type=FieldType.Date)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"date_optional_time||epoch_millis",</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">@Field(type=FieldType.Date, format=DateFormat.basic_date)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"basic_date"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">@Field(type=FieldType.Date, format={DateFormat.basic_date, DateFormat.basic_time})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"basic_date||basic_time"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">@Field(type=FieldType.Date, pattern="dd.MM.uuuu")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"date_optional_time||epoch_millis||dd.MM.uuuu",</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">@Field(type=FieldType.Date, format={}, pattern="dd.MM.uuuu")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"dd.MM.uuuu"</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are using a custom date format, you need to use <em>uuuu</em> for the year instead of <em>yyyy</em>.
+This is due to a <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/migrate-to-java-time.html#java-time-migration-incompatible-date-formats">change in Elasticsearch 7</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Check the code of the <code>org.springframework.data.elasticsearch.annotations.DateFormat</code> enum for a complete list of predefined values and their patterns.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.annotations.range"><a class="anchor" href="#elasticsearch.mapping.meta-model.annotations.range"></a>Range types</h4>
+<div class="paragraph">
+<p>When a field is annotated with a type of one of <em>Integer_Range, Float_Range, Long_Range, Double_Range, Date_Range,</em> or <em>Ip_Range</em> the field must be an instance of a class that will be mapped to an Elasticsearch range, for example:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomePersonData {
+
+    @Field(type = FieldType.Integer_Range)
+    private ValidAge validAge;
+
+    // getter and setter
+}
+
+class ValidAge {
+    @Field(name="gte")
+    private Integer from;
+
+    @Field(name="lte")
+    private Integer to;
+
+    // getter and setter
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>As an alternative Spring Data Elasticsearch provides a <code>Range&lt;T&gt;</code> class so that the previous example can be written as:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class SomePersonData {
+
+    @Field(type = FieldType.Integer_Range)
+    private Range&lt;Integer&gt; validAge;
+
+    // getter and setter
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Supported classes for the type <code>&lt;T&gt;</code> are <code>Integer</code>, <code>Long</code>, <code>Float</code>, <code>Double</code>, <code>Date</code> and classes that implement the
+<code>TemporalAccessor</code> interface.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.annotations.mapped-names"><a class="anchor" href="#elasticsearch.mapping.meta-model.annotations.mapped-names"></a>Mapped field names</h4>
+<div class="paragraph">
+<p>Without further configuration, Spring Data Elasticsearch will use the property name of an object as field name in Elasticsearch.
+This can be changed for individual field by using the <code>@Field</code> annotation on that property.</p>
+</div>
+<div class="paragraph">
+<p>It is also possible to define a <code>FieldNamingStrategy</code> in the configuration of the client (<a href="clients.html" class="xref page">Elasticsearch Clients</a>).
+If for example a <code>SnakeCaseFieldNamingStrategy</code> is configured, the property <em>sampleProperty</em> of the object would be mapped to <em>sample_property</em> in Elasticsearch.
+A <code>FieldNamingStrategy</code> applies to all entities; it can be overwritten by setting a specific name with <code>@Field</code> on a property.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.annotations.non-field-backed-properties"><a class="anchor" href="#elasticsearch.mapping.meta-model.annotations.non-field-backed-properties"></a>Non-field-backed properties</h4>
+<div class="paragraph">
+<p>Normally the properties used in an entity are fields of the entity class.
+There might be cases, when a property value is calculated in the entity and should be stored in Elasticsearch.
+In this case, the getter method (<code>getProperty()</code>) can be annotated with the <code>@Field</code> annotation, in addition to that the method must be annotated with <code>@AccessType(AccessType.Type
+.PROPERTY)</code>.
+The third annotation that is needed in such a case is <code>@WriteOnlyProperty</code>, as such a value is only written to Elasticsearch.
+A full example:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Field(type = Keyword)
+@WriteOnlyProperty
+@AccessType(AccessType.Type.PROPERTY)
+public String getProperty() {
+	return "some value that is calculated here";
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.annotations.misc"><a class="anchor" href="#elasticsearch.mapping.meta-model.annotations.misc"></a>Other property annotations</h4>
+<div class="sect4">
+<h5 id="indexedindexname"><a class="anchor" href="#indexedindexname"></a>@IndexedIndexName</h5>
+<div class="paragraph">
+<p>This annotation can be set on a String property of an entity.
+This property will not be written to the mapping, it will not be stored in Elasticsearch and its value will not be read from an Elasticsearch document.
+After an entity is persisted, for example with a call to <code>ElasticsearchOperations.save(T entity)</code>, the entity returned from that call will contain the name of the index that an entity was saved to in that property.
+This is useful when the index name is dynamically set by a bean, or when writing to a write alias.</p>
+</div>
+<div class="paragraph">
+<p>Putting some value into such a property does not set the index into which an entity is stored!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="elasticsearch.mapping.meta-model.rules"><a class="anchor" href="#elasticsearch.mapping.meta-model.rules"></a>Mapping Rules</h3>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.rules.typehints"><a class="anchor" href="#elasticsearch.mapping.meta-model.rules.typehints"></a>Type Hints</h4>
+<div class="paragraph">
+<p>Mapping uses <em>type hints</em> embedded in the document sent to the server to allow generic type mapping.
+Those type hints are represented as <code>_class</code> attributes within the document and are written for each aggregate root.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Type Hints</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Person {              <i class="conum" data-value="1"></i><b>(1)</b>
+  @Id String id;
+  String firstname;
+  String lastname;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "_class" : "com.example.Person", <i class="conum" data-value="1"></i><b>(1)</b>
+  "id" : "cb7bef",
+  "firstname" : "Sarah",
+  "lastname" : "Connor"
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>By default the domain types class name is used for the type hint.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Type hints can be configured to hold custom information.
+Use the <code>@TypeAlias</code> annotation to do so.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure to add types with <code>@TypeAlias</code> to the initial entity set (<code>AbstractElasticsearchConfiguration#getInitialEntitySet</code>) to already have entity information available when first reading data from the store.
+</td>
+</tr>
+</table>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Type Hints with Alias</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@TypeAlias("human")                <i class="conum" data-value="1"></i><b>(1)</b>
+public class Person {
+
+  @Id String id;
+  // ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "_class" : "human",              <i class="conum" data-value="1"></i><b>(1)</b>
+  "id" : ...
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The configured alias is used when writing the entity.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Type hints will not be written for nested Objects unless the properties type is <code>Object</code>, an interface or the actual value type does not match the properties declaration.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="disabling-type-hints"><a class="anchor" href="#disabling-type-hints"></a>Disabling Type Hints</h5>
+<div class="paragraph">
+<p>It may be necessary to disable writing of type hints when the index that should be used already exists without having the type hints defined in its mapping and with the mapping mode set to strict.
+In this case, writing the type hint will produce an error, as the field cannot be added automatically.</p>
+</div>
+<div class="paragraph">
+<p>Type hints can be disabled for the whole application by overriding the method <code>writeTypeHints()</code> in a configuration class derived from <code>AbstractElasticsearchConfiguration</code> (see <a href="clients.html" class="xref page">Elasticsearch Clients</a>).</p>
+</div>
+<div class="paragraph">
+<p>As an alternative they can be disabled for a single index with the <code>@Document</code> annotation:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Document(indexName = "index", writeTypeHint = WriteTypeHint.FALSE)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+We strongly advise against disabling Type Hints.
+Only do this if you are forced to.
+Disabling type hints can lead to documents not being retrieved correctly from Elasticsearch in case of polymorphic data or document retrieval may fail completely.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.rules.geospatial"><a class="anchor" href="#elasticsearch.mapping.meta-model.rules.geospatial"></a>Geospatial Types</h4>
+<div class="paragraph">
+<p>Geospatial types like <code>Point</code> &amp; <code>GeoPoint</code> are converted into <em>lat/lon</em> pairs.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Geospatial types</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Address {
+  String city, street;
+  Point location;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "city" : "Los Angeles",
+  "street" : "2800 East Observatory Road",
+  "location" : { "lat" : 34.118347, "lon" : -118.3026284 }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.rules.geojson"><a class="anchor" href="#elasticsearch.mapping.meta-model.rules.geojson"></a>GeoJson Types</h4>
+<div class="paragraph">
+<p>Spring Data Elasticsearch supports the GeoJson types by providing an interface <code>GeoJson</code> and implementations for the different geometries.
+They are mapped to Elasticsearch documents according to the GeoJson specification.
+The corresponding properties of the entity are specified in the index mappings as <code>geo_shape</code> when the index mappings is written. (check the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-shape.html">Elasticsearch documentation</a> as well)</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. GeoJson types</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Address {
+
+  String city, street;
+  GeoJsonPoint location;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "city": "Los Angeles",
+  "street": "2800 East Observatory Road",
+  "location": {
+    "type": "Point",
+    "coordinates": [-118.3026284, 34.118347]
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The following GeoJson types are implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>GeoJsonPoint</code></p>
+</li>
+<li>
+<p><code>GeoJsonMultiPoint</code></p>
+</li>
+<li>
+<p><code>GeoJsonLineString</code></p>
+</li>
+<li>
+<p><code>GeoJsonMultiLineString</code></p>
+</li>
+<li>
+<p><code>GeoJsonPolygon</code></p>
+</li>
+<li>
+<p><code>GeoJsonMultiPolygon</code></p>
+</li>
+<li>
+<p><code>GeoJsonGeometryCollection</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.rules.collections"><a class="anchor" href="#elasticsearch.mapping.meta-model.rules.collections"></a>Collections</h4>
+<div class="paragraph">
+<p>For values inside Collections apply the same mapping rules as for aggregate roots when it comes to <em>type hints</em> and <a href="#elasticsearch.mapping.meta-model.conversions">Custom Conversions</a>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. Collections</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Person {
+
+  // ...
+
+  List&lt;Person&gt; friends;
+
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  // ...
+
+  "friends" : [ { "firstname" : "Kyle", "lastname" : "Reese" } ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch.mapping.meta-model.rules.maps"><a class="anchor" href="#elasticsearch.mapping.meta-model.rules.maps"></a>Maps</h4>
+<div class="paragraph">
+<p>For values inside Maps apply the same mapping rules as for aggregate roots when it comes to <em>type hints</em> and <a href="#elasticsearch.mapping.meta-model.conversions">Custom Conversions</a>.
+However the Map key needs to a String to be processed by Elasticsearch.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. Collections</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Person {
+
+  // ...
+
+  Map&lt;String, Address&gt; knownLocations;
+
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  // ...
+
+  "knownLocations" : {
+    "arrivedAt" : {
+       "city" : "Los Angeles",
+       "street" : "2800 East Observatory Road",
+       "location" : { "lat" : 34.118347, "lon" : -118.3026284 }
+     }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="elasticsearch.mapping.meta-model.conversions"><a class="anchor" href="#elasticsearch.mapping.meta-model.conversions"></a>Custom Conversions</h3>
+<div class="paragraph">
+<p>Looking at the <code>Configuration</code> from the <a href="#elasticsearch.mapping.meta-model">previous section</a> <code>ElasticsearchCustomConversions</code> allows registering specific rules for mapping domain and simple types.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 7. Meta Model Object Mapping Configuration</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class Config extends ElasticsearchConfiguration  {
+
+	@Override
+	public ClientConfiguration clientConfiguration() {
+		return ClientConfiguration.builder() //
+				.connectedTo("localhost:9200") //
+				.build();
+	}
+
+  @Bean
+  @Override
+  public ElasticsearchCustomConversions elasticsearchCustomConversions() {
+    return new ElasticsearchCustomConversions(
+      Arrays.asList(new AddressToMap(), new MapToAddress()));       <i class="conum" data-value="1"></i><b>(1)</b>
+  }
+
+  @WritingConverter                                                 <i class="conum" data-value="2"></i><b>(2)</b>
+  static class AddressToMap implements Converter&lt;Address, Map&lt;String, Object&gt;&gt; {
+
+    @Override
+    public Map&lt;String, Object&gt; convert(Address source) {
+
+      LinkedHashMap&lt;String, Object&gt; target = new LinkedHashMap&lt;&gt;();
+      target.put("ciudad", source.getCity());
+      // ...
+
+      return target;
+    }
+  }
+
+  @ReadingConverter                                                 <i class="conum" data-value="3"></i><b>(3)</b>
+  static class MapToAddress implements Converter&lt;Map&lt;String, Object&gt;, Address&gt; {
+
+    @Override
+    public Address convert(Map&lt;String, Object&gt; source) {
+
+      // ...
+      return address;
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "ciudad" : "Los Angeles",
+  "calle" : "2800 East Observatory Road",
+  "localidad" : { "lat" : 34.118347, "lon" : -118.3026284 }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add <code>Converter</code> implementations.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Set up the <code>Converter</code> used for writing <code>DomainType</code> to Elasticsearch.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set up the <code>Converter</code> used for reading <code>DomainType</code> from search result.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+                  <ul class="nav-versions">
+                    <li class="component">
+                      <a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+                      <ul class="versions">
+                        <li class="version is-latest">
+                          <a href="../data-commons/index.html">
+                            4.1.0<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="component is-current">
+                      <a class="title" href="../index.html">Spring Data Elasticsearch</a>
+                      <ul class="versions">
+                        <li class="version is-current is-latest">
+                          <a href="../index.html">
+                            6.1.0<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>
+    Related Spring Documentation
+    <ul class="projects-list">
+        <li>
+<a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-framework/reference/">
+  Spring Framework
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Cloud
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Data
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a>
+</li>
+    </ul>
+  </li
+  <li><a href="../spring-projects.html">All Docs...</a></li>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">Copyright © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.<br /><a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/asciidoctor-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box">
+                    <a class="search-link" href="../search.html">Search in all Spring Docs</a>
+                </div>
+                <div class="search-by">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.algolia.com/" aria-label="Search by Algolia">
+                        <img class="light" width="140" src="../_/img/algolia-light.svg" />
+                        <img class="dark" width="140" src="../_/img/algolia-dark.svg" />
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" crossorigin="anonymous"></script>
+<script async id="search-script" src="../_/js/vendor/search.js" data-app-id="WB1FQYI187" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-index-name="springdocs" data-stylesheet="../_/css/vendor/search.css" data-page-version="6.1.0" data-page-component="data-elasticsearch"></script>
+  </body>
+</html>

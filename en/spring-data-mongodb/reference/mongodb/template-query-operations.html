@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Querying Documents :: Spring Data MongoDB</title>
+    <link rel="canonical" href="https://docs.spring.io/spring-data/mongo/reference/mongodb/template-query-operations.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.18"> 
+    <meta name="version" content="5.1.0">
+    <meta name="component" content="data-mongodb">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-mongodb" data-version="5.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data MongoDB</span>
+  <span class="version">5.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../index.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../commons/upgrade.html">Upgrading Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../migration-guides.html">Migration Guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-2.x-to-3.x.html">Migration Guide from 2.x to 3.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-3.x-to-4.x.html">Migration Guide from 3.x to 4.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-4.x-to-5.x.html">Migration Guide from 4.x to 5.x</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../mongodb.html">MongoDB Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../preface.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="configuration.html">Connecting to MongoDB</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="template-api.html">Template API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-collection-management.html">Index and Collection Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-crud-operations.html">Saving, Updating, and Removing Documents</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link"  href="template-query-operations.html">Querying Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="property-paths.html">Property Paths</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-document-count.html">Counting Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="aggregation-framework.html">Aggregation Framework Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="template-gridfs.html">GridFS Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="mapping/mapping.html">Object Mapping</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/mapping-schema.html">JSON Schema</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/custom-conversions.html">Type based Converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/property-converters.html">Property Converters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/unwrapping-entities.html">Unwrapping Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/document-references.html">Object References</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/mapping-index-management.html">Index Creation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="value-expressions.html">Value Expressions Fundamentals</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="lifecycle-events.html">Lifecycle Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="client-session-transactions.html">Sessions &amp; Transactions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="change-streams.html">Change Streams</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="tailable-cursors.html">Tailable Cursors</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="sharding.html">Sharding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="mongo-search-indexes.html">MongoDB Search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="mongo-encryption.html">Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="aot.html">Ahead of Time Optimizations</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories.html">Repositories</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-concepts.html">Core concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/definition.html">Defining Repository Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/repositories.html">MongoDB Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-extensions.html">Spring Data Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/create-instances.html">Creating Repository Instances</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods-details.html">Defining Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/query-methods.html">MongoDB-specific Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/vector-search.html">Vector Search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/modifying-methods.html">MongoDB-specific Data Manipulation Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/projections.html">Projections</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/custom-implementations.html">Custom Repository Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-domain-events.html">Publishing Events from Aggregate Roots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/null-handling.html">Null Handling of Repository Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/cdi-integration.html">CDI Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-keywords-reference.html">Repository query keywords</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-return-types-reference.html">Repository query return types</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../observability/observability.html">Observability</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/conventions.html">Conventions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/metrics.html">Metrics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/spans.html">Spans</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../kotlin.html">Kotlin Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/null-safety.html">Null Safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/extensions.html">Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/coroutines.html">Coroutines</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external"  target="_blank" href="../api/java/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external"  target="_blank" href="https://github.com/spring-projects/spring-data-commons/wiki">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="Querying Documents"
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/template-query-operations.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+        <a href="https://github.com/spring-projects/spring-data-mongodb" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><![CDATA[
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Spring Data MongoDB</a></li>
+      <li><a href="../mongodb.html">MongoDB Support</a></li>
+      <li><a href="template-api.html">Template API</a></li>
+      <li><a href="template-query-operations.html">Querying Documents</a></li>
+    </ul>
+  </nav>
+</div><h1 id="page-title" class="page">Querying Documents</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use the <code>Query</code> and <code>Criteria</code> classes to express your queries.
+They have method names that mirror the native MongoDB operator names, such as <code>lt</code>, <code>lte</code>, <code>is</code>, and others.
+The <code>Query</code> and <code>Criteria</code> classes follow a fluent API style so that you can chain together multiple method criteria and queries while having easy-to-understand code.
+To improve readability, static imports let you avoid using the 'new' keyword for creating <code>Query</code> and <code>Criteria</code> instances.
+You can also use <code>BasicQuery</code> to create <code>Query</code> instances from plain JSON Strings, as shown in the following example:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Creating a Query instance from a plain JSON String</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BasicQuery query = new BasicQuery("{ age : { $lt : 50 }, accounts.balance : { $gt : 1000.00 }}");
+List&lt;Person&gt; result = mongoTemplate.find(query, Person.class);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongodb-template-query"><a class="anchor" href="#mongodb-template-query"></a>Querying Documents in a Collection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Earlier, we saw how to retrieve a single document by using the <code>findOne</code> and <code>findById</code> methods on <code>MongoTemplate</code>.
+These methods return a single domain object right way or using a reactive API a <code>Mono</code> emitting a single element.
+We can also query for a collection of documents to be returned as a list of domain objects.
+Assuming that we have a number of <code>Person</code> objects with name and age stored as documents in a collection and that each person has an embedded account document with a balance, we can now run a query using the following code:</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="title">Querying for documents using the MongoTemplate</div>
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_1_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_imperative--panel" class="tabpanel" aria-labelledby="_tabs_1_imperative">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.query.Criteria.where;
+import static org.springframework.data.mongodb.core.query.Query.query;
+
+</span><span class="fold-block">// ...
+
+List&lt;Person&gt; result = template.query(Person.class)
+  .matching(query(where("age").lt(50).and("accounts.balance").gt(1000.00d)))
+  .all();</span></code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_reactive--panel" class="tabpanel" aria-labelledby="_tabs_1_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.query.Criteria.where;
+import static org.springframework.data.mongodb.core.query.Query.query;
+
+</span><span class="fold-block">// ...
+
+Flux&lt;Person&gt; result = template.query(Person.class)
+  .matching(query(where("age").lt(50).and("accounts.balance").gt(1000.00d)))
+  .all();</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>All find methods take a <code>Query</code> object as a parameter.
+This object defines the criteria and options used to perform the query.
+The criteria are specified by using a <code>Criteria</code> object that has a static factory method named <code>where</code> to instantiate a new <code>Criteria</code> object.
+We recommend using static imports for <code>org.springframework.data.mongodb.core.query.Criteria.where</code> and <code>Query.query</code> to make the query more readable.</p>
+</div>
+<div class="paragraph">
+<p>The query should return a <code>List</code> or <code>Flux</code> of <code>Person</code> objects that meet the specified criteria.
+The rest of this section lists the methods of the <code>Criteria</code> and <code>Query</code> classes that correspond to the operators provided in MongoDB.
+Most methods return the <code>Criteria</code> object, to provide a fluent style for the API.</p>
+</div>
+<details id="mongodb-template-query.criteria">
+<summary class="title">Methods of the Criteria Class</summary>
+<div class="content">
+<div class="paragraph">
+<p>The <code>Criteria</code> class provides the following methods, all of which correspond to operators in MongoDB:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Criteria</code> <strong>all</strong> <code>(Object o)</code> Creates a criterion using the <code>$all</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>and</strong> <code>(String key)</code> Adds a chained <code>Criteria</code> with the specified <code>key</code> to the current <code>Criteria</code> and returns the newly created one</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>andOperator</strong> <code>(Criteria&#8230;&#8203; criteria)</code> Creates an and query using the <code>$and</code> operator for all of the provided criteria (requires MongoDB 2.0 or later)</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>andOperator</strong> <code>(Collection&lt;Criteria&gt; criteria)</code> Creates an and query using the <code>$and</code> operator for all of the provided criteria (requires MongoDB 2.0 or later)</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>elemMatch</strong> <code>(Criteria c)</code> Creates a criterion using the <code>$elemMatch</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>exists</strong> <code>(boolean b)</code> Creates a criterion using the <code>$exists</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>gt</strong> <code>(Object o)</code> Creates a criterion using the <code>$gt</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>gte</strong> <code>(Object o)</code> Creates a criterion using the <code>$gte</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>in</strong> <code>(Object&#8230;&#8203; o)</code> Creates a criterion using the <code>$in</code> operator for a varargs argument.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>in</strong> <code>(Collection&lt;?&gt; collection)</code> Creates a criterion using the <code>$in</code> operator using a collection</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>is</strong> <code>(Object o)</code> Creates a criterion using field matching (<code>{ key:value }</code>). If the specified value is a document, the order of the fields and exact equality in the document matters.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>lt</strong> <code>(Object o)</code> Creates a criterion using the <code>$lt</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>lte</strong> <code>(Object o)</code> Creates a criterion using the <code>$lte</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>mod</strong> <code>(Number value, Number remainder)</code> Creates a criterion using the <code>$mod</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>ne</strong> <code>(Object o)</code> Creates a criterion using the <code>$ne</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>nin</strong> <code>(Object&#8230;&#8203; o)</code> Creates a criterion using the <code>$nin</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>norOperator</strong> <code>(Criteria&#8230;&#8203; criteria)</code> Creates an nor query using the <code>$nor</code> operator for all of the provided criteria</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>norOperator</strong> <code>(Collection&lt;Criteria&gt; criteria)</code> Creates an nor query using the <code>$nor</code> operator for all of the provided criteria</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>not</strong> <code>()</code> Creates a criterion using the <code>$not</code> meta operator which affects the clause directly following</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>orOperator</strong> <code>(Criteria&#8230;&#8203; criteria)</code> Creates an or query using the <code>$or</code> operator for all of the provided  criteria</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>orOperator</strong> <code>(Collection&lt;Criteria&gt; criteria)</code> Creates an or query using the <code>$or</code> operator for all of the provided  criteria</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>regex</strong> <code>(String re)</code> Creates a criterion using a <code>$regex</code></p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>sampleRate</strong> <code>(double sampleRate)</code> Creates a criterion using the <code>$sampleRate</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>size</strong> <code>(int s)</code> Creates a criterion using the <code>$size</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>type</strong> <code>(int t)</code> Creates a criterion using the <code>$type</code> operator</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>matchingDocumentStructure</strong> <code>(MongoJsonSchema schema)</code> Creates a criterion using the <code>$jsonSchema</code> operator for <a href="mapping/mapping-schema.html" class="xref page">JSON schema criteria</a>. <code>$jsonSchema</code> can only be applied on the top level of a query and not property specific. Use the <code>properties</code> attribute of the schema to match against nested fields.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>bits()</strong> is the gateway to <a href="https://docs.mongodb.com/manual/reference/operator/query-bitwise/">MongoDB bitwise query operators</a> like <code>$bitsAllClear</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Criteria class also provides the following methods for geospatial queries.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Criteria</code> <strong>within</strong> <code>(Circle circle)</code> Creates a geospatial criterion using <code>$geoWithin $center</code> operators.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>within</strong> <code>(Box box)</code> Creates a geospatial criterion using a <code>$geoWithin $box</code> operation.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>withinSphere</strong> <code>(Circle circle)</code> Creates a geospatial criterion using <code>$geoWithin $center</code> operators.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>near</strong> <code>(Point point)</code> Creates a geospatial criterion using a <code>$near</code> operation</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>nearSphere</strong> <code>(Point point)</code> Creates a geospatial criterion using <code>$nearSphere$center</code> operations. This is only available for MongoDB 1.7 and higher.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>minDistance</strong> <code>(double minDistance)</code> Creates a geospatial criterion using the <code>$minDistance</code> operation, for use with $near.</p>
+</li>
+<li>
+<p><code>Criteria</code> <strong>maxDistance</strong> <code>(double maxDistance)</code> Creates a geospatial criterion using the <code>$maxDistance</code> operation, for use with $near.</p>
+</li>
+</ul>
+</div>
+</div>
+</details>
+<div class="paragraph">
+<p>The <code>Query</code> class has some additional methods that allow to select certain fields as well as to limit and sort the result.</p>
+</div>
+<details id="mongodb-template-query.query">
+<summary class="title">Methods of the Query class</summary>
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>Query</code> <strong>addCriteria</strong> <code>(Criteria criteria)</code> used to add additional criteria to the query</p>
+</li>
+<li>
+<p><code>Field</code> <strong>fields</strong> <code>()</code> used to define fields to be included in the query results</p>
+</li>
+<li>
+<p><code>Query</code> <strong>limit</strong> <code>(int limit)</code> used to limit the size of the returned results to the provided limit (used for paging)</p>
+</li>
+<li>
+<p><code>Query</code> <strong>skip</strong> <code>(int skip)</code> used to skip the provided number of documents in the results (used for paging)</p>
+</li>
+<li>
+<p><code>Query</code> <strong>with</strong> <code>(Sort sort)</code> used to provide sort definition for the results</p>
+</li>
+<li>
+<p><code>Query</code> <strong>with</strong> <code>(ScrollPosition position)</code> used to provide a scroll position (Offset- or Keyset-based pagination) to start or resume a <code>Scroll</code></p>
+</li>
+</ul>
+</div>
+</div>
+</details>
+<div id="mongo-template.query.result-projection" class="paragraph">
+<p>The template API allows direct usage of result projections that enable you to map queries against a given domain type while projecting the operation result onto another one as outlined below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class
+
+template.query(SWCharacter.class)
+    .as(Jedi.class)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more information on result projections please refer to the <a href="../repositories/projections.html" class="xref page">Projections</a> section of the documentation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.querying.field-selection"><a class="anchor" href="#mongo-template.querying.field-selection"></a>Selecting fields</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>MongoDB supports <a href="https://docs.mongodb.com/manual/tutorial/project-fields-from-query-results/">projecting fields</a> returned by a query.
+A projection can include and exclude fields (the <code>_id</code> field is always included unless explicitly excluded) based on their name.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Selecting result fields</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Person {
+
+    @Id String id;
+    String firstname;
+
+    @Field("last_name")
+    String lastname;
+
+    Address address;
+}
+
+query.fields().include("lastname");              <i class="conum" data-value="1"></i><b>(1)</b>
+
+query.fields().exclude("id").include("lastname") <i class="conum" data-value="2"></i><b>(2)</b>
+
+query.fields().include("address")                <i class="conum" data-value="3"></i><b>(3)</b>
+
+query.fields().include("address.city")           <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Result will contain both <code>_id</code> and <code>last_name</code> via <code>{ "last_name" : 1 }</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Result will only contain the <code>last_name</code> via <code>{ "_id" : 0, "last_name" : 1 }</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Result will contain the <code>_id</code> and entire <code>address</code> object via <code>{ "address" : 1 }</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Result will contain the <code>_id</code> and and <code>address</code> object that only contains the <code>city</code> field via <code>{ "address.city" : 1 }</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Starting with MongoDB 4.4 you can use aggregation expressions for field projections as shown below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Computing result fields using expressions</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">query.fields()
+  .project(MongoExpression.create("'$toUpper' : '$last_name'"))         <i class="conum" data-value="1"></i><b>(1)</b>
+  .as("last_name");                                                     <i class="conum" data-value="2"></i><b>(2)</b>
+
+query.fields()
+  .project(StringOperators.valueOf("lastname").toUpper())               <i class="conum" data-value="3"></i><b>(3)</b>
+  .as("last_name");
+
+query.fields()
+  .project(AggregationSpELExpression.expressionOf("toUpper(lastname)")) <i class="conum" data-value="4"></i><b>(4)</b>
+  .as("last_name");</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use a native expression. The used field name must refer to field names within the database document.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Assign the field name to which the expression result is projected. The resulting field name is not mapped against the domain model.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Use an <code>AggregationExpression</code>. Other than native <code>MongoExpression</code>, field names are mapped to the ones used in the domain model.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Use SpEL along with an <code>AggregationExpression</code> to invoke expression functions. Field names are mapped to the ones used in the domain model.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><code>@Query(fields="…")</code> allows usage of expression field projections at <code>Repository</code> level as described in <a href="repositories/repositories.html#mongodb.repositories.queries.json-based" class="xref page">MongoDB JSON-based Query Methods and Field Restriction</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.query.additional-query-options"><a class="anchor" href="#mongo.query.additional-query-options"></a>Additional Query Options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>MongoDB offers various ways of applying meta information, like a comment or a batch size, to a query.Using the <code>Query</code> API
+directly there are several methods for those options.</p>
+</div>
+<div class="sect2">
+<h3 id="mongo.query.hints"><a class="anchor" href="#mongo.query.hints"></a>Hints</h3>
+<div class="paragraph">
+<p>Index hints can be applied in two ways, using the index name or its field definition.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">template.query(Person.class)
+    .matching(query("...").withHint("index-to-use"));
+
+template.query(Person.class)
+    .matching(query("...").withHint("{ firstname : 1 }"));</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo.query.cursor-size"><a class="anchor" href="#mongo.query.cursor-size"></a>Cursor Batch Size</h3>
+<div class="paragraph">
+<p>The cursor batch size defines the number of documents to return in each response batch.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Query query = query(where("firstname").is("luke"))
+    .cursorBatchSize(100)</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo.query.collation"><a class="anchor" href="#mongo.query.collation"></a>Collations</h3>
+<div class="paragraph">
+<p>Using collations with collection operations is a matter of specifying a <code>Collation</code> instance in your query or operation options, as the following two examples show:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Collation collation = Collation.of("de");
+
+Query query = new Query(Criteria.where("firstName").is("Amél"))
+    .collation(collation);
+
+List&lt;Person&gt; results = template.find(query, Person.class);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo.query.read-preference"><a class="anchor" href="#mongo.query.read-preference"></a>Read Preference</h3>
+<div class="paragraph">
+<p>The <code>ReadPreference</code> to use can be set directly on the <code>Query</code> object to be run as outlined below.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">template.find(Person.class)
+    .matching(query(where(...)).withReadPreference(ReadPreference.secondary()))
+    .all();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The preference set on the <code>Query</code> instance will supersede the default <code>ReadPreference</code> of <code>MongoTemplate</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo.query.comment"><a class="anchor" href="#mongo.query.comment"></a>Comments</h3>
+<div class="paragraph">
+<p>Queries can be equipped with comments which makes them easier to look up in server logs.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">template.find(Person.class)
+    .matching(query(where(...)).comment("Use the force luke!"))
+    .all();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.query.distinct"><a class="anchor" href="#mongo-template.query.distinct"></a>Query Distinct Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>MongoDB provides an operation to obtain distinct values for a single field by using a query from the resulting documents.
+Resulting values are not required to have the same data type, nor is the feature limited to simple types.
+For retrieval, the actual result type does matter for the sake of conversion and typing. The following example shows how to query for distinct values:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. Retrieving distinct values</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">template.query(Person.class)  <i class="conum" data-value="1"></i><b>(1)</b>
+  .distinct("lastname")       <i class="conum" data-value="2"></i><b>(2)</b>
+  .all();                     <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Query the <code>Person</code> collection.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Select distinct  values of the <code>lastname</code> field. The field name is mapped according to the domain types property declaration, taking potential <code>@Field</code> annotations into account.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Retrieve all distinct values as a <code>List</code> of <code>Object</code> (due to no explicit result type being specified).</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Retrieving distinct values into a <code>Collection</code> of <code>Object</code> is the most flexible way, as it tries to determine the property value of the domain type and convert results to the desired type or mapping <code>Document</code> structures.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes, when all values of the desired field are fixed to a certain type, it is more convenient to directly obtain a correctly typed <code>Collection</code>, as shown in the following example:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. Retrieving strongly typed distinct values</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">template.query(Person.class)  <i class="conum" data-value="1"></i><b>(1)</b>
+  .distinct("lastname")       <i class="conum" data-value="2"></i><b>(2)</b>
+  .as(String.class)           <i class="conum" data-value="3"></i><b>(3)</b>
+  .all();                     <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Query the collection of <code>Person</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Select distinct values of the <code>lastname</code> field. The fieldname is mapped according to the domain types property declaration, taking potential <code>@Field</code> annotations into account.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Retrieved values are converted into the desired target type&#8201;&#8212;&#8201;in this case, <code>String</code>. It is also possible to map the values to a more complex type if the stored field contains a document.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Retrieve all distinct values as a <code>List</code> of <code>String</code>. If the type cannot be converted into the desired target type, this method throws a <code>DataAccessException</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="mongo.geospatial" class="paragraph">
+<p>+= GeoSpatial Queries</p>
+</div>
+<div class="paragraph">
+<p>MongoDB supports GeoSpatial queries through the use of operators such as <code>$near</code>, <code>$within</code>, <code>geoWithin</code>, and <code>$nearSphere</code>. Methods specific to geospatial queries are available on the <code>Criteria</code> class. There are also a few shape classes (<code>Box</code>, <code>Circle</code>, and <code>Point</code>) that are used in conjunction with geospatial related <code>Criteria</code> methods.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Using GeoSpatial queries requires attention when used within MongoDB transactions, see <a href="client-session-transactions.html#mongo.transactions.behavior" class="xref page">Special behavior inside transactions</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To understand how to perform GeoSpatial queries, consider the following <code>Venue</code> class (taken from the integration tests and relying on the rich <code>MappingMongoConverter</code>):</p>
+</div>
+<details>
+<summary class="title">Venue.java</summary>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Document(collection="newyork")
+public class Venue {
+
+  @Id
+  private String id;
+  private String name;
+  private double[] location;
+
+  @PersistenceCreator
+  Venue(String name, double[] location) {
+    super();
+    this.name = name;
+    this.location = location;
+  }
+
+  public Venue(String name, double x, double y) {
+    super();
+    this.name = name;
+    this.location = new double[] { x, y };
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public double[] getLocation() {
+    return location;
+  }
+
+  @Override
+  public String toString() {
+    return "Venue [id=" + id + ", name=" + name + ", location="
+        + Arrays.toString(location) + "]";
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</details>
+<div class="paragraph">
+<p>To find locations within a <code>Circle</code>, you can use the following query:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Circle circle = new Circle(-73.99171, 40.738868, 0.01);
+List&lt;Venue&gt; venues =
+    template.find(new Query(Criteria.where("location").within(circle)), Venue.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To find venues within a <code>Circle</code> using spherical coordinates, you can use the following query:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Circle circle = new Circle(-73.99171, 40.738868, 0.003712240453784);
+List&lt;Venue&gt; venues =
+    template.find(new Query(Criteria.where("location").withinSphere(circle)), Venue.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To find venues within a <code>Box</code>, you can use the following query:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">//lower-left then upper-right
+Box box = new Box(new Point(-73.99756, 40.73083), new Point(-73.988135, 40.741404));
+List&lt;Venue&gt; venues =
+    template.find(new Query(Criteria.where("location").within(box)), Venue.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To find venues near a <code>Point</code>, you can use the following queries:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Point point = new Point(-73.99171, 40.738868);
+List&lt;Venue&gt; venues =
+    template.find(new Query(Criteria.where("location").near(point).maxDistance(0.01)), Venue.class);</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Point point = new Point(-73.99171, 40.738868);
+List&lt;Venue&gt; venues =
+    template.find(new Query(Criteria.where("location").near(point).minDistance(0.01).maxDistance(100)), Venue.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To find venues near a <code>Point</code> using spherical coordinates, you can use the following query:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Point point = new Point(-73.99171, 40.738868);
+List&lt;Venue&gt; venues =
+    template.find(new Query(
+        Criteria.where("location").nearSphere(point).maxDistance(0.003712240453784)),
+        Venue.class);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.geo-near"><a class="anchor" href="#mongo.geo-near"></a>Geo-near Queries</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Changed in 2.2!</strong><br>
+<a href="https://docs.mongodb.com/master/release-notes/4.2-compatibility/">MongoDB 4.2</a> removed support for the
+<code>geoNear</code> command which had been previously used to run the <code>NearQuery</code>.</p>
+</div>
+<div class="paragraph">
+<p>Spring Data MongoDB 2.2 <code>MongoOperations#geoNear</code> uses the <code>$geoNear</code> <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/geoNear/">aggregation</a>
+instead of the <code>geoNear</code> command to run a <code>NearQuery</code>.</p>
+</div>
+<div class="paragraph">
+<p>The calculated distance (the <code>dis</code> when using a geoNear command) previously returned within a wrapper type now is embedded
+into the resulting document.
+If the given domain type already contains a property with that name, the calculated distance
+is named <code>calculated-distance</code> with a potentially random postfix.</p>
+</div>
+<div class="paragraph">
+<p>Target types may contain a property named after the returned distance to (additionally) read it back directly into the domain type as shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">GeoResults&lt;VenueWithDistanceField&gt; = template.query(Venue.class) <i class="conum" data-value="1"></i><b>(1)</b>
+    .as(VenueWithDistanceField.class)                            <i class="conum" data-value="2"></i><b>(2)</b>
+    .near(NearQuery.near(new GeoJsonPoint(-73.99, 40.73), KILOMETERS))
+    .all();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Domain type used to identify the target collection and potential query mapping.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Target type containing a <code>dis</code> field of type <code>Number</code>.</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>MongoDB supports querying the database for geo locations and calculating the distance from a given origin at the same time. With geo-near queries, you can express queries such as "find all restaurants in the surrounding 10 miles". To let you do so, <code>MongoOperations</code> provides <code>geoNear(…)</code> methods that take a <code>NearQuery</code> as an argument (as well as the already familiar entity type and collection), as shown in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Point location = new Point(-73.99171, 40.738868);
+NearQuery query = NearQuery.near(location).maxDistance(new Distance(10, Metrics.MILES));
+
+GeoResults&lt;Restaurant&gt; = operations.geoNear(query, Restaurant.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We use the <code>NearQuery</code> builder API to set up a query to return all <code>Restaurant</code> instances surrounding the given <code>Point</code> out to 10 miles.
+The <code>Metrics</code> enum used here actually implements an interface so that other metrics could be plugged into a distance as well.
+A <code>Metric</code> is backed by a multiplier to transform the distance value of the given metric into native distances.
+The sample shown here would consider the 10 to be miles. Using one of the built-in metrics (miles and kilometers) automatically triggers the spherical flag to be set on the query.
+If you want to avoid that, pass plain <code>double</code> values into <code>maxDistance(…)</code>.
+For more information, see the Javadoc of <code><a href="../api/java/org/springframework/data/mongodb/core/query/NearQuery.html" class="xref attachment apiref">NearQuery</a></code> and <code>Distance</code>.</p>
+</div>
+<div class="paragraph">
+<p>The geo-near operations return a <code>GeoResults</code> wrapper object that encapsulates <code>GeoResult</code> instances.
+Wrapping <code>GeoResults</code> allows accessing the average distance of all results.
+A single <code>GeoResult</code> object carries the entity found plus its distance from the origin.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.geo-json"><a class="anchor" href="#mongo.geo-json"></a>GeoJSON Support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>MongoDB supports <a href="https://geojson.org/">GeoJSON</a> and simple (legacy) coordinate pairs for geospatial data. Those formats can both be used for storing as well as querying data. See the <a href="https://docs.mongodb.org/manual/core/2dsphere/#geospatial-indexes-store-geojson/">MongoDB manual on GeoJSON support</a> to learn about requirements and restrictions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.geo-json.domain.classes"><a class="anchor" href="#mongo.geo-json.domain.classes"></a>GeoJSON Types in Domain Classes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Usage of <a href="https://geojson.org/">GeoJSON</a> types in domain classes is straightforward. The <code>org.springframework.data.mongodb.core.geo</code> package contains types such as <code>GeoJsonPoint</code>, <code>GeoJsonPolygon</code>, and others. These types are extend the existing <code>org.springframework.data.geo</code> types. The following example uses a <code><a href="../api/java/org/springframework/data/mongodb/core/geo/GeoJsonPoint.html" class="xref attachment apiref">GeoJsonPoint</a></code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Store {
+
+	String id;
+
+	/**
+	 * { "type" : "Point", "coordinates" : [ x, y ] }
+	 */
+	GeoJsonPoint location;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the <code>coordinates</code> of a GeoJSON object represent <em>latitude</em> and <em>longitude</em> pairs, the <em>longitude</em> goes first followed by <em>latitude</em>.<br>
+<code>GeoJsonPoint</code> therefore treats <code>getX()</code> as <em>longitude</em> and <code>getY()</code> as <em>latitude</em>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.geo-json.query-methods"><a class="anchor" href="#mongo.geo-json.query-methods"></a>GeoJSON Types in Repository Query Methods</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using GeoJSON types as repository query parameters forces usage of the <code>$geometry</code> operator when creating the query, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface StoreRepository extends CrudRepository&lt;Store, String&gt; {
+
+	List&lt;Store&gt; findByLocationWithin(Polygon polygon);  <i class="conum" data-value="1"></i><b>(1)</b>
+
+}
+
+/*
+ * {
+ *   "location": {
+ *     "$geoWithin": {
+ *       "$geometry": {
+ *         "type": "Polygon",
+ *         "coordinates": [
+ *           [
+ *             [-73.992514,40.758934],
+ *             [-73.961138,40.760348],
+ *             [-73.991658,40.730006],
+ *             [-73.992514,40.758934]
+ *           ]
+ *         ]
+ *       }
+ *     }
+ *   }
+ * }
+ */
+repo.findByLocationWithin(                              <i class="conum" data-value="2"></i><b>(2)</b>
+  new GeoJsonPolygon(
+    new Point(-73.992514, 40.758934),
+    new Point(-73.961138, 40.760348),
+    new Point(-73.991658, 40.730006),
+    new Point(-73.992514, 40.758934)));                 <i class="conum" data-value="3"></i><b>(3)</b>
+
+/*
+ * {
+ *   "location" : {
+ *     "$geoWithin" : {
+ *        "$polygon" : [ [-73.992514,40.758934] , [-73.961138,40.760348] , [-73.991658,40.730006] ]
+ *     }
+ *   }
+ * }
+ */
+repo.findByLocationWithin(                              <i class="conum" data-value="4"></i><b>(4)</b>
+  new Polygon(
+    new Point(-73.992514, 40.758934),
+    new Point(-73.961138, 40.760348),
+    new Point(-73.991658, 40.730006)));</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Repository method definition using the commons type allows calling it with both the GeoJSON and the legacy format.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Use GeoJSON type to make use of <code>$geometry</code> operator.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Note that GeoJSON polygons need to define a closed ring.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Use the legacy format <code>$polygon</code> operator.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.geo-json.metrics"><a class="anchor" href="#mongo.geo-json.metrics"></a>Metrics and Distance calculation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Then MongoDB <code>$geoNear</code> operator allows usage of a GeoJSON Point or legacy coordinate pairs.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">NearQuery.near(new Point(-73.99171, 40.738868))</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "$geoNear": {
+    //...
+    "near": [-73.99171, 40.738868]
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">NearQuery.near(new GeoJsonPoint(-73.99171, 40.738868))</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "$geoNear": {
+    //...
+    "near": { "type": "Point", "coordinates": [-73.99171, 40.738868] }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Though syntactically different the server is fine accepting both no matter what format the target Document within the collection
+is using.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+There is a huge difference in the distance calculation. Using the legacy format operates
+upon <em>Radians</em> on an Earth like sphere, whereas the GeoJSON format uses <em>Meters</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To avoid a serious headache make sure to set the <code>Metric</code> to the desired unit of measure which ensures the
+distance to be calculated correctly.</p>
+</div>
+<div class="paragraph">
+<p>In other words:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Assume you&#8217;ve got 5 Documents like the ones below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "_id" : ObjectId("5c10f3735d38908db52796a5"),
+    "name" : "Penn Station",
+    "location" : { "type" : "Point", "coordinates" : [  -73.99408, 40.75057 ] }
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796a6"),
+    "name" : "10gen Office",
+    "location" : { "type" : "Point", "coordinates" : [ -73.99171, 40.738868 ] }
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796a9"),
+    "name" : "City Bakery ",
+    "location" : { "type" : "Point", "coordinates" : [ -73.992491, 40.738673 ] }
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796aa"),
+    "name" : "Splash Bar",
+    "location" : { "type" : "Point", "coordinates" : [ -73.992491, 40.738673 ] }
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796ab"),
+    "name" : "Momofuku Milk Bar",
+    "location" : { "type" : "Point", "coordinates" : [ -73.985839, 40.731698 ] }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Fetching all Documents within a 400 Meter radius from <code>[-73.99171, 40.738868]</code> would look like this using
+GeoJSON:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. GeoNear with GeoJSON</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "$geoNear": {
+        "maxDistance": 400, <i class="conum" data-value="1"></i><b>(1)</b>
+        "num": 10,
+        "near": { type: "Point", coordinates: [-73.99171, 40.738868] },
+        "spherical":true, <i class="conum" data-value="2"></i><b>(2)</b>
+        "key": "location",
+        "distanceField": "distance"
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Returning the following 3 Documents:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "_id" : ObjectId("5c10f3735d38908db52796a6"),
+    "name" : "10gen Office",
+    "location" : { "type" : "Point", "coordinates" : [ -73.99171, 40.738868 ] }
+    "distance" : 0.0 <i class="conum" data-value="3"></i><b>(3)</b>
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796a9"),
+    "name" : "City Bakery ",
+    "location" : { "type" : "Point", "coordinates" : [ -73.992491, 40.738673 ] }
+    "distance" : 69.3582262492474 <i class="conum" data-value="3"></i><b>(3)</b>
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796aa"),
+    "name" : "Splash Bar",
+    "location" : { "type" : "Point", "coordinates" : [ -73.992491, 40.738673 ] }
+    "distance" : 69.3582262492474 <i class="conum" data-value="3"></i><b>(3)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Maximum distance from center point in <em>Meters</em>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>GeoJSON always operates upon a sphere.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Distance from center point in <em>Meters</em>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, when using legacy coordinate pairs one operates upon <em>Radians</em> as discussed before. So we use <code>Metrics#KILOMETERS
+when constructing the `$geoNear</code> command. The <code>Metric</code> makes sure the distance multiplier is set correctly.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 7. GeoNear with Legacy Coordinate Pairs</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "$geoNear": {
+        "maxDistance": 0.0000627142377, <i class="conum" data-value="1"></i><b>(1)</b>
+        "distanceMultiplier": 6378.137, <i class="conum" data-value="2"></i><b>(2)</b>
+        "num": 10,
+        "near": [-73.99171, 40.738868],
+        "spherical":true, <i class="conum" data-value="3"></i><b>(3)</b>
+        "key": "location",
+        "distanceField": "distance"
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Returning the 3 Documents just like the GeoJSON variant:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "_id" : ObjectId("5c10f3735d38908db52796a6"),
+    "name" : "10gen Office",
+    "location" : { "type" : "Point", "coordinates" : [ -73.99171, 40.738868 ] }
+    "distance" : 0.0 <i class="conum" data-value="4"></i><b>(4)</b>
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796a9"),
+    "name" : "City Bakery ",
+    "location" : { "type" : "Point", "coordinates" : [ -73.992491, 40.738673 ] }
+    "distance" : 0.0693586286032982 <i class="conum" data-value="4"></i><b>(4)</b>
+}
+{
+    "_id" : ObjectId("5c10f3735d38908db52796aa"),
+    "name" : "Splash Bar",
+    "location" : { "type" : "Point", "coordinates" : [ -73.992491, 40.738673 ] }
+    "distance" : 0.0693586286032982 <i class="conum" data-value="4"></i><b>(4)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Maximum distance from center point in <em>Radians</em>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The distance multiplier so we get <em>Kilometers</em> as resulting distance.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Make sure we operate on a 2d_sphere index.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Distance from center point in <em>Kilometers</em> - take it times 1000 to match <em>Meters</em> of the GeoJSON variant.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.textsearch"><a class="anchor" href="#mongo.textsearch"></a>Full-text Search</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since version 2.6 of MongoDB, you can run full-text queries by using the <code>$text</code> operator. Methods and operations specific to full-text queries are available in <code>TextQuery</code> and <code>TextCriteria</code>. When doing full text search, see the <a href="https://docs.mongodb.org/manual/reference/operator/query/text/#behavior">MongoDB reference</a> for its behavior and limitations.</p>
+</div>
+<div class="paragraph">
+<p>Before you can actually use full-text search, you must set up the search index correctly.
+See <a href="mapping/mapping.html#mapping-usage-indexes.text-index" class="xref page">Text Index</a> for more detail on how to create index structures.
+The following example shows how to set up a full-text search:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.foo.createIndex(
+{
+  title : "text",
+  content : "text"
+},
+{
+  weights : {
+              title : 3
+            }
+}
+)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A query searching for <code>coffee cake</code> can be defined and run as follows:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 8. Full Text Query</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Query query = TextQuery
+  .queryText(new TextCriteria().matchingAny("coffee", "cake"));
+
+List&lt;Document&gt; page = template.find(query, Document.class);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>To sort results by relevance according to the <code>weights</code> use <code>TextQuery.sortByScore</code>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 9. Full Text Query - Sort by Score</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Query query = TextQuery
+  .queryText(new TextCriteria().matchingAny("coffee", "cake"))
+  .sortByScore() <i class="conum" data-value="1"></i><b>(1)</b>
+  .includeScore(); <i class="conum" data-value="2"></i><b>(2)</b>
+
+List&lt;Document&gt; page = template.find(query, Document.class);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use the score property for sorting results by relevance which triggers <code>.sort({'score': {'$meta': 'textScore'}})</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Use <code>TextQuery.includeScore()</code> to include the calculated relevance in the resulting <code>Document</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can exclude search terms by prefixing the term with <code>-</code> or by using <code>notMatching</code>, as shown in the following example (note that the two lines have the same effect and are thus redundant):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// search for 'coffee' and not 'cake'
+TextQuery.queryText(new TextCriteria().matching("coffee").matching("-cake"));
+TextQuery.queryText(new TextCriteria().matching("coffee").notMatching("cake"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>TextCriteria.matching</code> takes the provided term as is.
+Therefore, you can define phrases by putting them between double quotation marks (for example, <code>\"coffee cake\")</code> or using by <code>TextCriteria.phrase.</code>
+The following example shows both ways of defining a phrase:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// search for phrase 'coffee cake'
+TextQuery.queryText(new TextCriteria().matching("\"coffee cake\""));
+TextQuery.queryText(new TextCriteria().phrase("coffee cake"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can set flags for <code>$caseSensitive</code> and <code>$diacriticSensitive</code> by using the corresponding methods on <code>TextCriteria</code>.
+Note that these two optional flags have been introduced in MongoDB 3.2 and are not included in the query unless explicitly set.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.query-by-example"><a class="anchor" href="#mongo.query-by-example"></a>Query by Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="repositories/query-methods.html#query-by-example" class="xref page">Query by Example</a> can be used on the Template API level run example queries.</p>
+</div>
+<div class="paragraph">
+<p>The following snipped shows how to query by example:</p>
+</div>
+<div class="listingblock">
+<div class="title">Typed Example Query</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Person probe = new Person();
+probe.lastname = "stark";
+
+Example example = Example.of(probe);
+
+Query query = new Query(new Criteria().alike(example));
+List&lt;Person&gt; result = template.find(query, Person.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default <code>Example</code> is strictly typed. This means that the mapped query has an included type match, restricting it to probe assignable types.
+For example, when sticking with the default type key (<code>_class</code>), the query has restrictions such as (<code>_class : { $in : [ com.acme.Person] }</code>).</p>
+</div>
+<div class="paragraph">
+<p>By using the <code>UntypedExampleMatcher</code>, it is possible to bypass the default behavior and skip the type restriction. So, as long as field names match, nearly any domain type can be used as the probe for creating the reference, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 10. Untyped Example Query</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class JustAnArbitraryClassWithMatchingFieldName {
+  @Field("lastname") String value;
+}
+
+JustAnArbitraryClassWithMatchingFieldNames probe = new JustAnArbitraryClassWithMatchingFieldNames();
+probe.value = "stark";
+
+Example example = Example.of(probe, UntypedExampleMatcher.matching());
+
+Query query = new Query(new Criteria().alike(example));
+List&lt;Person&gt; result = template.find(query, Person.class);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When including <code>null</code> values in the <code>ExampleSpec</code>, Spring Data Mongo uses embedded document matching instead of dot notation property matching.
+Doing so forces exact document matching for all property values and the property order in the embedded document.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>UntypedExampleMatcher</code> is likely the right choice for you if you are storing different entities within a single collection or opted out of writing type hints.</p>
+</div>
+<div class="paragraph">
+<p>Also, keep in mind that using <code>@TypeAlias</code> requires eager initialization of the <code>MappingContext</code>. To do so, configure <code>initialEntitySet</code> to to ensure proper alias resolution for read operations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Spring Data MongoDB provides support for different matching options:</p>
+</div>
+<details>
+<summary class="title"><code>StringMatcher</code> options</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Matching</th>
+<th class="tableblock halign-left valign-top">Logical result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DEFAULT</code> (case-sensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : firstname}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DEFAULT</code> (case-insensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: firstname, $options: 'i'}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EXACT</code>  (case-sensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /^firstname$/}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EXACT</code> (case-insensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /^firstname$/, $options: 'i'}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>STARTING</code>  (case-sensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /^firstname/}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>STARTING</code> (case-insensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /^firstname/, $options: 'i'}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ENDING</code>  (case-sensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /firstname$/}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ENDING</code> (case-insensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /firstname$/, $options: 'i'}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CONTAINING</code>  (case-sensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /.*firstname.*/}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CONTAINING</code> (case-insensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /.*firstname.*/, $options: 'i'}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REGEX</code>  (case-sensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /firstname/}}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REGEX</code> (case-insensitive)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{"firstname" : { $regex: /firstname/, $options: 'i'}}</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.jsonSchema.query"><a class="anchor" href="#mongo.jsonSchema.query"></a>Query a collection for matching JSON Schema</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use a schema to query any collection for documents that match a given structure defined by a JSON schema, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 11. Query for Documents matching a <code>$jsonSchema</code></div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MongoJsonSchema schema = MongoJsonSchema.builder().required("firstname", "lastname").build();
+
+template.find(query(matchingDocumentStructure(schema)), Person.class);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Please refer to the <a href="mapping/mapping-schema.html" class="xref page">JSON Schema</a> section to learn more about the schema support in Spring Data MongoDB.</p>
+</div>
+</div>
+</div>
+<div class="section-summary">
+</div>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+
+                  <ul class="nav-versions">
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../data-commons/index.html">
+      4.1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">Spring Data MongoDB</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      5.1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>
+    Related Spring Documentation
+    <ul class="projects-list">
+        <li>
+<a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-framework/reference/">
+  Spring Framework
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Cloud
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Data
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a>
+</li>
+    </ul>
+  </li
+  <li><a href="../spring-projects.html">All Docs...</a></li>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">Copyright © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.<br /><a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/asciidoctor-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box">
+                    <a class="search-link" href="../search.html">Search in all Spring Docs</a>
+                </div>
+                <div class="search-by">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.algolia.com/" aria-label="Search by Algolia">
+                        <img class="light" width="140" src="../_/img/algolia-light.svg" />
+                        <img class="dark" width="140" src="../_/img/algolia-dark.svg" />
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" crossorigin="anonymous"></script>
+<script async id="search-script" src="../_/js/vendor/search.js" data-app-id="WB1FQYI187" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-index-name="springdocs" data-stylesheet="../_/css/vendor/search.css" data-page-version="5.1.0" data-page-component="data-mongodb"></script>
+  </body>
+</html>

@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>Spring Data 扩展：Spring Data Neo4j</title>
+    <link href="https://docs.spring.io/spring-data/neo4j/reference/repositories/core-extensions.html" rel="canonical"/>
+    <meta content="Antora 3.2.0-alpha.6" name="generator"/>
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link href="../_/css/site.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/page-search.css" rel="stylesheet"/>
+    <link href="../_/css/vendor/asciidoctor-tabs.css" rel="stylesheet"/>
+
+    <meta content="v0.4.16" name="antora-ui-version"/> 
+    <meta content="8.1.0" name="version"/>
+    <meta content="data-neo4j" name="component"/>
+    <meta content="false" name="latest-version"/>
+    <link href="../_/img/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img alt="Spring" class="block" id="springlogo" src="../_/img/spring-logo.svg"/>
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar-menu" id="topbar-nav">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">为何是春天</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.io/why-spring">概览</a>
+<a class="navbar-item" href="https://spring.io/microservices">微服务</a>
+<a class="navbar-item" href="https://spring.io/reactive">响应式</a>
+<a class="navbar-item" href="https://spring.io/event-driven">事件驱动</a>
+<a class="navbar-item" href="https://spring.io/cloud">云</a>
+<a class="navbar-item" href="https://spring.io/web-applications">Web 应用</a>
+<a class="navbar-item" href="https://spring.io/serverless">无服务器</a>
+<a class="navbar-item" href="https://spring.io/batch">批处理</a></div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px"><a class="navbar-item" href="https://spring.io/projects">概览</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+<a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+<a class="navbar-item navbar-item-special" href="https://spring.io/projects">查看所有项目</a>
+<li class="navbar-item navbar-item-special-3">开发工具</li>
+<a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+<a class="navbar-item navbar-item-special-2" href="https://start.spring.io">Spring Initializr
+              <svg class="external-link-icon" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="15 10.94 15 15 1 15 1 1 5.06 1" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><polyline fill="none" points="8.93 1 15 1 15 7.07" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></polyline><line fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" x1="15" x2="8" y1="1" y2="8"></line></svg></a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown"><a class="navbar-item" href="https://spring.academy/courses">课程</a>
+<a class="navbar-item" href="https://spring.academy/learning-path">获取认证</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg"><a class="navbar-item" href="https://spring.io/solutions">概览</a>
+<a class="navbar-item" href="https://spring.io/support">Spring 运行时</a>
+<a class="navbar-item" href="https://spring.io/consulting">Spring 咨询</a>
+<a class="navbar-item" href="https://spring.academy/teams">Spring Academy 团队培训</a>
+<a class="navbar-item" href="https://spring.io/security">安全公告</a></div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input id="switch-theme-checkbox" name="switch-theme-checkbox" type="checkbox"/>
+      <span class="icon"><svg aria-hidden="true" class="svg-inline--fa fa-moon moon" data-icon="moon" data-prefix="fas" focusable="false" role="img" viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" fill="currentColor"></path>
+</svg>
+        <svg aria-hidden="true" class="svg-inline--fa fa-sun sun" data-icon="sun" data-prefix="fas" focusable="false" role="img" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" fill="currentColor"></path>
+</svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-neo4j" data-version="8.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Neo4j</span>
+  <span class="version">8.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg height="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewbox="0 0 512 512" width="24px" xml:space="preserve"><g><path d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"></path><path d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"></path><path d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewbox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"></path>
+</svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../introduction-and-preface/index.html">前言</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/preface-neo4j.html">介绍 Neo4j</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/preface-sd.html">介绍 Spring Data</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/preface-sdn.html">介绍 Spring Data Neo4j</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/building-blocks.html">Spring Data Neo4j 的构建模块</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../introduction-and-preface/new-and-noteworthy.html">新特性与亮点</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../dependencies.html">依赖项</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><a class="nav-link" href="../getting-started.html">入门指南</a></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../object-mapping.html">对象映射</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../object-mapping/metadata-based-mapping.html">基于元数据的映射</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../object-mapping/mapping-ids.html">唯一 ID 的处理与配置</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../object-mapping/sdc-object-mapping.html">Spring Data 对象映射基础</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../repositories.html">存储库</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="core-concepts.html">核心概念</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-methods.html">查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="definition.html">定义存储库接口</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-methods-details.html">定义查询方法</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="create-instances.html">创建存储库实例</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="custom-implementations.html">自定义存储库实现</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="core-domain-events.html">从聚合根发布事件</a>
+</li>
+<li class="nav-item is-current-page" data-depth="2">
+<a class="nav-link" href="core-extensions.html">Spring Data 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../query-by-example.html">按示例查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="scrolling.html">滚动</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="sdn-extension.html">Spring Data Neo4j 扩展</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-keywords-reference.html">存储库查询关键字</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="query-return-types-reference.html">存储库查询返回类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="vector-search.html">Neo4j 向量搜索</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="projections.html">Projections</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../projections/sdn-projections.html">Spring Data Neo4j Projections</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../testing.html">测试</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../testing/testing-without-spring-boot.html">不使用 Spring Boot</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../testing/testing-with-spring-boot.html">使用 Spring Boot 和 <code>@DataNeo4jTest</code></a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1"><button class="nav-item-toggle"></button>
+<a class="nav-link" href="../appendix/index.html">附录</a>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/conversions.html">类型转换</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/neo4j-client.html">Neo4jClient</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/logging.html">日志记录</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/query-creation.html">查询创建</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/custom-queries.html">自定义查询</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/spatial-types.html">空间类型</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/migrating.html">从 SDN+OGM 迁移到 SDN</a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="../appendix/build.html">构建 Spring Data Neo4j</a>
+</li>
+</ul></li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external" href="../api/java/index.html" target="_blank">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external" href="https://github.com/spring-projects/spring-data-commons/wiki" target="_blank">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button class="nav-toggle" id="nav-toggle-2"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle" id="nav-toggle-1"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg id="svg-stash-de15fb15"></svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="toc" data-levels="2" data-title="Spring Data Extensions">
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links"><a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/repositories/core-extensions.adoc">
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          编辑此页面
+        </a>
+<a href="https://github.com/spring-projects/spring-data-neo4j" title="GitHub">
+<svg height="512px" id="Layer_1" version="1.1" viewbox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg"><style type="text/css">
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} </style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          GitHub 项目
+        </a></div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container"><nav aria-label="面包屑" class="breadcrumbs">
+<ul>
+<li><a href="../index.html">Spring Data Neo4j</a></li>
+<li><a href="../repositories.html">仓储</a></li>
+<li><a href="core-extensions.html">Spring Data 扩展</a></li>
+</ul>
+</nav></div><h1 class="page" id="page-title">Spring Data 扩展</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本节介绍了一组 Spring Data 扩展，使其能够在多种上下文中使用。目前，大部分集成工作主要针对 Spring MVC。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="core.extensions.querydsl"><a class="anchor" href="#core.extensions.querydsl"></a>Querydsl 扩展</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://www.querydsl.com/">Querydsl</a> 是一个框架，通过其流式 API 支持构建静态类型的类 SQL 查询。</p>
+</div>
+<div class="admonitionblock note">
+<table><td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Querydsl 的维护工作已放缓，社区已在 <a class="bare" href="https://github.com/OpenFeign/querydsl">github.com/OpenFeign/querydsl</a>（groupId 为 <code>io.github.openfeign.querydsl</code>）下分叉了该项目。Spring Data 对该分叉项目仅提供尽力而为的支持。
+</td>
+
+</table>
+</div>
+<div class="paragraph">
+<p>多个 Spring Data 模块通过 `<code>QuerydslPredicateExecutor</code>` 提供与 Querydsl 的集成，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">QuerydslPredicateExecutor 接口</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface QuerydslPredicateExecutor&lt;T&gt; {
+
+  Optional&lt;T&gt; findById(Predicate predicate);  <i class="conum" data-value="1"></i><b>(1)</b>
+
+  Iterable&lt;T&gt; findAll(Predicate predicate);   <i class="conum" data-value="2"></i><b>(2)</b>
+
+  long count(Predicate predicate);            <i class="conum" data-value="3"></i><b>(3)</b>
+
+  boolean exists(Predicate predicate);        <i class="conum" data-value="4"></i><b>(4)</b>
+
+  // … more functionality omitted.
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>查找并返回匹配<code>Predicate</code>的单个实体。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>查找并返回所有匹配<code>Predicate</code>的实体。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>返回匹配<code>Predicate</code>的实体数量。</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>返回是否存在匹配<code>Predicate</code>的实体。</td>
+</tr>
+</table></table>
+</div>
+<div class="paragraph">
+<p>若要使用 Querydsl 支持，请按照以下示例所示，在您的存储库接口中扩展<code>QuerydslPredicateExecutor</code>：</p>
+</div>
+<div class="listingblock">
+<div class="title">仓库中的 QueryDSL 集成</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface UserRepository extends CrudRepository&lt;User, Long&gt;, QuerydslPredicateExecutor&lt;User&gt; {
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>前面的示例展示了如何使用 Querydsl 的 `<code>Predicate` 实例编写类型安全的查询：</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Predicate predicate = user.firstname.equalsIgnoreCase("dave")
+	.and(user.lastname.startsWithIgnoreCase("mathews"));
+
+userRepository.findAll(predicate);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="core.web"><a class="anchor" href="#core.web"></a>Web 支持</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>支持仓库编程模型的 Spring Data 模块提供了多种 Web 支持。  
+这些与 Web 相关的组件需要在类路径中包含 Spring MVC JAR 文件。  
+其中一些模块甚至提供与 <a href="https://github.com/spring-projects/spring-hateoas">Spring HATEOAS</a> 的集成。  
+通常，可以通过在 JavaConfig 配置类中使用 <code>@EnableSpringDataWebSupport</code> 注解来启用集成支持，如下例所示：</p>
+</div>
+<div class="openblock tabs is-sync is-loading" id="_tabs_1">
+<div class="title">启用 Spring Data Web 支持</div>
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li class="tab" id="_tabs_1_java">
+<p>Java</p>
+</li>
+<li class="tab" id="_tabs_1_xml">
+<p>XML</p>
+</li>
+</ul>
+</div>
+<div aria-labelledby="_tabs_1_java" class="tabpanel" id="_tabs_1_java--panel">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableWebMvc
+@EnableSpringDataWebSupport
+class WebConfiguration {}</code></pre>
+</div>
+</div>
+</div>
+<div aria-labelledby="_tabs_1_xml" class="tabpanel" id="_tabs_1_xml--panel">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean class="org.springframework.data.web.config.SpringDataWebConfiguration" /&gt;
+
+&lt;!-- If you use Spring HATEOAS, register this one *instead* of the former --&gt;
+&lt;bean class="org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration" /&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>`@EnableSpringDataWebSupport` 注解注册了几个组件。我们将在本节稍后讨论这些组件。此外，它还会检测类路径上的 Spring HATEOAS，并为其注册相应的集成组件（如果存在的话）。</p>
+</div>
+<div class="sect2">
+<h3 id="core.web.basic"><a class="anchor" href="#core.web.basic"></a>基础 Web 支持</h3>
+<div class="paragraph">
+<p>前文<a href="#core.web">所示配置</a>注册了几个基本组件：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>使用<a href="#core.web.basic.domain-class-converter"><code>DomainClassConverter</code></a>类，让 Spring MVC 能够从请求参数或路径变量中解析由仓储管理的领域类实例。</p>
+</li>
+<li>
+<p>实现<a href="#core.web.basic.paging-and-sorting"><code>HandlerMethodArgumentResolver</code></a>接口，以便让 Spring MVC 能够从请求参数中解析出<code>Pageable</code>和<code>Sort</code>实例。</p>
+</li>
+<li>
+<p><a href="#core.web.basic.jackson-mappers">Jackson 模块</a>用于反/序列化诸如<code>Point</code>和<code>Distance</code>之类的类型，或者根据所使用的 Spring Data 模块存储特定类型。</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="core.web.basic.domain-class-converter"><a class="anchor" href="#core.web.basic.domain-class-converter"></a>使用 <code>DomainClassConverter</code> 类</h4>
+<div class="paragraph">
+<p>`DomainClassConverter` 类允许您直接在 Spring MVC 控制器方法签名中使用领域类型，因此无需像以下示例所示那样手动通过仓库查找实例：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用领域类型作为方法签名的 Spring MVC 控制器</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+@RequestMapping("/users")
+class UserController {
+
+  @RequestMapping("/{id}")
+  String showUserForm(@PathVariable("id") User user, Model model) {
+
+    model.addAttribute("user", user);
+    return "userForm";
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>该方法直接接收一个 `<code>User</code>` 实例，无需进行进一步查找。可以通过让 Spring MVC 先将路径变量转换为领域类的 `<code>id</code>` 类型，然后通过调用为该领域类型注册的存储库实例的 `<code>findById(…)</code>` 方法来最终获取该实例。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+目前，仓库必须实现 <code>CrudRepository</code> 才有资格被识别用于转换。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="core.web.basic.paging-and-sorting"><a class="anchor" href="#core.web.basic.paging-and-sorting"></a>用于 Pageable 和 Sort 的 HandlerMethodArgumentResolvers</h4>
+<div class="paragraph">
+<p>前面<a href="#core.web.basic.domain-class-converter">一节</a>中显示的配置片段还注册了<code>PageableHandlerMethodArgumentResolver</code>以及<code>SortHandlerMethodArgumentResolver</code>的一个实例。  
+该注册使得<code>Pageable</code>和<code>Sort</code>成为有效的控制器方法参数，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">在控制器方法中使用 Pageable 作为参数</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+@RequestMapping("/users")
+class UserController {
+
+  private final UserRepository repository;
+
+  UserController(UserRepository repository) {
+    this.repository = repository;
+  }
+
+  @RequestMapping
+  String showUsers(Model model, Pageable pageable) {
+
+    model.addAttribute("users", repository.findAll(pageable));
+    return "users";
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上述方法签名会导致 Spring MVC 尝试使用以下默认配置从请求参数中推导出一个<code>Pageable</code>实例：</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<caption class="title">表 1. 针对<code>Pageable</code>实例评估的请求参数</caption>
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要检索的页面。从零开始计数，默认为 0。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">要检索的页面大小。默认为 20。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">应按以下格式排序的属性：<code>property,property(,ASC|DESC)(,IgnoreCase)</code>。默认排序方向为区分大小写的升序。如需切换排序方向或大小写敏感性，请使用多个 <code>sort</code> 参数——例如：<code>?sort=firstname&amp;sort=lastname,asc&amp;sort=city,ignorecase</code>。</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>从请求参数解析出的 <code>Sort.Order</code> 实例是普通的传输对象，其属性名称保持原样，未经过领域模型的验证。应用程序有责任验证这些值，以防止意外的排序行为。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>要自定义此行为，请注册一个实现 `<code>PageableHandlerMethodArgumentResolverCustomizer</code>` 接口或 `<code>SortHandlerMethodArgumentResolverCustomizer</code>` 接口的 Bean。其 `<code>customize()</code>` 方法将被调用，从而允许您更改设置，如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean SortHandlerMethodArgumentResolverCustomizer sortCustomizer() {
+    return s -&gt; s.setPropertyDelimiter("&lt;--&gt;");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果为现有的<code>MethodArgumentResolver</code>设置属性不足以满足您的需求，请扩展<code>SpringDataWebConfiguration</code>或其支持 HATEOAS 的等效类，重写<code>pageableResolver()</code>或<code>sortResolver()</code>方法，并导入您自定义的配置类文件，而不是使用<code>@Enable</code>注解。</p>
+</div>
+<div class="paragraph">
+<p>如果需要在请求中解析多个 `<code>Pageable</code>` 或 `<code>Sort</code>` 实例（例如针对多个表），可以使用 Spring 的 `<code>@Qualifier</code>` 注解来区分它们。  
+此时，请求参数必须以 `<code>${qualifier}_</code>` 作为前缀。  
+以下示例展示了生成的方法签名：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String showUsers(Model model,
+      @Qualifier("thing1") Pageable first,
+      @Qualifier("thing2") Pageable second) { … }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您需要填充 `<code>thing1_page</code>`、`<code>thing2_page</code>` 等字段。</p>
+</div>
+<div class="paragraph">
+<p>默认情况下，传入方法的 `<code>Pageable` 等价于 `<code>PageRequest.of(0, 20)</code>`，但您可以通过在 `<code>Pageable` 参数上使用 `<code>@PageableDefault</code>` 注解来自定义它。</code></code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="core.web.page"><a class="anchor" href="#core.web.page"></a>为<code>Page</code>创建 JSON 表示形式</h3>
+<div class="paragraph">
+<p>Spring MVC 控制器通常尝试最终将 Spring Data 页面的表示形式渲染给客户端。虽然可以直接从处理方法返回 <code>Page</code> 实例，让 Jackson 原样渲染它们，但我们强烈不建议这样做，因为底层实现类 <code>PageImpl</code> 是一个领域类型。这意味着我们可能出于无关的原因需要或必须更改其 API，而此类更改可能会以破坏性的方式改变生成的 JSON 表示形式。</p>
+</div>
+<div class="paragraph">
+<p>在 Spring Data 3.1 版本中，我们通过发出描述该问题的警告日志来提示此问题。我们仍然最终推荐使用<a href="#core.web.pageables">与 Spring HATEOAS 的集成</a>，以提供完全稳定且支持超媒体的页面渲染方式，从而轻松允许客户端进行导航。然而，从 3.3 版本开始，Spring Data 提供了一个方便使用的页面渲染机制，无需包含 Spring HATEOAS。</p>
+</div>
+<div class="sect3">
+<h4 id="core.web.page.paged-model"><a class="anchor" href="#core.web.page.paged-model"></a>使用 Spring Data 的 <code>PagedModel</code></h4>
+<div class="paragraph">
+<p>其核心是一个简化版的 Spring HATEOAS 的 `<code>PagedModel</code>`（即位于 `<code>org.springframework.data.web</code>` 包中的 Spring Data 版本）。它可用于包装 `<code>Page</code>` 实例，并生成一种简化的表示形式，该形式反映了 Spring HATEOAS 所确立的结构，但省略了导航链接。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.web.PagedModel;
+
+</span><span class="fold-block">@Controller
+class MyController {
+
+  private final MyRepository repository;
+
+  // Constructor omitted
+
+  @GetMapping("/page")
+  PagedModel&lt;?&gt; page(Pageable pageable) {
+    return new PagedModel&lt;&gt;(repository.findAll(pageable)); <i class="conum" data-value="1"></i><b>(1)</b>
+  }
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>将<code>Page</code>实例包装为<code>PagedModel</code>。</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>这将生成如下所示的 JSON 结构：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{
+  "content" : [
+     … // Page content rendered here
+  ],
+  "page" : {
+    "size" : 20,
+    "totalElements" : 30,
+    "totalPages" : 2,
+    "number" : 0
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>请注意，该文档包含一个 `<code>page</code>` 字段，用于暴露关键的分页元数据。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="core.web.page.config"><a class="anchor" href="#core.web.page.config"></a>全局启用简化的<code>Page</code>渲染</h4>
+<div class="paragraph">
+<p>如果您不想修改所有现有控制器以添加映射步骤，将返回的<code>Page</code>替换为<code>PagedModel</code>，您可以通过调整<code>@EnableSpringDataWebSupport</code>来启用将<code>PageImpl</code>实例自动转换为<code>PagedModel</code>的功能，具体方式如下：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO)
+class MyConfiguration { }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这将允许您的控制器仍然返回<code>Page</code>实例，它们将自动被渲染为简化表示形式：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+class MyController {
+
+  private final MyRepository repository;
+
+  // Constructor omitted
+
+  @GetMapping("/page")
+  Page&lt;?&gt; page(Pageable pageable) {
+    return repository.findAll(pageable);
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="core.web.pageables"><a class="anchor" href="#core.web.pageables"></a><code>Page</code> 和 <code>Slice</code> 的超媒体支持</h4>
+<div class="paragraph">
+<p>Spring HATEOAS 附带了一个表示模型类（<code>PagedModel</code>/<code>SlicedModel</code>），它允许为 <code>Page</code> 或 <code>Slice</code> 实例的内容添加必要的 <code>Page</code>/<code>Slice</code> 元数据以及链接，以便客户端能够轻松地在页面之间导航。
+将 <code>Page</code> 转换为 <code>PagedModel</code> 是通过实现 Spring HATEOAS <code>RepresentationModelAssembler</code> 接口的类完成的，该类称为 <code>PagedResourcesAssembler</code>。
+同样地，可以使用 <code>SlicedResourcesAssembler</code> 将 <code>Slice</code> 实例转换为 <code>SlicedModel</code>。
+以下示例展示了如何将 <code>PagedResourcesAssembler</code> 用作控制器方法参数，<code>SlicedResourcesAssembler</code> 的工作方式完全相同：</p>
+</div>
+<div class="listingblock">
+<div class="title">在控制器方法参数中使用 PagedResourcesAssembler</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+class PersonController {
+
+  private final PersonRepository repository;
+
+  // Constructor omitted
+
+  @GetMapping("/people")
+  HttpEntity&lt;PagedModel&lt;Person&gt;&gt; people(Pageable pageable,
+    PagedResourcesAssembler assembler) {
+
+    Page&lt;Person&gt; people = repository.findAll(pageable);
+    return ResponseEntity.ok(assembler.toModel(people));
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>启用上述示例中的配置后，<code>PagedResourcesAssembler</code> 可作为控制器方法参数使用。调用其 <code>toModel(…)</code> 方法会产生以下效果：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>`<code>Page</code>` 的内容将成为 `<code>PagedModel</code>` 实例的内容。</p>
+</li>
+<li>
+<p>`PagedModel` 对象会附加一个 `PageMetadata` 实例，该实例会从 `Page` 和底层的 `Pageable` 中获取信息并进行填充。</p>
+</li>
+<li>
+<p>`PagedModel` 可能会根据页面的状态附加 `prev` 和 `next` 链接。这些链接指向该方法映射的 URI。添加到方法中的分页参数与 `PageableHandlerMethodArgumentResolver` 的配置相匹配，以确保后续能够解析这些链接。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>假设数据库中有 30 个<code>Person</code>实例。
+现在你可以触发一个请求（<code>GET <a class="bare" href="http://localhost:8080/people">localhost:8080/people</a></code>），并看到如下类似的输出：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{ "links" : [
+    { "rel" : "next", "href" : "http://localhost:8080/persons?page=1&amp;size=20" }
+  ],
+  "content" : [
+     … // 20 Person instances rendered here
+  ],
+  "page" : {
+    "size" : 20,
+    "totalElements" : 30,
+    "totalPages" : 2,
+    "number" : 0
+  }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>此处展示的 JSON 信封格式并未遵循任何正式规定的结构，其稳定性无法得到保证，我们可能会随时对其进行更改。强烈建议启用由 Spring HATEOAS 支持的超媒体官方媒体类型（如 <a href="https://docs.spring.io/spring-hateoas/docs/3.1.1/reference/html/#mediatypes.hal">HAL</a>）进行渲染。可以通过使用其 <code>@EnableHypermediaSupport</code> 注解来激活这些功能。有关更多信息，请参阅 <a href="https://docs.spring.io/spring-hateoas/docs/3.1.1/reference/html/#configuration.at-enable">Spring HATEOAS 参考文档</a>。</table>
+</div>
+<div class="paragraph">
+<p>装配器生成了正确的 URI，并读取了默认配置以将参数解析为即将发出的请求所需的<code>Pageable</code>。  
+这意味着，如果您更改该配置，链接会自动适应这些更改。  
+默认情况下，装配器指向其被调用的控制器方法，但您可以通过传递一个自定义的<code>Link</code>作为构建分页链接的基础来定制此行为，这将覆盖<code>PagedResourcesAssembler.toModel(…)</code>方法。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="core.web.basic.jackson-mappers"><a class="anchor" href="#core.web.basic.jackson-mappers"></a>Spring Data Jackson 模块</h3>
+<div class="paragraph">
+<p>核心模块以及部分特定于存储的模块，会随附一套用于 Spring Data 领域的类型 Jackson 模块，例如<code>org.springframework.data.geo.Distance</code>和<code>org.springframework.data.geo.Point</code>。<br/>
+一旦启用<a href="#core.web">Web 支持</a>且类路径上存在<code>tools.jackson.databind.ObjectMapper</code>（Jackson 3），这些模块就会被导入。</p>
+</div>
+<div class="admonitionblock note">
+<table><tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>tools.jackson.databind</code> 是 Jackson 3 的包前缀。Jackson 2 使用的是 <code>com.fasterxml.jackson.databind</code>。Jackson 2 的支持已弃用，将在未来的版本中移除；有关升级说明，请参阅<a href="https://github.com/FasterXML/jackson/wiki/Jackson-Release-3.0">Jackson 3 迁移指南</a>。
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>在初始化<code>SpringDataJackson3Modules</code>时，就像<code>SpringDataJackson3Configuration</code>一样，它会被基础设施所识别，从而使声明的<code>tools.jackson.databind.JacksonModule</code>对 Jackson 的<code>ObjectMapper</code>可用。</p>
+</div>
+<div class="paragraph">
+<p>通用基础设施已注册以下领域类型的数据绑定混入对象。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>org.springframework.data.geo.Distance
+org.springframework.data.geo.Point
+org.springframework.data.geo.Box
+org.springframework.data.geo.Circle
+org.springframework.data.geo.Polygon</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>单个模块可以提供额外的 <code>SpringDataJackson3Modules</code>。<br/>
+有关更多详细信息，请参阅特定存储区部分。</p>
+</div>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="core.web.binding"><a class="anchor" href="#core.web.binding"></a>Web 数据绑定支持</h3>
+<div class="paragraph">
+<p>您可以使用 Spring Data 投影（在<a class="xref page" href="projections.html">投影</a>中描述）来绑定传入的请求负载，方法包括使用 <a href="https://goessner.net/articles/JsonPath/">JSONPath</a> 表达式（需要 <a href="https://github.com/json-path/JsonPath">Jayway JsonPath</a>）或 <a href="https://www.w3.org/TR/xpath-31/">XPath</a> 表达式（需要 <a href="https://xmlbeam.org/">XmlBeam</a>），如下例所示：</p>
+</div>
+<div class="listingblock">
+<div class="title">使用 JSONPath 或 XPath 表达式进行 HTTP 负载绑定</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ProjectedPayload
+public interface UserPayload {
+
+  @XBRead("//firstname")
+  @JsonPath("$..firstname")
+  String getFirstname();
+
+  @XBRead("/lastname")
+  @JsonPath({ "$.lastname", "$.user.lastname" })
+  String getLastname();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您可以使用前面示例中所示的类型作为 Spring MVC 处理器方法参数，或者在 <code>RestTemplate</code> 的某个方法上使用 <code>ParameterizedTypeReference</code>。  
+前述方法声明将尝试在整个给定文档中的任何位置查找 <code>firstname</code>。  
+<code>lastname</code> 的 XML 查找是在传入文档的顶层执行的。  
+该功能的 JSON 变体首先尝试顶层的 <code>lastname</code>，但如果前者未返回值，还会尝试在 <code>user</code> 子文档中嵌套查找 <code>lastname</code>。  
+这样，可以轻松缓解源文档结构变化带来的影响，而无需客户端调用已暴露的方法（这通常是基于类的负载绑定方法的一个缺点）。</p>
+</div>
+<div class="paragraph">
+<p>支持嵌套投影，具体说明请参见<a class="xref page" href="projections.html">投影</a>。如果方法返回的是复杂的非接口类型，则使用 Jackson 的<code>ObjectMapper</code>来映射最终值。</p>
+</div>
+<div class="paragraph">
+<p>对于 Spring MVC，只要激活了 `<code>@EnableSpringDataWebSupport` 且类路径上存在所需的依赖项，相应的转换器便会自动注册。  
+若需与 `<code>RestTemplate`》配合使用，请手动注册 `<code>ProjectingJacksonHttpMessageConverter`（JSON）或 `<code>XmlBeamHttpMessageConverter`。</code></code></code></code></p>
+</div>
+<div class="paragraph">
+<p>有关更多信息，请参阅规范示例仓库 <a href="https://github.com/spring-projects/spring-data-examples">Spring Data 示例仓库</a> 中的 <a href="https://github.com/spring-projects/spring-data-examples/tree/main/web/projection">Web 投影示例</a>。</p>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+默认情况下，对集合类属性的绑定限制为 1024 条记录。您可以通过在 <code>spring.properties</code> 文件中设置 <code>spring.data.web.projection.collection-limit</code> 属性，或将其作为系统属性来覆盖此限制。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="core.web.type-safe"><a class="anchor" href="#core.web.type-safe"></a>Querydsl Web 支持</h3>
+<div class="paragraph">
+<p>对于已集成<a href="http://www.querydsl.com/">Querydsl</a>的商店，您可以从包含在<code>Request</code>查询字符串中的属性派生查询。</p>
+</div>
+<div class="paragraph">
+<p>请考虑以下查询字符串：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">?firstname=Dave&amp;lastname=Matthews</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>给定前例中的<code>User</code>对象，您可以使用<code>QuerydslPredicateArgumentResolver</code>将查询字符串解析为以下值，如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">QUser.user.firstname.eq("Dave").and(QUser.user.lastname.eq("Matthews"))</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table><tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+当在类路径上发现 Querydsl 时，该功能会随 <code>@EnableSpringDataWebSupport</code> 一起自动启用。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>在方法签名中添加一个<code>@QuerydslPredicate</code>，即可获得一个现成的<code>Predicate</code>，您可以使用<code>QuerydslPredicateExecutor</code>来执行该谓词。</p>
+</div>
+<div class="admonitionblock tip">
+<table><tr>
+<td class="icon">
+<i class="fa icon-tip" title="提示"></i>
+</td>
+<td class="content">
+类型信息通常从方法的返回类型中解析。由于这些信息不一定与域类型匹配，因此使用 <code>QuerydslPredicate</code> 的 <code>root</code> 属性可能是一个不错的选择。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>以下示例展示了如何在方法签名中使用 `<code>@QuerydslPredicate</code>`：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+class UserController {
+
+  @Autowired UserRepository repository;
+
+  @RequestMapping(value = "/", method = RequestMethod.GET)
+  String index(Model model, @QuerydslPredicate(root = User.class) Predicate predicate,    <i class="conum" data-value="1"></i><b>(1)</b>
+          Pageable pageable, @RequestParam MultiValueMap&lt;String, String&gt; parameters) {
+
+    model.addAttribute("users", repository.findAll(predicate, pageable));
+
+    return "index";
+  }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table><tbody><tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>将查询字符串参数解析为与 <code>User</code> 匹配的 <code>Predicate</code>。</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>默认绑定如下：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>在简单属性上使用`eq`的`Object`。</p>
+</li>
+<li>
+<p>集合类属性（如 `contains`）上的 `<code>Object`。</code></p>
+</li>
+<li>
+<p>在简单属性上使用 `in` 进行集合操作。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>您可以通过 `@QuerydslPredicate` 的 `<code>bindings</code>` 属性来自定义这些绑定，或者利用 Java 8 的 `<code>default methods</code>`（默认方法），在仓库接口中添加 `<code>QuerydslBinderCustomizer</code>` 方法，如下所示：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface UserRepository extends CrudRepository&lt;User, String&gt;,
+                                 QuerydslPredicateExecutor&lt;User&gt;,                <i class="conum" data-value="1"></i><b>(1)</b>
+                                 QuerydslBinderCustomizer&lt;QUser&gt; {               <i class="conum" data-value="2"></i><b>(2)</b>
+
+  @Override
+  default void customize(QuerydslBindings bindings, QUser user) {
+
+    bindings.bind(user.username).first((path, value) -&gt; path.contains(value))    <i class="conum" data-value="3"></i><b>(3)</b>
+    bindings.bind(String.class)
+      .first((StringPath path, String value) -&gt; path.containsIgnoreCase(value)); <i class="conum" data-value="4"></i><b>(4)</b>
+    bindings.excluding(user.password);                                           <i class="conum" data-value="5"></i><b>(5)</b>
+  }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>1. `QuerydslPredicateExecutor` 提供了对 `Predicate` 特定查找方法的访问。
+2. 定义在存储库接口上的 `QuerydslBinderCustomizer` 会被自动拾取，并简化 `@QuerydslPredicate(bindings=…​)` 的使用。
+3. 将 `username` 属性的绑定定义为简单的 `contains` 绑定。
+4. 将 `String` 属性的默认绑定定义为不区分大小写的 `contains` 匹配。
+5. 将 `password` 属性排除在 `Predicate` 解析之外。</table>
+</div>
+<div class="admonitionblock tip">
+<table><tr>
+<td class="icon">
+<i class="fa icon-tip" title="提示"></i>
+</td>
+<td class="content">
+您可以在应用来自仓库或 <code>@QuerydslPredicate</code> 的具体绑定之前，注册一个持有默认 Querydsl 绑定的 <code>QuerydslBinderCustomizerDefaults</code> Bean。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="core.repository-populators"><a class="anchor" href="#core.repository-populators"></a>仓库填充器</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>如果您使用 Spring JDBC 模块，可能已经熟悉通过 SQL 脚本填充 <code>DataSource</code> 的支持。在仓库（repositories）层面也存在类似的抽象，尽管它不使用 SQL 作为数据定义语言，因为必须实现存储无关性。因此，填充器支持通过 Spring 的 OXM 抽象使用 XML，以及通过 Jackson 使用 JSON 来定义用于填充仓库的数据。</p>
+</div>
+<div class="paragraph">
+<p>假设您有一个名为 <code>data.json</code> 的文件，其内容如下：</p>
+</div>
+<div class="listingblock">
+<div class="title">JSON 中定义的数据</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">[ { "_class" : "com.acme.Person",
+ "firstname" : "Dave",
+  "lastname" : "Matthews" },
+  { "_class" : "com.acme.Person",
+ "firstname" : "Carter",
+  "lastname" : "Beauford" } ]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>您可以使用 Spring Data Commons 中提供的仓库命名空间中的填充元素来填充您的仓库。  
+要将前述数据填充到您的 `<code>PersonRepository</code>` 中，请声明一个类似于以下的填充器：</p>
+</div>
+<div class="listingblock">
+<div class="title">声明一个 Jackson 仓库填充器</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:repository="http://www.springframework.org/schema/data/repository"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/data/repository
+    https://www.springframework.org/schema/data/repository/spring-repository.xsd"&gt;
+
+  &lt;repository:jackson2-populator locations="classpath:data.json" /&gt;
+
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>上述声明会导致 Jackson 的 `ObjectMapper` 读取并反序列化 `<code>data.json</code>` 文件。</p>
+</div>
+<div class="paragraph">
+<p>JSON 对象反序列化的类型是通过检查 JSON 文档中的 `<code>_class</code>` 属性来确定的。  
+基础设施最终会选择适当的仓库来处理已反序列化的对象。</p>
+</div>
+<div class="paragraph">
+<p>若要使用 XML 定义仓库应填充的数据，可以使用 `<code>unmarshaller-populator</code>` 元素。  
+您需将其配置为使用 Spring OXM 中可用的某个 XML 反序列化器选项。有关详细信息，请参阅 <a href="https://docs.spring.io/spring-framework/reference/7.0/data-access/oxm.html">Spring 参考文档</a>。  
+以下示例展示了如何使用 JAXB 反序列化仓库填充器：</p>
+</div>
+<div class="listingblock">
+<div class="title">声明一个反序列化仓库填充器（使用 JAXB）</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:repository="http://www.springframework.org/schema/data/repository"
+  xmlns:oxm="http://www.springframework.org/schema/oxm"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/data/repository
+    https://www.springframework.org/schema/data/repository/spring-repository.xsd
+    http://www.springframework.org/schema/oxm
+    https://www.springframework.org/schema/oxm/spring-oxm.xsd"&gt;
+
+  &lt;repository:unmarshaller-populator locations="classpath:data.json"
+    unmarshaller-ref="unmarshaller" /&gt;
+
+  &lt;oxm:jaxb2-marshaller contextPath="com.acme" /&gt;
+
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-versions">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-versions-content">
+              <button class="modal-versions-close" data-micromodal-close="">
+                <svg height="28px" viewbox="0 0 32 32" width="28px" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title></title><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"></line><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"></line></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left"><ul class="nav-versions">
+<li class="component">
+<a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+<ul class="versions">
+<li class="version is-latest">
+<a href="../data-commons/index.html">
+                            4.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="component is-current">
+<a class="title" href="../index.html">Spring Data Neo4j</a>
+<ul class="versions">
+<li class="version is-current is-latest">
+<a href="../index.html">
+                            8.1.0<span class="current">当前版本</span>
+</a>
+</li>
+</ul>
+</li>
+</ul></div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>相关 Spring 文档<ul class="projects-list">
+        <li><a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a></li>
+        <li><a href="https://docs.spring.io/spring-framework/reference/">
+  Spring 框架
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Cloud
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+Spring Data
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a></li>
+        <li><a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a></li>
+        <li><a class="anchor"><i aria-hidden="true" class="fa fa-angle-right"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+<li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+<li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul></li>
+        <li><a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a></li>
+        <li><a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a></li>
+        <li><a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a></li>
+        <li><a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a></li>
+        <li><a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a></li>
+        <li><a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a></li>
+        <li><a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a></li>
+    </ul>
+  </li><a href="../spring-projects.html">所有文档...</a>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img alt="Spring" id="springlogo" src="../_/img/spring-logo.svg"/>
+        <p class="smallest antialiased">版权所有 © 2005 - <script>var d = new Date(); document.write(d.getFullYear());</script> Broadcom。保留所有权利。“Broadcom”指 Broadcom Inc. 及其/或其子公司。<br/><a href="https://www.vmware.com/help/legal.html">使用条款</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">隐私政策</a> • <a href="https://spring.io/trademarks">商标指南</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">致谢</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">您的加州隐私权利</a> • <a class="ot-sdk-show-settings">Cookie 设置</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®、Apache Tomcat®、Apache Kafka®、Apache Cassandra™ 和 Apache Geode™ 是 Apache 软件基金会在美国和其他/或某些国家的商标或注册商标。Java™、Java™ SE、Java™ EE 和 OpenJDK™ 是 Oracle 公司和/或其关联公司的商标。Kubernetes® 是 Linux 基金会在美国和其他国家的注册商标。Linux® 是 Linus Torvalds 在美国和其他国家的注册商标。Windows® 和 Microsoft® Azure 是微软公司的注册商标。“AWS”和“Amazon Web Services"是 Amazon.com Inc. 及其关联公司的商标或注册商标。所有其他商标和版权均归各自所有者所有，仅用于说明目的。其他名称可能是其各自所有者的商标。</p>
+    </div>
+    <div class="flex jc-between" id="social-icons">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" viewbox="0 0 75.93 75.93" xmlns="http://www.w3.org/2000/svg"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z" data-name="Twitter" id="Twitter-2"></path></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async="" src="../_/js/vendor/highlight.js"></script>
+<script async="" data-sync-storage-key="docs:preferred-tab" src="../_/js/vendor/asciidoctor-tabs.js"></script>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box"><a class="search-link" href="../search.html">在全部 Spring 文档中搜索</a></div>
+                <div class="search-by">
+                    <a aria-label="Search by Algolia" href="https://www.algolia.com/" rel="noopener noreferrer" target="_blank">
+                        <img class="light" src="../_/img/algolia-light.svg" width="140"/>
+                        <img class="dark" src="../_/img/algolia-dark.svg" width="140"/>
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js"></script>
+<script crossorigin="anonymous" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js"></script>
+<script async="" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-app-id="WB1FQYI187" data-index-name="springdocs" data-page-component="data-neo4j" data-page-version="8.1.0" data-stylesheet="../_/css/vendor/search.css" id="search-script" src="../_/js/vendor/search.js"></script>
+  
+
+</body></html>

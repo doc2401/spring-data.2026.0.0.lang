@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aggregation Framework Support :: Spring Data MongoDB</title>
+    <link rel="canonical" href="https://docs.spring.io/spring-data/mongo/reference/mongodb/aggregation-framework.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.18"> 
+    <meta name="version" content="5.1.0">
+    <meta name="component" content="data-mongodb">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-mongodb" data-version="5.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data MongoDB</span>
+  <span class="version">5.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../index.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../commons/upgrade.html">Upgrading Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../migration-guides.html">Migration Guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-2.x-to-3.x.html">Migration Guide from 2.x to 3.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-3.x-to-4.x.html">Migration Guide from 3.x to 4.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-4.x-to-5.x.html">Migration Guide from 4.x to 5.x</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../mongodb.html">MongoDB Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../preface.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="configuration.html">Connecting to MongoDB</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="template-api.html">Template API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-collection-management.html">Index and Collection Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-crud-operations.html">Saving, Updating, and Removing Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-query-operations.html">Querying Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="property-paths.html">Property Paths</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-document-count.html">Counting Documents</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link"  href="aggregation-framework.html">Aggregation Framework Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="template-gridfs.html">GridFS Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="mapping/mapping.html">Object Mapping</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/mapping-schema.html">JSON Schema</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/custom-conversions.html">Type based Converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/property-converters.html">Property Converters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/unwrapping-entities.html">Unwrapping Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/document-references.html">Object References</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/mapping-index-management.html">Index Creation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="value-expressions.html">Value Expressions Fundamentals</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="lifecycle-events.html">Lifecycle Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="client-session-transactions.html">Sessions &amp; Transactions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="change-streams.html">Change Streams</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="tailable-cursors.html">Tailable Cursors</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="sharding.html">Sharding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="mongo-search-indexes.html">MongoDB Search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="mongo-encryption.html">Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="aot.html">Ahead of Time Optimizations</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories.html">Repositories</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-concepts.html">Core concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/definition.html">Defining Repository Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/repositories.html">MongoDB Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-extensions.html">Spring Data Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/create-instances.html">Creating Repository Instances</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods-details.html">Defining Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/query-methods.html">MongoDB-specific Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/vector-search.html">Vector Search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/modifying-methods.html">MongoDB-specific Data Manipulation Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/projections.html">Projections</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/custom-implementations.html">Custom Repository Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-domain-events.html">Publishing Events from Aggregate Roots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/null-handling.html">Null Handling of Repository Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/cdi-integration.html">CDI Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-keywords-reference.html">Repository query keywords</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-return-types-reference.html">Repository query return types</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../observability/observability.html">Observability</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/conventions.html">Conventions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/metrics.html">Metrics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/spans.html">Spans</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../kotlin.html">Kotlin Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/null-safety.html">Null Safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/extensions.html">Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/coroutines.html">Coroutines</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external"  target="_blank" href="../api/java/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external"  target="_blank" href="https://github.com/spring-projects/spring-data-commons/wiki">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="Aggregation Framework Support"
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/aggregation-framework.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+        <a href="https://github.com/spring-projects/spring-data-mongodb" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><![CDATA[
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Spring Data MongoDB</a></li>
+      <li><a href="../mongodb.html">MongoDB Support</a></li>
+      <li><a href="template-api.html">Template API</a></li>
+      <li><a href="aggregation-framework.html">Aggregation Framework Support</a></li>
+    </ul>
+  </nav>
+</div><h1 id="page-title" class="page">Aggregation Framework Support</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data MongoDB provides support for the Aggregation Framework introduced to MongoDB in version 2.2.</p>
+</div>
+<div class="paragraph">
+<p>For further information, see the full <a href="https://docs.mongodb.org/manual/aggregation/">reference documentation</a> of the aggregation framework and other data aggregation tools for MongoDB.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.aggregation.basic-concepts"><a class="anchor" href="#mongo.aggregation.basic-concepts"></a>Basic Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Aggregation Framework support in Spring Data MongoDB is based on the following key abstractions: <code><a href="../api/java/org/springframework/data/mongodb/core/aggregation/Aggregation.html" class="xref attachment apiref">Aggregation</a></code> and <code><a href="../api/java/org/springframework/data/mongodb/core/aggregation/AggregationResults.html" class="xref attachment apiref">AggregationResults</a></code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Aggregation</code></p>
+<div class="paragraph">
+<p>An <code>Aggregation</code> represents a MongoDB <code>aggregate</code> operation and holds the description of the aggregation pipeline instructions. Aggregations are created by invoking the appropriate <code>newAggregation(…)</code> static factory method of the <code>Aggregation</code> class, which takes a list of <code>AggregateOperation</code> and an optional input class.</p>
+</div>
+<div class="paragraph">
+<p>The actual aggregate operation is run by the <code>aggregate</code> method of the <code>MongoTemplate</code>, which takes the desired output class as a parameter.</p>
+</div>
+</li>
+<li>
+<p><code>TypedAggregation</code></p>
+<div class="paragraph">
+<p>A <code>TypedAggregation</code>, just like an <code>Aggregation</code>, holds the instructions of the aggregation pipeline and a reference to the input type, that is used for mapping domain properties to actual document fields.</p>
+</div>
+<div class="paragraph">
+<p>At runtime, field references get checked against the given input type, considering potential <code>@Field</code> annotations.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Changed in 3.2 referencing non-existent properties does no longer raise errors. To restore the previous behaviour use the <code>strictMapping</code> option of <code>AggregationOptions</code>.</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AggregationDefinition</code></p>
+<div class="paragraph">
+<p>An <code>AggregationDefinition</code> represents a MongoDB aggregation pipeline operation and describes the processing that should be performed in this aggregation step. Although you could manually create an <code>AggregationDefinition</code>, we recommend using the static factory methods provided by the <code>Aggregate</code> class to construct an <code>AggregateOperation</code>.</p>
+</div>
+</li>
+<li>
+<p><code>AggregationResults</code></p>
+<div class="paragraph">
+<p><code>AggregationResults</code> is the container for the result of an aggregate operation. It provides access to the raw aggregation result, in the form of a <code>Document</code> to the mapped objects and other information about the aggregation.</p>
+</div>
+<div class="paragraph">
+<p>The following listing shows the canonical example for using the Spring Data MongoDB support for the MongoDB Aggregation Framework:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">Aggregation agg = newAggregation(
+    pipelineOP1(),
+    pipelineOP2(),
+    pipelineOPn()
+);
+
+AggregationResults&lt;OutputType&gt; results = mongoTemplate.aggregate(agg, "INPUT_COLLECTION_NAME", OutputType.class);
+List&lt;OutputType&gt; mappedResult = results.getMappedResults();</span></code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that, if you provide an input class as the first parameter to the <code>newAggregation</code> method, the <code>MongoTemplate</code> derives the name of the input collection from this class. Otherwise, if you do not not specify an input class, you must provide the name of the input collection explicitly. If both an input class and an input collection are provided, the latter takes precedence.</p>
+</div>
+<details id="aggregation-stages">
+<summary class="title">Supported Aggregation Operations &amp; Stages</summary>
+<div class="content">
+<div class="paragraph">
+<p>The MongoDB Aggregation Framework provides the following types of aggregation stages and operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>addFields - <code>AddFieldsOperation</code></p>
+</li>
+<li>
+<p>bucket / bucketAuto - <code>BucketOperation</code> / <code>BucketAutoOperation</code></p>
+</li>
+<li>
+<p>count - <code>CountOperation</code></p>
+</li>
+<li>
+<p>densify - <code>DensifyOperation</code></p>
+</li>
+<li>
+<p>facet - <code>FacetOperation</code></p>
+</li>
+<li>
+<p>geoNear - <code>GeoNearOperation</code></p>
+</li>
+<li>
+<p>graphLookup - <code>GraphLookupOperation</code></p>
+</li>
+<li>
+<p>group - <code>GroupOperation</code></p>
+</li>
+<li>
+<p>limit - <code>LimitOperation</code></p>
+</li>
+<li>
+<p>lookup - <code>LookupOperation</code></p>
+</li>
+<li>
+<p>match - <code>MatchOperation</code></p>
+</li>
+<li>
+<p>merge - <code>MergeOperation</code></p>
+</li>
+<li>
+<p>project - <code>ProjectionOperation</code></p>
+</li>
+<li>
+<p>redact - <code>RedactOperation</code></p>
+</li>
+<li>
+<p>replaceRoot - <code>ReplaceRootOperation</code></p>
+</li>
+<li>
+<p>sample - <code>SampleOperation</code></p>
+</li>
+<li>
+<p>set - <code>SetOperation</code></p>
+</li>
+<li>
+<p>setWindowFields - <code>SetWindowFieldsOperation</code></p>
+</li>
+<li>
+<p>skip - <code>SkipOperation</code></p>
+</li>
+<li>
+<p>sort / sortByCount - <code>SortOperation</code> / <code>SortByCountOperation</code></p>
+</li>
+<li>
+<p>unionWith - <code>UnionWithOperation</code></p>
+</li>
+<li>
+<p>unset - <code>UnsetOperation</code></p>
+</li>
+<li>
+<p>unwind - <code>UnwindOperation</code></p>
+</li>
+</ul>
+</div>
+</div>
+</details>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Unsupported aggregation stages (like <a href="https://www.mongodb.com/docs/atlas/atlas-search/query-syntax/">$search</a> for MongoDB Atlas) can be provided by implementing either <code>AggregationOperation</code>.
+<code>Aggregation.stage</code> is a shortcut for registering a pipeline stage by providing its JSON or <code>Bson</code> representation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Aggregation.stage("""
+    { $search : {
+        "near": {
+          "path": "released",
+          "origin": { "$date": { "$numberLong": "..." } } ,
+          "pivot": 7
+        }
+      }
+    }
+""");</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>At the time of this writing, we provide support for the following Aggregation Operators in Spring Data MongoDB:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Aggregation Operators currently supported by Spring Data MongoDB</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>setEquals</code>, <code>setIntersection</code>, <code>setUnion</code>, <code>setDifference</code>, <code>setIsSubset</code>, <code>anyElementTrue</code>, <code>allElementsTrue</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Group/Accumulator Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addToSet</code>, <code>bottom</code>, <code>bottomN</code>, <code>covariancePop</code>, <code>covarianceSamp</code>, <code>expMovingAvg</code>, <code>first</code>, <code>firstN</code>, <code>last</code>, <code>lastN</code> <code>max</code>, <code>maxN</code>, <code>min</code>, <code>minN</code>, <code>avg</code>, <code>push</code>, <code>sum</code>, <code>top</code>, <code>topN</code>, <code>count</code> (*), <code>median</code>, <code>percentile</code>, <code>stdDevPop</code>, <code>stdDevSamp</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arithmetic Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>abs</code>, <code>acos</code>, <code>acosh</code>, <code>add</code> (* via <code>plus</code>), <code>asin</code>, <code>asin</code>, <code>atan</code>, <code>atan2</code>, <code>atanh</code>, <code>ceil</code>, <code>cos</code>, <code>cosh</code>, <code>derivative</code>, <code>divide</code>, <code>exp</code>, <code>floor</code>, <code>integral</code>, <code>ln</code>, <code>log</code>, <code>log10</code>, <code>mod</code>, <code>multiply</code>, <code>pow</code>, <code>round</code>, <code>sqrt</code>, <code>subtract</code> (* via <code>minus</code>), <code>sin</code>, <code>sinh</code>, <code>tan</code>, <code>tanh</code>, <code>trunc</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>concat</code>, <code>substr</code>, <code>toLower</code>, <code>toUpper</code>, <code>strcasecmp</code>, <code>indexOfBytes</code>, <code>indexOfCP</code>, <code>regexFind</code>, <code>regexFindAll</code>, <code>regexMatch</code>, <code>replaceAll</code>, <code>replaceOne</code>, <code>split</code>, <code>strLenBytes</code>, <code>strLenCP</code>, <code>substrCP</code>, <code>trim</code>, <code>ltrim</code>, <code>rtim</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comparison Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eq</code> (* via <code>is</code>), <code>gt</code>, <code>gte</code>, <code>lt</code>, <code>lte</code>, <code>ne</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>arrayElementAt</code>, <code>arrayToObject</code>, <code>concatArrays</code>, <code>filter</code>, <code>first</code>, <code>in</code>, <code>indexOfArray</code>, <code>isArray</code>, <code>last</code>, <code>range</code>, <code>reverseArray</code>, <code>reduce</code>, <code>size</code>, <code>sortArray</code>, <code>slice</code>, <code>zip</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literal Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>literal</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dateSubstract</code>, <code>dateTrunc</code>, <code>dayOfYear</code>, <code>dayOfMonth</code>, <code>dayOfWeek</code>, <code>year</code>, <code>month</code>, <code>week</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, <code>millisecond</code>, <code>dateAdd</code>, <code>dateDiff</code>, <code>dateToString</code>, <code>dateFromString</code>, <code>dateFromParts</code>, <code>dateToParts</code>, <code>isoDayOfWeek</code>, <code>isoWeek</code>, <code>isoWeekYear</code>, <code>tsIncrement</code>, <code>tsSecond</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Variable Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>map</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conditional Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cond</code>, <code>ifNull</code>, <code>switch</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>convert</code>, <code>degreesToRadians</code>, <code>toBool</code>, <code>toDate</code>, <code>toDecimal</code>, <code>toDouble</code>, <code>toInt</code>, <code>toLong</code>, <code>toObjectId</code>, <code>toString</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>objectToArray</code>, <code>mergeObjects</code>, <code>getField</code>, <code>setField</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Script Aggregation Operators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>function</code>, <code>accumulator</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>* The operation is mapped or added by Spring Data MongoDB.</p>
+</div>
+<div class="paragraph">
+<p>Note that the aggregation operations not listed here are currently not supported by Spring Data MongoDB. Comparison aggregation operators are expressed as <code>Criteria</code> expressions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.aggregation.projection"><a class="anchor" href="#mongo.aggregation.projection"></a>Projection Expressions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Projection expressions are used to define the fields that are the outcome of a particular aggregation step. Projection expressions can be defined through the <code>project</code> method of the <code>Aggregation</code> class, either by passing a list of <code>String</code> objects or an aggregation framework <code>Fields</code> object. The projection can be extended with additional fields through a fluent API by using the <code>and(String)</code> method and aliased by using the <code>as(String)</code> method.
+Note that you can also define fields with aliases by using the <code>Fields.field</code> static factory method of the aggregation framework, which you can then use to construct a new <code>Fields</code> instance. References to projected fields in later aggregation stages are valid only for the field names of included fields or their aliases (including newly defined fields and their aliases). Fields not included in the projection cannot be referenced in later aggregation stages. The following listings show examples of projection expression:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Projection expression examples</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// generates {$project: {name: 1, netPrice: 1}}
+project("name", "netPrice")
+
+// generates {$project: {thing1: $thing2}}
+project().and("thing1").as("thing2")
+
+// generates {$project: {a: 1, b: 1, thing2: $thing1}}
+project("a","b").and("thing1").as("thing2")</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Multi-Stage Aggregation using Projection and Sorting</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// generates {$project: {name: 1, netPrice: 1}}, {$sort: {name: 1}}
+project("name", "netPrice"), sort(ASC, "name")
+
+// generates {$project: {name: $firstname}}, {$sort: {name: 1}}
+project().and("firstname").as("name"), sort(ASC, "name")
+
+// does not work
+project().and("firstname").as("name"), sort(ASC, "firstname")</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>More examples for project operations can be found in the <code>AggregationTests</code> class. Note that further details regarding the projection expressions can be found in the <a href="https://docs.mongodb.org/manual/reference/operator/aggregation/project/#pipe._S_project">corresponding section</a> of the MongoDB Aggregation Framework reference documentation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo.aggregation.facet"><a class="anchor" href="#mongo.aggregation.facet"></a>Faceted Classification</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As of Version 3.4, MongoDB supports faceted classification by using the Aggregation Framework. A faceted classification uses semantic categories (either general or subject-specific) that are combined to create the full classification entry. Documents flowing through the aggregation pipeline are classified into buckets. A multi-faceted classification enables various aggregations on the same set of input documents, without needing to retrieve the input documents multiple times.</p>
+</div>
+<div class="sect2">
+<h3 id="buckets"><a class="anchor" href="#buckets"></a>Buckets</h3>
+<div class="paragraph">
+<p>Bucket operations categorize incoming documents into groups, called buckets, based on a specified expression and bucket boundaries. Bucket operations require a grouping field or a grouping expression. You can define them by using the <code>bucket()</code> and <code>bucketAuto()</code> methods of the <code>Aggregate</code> class. <code>BucketOperation</code> and <code>BucketAutoOperation</code> can expose accumulations based on aggregation expressions for input documents. You can extend the bucket operation with additional parameters through a fluent API by using the <code>with…()</code> methods and the <code>andOutput(String)</code> method. You can alias the operation by using the <code>as(String)</code> method. Each bucket is represented as a document in the output.</p>
+</div>
+<div class="paragraph">
+<p><code>BucketOperation</code> takes a defined set of boundaries to group incoming documents into these categories. Boundaries are required to be sorted. The following listing shows some examples of bucket operations:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Bucket operation examples</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// generates {$bucket: {groupBy: $price, boundaries: [0, 100, 400]}}
+bucket("price").withBoundaries(0, 100, 400);
+
+// generates {$bucket: {groupBy: $price, default: "Other" boundaries: [0, 100]}}
+bucket("price").withBoundaries(0, 100).withDefault("Other");
+
+// generates {$bucket: {groupBy: $price, boundaries: [0, 100], output: { count: { $sum: 1}}}}
+bucket("price").withBoundaries(0, 100).andOutputCount().as("count");
+
+// generates {$bucket: {groupBy: $price, boundaries: [0, 100], 5, output: { titles: { $push: "$title"}}}
+bucket("price").withBoundaries(0, 100).andOutput("title").push().as("titles");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><code>BucketAutoOperation</code> determines boundaries in an attempt to evenly distribute documents into a specified number of buckets. <code>BucketAutoOperation</code> optionally takes a granularity value that specifies the <a href="https://en.wikipedia.org/wiki/Preferred_number">preferred number</a> series to use to ensure that the calculated boundary edges end on preferred round numbers or on powers of 10. The following listing shows examples of bucket operations:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. Bucket operation examples</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// generates {$bucketAuto: {groupBy: $price, buckets: 5}}
+bucketAuto("price", 5)
+
+// generates {$bucketAuto: {groupBy: $price, buckets: 5, granularity: "E24"}}
+bucketAuto("price", 5).withGranularity(Granularities.E24).withDefault("Other");
+
+// generates {$bucketAuto: {groupBy: $price, buckets: 5, output: { titles: { $push: "$title"}}}
+bucketAuto("price", 5).andOutput("title").push().as("titles");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>To create output fields in buckets, bucket operations can use <code>AggregationExpression</code> through <code>andOutput()</code> and <a href="#mongo.aggregation.projection.expressions">SpEL expressions</a> through <code>andOutputExpression()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Note that further details regarding bucket expressions can be found in the <a href="https://docs.mongodb.org/manual/reference/operator/aggregation/bucket/"><code>$bucket</code> section</a> and
+<a href="https://docs.mongodb.org/manual/reference/operator/aggregation/bucketAuto/"><code>$bucketAuto</code> section</a> of the MongoDB Aggregation Framework reference documentation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="multi-faceted-aggregation"><a class="anchor" href="#multi-faceted-aggregation"></a>Multi-faceted Aggregation</h3>
+<div class="paragraph">
+<p>Multiple aggregation pipelines can be used to create multi-faceted aggregations that characterize data across multiple dimensions (or facets) within a single aggregation stage. Multi-faceted aggregations provide multiple filters and categorizations to guide data browsing and analysis. A common implementation of faceting is how many online retailers provide ways to narrow down search results by applying filters on product price, manufacturer, size, and other factors.</p>
+</div>
+<div class="paragraph">
+<p>You can define a <code>FacetOperation</code> by using the <code>facet()</code> method of the <code>Aggregation</code> class. You can customize it with multiple aggregation pipelines by using the <code>and()</code> method. Each sub-pipeline has its own field in the output document where its results are stored as an array of documents.</p>
+</div>
+<div class="paragraph">
+<p>Sub-pipelines can project and filter input documents prior to grouping. Common use cases include extraction of date parts or calculations before categorization. The following listing shows facet operation examples:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. Facet operation examples</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// generates {$facet: {categorizedByPrice: [ { $match: { price: {$exists : true}}}, { $bucketAuto: {groupBy: $price, buckets: 5}}]}}
+facet(match(Criteria.where("price").exists(true)), bucketAuto("price", 5)).as("categorizedByPrice"))
+
+// generates {$facet: {categorizedByCountry: [ { $match: { country: {$exists : true}}}, { $sortByCount: "$country"}]}}
+facet(match(Criteria.where("country").exists(true)), sortByCount("country")).as("categorizedByCountry"))
+
+// generates {$facet: {categorizedByYear: [
+//     { $project: { title: 1, publicationYear: { $year: "publicationDate"}}},
+//     { $bucketAuto: {groupBy: $price, buckets: 5, output: { titles: {$push:"$title"}}}
+// ]}}
+facet(project("title").and("publicationDate").extractYear().as("publicationYear"),
+      bucketAuto("publicationYear", 5).andOutput("title").push().as("titles"))
+  .as("categorizedByYear"))</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that further details regarding facet operation can be found in the <a href="https://docs.mongodb.org/manual/reference/operator/aggregation/facet/"><code>$facet</code> section</a> of the MongoDB Aggregation Framework reference documentation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo.aggregation.sort-by-count"><a class="anchor" href="#mongo.aggregation.sort-by-count"></a>Sort By Count</h3>
+<div class="paragraph">
+<p>Sort by count operations group incoming documents based on the value of a specified expression, compute the count of documents in each distinct group, and sort the results by count. It offers a handy shortcut to apply sorting when using <a href="#mongo.aggregation.facet">Faceted Classification</a>. Sort by count operations require a grouping field or grouping expression. The following listing shows a sort by count example:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. Sort by count example</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// generates { $sortByCount: "$country" }
+sortByCount("country");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>A sort by count operation is equivalent to the following BSON (Binary JSON):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{ $group: { _id: &lt;expression&gt;, count: { $sum: 1 } } },
+{ $sort: { count: -1 } }</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo.aggregation.projection.expressions"><a class="anchor" href="#mongo.aggregation.projection.expressions"></a>Spring Expression Support in Projection Expressions</h3>
+<div class="paragraph">
+<p>We support the use of SpEL expressions in projection expressions through the <code>andExpression</code> method of the <code>ProjectionOperation</code> and <code>BucketOperation</code> classes. This feature lets you define the desired expression as a SpEL expression. On running a query, the SpEL expression is translated into a corresponding MongoDB projection expression part. This arrangement makes it much easier to express complex calculations.</p>
+</div>
+<div class="sect3">
+<h4 id="complex-calculations-with-spel-expressions"><a class="anchor" href="#complex-calculations-with-spel-expressions"></a>Complex Calculations with SpEL expressions</h4>
+<div class="paragraph">
+<p>Consider the following SpEL expression:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">1 + (q + 1) / (q - 1)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding expression is translated into the following projection expression part:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">{ "$add" : [ 1, {
+    "$divide" : [ {
+        "$add":["$q", 1]}, {
+        "$subtract":[ "$q", 1]}
+    ]
+}]}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can see examples in more context in <a href="#mongo.aggregation.examples.example5">Aggregation Framework Example 5</a> and <a href="#mongo.aggregation.examples.example6">Aggregation Framework Example 6</a>.
+You can find more usage examples for supported SpEL expression constructs in <code>SpelExpressionTransformerUnitTests</code>.</p>
+</div>
+<details>
+<summary class="title">Supported SpEL transformations</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">SpEL Expression</th>
+<th class="tableblock halign-left valign-top">Mongo Expression Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a == b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $eq : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a != b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $ne : [$a , $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &gt; b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $gt : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &gt;= b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $gte : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &lt; b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $lt : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &#8656; b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $lte : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a + b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $add : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a - b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $subtract : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a * b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $multiply : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a / b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $divide : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a^b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $pow : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a % b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $mod : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a &amp;&amp; b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $and : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a || b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $or : [$a, $b] }</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{ $not : [$a] }</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<div class="paragraph">
+<p>In addition to the transformations shown in the preceding table, you can use standard SpEL operations such as <code>new</code> to (for example) create arrays and reference expressions through their names (followed by the arguments to use in brackets). The following example shows how to create an array in this fashion:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// { $setEquals : [$a, [5, 8, 13] ] }
+.andExpression("setEquals(a, new int[]{5, 8, 13})");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo.aggregation.examples"><a class="anchor" href="#mongo.aggregation.examples"></a>Aggregation Framework Examples</h3>
+<div class="paragraph">
+<p>The examples in this section demonstrate the usage patterns for the MongoDB Aggregation Framework with Spring Data MongoDB.</p>
+</div>
+<div class="sect3">
+<h4 id="mongo.aggregation.examples.example1"><a class="anchor" href="#mongo.aggregation.examples.example1"></a>Aggregation Framework Example 1</h4>
+<div class="paragraph">
+<p>In this introductory example, we want to aggregate a list of tags to get the occurrence count of a particular tag from a MongoDB collection (called <code>tags</code>) sorted by the occurrence count in descending order. This example demonstrates the usage of grouping, sorting, projections (selection), and unwinding (result splitting).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class TagCount {
+ String tag;
+ int n;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">Aggregation agg = newAggregation(
+    project("tags"),
+    unwind("tags"),
+    group("tags").count().as("n"),
+    project("n").and("tag").previousOperation(),
+    sort(DESC, "n")
+);
+
+AggregationResults&lt;TagCount&gt; results = mongoTemplate.aggregate(agg, "tags", TagCount.class);
+List&lt;TagCount&gt; tagCount = results.getMappedResults();</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding listing uses the following algorithm:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new aggregation by using the <code>newAggregation</code> static factory method, to which we pass a list of aggregation operations. These aggregate operations define the aggregation pipeline of our <code>Aggregation</code>.</p>
+</li>
+<li>
+<p>Use the <code>project</code> operation to select the <code>tags</code> field (which is an array of strings) from the input collection.</p>
+</li>
+<li>
+<p>Use the <code>unwind</code> operation to generate a new document for each tag within the <code>tags</code> array.</p>
+</li>
+<li>
+<p>Use the <code>group</code> operation to define a group for each <code>tags</code> value for which we aggregate the occurrence count (by using the <code>count</code> aggregation operator and collecting the result in a new field called <code>n</code>).</p>
+</li>
+<li>
+<p>Select the <code>n</code> field and create an alias for the ID field generated from the previous group operation (hence the call to <code>previousOperation()</code>) with a name of <code>tag</code>.</p>
+</li>
+<li>
+<p>Use the <code>sort</code> operation to sort the resulting list of tags by their occurrence count in descending order.</p>
+</li>
+<li>
+<p>Call the <code>aggregate</code> method on <code>MongoTemplate</code> to let MongoDB perform the actual aggregation operation, with the created <code>Aggregation</code> as an argument.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that the input collection is explicitly specified as the <code>tags</code> parameter to the <code>aggregate</code> Method. If the name of the input collection is not specified explicitly, it is derived from the input class passed as the first parameter to the <code>newAggreation</code> method.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mongo.aggregation.examples.example2"><a class="anchor" href="#mongo.aggregation.examples.example2"></a>Aggregation Framework Example 2</h4>
+<div class="paragraph">
+<p>This example is based on the <a href="https://docs.mongodb.org/manual/tutorial/aggregation-examples/#largest-and-smallest-cities-by-state">Largest and Smallest Cities by State</a> example from the MongoDB Aggregation Framework documentation. We added additional sorting to produce stable results with different MongoDB versions. Here we want to return the smallest and largest cities by population for each state by using the aggregation framework. This example demonstrates grouping, sorting, and projections (selection).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class ZipInfo {
+   String id;
+   String city;
+   String state;
+   @Field("pop") int population;
+   @Field("loc") double[] location;
+}
+
+class City {
+   String name;
+   int population;
+}
+
+class ZipInfoStats {
+   String id;
+   String state;
+   City biggestCity;
+   City smallestCity;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">TypedAggregation&lt;ZipInfo&gt; aggregation = newAggregation(ZipInfo.class,
+    group("state", "city")
+       .sum("population").as("pop"),
+    sort(ASC, "pop", "state", "city"),
+    group("state")
+       .last("city").as("biggestCity")
+       .last("pop").as("biggestPop")
+       .first("city").as("smallestCity")
+       .first("pop").as("smallestPop"),
+    project()
+       .and("state").previousOperation()
+       .and("biggestCity")
+          .nested(bind("name", "biggestCity").and("population", "biggestPop"))
+       .and("smallestCity")
+          .nested(bind("name", "smallestCity").and("population", "smallestPop")),
+    sort(ASC, "state")
+);
+
+AggregationResults&lt;ZipInfoStats&gt; result = mongoTemplate.aggregate(aggregation, ZipInfoStats.class);
+ZipInfoStats firstZipInfoStats = result.getMappedResults().get(0);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the <code>ZipInfo</code> class maps the structure of the given input-collection. The <code>ZipInfoStats</code> class defines the structure in the desired output format.</p>
+</div>
+<div class="paragraph">
+<p>The preceding listings use the following algorithm:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use the <code>group</code> operation to define a group from the input-collection. The grouping criteria is the combination of the <code>state</code> and <code>city</code> fields, which forms the ID structure of the group. We aggregate the value of the <code>population</code> property from the grouped elements by using the <code>sum</code> operator and save the result in the <code>pop</code> field.</p>
+</li>
+<li>
+<p>Use the <code>sort</code> operation to sort the intermediate-result by the <code>pop</code>, <code>state</code> and <code>city</code> fields, in ascending order, such that the smallest city is at the top and the biggest city is at the bottom of the result. Note that the sorting on <code>state</code> and <code>city</code> is implicitly performed against the group ID fields (which Spring Data MongoDB handled).</p>
+</li>
+<li>
+<p>Use a <code>group</code> operation again to group the intermediate result by <code>state</code>. Note that <code>state</code> again implicitly references a group ID field. We select the name and the population count of the biggest and smallest city with calls to the <code>last(…)</code> and <code>first(&#8230;&#8203;)</code> operators, respectively, in the <code>project</code> operation.</p>
+</li>
+<li>
+<p>Select the <code>state</code> field from the previous <code>group</code> operation. Note that <code>state</code> again implicitly references a group ID field. Because we do not want an implicitly generated ID to appear, we exclude the ID from the previous operation by using <code>and(previousOperation()).exclude()</code>. Because we want to populate the nested <code>City</code> structures in our output class, we have to emit appropriate sub-documents by using the nested method.</p>
+</li>
+<li>
+<p>Sort the resulting list of <code>StateStats</code> by their state name in ascending order in the <code>sort</code> operation.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that we derive the name of the input collection from the <code>ZipInfo</code> class passed as the first parameter to the <code>newAggregation</code> method.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mongo.aggregation.examples.example3"><a class="anchor" href="#mongo.aggregation.examples.example3"></a>Aggregation Framework Example 3</h4>
+<div class="paragraph">
+<p>This example is based on the <a href="https://docs.mongodb.org/manual/tutorial/aggregation-examples/#states-with-populations-over-10-million">States with Populations Over 10 Million</a> example from the MongoDB Aggregation Framework documentation. We added additional sorting to produce stable results with different MongoDB versions. Here we want to return all states with a population greater than 10 million, using the aggregation framework. This example demonstrates grouping, sorting, and matching (filtering).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class StateStats {
+   @Id String id;
+   String state;
+   @Field("totalPop") int totalPopulation;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">TypedAggregation&lt;ZipInfo&gt; agg = newAggregation(ZipInfo.class,
+    group("state").sum("population").as("totalPop"),
+    sort(ASC, previousOperation(), "totalPop"),
+    match(where("totalPop").gte(10 * 1000 * 1000))
+);
+
+AggregationResults&lt;StateStats&gt; result = mongoTemplate.aggregate(agg, StateStats.class);
+List&lt;StateStats&gt; stateStatsList = result.getMappedResults();</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding listings use the following algorithm:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Group the input collection by the <code>state</code> field and calculate the sum of the <code>population</code> field and store the result in the new field <code>"totalPop"</code>.</p>
+</li>
+<li>
+<p>Sort the intermediate result by the id-reference of the previous group operation in addition to the <code>"totalPop"</code> field in ascending order.</p>
+</li>
+<li>
+<p>Filter the intermediate result by using a <code>match</code> operation which accepts a <code>Criteria</code> query as an argument.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that we derive the name of the input collection from the <code>ZipInfo</code> class passed as first parameter to the <code>newAggregation</code> method.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mongo.aggregation.examples.example4"><a class="anchor" href="#mongo.aggregation.examples.example4"></a>Aggregation Framework Example 4</h4>
+<div class="paragraph">
+<p>This example demonstrates the use of simple arithmetic operations in the projection operation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Product {
+    String id;
+    String name;
+    double netPrice;
+    int spaceUnits;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">TypedAggregation&lt;Product&gt; agg = newAggregation(Product.class,
+    project("name", "netPrice")
+        .and("netPrice").plus(1).as("netPricePlus1")
+        .and("netPrice").minus(1).as("netPriceMinus1")
+        .and("netPrice").multiply(1.19).as("grossPrice")
+        .and("netPrice").divide(2).as("netPriceDiv2")
+        .and("spaceUnits").mod(2).as("spaceUnitsMod2")
+);
+
+AggregationResults&lt;Document&gt; result = mongoTemplate.aggregate(agg, Document.class);
+List&lt;Document&gt; resultList = result.getMappedResults();</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that we derive the name of the input collection from the <code>Product</code> class passed as first parameter to the <code>newAggregation</code> method.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mongo.aggregation.examples.example5"><a class="anchor" href="#mongo.aggregation.examples.example5"></a>Aggregation Framework Example 5</h4>
+<div class="paragraph">
+<p>This example demonstrates the use of simple arithmetic operations derived from SpEL Expressions in the projection operation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Product {
+    String id;
+    String name;
+    double netPrice;
+    int spaceUnits;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">TypedAggregation&lt;Product&gt; agg = newAggregation(Product.class,
+    project("name", "netPrice")
+        .andExpression("netPrice + 1").as("netPricePlus1")
+        .andExpression("netPrice - 1").as("netPriceMinus1")
+        .andExpression("netPrice / 2").as("netPriceDiv2")
+        .andExpression("netPrice * 1.19").as("grossPrice")
+        .andExpression("spaceUnits % 2").as("spaceUnitsMod2")
+        .andExpression("(netPrice * 0.8  + 1.2) * 1.19").as("grossPriceIncludingDiscountAndCharge")
+
+);
+
+AggregationResults&lt;Document&gt; result = mongoTemplate.aggregate(agg, Document.class);
+List&lt;Document&gt; resultList = result.getMappedResults();</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mongo.aggregation.examples.example6"><a class="anchor" href="#mongo.aggregation.examples.example6"></a>Aggregation Framework Example 6</h4>
+<div class="paragraph">
+<p>This example demonstrates the use of complex arithmetic operations derived from SpEL Expressions in the projection operation.</p>
+</div>
+<div class="paragraph">
+<p>Note: The additional parameters passed to the <code>addExpression</code> method can be referenced with indexer expressions according to their position. In this example, we reference the first parameter of the parameters array with <code>[0]</code>. When the SpEL expression is transformed into a MongoDB aggregation framework expression, external parameter expressions are replaced with their respective values.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Product {
+    String id;
+    String name;
+    double netPrice;
+    int spaceUnits;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">double shippingCosts = 1.2;
+
+TypedAggregation&lt;Product&gt; agg = newAggregation(Product.class,
+    project("name", "netPrice")
+        .andExpression("(netPrice * (1-discountRate)  + [0]) * (1+taxRate)", shippingCosts).as("salesPrice")
+);
+
+AggregationResults&lt;Document&gt; result = mongoTemplate.aggregate(agg, Document.class);
+List&lt;Document&gt; resultList = result.getMappedResults();</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that we can also refer to other fields of the document within the SpEL expression.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mongo.aggregation.examples.example7"><a class="anchor" href="#mongo.aggregation.examples.example7"></a>Aggregation Framework Example 7</h4>
+<div class="paragraph">
+<p>This example uses conditional projection. It is derived from the <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/cond/">$cond reference documentation</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class InventoryItem {
+
+  @Id int id;
+  String item;
+  String description;
+  int qty;
+}
+
+public class InventoryItemProjection {
+
+  @Id int id;
+  String item;
+  String description;
+  int qty;
+  int discount
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
+
+</span><span class="fold-block">TypedAggregation&lt;InventoryItem&gt; agg = newAggregation(InventoryItem.class,
+  project("item").and("discount")
+    .applyCondition(ConditionalOperator.newBuilder().when(Criteria.where("qty").gte(250))
+      .then(30)
+      .otherwise(20))
+    .and(ifNull("description", "Unspecified")).as("description")
+);
+
+AggregationResults&lt;InventoryItemProjection&gt; result = mongoTemplate.aggregate(agg, "inventory", InventoryItemProjection.class);
+List&lt;InventoryItemProjection&gt; stateStatsList = result.getMappedResults();</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This one-step aggregation uses a projection operation with the <code>inventory</code> collection. We project the <code>discount</code> field by using a conditional operation for all inventory items that have a <code>qty</code> greater than or equal to <code>250</code>. A second conditional projection is performed for the <code>description</code> field. We apply the <code>Unspecified</code> description to all items that either do not have a <code>description</code> field or items that have a <code>null</code> description.</p>
+</div>
+<div class="paragraph">
+<p>As of MongoDB 3.6, it is possible to exclude fields from the projection by using a conditional expression.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 7. Conditional aggregation projection</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">TypedAggregation&lt;Book&gt; agg = Aggregation.newAggregation(Book.class,
+  project("title")
+    .and(ConditionalOperators.when(ComparisonOperators.valueOf("author.middle")     <i class="conum" data-value="1"></i><b>(1)</b>
+        .equalToValue(""))                                                          <i class="conum" data-value="2"></i><b>(2)</b>
+        .then("$$REMOVE")                                                           <i class="conum" data-value="3"></i><b>(3)</b>
+        .otherwiseValueOf("author.middle")                                          <i class="conum" data-value="4"></i><b>(4)</b>
+    )
+	.as("author.middle"));</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>If the value of the field <code>author.middle</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>does not contain a value,</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>then use <a href="https://docs.mongodb.com/manual/reference/aggregation-variables/#variable.REMOVE"><code>$$REMOVE</code></a> to exclude the field.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Otherwise, add the field value of <code>author.middle</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+
+                  <ul class="nav-versions">
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../data-commons/index.html">
+      4.1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">Spring Data MongoDB</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      5.1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>
+    Related Spring Documentation
+    <ul class="projects-list">
+        <li>
+<a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-framework/reference/">
+  Spring Framework
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Cloud
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Data
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a>
+</li>
+    </ul>
+  </li
+  <li><a href="../spring-projects.html">All Docs...</a></li>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">Copyright © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.<br /><a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/asciidoctor-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box">
+                    <a class="search-link" href="../search.html">Search in all Spring Docs</a>
+                </div>
+                <div class="search-by">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.algolia.com/" aria-label="Search by Algolia">
+                        <img class="light" width="140" src="../_/img/algolia-light.svg" />
+                        <img class="dark" width="140" src="../_/img/algolia-dark.svg" />
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" crossorigin="anonymous"></script>
+<script async id="search-script" src="../_/js/vendor/search.js" data-app-id="WB1FQYI187" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-index-name="springdocs" data-stylesheet="../_/css/vendor/search.css" data-page-version="5.1.0" data-page-component="data-mongodb"></script>
+  </body>
+</html>

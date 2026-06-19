@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Custom queries :: Spring Data Neo4j</title>
+    <link rel="canonical" href="https://docs.spring.io/spring-data/neo4j/reference/appendix/custom-queries.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="version" content="8.1.0">
+    <meta name="component" content="data-neo4j">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-neo4j" data-version="8.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Neo4j</span>
+  <span class="version">8.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../introduction-and-preface/index.html">Preface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/preface-neo4j.html">Introducing Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/preface-sd.html">Introducing Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/preface-sdn.html">Introducing Spring Data Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/building-blocks.html">Building blocks of Spring Data Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/new-and-noteworthy.html">New &amp; Noteworthy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../dependencies.html">Dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../object-mapping.html">Object Mapping</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../object-mapping/metadata-based-mapping.html">Metadata-based Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../object-mapping/mapping-ids.html">Handling and provisioning of unique IDs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../object-mapping/sdc-object-mapping.html">Spring Data Object Mapping Fundamentals</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories.html">Repositories</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-concepts.html">Core concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods.html">Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/definition.html">Defining Repository Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods-details.html">Defining Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/create-instances.html">Creating Repository Instances</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/custom-implementations.html">Custom Repository Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-domain-events.html">Publishing Events from Aggregate Roots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-extensions.html">Spring Data Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../query-by-example.html">Query by Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/scrolling.html">Scrolling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/sdn-extension.html">Spring Data Neo4j Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-keywords-reference.html">Repository query keywords</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-return-types-reference.html">Repository query return types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/vector-search.html">Neo4j Vector Search</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories/projections.html">Projections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../projections/sdn-projections.html">Spring Data Neo4j Projections</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../testing/testing-without-spring-boot.html">Without Spring Boot</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../testing/testing-with-spring-boot.html">With Spring Boot and <code>@DataNeo4jTest</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="index.html">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="conversions.html">Conversions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="neo4j-client.html">Neo4jClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="query-creation.html">Query creation</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link"  href="custom-queries.html">Custom queries</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="spatial-types.html">Spatial types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="migrating.html">Migrating from SDN+OGM to SDN</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="build.html">Building Spring Data Neo4j</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external"  target="_blank" href="../api/java/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external"  target="_blank" href="https://github.com/spring-projects/spring-data-commons/wiki">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="Custom queries"
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/appendix/custom-queries.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+        <a href="https://github.com/spring-projects/spring-data-neo4j" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><![CDATA[
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Spring Data Neo4j</a></li>
+      <li><a href="index.html">Appendix</a></li>
+      <li><a href="custom-queries.html">Custom queries</a></li>
+    </ul>
+  </nav>
+</div><h1 id="page-title" class="page">Custom queries</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data Neo4j, like all the other Spring Data modules, allows you to specify custom queries in you repositories.
+Those come in handy if you cannot express the finder logic via derived query functions.</p>
+</div>
+<div class="paragraph">
+<p>Because Spring Data Neo4j works heavily record-oriented under the hood, it is important to keep this in mind and not build up a result set with multiple records for the same "root node".</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Please have a look in the FAQ as well to learn about alternative forms of using custom queries from repositories, especially
+how to use custom queries with custom mappings: <a href="../faq.html#faq.custom-queries-and-custom-mappings" class="xref page">Custom queries and custom mappings</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-queries.for-relationships"><a class="anchor" href="#custom-queries.for-relationships"></a>Queries with relationships</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="custom-queries.for-relationships.cartesian-product"><a class="anchor" href="#custom-queries.for-relationships.cartesian-product"></a>Beware of the cartesian product</h3>
+<div class="paragraph">
+<p>Assuming you have a query like <code>MATCH (m:Movie{title: 'The Matrix'})&#8592;[r:ACTED_IN]-(p:Person) return m,r,p</code> that results into something like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">Multiple records (shortened)</div>
+<div class="content">
+<pre>+------------------------------------------------------------------------------------------+
+| m        | r                                    | p                                      |
++------------------------------------------------------------------------------------------+
+| (:Movie) | [:ACTED_IN {roles: ["Emil"]}]        | (:Person {name: "Emil Eifrem"})        |
+| (:Movie) | [:ACTED_IN {roles: ["Agent Smith"]}] | (:Person {name: "Hugo Weaving})        |
+| (:Movie) | [:ACTED_IN {roles: ["Morpheus"]}]    | (:Person {name: "Laurence Fishburne"}) |
+| (:Movie) | [:ACTED_IN {roles: ["Trinity"]}]     | (:Person {name: "Carrie-Anne Moss"})   |
+| (:Movie) | [:ACTED_IN {roles: ["Neo"]}]         | (:Person {name: "Keanu Reeves"})       |
++------------------------------------------------------------------------------------------+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The result from the mapping would be most likely unusable.
+If this would get mapped into a list, it will contain duplicates for the <code>Movie</code> but this movie will only have one relationship.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-queries.for-relationships.one.record"><a class="anchor" href="#custom-queries.for-relationships.one.record"></a>Getting one record per root node</h3>
+<div class="paragraph">
+<p>To get the right object(s) back, it is required to <em>collect</em> the relationships and related nodes in the query: <code>MATCH (m:Movie{title: 'The Matrix'})&#8592;[r:ACTED_IN]-(p:Person) return m,collect(r),collect(p)</code></p>
+</div>
+<div class="listingblock">
+<div class="title">Single record (shortened)</div>
+<div class="content">
+<pre>+------------------------------------------------------------------------+
+| m        | collect(r)                     | collect(p)                 |
++------------------------------------------------------------------------+
+| (:Movie) | [[:ACTED_IN], [:ACTED_IN], ...]| [(:Person), (:Person),...] |
++------------------------------------------------------------------------+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this result as a single record it is possible for Spring Data Neo4j to add all related nodes correctly to the root node.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-queries.for-relationships.long-paths"><a class="anchor" href="#custom-queries.for-relationships.long-paths"></a>Reaching deeper into the graph</h3>
+<div class="paragraph">
+<p>The example above assumes that you are only trying to fetch the first level of related nodes.
+This is sometimes not enough and there are maybe nodes deeper in the graph that should also be part of the mapped instance.
+There are two ways to achieve this: Database-side or client-side reduction.</p>
+</div>
+<div class="paragraph">
+<p>For this the example from above should also contain <code>Movies</code> on the <code>Persons</code> that get returned with the initial <code>Movie</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/movie-graph-deep.png" alt="image$movie graph deep">
+</div>
+<div class="title">Figure 1. Example for 'The Matrix' and 'Keanu Reeves'</div>
+</div>
+<div class="sect3">
+<h4 id="custom-queries.for-relationships.long-paths.database"><a class="anchor" href="#custom-queries.for-relationships.long-paths.database"></a>Database-side reduction</h4>
+<div class="paragraph">
+<p>Keeping in mind that Spring Data Neo4j can only properly process record based, the result for one entity instance needs to be in one record.
+Using <a href="https://neo4j.com/docs/cypher-manual/current/syntax/patterns/#cypher-pattern-path-variables">Cypher&#8217;s path</a> capabilities is a valid option to fetch all branches in the graph.</p>
+</div>
+<div class="listingblock">
+<div class="title">Naive path-based approach</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+RETURN p;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will result in multiple paths that are not merged within one record.
+It is possible to call <code>collect(p)</code> but Spring Data Neo4j does not understand the concept of paths in the mapping process.
+Thus, nodes and relationships needs to get extracted for the result.</p>
+</div>
+<div class="listingblock">
+<div class="title">Extracting nodes and relationships</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+RETURN m, nodes(p), relationships(p);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because there are multiple paths that lead from 'The Matrix' to another movie, the result still won&#8217;t be a single record.
+This is where <a href="https://neo4j.com/docs/cypher-manual/current/functions/list/#functions-reduce">Cypher&#8217;s reduce function</a> comes into play.</p>
+</div>
+<div class="listingblock">
+<div class="title">Reducing nodes and relationships</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+WITH collect(p) as paths, m
+WITH m,
+reduce(a=[], node in reduce(b=[], c in [aa in paths | nodes(aa)] | b + c) | case when node in a then a else a + node end) as nodes,
+reduce(d=[], relationship in reduce(e=[], f in [dd in paths | relationships(dd)] | e + f) | case when relationship in d then d else d + relationship end) as relationships
+RETURN m, relationships, nodes;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>reduce</code> function allows us to flatten the nodes and relationships from various paths.
+As a result we will get a tuple similar to <a href="#custom-queries.for-relationships.one.record">Getting one record per root node</a> but with a mixture of relationship types or nodes in the collections.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="custom-queries.for-relationships.long-paths.client"><a class="anchor" href="#custom-queries.for-relationships.long-paths.client"></a>Client-side reduction</h4>
+<div class="paragraph">
+<p>If the reduction should happen on the client-side, Spring Data Neo4j enables you to map also lists of lists of relationships or nodes.
+Still, the requirement applies that the returned record should contain all information to hydrate the resulting entity instance correctly.</p>
+</div>
+<div class="listingblock">
+<div class="title">Collect nodes and relationships from path</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p=(m:Movie{title: 'The Matrix'})&lt;-[:ACTED_IN]-(:Person)-[:ACTED_IN*..0]-&gt;(:Movie)
+RETURN m, collect(nodes(p)), collect(relationships(p));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The additional <code>collect</code> statement creates lists in the format:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[[rel1, rel2], [rel3, rel4]]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Those lists will now get converted during the mapping process into a flat list.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Deciding if you want to go with client-side or database-side reduction depends on the amount of data that will get generated.
+All the paths needs to get created in the database&#8217;s memory first when the <code>reduce</code> function is used.
+On the other hand a large amount of data that needs to get merged on the client-side results in a higher memory usage there.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-query.paths"><a class="anchor" href="#custom-query.paths"></a>Using paths to populate and return a list of entities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Given are a graph that looks like this:</p>
+</div>
+<div id="custom-query.paths.g" class="imageblock">
+<div class="content">
+<img src="../_images/custom-query.paths.png" alt="image$custom query.paths">
+</div>
+<div class="title">Figure 2. graph with outgoing relationships</div>
+</div>
+<div class="paragraph">
+<p>and a domain model as shown in the <a href="#custom-query.paths.dm">mapping</a> (Constructors and accessors have been omitted for brevity):</p>
+</div>
+<div id="custom-query.paths.dm" class="listingblock">
+<div class="title">Domain model for a <a href="#custom-query.paths.g">graph with outgoing relationships</a>.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node
+public class SomeEntity {
+
+    @Id
+    private final Long number;
+
+    private String name;
+
+    @Relationship(type = "SOME_RELATION_TO", direction = Relationship.Direction.OUTGOING)
+    private Set&lt;SomeRelation&gt; someRelationsOut = new HashSet&lt;&gt;();
+
+
+}
+
+@RelationshipProperties
+public class SomeRelation {
+
+    @RelationshipId
+    private Long id;
+
+    private String someData;
+
+    @TargetNode
+    private SomeEntity targetPerson;
+
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you see, the relationships are only outgoing. Generated finder methods (including <code>findById</code>) will always try to match
+a root node to be mapped. From there on onwards, all related objects will be mapped. In queries that should return only one object,
+that root object is returned. In queries that return many objects, all matching objects are returned. Out- and incoming relationships
+from those objects returned are of course populated.</p>
+</div>
+<div class="paragraph">
+<p>Assume the following Cypher query:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p = (leaf:SomeEntity {number: $a})-[:SOME_RELATION_TO*]-(:SomeEntity)
+RETURN leaf, collect(nodes(p)), collect(relationships(p))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It follows the recommendation from <a href="#custom-queries.for-relationships.one.record">Getting one record per root node</a> and it works great for the leaf node
+you want to match here. However: That is only the case in all scenarios that return 0 or 1 mapped objects.
+While that query will populate all relationships like before, it won&#8217;t return all 4 objects.</p>
+</div>
+<div class="paragraph">
+<p>This can be changed by returning the whole path:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p = (leaf:SomeEntity {number: $a})-[:SOME_RELATION_TO*]-(:SomeEntity)
+RETURN p</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here we do want to use the fact that the path <code>p</code> actually returns 3 rows with paths to all 4 nodes. All 4 nodes will be
+populated, linked together and returned.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-queries.parameters"><a class="anchor" href="#custom-queries.parameters"></a>Parameters in custom queries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You do this exactly the same way as in a standard Cypher query issued in the Neo4j Browser or the Cypher-Shell,
+with the <code>$</code> syntax (from Neo4j 4.0 on upwards, the old <code>${foo}</code> syntax for Cypher parameters has been removed from the database).</p>
+</div>
+<div class="listingblock">
+<div class="title">ARepository.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface ARepository extends Neo4jRepository&lt;AnAggregateRoot, String&gt; {
+
+	@Query("MATCH (a:AnAggregateRoot {name: $name}) RETURN a") <i class="conum" data-value="1"></i><b>(1)</b>
+	Optional&lt;AnAggregateRoot&gt; findByCustomQuery(String name);
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Here we are referring to the parameter by its name.
+You can also use <code>$0</code> etc. instead.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You need to compile your Java 8+ project with <code>-parameters</code> to make named parameters work without further annotations.
+The Spring Boot Maven and Gradle plugins do this automatically for you.
+If this is not feasible for any reason, you can either add
+<code>@Param</code>  and specify the name explicitly or use the parameters index.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Mapped entities (everything with a <code>@Node</code>) passed as parameter to a function that is annotated with
+a custom query will be turned into a nested map.
+The following example represents the structure as Neo4j parameters.</p>
+</div>
+<div class="paragraph">
+<p>Given are a <code>Movie</code>, <code>Vertex</code> and <code>Actor</code> classes annotated as shown in <a href="#movie-model">the movie model</a>:</p>
+</div>
+<div id="movie-model" class="listingblock">
+<div class="title">"Standard" movies model</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node
+public final class Movie {
+
+    @Id
+    private final String title;
+
+    @Property("tagline")
+    private final String description;
+
+    @Relationship(value = "ACTED_IN", direction = Direction.INCOMING)
+    private final List&lt;Actor&gt; actors;
+
+    @Relationship(value = "DIRECTED", direction = Direction.INCOMING)
+    private final List&lt;Person&gt; directors;
+}
+
+@Node
+public final class Person {
+
+    @Id @GeneratedValue
+    private final Long id;
+
+    private final String name;
+
+    private Integer born;
+
+    @Relationship("REVIEWED")
+    private List&lt;Movie&gt; reviewed = new ArrayList&lt;&gt;();
+}
+
+@RelationshipProperties
+public final class Actor {
+
+	@RelationshipId
+	private final Long id;
+
+    @TargetNode
+    private final Person person;
+
+    private final List&lt;String&gt; roles;
+}
+
+interface MovieRepository extends Neo4jRepository&lt;Movie, String&gt; {
+
+    @Query("MATCH (m:Movie {title: $movie.__id__})\n"
+           + "MATCH (m) &lt;- [r:DIRECTED|REVIEWED|ACTED_IN] - (p:Person)\n"
+           + "return m, collect(r), collect(p)")
+    Movie findByMovie(@Param("movie") Movie movie);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Passing an instance of <code>Movie</code> to the repository method above, will generate the following Neo4j map parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "movie": {
+    "__labels__": [
+      "Movie"
+    ],
+    "__id__": "The Da Vinci Code",
+    "__properties__": {
+      "ACTED_IN": [
+        {
+          "__properties__": {
+            "roles": [
+              "Sophie Neveu"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 402,
+            "__properties__": {
+              "name": "Audrey Tautou",
+              "born": 1976
+            }
+          }
+        },
+        {
+          "__properties__": {
+            "roles": [
+              "Sir Leight Teabing"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 401,
+            "__properties__": {
+              "name": "Ian McKellen",
+              "born": 1939
+            }
+          }
+        },
+        {
+          "__properties__": {
+            "roles": [
+              "Dr. Robert Langdon"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 360,
+            "__properties__": {
+              "name": "Tom Hanks",
+              "born": 1956
+            }
+          }
+        },
+        {
+          "__properties__": {
+            "roles": [
+              "Silas"
+            ]
+          },
+          "__target__": {
+            "__labels__": [
+              "Person"
+            ],
+            "__id__": 403,
+            "__properties__": {
+              "name": "Paul Bettany",
+              "born": 1971
+            }
+          }
+        }
+      ],
+      "DIRECTED": [
+        {
+          "__labels__": [
+            "Person"
+          ],
+          "__id__": 404,
+          "__properties__": {
+            "name": "Ron Howard",
+            "born": 1954
+          }
+        }
+      ],
+      "tagline": "Break The Codes",
+      "released": 2006
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A node is represented by a map. The map will always contain <code>__id__</code>  which is the mapped id property.
+Under <code>__labels__</code> all labels, static and dynamic, will be available.
+All properties - and type of relationships - appear in those maps as they would appear in the graph when the entity would
+have been written by SDN.
+Values will have the correct Cypher type and won&#8217;t need further conversion.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+All relationships are lists of maps. Dynamic relationships will be resolved accordingly.
+     One-to-one relationships will also be serialized as singleton lists. So to access a one-to-one mapping
+     between people, you would write this das <code>$person.__properties__.BEST_FRIEND[0].__target__.__id__</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If an entity has a relationship with the same type to different types of others nodes, they will all appear in the same list.
+If you need such a mapping and also have the need to work with those custom parameters, you have to unroll it accordingly.
+One way to do this are correlated subqueries (Neo4j 4.1+ required).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-queries.expressions"><a class="anchor" href="#custom-queries.expressions"></a>Value Expressions in custom queries</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="custom-queries.spel"><a class="anchor" href="#custom-queries.spel"></a>Spring Expression Language in custom queries</h3>
+<div class="paragraph">
+<p><a href="https://docs.spring.io/spring-framework/reference/7.0/core/expressions.html">Spring Expression Language (SpEL)</a> can be used in custom queries inside <code>:#{}</code>.
+The colon here refers to a parameter and such an expression should be used where parameters make sense.
+However, when using our <a href="#literal-extension">literal extension</a> you can use SpEL expression in places where standard Cypher
+won&#8217;t allow parameters (such as for labels or relationship types).
+This is the standard Spring Data way of defining a block of text inside a query that undergoes SpEL evaluation.</p>
+</div>
+<div class="paragraph">
+<p>The following example basically defines the same query as above, but uses a <code>WHERE</code> clause to avoid even more curly braces:</p>
+</div>
+<div id="custom-queries-with-spel-parameter-example" class="listingblock">
+<div class="title">ARepository.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface ARepository extends Neo4jRepository&lt;AnAggregateRoot, String&gt; {
+
+	@Query("MATCH (a:AnAggregateRoot) WHERE a.name = :#{#pt1 + #pt2} RETURN a")
+	Optional&lt;AnAggregateRoot&gt; findByCustomQueryWithSpEL(String pt1, String pt2);
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The SpEL blocked starts with <code>:#{</code> and then refers to the given <code>String</code> parameters by name (<code>#pt1</code>).
+Don&#8217;t confuse this with the above Cypher syntax!
+The SpEL expression concatenates both parameters into one single value that is eventually passed on to the <a href="neo4j-client.html#neo4j-client" class="xref page">appendix/neo4j-client.adoc#neo4j-client</a>.
+The SpEL block ends with <code>}</code>.</p>
+</div>
+<div class="paragraph">
+<p>SpEL also solves two additional problems. We provide two extensions that allow to pass in a <code>Sort</code> object into custom queries.
+Remember <a href="../faq.html#custom-queries-with-page-and-slice-examples" class="xref page">faq.adoc#custom-queries-with-page-and-slice-examples</a> from <a href="../faq.html#faq.custom-queries-with-page-and-slice" class="xref page">custom queries</a>?
+With the <code>orderBy</code> extension you can pass in a <code>Pageable</code> with a dynamic sort to a custom query:</p>
+</div>
+<div id="custom-queries.spel.source" class="listingblock">
+<div class="title">orderBy-Extension</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.neo4j.repository.Neo4jRepository;
+import org.springframework.data.neo4j.repository.query.Query;
+
+</span><span class="fold-block">public interface MyPersonRepository extends Neo4jRepository&lt;Person, Long&gt; {
+
+    @Query(""
+        + "MATCH (n:Person) WHERE n.name = $name RETURN n "
+        + ":#{orderBy(#pageable)} SKIP $skip LIMIT $limit" <i class="conum" data-value="1"></i><b>(1)</b>
+    )
+    Slice&lt;Person&gt; findSliceByName(String name, Pageable pageable);
+
+    @Query(""
+        + "MATCH (n:Person) WHERE n.name = $name RETURN n :#{orderBy(#sort)}" <i class="conum" data-value="2"></i><b>(2)</b>
+    )
+    List&lt;Person&gt; findAllByName(String name, Sort sort);
+}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>A <code>Pageable</code> has always the name <code>pageable</code> inside the SpEL context.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>A <code>Sort</code> has always the name <code>sort</code> inside the SpEL context.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="spel-extensions"><a class="anchor" href="#spel-extensions"></a>Spring Expression Language extensions</h3>
+<div class="sect3">
+<h4 id="literal-extension"><a class="anchor" href="#literal-extension"></a>Literal extension</h4>
+<div class="paragraph">
+<p>The <code>literal</code> extension can be used to make things like labels or relationship-types "dynamic" in custom queries.
+Neither labels nor relationship types can be parameterized in Cypher, so they must be given literal.</p>
+</div>
+<div class="listingblock">
+<div class="title">literal-Extension</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface BaseClassRepository extends Neo4jRepository&lt;Inheritance.BaseClass, Long&gt; {
+
+    @Query("MATCH (n:`:#{literal(#label)}`) RETURN n") <i class="conum" data-value="1"></i><b>(1)</b>
+    List&lt;Inheritance.BaseClass&gt; findByLabel(String label);
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>literal</code> extension will be replaced with the literal value of the evaluated parameter.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Here, the <code>literal</code> value has been used to match dynamically on a Label.
+If you pass in <code>SomeLabel</code> as a parameter to the method, <code>MATCH (n:<code>SomeLabel</code>) RETURN n</code>
+will be generated. Ticks have been added to correctly escape values. SDN won&#8217;t do this
+for you as this is probably not what you want in all cases.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list-extensions"><a class="anchor" href="#list-extensions"></a>List extensions</h4>
+<div class="paragraph">
+<p>For more than one value there are <code>allOf</code> and <code>anyOf</code> in place that would render
+either a <code>&amp;</code> or <code>|</code> concatenated list of all values.</p>
+</div>
+<div class="listingblock">
+<div class="title">List extensions</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">interface BaseClassRepository extends Neo4jRepository&lt;Inheritance.BaseClass, Long&gt; {
+
+    @Query("MATCH (n:`:#{allOf(#label)}`) RETURN n")
+    List&lt;Inheritance.BaseClass&gt; findByLabels(List&lt;String&gt; labels);
+
+    @Query("MATCH (n:`:#{anyOf(#label)}`) RETURN n")
+    List&lt;Inheritance.BaseClass&gt; findByLabels(List&lt;String&gt; labels);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_referring_to_labels"><a class="anchor" href="#_referring_to_labels"></a>Referring to Labels</h3>
+<div class="paragraph">
+<p>You already know how to map a Node to a domain object:</p>
+</div>
+<div class="listingblock">
+<div class="title">A Node with many labels</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Node(primaryLabel = "Bike", labels = {"Gravel", "Easy Trail"})
+public class BikeNode {
+    @Id String id;
+
+    String name;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This node has a couple of labels, and it would be rather error prone to repeat them all the time in custom queries: You might
+forget one or make a typo. We offer the following expression to mitigate this: <code>#{#staticLabels}</code>. Notice that this one does
+<em>not</em> start with a colon! You use it on repository methods annotated with <code>@Query</code>:</p>
+</div>
+<div class="listingblock">
+<div class="title"><code>#{#staticLabels}</code> in action</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BikeRepository extends Neo4jRepository&lt;Bike, String&gt; {
+
+    @Query("MATCH (n:#{#staticLabels}) WHERE n.id = $nameOrId OR n.name = $nameOrId RETURN n")
+    Optional&lt;Bike&gt; findByNameOrId(@Param("nameOrId") String nameOrId);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This query will resolve to</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (n:`Bike`:`Gravel`:`Easy Trail`) WHERE n.id = $nameOrId OR n.name = $nameOrId RETURN n</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how we used standard parameter for the <code>nameOrId</code>: In most cases there is no need to complicate things here by
+adding a SpEL expression.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="custom-queries.propertyplaceholder"><a class="anchor" href="#custom-queries.propertyplaceholder"></a>Property Placeholder resolution in custom queries</h3>
+<div class="paragraph">
+<p>Spring&#8217;s property placeholders can be used in custom queries inside <code>${}</code>.</p>
+</div>
+<div id="custom-queries-with-property-placeholder-example" class="listingblock">
+<div class="title">ARepository.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Query("MATCH (a:AnAggregateRoot) WHERE a.name = :${foo} RETURN a")
+Optional&lt;AnAggregateRoot&gt; findByCustomQueryWithPropertyPlaceholder();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the example above, if the property <code>foo</code> would be set to <code>bar</code> then the <code>${foo}</code> block would be resolved to <code>bar</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+                  <ul class="nav-versions">
+                    <li class="component">
+                      <a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+                      <ul class="versions">
+                        <li class="version is-latest">
+                          <a href="../data-commons/index.html">
+                            4.1.0<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="component is-current">
+                      <a class="title" href="../index.html">Spring Data Neo4j</a>
+                      <ul class="versions">
+                        <li class="version is-current is-latest">
+                          <a href="../index.html">
+                            8.1.0<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>
+    Related Spring Documentation
+    <ul class="projects-list">
+        <li>
+<a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-framework/reference/">
+  Spring Framework
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Cloud
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Data
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a>
+</li>
+    </ul>
+  </li
+  <li><a href="../spring-projects.html">All Docs...</a></li>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">Copyright © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.<br /><a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/asciidoctor-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box">
+                    <a class="search-link" href="../search.html">Search in all Spring Docs</a>
+                </div>
+                <div class="search-by">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.algolia.com/" aria-label="Search by Algolia">
+                        <img class="light" width="140" src="../_/img/algolia-light.svg" />
+                        <img class="dark" width="140" src="../_/img/algolia-dark.svg" />
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" crossorigin="anonymous"></script>
+<script async id="search-script" src="../_/js/vendor/search.js" data-app-id="WB1FQYI187" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-index-name="springdocs" data-stylesheet="../_/css/vendor/search.css" data-page-version="8.1.0" data-page-component="data-neo4j"></script>
+  </body>
+</html>

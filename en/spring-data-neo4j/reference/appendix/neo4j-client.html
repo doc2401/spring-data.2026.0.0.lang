@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Neo4jClient :: Spring Data Neo4j</title>
+    <link rel="canonical" href="https://docs.spring.io/spring-data/neo4j/reference/appendix/neo4j-client.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.16"> 
+    <meta name="version" content="8.1.0">
+    <meta name="component" content="data-neo4j">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-neo4j" data-version="8.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data Neo4j</span>
+  <span class="version">8.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../introduction-and-preface/index.html">Preface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/preface-neo4j.html">Introducing Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/preface-sd.html">Introducing Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/preface-sdn.html">Introducing Spring Data Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/building-blocks.html">Building blocks of Spring Data Neo4j</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../introduction-and-preface/new-and-noteworthy.html">New &amp; Noteworthy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../dependencies.html">Dependencies</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../getting-started.html">Getting started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../object-mapping.html">Object Mapping</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../object-mapping/metadata-based-mapping.html">Metadata-based Mapping</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../object-mapping/mapping-ids.html">Handling and provisioning of unique IDs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../object-mapping/sdc-object-mapping.html">Spring Data Object Mapping Fundamentals</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories.html">Repositories</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-concepts.html">Core concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods.html">Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/definition.html">Defining Repository Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods-details.html">Defining Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/create-instances.html">Creating Repository Instances</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/custom-implementations.html">Custom Repository Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-domain-events.html">Publishing Events from Aggregate Roots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-extensions.html">Spring Data Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../query-by-example.html">Query by Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/scrolling.html">Scrolling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/sdn-extension.html">Spring Data Neo4j Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-keywords-reference.html">Repository query keywords</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-return-types-reference.html">Repository query return types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/vector-search.html">Neo4j Vector Search</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories/projections.html">Projections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../projections/sdn-projections.html">Spring Data Neo4j Projections</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../testing.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../testing/testing-without-spring-boot.html">Without Spring Boot</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../testing/testing-with-spring-boot.html">With Spring Boot and <code>@DataNeo4jTest</code></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="index.html">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="conversions.html">Conversions</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link"  href="neo4j-client.html">Neo4jClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="logging.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="query-creation.html">Query creation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="custom-queries.html">Custom queries</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="spatial-types.html">Spatial types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="migrating.html">Migrating from SDN+OGM to SDN</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="build.html">Building Spring Data Neo4j</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external"  target="_blank" href="../api/java/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external"  target="_blank" href="https://github.com/spring-projects/spring-data-commons/wiki">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="Neo4jClient"
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-neo4j/src/main/antora/modules/ROOT/pages/appendix/neo4j-client.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+        <a href="https://github.com/spring-projects/spring-data-neo4j" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><![CDATA[
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Spring Data Neo4j</a></li>
+      <li><a href="index.html">Appendix</a></li>
+      <li><a href="neo4j-client.html">Neo4jClient</a></li>
+    </ul>
+  </nav>
+</div><h1 id="page-title" class="page">Neo4jClient</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Data Neo4j comes with a Neo4j Client, providing a thin layer on top of Neo4j&#8217;s Java driver.</p>
+</div>
+<div class="paragraph">
+<p>While the <a href="https://github.com/neo4j/neo4j-java-driver">plain Java driver</a> is a very versatile tool providing an asynchronous API in addition to the imperative and reactive versions, it doesn&#8217;t integrate with Spring application level transactions.</p>
+</div>
+<div class="paragraph">
+<p>SDN uses the driver through the concept of an idiomatic client as directly as possible.</p>
+</div>
+<div class="paragraph">
+<p>The client has the following main goals</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Integrate into Springs transaction management, for both imperative and reactive scenarios</p>
+</li>
+<li>
+<p>Participate in JTA-Transactions if necessary</p>
+</li>
+<li>
+<p>Provide a consistent API for both imperative and reactive scenarios</p>
+</li>
+<li>
+<p>Don&#8217;t add any mapping overhead</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>SDN relies on all those features and uses them to fulfill its entity mapping features.</p>
+</div>
+<div class="paragraph">
+<p>Have a look at the <a href="../introduction-and-preface/building-blocks.html#sdn-building-blocks" class="xref page">SDN building blocks</a> for where both the imperative and reactive Neo4 clients are positioned in our stack.</p>
+</div>
+<div class="paragraph">
+<p>The Neo4j Client comes in two flavors:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.springframework.data.neo4j.core.Neo4jClient</code></p>
+</li>
+<li>
+<p><code>org.springframework.data.neo4j.core.ReactiveNeo4jClient</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While both versions provide an API using the same vocabulary and syntax, they are not API compatible.
+Both versions feature the same, fluent API to specify queries, bind parameters and extract results.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="neo4j-client.imperative.reactive"><a class="anchor" href="#neo4j-client.imperative.reactive"></a>Imperative or reactive?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Interactions with a Neo4j Client usually ends with a call to</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fetch().one()</code></p>
+</li>
+<li>
+<p><code>fetch().first()</code></p>
+</li>
+<li>
+<p><code>fetch().all()</code></p>
+</li>
+<li>
+<p><code>run()</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The imperative version will interact at this moment with the database and get the requested results or summary, wrapped in an <code>Optional&lt;&gt;</code> or a <code>Collection</code>.</p>
+</div>
+<div class="paragraph">
+<p>The reactive version will in contrast return a publisher of the requested type.
+Interaction with the database and retrieval of the results will not happen until the publisher is subscribed to.
+The publisher can only be subscribed once.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="neo4j-client.instance"><a class="anchor" href="#neo4j-client.instance"></a>Getting an instance of the client</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As with most things in SDN, both clients depend on a configured driver instance.</p>
+</div>
+<div id="neo4j-client-create-imperative-client" class="listingblock">
+<div class="title">Creating an instance of the imperative Neo4j client</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.neo4j.driver.AuthTokens;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.GraphDatabase;
+
+import org.springframework.data.neo4j.core.Neo4jClient;
+
+</span><span class="fold-block">public class Demo {
+
+    public static void main(String...args) {
+
+        Driver driver = GraphDatabase
+            .driver("neo4j://localhost:7687", AuthTokens.basic("neo4j", "secret"));
+
+        Neo4jClient client = Neo4jClient.create(driver);
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The driver can only open a reactive session against a 4.0 database and will fail with an exception on any lower version.</p>
+</div>
+<div id="neo4j-client-create-reactive-client" class="listingblock">
+<div class="title">Creating an instance of the reactive Neo4j client</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import org.neo4j.driver.AuthTokens;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.GraphDatabase;
+
+import org.springframework.data.neo4j.core.ReactiveNeo4jClient;
+
+</span><span class="fold-block">public class Demo {
+
+    public static void main(String...args) {
+
+        Driver driver = GraphDatabase
+            .driver("neo4j://localhost:7687", AuthTokens.basic("neo4j", "secret"));
+
+        ReactiveNeo4jClient client = ReactiveNeo4jClient.create(driver);
+    }
+}</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Make sure you use the same driver instance for the client as you used for providing a <code>Neo4jTransactionManager</code> or <code>ReactiveNeo4jTransactionManager</code>
+in case you have enabled transactions.
+The client won&#8217;t be able to synchronize transactions if you use another instance of a driver.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Our Spring Boot starter provide a ready to use bean of the Neo4j Client that fits the environment (imperative or reactive) and you usually don&#8217;t have to configure your own instance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="neo4j-client.usage"><a class="anchor" href="#neo4j-client.usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="neo4j-client-selecting-the-target-database"><a class="anchor" href="#neo4j-client-selecting-the-target-database"></a>Selecting the target database</h3>
+<div class="paragraph">
+<p>The Neo4j client is well prepared to be used with the multidatabase features of Neo4j 4.0. The client uses the default database unless you specify otherwise.
+The fluent API of the client allows to specify the target database exactly once, after the declaration of the query to execute.
+<a href="#neo4j-client-reactive-selecting-the-target-database">Selecting the target database</a> demonstrates it with the reactive client:</p>
+</div>
+<div id="neo4j-client-reactive-selecting-the-target-database" class="listingblock">
+<div class="title">Selecting the target database</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Flux&lt;Map&lt;String, Object&gt;&gt; allActors = client
+	.query("MATCH (p:Person) RETURN p")
+	.in("neo4j") <i class="conum" data-value="1"></i><b>(1)</b>
+	.fetch()
+	.all();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Select the target database in which the query is to be executed.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="neo4j-client.specifying.queryies"><a class="anchor" href="#neo4j-client.specifying.queryies"></a>Specifying queries</h3>
+<div class="paragraph">
+<p>The interaction with the clients starts with a query.
+A query can be defined by a plain <code>String</code> or a <code>Supplier&lt;String&gt;</code>.
+The supplier will be evaluated as late as possible and can be provided by any query builder.</p>
+</div>
+<div id="neo4j-client-specifying-queries.example" class="listingblock">
+<div class="title">Specifying a query</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;Map&lt;String, Object&gt;&gt; firstActor = client
+	.query(() -&gt; "MATCH (p:Person) RETURN p")
+	.fetch()
+	.first();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="neo4j-client.retrieving.results"><a class="anchor" href="#neo4j-client.retrieving.results"></a>Retrieving results</h3>
+<div class="paragraph">
+<p>As the previous listings shows, the interaction with the client always ends with a call to <code>fetch</code> and how many results shall be received.
+Both reactive and imperative client offer</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>one()</code></dt>
+<dd>
+<p>Expect exactly one result from the query</p>
+</dd>
+<dt class="hdlist1"><code>first()</code></dt>
+<dd>
+<p>Expect results and return the first record</p>
+</dd>
+<dt class="hdlist1"><code>all()</code></dt>
+<dd>
+<p>Retrieve all records returned</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The imperative client returns <code>Optional&lt;T&gt;</code> and <code>Collection&lt;T&gt;</code> respectively, while the reactive client returns <code>Mono&lt;T&gt;</code> and <code>Flux&lt;T&gt;</code>, the later one being executed only if subscribed to.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t expect any results from your query, then use <code>run()</code> after specifying the query.</p>
+</div>
+<div id="neo4j-client-reactive-get-result-summaries" class="listingblock">
+<div class="title">Retrieving result summaries in a reactive way</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;ResultSummary&gt; summary = reactiveClient
+    .query("MATCH (m:Movie) where m.title = 'Aeon Flux' DETACH DELETE m")
+    .run();
+
+summary
+    .map(ResultSummary::counters)
+    .subscribe(counters -&gt;
+        System.out.println(counters.nodesDeleted() + " nodes have been deleted")
+    ); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The actual query is triggered here by subscribing to the publisher.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Please take a moment to compare both listings and understand the difference when the actual query is triggered.</p>
+</div>
+<div id="neo4j-client-imperative-get-result-summaries" class="listingblock">
+<div class="title">Retrieving result summaries in an imperative way</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ResultSummary resultSummary = imperativeClient
+	.query("MATCH (m:Movie) where m.title = 'Aeon Flux' DETACH DELETE m")
+	.run(); <i class="conum" data-value="1"></i><b>(1)</b>
+
+SummaryCounters counters = resultSummary.counters();
+System.out.println(counters.nodesDeleted() + " nodes have been deleted")</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Here the query is immediately triggered.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="neo4j-client.mapping.parameters"><a class="anchor" href="#neo4j-client.mapping.parameters"></a>Mapping parameters</h3>
+<div class="paragraph">
+<p>Queries can contain named parameters (<code>$someName</code>) and the Neo4j client makes it easy to bind values to them.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The client doesn&#8217;t check whether all parameters are bound or whether there are too many values.
+That is left to the driver.
+However, the client prevents you from using a parameter name twice.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can either bind simple types that the Java driver understands without conversion or complex classes.
+For complex classes you need to provide a binder function as shown in <a href="#neo4j-client-binder">this listing</a>.
+Please have a look at the <a href="https://neo4j.com/docs/driver-manual/current/cypher-workflow/#driver-type-mapping">drivers manual</a>, to see which simple types are supported.</p>
+</div>
+<div id="neo4j-client-mapping-simple-types" class="listingblock">
+<div class="title">Mapping simple types</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, Object&gt; parameters = new HashMap&lt;&gt;();
+parameters.put("name", "Li.*");
+
+Flux&lt;Map&lt;String, Object&gt;&gt; directorAndMovies = client
+	.query(
+		"MATCH (p:Person) - [:DIRECTED] -&gt; (m:Movie {title: $title}), (p) - [:WROTE] -&gt; (om:Movie) " +
+			"WHERE p.name =~ $name " +
+			"  AND p.born &lt; $someDate.year " +
+			"RETURN p, om"
+	)
+	.bind("The Matrix").to("title") <i class="conum" data-value="1"></i><b>(1)</b>
+	.bind(LocalDate.of(1979, 9, 21)).to("someDate")
+	.bindAll(parameters) <i class="conum" data-value="2"></i><b>(2)</b>
+	.fetch()
+	.all();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>There&#8217;s a fluent API for binding simple types.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Alternatively parameters can be bound via a map of named parameters.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>SDN does a lot of complex mapping and it uses the same API that you can use from the client.</p>
+</div>
+<div class="paragraph">
+<p>You can provide a <code>Function&lt;T, Map&lt;String, Object&gt;&gt;</code> for any given domain object like an owner of bicycles in <a href="#neo4j-client-domain-example">Example of a domain type</a>
+to the Neo4j Client to map those domain objects to parameters the driver can understand.</p>
+</div>
+<div id="neo4j-client-domain-example" class="listingblock">
+<div class="title">Example of a domain type</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Director {
+
+    private final String name;
+
+    private final List&lt;Movie&gt; movies;
+
+    Director(String name, List&lt;Movie&gt; movies) {
+        this.name = name;
+        this.movies = new ArrayList&lt;&gt;(movies);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List&lt;Movie&gt; getMovies() {
+        return Collections.unmodifiableList(movies);
+    }
+}
+
+public class Movie {
+
+    private final String title;
+
+    public Movie(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The mapping function has to fill in all named parameters that might occur in the query like <a href="#neo4j-client-binder">Using a mapping function for binding domain objects</a> shows:</p>
+</div>
+<div id="neo4j-client-binder" class="listingblock">
+<div class="title">Using a mapping function for binding domain objects</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Director joseph = new Director("Joseph Kosinski",
+        Arrays.asList(new Movie("Tron Legacy"), new Movie("Top Gun: Maverick")));
+
+Mono&lt;ResultSummary&gt; summary = client
+    .query(""
+        + "MERGE (p:Person {name: $name}) "
+        + "WITH p UNWIND $movies as movie "
+        + "MERGE (m:Movie {title: movie}) "
+        + "MERGE (p) - [o:DIRECTED] -&gt; (m) "
+    )
+    .bind(joseph).with(director -&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+        Map&lt;String, Object&gt; mappedValues = new HashMap&lt;&gt;();
+        List&lt;String&gt; movies = director.getMovies().stream()
+            .map(Movie::getTitle).collect(Collectors.toList());
+        mappedValues.put("name", director.getName());
+        mappedValues.put("movies", movies);
+        return mappedValues;
+    })
+    .run();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>with</code> method allows for specifying the binder function.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="neo4j-client.result-objects"><a class="anchor" href="#neo4j-client.result-objects"></a>Working with result objects</h3>
+<div class="paragraph">
+<p>Both clients return collections or publishers of maps (<code>Map&lt;String, Object&gt;</code>).
+Those maps correspond exactly with the records that a query might have produced.</p>
+</div>
+<div class="paragraph">
+<p>In addition, you can plug in your own <code>BiFunction&lt;TypeSystem, Record, T&gt;</code> through <code>fetchAs</code> to reproduce your domain object.</p>
+</div>
+<div id="neo4j-client-reader" class="listingblock">
+<div class="title">Using a mapping function for reading domain objects</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;Director&gt; lily = client
+    .query(""
+        + " MATCH (p:Person {name: $name}) - [:DIRECTED] -&gt; (m:Movie)"
+        + "RETURN p, collect(m) as movies")
+    .bind("Lilly Wachowski").to("name")
+    .fetchAs(Director.class).mappedBy((TypeSystem t, Record record) -&gt; {
+        List&lt;Movie&gt; movies = record.get("movies")
+            .asList(v -&gt; new Movie((v.get("title").asString())));
+        return new Director(record.get("name").asString(), movies);
+    })
+    .one();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>TypeSystem</code> gives access to the types the underlying Java driver used to fill the record.</p>
+</div>
+<div class="sect3">
+<h4 id="neo4j-client.result-objects.mapping-functions"><a class="anchor" href="#neo4j-client.result-objects.mapping-functions"></a>Using domain-aware mapping functions</h4>
+<div class="paragraph">
+<p>If you know that the result of the query will contain nodes that have entity definitions in your application,
+you can use the injectable <code>MappingContext</code> to retrieve their mapping functions and apply them during the mapping.</p>
+</div>
+<div id="neo4j-client-reader.mapping-function" class="listingblock">
+<div class="title">Using an existing mapping function</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BiFunction&lt;TypeSystem, MapAccessor, Movie&gt; mappingFunction = neo4jMappingContext.getRequiredMappingFunctionFor(Movie.class);
+Mono&lt;Director&gt; lily = client
+    .query(""
+        + " MATCH (p:Person {name: $name}) - [:DIRECTED] -&gt; (m:Movie)"
+        + "RETURN p, collect(m) as movies")
+    .bind("Lilly Wachowski").to("name")
+    .fetchAs(Director.class).mappedBy((TypeSystem t, Record record) -&gt; {
+        List&lt;Movie&gt; movies = record.get("movies")
+            .asList(movie -&gt; mappingFunction.apply(t, movie));
+        return new Director(record.get("name").asString(), movies);
+    })
+    .one();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="neo4j-client.interacting.driver.directly"><a class="anchor" href="#neo4j-client.interacting.driver.directly"></a>Interacting directly with the driver while using managed transactions</h3>
+<div class="paragraph">
+<p>In case you don&#8217;t want or don&#8217;t like the opinionated "client" approach of the <code>Neo4jClient</code> or the <code>ReactiveNeo4jClient</code>, you can have the client delegate all interactions with the database to your code.
+The interaction after the delegation is slightly different with the imperative and reactive versions of the client.</p>
+</div>
+<div class="paragraph">
+<p>The imperative version takes in a <code>Function&lt;StatementRunner, Optional&lt;T&gt;&gt;</code> as a callback.
+Returning an empty optional is ok.</p>
+</div>
+<div id="neo4j-client-imperative-delegating" class="listingblock">
+<div class="title">Delegate database interaction to an imperative <code>StatementRunner</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Optional&lt;Long&gt; result = client
+    .delegateTo((StatementRunner runner) -&gt; {
+        // Do as many interactions as you want
+        long numberOfNodes = runner.run("MATCH (n) RETURN count(n) as cnt")
+            .single().get("cnt").asLong();
+        return Optional.of(numberOfNodes);
+    })
+    // .in("aDatabase") <i class="conum" data-value="1"></i><b>(1)</b>
+    .run();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The database selection as described in <a href="#neo4j-client-selecting-the-target-database">Selecting the target database</a> is optional.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The reactive version receives a <code>RxStatementRunner</code>.</p>
+</div>
+<div id="neo4j-client-reactive-delegating" class="listingblock">
+<div class="title">Delegate database interaction to a reactive <code>RxStatementRunner</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;Integer&gt; result = client
+    .delegateTo((RxStatementRunner runner) -&gt;
+        Mono.from(runner.run("MATCH (n:Unused) DELETE n").summary())
+            .map(ResultSummary::counters)
+            .map(SummaryCounters::nodesDeleted))
+    // .in("aDatabase") <i class="conum" data-value="1"></i><b>(1)</b>
+    .run();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Optional selection of the target database.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Note that in both <a href="#neo4j-client-imperative-delegating">Delegate database interaction to an imperative <code>StatementRunner</code></a> and <a href="#neo4j-client-reactive-delegating">Delegate database interaction to a reactive <code>RxStatementRunner</code></a> the types of the runner have only been stated to provide more clarity to reader of this manual.</p>
+</div>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+                  <ul class="nav-versions">
+                    <li class="component">
+                      <a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+                      <ul class="versions">
+                        <li class="version is-latest">
+                          <a href="../data-commons/index.html">
+                            4.1.0<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="component is-current">
+                      <a class="title" href="../index.html">Spring Data Neo4j</a>
+                      <ul class="versions">
+                        <li class="version is-current is-latest">
+                          <a href="../index.html">
+                            8.1.0<span class="current">current</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>
+    Related Spring Documentation
+    <ul class="projects-list">
+        <li>
+<a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-framework/reference/">
+  Spring Framework
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Cloud
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Data
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a>
+</li>
+    </ul>
+  </li
+  <li><a href="../spring-projects.html">All Docs...</a></li>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">Copyright © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.<br /><a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/asciidoctor-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box">
+                    <a class="search-link" href="../search.html">Search in all Spring Docs</a>
+                </div>
+                <div class="search-by">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.algolia.com/" aria-label="Search by Algolia">
+                        <img class="light" width="140" src="../_/img/algolia-light.svg" />
+                        <img class="dark" width="140" src="../_/img/algolia-dark.svg" />
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" crossorigin="anonymous"></script>
+<script async id="search-script" src="../_/js/vendor/search.js" data-app-id="WB1FQYI187" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-index-name="springdocs" data-stylesheet="../_/css/vendor/search.css" data-page-version="8.1.0" data-page-component="data-neo4j"></script>
+  </body>
+</html>

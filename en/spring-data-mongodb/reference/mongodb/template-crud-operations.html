@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Saving, Updating, and Removing Documents :: Spring Data MongoDB</title>
+    <link rel="canonical" href="https://docs.spring.io/spring-data/mongo/reference/mongodb/template-crud-operations.html">
+    <meta name="generator" content="Antora 3.2.0-alpha.6">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="v0.4.18"> 
+    <meta name="version" content="5.1.0">
+    <meta name="component" content="data-mongodb">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://spring.io">
+        <img
+          id="springlogo"
+          class="block"
+          src="../_/img/spring-logo.svg"
+          alt="Spring"
+        />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/why-spring"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/microservices"
+            >Microservices</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/reactive"
+            >Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event
+              Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web
+              Applications</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/serverless"
+            >Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/quickstart"
+            >Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown" style="min-width: 280px">
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects"
+            >Overview</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-boot"
+            >Spring Boot</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-framework"
+            >Spring Framework</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud"
+            >Spring Cloud</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-cloud-dataflow"
+            >Spring Cloud Data Flow</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-data"
+            >Spring Data</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-integration"
+            >Spring Integration</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-batch"
+            >Spring Batch</a>
+            <a
+              class="navbar-item"
+              href="https://spring.io/projects/spring-security"
+            >Spring Security</a>
+            <a
+              class="navbar-item navbar-item-special"
+              href="https://spring.io/projects"
+            >View all projects</a>
+            <li class="navbar-item navbar-item-special-3">DEVELOPMENT TOOLS</li>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+            <a
+              class="navbar-item navbar-item-special-2"
+              href="https://start.spring.io"
+            >Spring Initializr
+              <svg
+                class="external-link-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+              ><polyline
+                  points="15 10.94 15 15 1 15 1 1 5.06 1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><polyline
+                  points="8.93 1 15 1 15 7.07"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></polyline><line
+                  x1="15"
+                  y1="1"
+                  x2="8"
+                  y2="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-miterlimit="10"
+                  stroke-width="2"
+                ></line></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Academy</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.academy/courses"
+            >Courses</a>
+            <a
+              class="navbar-item"
+              href="https://spring.academy/learning-path"
+            >Get Certified</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Solutions</a>
+          <div class="navbar-dropdown lg">
+            <a class="navbar-item" href="https://spring.io/solutions">Overview</a>
+            <a class="navbar-item" href="https://spring.io/support">Spring Runtime</a>
+            <a class="navbar-item" href="https://spring.io/consulting">Spring Consulting</a>
+            <a class="navbar-item" href="https://spring.academy/teams">Spring Academy For Teams</a>
+            <a class="navbar-item" href="https://spring.io/security">Security Advisories</a>
+          </div>
+        </div>
+
+        <div class="navbar-item has-dropdown is-hoverable is-community">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a
+              class="navbar-item"
+              href="https://spring.io/community"
+            >Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <label class="theme-toggler">
+      <input
+        type="checkbox"
+        type="checkbox"
+        id="switch-theme-checkbox"
+        name="switch-theme-checkbox"
+      />
+      <span class="icon"><svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="moon"
+          class="svg-inline--fa fa-moon moon"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        ><path
+            fill="currentColor"
+            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+          ></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="sun"
+          class="svg-inline--fa fa-sun sun"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        ><path
+            fill="currentColor"
+            d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+          ></path>
+        </svg></span>
+      <span class="text">light</span>
+    </label>
+  </nav>
+</header>
+<script>
+!function (theme) {
+  if (theme === 'dark') {
+    document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+  }
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="data-mongodb" data-version="5.1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Spring Data MongoDB</span>
+  <span class="version">5.1.0</span>
+  <button class="browse-version" id="browse-version">
+    <svg
+      height="24px"
+      id="Layer_1"
+      style="enable-background:new 0 0 512 512;"
+      version="1.1"
+      viewBox="0 0 512 512"
+      width="24px"
+      xml:space="preserve"
+    ><g><path
+          d="M256,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S273.7,224,256,224L256,224z"
+        ></path><path
+          d="M128.4,224c-17.7,0-32,14.3-32,32s14.3,32,32,32c17.7,0,32-14.3,32-32S146,224,128.4,224L128.4,224z"
+        ></path><path
+          d="M384,224c-17.7,0-32,14.3-32,32s14.3,32,32,32s32-14.3,32-32S401.7,224,384,224L384,224z"
+        ></path></g></svg>
+  </button>
+  <div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../index.html">Overview</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../commons/upgrade.html">Upgrading Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../migration-guides.html">Migration Guides</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-2.x-to-3.x.html">Migration Guide from 2.x to 3.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-3.x-to-4.x.html">Migration Guide from 3.x to 4.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="../migration-guide/migration-guide-4.x-to-5.x.html">Migration Guide from 4.x to 5.x</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../mongodb.html">MongoDB Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../preface.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="configuration.html">Connecting to MongoDB</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="template-api.html">Template API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-collection-management.html">Index and Collection Management</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link"  href="template-crud-operations.html">Saving, Updating, and Removing Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-query-operations.html">Querying Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="property-paths.html">Property Paths</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="template-document-count.html">Counting Documents</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="aggregation-framework.html">Aggregation Framework Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="template-gridfs.html">GridFS Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="mapping/mapping.html">Object Mapping</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/mapping-schema.html">JSON Schema</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/custom-conversions.html">Type based Converter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/property-converters.html">Property Converters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/unwrapping-entities.html">Unwrapping Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/document-references.html">Object References</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link"  href="mapping/mapping-index-management.html">Index Creation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="value-expressions.html">Value Expressions Fundamentals</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="lifecycle-events.html">Lifecycle Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="auditing.html">Auditing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="client-session-transactions.html">Sessions &amp; Transactions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="change-streams.html">Change Streams</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="tailable-cursors.html">Tailable Cursors</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="sharding.html">Sharding</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="mongo-search-indexes.html">MongoDB Search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="mongo-encryption.html">Encryption</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="aot.html">Ahead of Time Optimizations</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../repositories.html">Repositories</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-concepts.html">Core concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/definition.html">Defining Repository Interfaces</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/repositories.html">MongoDB Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-extensions.html">Spring Data Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/create-instances.html">Creating Repository Instances</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-methods-details.html">Defining Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/query-methods.html">MongoDB-specific Query Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/vector-search.html">Vector Search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/modifying-methods.html">MongoDB-specific Data Manipulation Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/projections.html">Projections</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/custom-implementations.html">Custom Repository Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/core-domain-events.html">Publishing Events from Aggregate Roots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/null-handling.html">Null Handling of Repository Methods</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="repositories/cdi-integration.html">CDI Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-keywords-reference.html">Repository query keywords</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../repositories/query-return-types-reference.html">Repository query return types</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../observability/observability.html">Observability</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/conventions.html">Conventions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/metrics.html">Metrics</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../observability/spans.html">Spans</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link"  href="../kotlin.html">Kotlin Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/requirements.html">Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/null-safety.html">Null Safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/extensions.html">Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../kotlin/coroutines.html">Coroutines</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link attachment link-external"  target="_blank" href="../api/java/index.html">Javadoc</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link link-external"  target="_blank" href="https://github.com/spring-projects/spring-data-commons/wiki">Wiki</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+<div class="search">
+  <button class="DocSearch-Button search-button">
+    <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_"/>
+    </svg>
+    <span>Search</span>
+    <span class="search-key"></span>
+  </button>
+</div>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="Saving, Updating, and Removing Documents"
+      data-levels="2"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="file:///workspaces/toc/articles/202606/spring-data-2026.0.0/sources/spring-data-mongodb/src/main/antora/modules/ROOT/pages/mongodb/template-crud-operations.adoc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Edit this Page
+        </a>
+        <a href="https://github.com/spring-projects/spring-data-mongodb" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css"><![CDATA[
+              .st0{fill-rule:evenodd;clip-rule:evenodd;} ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Spring Data MongoDB</a></li>
+      <li><a href="../mongodb.html">MongoDB Support</a></li>
+      <li><a href="template-api.html">Template API</a></li>
+      <li><a href="template-crud-operations.html">Saving, Updating, and Removing Documents</a></li>
+    </ul>
+  </nav>
+</div><h1 id="page-title" class="page">Saving, Updating, and Removing Documents</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>MongoTemplate</code> / <code>ReactiveMongoTemplate</code> let you save, update, and delete your domain objects and map those objects to documents stored in MongoDB.
+The API signatures of the imperative and reactive API are mainly the same only differing in their return types.
+While the synchronous API uses <code>void</code>, single <code>Object</code> and <code>List</code> the reactive counterpart consists of <code>Mono&lt;Void&gt;</code>, <code>Mono&lt;Object&gt;</code> and <code>Flux</code>.</p>
+</div>
+<div class="paragraph">
+<p>Consider the following class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Person {
+
+	private String id;
+	private String name;
+	private int age;
+
+	public Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Given the <code>Person</code> class in the preceding example, you can save, update and delete the object, as the following example shows:</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_1_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_imperative--panel" class="tabpanel" aria-labelledby="_tabs_1_imperative">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MongoApplication {
+
+  private static final Log log = LogFactory.getLog(MongoApplication.class);
+
+  public static void main(String[] args) {
+
+    MongoOperations template = new MongoTemplate(new SimpleMongoClientDbFactory(MongoClients.create(), "database"));
+
+    Person p = new Person("Joe", 34);
+
+    // Insert is used to initially store the object into the database.
+    template.insert(p);
+    log.info("Insert: " + p);
+
+    // Find
+    p = template.findById(p.getId(), Person.class);
+    log.info("Found: " + p);
+
+    // Update
+    template.updateFirst(query(where("name").is("Joe")), update("age", 35), Person.class);
+    p = template.findOne(query(where("name").is("Joe")), Person.class);
+    log.info("Updated: " + p);
+
+    // Delete
+    template.remove(p);
+
+    // Check that deletion worked
+    List&lt;Person&gt; people =  template.findAll(Person.class);
+    log.info("Number of people = : " + people.size());
+
+
+    template.dropCollection(Person.class);
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding example would produce the following log output (including debug messages from <code>MongoTemplate</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">DEBUG apping.MongoPersistentEntityIndexCreator:  80 - Analyzing class class org.spring.example.Person for index information.
+DEBUG work.data.mongodb.core.MongoTemplate: 632 - insert Document containing fields: [_class, age, name] in collection: person
+INFO               org.spring.example.MongoApp:  30 - Insert: Person [id=4ddc6e784ce5b1eba3ceaf5c, name=Joe, age=34]
+DEBUG work.data.mongodb.core.MongoTemplate:1246 - findOne using query: { "_id" : { "$oid" : "4ddc6e784ce5b1eba3ceaf5c"}} in db.collection: database.person
+INFO               org.spring.example.MongoApp:  34 - Found: Person [id=4ddc6e784ce5b1eba3ceaf5c, name=Joe, age=34]
+DEBUG work.data.mongodb.core.MongoTemplate: 778 - calling update using query: { "name" : "Joe"} and update: { "$set" : { "age" : 35}} in collection: person
+DEBUG work.data.mongodb.core.MongoTemplate:1246 - findOne using query: { "name" : "Joe"} in db.collection: database.person
+INFO               org.spring.example.MongoApp:  39 - Updated: Person [id=4ddc6e784ce5b1eba3ceaf5c, name=Joe, age=35]
+DEBUG work.data.mongodb.core.MongoTemplate: 823 - remove using query: { "id" : "4ddc6e784ce5b1eba3ceaf5c"} in collection: person
+INFO               org.spring.example.MongoApp:  46 - Number of people = : 0
+DEBUG work.data.mongodb.core.MongoTemplate: 376 - Dropped collection [database.person]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_1_reactive--panel" class="tabpanel" aria-labelledby="_tabs_1_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ReactiveMongoApplication {
+
+  private static final Logger log = LoggerFactory.getLogger(ReactiveMongoApplication.class);
+
+  public static void main(String[] args) throws Exception {
+
+    CountDownLatch latch = new CountDownLatch(1);
+
+    ReactiveMongoTemplate template = new ReactiveMongoTemplate(MongoClients.create(), "database");
+
+    template.insert(new Person("Joe", 34)).doOnNext(person -&gt; log.info("Insert: " + person))
+      .flatMap(person -&gt; template.findById(person.getId(), Person.class))
+      .doOnNext(person -&gt; log.info("Found: " + person))
+      .zipWith(person -&gt; template.updateFirst(query(where("name").is("Joe")), update("age", 35), Person.class))
+      .flatMap(tuple -&gt; template.remove(tuple.getT1())).flatMap(deleteResult -&gt; template.findAll(Person.class))
+      .count().doOnSuccess(count -&gt; {
+        log.info("Number of people: " + count);
+        latch.countDown();
+      })
+
+      .subscribe();
+
+    latch.await();
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><code>MongoConverter</code> caused implicit conversion between a <code>String</code> and an <code>ObjectId</code> stored in the database by recognizing (through convention) the <code>Id</code> property name.</p>
+</div>
+<div class="paragraph">
+<p>The preceding example is meant to show the use of save, update, and remove operations on <code>MongoTemplate</code> / <code>ReactiveMongoTemplate</code> and not to show complex mapping functionality.
+The query syntax used in the preceding example is explained in more detail in the section &#8220;<a href="template-query-operations.html" class="xref page">Querying Documents</a>&#8221;.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+MongoDB requires that you have an <code>_id</code> field for all documents.
+Please refer to the <a href="#">ID handling</a> section for details on the special treatment of this field.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+MongoDB collections can contain documents that represent instances of a variety of types.
+Please refer to the <a href="converters-type-mapping.html" class="xref page">type mapping</a> for details.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.save-insert"><a class="anchor" href="#mongo-template.save-insert"></a>Insert / Save</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are several convenient methods on <code>MongoTemplate</code> for saving and inserting your objects.
+To have more fine-grained control over the conversion process, you can register Spring converters with the <code>MappingMongoConverter</code>&#8201;&#8212;&#8201;for example  <code>Converter&lt;Person, Document&gt;</code> and <code>Converter&lt;Document, Person&gt;</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The difference between insert and save operations is that a save operation performs an insert if the object is not already present.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The simple case of using the save operation is to save a POJO.
+In this case, the collection name is determined by name (not fully qualified) of the class.
+You may also call the save operation with a specific collection name.
+You can use mapping metadata to override the collection in which to store the object.</p>
+</div>
+<div class="paragraph">
+<p>When inserting or saving, if the <code>Id</code> property is not set, the assumption is that its value will be auto-generated by the database.
+Consequently, for auto-generation of an <code>ObjectId</code> to succeed, the type of the <code>Id</code> property or field in your class must be a <code>String</code>, an <code>ObjectId</code>, or a <code>BigInteger</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how to save a document and retrieving its contents:</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-sync is-loading">
+<div class="title">Inserting and retrieving documents using the MongoTemplate</div>
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_2_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_imperative--panel" class="tabpanel" aria-labelledby="_tabs_2_imperative">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.query.Criteria.where;
+import static org.springframework.data.mongodb.core.query.Criteria.query;
+
+</span><span class="fold-block">//...
+
+template.insert(new Person("Bob", 33));
+
+Person person = template.query(Person.class)
+    .matching(query(where("age").is(33)))
+    .oneValue();</span></code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_reactive--panel" class="tabpanel" aria-labelledby="_tabs_2_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.query.Criteria.where;
+import static org.springframework.data.mongodb.core.query.Criteria.query;
+
+</span><span class="fold-block">//...
+
+Mono&lt;Person&gt; person = mongoTemplate.insert(new Person("Bob", 33))
+    .then(mongoTemplate.query(Person.class)
+        .matching(query(where("age").is(33)))
+        .one());</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The following insert and save operations are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>void</code> <strong>save</strong> <code>(Object objectToSave)</code>: Save the object to the default collection.</p>
+</li>
+<li>
+<p><code>void</code> <strong>save</strong> <code>(Object objectToSave, String collectionName)</code>: Save the object to the specified collection.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A similar set of insert operations is also available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>void</code> <strong>insert</strong> <code>(Object objectToSave)</code>: Insert the object to the default collection.</p>
+</li>
+<li>
+<p><code>void</code> <strong>insert</strong> <code>(Object objectToSave, String collectionName)</code>: Insert the object to the specified collection.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="mongo-template.id-handling"><a class="anchor" href="#mongo-template.id-handling"></a>How the <code>_id</code> Field is Handled in the Mapping Layer</h3>
+<div class="paragraph">
+<p>MongoDB requires that you have an <code>_id</code> field for all documents.
+If you do not provide one, the driver assigns an <code>ObjectId</code> with a generated value without considering your domain model as the server isn&#8217;t aware of your identifier type.
+When you use the <code>MappingMongoConverter</code>, certain rules govern how properties from the Java class are mapped to this <code>_id</code> field:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A property or field annotated with <code>@Id</code> (<code>org.springframework.data.annotation.Id</code>) maps to the <code>_id</code> field.</p>
+</li>
+<li>
+<p>A property or field without an annotation but named <code>id</code> maps to the <code>_id</code> field.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following outlines what type conversion, if any, is done on the property mapped to the <code>_id</code> document field when using the <code>MappingMongoConverter</code> (the default for <code>MongoTemplate</code>).</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If possible, an <code>id</code> property or field declared as a <code>String</code> in the Java class is converted to and stored as an <code>ObjectId</code> by using a Spring <code>Converter&lt;String, ObjectId&gt;</code>.
+Valid conversion rules are delegated to the MongoDB Java driver.
+If it cannot be converted to an <code>ObjectId</code>, then the value is stored as a string in the database.</p>
+</li>
+<li>
+<p>An <code>id</code> property or field declared as <code>Date</code> is converted to and stored as <code>ObjectId</code>.</p>
+</li>
+<li>
+<p>An <code>id</code> property or field declared as <code>BigInteger</code> in the Java class is converted to and stored as an <code>ObjectId</code> by using a Spring <code>Converter&lt;BigInteger, ObjectId&gt;</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If no field or property specified in the previous sets of rules is present in the Java class, an implicit <code>_id</code> file is generated by the driver but not mapped to a property or field of the Java class.</p>
+</div>
+<div class="paragraph">
+<p>When querying and updating, <code>MongoTemplate</code> uses the converter that corresponds to the preceding rules for saving documents so that field names and types used in your queries can match what is in your domain classes.</p>
+</div>
+<div class="paragraph">
+<p>Some environments require a customized approach to map <code>Id</code> values such as data stored in MongoDB that did not run through the Spring Data mapping layer.
+Documents can contain <code>_id</code> values that can be represented either as <code>ObjectId</code> or as <code>String</code>.
+Reading documents from the store back to the domain type works just fine.
+Querying for documents via their <code>id</code> can be cumbersome due to the implicit <code>ObjectId</code> conversion.
+Therefore documents cannot be retrieved that way.
+For those cases <code>@MongoId</code> provides more control over the actual id mapping attempts.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. <code>@MongoId</code> mapping</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class PlainStringId {
+  @MongoId String id; <i class="conum" data-value="1"></i><b>(1)</b>
+}
+
+public class PlainObjectId {
+  @MongoId ObjectId id; <i class="conum" data-value="2"></i><b>(2)</b>
+}
+
+public class StringToObjectId {
+  @MongoId(FieldType.OBJECT_ID) String id; <i class="conum" data-value="3"></i><b>(3)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The id is treated as <code>String</code> without further conversion.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The id is treated as <code>ObjectId</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The id is treated as <code>ObjectId</code> if the given <code>String</code> is a valid <code>ObjectId</code> hex, otherwise as <code>String</code>.
+Corresponds to <code>@Id</code> usage.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo-template.save-insert.collection"><a class="anchor" href="#mongo-template.save-insert.collection"></a>Into Which Collection Are My Documents Saved?</h3>
+<div class="paragraph">
+<p>There are two ways to manage the collection name that is used for the documents.
+The default collection name that is used is the class name changed to start with a lower-case letter.
+So a <code>com.test.Person</code> class is stored in the <code>person</code> collection.
+You can customize this by providing a different collection name with the <code>@Document</code> annotation.
+You can also override the collection name by providing your own collection name as the last parameter for the selected <code>MongoTemplate</code> method calls.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo-template.save-insert.individual"><a class="anchor" href="#mongo-template.save-insert.individual"></a>Inserting or Saving Individual Objects</h3>
+<div class="paragraph">
+<p>The MongoDB driver supports inserting a collection of documents in a single operation.
+The following methods in the <code>MongoOperations</code> interface support this functionality:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>insert</strong>: Inserts an object.
+If there is an existing document with the same <code>id</code>, an error is generated.</p>
+</li>
+<li>
+<p><strong>insertAll</strong>: Takes a <code>Collection</code> of objects as the first parameter.
+This method inspects each object and inserts it into the appropriate collection, based on the rules specified earlier.</p>
+</li>
+<li>
+<p><strong>save</strong>: Saves the object, overwriting any object that might have the same <code>id</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo-template.save-insert.batch"><a class="anchor" href="#mongo-template.save-insert.batch"></a>Inserting Several Objects in a Batch</h3>
+<div class="paragraph">
+<p>The MongoDB driver supports inserting a collection of documents in one operation.
+The following methods in the <code>MongoOperations</code> interface support this functionality via <code>insert</code>, <code>bulkWrite</code> (requires MongoDB 8.0+) or a dedicated <code>BulkOperations</code> interface.</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-sync is-loading">
+<div class="title">Batch Insert</div>
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_3_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_imperative--panel" class="tabpanel" aria-labelledby="_tabs_3_imperative">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Collection&lt;Person&gt; inserted = template.insert(List.of(...), Person.class);</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_reactive--panel" class="tabpanel" aria-labelledby="_tabs_3_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Flux&lt;Person&gt; inserted = template.insert(List.of(...), Person.class);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bulk_writes"><a class="anchor" href="#_bulk_writes"></a>Bulk Writes</h4>
+<div class="paragraph">
+<p>BulkWrite allows you to perform insert, update, and delete operations using a single request.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>MongoDB 8.0 introduced BulkWrite across multiple collections.<br></p>
+</div>
+<div class="paragraph">
+<p>Use <code>bulkWrite(Bulk, BulkWriteOptions)</code> when you need a single request with mixed insert, update, and delete operations, optionally across multiple collections (MongoDB 8.0+).
+If your targeting a single collection you&#8217;ll still be able to leverage the new <code>bulkWrite</code> method with older MongoDB server version, or keep using the classic <code>bulkOps(BulkMode, Class)</code> API.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="_tabs_4" class="openblock tabs is-sync is-loading">
+<div class="title">BulkWrite (multiple collections)</div>
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_4_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_imperative--panel" class="tabpanel" aria-labelledby="_tabs_4_imperative">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Bulk bulk = Bulk.create(builder -&gt; builder
+        .inCollection(Person.class, spec -&gt; spec
+                .insert(person1)
+                .insert(person2)
+                .upsert(where("_id").is("..."), new Update().set("firstname", "...")))
+        .inCollection(User.class, spec -&gt; spec.insert(new User("..."))));
+
+BulkWriteResult result = template.bulkWrite(bulk, BulkWriteOptions.ordered());</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_reactive--panel" class="tabpanel" aria-labelledby="_tabs_4_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Bulk bulk = Bulk.create(builder -&gt; builder
+        .inCollection(Person.class, spec -&gt; spec
+                .insert(person1)
+                .insert(person2)
+                .upsert(where("_id").is("..."), new Update().set("firstname", "...")))
+        .inCollection(User.class, spec -&gt; spec.insert(new User("..."))));
+
+template.bulkWrite(bulk, BulkWriteOptions.ordered()).subscribe();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_5" class="openblock tabs is-sync is-loading">
+<div class="title">BulkWrite (single collection)</div>
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_5_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_imperative--panel" class="tabpanel" aria-labelledby="_tabs_5_imperative">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">BulkWriteResult result = template.bulkOps(BulkMode.ORDERED, Person.class)
+    .insert(List.of(...))
+    .execute();</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_reactive--panel" class="tabpanel" aria-labelledby="_tabs_5_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;BulkWriteResult&gt; result = template.bulkOps(BulkMode.ORDERED, Person.class)
+    .insert(List.of(...))
+    .execute();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Server performance for individual operations of batch and bulk is identical.
+Bulk however uses less resources since it can operate upon a single request.
+<a href="lifecycle-events.html" class="xref page">Lifecycle events</a> publishing is limited for bulk operations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Any <code>@Version</code> property that has not been set prior to calling insert will be auto initialized with <code>1</code> (in case of a simple type like <code>int</code>) or <code>0</code> for wrapper types (eg. <code>Integer</code>).<br>
+Read more in the <a href="#mongo-template.optimistic-locking">Optimistic Locking</a> section.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongodb-template-update"><a class="anchor" href="#mongodb-template-update"></a>Update</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For updates, you can update the first document found by using <code>MongoOperations.updateFirst</code> or you can update all documents that were found to match the query by using the <code>MongoOperations.updateMulti</code> method or <code>all</code> on the fluent API.
+The following example shows an update of all <code>SAVINGS</code> accounts where we are adding a one-time $50.00 bonus to the balance by using the <code>$inc</code> operator:</p>
+</div>
+<div id="_tabs_6" class="openblock tabs is-sync is-loading">
+<div class="title">Updating documents by using the <code>MongoTemplate</code> / <code>ReactiveMongoTemplate</code></div>
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_6_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_6_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_6_imperative--panel" class="tabpanel" aria-labelledby="_tabs_6_imperative">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.query.Criteria.where;
+import org.springframework.data.mongodb.core.query.Update;
+
+</span><span class="fold-block">// ...
+
+UpdateResult result = template.update(Account.class)
+    .matching(where("accounts.accountType").is(Type.SAVINGS))
+    .apply(new Update().inc("accounts.$.balance", 50.00))
+    .all();</span></code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_6_reactive--panel" class="tabpanel" aria-labelledby="_tabs_6_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"><span class="fold-block is-hidden-folded">import static org.springframework.data.mongodb.core.query.Criteria.where;
+import org.springframework.data.mongodb.core.query.Update;
+
+</span><span class="fold-block">// ...
+
+Mono&lt;UpdateResult&gt; result = template.update(Account.class)
+    .matching(where("accounts.accountType").is(Type.SAVINGS))
+    .apply(new Update().inc("accounts.$.balance", 50.00))
+    .all();</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to the <code>Query</code> discussed earlier, we provide the update definition by using an <code>Update</code> object.
+The <code>Update</code> class has methods that match the update modifiers available for MongoDB.
+Most methods return the <code>Update</code> object to provide a fluent style for the API.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>@Version</code> properties if not included in the <code>Update</code> will be automatically incremented.
+Read more in the <a href="#mongo-template.optimistic-locking">Optimistic Locking</a> section.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="mongodb-template-update.methods"><a class="anchor" href="#mongodb-template-update.methods"></a>Methods for Running Updates for Documents</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>updateFirst</strong>: Updates the first document that matches the query document criteria with the updated document.</p>
+</li>
+<li>
+<p><strong>updateMulti</strong>: Updates all objects that match the query document criteria with the updated document.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<code>updateFirst</code> does not support ordering for MongoDB Versions below 8.0. Running one of the older versions, please use <a href="#mongo-template.find-and-upsert">findAndModify</a> to apply <code>Sort</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Index hints for the update operation can be provided via <code>Query.withHint(&#8230;&#8203;)</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongodb-template-update.update"><a class="anchor" href="#mongodb-template-update.update"></a>Methods in the <code>Update</code> Class</h3>
+<div class="paragraph">
+<p>You can use a little "'syntax sugar'" with the <code>Update</code> class, as its methods are meant to be chained together.
+Also, you can kick-start the creation of a new <code>Update</code> instance by using <code>public static Update update(String key, Object value)</code> and using static imports.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Update</code> class contains the following methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Update</code> <strong>addToSet</strong> <code>(String key, Object value)</code> Update using the <code>$addToSet</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>currentDate</strong> <code>(String key)</code> Update using the <code>$currentDate</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>currentTimestamp</strong> <code>(String key)</code> Update using the <code>$currentDate</code> update modifier with <code>$type</code> <code>timestamp</code></p>
+</li>
+<li>
+<p><code>Update</code> <strong>inc</strong> <code>(String key, Number inc)</code> Update using the <code>$inc</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>max</strong> <code>(String key, Object max)</code> Update using the <code>$max</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>min</strong> <code>(String key, Object min)</code> Update using the <code>$min</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>multiply</strong> <code>(String key, Number multiplier)</code> Update using the <code>$mul</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>pop</strong> <code>(String key, Update.Position pos)</code> Update using the <code>$pop</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>pull</strong> <code>(String key, Object value)</code> Update using the <code>$pull</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>pullAll</strong> <code>(String key, Object[] values)</code> Update using the <code>$pullAll</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>push</strong> <code>(String key, Object value)</code> Update using the <code>$push</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>pushAll</strong> <code>(String key, Object[] values)</code> Update using the <code>$pushAll</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>rename</strong> <code>(String oldName, String newName)</code> Update using the <code>$rename</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>set</strong> <code>(String key, Object value)</code> Update using the <code>$set</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>setOnInsert</strong> <code>(String key, Object value)</code> Update using the <code>$setOnInsert</code> update modifier</p>
+</li>
+<li>
+<p><code>Update</code> <strong>unset</strong> <code>(String key)</code> Update using the <code>$unset</code> update modifier</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some update modifiers, such as <code>$push</code> and <code>$addToSet</code>, allow nesting of additional operators.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// { $push : { "category" : { "$each" : [ "spring" , "data" ] } } }
+new Update().push("category").each("spring", "data")
+
+// { $push : { "key" : { "$position" : 0 , "$each" : [ "Arya" , "Arry" , "Weasel" ] } } }
+new Update().push("key").atPosition(Position.FIRST).each(Arrays.asList("Arya", "Arry", "Weasel"));
+
+// { $push : { "key" : { "$slice" : 5 , "$each" : [ "Arya" , "Arry" , "Weasel" ] } } }
+new Update().push("key").slice(5).each(Arrays.asList("Arya", "Arry", "Weasel"));
+
+// { $addToSet : { "values" : { "$each" : [ "spring" , "data" , "mongodb" ] } } }
+new Update().addToSet("values").each("spring", "data", "mongodb");</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mongo-template.aggregation-update"><a class="anchor" href="#mongo-template.aggregation-update"></a>Aggregation Pipeline Updates</h3>
+<div class="paragraph">
+<p>Update methods exposed by <code>MongoOperations</code> and <code>ReactiveMongoOperations</code> also accept an <a href="aggregation-framework.html" class="xref page">Aggregation Pipeline</a> via <code>AggregationUpdate</code>.
+Using <code>AggregationUpdate</code> allows leveraging <a href="https://docs.mongodb.com/manual/reference/method/db.collection.update/#update-with-aggregation-pipeline">MongoDB 4.2 aggregations</a> in an update operation.
+Using aggregations in an update allows updating one or more fields by expressing multiple stages and multiple conditions with a single operation.</p>
+</div>
+<div class="paragraph">
+<p>The update can consist of the following stages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AggregationUpdate.set(&#8230;&#8203;).toValue(&#8230;&#8203;)</code> &#8594; <code>$set : { &#8230;&#8203; }</code></p>
+</li>
+<li>
+<p><code>AggregationUpdate.unset(&#8230;&#8203;)</code> &#8594; <code>$unset : [ &#8230;&#8203; ]</code></p>
+</li>
+<li>
+<p><code>AggregationUpdate.replaceWith(&#8230;&#8203;)</code> &#8594; <code>$replaceWith : { &#8230;&#8203; }</code></p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Update Aggregation</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">AggregationUpdate update = Aggregation.newUpdate()
+    .set("average").toValue(ArithmeticOperators.valueOf("tests").avg())     <i class="conum" data-value="1"></i><b>(1)</b>
+    .set("grade").toValue(ConditionalOperators.switchCases(                 <i class="conum" data-value="2"></i><b>(2)</b>
+        when(valueOf("average").greaterThanEqualToValue(90)).then("A"),
+        when(valueOf("average").greaterThanEqualToValue(80)).then("B"),
+        when(valueOf("average").greaterThanEqualToValue(70)).then("C"),
+        when(valueOf("average").greaterThanEqualToValue(60)).then("D"))
+        .defaultTo("F")
+    );
+
+template.update(Student.class)                                              <i class="conum" data-value="3"></i><b>(3)</b>
+    .apply(update)
+    .all();                                                                 <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.students.update(                                                         <i class="conum" data-value="3"></i><b>(3)</b>
+   { },
+   [
+     { $set: { average : { $avg: "$tests" } } },                            <i class="conum" data-value="1"></i><b>(1)</b>
+     { $set: { grade: { $switch: {                                          <i class="conum" data-value="2"></i><b>(2)</b>
+                           branches: [
+                               { case: { $gte: [ "$average", 90 ] }, then: "A" },
+                               { case: { $gte: [ "$average", 80 ] }, then: "B" },
+                               { case: { $gte: [ "$average", 70 ] }, then: "C" },
+                               { case: { $gte: [ "$average", 60 ] }, then: "D" }
+                           ],
+                           default: "F"
+     } } } }
+   ],
+   { multi: true }                                                          <i class="conum" data-value="4"></i><b>(4)</b>
+)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The 1st <code>$set</code> stage calculates a new field <em>average</em> based on the average of the <em>tests</em> field.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The 2nd <code>$set</code> stage calculates a new field <em>grade</em> based on the <em>average</em> field calculated by the first aggregation stage.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The pipeline is run on the <em>students</em> collection and uses <code>Student</code> for the aggregation field mapping.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Apply the update to all matching documents in the collection.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.upserts"><a class="anchor" href="#mongo-template.upserts"></a>Upsert</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related to performing an <code>updateFirst</code> operation, you can also perform an <code>upsert</code> operation, which will perform an insert if no document is found that matches the query.
+The document that is inserted is a combination of the query document and the update document.
+The following example shows how to use the <code>upsert</code> method:</p>
+</div>
+<div id="_tabs_7" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_7_imperative" class="tab">
+<p>Imperative</p>
+</li>
+<li id="_tabs_7_reactive" class="tab">
+<p>Reactive</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_7_imperative--panel" class="tabpanel" aria-labelledby="_tabs_7_imperative">
+<div class="listingblock primary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UpdateResult result = template.update(Person.class)
+  .matching(query(where("ssn").is(1111).and("firstName").is("Joe").and("Fraizer").is("Update"))
+  .apply(update("address", addr))
+  .upsert();</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_7_reactive--panel" class="tabpanel" aria-labelledby="_tabs_7_reactive">
+<div class="listingblock secondary">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;UpdateResult&gt; result = template.update(Person.class)
+  .matching(query(where("ssn").is(1111).and("firstName").is("Joe").and("Fraizer").is("Update"))
+  .apply(update("address", addr))
+  .upsert();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<code>upsert</code> does not support ordering.
+Please use <a href="#mongo-template.find-and-upsert">findAndModify</a> to apply <code>Sort</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>@Version</code> properties if not included in the <code>Update</code> will be automatically initialized.
+Read more in the <a href="#mongo-template.optimistic-locking">Optimistic Locking</a> section.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="mongo-template.replace"><a class="anchor" href="#mongo-template.replace"></a>Replacing Documents in a Collection</h3>
+<div class="paragraph">
+<p>The various <code>replace</code> methods available via <code>MongoTemplate</code> allow to override the first matching Document.
+If no match is found a new one can be upserted (as outlined in the previous section) by providing <code>ReplaceOptions</code> with according configuration.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Replace one</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Person tom = template.insert(new Person("Motte", 21)); <i class="conum" data-value="1"></i><b>(1)</b>
+Query query = Query.query(Criteria.where("firstName").is(tom.getFirstName())); <i class="conum" data-value="2"></i><b>(2)</b>
+tom.setFirstname("Tom"); <i class="conum" data-value="3"></i><b>(3)</b>
+template.replace(query, tom, ReplaceOptions.none()); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Insert a new document.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The query used to identify the single document to replace.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Set up the replacement document which must hold either the same <code>_id</code> as the existing or no <code>_id</code> at all.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Run the replace operation.
+.Replace one with upsert</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Person tom = new Person("id-123", "Tom", 21) <i class="conum" data-value="1"></i><b>(1)</b>
+Query query = Query.query(Criteria.where("firstName").is(tom.getFirstName()));
+template.replace(query, tom, ReplaceOptions.replaceOptions().upsert()); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>_id</code> value needs to be present for upsert, otherwise MongoDB will create a new potentially with the domain type incompatible <code>ObjectId</code>.
+As MongoDB is not aware of your domain type, any <code>@Field(targetType)</code> hints are not considered and the resulting <code>ObjectId</code> might be not compatible with your domain model.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Use <code>upsert</code> to insert a new document if no match is found</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is not possible to change the <code>_id</code> of existing documents with a replace operation.
+On <code>upsert</code> MongoDB uses 2 ways of determining the new id for the entry:
+* The <code>_id</code> is used within the query as in <code>{"_id" : 1234 }</code>
+* The <code>_id</code> is present in the replacement document.
+If no <code>_id</code> is provided in either way, MongoDB will create a new <code>ObjectId</code> for the document.
+This may lead to mapping and data lookup malfunctions if the used domain types <code>id</code> property has a different type like e.g. <code>Long</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.find-and-upsert"><a class="anchor" href="#mongo-template.find-and-upsert"></a>Find and Modify</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>findAndModify(…)</code> method on <code>MongoCollection</code> can update a document and return either the old or newly updated document in a single operation.
+<code>MongoTemplate</code> provides four <code>findAndModify</code> overloaded methods that take <code>Query</code> and <code>Update</code> classes and converts from <code>Document</code> to your POJOs:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;T&gt; T findAndModify(Query query, Update update, Class&lt;T&gt; entityClass);
+
+&lt;T&gt; T findAndModify(Query query, Update update, Class&lt;T&gt; entityClass, String collectionName);
+
+&lt;T&gt; T findAndModify(Query query, Update update, FindAndModifyOptions options, Class&lt;T&gt; entityClass);
+
+&lt;T&gt; T findAndModify(Query query, Update update, FindAndModifyOptions options, Class&lt;T&gt; entityClass, String collectionName);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example inserts a few <code>Person</code> objects into the container and performs a <code>findAndUpdate</code> operation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">template.insert(new Person("Tom", 21));
+template.insert(new Person("Dick", 22));
+template.insert(new Person("Harry", 23));
+
+Query query = new Query(Criteria.where("firstName").is("Harry"));
+Update update = new Update().inc("age", 1);
+
+Person oldValue = template.update(Person.class)
+  .matching(query)
+  .apply(update)
+  .findAndModifyValue(); // oldValue.age == 23
+
+Person newValue = template.query(Person.class)
+  .matching(query)
+  .findOneValue(); // newValye.age == 24
+
+Person newestValue = template.update(Person.class)
+  .matching(query)
+  .apply(update)
+  .withOptions(FindAndModifyOptions.options().returnNew(true)) // Now return the newly updated document when updating
+  .findAndModifyValue(); // newestValue.age == 25</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>FindAndModifyOptions</code> method lets you set the options of <code>returnNew</code>, <code>upsert</code>, and <code>remove</code>.
+An example extending from the previous code snippet follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Person upserted = template.update(Person.class)
+  .matching(new Query(Criteria.where("firstName").is("Mary")))
+  .apply(update)
+  .withOptions(FindAndModifyOptions.options().upsert(true).returnNew(true))
+  .findAndModifyValue()</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>@Version</code> properties if not included in the <code>Update</code> will be automatically incremented.
+Read more in the <a href="#mongo-template.optimistic-locking">Optimistic Locking</a> section.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.find-and-replace"><a class="anchor" href="#mongo-template.find-and-replace"></a>Find and Replace</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The most straight forward method of replacing an entire <code>Document</code> is via its <code>id</code> using the <code>save</code> method.
+However this might not always be feasible.
+<code>findAndReplace</code> offers an alternative that allows to identify the document to replace via a simple query.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Find and Replace Documents</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Optional&lt;User&gt; result = template.update(Person.class)      <i class="conum" data-value="1"></i><b>(1)</b>
+    .matching(query(where("firstname").is("Tom")))          <i class="conum" data-value="2"></i><b>(2)</b>
+    .replaceWith(new Person("Dick"))
+    .withOptions(FindAndReplaceOptions.options().upsert()) <i class="conum" data-value="3"></i><b>(3)</b>
+    .as(User.class)                                        <i class="conum" data-value="4"></i><b>(4)</b>
+    .findAndReplace();                                     <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use the fluent update API with the domain type given for mapping the query and deriving the collection name or just use <code>MongoOperations#findAndReplace</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The actual match query mapped against the given domain type.
+Provide <code>sort</code>, <code>fields</code> and <code>collation</code> settings via the query.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Additional optional hook to provide options other than the defaults, like <code>upsert</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>An optional projection type used for mapping the operation result.
+If none given the initial domain type is used.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Trigger the actual processing.
+Use <code>findAndReplaceValue</code> to obtain the nullable result instead of an <code>Optional</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Please note that the replacement must not hold an <code>id</code> itself as the <code>id</code> of the existing <code>Document</code> will be carried over to the replacement by the store itself.
+Also keep in mind that <code>findAndReplace</code> will only replace the first document matching the query criteria depending on a potentially given sort order.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.delete"><a class="anchor" href="#mongo-template.delete"></a>Delete</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use one of five overloaded methods to remove an object from the database:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">template.remove(tywin, "GOT");                                              <i class="conum" data-value="1"></i><b>(1)</b>
+
+template.remove(query(where("lastname").is("lannister")), "GOT");           <i class="conum" data-value="2"></i><b>(2)</b>
+
+template.remove(new Query().limit(3), "GOT");                               <i class="conum" data-value="3"></i><b>(3)</b>
+
+template.findAllAndRemove(query(where("lastname").is("lannister"), "GOT");  <i class="conum" data-value="4"></i><b>(4)</b>
+
+template.findAllAndRemove(new Query().limit(3), "GOT");                     <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Remove a single entity specified by its <code>_id</code> from the associated collection.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Remove all documents that match the criteria of the query from the <code>GOT</code> collection.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Remove the first three documents in the <code>GOT</code> collection.
+Unlike &lt;2&gt;, the documents to remove are identified by their <code>_id</code>, running the given query, applying <code>sort</code>, <code>limit</code>, and <code>skip</code> options first, and then removing all at once in a separate step.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Remove all documents matching the criteria of the query from the <code>GOT</code> collection.
+Unlike &lt;3&gt;, documents do not get deleted in a batch but one by one.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Remove the first three documents in the <code>GOT</code> collection.
+Unlike &lt;3&gt;, documents do not get deleted in a batch but one by one.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mongo-template.optimistic-locking"><a class="anchor" href="#mongo-template.optimistic-locking"></a>Optimistic Locking</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>@Version</code> annotation provides syntax similar to that of JPA in the context of MongoDB and makes sure updates are only applied to documents with a matching version.
+Therefore, the actual value of the version property is added to the update query in such a way that the update does not have any effect if another operation altered the document in the meantime.
+In that case, an <code>OptimisticLockingFailureException</code> is thrown.
+The following example shows these features:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Document
+class Person {
+
+  @Id String id;
+  String firstname;
+  String lastname;
+  @Version Long version;
+}
+
+Person daenerys = template.insert(new Person("Daenerys"));                            <i class="conum" data-value="1"></i><b>(1)</b>
+
+Person tmp = template.findOne(query(where("id").is(daenerys.getId())), Person.class); <i class="conum" data-value="2"></i><b>(2)</b>
+
+daenerys.setLastname("Targaryen");
+template.save(daenerys);                                                              <i class="conum" data-value="3"></i><b>(3)</b>
+
+template.save(tmp); // throws OptimisticLockingFailureException                       <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Initially insert document. <code>version</code> is set to <code>0</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Load the just inserted document. <code>version</code> is still <code>0</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Update the document with <code>version = 0</code>.
+Set the <code>lastname</code> and bump <code>version</code> to <code>1</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Try to update the previously loaded document that still has <code>version = 0</code>.
+The operation fails with an <code>OptimisticLockingFailureException</code>, as the current <code>version</code> is <code>1</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Only certain CRUD operations on <code>MongoTemplate</code> do consider and alter version properties.
+Please consult <code>MongoOperations</code> java doc for detailed information.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Optimistic Locking requires write acknowledgement (a write result response) by the server.
+Using <code>WriteConcern.UNACKNOWLEDGED</code> can lead to silently swallowed <code>OptimisticLockingFailureException</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As of Version 2.2 <code>MongoOperations</code> also includes the <code>@Version</code> property when removing an entity from the database.
+To remove a <code>Document</code> without version check use <code>MongoOperations#remove(Query,&#8230;&#8203;)</code> instead of <code>MongoOperations#remove(Object)</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As of Version 2.2 repositories check for the outcome of acknowledged deletes when removing versioned entities.
+An <code>OptimisticLockingFailureException</code> is raised if a versioned entity cannot be deleted through <code>CrudRepository.delete(Object)</code>.
+In such case, the version was changed or the object was deleted in the meantime.
+Use <code>CrudRepository.deleteById(ID)</code> to bypass optimistic locking functionality and delete objects regardless of their version.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="28px" height="28px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+              <div class="colset">
+                <div class="col-left">
+
+                  <ul class="nav-versions">
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../data-commons/index.html">Spring Data Commons</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../data-commons/index.html">
+      4.1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">Spring Data MongoDB</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Stable
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      5.1.0
+    </a>
+  </li>
+</ul>                        </div>
+                        
+                      </li>
+                  </ul>
+                </div>
+                <div class="col-right">
+                  <ul class="projects">
+  <li>
+    Related Spring Documentation
+    <ul class="projects-list">
+        <li>
+<a href="https://docs.spring.io/spring-boot/">
+  Spring Boot
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-framework/reference/">
+  Spring Framework
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Cloud
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-build/reference/">
+  Spring Cloud Build
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-bus/reference/">
+  Spring Cloud Bus
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-circuitbreaker/reference/">
+  Spring Cloud Circuit Breaker
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-commons/reference/">
+  Spring Cloud Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-config/reference/">
+  Spring Cloud Config
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-consul/reference/">
+  Spring Cloud Consul
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-contract/reference/">
+  Spring Cloud Contract
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-function/reference/">
+  Spring Cloud Function
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-gateway/reference/">
+  Spring Cloud Gateway
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-kubernetes/reference/">
+  Spring Cloud Kubernetes
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-netflix/reference/">
+  Spring Cloud Netflix
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-openfeign/reference/">
+  Spring Cloud OpenFeign
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-stream/reference/">
+  Spring Cloud Stream
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-task/reference/">
+  Spring Cloud Task
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-vault/reference/">
+  Spring Cloud Vault
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-cloud-zookeeper/reference/">
+  Spring Cloud Zookeeper
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  Spring Data
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-data/cassandra/reference/">
+  Spring Data Cassandra
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/commons/reference/">
+  Spring Data Commons
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/couchbase/reference/">
+  Spring Data Couchbase
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/elasticsearch/reference/">
+  Spring Data Elasticsearch
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/jpa/reference/">
+  Spring Data JPA
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/keyvalue/reference/">
+  Spring Data KeyValue
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/ldap/reference/">
+  Spring Data LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/mongodb/reference/">
+  Spring Data MongoDB
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/neo4j/reference/">
+  Spring Data Neo4j
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/redis/reference/">
+  Spring Data Redis
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/relational/reference/">
+  Spring Data JDBC &amp; R2DBC
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-data/rest/reference/">
+  Spring Data REST
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-integration/reference/">
+  Spring Integration
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-batch/reference/">
+  Spring Batch
+</a>
+</li>
+        <li>
+<a class="anchor"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+<a href="https://docs.spring.io/spring-security/reference/">
+  Spring Security
+</a>
+<ul>
+    <li>
+<a href="https://docs.spring.io/spring-authorization-server/reference/">
+  Spring Authorization Server
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-ldap/reference/">
+  Spring LDAP
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-security-kerberos/reference/">
+  Spring Security Kerberos
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-session/reference/">
+  Spring Session
+</a>
+</li>
+    <li>
+<a href="https://docs.spring.io/spring-vault/reference/">
+  Spring Vault
+</a>
+</li>
+</ul>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-ai/reference/">
+  Spring AI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-amqp/reference/">
+  Spring AMQP
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-cli/reference/">
+  Spring CLI
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-graphql/reference/">
+  Spring GraphQL
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-kafka/reference/">
+  Spring for Apache Kafka
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-modulith/reference/">
+  Spring Modulith
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-pulsar/reference/">
+  Spring for Apache Pulsar
+</a>
+</li>
+        <li>
+<a href="https://docs.spring.io/spring-shell/reference/">
+  Spring Shell
+</a>
+</li>
+    </ul>
+  </li
+  <li><a href="../spring-projects.html">All Docs...</a></li>
+</ul>
+                </div>
+              </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">Copyright © 2005 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> Broadcom. All Rights Reserved. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.<br /><a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased has-gray-text">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="GitHub"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/asciidoctor-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <main class="modal__content" id="modal-1-content">
+                <div id="searchbox"></div>
+                <div id="counter"></div>
+                <div class="search-link-box">
+                    <a class="search-link" href="../search.html">Search in all Spring Docs</a>
+                </div>
+                <div class="search-by">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.algolia.com/" aria-label="Search by Algolia">
+                        <img class="light" width="140" src="../_/img/algolia-light.svg" />
+                        <img class="dark" width="140" src="../_/img/algolia-dark.svg" />
+                    </a>
+                </div>
+                <div id="hits"></div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch-lite.umd.js" integrity="sha256-Lf9DrpGmcRip6OQzbcL6lnvNmoZNSKpyQX5pMlwatWE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.54.1/dist/instantsearch.production.min.js" integrity="sha256-xYsZPDeNjYNTBWLvqD2Lxe98hOxcDgOHyMPfz4tVAbk=" crossorigin="anonymous"></script>
+<script async id="search-script" src="../_/js/vendor/search.js" data-app-id="WB1FQYI187" data-api-key="c2e84f15fa630d534f1c62b1c413bb77" data-index-name="springdocs" data-stylesheet="../_/css/vendor/search.css" data-page-version="5.1.0" data-page-component="data-mongodb"></script>
+  </body>
+</html>
